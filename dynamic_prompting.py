@@ -1,4 +1,6 @@
+import logging
 import re, random
+from pathlib import Path
 
 import math
 
@@ -6,6 +8,74 @@ import modules.scripts as scripts
 
 from modules.processing import process_images, fix_seed
 from modules.shared import opts
+
+logger = logging.getLogger(__name__)
+
+WILDCARD_DIR = getattr(opts, "wildcard_dir", "scripts/wildcards")
+
+re_wildcard = re.compile(r"__([^_]*)__")
+re_variants = re.compile(r"\{([^{}]*)}")
+re_combinations = re.compile(r"\[([^\[\]]*)]")
+
+DEFAULT_NUM_COMBINATIONS = 2
+
+def replace_variant(match):
+    if match is None or len(match.groups()) == 0:
+        logger.warning("Unexpected missing variant")
+        return ""
+    
+    variants = [s.strip() for s in match.groups()[0].split("|")]
+    return random.choice(variants)
+
+def replace_combinations(match):
+    if match is None or len(match.groups()) == 0:
+        logger.warning("Unexpected missing combination")
+        return ""
+
+    variants = [s.strip() for s in match.groups()[0].split("|")]
+    if len(variants) > 0:
+        first = variants[0].split("$$")
+        num = DEFAULT_NUM_COMBINATIONS
+        if len(first) == 2:
+            num, first_variant = first
+            variants[0] = first_variant
+            try:
+                num = int(num)
+            except ValueError:
+                logger.warning("Unexpected combination formatting, expected $$ prefix to be a number")
+                num = DEFAULT_NUM_COMBINATIONS
+        
+        try:
+            picked = random.sample(variants, num)
+            return ",".join(picked)
+        except ValueError as e:
+            logger.exception(e)
+            return ""
+
+    return ""
+
+
+def replace_wildcard(match):
+    if match is None or len(match.groups()) == 0:
+        logger.warning("Expected match to contain a filename")
+        return ""
+
+    wildcard_dir = Path(WILDCARD_DIR)
+    if not wildcard_dir.exists():
+        wildcard_dir.mkdir()
+
+    wildcard = match.groups()[0]
+    wildcard_path = wildcard_dir / f"{wildcard}.txt"
+
+    if not wildcard_path.exists():
+        logger.warning(f"Missing file {wildcard_path}")
+        return ""
+
+    options = [line.strip() for line in wildcard_path.open()]
+    return random.choice(options)
+    
+def pick_wildcards(template):
+    return re_wildcard.sub(replace_wildcard, template)
 
 
 def pick_variant(template):
@@ -40,33 +110,14 @@ def pick_variant(template):
         return None
 
     out = template
-    variants = re.findall(r"\{[^{}]*?}", out)
 
-    for v in variants:
-        opts = [s.strip() for s in v.strip("{}").split("|")]
-        out = out.replace(v, random.choice(opts))
+    out = re_variants.sub(replace_variant, out)
+    out = re_combinations.sub(replace_combinations, out)
 
-    combinations = re.findall(r"\[[^\[\]]*?]", out)
-    for c in combinations:
-        sc = c.strip("[]")
-        parts = sc.split("$$")
-        n_pick = None
-
-        if len(parts) > 2:
-            raise ValueError(" we do not support more than 1 $$ in a combination")
-        if len(parts) == 2:
-            sc = parts[1]
-            n_pick = int(parts[0])
-        opts = [s.strip() for s in sc.split("|")]
-        if not n_pick:
-            n_pick = random.randint(1,len(opts))
-
-        sample = random.sample(opts, n_pick)
-        out = out.replace(c, ", ".join(sample))
-
-    if len(variants + combinations) > 0:
-        return pick_variant(out)
     return out
+
+def generate_prompt(template):
+    return pick_wildcards(pick_variant(template))
 
 
 class Script(scripts.Script):
@@ -80,7 +131,7 @@ class Script(scripts.Script):
         
 
         all_prompts = [
-            pick_variant(original_prompt) for _ in range(p.n_iter)
+            generate_prompt(original_prompt) for _ in range(p.n_iter)
         ]
         all_seeds = [int(p.seed) + (x if p.subseed_strength == 0 else 0) for x in range(len(all_prompts))]
 
