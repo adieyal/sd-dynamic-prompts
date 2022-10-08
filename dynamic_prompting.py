@@ -1,9 +1,11 @@
-import logging
-import re, random
+import os
+from glob import glob
 from pathlib import Path
-
+import logging
 import math
+import re, random
 
+import gradio as gr
 import modules.scripts as scripts
 
 from modules.processing import process_images, fix_seed
@@ -124,7 +126,39 @@ class Script(scripts.Script):
     def title(self):
         return "Dynamic Prompting"
 
-    def run(self, p):
+    def ui(self, is_img2img):
+        html = f"""
+            <h3><strong>Variations</strong></h3>
+            Choose exactly one term from the list
+            <code>{{summer|autumn|winter|spring}}</code>
+            <br/><br/>
+
+            <h3><strong>Combinations</strong></h3>
+            Choose a number of terms from a list, in this case we choose two artists
+            <code>[2$$artist1|artist2|artist3]</code>
+            <br/><br/>
+
+            <h3><strong>Wildcards</strong></h3>
+            <p>Available wildcards</p>
+            <ul>
+        """
+        
+        for path in Path(WILDCARD_DIR).glob("*.txt"):
+            filename = path.name
+            wildcard = "__" + filename.replace(".txt", "") + "__"
+
+            html += f"<li>{wildcard}</li>"
+
+        html += "</ul>"
+        html += f"""
+            <br/>
+            <code>WILDCARD_DIR: {WILDCARD_DIR}</code><br/>
+            <small>You can add more wildcards by creating a text file with one term per line and name is mywildcards.txt. Place it in {WILDCARD_DIR}. <code>__mywildcards__</code> will then become available.</small>
+        """
+        info = gr.HTML(html)
+        return [info]
+
+    def run(self, p, info):
         fix_seed(p)
 
         original_prompt = p.prompt[0] if type(p.prompt) == list else p.prompt
