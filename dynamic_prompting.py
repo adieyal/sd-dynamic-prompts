@@ -116,7 +116,7 @@ class Script(scripts.Script):
         html = f"""
             <h3><strong>Combinations</strong></h3>
             Choose a number of terms from a list, in this case we choose two artists
-            <code>{2$$artist1|artist2|artist3}</code>
+            <code>{{2$$artist1|artist2|artist3}}</code>
             If $$ is not provided, then 1$$ is assumed.
             <br/><br/>
 
