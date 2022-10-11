@@ -43,6 +43,9 @@ This will randomly combine two of the options for every batch, separated with a 
 
 The prefix `2$$` can use any number between 1 and the total number of options you defined. If you omit the size prefix, then 1 will be used
 
+### Wildcard files
+Wildcard files are not provided by this script as lists exists in other repositories. A good place to start looking is [here](https://github.com/jtkelm2/stable-diffusion-webui-1/tree/master/scripts/wildcards)
+
 ### Nesting
 You can nest combinations inside wildcards. This means that you can create more advanced templates. For example:
 
@@ -50,8 +53,6 @@ You can nest combinations inside wildcards. This means that you can create more 
 
 This will then either choose a season from seasons.txt or a time of day from timeofday.txt.
 
-## Wildcard files
-Wildcard files are not provided by this script as lists exists in other repositories. A good place to start looking is [here](https://github.com/jtkelm2/stable-diffusion-webui-1/tree/master/scripts/wildcards)
 
 ## WILDCARD_DIR
 The script looks for wildcard files in WILDCARD_DIR. This is defined in the main webui config.json under wildcard_dir. If wildcard_dir is missing, then wildcard files should be placed in scripts/wildcards/
