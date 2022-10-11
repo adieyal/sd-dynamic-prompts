@@ -16,18 +16,9 @@ logger = logging.getLogger(__name__)
 WILDCARD_DIR = getattr(opts, "wildcard_dir", "scripts/wildcards")
 
 re_wildcard = re.compile(r"__([^_]*)__")
-re_variants = re.compile(r"\{([^{}]*)}")
-re_combinations = re.compile(r"\[([^\[\]]*)]")
+re_combinations = re.compile(r"\{([^{}]*)}")
 
-DEFAULT_NUM_COMBINATIONS = 2
-
-def replace_variant(match):
-    if match is None or len(match.groups()) == 0:
-        logger.warning("Unexpected missing variant")
-        return ""
-    
-    variants = [s.strip() for s in match.groups()[0].split("|")]
-    return random.choice(variants)
+DEFAULT_NUM_COMBINATIONS = 1
 
 def replace_combinations(match):
     if match is None or len(match.groups()) == 0:
@@ -111,12 +102,7 @@ def pick_variant(template):
     if template is None:
         return None
 
-    out = template
-
-    out = re_variants.sub(replace_variant, out)
-    out = re_combinations.sub(replace_combinations, out)
-
-    return out
+    return re_combinations.sub(replace_combinations, template)
 
 def generate_prompt(template):
     return pick_wildcards(pick_variant(template))
@@ -128,14 +114,10 @@ class Script(scripts.Script):
 
     def ui(self, is_img2img):
         html = f"""
-            <h3><strong>Variations</strong></h3>
-            Choose exactly one term from the list
-            <code>{{summer|autumn|winter|spring}}</code>
-            <br/><br/>
-
             <h3><strong>Combinations</strong></h3>
             Choose a number of terms from a list, in this case we choose two artists
-            <code>[2$$artist1|artist2|artist3]</code>
+            <code>{2$$artist1|artist2|artist3}</code>
+            If $$ is not provided, then 1$$ is assumed.
             <br/><br/>
 
             <h3><strong>Wildcards</strong></h3>

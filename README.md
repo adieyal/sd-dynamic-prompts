@@ -4,7 +4,7 @@ A custom script for [AUTOMATIC1111/stable-diffusion-webui](https://github.com/AU
 
 Using this script, the prompt:
 
-	A {house|apartment|lodge|cottage} in {summer|winter|autumn|spring} by [2$$artist1|artist2|artist3]
+	A {house|apartment|lodge|cottage} in {summer|winter|autumn|spring} by {2$$artist1|artist2|artist3}
 
 Will any of the following prompts:
 
@@ -36,33 +36,15 @@ You can also use the same wildcard twice
 
 ## Template syntax
 
-### Variations
-	{opt1|opt2|opt3}
-
-This will randomly pick one of the options for every batch item.  In this case, "opt1" or "opt2" or "opt3"
-
 ### Combinations
 	[2$$opt1|opt2|opt3]
 
 This will randomly combine two of the options for every batch, separated with a comma.  In this case, "opt1, opt2" or "opt2, opt3", or "opt1, opt3" or the same pairs in the reverse order.
 
-The prefix `2$$` can use any number between 1 and the total number of options you defined. If you omit the size prefix, then 2 will be used
+The prefix `2$$` can use any number between 1 and the total number of options you defined. If you omit the size prefix, then 1 will be used
 
 ### Nesting
-Templates are processed in the following order:
-1. variants
-2. combinations
-3. wildcards
-
-This means that you can create more advanced templates. For example:
-
-    I enjoy [2$${spaghetti|pizza|lasagne}|ice-cream|{tea|coffee}]
-
-This will generate:
-1. I enjoy pizza,tea
-2. I enjoy spagetti,ice-cream
-
-You can also nest within wildcards, e.g.
+You can nest combinations inside wildcards. This means that you can create more advanced templates. For example:
 
     {__seasons__|__timeofday__}
 
