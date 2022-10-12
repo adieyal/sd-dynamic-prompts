@@ -37,7 +37,7 @@ You can also use the same wildcard twice
 ## Template syntax
 
 ### Combinations
-	[2$$opt1|opt2|opt3]
+	{2$$opt1|opt2|opt3}
 
 This will randomly combine two of the options for every batch, separated with a comma.  In this case, "opt1, opt2" or "opt2, opt3", or "opt1, opt3" or the same pairs in the reverse order.
 
