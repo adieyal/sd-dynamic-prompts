@@ -1,9 +1,10 @@
 import os
-from glob import glob
 from pathlib import Path
 import logging
 import math
 import re, random
+import pathlib
+from typing import Set
 
 import gradio as gr
 import modules.scripts as scripts
@@ -69,13 +70,32 @@ def replace_wildcard(match):
         wildcard_dir.mkdir()
 
     wildcard = match.groups()[0]
-    wildcard_path = wildcard_dir / f"{wildcard}.txt"
+    txt_files = list(pathlib.Path(wildcard_dir).rglob("*.txt"))
 
-    if not wildcard_path.exists():
-        logger.warning(f"Missing file {wildcard_path}")
-        return ""
+    replacement_files = []
+    for path in txt_files:
+        if wildcard in str(path.absolute()) or os.path.normpath(wildcard) in str(path.absolute()):
+            replacement_files.append(str(path.absolute()))
+        else:
+            if "*" in wildcard:
+                terms = [m for m in wildcard.__str__().split("*")]
+                matched_terms = []
+                for term in terms:
+                    if term in str(path.absolute()) or os.path.normpath(term) in str(path.absolute()):
+                        matched_terms.append(term)
+                if len(terms) == len(matched_terms):
+                    replacement_files.append(str(path.absolute()))
 
-    options = [line.strip() for line in wildcard_path.open(errors="ignore")]
+    contents: Set = set()
+    for replacement_file in replacement_files:
+        if os.path.exists(replacement_file):
+            with open(replacement_file, encoding="utf8", errors="ignore") as f:
+                lines = f.read().splitlines()
+                filtered = [line.strip() for line in lines if not line.startswith(
+                    '#') and line is not None and len(line) > 0]
+                contents.update(filtered)
+    options = list(contents)
+
     return random.choice(options)
     
 def pick_wildcards(template):
