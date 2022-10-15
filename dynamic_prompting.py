@@ -14,6 +14,7 @@ from modules.shared import opts
 logger = logging.getLogger(__name__)
 
 WILDCARD_DIR = getattr(opts, "wildcard_dir", "scripts/wildcards")
+VERSION = 0.2
 
 re_wildcard = re.compile(r"__([^_]*)__")
 re_combinations = re.compile(r"\{([^{}]*)}")
@@ -110,7 +111,7 @@ def generate_prompt(template):
 
 class Script(scripts.Script):
     def title(self):
-        return "Dynamic Prompting"
+        return f"Dynamic Prompting v{VERSION}"
 
     def ui(self, is_img2img):
         html = f"""
@@ -144,11 +145,13 @@ class Script(scripts.Script):
         fix_seed(p)
 
         original_prompt = p.prompt[0] if type(p.prompt) == list else p.prompt
+        original_seed = p.seed
         
 
         all_prompts = [
             generate_prompt(original_prompt) for _ in range(p.n_iter)
         ]
+
         all_seeds = [int(p.seed) + (x if p.subseed_strength == 0 else 0) for x in range(len(all_prompts))]
 
         p.n_iter = math.ceil(len(all_prompts) / p.batch_size)
@@ -158,7 +161,11 @@ class Script(scripts.Script):
 
         p.prompt = all_prompts
         p.seed = all_seeds
+
         p.prompt_for_display = original_prompt
         processed = process_images(p)
+
+        p.prompt = original_prompt
+        p.seed = original_seed
 
         return processed
