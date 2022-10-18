@@ -41,7 +41,12 @@ You can also use the same wildcard twice
 
 This will randomly combine two of the options for every batch, separated with a comma.  In this case, "opt1, opt2" or "opt2, opt3", or "opt1, opt3" or the same pairs in the reverse order.
 
-The prefix `2$$` can use any number between 1 and the total number of options you defined. If you omit the size prefix, then 1 will be used
+	{1-3$$opt1|opt2|opt3}
+
+This will use a random number of options between 1 and 3 for each batch. 
+
+	{opt1|opt2|opt3}
+If you omit the $$ prefix, one item will be selected. (Equivalent to 1$$)
 
 ### Wildcard files
 Wildcard files are not provided by this script as lists exists in other repositories. A good place to start looking is [here](https://github.com/jtkelm2/stable-diffusion-webui-1/tree/master/scripts/wildcards)
