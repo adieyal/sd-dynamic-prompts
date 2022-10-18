@@ -29,19 +29,27 @@ def replace_combinations(match):
     variants = [s.strip() for s in match.groups()[0].split("|")]
     if len(variants) > 0:
         first = variants[0].split("$$")
-        num = DEFAULT_NUM_COMBINATIONS
-        if len(first) == 2:
-            num, first_variant = first
+        quantity = DEFAULT_NUM_COMBINATIONS
+        if len(first) == 2: # there is a $$
+            prefix_num, first_variant = first
             variants[0] = first_variant
+            
             try:
-                num = int(num)
-            except ValueError:
-                logger.warning("Unexpected combination formatting, expected $$ prefix to be a number")
-                num = DEFAULT_NUM_COMBINATIONS
+                prefix_ints = [int(i) for i in prefix_num.split("-")]
+                if len(prefix_ints) == 1:
+                    quantity = prefix_ints[0]
+                elif len(prefix_ints) == 2:
+                    prefix_low, prefix_high = prefix_ints
+                    quantity = random.randint(prefix_low, prefix_high)
+                else:
+                    raise Exception
+            except:
+                logger.warning("Unexpected combination formatting, expected $$ prefix to be a number or interval")
+                # quantity is default (DEFAULT_NUM_COMBINATIONS = 1)
         
         try:
-            picked = random.sample(variants, num)
-            return ",".join(picked)
+            picked = random.sample(variants, quantity)
+            return ", ".join(picked)
         except ValueError as e:
             logger.exception(e)
             return ""
