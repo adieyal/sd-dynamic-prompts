@@ -39,7 +39,8 @@ def replace_combinations(match):
                 if len(prefix_ints) == 1:
                     quantity = prefix_ints[0]
                 elif len(prefix_ints) == 2:
-                    prefix_low, prefix_high = prefix_ints
+                    prefix_low = min(prefix_ints)
+                    prefix_high = max(prefix_ints)
                     quantity = random.randint(prefix_low, prefix_high)
                 else:
                     raise Exception
