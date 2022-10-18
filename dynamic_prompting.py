@@ -93,20 +93,11 @@ def pick_variant(template):
             In this case, "opt1" or "opt2" or "opt3"
 
         Combinations
-            [2$$opt1|opt2|opt3] : will randomly combine 2 of the options for every batch, separated with a comma
+            {2$$opt1|opt2|opt3} : will randomly combine 2 of the options for every batch, separated with a comma
 
             In this case, "opt1, opt2" or "opt2, opt3", or "opt1, opt3" or the same pairs in the reverse order.
-
-            The prefix (2$$) can use any number between 1 and the total number of options you defined
-
-            NB : if you omit the size prefix, the number of options combined will be defined randomly
-
-        Nesting
-            You can have variations inside combinations but not the other way round (for now)
-
-            Example:
-
-            I love[ {red|white} wine | {layered|chocolate} cake | {german|belgian} beer]
+            
+            {1-3$$opt1|opt2|opt3} : will combine a random number of options between 1 and 3 for every batch
     """
     if template is None:
         return None
@@ -127,6 +118,10 @@ class Script(scripts.Script):
             Choose a number of terms from a list, in this case we choose two artists
             <code>{{2$$artist1|artist2|artist3}}</code>
             If $$ is not provided, then 1$$ is assumed.
+            <br>
+            A range can be provided:
+            <code>{{1-3$$artist1|artist2|artist3}}</code>
+            In this case, a random number of artists between 1 and 3 is chosen.
             <br/><br/>
 
             <h3><strong>Wildcards</strong></h3>
