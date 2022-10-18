@@ -33,7 +33,6 @@ You can also use the same wildcard twice
 - I love Spring better than Spring
 
 
-
 ## Template syntax
 
 ### Combinations
@@ -57,6 +56,19 @@ You can nest combinations inside wildcards. This means that you can create more 
     {__seasons__|__timeofday__}
 
 This will then either choose a season from seasons.txt or a time of day from timeofday.txt.
+
+### Recursion
+Prompts are processed recursively. If a wildcard file contains a row with dynamic syntax, then that will be resolved as well. For example if seasons.txt contains the following rows:
+- Summer
+- Winter
+- {Autumn|Fall}
+- Spring
+
+if the 3rd row is chosen, then either Autumn or Fall will be selected. You could go pretty wild e.g.
+- Summer
+- __winter_in_different_languages__
+- {Autumn|Fall}
+- Spring
 
 
 ## WILDCARD_DIR

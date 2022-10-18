@@ -14,7 +14,8 @@ from modules.shared import opts
 logger = logging.getLogger(__name__)
 
 WILDCARD_DIR = getattr(opts, "wildcard_dir", "scripts/wildcards")
-VERSION = 0.3
+MAX_RECURSIONS = 20
+VERSION = 0.4
 
 re_wildcard = re.compile(r"__([^_]*)__")
 re_combinations = re.compile(r"\{([^{}]*)}")
@@ -87,9 +88,20 @@ def pick_variant(template):
     return re_combinations.sub(replace_combinations, template)
 
 def generate_prompt(template):
-    return pick_wildcards(pick_variant(template))
+    old_prompt = template
+    counter = 0
+    while True:
+        counter += 1
+        if counter > MAX_RECURSIONS:
+            raise Exception("Too many recursions, something went wrong with generating the prompt")
 
+        prompt = pick_variant(old_prompt)
+        prompt = pick_wildcards(prompt)
 
+        if prompt == old_prompt:
+            return prompt
+        old_prompt = prompt
+        
 class Script(scripts.Script):
     def title(self):
         return f"Dynamic Prompting v{VERSION}"
