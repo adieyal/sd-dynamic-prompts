@@ -43,10 +43,9 @@ def replace_combinations(match):
                     prefix_high = max(prefix_ints)
                     quantity = random.randint(prefix_low, prefix_high)
                 else:
-                    raise Exception
-            except:
-                logger.warning("Unexpected combination formatting, expected $$ prefix to be a number or interval")
-                # quantity is default (DEFAULT_NUM_COMBINATIONS = 1)
+                    raise 
+            except Exception:
+                logger.warning(f"Unexpected combination formatting, expected $$ prefix to be a number or interval. Defaulting to {DEFAULT_NUM_COMBINATIONS}")
         
         try:
             picked = random.sample(variants, quantity)
@@ -82,24 +81,6 @@ def pick_wildcards(template):
 
 
 def pick_variant(template):
-    """
-    Generate random prompts given a template 
-    This function was copied from the following colab, but I think it may have originated somewhere else: https://colab.research.google.com/drive/1P5MEMtLM3RGCqGfSQWs1cMntrMgSnKDe?usp=sharing#scrollTo=PAsdW6XqxVO_
-
-    Template syntax
-
-        Variations
-            {opt1|opt2|opt3} : will randomly pick 1 of the options for every batch item.
-
-            In this case, "opt1" or "opt2" or "opt3"
-
-        Combinations
-            {2$$opt1|opt2|opt3} : will randomly combine 2 of the options for every batch, separated with a comma
-
-            In this case, "opt1, opt2" or "opt2, opt3", or "opt1, opt3" or the same pairs in the reverse order.
-            
-            {1-3$$opt1|opt2|opt3} : will combine a random number of options between 1 and 3 for every batch
-    """
     if template is None:
         return None
 
