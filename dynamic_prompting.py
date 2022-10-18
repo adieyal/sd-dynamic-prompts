@@ -14,7 +14,7 @@ from modules.shared import opts
 logger = logging.getLogger(__name__)
 
 WILDCARD_DIR = getattr(opts, "wildcard_dir", "scripts/wildcards")
-VERSION = 0.2
+VERSION = 0.3
 
 re_wildcard = re.compile(r"__([^_]*)__")
 re_combinations = re.compile(r"\{([^{}]*)}")
