@@ -15,9 +15,9 @@ logger = logging.getLogger(__name__)
 
 WILDCARD_DIR = getattr(opts, "wildcard_dir", "scripts/wildcards")
 MAX_RECURSIONS = 20
-VERSION = 0.4
+VERSION = 0.4.1
 
-re_wildcard = re.compile(r"__([^_]*)__")
+re_wildcard = re.compile(r"__(.*?)__")
 re_combinations = re.compile(r"\{([^{}]*)}")
 
 DEFAULT_NUM_COMBINATIONS = 1
