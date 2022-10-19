@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 WILDCARD_DIR = getattr(opts, "wildcard_dir", "scripts/wildcards")
 MAX_RECURSIONS = 20
-VERSION = 0.4.1
+VERSION = "0.4.2"
 
 re_wildcard = re.compile(r"__(.*?)__")
 re_combinations = re.compile(r"\{([^{}]*)}")
@@ -74,7 +74,7 @@ def replace_wildcard(match):
         logger.warning(f"Missing file {wildcard_path}")
         return ""
 
-    options = [line.strip() for line in wildcard_path.open()]
+    options = [line.strip() for line in wildcard_path.open(errors="ignore")]
     return random.choice(options)
     
 def pick_wildcards(template):
