@@ -59,16 +59,18 @@ This will then either choose a season from seasons.txt or a time of day from tim
 
 ### Recursion
 Prompts are processed recursively. If a wildcard file contains a row with dynamic syntax, then that will be resolved as well. For example if seasons.txt contains the following rows:
-- Summer
-- Winter
-- {Autumn|Fall}
-- Spring
+
+	Summer
+	Winter
+	{Autumn|Fall}
+	Spring
 
 if the 3rd row is chosen, then either Autumn or Fall will be selected. You could go pretty wild e.g.
-- Summer
-- __winter_in_different_languages__
-- {Autumn|Fall}
-- Spring
+
+	Summer
+	__winter_in_different_languages__
+	{Autumn|Fall}
+	Spring
 
 
 ## WILDCARD_DIR
