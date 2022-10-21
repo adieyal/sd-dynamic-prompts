@@ -146,7 +146,7 @@ class Script(scripts.Script):
         """
         
         for path in Path(WILDCARD_DIR).rglob("*.txt"):
-            filename = path.name
+            filename = str(path.relative_to(WILDCARD_DIR))
             wildcard = "__" + filename.replace(".txt", "") + "__"
 
             html += f"<li>{wildcard}</li>"
