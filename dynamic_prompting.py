@@ -142,10 +142,10 @@ class Script(scripts.Script):
 
             <h3><strong>Wildcards</strong></h3>
             <p>Available wildcards</p>
-            <ul>
+            <ul style="overflow-y:auto;max-height:6rem;">
         """
         
-        for path in Path(WILDCARD_DIR).glob("*.txt"):
+        for path in Path(WILDCARD_DIR).rglob("*.txt"):
             filename = path.name
             wildcard = "__" + filename.replace(".txt", "") + "__"
 
