@@ -11,11 +11,12 @@ import modules.scripts as scripts
 from modules.processing import process_images, fix_seed
 from modules.shared import opts
 
+logging.basicConfig(level=logging.WARNING)
 logger = logging.getLogger(__name__)
 
 WILDCARD_DIR = getattr(opts, "wildcard_dir", "scripts/wildcards")
 MAX_RECURSIONS = 20
-VERSION = "0.4.2"
+VERSION = "0.4.3"
 
 re_wildcard = re.compile(r"__(.*?)__")
 re_combinations = re.compile(r"\{([^{}]*)}")
@@ -99,6 +100,7 @@ def generate_prompt(template):
         prompt = pick_wildcards(prompt)
 
         if prompt == old_prompt:
+            logger.info(f"Prompt: {prompt}")
             return prompt
         old_prompt = prompt
         
