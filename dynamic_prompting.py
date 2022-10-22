@@ -108,7 +108,7 @@ def pick_variant(template):
 
     return re_combinations.sub(replace_combinations, template)
 
-def generate_prompt(template):
+def generate_prompt(template, replace_underscore):
     old_prompt = template
     counter = 0
     while True:
@@ -119,6 +119,8 @@ def generate_prompt(template):
         prompt = pick_variant(old_prompt)
         prompt = pick_wildcards(prompt)
 
+        if replace_underscore:
+            prompt = prompt.replace("_", " ")
         if prompt == old_prompt:
             logger.info(f"Prompt: {prompt}")
             return prompt
@@ -129,6 +131,7 @@ class Script(scripts.Script):
         return f"Dynamic Prompting v{VERSION}"
 
     def ui(self, is_img2img):
+        replace_underscore = gr.Checkbox(label='Replace underscores from danbooru tags', value=False)
         html = f"""
             <h3><strong>Combinations</strong></h3>
             Choose a number of terms from a list, in this case we choose two artists
@@ -158,9 +161,9 @@ class Script(scripts.Script):
             <small>You can add more wildcards by creating a text file with one term per line and name is mywildcards.txt. Place it in {WILDCARD_DIR}. <code>__mywildcards__</code> will then become available.</small>
         """
         info = gr.HTML(html)
-        return [info]
+        return [info, replace_underscore]
 
-    def run(self, p, info):
+    def run(self, p, info, replace_underscore):
         fix_seed(p)
 
         original_prompt = p.prompt[0] if type(p.prompt) == list else p.prompt
@@ -168,7 +171,7 @@ class Script(scripts.Script):
         
         num_images = p.n_iter * p.batch_size
         all_prompts = [
-            generate_prompt(original_prompt) for _ in range(num_images)
+            generate_prompt(original_prompt, replace_underscore) for _ in range(num_images)
         ]
 
         all_seeds = [int(p.seed) + (x if p.subseed_strength == 0 else 0) for x in range(num_images)]
