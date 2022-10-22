@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 
 WILDCARD_DIR = getattr(opts, "wildcard_dir", "scripts/wildcards")
 MAX_RECURSIONS = 20
-VERSION = "0.4.4"
+VERSION = "0.4.5"
 
 re_wildcard = re.compile(r"__(.*?)__")
 re_combinations = re.compile(r"\{([^{}]*)}")
@@ -152,8 +152,6 @@ class Script(scripts.Script):
         ]
 
         all_seeds = [int(p.seed) + (x if p.subseed_strength == 0 else 0) for x in range(num_images)]
-
-        p.do_not_save_grid = True
 
         logger.info(f"Prompt matrix will create {len(all_prompts)} images in a total of {p.n_iter} batches.")
 
