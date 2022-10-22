@@ -5,3 +5,4 @@
 0.4.1 Fixed regular expression for wildcards, it previously didn't allow wildcard files with underscores in them.
 0.4.2 Ignoring unknown characters in non-utf8 encoding wildcard files
 0.4.3 Printing prompts at logger level INFO
+0.4.4 Fixed bug where num_batches was being interpreted as num_images

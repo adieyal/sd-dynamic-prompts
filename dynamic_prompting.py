@@ -8,7 +8,7 @@ import re, random
 import gradio as gr
 import modules.scripts as scripts
 
-from modules.processing import process_images, fix_seed
+from modules.processing import process_images, fix_seed, Processed
 from modules.shared import opts
 
 logging.basicConfig(level=logging.WARNING)
@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 
 WILDCARD_DIR = getattr(opts, "wildcard_dir", "scripts/wildcards")
 MAX_RECURSIONS = 20
-VERSION = "0.4.3"
+VERSION = "0.4.4"
 
 re_wildcard = re.compile(r"__(.*?)__")
 re_combinations = re.compile(r"\{([^{}]*)}")
@@ -146,17 +146,16 @@ class Script(scripts.Script):
         original_prompt = p.prompt[0] if type(p.prompt) == list else p.prompt
         original_seed = p.seed
         
-
+        num_images = p.n_iter * p.batch_size
         all_prompts = [
-            generate_prompt(original_prompt) for _ in range(p.n_iter)
+            generate_prompt(original_prompt) for _ in range(num_images)
         ]
 
-        all_seeds = [int(p.seed) + (x if p.subseed_strength == 0 else 0) for x in range(len(all_prompts))]
+        all_seeds = [int(p.seed) + (x if p.subseed_strength == 0 else 0) for x in range(num_images)]
 
-        p.n_iter = math.ceil(len(all_prompts) / p.batch_size)
         p.do_not_save_grid = True
 
-        print(f"Prompt matrix will create {len(all_prompts)} images using a total of {p.n_iter} batches.")
+        logger.info(f"Prompt matrix will create {len(all_prompts)} images in a total of {p.n_iter} batches.")
 
         p.prompt = all_prompts
         p.seed = all_seeds
