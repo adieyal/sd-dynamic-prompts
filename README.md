@@ -49,6 +49,7 @@ If you omit the $$ prefix, one item will be selected. (Equivalent to 1$$)
 
 ### Wildcard files
 Wildcard files are not provided by this script as lists exists in other repositories. A good place to start looking is [here](https://github.com/jtkelm2/stable-diffusion-webui-1/tree/master/scripts/wildcards)
+Empty lines and lines starting with `#` are ignored. This can be used to add comments or disable sections of the file.
 
 ### Nesting
 You can nest combinations inside wildcards. This means that you can create more advanced templates. For example:
@@ -72,6 +73,13 @@ if the 3rd row is chosen, then either Autumn or Fall will be selected. You could
 	{Autumn|Fall}
 	Spring
 
+## Fuzzy Glob/recursive wildcard file/directory matching
+In addition to standard wildcard tokens such as `__times__` -> `times.txt`, you can also use globbing to match against multiple files at once.
+`*` can be used to specify an arbitrary contiguous part of a path
+  * e.g. `__settings*manmade__` will match `settings/indoor/manmade/` (and everything under that directory) and/or `settings/outdoor/manmade.txt`, but will _not_ match settings/outdoor/natural`, etc.
+
+You can also use slashes to specify paths to match against.
+  * e.g. `__fav/chars__` will match `fav/chars.txt` and/or all files under the directory `fav/chars/` 
 
 ## WILDCARD_DIR
 The script looks for wildcard files in WILDCARD_DIR. This is defined in the main webui config.json under wildcard_dir. If wildcard_dir is missing, then wildcard files should be placed in scripts/wildcards/

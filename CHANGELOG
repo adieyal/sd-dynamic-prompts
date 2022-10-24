@@ -7,3 +7,4 @@
 0.4.3 Printing prompts at logger level INFO
 0.4.4 Fixed bug where num_batches was being interpreted as num_images
 0.4.5 Enabled generation of grids
+0.5.0 The script can now handle nested wildcard directories in order to make it easier to organise large wildcard collections. Comments and empty lines are now ignored. Both features thanks to @evanjs 

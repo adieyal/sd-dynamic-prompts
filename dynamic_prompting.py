@@ -1,9 +1,10 @@
 import os
-from glob import glob
 from pathlib import Path
 import logging
 import math
 import re, random
+import pathlib
+from typing import Set
 
 import gradio as gr
 import modules.scripts as scripts
@@ -16,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 WILDCARD_DIR = getattr(opts, "wildcard_dir", "scripts/wildcards")
 MAX_RECURSIONS = 20
-VERSION = "0.4.5"
+VERSION = "0.5.0"
 
 re_wildcard = re.compile(r"__(.*?)__")
 re_combinations = re.compile(r"\{([^{}]*)}")
@@ -60,6 +61,7 @@ def replace_combinations(match):
 
 
 def replace_wildcard(match):
+    is_empty_line = lambda line: line is None or line.strip() == "" or line.strip().startswith("#")
     if match is None or len(match.groups()) == 0:
         logger.warning("Expected match to contain a filename")
         return ""
@@ -69,13 +71,21 @@ def replace_wildcard(match):
         wildcard_dir.mkdir()
 
     wildcard = match.groups()[0]
-    wildcard_path = wildcard_dir / f"{wildcard}.txt"
+    txt_files = list(pathlib.Path(wildcard_dir).rglob("*.txt"))
 
-    if not wildcard_path.exists():
-        logger.warning(f"Missing file {wildcard_path}")
-        return ""
+    replacement_files = []
+    for path in txt_files:
+        if wildcard in str(path.absolute()) or os.path.normpath(wildcard) in str(path.absolute()):
+            replacement_files.append(str(path.absolute()))
 
-    options = [line.strip() for line in wildcard_path.open(errors="ignore")]
+    contents: Set = set()
+    for replacement_file in replacement_files:
+        if os.path.exists(replacement_file):
+            with open(replacement_file, encoding="utf8", errors="ignore") as f:
+                lines = [line.strip() for line in f if not is_empty_line(line)]
+                contents.update(lines)
+    options = list(contents)
+
     return random.choice(options)
     
 def pick_wildcards(template):
@@ -122,11 +132,11 @@ class Script(scripts.Script):
 
             <h3><strong>Wildcards</strong></h3>
             <p>Available wildcards</p>
-            <ul>
+            <ul style="overflow-y:auto;max-height:6rem;">
         """
         
-        for path in Path(WILDCARD_DIR).glob("*.txt"):
-            filename = path.name
+        for path in Path(WILDCARD_DIR).rglob("*.txt"):
+            filename = str(path.relative_to(WILDCARD_DIR))
             wildcard = "__" + filename.replace(".txt", "") + "__"
 
             html += f"<li>{wildcard}</li>"
