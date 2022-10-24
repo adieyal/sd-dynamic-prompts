@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 WILDCARD_DIR = getattr(opts, "wildcard_dir", "scripts/wildcards")
 MAX_RECURSIONS = 20
-VERSION = "0.4.5"
+VERSION = "0.5.0"
 
 re_wildcard = re.compile(r"__(.*?)__")
 re_combinations = re.compile(r"\{([^{}]*)}")
@@ -61,6 +61,7 @@ def replace_combinations(match):
 
 
 def replace_wildcard(match):
+    is_empty_line = lambda line: line is None or line.strip() == "" or line.strip().startswith("#")
     if match is None or len(match.groups()) == 0:
         logger.warning("Expected match to contain a filename")
         return ""
@@ -76,24 +77,13 @@ def replace_wildcard(match):
     for path in txt_files:
         if wildcard in str(path.absolute()) or os.path.normpath(wildcard) in str(path.absolute()):
             replacement_files.append(str(path.absolute()))
-        else:
-            if "*" in wildcard:
-                terms = [m for m in wildcard.__str__().split("*")]
-                matched_terms = []
-                for term in terms:
-                    if term in str(path.absolute()) or os.path.normpath(term) in str(path.absolute()):
-                        matched_terms.append(term)
-                if len(terms) == len(matched_terms):
-                    replacement_files.append(str(path.absolute()))
 
     contents: Set = set()
     for replacement_file in replacement_files:
         if os.path.exists(replacement_file):
             with open(replacement_file, encoding="utf8", errors="ignore") as f:
-                lines = f.read().splitlines()
-                filtered = [line.strip() for line in lines if not line.startswith(
-                    '#') and line is not None and len(line) > 0]
-                contents.update(filtered)
+                lines = [line.strip() for line in f if not is_empty_line(line)]
+                contents.update(lines)
     options = list(contents)
 
     return random.choice(options)
@@ -108,7 +98,7 @@ def pick_variant(template):
 
     return re_combinations.sub(replace_combinations, template)
 
-def generate_prompt(template, replace_underscore):
+def generate_prompt(template):
     old_prompt = template
     counter = 0
     while True:
@@ -119,8 +109,6 @@ def generate_prompt(template, replace_underscore):
         prompt = pick_variant(old_prompt)
         prompt = pick_wildcards(prompt)
 
-        if replace_underscore:
-            prompt = prompt.replace("_", " ")
         if prompt == old_prompt:
             logger.info(f"Prompt: {prompt}")
             return prompt
@@ -131,7 +119,6 @@ class Script(scripts.Script):
         return f"Dynamic Prompting v{VERSION}"
 
     def ui(self, is_img2img):
-        replace_underscore = gr.Checkbox(label='Replace underscores from danbooru tags', value=False)
         html = f"""
             <h3><strong>Combinations</strong></h3>
             Choose a number of terms from a list, in this case we choose two artists
@@ -161,9 +148,9 @@ class Script(scripts.Script):
             <small>You can add more wildcards by creating a text file with one term per line and name is mywildcards.txt. Place it in {WILDCARD_DIR}. <code>__mywildcards__</code> will then become available.</small>
         """
         info = gr.HTML(html)
-        return [info, replace_underscore]
+        return [info]
 
-    def run(self, p, info, replace_underscore):
+    def run(self, p, info):
         fix_seed(p)
 
         original_prompt = p.prompt[0] if type(p.prompt) == list else p.prompt
@@ -171,7 +158,7 @@ class Script(scripts.Script):
         
         num_images = p.n_iter * p.batch_size
         all_prompts = [
-            generate_prompt(original_prompt, replace_underscore) for _ in range(num_images)
+            generate_prompt(original_prompt) for _ in range(num_images)
         ]
 
         all_seeds = [int(p.seed) + (x if p.subseed_strength == 0 else 0) for x in range(num_images)]
