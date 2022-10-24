@@ -1,6 +1,6 @@
 0.1 Initial implementation
 0.2 Fixed Batch img2img implementation
-0.3 Added interval implementation for combinations, i.e. you can now use {1-2$$op1|opt2|opt3} which will choose one or two options
+0.3 Added interval implementation for combinations, i.e. you can now use {1-2$$op1|opt2|opt3} which will choose one or two options. Thanks to @galvanized for this.
 0.4 Rows in a wildcard file that contain dynamic syntax will be resolved. This enables recusive resolution. See [this](https://github.com/adieyal/sd-dynamic-prompting/issues/3) feature request for a use case
 0.4.1 Fixed regular expression for wildcards, it previously didn't allow wildcard files with underscores in them.
 0.4.2 Ignoring unknown characters in non-utf8 encoding wildcard files
