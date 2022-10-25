@@ -17,12 +17,62 @@ logger = logging.getLogger(__name__)
 
 WILDCARD_DIR = getattr(opts, "wildcard_dir", "scripts/wildcards")
 MAX_RECURSIONS = 20
-VERSION = "0.5.0"
+VERSION = "0.6.0"
+WILDCARD_SUFFIX = "txt"
 
 re_wildcard = re.compile(r"__(.*?)__")
 re_combinations = re.compile(r"\{([^{}]*)}")
 
 DEFAULT_NUM_COMBINATIONS = 1
+
+class WildcardFile:
+    def __init__(self, path: Path, encoding="utf8"):
+        self._path = path
+        self._encoding = encoding
+
+    def get_wildcards(self) -> Set[str]:
+        is_empty_line = lambda line: line is None or line.strip() == "" or line.strip().startswith("#")
+
+        with self._path.open(encoding=self._encoding, errors="ignore") as f:
+            lines = [line.strip() for line in f if not is_empty_line(line)]
+            return set(lines)
+
+
+class WildcardManager:
+    def __init__(self, path:str=WILDCARD_DIR):
+        self._path = Path(path)
+
+    def _directory_exists(self) -> bool:
+        return self._path.exists() and self._path.is_dir()
+
+    def ensure_directory(self) -> bool:
+        try:
+            self._path.mkdir(parents=True, exist_ok=True)
+        except Exception as e:
+            logger.exception(f"Failed to create directory {self._path}")
+
+    def get_files(self, relative:bool=False) -> list[Path]:
+        if not self._directory_exists():
+            return []
+
+
+        files = self._path.rglob(f"*.{WILDCARD_SUFFIX}")
+        if relative:
+            files = [f.relative_to(self._path) for f in files]
+
+        return files
+
+    def match_files(self, wildcard:str) -> list[WildcardFile]:
+        return [
+            WildcardFile(path) for path in self._path.rglob(f"{wildcard}.{WILDCARD_SUFFIX}")
+        ]
+
+    def get_wildcards(self) -> list[str]:
+        files = self.get_files(relative=True)
+        wildcards = [f"__{path.with_suffix('')}__" for path in files]
+        return wildcards
+
+wildcard_manager = WildcardManager()
 
 def replace_combinations(match):
     if match is None or len(match.groups()) == 0:
@@ -59,34 +109,26 @@ def replace_combinations(match):
 
     return ""
 
-
 def replace_wildcard(match):
     is_empty_line = lambda line: line is None or line.strip() == "" or line.strip().startswith("#")
     if match is None or len(match.groups()) == 0:
         logger.warning("Expected match to contain a filename")
         return ""
 
-    wildcard_dir = Path(WILDCARD_DIR)
-    if not wildcard_dir.exists():
-        wildcard_dir.mkdir()
-
     wildcard = match.groups()[0]
-    txt_files = list(pathlib.Path(wildcard_dir).rglob("*.txt"))
+    wildcard_files = wildcard_manager.match_files(wildcard)
 
-    replacement_files = []
-    for path in txt_files:
-        if wildcard in str(path.absolute()) or os.path.normpath(wildcard) in str(path.absolute()):
-            replacement_files.append(str(path.absolute()))
+    if len(wildcard_files) == 0:
+        logging.warning(f"Could not find any wildcard files matching {wildcard}")
+        return ""
 
-    contents: Set = set()
-    for replacement_file in replacement_files:
-        if os.path.exists(replacement_file):
-            with open(replacement_file, encoding="utf8", errors="ignore") as f:
-                lines = [line.strip() for line in f if not is_empty_line(line)]
-                contents.update(lines)
-    options = list(contents)
+    wildcards = set().union(*[f.get_wildcards() for f in wildcard_files])
 
-    return random.choice(options)
+    if len(wildcards) > 0:
+        return random.choice(list(wildcards))
+    else:
+        logging.warning(f"Could not find any wildcards in {wildcard}")
+        return ""
     
 def pick_wildcards(template):
     return re_wildcard.sub(replace_wildcard, template)
@@ -135,11 +177,8 @@ class Script(scripts.Script):
             <ul style="overflow-y:auto;max-height:6rem;">
         """
         
-        for path in Path(WILDCARD_DIR).rglob("*.txt"):
-            filename = str(path.relative_to(WILDCARD_DIR))
-            wildcard = "__" + filename.replace(".txt", "") + "__"
-
-            html += f"<li>{wildcard}</li>"
+        wildcards = wildcard_manager.get_wildcards()
+        html += "".join([f"<li>{wildcard}</li>" for wildcard in wildcards])
 
         html += "</ul>"
         html += f"""
@@ -175,3 +214,5 @@ class Script(scripts.Script):
         p.seed = original_seed
 
         return processed
+
+wildcard_manager.ensure_directory()
