@@ -113,39 +113,107 @@ def generate_prompt(template):
             logger.info(f"Prompt: {prompt}")
             return prompt
         old_prompt = prompt
-        
+
+def getTxt(dir):
+    temp = ""
+    temp += f"<button type=\"button\" class=\"collapsible\">{dir.name} :</button>"
+    temp += f"<div class=\"content\">"
+    for path in Path(dir).glob("*.txt"):
+        filename = path.name
+        wildcard = "&emsp;__" + dir.name + "." + filename.replace(".txt", "") + "__"
+
+        temp += f"<li>{wildcard}</li>"
+    temp += f"</div>"
+    return temp
+
+def probe(dir):
+    temp = ""
+    for path in Path(dir).iterdir():
+        if path.is_dir():
+            temp += getTxt(path)
+
+    return temp
+
 class Script(scripts.Script):
     def title(self):
         return f"Dynamic Prompting v{VERSION}"
 
     def ui(self, is_img2img):
-        html = f"""
+
+        html = """
+            <style>
+            .collapsible {
+            background-color: #1f2937;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: 2px #0C111C;
+            border-right-style: solid;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-radius: 8px 8px 0px 0px;
+            padding: 3px;
+            margin-top: 10px;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            }
+
+            .active, .collapsible:hover {
+            background-color: #555;
+            }
+
+            .codeblock {
+                background-color: #06080D;
+            }
+
+            .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            border: 2px #0C111C;
+            border-right-style: solid;
+            border-bottom-style: solid;
+            border-left-style: solid;
+            border-radius: 0px 0px 8px 8px;
+            background-color: #1f2937;
+            }
+            </style>
+        """
+
+        html += f"""
+            <h3><strong>Note</strong></h3>
+            Folder depth is only <strong>1</strong>!!
+            Folders add organization when having multiple wildcards.<br>
+            Wildcards txt documents need to be in a folder, example:<br>
+            &emsp;&#x2022; Correct: <code class="codeblock">scripts/wildcards/&#60;folder&#62;/*.txt</code><br>
+            &emsp;&#x2022; Incorrect: <code class="codeblock">scripts/wildcards/*.txt</code><br>
+            If the groups wont drop down click <strong onclick="check_collapsibles()" style="cursor: pointer">here</strong> to fix the issue.
+            <br/><br/>
+            <h3><strong>Syntax</strong></h3>
+            In order to use a wildcard the prefix must be a folder name: 
+            <code class="codeblock">__&#60;folder&#62;.wildcard__</code>, example:
+            <code class="codeblock">__sd.wildcard__</code><br>
+            The folder name will be provided in the dropdowns.
+            <br/><br/>
             <h3><strong>Combinations</strong></h3>
-            Choose a number of terms from a list, in this case we choose two artists
-            <code>{{2$$artist1|artist2|artist3}}</code>
+            Choose a number of terms from a list, in this case we choose two artists: 
+            <code class="codeblock">{{2$$artist1|artist2|artist3}}</code>
             If $$ is not provided, then 1$$ is assumed.
-            <br>
             A range can be provided:
-            <code>{{1-3$$artist1|artist2|artist3}}</code>
+            <code class="codeblock">{{1-3$$artist1|artist2|artist3}}</code>
             In this case, a random number of artists between 1 and 3 is chosen.
             <br/><br/>
-
             <h3><strong>Wildcards</strong></h3>
-            <p>Available wildcards</p>
-            <ul style="overflow-y:auto;max-height:6rem;">
         """
         
-        for path in Path(WILDCARD_DIR).rglob("*.txt"):
-            filename = str(path.relative_to(WILDCARD_DIR))
-            wildcard = "__" + filename.replace(".txt", "") + "__"
-
-            html += f"<li>{wildcard}</li>"
-
-        html += "</ul>"
+        html += probe(WILDCARD_DIR)
+        NEW_WILDCARD_DIR = WILDCARD_DIR.replace("/wildcards", "/wildcards/&#60;folder&#62;")
         html += f"""
-            <br/>
-            <code>WILDCARD_DIR: {WILDCARD_DIR}</code><br/>
-            <small>You can add more wildcards by creating a text file with one term per line and name is mywildcards.txt. Place it in {WILDCARD_DIR}. <code>__mywildcards__</code> will then become available.</small>
+            <br/><br/>
+            <code class="codeblock">WILDCARD_DIR: {NEW_WILDCARD_DIR}</code><br/>
+            <small>You can add more wildcards by creating a text file with one term per line and name is mywildcards.txt. Place it in {NEW_WILDCARD_DIR}. <code class="codeblock">__&#60;folder&#62;.mywildcards__</code> will then become available.</small>
         """
         info = gr.HTML(html)
         return [info]
