@@ -152,8 +152,9 @@ class Script(scripts.Script):
             border-right-style: solid;
             border-top-style: solid;
             border-left-style: solid;
-            border-radius: 8px 8px 0px 0px;
-            padding: 3px;
+            border-bottom-style: solid;
+            border-radius: 8px 8px 8px 8px;
+            padding: 5px;
             margin-top: 10px;
             text-align: left;
             outline: none;
