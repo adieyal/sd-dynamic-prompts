@@ -10,8 +10,12 @@ function check_collapsibles() {
       var content = this.nextElementSibling;
       if (content.style.display === "block") {
         content.style.display = "none";
+        this.style.borderBottomStyle = "solid";
+        this.style.borderRadius = "8px"
       } else {
         content.style.display = "block";
+        this.style.borderBottomStyle = "none";
+        this.style.borderRadius = "8px 8px 0px 0px"
       }
     });
   }
