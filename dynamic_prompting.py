@@ -71,11 +71,15 @@ def replace_wildcard(match):
         wildcard_dir.mkdir()
 
     wildcard = match.groups()[0]
-    txt_files = list(pathlib.Path(wildcard_dir).rglob("*.txt"))
+    folder = str(wildcard).split(".")[0]
 
+    newWildcardDir = str(wildcard_dir).replace("\\wildcards", f"\\wildcards\\{folder}")
+
+    txt_files = list(pathlib.Path(newWildcardDir).rglob("*.txt"))
     replacement_files = []
     for path in txt_files:
-        if wildcard in str(path.absolute()) or os.path.normpath(wildcard) in str(path.absolute()):
+        absolute = str(path.absolute()).replace("\\", ".")
+        if wildcard in absolute or os.path.normpath(wildcard) in absolute:
             replacement_files.append(str(path.absolute()))
 
     contents: Set = set()
