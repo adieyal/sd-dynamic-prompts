@@ -92,5 +92,38 @@ but won't match
 
 You can also used character ranges `[0-9]` and `[a-z]` and single wildcard characters `?`. For more examples see [this article](http://pymotw.com/2/glob/).
 
+# Combinatorial Generation
+Instead of generating random prompts from a template, combinatorial generation produced every possible prompt from the given string. For example:
+`I {love|hate} {New York|Chicago} in {June|July|August}`
+
+will produce:
+- I love New York in June
+- I love New York in July
+- I love New York in August
+- I love Chicago in June
+- I love Chicago in July
+- I love Chicago in August
+- I hate New York in June
+- I hate New York in July
+- I hate New York in August
+- I hate Chicago in June
+- I hate Chicago in July
+- I hate Chicago in August
+
+If a `__wildcard__` is provided, then a new prompt will be produced for every value in the wildcard file. For example:
+`My favourite season is __seasons__`
+
+will produce:
+- My favourite season is Summer
+- My favourite season is August
+- My favourite season is Winter
+- My favourite season is Sprint
+
+You also arbitrarily nest combinations inside wildcards and wildcards in combinations.
+
+Combinatorial generation can be useful if you want to create an image for every artist in a file. It can be enabled by checking the __Combinatorial generation__ checkbox in the ui. Note, __num batches__ changes meaning. With random generation, exactly __num_batches__ * __batch_size__ images are created. With combinatorial generation, at *most* __num_batches__ * __batch_size__ images are created. This upper limit ensures that you don't accidentially create a template that unexpectedly  produces thousands of images.
+
+Combinations are not yet supported, i.e. `{2$$a|b|c}` will treat `2$$a` as one of the options instead of selecting two of a, b and c.
+
 ## WILDCARD_DIR
 The script looks for wildcard files in WILDCARD_DIR. This is defined in the main webui config.json under wildcard_dir. If wildcard_dir is missing, then wildcard files should be placed in scripts/wildcards/
