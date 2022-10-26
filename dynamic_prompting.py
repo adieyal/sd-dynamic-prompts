@@ -17,12 +17,96 @@ logger = logging.getLogger(__name__)
 
 WILDCARD_DIR = getattr(opts, "wildcard_dir", "scripts/wildcards")
 MAX_RECURSIONS = 20
-VERSION = "0.5.0"
+VERSION = "0.6.0"
+WILDCARD_SUFFIX = "txt"
 
 re_wildcard = re.compile(r"__(.*?)__")
 re_combinations = re.compile(r"\{([^{}]*)}")
 
 DEFAULT_NUM_COMBINATIONS = 1
+
+class WildcardFile:
+    def __init__(self, path: Path, encoding="utf8"):
+        self._path = path
+        self._encoding = encoding
+
+    def get_wildcards(self) -> Set[str]:
+        is_empty_line = lambda line: line is None or line.strip() == "" or line.strip().startswith("#")
+
+        with self._path.open(encoding=self._encoding, errors="ignore") as f:
+            lines = [line.strip() for line in f if not is_empty_line(line)]
+            return set(lines)
+
+
+class WildcardManager:
+    def __init__(self, path:str=WILDCARD_DIR):
+        self._path = Path(path)
+
+    def _directory_exists(self) -> bool:
+        return self._path.exists() and self._path.is_dir()
+
+    def ensure_directory(self) -> bool:
+        try:
+            self._path.mkdir(parents=True, exist_ok=True)
+        except Exception as e:
+            logger.exception(f"Failed to create directory {self._path}")
+
+    def get_files(self, relative:bool=False) -> list():
+        if not self._directory_exists():
+            return []
+
+        files = self._path.rglob(f"*.{WILDCARD_SUFFIX}")
+        if relative:
+            files = [f.relative_to(self._path) for f in files]
+
+        return files
+
+    def match_files(self, wildcard:str) -> list():
+        return [
+            WildcardFile(path) for path in self._path.rglob(f"{wildcard}.{WILDCARD_SUFFIX}")
+        ]
+
+    def get_wildcards(self) -> list():
+        files = self.get_files(relative=True)
+        wildcards = [f"__{path.with_suffix('')}__" for path in files]
+        return wildcards
+
+class UiCreation:
+    def write(self, path):
+        if path.is_dir():
+            return self.write_dir(path)
+        else:
+            return self.write_txt(path)        
+
+    def write_txt(self, path):
+        temp = ""
+        filename = path.name
+        wildcard = "__" + "/".join((str(path).split("\\"))[2:-1])+ "/" + filename.replace(".txt", "") + "__"
+
+        temp += f"<p>{wildcard}</p>"
+        return temp
+
+    def write_dir(self, path):
+        temp = ""
+        Ppath = "/".join(str(path).split("\\")[2:])
+        temp += f"<button type=\"button\" class=\"collapsible\">{Ppath} :</button>"
+        temp += f"<div class=\"content\">"
+        
+        for file_or_dir in list(pathlib.Path(path).glob('*/')):
+            temp += self.write(file_or_dir)
+
+        temp += f"</div>"
+        return temp 
+
+    def probe(self, dir):
+        temp = ""
+        directories = list(pathlib.Path(dir).glob('*/')) #.rglob("*txt")
+        for dirs in directories[0:]:
+            temp += self.write(dirs)
+        return temp
+
+ui_creation = UiCreation()
+wildcard_manager = WildcardManager()
 
 def replace_combinations(match):
     if match is None or len(match.groups()) == 0:
@@ -59,38 +143,26 @@ def replace_combinations(match):
 
     return ""
 
-
 def replace_wildcard(match):
     is_empty_line = lambda line: line is None or line.strip() == "" or line.strip().startswith("#")
     if match is None or len(match.groups()) == 0:
         logger.warning("Expected match to contain a filename")
         return ""
 
-    wildcard_dir = Path(WILDCARD_DIR)
-    if not wildcard_dir.exists():
-        wildcard_dir.mkdir()
-
     wildcard = match.groups()[0]
-    folder = str(wildcard).split(".")[0]
+    wildcard_files = wildcard_manager.match_files(wildcard)
 
-    newWildcardDir = str(wildcard_dir).replace("\\wildcards", f"\\wildcards\\{folder}")
+    if len(wildcard_files) == 0:
+        logging.warning(f"Could not find any wildcard files matching {wildcard}")
+        return ""
 
-    txt_files = list(pathlib.Path(newWildcardDir).rglob("*.txt"))
-    replacement_files = []
-    for path in txt_files:
-        absolute = str(path.absolute()).replace("\\", ".")
-        if wildcard in absolute or os.path.normpath(wildcard) in absolute:
-            replacement_files.append(str(path.absolute()))
+    wildcards = set().union(*[f.get_wildcards() for f in wildcard_files])
 
-    contents: Set = set()
-    for replacement_file in replacement_files:
-        if os.path.exists(replacement_file):
-            with open(replacement_file, encoding="utf8", errors="ignore") as f:
-                lines = [line.strip() for line in f if not is_empty_line(line)]
-                contents.update(lines)
-    options = list(contents)
-
-    return random.choice(options)
+    if len(wildcards) > 0:
+        return random.choice(list(wildcards))
+    else:
+        logging.warning(f"Could not find any wildcards in {wildcard}")
+        return ""
     
 def pick_wildcards(template):
     return re_wildcard.sub(replace_wildcard, template)
@@ -117,33 +189,12 @@ def generate_prompt(template):
             logger.info(f"Prompt: {prompt}")
             return prompt
         old_prompt = prompt
-
-def getTxt(dir):
-    temp = ""
-    temp += f"<button type=\"button\" class=\"collapsible\">{dir.name} :</button>"
-    temp += f"<div class=\"content\">"
-    for path in Path(dir).glob("*.txt"):
-        filename = path.name
-        wildcard = "&emsp;__" + dir.name + "." + filename.replace(".txt", "") + "__"
-
-        temp += f"<li>{wildcard}</li>"
-    temp += f"</div>"
-    return temp
-
-def probe(dir):
-    temp = ""
-    for path in Path(dir).iterdir():
-        if path.is_dir():
-            temp += getTxt(path)
-
-    return temp
-
+        
 class Script(scripts.Script):
     def title(self):
         return f"Dynamic Prompting v{VERSION}"
 
     def ui(self, is_img2img):
-
         html = """
             <style>
             .collapsible {
@@ -188,19 +239,7 @@ class Script(scripts.Script):
         """
 
         html += f"""
-            <h3><strong>Note</strong></h3>
-            Folder depth is only <strong>1</strong>!!
-            Folders add organization when having multiple wildcards.<br>
-            Wildcards txt documents need to be in a folder, example:<br>
-            &emsp;&#x2022; Correct: <code class="codeblock">scripts/wildcards/&#60;folder&#62;/*.txt</code><br>
-            &emsp;&#x2022; Incorrect: <code class="codeblock">scripts/wildcards/*.txt</code><br>
             If the groups wont drop down click <strong onclick="check_collapsibles()" style="cursor: pointer">here</strong> to fix the issue.
-            <br/><br/>
-            <h3><strong>Syntax</strong></h3>
-            In order to use a wildcard the prefix must be a folder name: 
-            <code class="codeblock">__&#60;folder&#62;.wildcard__</code>, example:
-            <code class="codeblock">__sd.wildcard__</code><br>
-            The folder name will be provided in the dropdowns.
             <br/><br/>
             <h3><strong>Combinations</strong></h3>
             Choose a number of terms from a list, in this case we choose two artists: 
@@ -213,12 +252,13 @@ class Script(scripts.Script):
             <h3><strong>Wildcards</strong></h3>
         """
         
-        html += probe(WILDCARD_DIR)
-        NEW_WILDCARD_DIR = WILDCARD_DIR.replace("/wildcards", "/wildcards/&#60;folder&#62;")
+        #wildcards = wildcard_manager.get_wildcards()
+        html += ui_creation.probe(WILDCARD_DIR) #"".join([f"<li>{wildcard}</li>" for wildcard in wildcards])
+
         html += f"""
             <br/><br/>
-            <code class="codeblock">WILDCARD_DIR: {NEW_WILDCARD_DIR}</code><br/>
-            <small>You can add more wildcards by creating a text file with one term per line and name is mywildcards.txt. Place it in {NEW_WILDCARD_DIR}. <code class="codeblock">__&#60;folder&#62;.mywildcards__</code> will then become available.</small>
+            <code class="codeblock">WILDCARD_DIR: {WILDCARD_DIR}</code><br/>
+            <small onload="check_collapsibles()">You can add more wildcards by creating a text file with one term per line and name is mywildcards.txt. Place it in {WILDCARD_DIR}. <code class="codeblock">__&#60;folder&#62;/mywildcards__</code> will then become available.</small>
         """
         info = gr.HTML(html)
         return [info]
@@ -248,3 +288,5 @@ class Script(scripts.Script):
         p.seed = original_seed
 
         return processed
+
+wildcard_manager.ensure_directory()
