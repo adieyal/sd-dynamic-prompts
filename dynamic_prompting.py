@@ -60,6 +60,15 @@ class WildcardManager:
             files = [f.relative_to(self._path) for f in files]
 
         return files
+    
+    def join_wildcard(self, path) -> str():
+        return "/".join((str(path).split(os.sep))[2:-1])
+
+    def join_directory(self, path) -> str():
+        return "/".join((str(path).split(os.sep))[2:])
+
+    def get_current_folder(self, dir) -> list():
+        return list(pathlib.Path(dir).glob('*/'))
 
     def match_files(self, wildcard:str) -> list():
         return [
@@ -71,6 +80,8 @@ class WildcardManager:
         wildcards = [f"__{path.with_suffix('')}__" for path in files]
         return wildcards
 
+wildcard_manager = WildcardManager()
+
 class UiCreation:
     def write(self, path):
         if path.is_dir():
@@ -81,32 +92,31 @@ class UiCreation:
     def write_txt(self, path):
         temp = ""
         filename = path.name
-        wildcard = "__" + "/".join((str(path).split("\\"))[2:-1])+ "/" + filename.replace(".txt", "") + "__"
+        wildcard = "__" + wildcard_manager.join_wildcard(path) + "/" + filename.replace(".txt", "") + "__"
 
         temp += f"<p>{wildcard}</p>"
         return temp
 
     def write_dir(self, path):
         temp = ""
-        Ppath = "/".join(str(path).split("\\")[2:])
-        temp += f"<button type=\"button\" class=\"collapsible\">{Ppath} :</button>"
+        joined_path = wildcard_manager.join_directory(path)
+        temp += f"<button type=\"button\" class=\"collapsible\">{joined_path} :</button>"
         temp += f"<div class=\"content\">"
         
-        for file_or_dir in list(pathlib.Path(path).glob('*/')):
+        for file_or_dir in wildcard_manager.get_current_folder(path):
             temp += self.write(file_or_dir)
 
         temp += f"</div>"
         return temp 
 
-    def probe(self, dir):
+    def probe(self):
         temp = ""
-        directories = list(pathlib.Path(dir).glob('*/')) #.rglob("*txt")
-        for dirs in directories[0:]:
-            temp += self.write(dirs)
+        files = wildcard_manager.get_current_folder(WILDCARD_DIR)# #.rglob("*txt")
+        for file in files[0:]:
+            temp += self.write(file)
         return temp
 
 ui_creation = UiCreation()
-wildcard_manager = WildcardManager()
 
 def replace_combinations(match):
     if match is None or len(match.groups()) == 0:
@@ -253,7 +263,7 @@ class Script(scripts.Script):
         """
         
         #wildcards = wildcard_manager.get_wildcards()
-        html += ui_creation.probe(WILDCARD_DIR) #"".join([f"<li>{wildcard}</li>" for wildcard in wildcards])
+        html += ui_creation.probe() #"".join([f"<li>{wildcard}</li>" for wildcard in wildcards])
 
         html += f"""
             <br/><br/>
