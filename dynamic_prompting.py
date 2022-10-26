@@ -62,13 +62,18 @@ class WildcardManager:
         return files
     
     def join_wildcard(self, path) -> str():
-        return "/".join((str(path).split(os.sep))[2:-1])
+        split = (str(path).split(os.sep))
+        additional_char = ""
+        if len(split) > 3:
+            additional_char = "/"
+        #print(str(split) +" - "+str(len(split)))
+        return "/".join(split[2:-1])+additional_char
 
     def join_directory(self, path) -> str():
         return "/".join((str(path).split(os.sep))[2:])
 
     def get_current_folder(self, dir) -> list():
-        return list(pathlib.Path(dir).glob('*/'))
+        return sorted(list(pathlib.Path(dir).glob('*/')))
 
     def match_files(self, wildcard:str) -> list():
         return [
@@ -92,7 +97,7 @@ class UiCreation:
     def write_txt(self, path):
         temp = ""
         filename = path.name
-        wildcard = "__" + wildcard_manager.join_wildcard(path) + "/" + filename.replace(".txt", "") + "__"
+        wildcard = "__" + wildcard_manager.join_wildcard(path) + filename.replace(".txt", "") + "__"
 
         temp += f"<p>{wildcard}</p>"
         return temp
