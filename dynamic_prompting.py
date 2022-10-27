@@ -14,8 +14,8 @@ import modules.scripts as scripts
 from modules.processing import process_images, fix_seed, Processed
 from modules.shared import opts
 
-logging.basicConfig(level=logging.WARNING)
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
 WILDCARD_DIR = getattr(opts, "wildcard_dir", "scripts/wildcards")
 MAX_RECURSIONS = 20
@@ -190,30 +190,30 @@ class CombinatorialPromptGenerator(PromptGenerator):
             return [seed_template]
         return templates
 
-    def generate_from_wildcards(self, seed_template):
-        templates = [seed_template]
-        all_prompts = []
-        count = 0
+    def generate_from_wildcards(self, seed_template, recursion=0):
+        templates = []
 
-        while True:
-            count += 1
-            if count > MAX_RECURSIONS:
-                raise Exception("Too many recursions, something went wrong with generating the prompt")
+        if recursion > MAX_RECURSIONS:
+            raise Exception("Too many recursions, something went wrong with generating the prompt: " + seed_template)
 
-            if len(templates) == 0:
-                break
+        template = seed_template
+        wildcards = re_wildcard.findall(template)
+        if len(wildcards) == 0:
+            return [template]
 
-            template = templates.pop(0)
-            wildcards = re_wildcard.findall(template)
-            if len(wildcards) == 0:
-                all_prompts.append(template)
-                continue
+        for wildcard in wildcards:
+            wildcard_files = wildcard_manager.match_files(wildcard)
+            for val in chain(*[f.get_wildcards() for f in wildcard_files]):
+                new_template = template.replace(f"__{wildcard}__", val, 1)
+                logging.debug(f"New template: {new_template}")
+                templates.append(new_template)
 
-            for wildcard in wildcards:
-                wildcard_files = wildcard_manager.match_files(wildcard)
-                for val in chain(*[f.get_wildcards() for f in wildcard_files]):
-                    templates.append(template.replace(f"__{wildcard}__", val, 1))
-        return all_prompts
+        new_templates = []
+        for template in templates:
+            new_templates += self.generate_from_wildcards(template, recursion=recursion + 1)
+
+        return new_templates
+
 
     def generate(self, max_prompts=MAX_IMAGES):
         templates = [self._template]
@@ -288,10 +288,12 @@ class Script(scripts.Script):
         
         num_images = p.n_iter * p.batch_size
         all_prompts = prompt_generator.generate(num_images)
+        updated_count = len(all_prompts)
+        p.n_iter = math.ceil(updated_count / p.batch_size)
 
-        all_seeds = [int(p.seed) + (x if p.subseed_strength == 0 else 0) for x in range(num_images)]
+        all_seeds = [int(p.seed) + (x if p.subseed_strength == 0 else 0) for x in range(updated_count)]
 
-        logger.info(f"Prompt matrix will create {len(all_prompts)} images in a total of {p.n_iter} batches.")
+        logger.info(f"Prompt matrix will create {updated_count} images in a total of {p.n_iter} batches.")
 
         p.prompt = all_prompts
         p.seed = all_seeds
