@@ -16,6 +16,7 @@ logging.basicConfig(level=logging.WARNING)
 logger = logging.getLogger(__name__)
 
 WILDCARD_DIR = getattr(opts, "wildcard_dir", "scripts/wildcards")
+FOLDER_COUNT = len(str(Path(WILDCARD_DIR)).split(os.sep))
 MAX_RECURSIONS = 20
 VERSION = "0.6.0"
 WILDCARD_SUFFIX = "txt"
@@ -64,16 +65,15 @@ class WildcardManager:
     def join_wildcard(self, path) -> str():
         split = (str(path).split(os.sep))
         additional_char = ""
-        if len(split) > 3:
+        if len(split) > FOLDER_COUNT + 1:
             additional_char = "/"
-        #print(str(split) +" - "+str(len(split)))
-        return "/".join(split[2:-1])+additional_char
+        return "/".join(split[FOLDER_COUNT:-1])+additional_char
 
     def join_directory(self, path) -> str():
-        return "/".join((str(path).split(os.sep))[2:])
+        return "/".join((str(path).split(os.sep))[FOLDER_COUNT:])
 
     def get_current_folder(self, dir) -> list():
-        return sorted(list(pathlib.Path(dir).glob('*/')))
+        return list(pathlib.Path(dir).glob('*/'))
 
     def match_files(self, wildcard:str) -> list():
         return [
