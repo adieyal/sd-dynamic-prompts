@@ -73,7 +73,7 @@ if the 3rd row is chosen, then either Autumn or Fall will be selected. You could
 	{Autumn|Fall}
 	Spring
 
-## Fuzzy Glob/recursive wildcard file/directory matching
+### Fuzzy Glob/recursive wildcard file/directory matching
 In addition to standard wildcard tokens such as `__times__` -> `times.txt`, you can also use globbing to match against multiple files at once.
 For instance:
 
@@ -92,7 +92,7 @@ but won't match
 
 You can also used character ranges `[0-9]` and `[a-z]` and single wildcard characters `?`. For more examples see [this article](http://pymotw.com/2/glob/).
 
-# Combinatorial Generation
+### Combinatorial Generation
 Instead of generating random prompts from a template, combinatorial generation produced every possible prompt from the given string. For example:
 `I {love|hate} {New York|Chicago} in {June|July|August}`
 
