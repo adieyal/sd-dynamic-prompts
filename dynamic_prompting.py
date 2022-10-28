@@ -1,4 +1,5 @@
 import os
+from typing import Any
 from pathlib import Path
 import logging
 import math
@@ -52,7 +53,7 @@ class WildcardManager:
         except Exception as e:
             logger.exception(f"Failed to create directory {self._path}")
 
-    def get_files(self, relative:bool=False) -> list():
+    def get_files(self, relative:bool=False) -> list:
         if not self._directory_exists():
             return []
 
@@ -62,64 +63,53 @@ class WildcardManager:
 
         return files
     
-    def join_wildcard(self, path) -> str():
-        split = (str(path).split(os.sep))
-        additional_char = ""
-        if len(split) > FOLDER_COUNT + 1:
-            additional_char = "/"
-        return "/".join(split[FOLDER_COUNT:-1])+additional_char
-
-    def join_directory(self, path) -> str():
-        return "/".join((str(path).split(os.sep))[FOLDER_COUNT:])
-
-    def get_current_folder(self, dir) -> list():
-        return list(pathlib.Path(dir).glob('*/'))
-
-    def match_files(self, wildcard:str) -> list():
+    def match_files(self, wildcard:str) -> list:
         return [
             WildcardFile(path) for path in self._path.rglob(f"{wildcard}.{WILDCARD_SUFFIX}")
         ]
+    
+    def path_to_wilcard(self, path: Path) -> str:
+        rel_path = path.relative_to(self._path)
+        return f"__{rel_path.with_suffix('')}__"
 
-    def get_wildcards(self) -> list():
+    def get_wildcards(self) -> list:
         files = self.get_files(relative=True)
-        wildcards = [f"__{path.with_suffix('')}__" for path in files]
+        wildcards = [self.path_to_wilcard(f) for f in files]
+
         return wildcards
+
+    def get_wildcard_hierarchy(self, path: str):
+        path = Path(path)
+        files = path.glob("*.txt")
+        wildcards = [self.path_to_wilcard(f) for f in files]
+        directories = [d for d in path.glob("*") if d.is_dir()]
+
+        hierarchy = {d.name: self.get_wildcard_hierarchy(d) for d in directories}
+        return (wildcards, hierarchy)
 
 wildcard_manager = WildcardManager()
 
 class UiCreation:
-    def write(self, path):
-        if path.is_dir():
-            return self.write_dir(path)
-        else:
-            return self.write_txt(path)        
+    def write(self, wildcards: list[str], hierarchy: dict[str, Any]) -> str:
+        html = ""
+        for wildcard in wildcards:
+            html += f"<p>{wildcard}</p>"
 
-    def write_txt(self, path):
-        temp = ""
-        filename = path.name
-        wildcard = "__" + wildcard_manager.join_wildcard(path) + filename.replace(".txt", "") + "__"
+        for directory, h in hierarchy.items():
+            contents = self.write(h[0], h[1])
+            html += f"""
+                <button type="button" class="collapsible">{directory} :</button>
+                <div class="content">
+                    {contents}
+                </div>
+            """
 
-        temp += f"<p>{wildcard}</p>"
-        return temp
+        return html
 
-    def write_dir(self, path):
-        temp = ""
-        joined_path = wildcard_manager.join_directory(path)
-        temp += f"<button type=\"button\" class=\"collapsible\">{joined_path} :</button>"
-        temp += f"<div class=\"content\">"
-        
-        for file_or_dir in wildcard_manager.get_current_folder(path):
-            temp += self.write(file_or_dir)
+    def probe(self) -> str:
+        wildcards, hierarchy = wildcard_manager.get_wildcard_hierarchy(WILDCARD_DIR)
+        return self.write(wildcards, hierarchy)
 
-        temp += f"</div>"
-        return temp 
-
-    def probe(self):
-        temp = ""
-        files = wildcard_manager.get_current_folder(WILDCARD_DIR)# #.rglob("*txt")
-        for file in files[0:]:
-            temp += self.write(file)
-        return temp
 
 ui_creation = UiCreation()
 
