@@ -17,9 +17,8 @@ logging.basicConfig(level=logging.WARNING)
 logger = logging.getLogger(__name__)
 
 WILDCARD_DIR = getattr(opts, "wildcard_dir", "scripts/wildcards")
-FOLDER_COUNT = len(str(Path(WILDCARD_DIR)).split(os.sep))
 MAX_RECURSIONS = 20
-VERSION = "0.6.0"
+VERSION = "0.7.0"
 WILDCARD_SUFFIX = "txt"
 
 re_wildcard = re.compile(r"__(.*?)__")
@@ -53,9 +52,10 @@ class WildcardManager:
         except Exception as e:
             logger.exception(f"Failed to create directory {self._path}")
 
-    def get_files(self, relative:bool=False) -> list:
+    def get_files(self, relative:bool=False) -> list[Path]:
         if not self._directory_exists():
             return []
+
 
         files = self._path.rglob(f"*.{WILDCARD_SUFFIX}")
         if relative:
@@ -63,7 +63,7 @@ class WildcardManager:
 
         return files
     
-    def match_files(self, wildcard:str) -> list:
+    def match_files(self, wildcard:str) -> list[WildcardFile]:
         return [
             WildcardFile(path) for path in self._path.rglob(f"{wildcard}.{WILDCARD_SUFFIX}")
         ]
@@ -72,7 +72,7 @@ class WildcardManager:
         rel_path = path.relative_to(self._path)
         return f"__{rel_path.with_suffix('')}__"
 
-    def get_wildcards(self) -> list:
+    def get_wildcards(self) -> list[str]:
         files = self.get_files(relative=True)
         wildcards = [self.path_to_wilcard(f) for f in files]
 
@@ -257,8 +257,7 @@ class Script(scripts.Script):
             <h3><strong>Wildcards</strong></h3>
         """
         
-        #wildcards = wildcard_manager.get_wildcards()
-        html += ui_creation.probe() #"".join([f"<li>{wildcard}</li>" for wildcard in wildcards])
+        html += ui_creation.probe()
 
         html += f"""
             <br/><br/>

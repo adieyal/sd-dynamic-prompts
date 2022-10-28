@@ -75,11 +75,22 @@ if the 3rd row is chosen, then either Autumn or Fall will be selected. You could
 
 ## Fuzzy Glob/recursive wildcard file/directory matching
 In addition to standard wildcard tokens such as `__times__` -> `times.txt`, you can also use globbing to match against multiple files at once.
-`*` can be used to specify an arbitrary contiguous part of a path
-  * e.g. `__settings*manmade__` will match `settings/indoor/manmade/` (and everything under that directory) and/or `settings/outdoor/manmade.txt`, but will _not_ match settings/outdoor/natural`, etc.
+For instance:
 
-You can also use slashes to specify paths to match against.
-  * e.g. `__fav/chars__` will match `fav/chars.txt` and/or all files under the directory `fav/chars/` 
+`__colors*__` will match any of the following:
+- WILDCARD_DIR/colors.txt
+- WILDCARD_DIR/colors1.txt
+- WILDCARD_DIR/nested/folder/colors1.txt
+
+`__light/**/*__` will match:
+- WILDCARD_DIR/nested/folder/light/a.txt
+- WILDCARD_DIR/nested/folder/light/b.txt
+
+but won't match
+- WILDCARD_DIR/nested/folder/dark/a.txt
+- WILDCARD_DIR/a.txt
+
+You can also used character ranges `[0-9]` and `[a-z]` and single wildcard characters `?`. For more examples see [this article](http://pymotw.com/2/glob/).
 
 ## WILDCARD_DIR
 The script looks for wildcard files in WILDCARD_DIR. This is defined in the main webui config.json under wildcard_dir. If wildcard_dir is missing, then wildcard files should be placed in scripts/wildcards/
