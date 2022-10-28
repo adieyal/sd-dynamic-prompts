@@ -19,7 +19,7 @@ logger.setLevel(logging.INFO)
 
 WILDCARD_DIR = getattr(opts, "wildcard_dir", "scripts/wildcards")
 MAX_RECURSIONS = 20
-VERSION = "0.8.0"
+VERSION = "0.9.0"
 WILDCARD_SUFFIX = "txt"
 MAX_IMAGES = 1000
 

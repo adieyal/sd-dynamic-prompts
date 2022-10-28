@@ -1,0 +1,24 @@
+# Originally sourced from https://aiartcreation.fandom.com/wiki/Modifier_Taxonomy#Appearance
+Cluttered
+Colourful
+Destructive
+Detailed
+Elaborate
+Flat shading
+Groovy
+Holographic
+Iridescent
+Maximalist
+Wooden
+Minimalist
+Ominous
+Parallax
+Polished
+Psychedelic
+Rough
+Shimmering
+Skeuomorphic
+Smooth
+Stipple
+Tessellated
+Wavy

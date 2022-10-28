@@ -1,0 +1,46 @@
+# Originally sourced from https://github.com/jtkelm2/stable-diffusion-webui-1/blob/main/scripts/wildcards/genre.txt
+American frontier
+American propaganda
+Anime
+Antique lithograph
+Art deco
+Clean vector
+Concept
+Cosmic Horror
+Cyberpunk
+Dark fantasy
+DC comics
+Dieselpunk
+Dystopian
+Enlightenment
+Fantasy
+Fauvism
+Film noir
+Gothic
+Holography
+Horror
+Linocut
+Marvel comics
+Massurrealism
+Medieval
+Monochrome
+Oil painting
+Pencil sketch
+Photoreal
+Post-apocalyptic
+Post-impressionist
+Postmodern
+Psychedelic
+Renaissance
+Retro
+Romance
+Science Fiction
+Sci-fi
+Seapunk
+Solarpunk
+Soviet propaganda
+Steampunk
+Victorian
+Vintage
+Western
+Woodblock

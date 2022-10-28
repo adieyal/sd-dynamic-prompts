@@ -1,0 +1,8 @@
+# Originally sourced from https://aiartcreation.fandom.com/wiki/Modifier_Taxonomy#Computer_Graphics
+Low poly
+Volcano-motion-capture
+Motion Capture
+Physically based rendering
+Vector graphics
+#vfxfriday
+prerendered graphics

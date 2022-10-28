@@ -1,0 +1,11 @@
+# Originally sourced from https://aiartcreation.fandom.com/wiki/Modifier_Taxonomy#Photography/Film
+Ambient occlusion
+Chiaroscuro
+Flickering light
+Global illumination
+Sunrays shine upon it
+Sunshine rays
+Volumetric lighting
+Cinematic lighting
+Back lighting
+Dramatically lit

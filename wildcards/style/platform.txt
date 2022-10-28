@@ -1,0 +1,17 @@
+# Originally sourced from https://github.com/jtkelm2/stable-diffusion-webui-1/blob/main/scripts/wildcards/site.txt
+500px
+Art on Instagram
+ArtStation
+Artstation HD
+Behance
+Behance HD
+cgsociety
+ConceptArtWorld
+Deviantart
+DeviantArt
+Flickr
+Getty Images
+Pixiv
+Trending on Artstation
+Unsplash
+zbrushcentral

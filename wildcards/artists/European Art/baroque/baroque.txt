@@ -1,0 +1,11 @@
+__italian_baroque_painters__
+__french_baroque_painters__
+__british_baroque_painters__
+__czech_baroque_painters__
+__danish_baroque_painters__
+__german_baroque_painters__
+__greek_baroque_painters__
+__netherlandish_baroque_painters__
+__flemish_baroque_painters__
+__quadratura__
+__spanish_baroque_painters__

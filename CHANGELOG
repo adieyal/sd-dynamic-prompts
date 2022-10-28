@@ -11,3 +11,4 @@
 0.6.0 Added path globbing for wildcards. Thanks for @evanjs for the idea and original implementation
 0.7.0 Updated wildcard ui by @TheAwesomeGoat.7.0 Updated wildcard ui by @TheAwesomeGoat
 0.8.0 Combinatorial generation 
+0.9.0 Started a modifer library. Turns out it's much better than the long unsorted lists of artists you find elsewhere.

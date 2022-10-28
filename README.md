@@ -125,5 +125,11 @@ Combinatorial generation can be useful if you want to create an image for every 
 
 Combinations are not yet supported, i.e. `{2$$a|b|c}` will treat `2$$a` as one of the options instead of selecting two of a, b and c.
 
+## Bundled modifier files (optional)
+If you don't want to make your own wildcard files or prefer a batteries-included approach, we have provided a large, and hopefully useful taxonomy of modifiers. It's a work in progress, and unfortunately, hierarchies are a terrible way to classify concepts and ideas. You will almost certainly see a modifier that should belong somewhere else.
+
+It's also useful to have a peek at how wildcards are nested inside wildcard files to give you ideas for your modifier library. Feel free to help organise these files.
+
+
 ## WILDCARD_DIR
 The script looks for wildcard files in WILDCARD_DIR. This is defined in the main webui config.json under wildcard_dir. If wildcard_dir is missing, then wildcard files should be placed in scripts/wildcards/
