@@ -1,16 +1,16 @@
-import os
-import math
 from itertools import chain
 from pathlib import Path
+from typing import Any
+from typing import Set
 import logging
 import math
-import re, random
+import os
 import pathlib
-from typing import Set
+import re, random
 
 import gradio as gr
-import modules.scripts as scripts
 
+import modules.scripts as scripts
 from modules.processing import process_images, fix_seed, Processed
 from modules.shared import opts
 
@@ -19,7 +19,7 @@ logger.setLevel(logging.INFO)
 
 WILDCARD_DIR = getattr(opts, "wildcard_dir", "scripts/wildcards")
 MAX_RECURSIONS = 20
-VERSION = "0.6.0"
+VERSION = "0.8.0"
 WILDCARD_SUFFIX = "txt"
 MAX_IMAGES = 1000
 
@@ -63,18 +63,61 @@ class WildcardManager:
             files = [f.relative_to(self._path) for f in files]
 
         return files
-
+    
     def match_files(self, wildcard:str) -> list[WildcardFile]:
         return [
             WildcardFile(path) for path in self._path.rglob(f"{wildcard}.{WILDCARD_SUFFIX}")
         ]
+    
+    def path_to_wilcard(self, path: Path) -> str:
+        rel_path = path.relative_to(self._path)
+        return f"__{rel_path.with_suffix('')}__"
 
     def get_wildcards(self) -> list[str]:
         files = self.get_files(relative=True)
-        wildcards = [f"__{path.with_suffix('')}__" for path in files]
+        wildcards = [self.path_to_wilcard(f) for f in files]
+
         return wildcards
 
+    def get_wildcard_hierarchy(self, path: str):
+        path = Path(path)
+        files = path.glob("*.txt")
+        wildcards = [self.path_to_wilcard(f) for f in files]
+        directories = [d for d in path.glob("*") if d.is_dir()]
+
+        hierarchy = {d.name: self.get_wildcard_hierarchy(d) for d in directories}
+        return (wildcards, hierarchy)
+
 wildcard_manager = WildcardManager()
+
+class UiCreation:
+    def write(self, wildcards: list[str], hierarchy: dict[str, Any]) -> str:
+        html = ""
+        for wildcard in wildcards:
+            html += f"<p>{wildcard}</p>"
+
+        for directory, h in hierarchy.items():
+            contents = self.write(h[0], h[1])
+            html += f"""
+                <button type="button" class="collapsible">{directory} :</button>
+                <div class="content">
+                    {contents}
+                </div>
+            """
+
+        return html
+
+    def probe(self) -> str:
+        wildcards, hierarchy = wildcard_manager.get_wildcard_hierarchy(WILDCARD_DIR)
+        return self.write(wildcards, hierarchy)
+
+
+ui_creation = UiCreation()
+
+def replace_combinations(match):
+    if match is None or len(match.groups()) == 0:
+        logger.warning("Unexpected missing combination")
+        return ""
 
 class PromptGenerator:
     pass
@@ -243,48 +286,91 @@ class Script(scripts.Script):
         return f"Dynamic Prompting v{VERSION}"
 
     def ui(self, is_img2img):
+        wildcard_html = ui_creation.probe()
         html = f"""
+            <style>
+                .collapsible {{
+                    background-color: #1f2937;
+                    color: white;
+                    cursor: pointer;
+                    padding: 18px;
+                    width: 100%;
+                    border: 2px #0C111C;
+                    border-right-style: solid;
+                    border-top-style: solid;
+                    border-left-style: solid;
+                    border-bottom-style: solid;
+                    border-radius: 8px 8px 8px 8px;
+                    padding: 5px;
+                    margin-top: 10px;
+                    text-align: left;
+                    outline: none;
+                    font-size: 15px;
+                }}
+
+                .active, .collapsible:hover {{
+                    background-color: #555;
+                }}
+
+                .codeblock {{
+                    background-color: #06080D;
+                }}
+
+                .content {{
+                    padding: 0 18px;
+                    display: none;
+                    overflow: hidden;
+                    border: 2px #0C111C;
+                    border-right-style: solid;
+                    border-bottom-style: solid;
+                    border-left-style: solid;
+                    border-radius: 0px 0px 8px 8px;
+                    background-color: #1f2937;
+                }}
+
+                #is-combinatorial:after {{
+                    content: "Generate all possible prompts up to a maximum of Batch count * Batch size)"
+                }}
+            </style>
+
+
             <h3><strong>Combinations</strong></h3>
-            Choose a number of terms from a list, in this case we choose two artists
-            <code>{{2$$artist1|artist2|artist3}}</code>
+            Choose a number of terms from a list, in this case we choose two artists: 
+            <code class="codeblock">{{2$$artist1|artist2|artist3}}</code>
+
             If $$ is not provided, then 1$$ is assumed.
-            <br>
+
             A range can be provided:
-            <code>{{1-3$$artist1|artist2|artist3}}</code>
+            <code class="codeblock">{{1-3$$artist1|artist2|artist3}}</code>
             In this case, a random number of artists between 1 and 3 is chosen.
+
             <br/><br/>
 
             <h3><strong>Wildcards</strong></h3>
-            <p>Available wildcards</p>
-            <ul style="overflow-y:auto;max-height:6rem;">
-        """
-        
-        wildcards = wildcard_manager.get_wildcards()
-        html += "".join([f"<li>{wildcard}</li>" for wildcard in wildcards])
+            {wildcard_html}
 
-        html += "</ul>"
-        html += f"""
-            <br/>
-            <code>WILDCARD_DIR: {WILDCARD_DIR}</code><br/>
-            <small>You can add more wildcards by creating a text file with one term per line and name is mywildcards.txt. Place it in {WILDCARD_DIR}. <code>__mywildcards__</code> will then become available.</small>
+			<br/>
+            If the groups wont drop down click <strong onclick="check_collapsibles()" style="cursor: pointer">here</strong> to fix the issue.
+
+            <br/><br/>
+
+            <code class="codeblock">WILDCARD_DIR: {WILDCARD_DIR}</code><br/>
+            <small onload="check_collapsibles()">You can add more wildcards by creating a text file with one term per line and name is mywildcards.txt. Place it in {WILDCARD_DIR}. <code class="codeblock">__&#60;folder&#62;/mywildcards__</code> will then become available.</small>
         """
-        is_exhaustive = gr.Checkbox(label="Combinatorial generation", title="This is some help text", value=False)
+        is_combinatorial = gr.Checkbox(label="Combinatorial generation", title="This is some help text", value=False, elem_id="is-combinatorial")
         info = gr.HTML(html)
-        return [info, is_exhaustive]
+        return [info, is_combinatorial]
 
-    def exhaustive_generation(self, prompt):
-        pass
-
-    def run(self, p, info, is_exhaustive):
+    def run(self, p, info, is_combinatorial):
         fix_seed(p)
 
         original_prompt = p.prompt[0] if type(p.prompt) == list else p.prompt
         original_seed = p.seed
 
-        if not is_exhaustive:
-            prompt_generator = RandomPromptGenerator(original_prompt)
-        else:
+        if is_combinatorial:
             prompt_generator = CombinatorialPromptGenerator(original_prompt)
+        else:
+            prompt_generator = RandomPromptGenerator(original_prompt)
         
         num_images = p.n_iter * p.batch_size
         all_prompts = prompt_generator.generate(num_images)
