@@ -11,15 +11,16 @@ from modules.shared import opts
 
 from prompts.wildcardmanager import WildcardManager
 from prompts.uicreation import UiCreation
-from prompts.generators import RandomPromptGenerator, CombinatorialPromptGenerator, MagicPromptGenerator
+from prompts.generators import RandomPromptGenerator, CombinatorialPromptGenerator, MagicPromptGenerator, BatchedCombinatorialPromptGenerator
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-WILDCARD_DIR = getattr(opts, "wildcard_dir", base_dir / "wildcards")
-VERSION = "0.11.0"
-
 base_dir = Path(scripts.basedir())
+
+WILDCARD_DIR = getattr(opts, "wildcard_dir", base_dir / "wildcards")
+VERSION = "0.12.0"
+
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
 
@@ -36,18 +37,22 @@ class Script(scripts.Script):
         html = Template(html).substitute(wildcard_html=wildcard_html, WILDCARD_DIR=WILDCARD_DIR)
 
         is_combinatorial = gr.Checkbox(label="Combinatorial generation", value=False, elem_id="is-combinatorial")
+        combinatorial_batches = gr.Slider(label="Combinatorial batches", min=1, max=10, step=1, value=1, elem_id="combinatorial-times")
         is_magic_prompt = gr.Checkbox(label="Magic prompt", value=False, elem_id="is-magicprompt")
         info = gr.HTML(html)
-        return [info, is_combinatorial, is_magic_prompt]
+        return [info, is_combinatorial, combinatorial_batches, is_magic_prompt]
 
-    def run(self, p, info, is_combinatorial, is_magic_prompt):
+    def run(self, p, info, is_combinatorial, combinatorial_batches, is_magic_prompt):
         fix_seed(p)
 
         original_prompt = p.prompt[0] if type(p.prompt) == list else p.prompt
         original_seed = p.seed
+        if combinatorial_batches < 1:
+            combinatorial_batches = 1
 
         if is_combinatorial:
             prompt_generator = CombinatorialPromptGenerator(wildcard_manager, original_prompt)
+            prompt_generator = BatchedCombinatorialPromptGenerator(prompt_generator, combinatorial_batches)
         else:
             prompt_generator = RandomPromptGenerator(wildcard_manager, original_prompt, original_seed)
 

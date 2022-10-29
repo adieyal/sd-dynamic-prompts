@@ -8,3 +8,4 @@ re_combinations = re.compile(r"\{([^{}]*)}")
 from .randomprompt import RandomPromptGenerator
 from .combinatorial import CombinatorialPromptGenerator
 from .magicprompt import MagicPromptGenerator
+from .batched_combinatorial import BatchedCombinatorialPromptGenerator

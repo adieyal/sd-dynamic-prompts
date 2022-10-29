@@ -125,6 +125,8 @@ Combinatorial generation can be useful if you want to create an image for every 
 
 Combinations are not yet supported, i.e. `{2$$a|b|c}` will treat `2$$a` as one of the options instead of selecting two of a, b and c.
 
+The combinatorial batches slider lets you repeat the same set of prompts a number of times with different seeds. The default number of batches is 1.
+
 ## Magic Prompt
 Using [Gustavosta](https://huggingface.co/Gustavosta/MagicPrompt-Stable-Diffusion)'s MagicPrompt model, automatically generate neww prompts from the input. Trained on 80,000 prompts from [Lexica.art](lexica.art), it can help give you interesting new prompts on a given subject. Here are some automatically generated variations for "dogs playing football":
 
