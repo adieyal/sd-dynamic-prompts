@@ -1,4 +1,6 @@
 __impressionism__
+__expressionism__/__expressionism__
+__abstract expressionism__/__abstract expressionism__
 __american_impressionism__
 __cobs_art_colony__
 __heidelberg_school__

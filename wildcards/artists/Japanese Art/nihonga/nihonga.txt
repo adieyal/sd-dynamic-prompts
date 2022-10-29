@@ -1,0 +1,4 @@
+__meiji_era__
+__taisho_era__
+__showa_era__
+__heisei_era__
