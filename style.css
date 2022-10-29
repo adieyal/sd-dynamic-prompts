@@ -1,0 +1,47 @@
+#dynamic-prompting .collapsible {
+    background-color: #1f2937;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: 2px #0C111C;
+    border-right-style: solid;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-radius: 8px 8px 8px 8px;
+    padding: 5px;
+    margin-top: 10px;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+#dynamic-prompting .active, .collapsible:hover {
+    background-color: #555;
+}
+
+#dynamic-prompting .codeblock {
+    background-color: #06080D;
+}
+
+#dynamic-prompting .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    border: 2px #0C111C;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-radius: 0px 0px 8px 8px;
+    background-color: #1f2937;
+}
+
+#is-combinatorial:after {
+    content: "Generate all possible prompts up to a maximum of Batch count * Batch size)"
+}
+
+#is-magicprompt:after {
+    content: "Automatically update your prompt with interesting modifiers. (Runs slowly the first time)"
+}
+
