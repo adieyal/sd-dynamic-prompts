@@ -125,6 +125,20 @@ Combinatorial generation can be useful if you want to create an image for every 
 
 Combinations are not yet supported, i.e. `{2$$a|b|c}` will treat `2$$a` as one of the options instead of selecting two of a, b and c.
 
+## Magic Prompt
+Using [Gustavosta](https://huggingface.co/Gustavosta/MagicPrompt-Stable-Diffusion)'s MagicPrompt model, automatically generate neww prompts from the input. Trained on 80,000 prompts from [Lexica.art](lexica.art), it can help give you interesting new prompts on a given subject. Here are some automatically generated variations for "dogs playing football":
+
+    > dogs playing football, in the streets of a japanese town at night, with people watching in wonder, in the style of studio ghibli and makoto shinkai, highly detailed digital art, trending on artstation
+
+    > dogs playing football, in the background is a nuclear explosion. photorealism. hq. hyper. realistic. 4 k. award winning.
+
+    > dogs playing football, in the background is a nuclear explosion. photorealistic. realism. 4 k wideshot. cinematic. unreal engine. artgerm. marc simonetti. jc leyendecker
+
+This is compatible with the wildcard syntax described above.
+
+
+The first time you use it, the model is downloaded. It is approximately 500mb and so will take some time depending on how fast your connection is. It will also take a few seconds on first activation as the model is loaded into memory. Note, if you're low in VRAM, you might get a Cuda error. My GPU uses less than 8GB by YMMV.
+
 ## Bundled modifier files (optional)
 If you don't want to make your own wildcard files or prefer a batteries-included approach, we have provided a large, and hopefully useful taxonomy of modifiers. It's a work in progress, and unfortunately, hierarchies are a terrible way to classify concepts and ideas. You will almost certainly see a modifier that should belong somewhere else.
 

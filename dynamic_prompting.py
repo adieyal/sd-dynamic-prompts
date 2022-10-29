@@ -11,18 +11,24 @@ from random import Random
 
 import gradio as gr
 
+from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers import pipeline
 import modules.scripts as scripts
 from modules.processing import process_images, fix_seed, Processed
 from modules.shared import opts
+from modules.devices import get_optimal_device
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 WILDCARD_DIR = getattr(opts, "wildcard_dir", "scripts/wildcards")
 MAX_RECURSIONS = 20
-VERSION = "0.9.2"
+VERSION = "0.10.0"
 WILDCARD_SUFFIX = "txt"
 MAX_IMAGES = 1000
+
+# TODO this needs to be fixed
+device = 0 if get_optimal_device() == "cuda" else -1
 
 re_wildcard = re.compile(r"__(.*?)__")
 re_combinations = re.compile(r"\{([^{}]*)}")
@@ -125,6 +131,43 @@ def replace_combinations(match):
 class PromptGenerator:
     pass
 
+class MagicPromptGenerator(PromptGenerator):
+    generator = None
+
+    def _load_pipeline(self):
+        try:
+            from modules.safe import unsafe_torch_load, torch
+            safe_load = torch.load
+            torch.load = unsafe_torch_load
+
+            if MagicPromptGenerator.generator is None:
+                tokenizer = AutoTokenizer.from_pretrained("Gustavosta/MagicPrompt-Stable-Diffusion")
+                model = AutoModelForCausalLM.from_pretrained("Gustavosta/MagicPrompt-Stable-Diffusion")
+
+                MagicPromptGenerator.tokenizer = tokenizer
+                MagicPromptGenerator.model = model
+
+                MagicPromptGenerator.generator = pipeline(task="text-generation", model=model, tokenizer=tokenizer, device=device)
+
+            return MagicPromptGenerator.generator
+        finally:
+            torch.load = safe_load
+
+        return MagicPromptGenerator.generator
+
+    def __init__(self, prompt_generator: PromptGenerator):
+        self._generator = self._load_pipeline()
+        self._prompt_generator = prompt_generator
+
+    def generate(self, *args, **kwargs) -> str:
+        prompts = self._prompt_generator.generate(*args, **kwargs)
+        new_prompts = [self._generator(prompt)[0]["generated_text"] for prompt in prompts]
+
+        for old_prompt, magic_prompt in zip(prompts, new_prompts):
+            print(f"Generated magic prompt for {old_prompt}: {magic_prompt}")
+
+        return new_prompts
+
 class RandomPromptGenerator(PromptGenerator):
     def __init__(self, template):
         self._template = template
@@ -210,7 +253,7 @@ class RandomPromptGenerator(PromptGenerator):
                 return prompt
             old_prompt = prompt
 
-    def generate(self, num_prompts):
+    def generate(self, num_prompts) -> list[str]:
         all_prompts = [
             self.generate_prompt(self._template) for _ in range(num_prompts)
         ]
@@ -261,7 +304,7 @@ class CombinatorialPromptGenerator(PromptGenerator):
         return new_templates
 
 
-    def generate(self, max_prompts=MAX_IMAGES):
+    def generate(self, max_prompts=MAX_IMAGES) -> list[str]:
         templates = [self._template]
         all_prompts = []
 
@@ -334,6 +377,10 @@ class Script(scripts.Script):
                 #is-combinatorial:after {{
                     content: "Generate all possible prompts up to a maximum of Batch count * Batch size)"
                 }}
+
+                #is-magicprompt:after {{
+                    content: "Automatically update your prompt with interesting modifiers. (Runs slowly the first time)"
+                }}
             </style>
 
 
@@ -360,11 +407,12 @@ class Script(scripts.Script):
             <code class="codeblock">WILDCARD_DIR: {WILDCARD_DIR}</code><br/>
             <small onload="check_collapsibles()">You can add more wildcards by creating a text file with one term per line and name is mywildcards.txt. Place it in {WILDCARD_DIR}. <code class="codeblock">__&#60;folder&#62;/mywildcards__</code> will then become available.</small>
         """
-        is_combinatorial = gr.Checkbox(label="Combinatorial generation", title="This is some help text", value=False, elem_id="is-combinatorial")
+        is_combinatorial = gr.Checkbox(label="Combinatorial generation", value=False, elem_id="is-combinatorial")
+        is_magic_prompt = gr.Checkbox(label="Magic prompt", value=False, elem_id="is-magicprompt")
         info = gr.HTML(html)
-        return [info, is_combinatorial]
+        return [info, is_combinatorial, is_magic_prompt]
 
-    def run(self, p, info, is_combinatorial):
+    def run(self, p, info, is_combinatorial, is_magic_prompt):
         fix_seed(p)
 
         original_prompt = p.prompt[0] if type(p.prompt) == list else p.prompt
@@ -375,6 +423,9 @@ class Script(scripts.Script):
             prompt_generator = CombinatorialPromptGenerator(original_prompt)
         else:
             prompt_generator = RandomPromptGenerator(original_prompt)
+
+        if is_magic_prompt:
+            prompt_generator = MagicPromptGenerator(prompt_generator)
         
         num_images = p.n_iter * p.batch_size
         all_prompts = prompt_generator.generate(num_images)
