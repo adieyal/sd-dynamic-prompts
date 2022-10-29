@@ -6,7 +6,8 @@ import logging
 import math
 import os
 import pathlib
-import re, random
+import re
+from random import Random
 
 import gradio as gr
 
@@ -19,7 +20,7 @@ logger.setLevel(logging.INFO)
 
 WILDCARD_DIR = getattr(opts, "wildcard_dir", "scripts/wildcards")
 MAX_RECURSIONS = 20
-VERSION = "0.9.0"
+VERSION = "0.9.1"
 WILDCARD_SUFFIX = "txt"
 MAX_IMAGES = 1000
 
@@ -27,6 +28,8 @@ re_wildcard = re.compile(r"__(.*?)__")
 re_combinations = re.compile(r"\{([^{}]*)}")
 
 DEFAULT_NUM_COMBINATIONS = 1
+
+random = Random()
 
 class WildcardFile:
     def __init__(self, path: Path, encoding="utf8"):
@@ -366,6 +369,7 @@ class Script(scripts.Script):
 
         original_prompt = p.prompt[0] if type(p.prompt) == list else p.prompt
         original_seed = p.seed
+        random.seed(original_seed)
 
         if is_combinatorial:
             prompt_generator = CombinatorialPromptGenerator(original_prompt)
