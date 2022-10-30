@@ -1,0 +1,18 @@
+# (35mm) Standard Format
+135 film
+126 film
+828 film
+
+# Medium format
+120 film
+220 film
+620 film
+
+Large format
+
+# Misc sizes
+116 Film
+616 Film
+127 film
+110 film
+APS film
