@@ -165,3 +165,24 @@ It's also useful to have a peek at how wildcards are nested inside wildcard file
 
 ## WILDCARD_DIR
 The script looks for wildcard files in WILDCARD_DIR. This is defined in the main webui config.json under wildcard_dir. If wildcard_dir is missing, then wildcard files should be placed in scripts/wildcards/
+
+## Contributing
+If you're interested in contributing to the development of this extension, here are some features I would like to implement:
+
+1. **Saved templates** - [publicprompts.art](https://publicprompts.art/) produces great prompt templates. e.g. 
+
+> Funky pop Yoda figurine, made of plastic, product studio shot, on a white background, diffused lighting, centered
+
+You can swap out Yoda for anything to create a great character. If I create/discover a great prompt that can be turned into a template, it would be great to have a place to save it. The extension could provide some initial templates. Users could then create and save their own.
+
+2. **Tag-based modifers**. Creating a strict taxonomy of concepts for modifiers is always going to be flawed. Some modifiers fit in multiple categories. It would be better to introduce tags to make it easy to place modifiers in multiple places at once.
+
+3. **Improved modifier management**. The modifier library is a little clunky at the moment. You can find a nested hierarchy of all wildcard files, but it isn't possible to see what's in them or even edit them from within the interface. It might be best to implement this in a separate tab.
+
+4. **Improve the modifier library**. I'm currently creating the library from multiple sources but building taxonomies is hard, especially if you're not a domain expert. The photography section is a good example, there are wildcard files for lighting, filetypes, camera models, perspective, photo websites, etc. Someone with a better understanding of photography might have a better way to divide this. The artists section in particular needs some TLC.
+
+5. **Option tweaking**. There have been a few requests for option tweaking like XY Plot. I'm not sure that that is in scope for this extension, but it would be nice to see if we could find a solution that leverage's XY Plot.
+
+6. **Improved UI**. The current UI works, but a few javascript tweaks could improve the user experience tremendously.
+
+Let me know if there is anything you would be interested in looking into.
