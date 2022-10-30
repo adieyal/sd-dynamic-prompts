@@ -1,7 +1,11 @@
+# General camera types for a variety of results
 DSLR
 Iphone
 phone camera
 Leica
 Nikon F
 Kodak Retina II
-
+CCTV
+security camera
+poloroid
+pinhole camera
