@@ -8,7 +8,7 @@ class UiCreation:
     def write(self, wildcards: list[str], hierarchy: dict[str, Any]) -> str:
         html = ""
         for wildcard in wildcards:
-            html += f"<p>{wildcard}</p>"
+            html += f"""<p class="wildcard">{wildcard}</p>"""
 
         for directory, h in hierarchy.items():
             contents = self.write(h[0], h[1])

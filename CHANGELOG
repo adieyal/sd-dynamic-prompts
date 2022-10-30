@@ -18,3 +18,4 @@
 0.11.0 Migrated to an extension
 0.12.0 Added a slider to enable combinatorial generation in batches, in other words, run the same set of prompts with different seeds
 0.13.0 Added same seed checkbox to keep the seed constant for all generations.
+0.13.1 Fixed light mode css

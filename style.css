@@ -21,8 +21,17 @@
     background-color: #555;
 }
 
-#dynamic-prompting .codeblock {
+#dynamic-prompting .wildcard {
+    color: #ddd;
+}
+
+.dark #dynamic-prompting .codeblock {
     background-color: #06080D;
+}
+
+#dynamic-prompting .codeblock {
+    background-color: #1b1b1b;
+    color: #72e0d1;
 }
 
 #dynamic-prompting .content {
