@@ -9,7 +9,6 @@ Alex Colville
 Alfons Dunin-Borkowski
 Alton Tobey
 Álvaro Casanova Zenteno
-__american_realism__
 Ananta Mandal
 Andrew Micallef
 Ans Markus
@@ -22,9 +21,7 @@ Archibald Kay
 August Schneider
 Bikash Bhattacharjee
 Bo Bartlett
-__british_realism__
 Bruno Civitico
-__bulgarian_realism__
 Carl Ludwig Jessen
 Clark Hulings
 Columbano Bordalo Pinheiro
@@ -39,9 +36,7 @@ Eduardo Sívori
 Ernesto de la Cárcova
 Eugenio Cruz Vargas
 Fidelia Bridges
-__finnish_realism__
 Franz Eisenhut
-__french_realism__
 Fyodor Vasilyev
 Geoff Williams (painter)
 George W. Maynard
@@ -56,7 +51,6 @@ Henry Herbert La Thangue
 Henry Jones Thaddeus
 Herbert Badham
 Hippolyte Boulenger
-__hungarian_realism__
 İbrahim Balaban
 Iman Afsarian
 Iman Maleki
@@ -87,7 +81,6 @@ Nazlı Ecevit
 Neil Faulkner (painter)
 Nestor Leynes
 Nicolae Vermont
-__norwegian_realism__
 Octav Băncilă
 Pablo Runyan
 Paja Jovanović
@@ -95,18 +88,15 @@ Paul Meltsner
 Paul Winstanley
 Pavel Petrović
 Pedro Weingärtner
-__portuguese_realism__
 Rackstraw Downes
 Raphael Soyer
 R. B. Sprague
 Rebecca Gabriel
 Robert C. Jackson
 Robert Kost
-__russian_realism__
 Sarah Haffner
 Simon Hollósy
 Simon Kozhin
-__slovenian_realism__
 Stan Masters
 Stephen Namara
 Svetislav Jovanović
@@ -127,3 +117,13 @@ William B. T. Trego
 William Glackens
 William Nichols (artist)
 Winslow Homer
+__realism/american_realism__
+__realism/british_realism__
+__realism/bulgarian_realism__
+__realism/finnish_realism__
+__realism/french_realism__
+__realism/hungarian_realism__
+__realism/norwegian_realism__
+__realism/portuguese_realism__
+__realism/russian_realism__
+__realism/slovenian_realism__
