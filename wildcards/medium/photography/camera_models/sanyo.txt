@@ -1,0 +1,78 @@
+Sanyo DSC S1
+Sanyo DSC S3
+Sanyo DSC S4
+Sanyo DSC S5
+Sanyo VPC A5
+Sanyo VPC AZ1
+Sanyo VPC AZ3 EX
+Sanyo VPC E1090
+Sanyo VPC E1403
+Sanyo VPC E1500TP
+Sanyo VPC E890
+Sanyo VPC HD1 EX
+Sanyo VPC J1 EX
+Sanyo VPC J2 EX
+Sanyo VPC J4 EX
+Sanyo VPC MZ1
+Sanyo VPC MZ2
+Sanyo VPC S1085
+Sanyo VPC S122
+Sanyo VPC S1275
+Sanyo VPC S1414
+Sanyo VPC S885
+Sanyo VPC T1495
+Sanyo VPC X1200
+Sanyo VPC X1220
+Sanyo VPC X1420
+Sanyo Xacti C1
+Sanyo Xacti C4
+Sanyo Xacti C40
+Sanyo Xacti C5
+Sanyo Xacti C6
+Sanyo Xacti DMX-CA65
+Sanyo Xacti DMX-CA8
+Sanyo Xacti DMX-CG65
+Sanyo Xacti DMX-CG9
+Sanyo Xacti DMX-HD700
+Sanyo Xacti DMX-HD800
+Sanyo Xacti E6
+Sanyo Xacti E60
+Sanyo Xacti S50
+Sanyo Xacti S6
+Sanyo Xacti S60
+Sanyo Xacti S70
+Sanyo Xacti VPC S1 EX
+Sanyo Xacti VPC S3 EX
+Sanyo Xacti VPC S4 EX
+Sanyo Xacti VPC-503
+Sanyo Xacti VPC-603
+Sanyo Xacti VPC-CA6
+Sanyo Xacti VPC-CA9
+Sanyo Xacti VPC-CG10
+Sanyo Xacti VPC-CG6
+Sanyo Xacti VPC-E10
+Sanyo Xacti VPC-E1075
+Sanyo Xacti VPC-E7
+Sanyo Xacti VPC-E760
+Sanyo Xacti VPC-E860
+Sanyo Xacti VPC-E870
+Sanyo Xacti VPC-E875
+Sanyo Xacti VPC-HD1A
+Sanyo Xacti VPC-HD2
+Sanyo Xacti VPC-HD2000
+Sanyo Xacti VPC-S1070
+Sanyo Xacti VPC-S500
+Sanyo Xacti VPC-S600
+Sanyo Xacti VPC-S650
+Sanyo Xacti VPC-S670
+Sanyo Xacti VPC-S7
+Sanyo Xacti VPC-S750
+Sanyo Xacti VPC-S760
+Sanyo Xacti VPC-S770
+Sanyo Xacti VPC-S870
+Sanyo Xacti VPC-S880
+Sanyo Xacti VPC-T1060
+Sanyo Xacti VPC-T700
+Sanyo Xacti VPC-T850
+Sanyo Xacti VPC-W800
+Sanyo Xacti VPC-X1200

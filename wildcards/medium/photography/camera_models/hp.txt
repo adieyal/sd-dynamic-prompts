@@ -1,0 +1,70 @@
+HP CA350
+HP CB350
+HP CW450
+HP CW450t
+HP Photosmart 120
+HP Photosmart 318
+HP Photosmart 320
+HP Photosmart 435
+HP Photosmart 612
+HP Photosmart 620
+HP Photosmart 635
+HP Photosmart 715
+HP Photosmart 720
+HP Photosmart 733
+HP Photosmart 735
+HP Photosmart 812
+HP Photosmart 850
+HP Photosmart 935
+HP Photosmart 945
+HP Photosmart C20
+HP Photosmart C200
+HP Photosmart C215
+HP Photosmart C30
+HP Photosmart C315
+HP Photosmart C500
+HP Photosmart C618
+HP Photosmart C912
+HP Photosmart E317
+HP Photosmart E327
+HP Photosmart E337
+HP Photosmart E427
+HP Photosmart M22
+HP Photosmart M23
+HP Photosmart M307
+HP Photosmart M407
+HP Photosmart M417
+HP Photosmart M425
+HP Photosmart M437
+HP Photosmart M447
+HP Photosmart M517
+HP Photosmart M525
+HP Photosmart M527
+HP Photosmart M537
+HP Photosmart M547
+HP Photosmart M627
+HP Photosmart M637
+HP Photosmart M737
+HP Photosmart Mz67
+HP Photosmart R507
+HP Photosmart R607
+HP Photosmart R707
+HP Photosmart R717
+HP Photosmart R725
+HP Photosmart R727
+HP Photosmart R742
+HP Photosmart R817
+HP Photosmart R818
+HP Photosmart R827
+HP Photosmart R837
+HP Photosmart R847
+HP Photosmart R927
+HP Photosmart R937
+HP Photosmart R967
+HP PW460t
+HP PW550
+HP R607 BMW
+HP R607 Harajuku
+HP SB360
+HP SW450
+
