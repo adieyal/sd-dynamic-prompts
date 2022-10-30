@@ -28,7 +28,7 @@ class CombinatorialPromptGenerator(PromptGenerator):
             return [seed_template]
         return templates
 
-    def generate_from_wildcards(self, seed_template, recursion=0):
+    def generate_from_wildcards(self, seed_template, recursion=0) -> list[str]:
         templates = []
 
         if recursion > constants.MAX_RECURSIONS:
@@ -50,7 +50,7 @@ class CombinatorialPromptGenerator(PromptGenerator):
         for template in templates:
             new_templates += self.generate_from_wildcards(template, recursion=recursion + 1)
 
-        return new_templates
+        return list(set(new_templates))
 
 
     def generate(self, max_prompts=constants.MAX_IMAGES) -> list[str]:
@@ -58,6 +58,7 @@ class CombinatorialPromptGenerator(PromptGenerator):
         all_prompts = []
 
         while True:
+            all_prompts = list(set(all_prompts))
             if len(templates) == 0 or len(all_prompts) > max_prompts:
                 break
 
