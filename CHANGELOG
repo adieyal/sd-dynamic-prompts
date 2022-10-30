@@ -20,3 +20,4 @@
 0.13.0 Added same seed checkbox to keep the seed constant for all generations.
 0.13.1 Fixed light mode css
 0.13.2 Fixed combinatorial bug which generated duplicate templates
+0.13.3 Added an option to revert 0.9.1. There isn't a ui for it yet, but you can edit constants.py. Change to UNLINK_SEED_FROM_PROMPT = True

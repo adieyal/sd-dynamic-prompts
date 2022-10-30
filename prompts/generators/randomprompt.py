@@ -1,5 +1,6 @@
 import logging
 from random import Random
+import random
 
 from prompts import constants
 from prompts.wildcardmanager import WildcardManager
@@ -10,7 +11,11 @@ logger = logging.getLogger(__name__)
 class RandomPromptGenerator(PromptGenerator):
     def __init__(self, wildcard_manager: WildcardManager, template, seed:int = None):
         self._wildcard_manager = wildcard_manager
-        self._random = Random()
+        # Temporarily adding this here until I find a better place for it
+        if constants.UNLINK_SEED_FROM_PROMPT:
+            self._random = random
+        else:
+            self._random = Random()
         if seed is not None:
             self._random.seed(seed)
         self._template = template
