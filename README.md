@@ -138,9 +138,10 @@ The combinatorial batches slider lets you repeat the same set of prompts a numbe
 ## Fixed seed
 Select this if you want to use the same seed for every generated image. If there are no wildcards then all the images will be identical. It is useful if you want to test the effect of a particular modifier. For example:
 
-	A photo of a beautiful day in the park, __filmtype__
+	A beautiful day at the beach __medium/photography/filmtypes__
 
-That way you can isolate the effect of each film type on a particular scene.
+That way you can isolate the effect of each film type on a particular scene. Here are some of the results:
+<img src="images/filmtypes.jpg"/>
 
 ## Magic Prompt
 Using [Gustavosta](https://huggingface.co/Gustavosta/MagicPrompt-Stable-Diffusion)'s MagicPrompt model, automatically generate neww prompts from the input. Trained on 80,000 prompts from [Lexica.art](lexica.art), it can help give you interesting new prompts on a given subject. Here are some automatically generated variations for "dogs playing football":
