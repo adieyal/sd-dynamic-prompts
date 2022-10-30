@@ -135,6 +135,13 @@ Combinations are not yet supported, i.e. `{2$$a|b|c}` will treat `2$$a` as one o
 
 The combinatorial batches slider lets you repeat the same set of prompts a number of times with different seeds. The default number of batches is 1.
 
+## Fixed seed
+Select this if you want to use the same seed for every generated image. If there are no wildcards then all the images will be identical. It is useful if you want to test the effect of a particular modifier. For example:
+
+	A photo of a beautiful day in the park, __filmtype__
+
+That way you can isolate the effect of each film type on a particular scene.
+
 ## Magic Prompt
 Using [Gustavosta](https://huggingface.co/Gustavosta/MagicPrompt-Stable-Diffusion)'s MagicPrompt model, automatically generate neww prompts from the input. Trained on 80,000 prompts from [Lexica.art](lexica.art), it can help give you interesting new prompts on a given subject. Here are some automatically generated variations for "dogs playing football":
 

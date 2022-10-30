@@ -45,3 +45,6 @@
     content: "Automatically update your prompt with interesting modifiers. (Runs slowly the first time)"
 }
 
+#is-fixed-seed:after {
+    content: "Use the same seed for all prompts in this batch"
+}

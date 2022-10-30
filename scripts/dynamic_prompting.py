@@ -19,7 +19,7 @@ logger.setLevel(logging.INFO)
 base_dir = Path(scripts.basedir())
 
 WILDCARD_DIR = getattr(opts, "wildcard_dir", base_dir / "wildcards")
-VERSION = "0.12.0"
+VERSION = "0.13.0"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -39,10 +39,12 @@ class Script(scripts.Script):
         is_combinatorial = gr.Checkbox(label="Combinatorial generation", value=False, elem_id="is-combinatorial")
         combinatorial_batches = gr.Slider(label="Combinatorial batches", min=1, max=10, step=1, value=1, elem_id="combinatorial-times")
         is_magic_prompt = gr.Checkbox(label="Magic prompt", value=False, elem_id="is-magicprompt")
-        info = gr.HTML(html)
-        return [info, is_combinatorial, combinatorial_batches, is_magic_prompt]
+        use_fixed_seed = gr.Checkbox(label="Fixed seed", value=False, elem_id="is-fixed-seed")
 
-    def run(self, p, info, is_combinatorial, combinatorial_batches, is_magic_prompt):
+        info = gr.HTML(html)
+        return [info, is_combinatorial, combinatorial_batches, is_magic_prompt, use_fixed_seed]
+
+    def run(self, p, info, is_combinatorial, combinatorial_batches, is_magic_prompt, use_fixed_seed):
         fix_seed(p)
 
         original_prompt = p.prompt[0] if type(p.prompt) == list else p.prompt
@@ -64,7 +66,10 @@ class Script(scripts.Script):
         updated_count = len(all_prompts)
         p.n_iter = math.ceil(updated_count / p.batch_size)
 
-        all_seeds = [int(p.seed) + (x if p.subseed_strength == 0 else 0) for x in range(updated_count)]
+        if use_fixed_seed:
+            all_seeds = [original_seed] * updated_count
+        else:
+            all_seeds = [int(p.seed) + (x if p.subseed_strength == 0 else 0) for x in range(updated_count)]
 
         logger.info(f"Prompt matrix will create {updated_count} images in a total of {p.n_iter} batches.")
 
