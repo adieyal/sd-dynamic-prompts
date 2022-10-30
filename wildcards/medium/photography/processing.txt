@@ -1,0 +1,21 @@
+Bokeh
+Digitally enhanced
+Aftereffects
+Tilt-shift
+Motion Blur
+Filmic
+HDR
+White Balance
+Exposure
+Black Point
+Brightness
+High Contrast
+Low Contrast
+Bracketing
+Noise
+High Saturation
+Low Saturation
+Vignetting
+Sepia
+Colorized
+

@@ -1,36 +1,5 @@
 # Originally sourced from https://aiartcreation.fandom.com/wiki/Modifier_Taxonomy#Photography/Film
-Bokeh
-Cyanotype
-Daguerreotype
-Satellite imagery
-Tintype
-20 megapixels
-Aftereffects
-Associated Press photo
-Colorized
-Daguerrotype
-Depth of field
-Digitally enhanced
-DSLR
-Dye-transfer
-#film
-Film noir
-Filmic
-Flickr
-HDR
+Framed
 High-quality photo
-Infrared
-Macro photography
-Matte photo
-National Geographic photo
-Panorama
-Silver nitrate
-Stock photo
-Tilt-shift
-Unsplash contest winner
-Studio photography
-Sharp focus
-DOF
-F 2.8 lens
-50mm
-1ms shutter speed
+Dark Background
+White Background

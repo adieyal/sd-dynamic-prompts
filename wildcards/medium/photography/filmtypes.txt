@@ -1,13 +1,24 @@
-# Originally sourced from https://aiartcreation.fandom.com/wiki/Modifier_Taxonomy#Photography/Film
-Instax
+85mm
+Black and white
+Super 8 movie
+Cyanotype
+Daguerreotype
+Dye-transfer
 Ektachrome
 Fugifilm Superia
 Ilford HP5
+Infrared
+Instax
+kodachrome
 Kodak Ektar
 Kodak Gold 200
 Kodak Portra
 Lomo
+Matte photo
 Nikon D750
+On Canvas
 Provia
 shot on 70mm
+Silver nitrate
+Tintype
 Velvia
