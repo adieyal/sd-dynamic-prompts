@@ -160,6 +160,10 @@ The first time you use it, the model is downloaded. It is approximately 500mb an
 ## Collections 
 The collections directory contains modifier libraries that you can use as is or use to bootstrap your own. Copy the collection that you want to use into the wildcards directory. Note, in previous versions, the collections were in the wildcards directory. This has now changed so that your own collections don't get clobbered every time you want to update the extension.
 
+If you're using a Unix/Linux O/S, you can easily create a symlink to the relevant collection rather than copying it across if you don't plan to alter it. E.g.
+
+	ln -sr collections/parrotzone wildcards/
+
 
 ## WILDCARD_DIR
 The script looks for wildcard files in WILDCARD_DIR. This is defined in the main webui config.json under wildcard_dir. If wildcard_dir is missing, then wildcard files should be placed in scripts/wildcards/
