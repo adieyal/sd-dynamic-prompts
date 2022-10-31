@@ -16,8 +16,8 @@ class RandomPromptGenerator(PromptGenerator):
             self._random = random
         else:
             self._random = Random()
-        if seed is not None:
-            self._random.seed(seed)
+            if seed is not None:
+                self._random.seed(seed)
         self._template = template
 
     def _replace_combinations(self, match):
