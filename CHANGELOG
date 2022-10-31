@@ -23,3 +23,4 @@
 0.13.3 Added an option to revert 0.9.1. There isn't a ui for it yet, but you can edit constants.py. Change to UNLINK_SEED_FROM_PROMPT = True
 0.13.4 Fixed 0.13.3, but thiss time for real
 0.13.5 Updated stylesheet from @Yaiol to fix light and dark theme
+0.13.6 Moved wildcards into the collections directory and added the parrot zone collection

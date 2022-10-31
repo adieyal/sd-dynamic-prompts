@@ -19,7 +19,7 @@ logger.setLevel(logging.INFO)
 base_dir = Path(scripts.basedir())
 
 WILDCARD_DIR = getattr(opts, "wildcard_dir", base_dir / "wildcards")
-VERSION = "0.13.5"
+VERSION = "0.13.6"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
