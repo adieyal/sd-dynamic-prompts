@@ -1,8 +1,10 @@
 #dynamic-prompting .collapsible {
+    background-color: #1f2937;
+    color: white;
     cursor: pointer;
     padding: 18px;
     width: 100%;
-    border: 1px solid #eee;;
+    border: 2px #0C111C;
     border-right-style: solid;
     border-top-style: solid;
     border-left-style: solid;
@@ -17,47 +19,41 @@
 
 #dynamic-prompting .active, .collapsible:hover {
     background-color: #555;
-    border: 1px solid #eee;
-    color: white;
+}
+
+#dynamic-prompting .wildcard {
+    color: #ddd;
+}
+
+.dark #dynamic-prompting .codeblock {
+    background-color: #06080D;
+}
+
+#dynamic-prompting .codeblock {
+    background-color: #1b1b1b;
+    color: #72e0d1;
 }
 
 #dynamic-prompting .content {
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    border: 1px solid #eee;
+    border: 2px #0C111C;
     border-right-style: solid;
     border-bottom-style: solid;
     border-left-style: solid;
     border-radius: 0px 0px 8px 8px;
-}
-
-#dynamic-prompting .codeblock {
-    color: #50a080;
-}
-
-.dark #dynamic-prompting .collapsible {
-    background-color: rgb(31, 41, 55);
-    border: 2px solid rgb(31, 41, 55);
-}
-
-.dark #dynamic-prompting .active, .collapsible:hover {
-    background-color: #06080D;
-    border: 2px solid #06080D;
-}
-
-.dark #dynamic-prompting .content {
-    border: 2px solid #0C111C;
+    background-color: #1f2937;
 }
 
 #is-combinatorial:after {
-    content: "Generate all possible prompts up to a maximum of Batch count * Batch size)"
+    content: "가능한 모든 조합의 프롬프트를 생성합니다. 최대값은 (배치 수 * 배치 사이즈) 입니다."
 }
 
 #is-magicprompt:after {
-    content: "Automatically update your prompt with interesting modifiers. (Runs slowly the first time)"
+    content: "프롬프트에 흥미로운 단어들을 자동으로 추가합니다. (첫 가동시에는 속도가 느릴 수 있습니다)"
 }
 
 #is-fixed-seed:after {
-    content: "Use the same seed for all prompts in this batch"
+    content: "현재 배치에서 모든 프롬프트에 동일한 시드를 사용합니다."
 }
