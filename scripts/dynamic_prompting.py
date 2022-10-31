@@ -19,21 +19,21 @@ logger.setLevel(logging.INFO)
 base_dir = Path(scripts.basedir())
 
 WILDCARD_DIR = getattr(opts, "wildcard_dir", base_dir / "wildcards")
-VERSION = "0.13.5"
+VERSION = "0.13.3"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
 
 class Script(scripts.Script):
     def title(self):
-        return f"Dynamic Prompting v{VERSION}"
+        return f"다이나믹 프롬프트 v{VERSION}"
 
     def ui(self, is_img2img):
         ui_creation = UiCreation(wildcard_manager)
         wildcard_html = ui_creation.probe()
 
         html_path = base_dir / "helptext.html"
-        html = html_path.open().read()
+        html = html_path.open(encoding='UTF8').read()
         html = Template(html).substitute(wildcard_html=wildcard_html, WILDCARD_DIR=WILDCARD_DIR)
 
         is_combinatorial = gr.Checkbox(label="Combinatorial generation", value=False, elem_id="is-combinatorial")
@@ -60,7 +60,7 @@ class Script(scripts.Script):
 
         if is_magic_prompt:
             prompt_generator = MagicPromptGenerator(prompt_generator)
-        
+
         num_images = p.n_iter * p.batch_size
         all_prompts = prompt_generator.generate(num_images)
         updated_count = len(all_prompts)
