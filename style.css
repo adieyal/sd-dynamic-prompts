@@ -1,10 +1,8 @@
 #dynamic-prompting .collapsible {
-    background-color: #1f2937;
-    color: white;
     cursor: pointer;
     padding: 18px;
     width: 100%;
-    border: 2px #0C111C;
+    border: 1px solid #eee;;
     border-right-style: solid;
     border-top-style: solid;
     border-left-style: solid;
@@ -19,31 +17,37 @@
 
 #dynamic-prompting .active, .collapsible:hover {
     background-color: #555;
-}
-
-#dynamic-prompting .wildcard {
-    color: #ddd;
-}
-
-.dark #dynamic-prompting .codeblock {
-    background-color: #06080D;
-}
-
-#dynamic-prompting .codeblock {
-    background-color: #1b1b1b;
-    color: #72e0d1;
+    border: 1px solid #eee;
+    color: white;
 }
 
 #dynamic-prompting .content {
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    border: 2px #0C111C;
+    border: 1px solid #eee;
     border-right-style: solid;
     border-bottom-style: solid;
     border-left-style: solid;
     border-radius: 0px 0px 8px 8px;
-    background-color: #1f2937;
+}
+
+#dynamic-prompting .codeblock {
+    color: #50a080;
+}
+
+.dark #dynamic-prompting .collapsible {
+    background-color: rgb(31, 41, 55);
+    border: 2px solid rgb(31, 41, 55);
+}
+
+.dark #dynamic-prompting .active, .collapsible:hover {
+    background-color: #06080D;
+    border: 2px solid #06080D;
+}
+
+.dark #dynamic-prompting .content {
+    border: 2px solid #0C111C;
 }
 
 #is-combinatorial:after {
