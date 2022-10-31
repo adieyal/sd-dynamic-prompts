@@ -1,4 +1,4 @@
-# Dynamic Prompt templates
+# Stable Diffusion Dynamic Prompts extension 
 
 A custom extension for [AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) that implements an expressive template language for random or combinatorial prompt generation along with features to support deep wildcard directory structures.
 
