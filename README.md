@@ -36,7 +36,7 @@ You can also use the same wildcard twice
 
 *Note* dynamic prompting is now an extension. To install, run the following command from within the webui directory:
 
-	git clone https://github.com/adieyal/sd-dynamic-prompting/ extensions/dynamic-prompts
+	git clone https://github.com/mkco5162/sd-dynamic-prompting/ extensions/dynamic-prompts
 
 If you are upgrading from a version prior to 0.11.0, be sure to delete the old dynamic_promting.py from the webui's scripts directory and the old dynamic_prompting.js from the webui's javascript directory.
 
