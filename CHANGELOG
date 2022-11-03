@@ -24,3 +24,4 @@
 0.13.4 Fixed 0.13.3, but thiss time for real
 0.13.5 Updated stylesheet from @Yaiol to fix light and dark theme
 0.13.6 Moved wildcards into the collections directory and added the parrot zone collection with thanks to @jmpaz 
+0.13.7 Python 3.8 compatibility
