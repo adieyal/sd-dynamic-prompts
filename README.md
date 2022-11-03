@@ -50,10 +50,14 @@ This will randomly combine two of the options for every batch, separated with a 
 
 	{1-3$$opt1|opt2|opt3}
 
-This will use a random number of options between 1 and 3 for each batch. 
+This will use a random number of options between 1 and 3 for each batch.
+
+	{-$$opt1|opt2|opt3}
+An omitted minimum is assumed to be 0 and an omitted maximum is assumed to be the number of options.
 
 	{opt1|opt2|opt3}
 If you omit the $$ prefix, one item will be selected. (Equivalent to 1$$)
+
 
 ### Wildcard files
 Wildcard files are not provided by this script as lists exists in other repositories. A good place to start looking is [here](https://github.com/jtkelm2/stable-diffusion-webui-1/tree/master/scripts/wildcards)
