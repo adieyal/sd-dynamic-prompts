@@ -28,28 +28,28 @@ class RandomPromptGenerator(PromptGenerator):
 
         variants = [s.strip() for s in match.groups()[0].split("|")]
         if len(variants) > 0:
-            first = variants[0].split("$$")
-            quantity = constants.DEFAULT_NUM_COMBINATIONS
-            if len(first) == 2: # there is a $$
-                prefix_num, first_variant = first
-                variants[0] = first_variant
-                
+            splits = variants[0].split("$$")
+            quantity = splits.pop(0) if len(splits) > 1 else constants.DEFAULT_NUM_COMBINATIONS
+            joiner = splits.pop(0) if len(splits) > 1 else constants.DEFAULT_COMBO_JOINER
+            if len(splits) == 1:
+                variants[0] = splits[0]
                 try:
-                    prefix_ints = [int(i) for i in prefix_num.split("-")]
-                    if len(prefix_ints) == 1:
-                        quantity = prefix_ints[0]
-                    elif len(prefix_ints) == 2:
-                        prefix_low = min(prefix_ints)
-                        prefix_high = max(prefix_ints)
-                        quantity = self._random.randint(prefix_low, prefix_high)
-                    else:
-                        raise 
+                    quantity_range = [int(i) for i in quantity.split("-")]
+                    if len(quantity_range) > 2:
+                        raise
+                    quantity = self._random.randint(min(quantity_range), max(quantity_range))
                 except Exception:
                     logger.warning(f"Unexpected combination formatting, expected $$ prefix to be a number or interval. Defaulting to {constants.DEFAULT_NUM_COMBINATIONS}")
-            
+            else:
+                logger.warning(f"Unexpected token formatting in  {variants[0]}")
+
             try:
-                picked = self._random.sample(variants, quantity)
-                return ", ".join(picked)
+                # If available options is less than desired quantity then allow repeats
+                if len(variants) < quantity:
+                    picked = self._random.choices(variants, k=quantity)
+                else:
+                    picked = self._random.sample(variants, quantity)
+                return f" {joiner} ".join(picked)
             except ValueError as e:
                 logger.exception(e)
                 return ""

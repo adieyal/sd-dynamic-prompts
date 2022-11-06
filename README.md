@@ -52,12 +52,25 @@ This will randomly combine two of the options for every batch, separated with a 
 
 This will use a random number of options between 1 and 3 for each batch. 
 
+If the quantity of combinations chosen is greater than the number of options listed then options may be repeated in the output.
+If the quantity of combination chosen is less than or equal to the number of options listed then the same options will not be chosen more than once.
+
+	{4$$and$$opt1|opt2|opt3|opt4|opt5}
+
+This will choose 4 options and join them together with 'and' instead of the default comma. When there are multiple $$ tokens then the first item is the number of options to choose and the second option is the joiner to use.
+
 	{opt1|opt2|opt3}
 If you omit the $$ prefix, one item will be selected. (Equivalent to 1$$)
 
 ### Wildcard files
 Wildcard files are not provided by this script as lists exists in other repositories. A good place to start looking is [here](https://github.com/jtkelm2/stable-diffusion-webui-1/tree/master/scripts/wildcards)
 Empty lines and lines starting with `#` are ignored. This can be used to add comments or disable sections of the file.
+
+Mixing Combinations and Wildcards can be useful. For example,
+
+	a photo of a {2-4$$and$$__adjective__} house
+
+will choose between 2 and 4 options from adjective.txt, join them together with "and", for results such as "a photo of a cozy and ancient and delicate house"
 
 ### Nesting
 You can nest combinations inside wildcards. This means that you can create more advanced templates. For example:
