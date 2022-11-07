@@ -55,9 +55,35 @@ This will use a random number of options between 1 and 3 for each batch.
 	{opt1|opt2|opt3}
 If you omit the $$ prefix, one item will be selected. (Equivalent to 1$$)
 
+Options are chosen randomly with replacement. This means that {2$$opt1|opt2} can return any of the following:
+- opt1, opt1
+- opt1, opt2
+- opt2, opt1
+- opt2, opt2
+
+This is useful in conjunction with wildcards (see below).
+
 ### Wildcard files
-Wildcard files are not provided by this script as lists exists in other repositories. A good place to start looking is [here](https://github.com/jtkelm2/stable-diffusion-webui-1/tree/master/scripts/wildcards)
+Wildcards are text files (ending in .txt). Each line contains a term, artist name, or modifier. The wildcard file can then be embedded in your prompt by removing the .txt extension and surrounding it with double underscores. e.g:
+
+	My favourite colour is __colours__
+
 Empty lines and lines starting with `#` are ignored. This can be used to add comments or disable sections of the file.
+
+The collections directory contains modifier libraries that you can use as is or to bootstrap your own. Copy the collection that you want to use into the wildcards directory. Note, in previous versions, the collections were stored in the wildcards directory. This has now changed so that your own collections don't get clobbered every time you want to update the extension.
+There are currently two collections:
+
+- jumbo
+- parrotzone
+
+Jumbo is a very large collection of wildcards across many categories including aesthetics, appearance, artists, medium, style, and time. It is a work in progress, but aims to provide good coverage of various modifier categories. 
+
+Parrotzone is a far smaller and more manageable collection sourced from https://proximacentaurib.notion.site/e28a4f8d97724f14a784a538b8589e7d?v=42948fd8f45c4d47a0edfc4b78937474.
+
+If you're using a Unix/Linux O/S, you can easily create a symlink to the relevant collection rather than copying it across if you don't plan to alter it. E.g.
+
+	ln -sr collections/parrotzone wildcards/
+
 
 ### Nesting
 You can nest combinations inside wildcards. This means that you can create more advanced templates. For example:
@@ -156,13 +182,6 @@ This is compatible with the wildcard syntax described above.
 
 
 The first time you use it, the model is downloaded. It is approximately 500mb and so will take some time depending on how fast your connection is. It will also take a few seconds on first activation as the model is loaded into memory. Note, if you're low in VRAM, you might get a Cuda error. My GPU uses less than 8GB by YMMV.
-
-## Collections 
-The collections directory contains modifier libraries that you can use as is or use to bootstrap your own. Copy the collection that you want to use into the wildcards directory. Note, in previous versions, the collections were in the wildcards directory. This has now changed so that your own collections don't get clobbered every time you want to update the extension.
-
-If you're using a Unix/Linux O/S, you can easily create a symlink to the relevant collection rather than copying it across if you don't plan to alter it. E.g.
-
-	ln -sr collections/parrotzone wildcards/
 
 
 ## WILDCARD_DIR

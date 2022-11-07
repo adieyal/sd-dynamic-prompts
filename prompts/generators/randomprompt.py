@@ -48,7 +48,7 @@ class RandomPromptGenerator(PromptGenerator):
                     logger.warning(f"Unexpected combination formatting, expected $$ prefix to be a number or interval. Defaulting to {constants.DEFAULT_NUM_COMBINATIONS}")
             
             try:
-                picked = self._random.sample(variants, quantity)
+                picked = self._random.choices(variants, k=quantity)
                 return ", ".join(picked)
             except ValueError as e:
                 logger.exception(e)
