@@ -52,6 +52,11 @@ This will randomly combine two of the options for every batch, separated with a 
 
 This will use a random number of options between 1 and 3 for each batch. 
 
+	{-$$opt1|opt2|opt3}
+
+An omitted minimum is assumed to be 0 and an omitted maximum is assumed to be the number of options.
+
+
 	{opt1|opt2|opt3}
 If you omit the $$ prefix, one item will be selected. (Equivalent to 1$$)
 

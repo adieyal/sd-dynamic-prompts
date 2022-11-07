@@ -35,15 +35,21 @@ class RandomPromptGenerator(PromptGenerator):
                 variants[0] = first_variant
                 
                 try:
-                    prefix_ints = [int(i) for i in prefix_num.split("-")]
-                    if len(prefix_ints) == 1:
-                        quantity = prefix_ints[0]
-                    elif len(prefix_ints) == 2:
-                        prefix_low = min(prefix_ints)
-                        prefix_high = max(prefix_ints)
+                    prefix_parts = prefix_num.split("-")
+                    if len(prefix_parts) == 1:
+                        quantity = int(prefix_parts[0])
+                    elif len(prefix_parts) == 2:
+                        if all(prefix_parts):
+                            prefix_ints = [int(i) for i in prefix_parts]
+                            prefix_low = min(prefix_ints)
+                            prefix_high = max(prefix_ints)
+                        else:
+                            prefix_low = int(prefix_parts[0]) if prefix_parts[0] else 0
+                            prefix_high = int(prefix_parts[1]) if prefix_parts[1] else len(variants)
+                        prefix_high = max(prefix_high, len(variants))
                         quantity = self._random.randint(prefix_low, prefix_high)
                     else:
-                        raise 
+                        raise
                 except Exception:
                     logger.warning(f"Unexpected combination formatting, expected $$ prefix to be a number or interval. Defaulting to {constants.DEFAULT_NUM_COMBINATIONS}")
             
