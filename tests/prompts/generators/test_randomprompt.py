@@ -16,7 +16,7 @@ def seed():
 def generator(wildcard_manager, seed):
     return RandomPromptGenerator(wildcard_manager, "A template", seed=seed)
 
-class TestRandomPrompt:
+class TestRandomPromptVariants:
     def test_simple_pick_variant(self, generator):
         template = "I love {bread|butter}"
         generator._template = template
@@ -35,10 +35,10 @@ class TestRandomPrompt:
         generator._template = template
 
         variant = generator.pick_variant(template)
-        assert variant == "I love butter, butter"
+        assert variant == "I love butter, bread"
 
         variant = generator.pick_variant(template)
-        assert variant == "I love bread, bread"
+        assert variant == "I love butter, bread"
 
         variant = generator.pick_variant(template)
         assert variant == "I love butter, bread"
@@ -56,3 +56,60 @@ class TestRandomPrompt:
 
         variant = generator.pick_variant(template)
         assert variant == "I love "
+
+    def test_variant_range(self, generator):
+        template = "I love {1-2$$bread|butter}"
+        generator._template = template
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love butter, bread"
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love butter, bread"
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love butter, bread"
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love butter"
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love bread, bread"
+
+    def test_variant_range_missing_lower(self, generator):
+        template = "I love {-2$$bread|butter}"
+        generator._template = template
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love butter"
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love bread"
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love bread, butter"
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love butter"
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love butter"
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love "
+
+    def test_variant_range_missing_upper(self, generator):
+        template = "I love {1-$$bread|butter}"
+        generator._template = template
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love butter, bread"
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love butter, bread"
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love butter, bread"
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love butter"

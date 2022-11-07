@@ -21,6 +21,24 @@ class RandomPromptGenerator(PromptGenerator):
                 self._random.seed(seed)
         self._template = template
 
+    def _parse_range(self, range_str, num_variants):
+        default_low = 0
+        default_high = num_variants
+
+        if range_str is None:
+            return None
+
+        parts = range_str.split("-")
+        if len(parts) == 1:
+            low = high = int(parts[0])
+        elif len(parts) == 2:
+            low = int(parts[0]) if parts[0] else default_low
+            high = int(parts[1]) if parts[1] else default_high
+        else:
+            raise Exception(f"Unexpected range {range_str}")
+
+        return min(low, high), max(low, high)
+
     def _replace_combinations(self, match):
         if match is None or len(match.groups()) == 0:
             logger.warning("Unexpected missing combination")
@@ -30,26 +48,13 @@ class RandomPromptGenerator(PromptGenerator):
         if len(variants) > 0:
             first = variants[0].split("$$")
             quantity = constants.DEFAULT_NUM_COMBINATIONS
+
             if len(first) == 2: # there is a $$
-                prefix_num, first_variant = first
-                variants[0] = first_variant
-                
                 try:
-                    prefix_parts = prefix_num.split("-")
-                    if len(prefix_parts) == 1:
-                        quantity = int(prefix_parts[0])
-                    elif len(prefix_parts) == 2:
-                        if all(prefix_parts):
-                            prefix_ints = [int(i) for i in prefix_parts]
-                            prefix_low = min(prefix_ints)
-                            prefix_high = max(prefix_ints)
-                        else:
-                            prefix_low = int(prefix_parts[0]) if prefix_parts[0] else 0
-                            prefix_high = int(prefix_parts[1]) if prefix_parts[1] else len(variants)
-                        prefix_high = max(prefix_high, len(variants))
-                        quantity = self._random.randint(prefix_low, prefix_high)
-                    else:
-                        raise
+                    prefix_num, first_variant = first
+                    variants[0] = first_variant
+                    low, high = self._parse_range(prefix_num, len(variants))
+                    quantity = self._random.randint(low, high)
                 except Exception:
                     logger.warning(f"Unexpected combination formatting, expected $$ prefix to be a number or interval. Defaulting to {constants.DEFAULT_NUM_COMBINATIONS}")
             
