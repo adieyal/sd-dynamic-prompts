@@ -52,6 +52,12 @@ This will randomly combine two of the options for every batch, separated with a 
 
 This will use a random number of options between 1 and 3 for each batch. 
 
+If the quantity of combinations chosen is greater than the number of options listed then options may be repeated in the output.
+If the quantity of combination chosen is less than or equal to the number of options listed then the same options will not be chosen more than once.
+
+	{4$$and$$opt1|opt2|opt3|opt4|opt5}
+
+This will choose 4 options and join them together with 'and' instead of the default comma. When there are multiple $$ tokens then the first item is the number of options to choose and the second option is the joiner to use.
 	{-$$opt1|opt2|opt3}
 
 An omitted minimum is assumed to be 0 and an omitted maximum is assumed to be the number of options.
@@ -75,19 +81,11 @@ Wildcards are text files (ending in .txt). Each line contains a term, artist nam
 
 Empty lines and lines starting with `#` are ignored. This can be used to add comments or disable sections of the file.
 
-The collections directory contains modifier libraries that you can use as is or to bootstrap your own. Copy the collection that you want to use into the wildcards directory. Note, in previous versions, the collections were stored in the wildcards directory. This has now changed so that your own collections don't get clobbered every time you want to update the extension.
-There are currently two collections:
+Mixing Combinations and Wildcards can be useful. For example,
 
-- jumbo
-- parrotzone
+	a photo of a {2-4$$and$$__adjective__} house
 
-Jumbo is a very large collection of wildcards across many categories including aesthetics, appearance, artists, medium, style, and time. It is a work in progress, but aims to provide good coverage of various modifier categories. 
-
-Parrotzone is a far smaller and more manageable collection sourced from https://proximacentaurib.notion.site/e28a4f8d97724f14a784a538b8589e7d?v=42948fd8f45c4d47a0edfc4b78937474.
-
-If you're using a Unix/Linux O/S, you can easily create a symlink to the relevant collection rather than copying it across if you don't plan to alter it. E.g.
-
-	ln -sr collections/parrotzone wildcards/
+will choose between 2 and 4 options from adjective.txt, join them together with "and", for results such as "a photo of a cozy and ancient and delicate house"
 
 
 ### Nesting
@@ -191,6 +189,22 @@ The first time you use it, the model is downloaded. It is approximately 500mb an
 
 ## WILDCARD_DIR
 The script looks for wildcard files in WILDCARD_DIR. This is defined in the main webui config.json under wildcard_dir. If wildcard_dir is missing, then wildcard files should be placed in scripts/wildcards/
+
+## Collections
+The collections directory contains modifier libraries that you can use as is or to bootstrap your own. Copy the collection that you want to use into the wildcards directory. Note, in previous versions, the collections were stored in the wildcards directory. This has now changed so that your own collections don't get clobbered every time you want to update the extension.
+There are currently two collections:
+
+- jumbo
+- parrotzone
+
+Jumbo is a very large collection of wildcards across many categories including aesthetics, appearance, artists, medium, style, and time. It is a work in progress, but aims to provide good coverage of various modifier categories. 
+
+Parrotzone is a far smaller and more manageable collection sourced from https://proximacentaurib.notion.site/e28a4f8d97724f14a784a538b8589e7d?v=42948fd8f45c4d47a0edfc4b78937474.
+
+If you're using a Unix/Linux O/S, you can easily create a symlink to the relevant collection rather than copying it across if you don't plan to alter it. E.g.
+
+	ln -sr collections/parrotzone wildcards/
+
 
 ## Contributing
 If you're interested in contributing to the development of this extension, here are some features I would like to implement:
