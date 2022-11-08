@@ -39,40 +39,35 @@ class RandomPromptGenerator(PromptGenerator):
 
         return min(low, high), max(low, high)
 
+    def _parse_combinations(self, combinations_str):
+        variants = [s.strip() for s in combinations_str.split("|")]
+        splits = variants[0].split("$$")
+        quantity = splits.pop(0) if len(splits) > 1 else str(constants.DEFAULT_NUM_COMBINATIONS)
+        joiner = splits.pop(0) if len(splits) > 1 else constants.DEFAULT_COMBO_JOINER
+        variants[0] = splits[0]
+        low_range, high_range = self._parse_range(quantity, len(variants))
+
+        return (low_range, high_range), joiner, variants
+
     def _replace_combinations(self, match):
         if match is None or len(match.groups()) == 0:
             logger.warning("Unexpected missing combination")
             return ""
 
-        variants = [s.strip() for s in match.groups()[0].split("|")]
-        if len(variants) > 0:
-            splits = variants[0].split("$$")
-            quantity = splits.pop(0) if len(splits) > 1 else constants.DEFAULT_NUM_COMBINATIONS
-            joiner = splits.pop(0) if len(splits) > 1 else constants.DEFAULT_COMBO_JOINER
-            if len(splits) == 1:
-                variants[0] = splits[0]
-                try:
-                    quantity_range = [int(i) for i in quantity.split("-")]
-                    if len(quantity_range) > 2:
-                        raise
-                    quantity = self._random.randint(min(quantity_range), max(quantity_range))
-                except Exception:
-                    logger.warning(f"Unexpected combination formatting, expected $$ prefix to be a number or interval. Defaulting to {constants.DEFAULT_NUM_COMBINATIONS}")
+        combinations_str = match.groups()[0]
+        (low_range, high_range), joiner, variants = self._parse_combinations(combinations_str)
+        quantity = self._random.randint(low_range, high_range)        
+        try:
+            allow_repeats = len(variants) < quantity
+            if allow_repeats:
+                picked = self._random.choices(variants, k=quantity)
             else:
-                logger.warning(f"Unexpected token formatting in  {variants[0]}")
+                picked = self._random.sample(variants, quantity)
+            return f" {joiner} ".join(picked)
+        except ValueError as e:
+            logger.exception(e)
+            return ""
 
-            try:
-                # If available options is less than desired quantity then allow repeats
-                if len(variants) < quantity:
-                    picked = self._random.choices(variants, k=quantity)
-                else:
-                    picked = self._random.sample(variants, quantity)
-                return f" {joiner} ".join(picked)
-            except ValueError as e:
-                logger.exception(e)
-                return ""
-
-        return ""
 
     def _replace_wildcard(self, match):
         if match is None or len(match.groups()) == 0:
