@@ -6,7 +6,7 @@ Using this script, the prompt:
 
 	A {house|apartment|lodge|cottage} in {summer|winter|autumn|spring} by {2$$artist1|artist2|artist3}
 
-Will any of the following prompts:
+Will produce any of the following prompts:
 
 - A **house** in **summer** by **artist1**, **artist2**
 - A **lodge** in **autumn** by **artist3**, **artist1**
