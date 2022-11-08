@@ -188,7 +188,7 @@ The first time you use it, the model is downloaded. It is approximately 500mb an
 
 
 ## WILDCARD_DIR
-The script looks for wildcard files in WILDCARD_DIR. This is defined in the main webui config.json under wildcard_dir. If wildcard_dir is missing, then wildcard files should be placed in scripts/wildcards/
+The extension looks for wildcard files in WILDCARD_DIR. The default location is /path/to/stable-diffusion-webui/extensions/sd-dynamic-prompts/wildcards. It can also be manually defined in the main webui config.json under wildcard_dir. When in doubt, the help text for the extension in the webui lists the full path to WILDCARD_DIR
 
 ## Collections
 The collections directory contains modifier libraries that you can use as is or to bootstrap your own. Copy the collection that you want to use into the wildcards directory. Note, in previous versions, the collections were stored in the wildcards directory. This has now changed so that your own collections don't get clobbered every time you want to update the extension.
