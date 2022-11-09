@@ -1,6 +1,8 @@
 from __future__ import annotations
 from . import PromptGenerator
 
+from tqdm import trange
+
 class MagicPromptGenerator(PromptGenerator):
     generator = None
 
@@ -40,7 +42,12 @@ class MagicPromptGenerator(PromptGenerator):
 
     def generate(self, *args, **kwargs) -> str:
         prompts = self._prompt_generator.generate(*args, **kwargs)
-        new_prompts = [self._generator(prompt, max_length=self._max_prompt_length, temperature=self._temperature)[0]["generated_text"] for prompt in prompts]
+
+        new_prompts = []
+        for i in trange(len(prompts), desc='Generating Magic prompts'):
+            prompt       = prompts[i]
+            magic_prompt = self._generator(prompt, max_length=self._max_prompt_length, temperature=self._temperature)[0]["generated_text"]
+            new_prompts.append(magic_prompt)
 
         return new_prompts
 
