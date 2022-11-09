@@ -12,7 +12,12 @@ from modules.shared import opts
 
 from prompts.wildcardmanager import WildcardManager
 from prompts.uicreation import UiCreation
-from prompts.generators import RandomPromptGenerator, CombinatorialPromptGenerator, MagicPromptGenerator, BatchedCombinatorialPromptGenerator
+from prompts.generators import (
+    RandomPromptGenerator,
+    CombinatorialPromptGenerator,
+    MagicPromptGenerator,
+    BatchedCombinatorialPromptGenerator,
+)
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -20,10 +25,11 @@ logger.setLevel(logging.INFO)
 base_dir = Path(scripts.basedir())
 
 WILDCARD_DIR = getattr(opts, "wildcard_dir", base_dir / "wildcards")
-VERSION = "0.14.0"
+VERSION = "0.15.0"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
+
 
 class Script(scripts.Script):
     def title(self):
@@ -35,21 +41,42 @@ class Script(scripts.Script):
 
         html_path = base_dir / "helptext.html"
         html = html_path.open().read()
-        html = Template(html).substitute(wildcard_html=wildcard_html, WILDCARD_DIR=WILDCARD_DIR)
+        html = Template(html).substitute(
+            wildcard_html=wildcard_html, WILDCARD_DIR=WILDCARD_DIR
+        )
 
-        is_combinatorial      = gr.Checkbox(label="Combinatorial generation", value=False, elem_id="is-combinatorial")
+        is_combinatorial = gr.Checkbox(label="Combinatorial generation", value=False, elem_id="is-combinatorial")
         combinatorial_batches = gr.Slider(label="Combinatorial batches", min=1, max=10, step=1, value=1, elem_id="combinatorial-times")
 
-        is_magic_prompt     = gr.Checkbox(label="Magic prompt", value=False, elem_id="is-magicprompt")
-        magic_prompt_length = gr.Slider(label='Max magic prompt length', value=100, minimum=1, maximum=300, step=10)
-        magic_temp_value    = gr.Slider(label='Magic prompt creativity', value=0.7, minimum=0.1, maximum=3.0, step=0.10)
+        is_magic_prompt = gr.Checkbox(label="Magic prompt", value=False, elem_id="is-magicprompt")
+        magic_prompt_length = gr.Slider(label="Max magic prompt length", value=100, minimum=1, maximum=300, step=10)
+        magic_temp_value = gr.Slider(label="Magic prompt creativity", value=0.7, minimum=0.1, maximum=3.0, step=0.10)
 
         use_fixed_seed = gr.Checkbox(label="Fixed seed", value=False, elem_id="is-fixed-seed")
 
         info = gr.HTML(html)
-        return [info, is_combinatorial, combinatorial_batches, is_magic_prompt, magic_prompt_length, magic_temp_value, use_fixed_seed]
 
-    def run(self, p, info, is_combinatorial, combinatorial_batches, is_magic_prompt, magic_prompt_length, magic_temp_value, use_fixed_seed):
+        return [
+            info,
+            is_combinatorial,
+            combinatorial_batches,
+            is_magic_prompt,
+            magic_prompt_length,
+            magic_temp_value,
+            use_fixed_seed,
+        ]
+
+    def run(
+        self,
+        p,
+        info,
+        is_combinatorial,
+        combinatorial_batches,
+        is_magic_prompt,
+        magic_prompt_length,
+        magic_temp_value,
+        use_fixed_seed,
+    ):
         fix_seed(p)
 
         original_prompt = p.prompt[0] if type(p.prompt) == list else p.prompt
@@ -58,13 +85,21 @@ class Script(scripts.Script):
             combinatorial_batches = 1
 
         if is_combinatorial:
-            prompt_generator = CombinatorialPromptGenerator(wildcard_manager, original_prompt)
-            prompt_generator = BatchedCombinatorialPromptGenerator(prompt_generator, combinatorial_batches)
+            prompt_generator = CombinatorialPromptGenerator(
+                wildcard_manager, original_prompt
+            )
+            prompt_generator = BatchedCombinatorialPromptGenerator(
+                prompt_generator, combinatorial_batches
+            )
         else:
-            prompt_generator = RandomPromptGenerator(wildcard_manager, original_prompt, original_seed)
+            prompt_generator = RandomPromptGenerator(
+                wildcard_manager, original_prompt, original_seed
+            )
 
         if is_magic_prompt:
-            prompt_generator = MagicPromptGenerator(prompt_generator, magic_prompt_length, magic_temp_value)
+            prompt_generator = MagicPromptGenerator(
+                prompt_generator, magic_prompt_length, magic_temp_value
+            )
 
         num_images = p.n_iter * p.batch_size
         all_prompts = prompt_generator.generate(num_images)
@@ -74,9 +109,14 @@ class Script(scripts.Script):
         if use_fixed_seed:
             all_seeds = [original_seed] * updated_count
         else:
-            all_seeds = [int(p.seed) + (x if p.subseed_strength == 0 else 0) for x in range(updated_count)]
+            all_seeds = [
+                int(p.seed) + (x if p.subseed_strength == 0 else 0)
+                for x in range(updated_count)
+            ]
 
-        logger.info(f"Prompt matrix will create {updated_count} images in a total of {p.n_iter} batches.")
+        logger.info(
+            f"Prompt matrix will create {updated_count} images in a total of {p.n_iter} batches."
+        )
 
         p.prompt = all_prompts
         p.seed = all_seeds
@@ -88,5 +128,6 @@ class Script(scripts.Script):
         p.seed = original_seed
 
         return processed
+
 
 wildcard_manager.ensure_directory()
