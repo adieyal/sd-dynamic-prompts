@@ -32,13 +32,15 @@ class MagicPromptGenerator(PromptGenerator):
 
         return MagicPromptGenerator.generator
 
-    def __init__(self, prompt_generator: PromptGenerator):
-        self._generator = self._load_pipeline()
-        self._prompt_generator = prompt_generator
+    def __init__(self, prompt_generator: PromptGenerator, max_prompt_length: 100, temperature: 0.7):
+        self._generator         = self._load_pipeline()
+        self._prompt_generator  = prompt_generator
+        self._max_prompt_length = max_prompt_length
+        self._temperature       = float(temperature)
 
     def generate(self, *args, **kwargs) -> str:
         prompts = self._prompt_generator.generate(*args, **kwargs)
-        new_prompts = [self._generator(prompt)[0]["generated_text"] for prompt in prompts]
+        new_prompts = [self._generator(prompt, max_length=self._max_prompt_length, temperature=self._temperature)[0]["generated_text"] for prompt in prompts]
 
         return new_prompts
 

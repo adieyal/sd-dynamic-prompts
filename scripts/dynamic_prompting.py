@@ -37,15 +37,19 @@ class Script(scripts.Script):
         html = html_path.open().read()
         html = Template(html).substitute(wildcard_html=wildcard_html, WILDCARD_DIR=WILDCARD_DIR)
 
-        is_combinatorial = gr.Checkbox(label="Combinatorial generation", value=False, elem_id="is-combinatorial")
+        is_combinatorial      = gr.Checkbox(label="Combinatorial generation", value=False, elem_id="is-combinatorial")
         combinatorial_batches = gr.Slider(label="Combinatorial batches", min=1, max=10, step=1, value=1, elem_id="combinatorial-times")
-        is_magic_prompt = gr.Checkbox(label="Magic prompt", value=False, elem_id="is-magicprompt")
+
+        is_magic_prompt     = gr.Checkbox(label="Magic prompt", value=False, elem_id="is-magicprompt")
+        magic_prompt_length = gr.Slider(label='Max magic prompt length', value=100, minimum=1, maximum=300, step=10)
+        magic_temp_value    = gr.Slider(label='Magic prompt creativity', value=0.7, minimum=0.1, maximum=3.0, step=0.10)
+
         use_fixed_seed = gr.Checkbox(label="Fixed seed", value=False, elem_id="is-fixed-seed")
 
         info = gr.HTML(html)
-        return [info, is_combinatorial, combinatorial_batches, is_magic_prompt, use_fixed_seed]
+        return [info, is_combinatorial, combinatorial_batches, is_magic_prompt, magic_prompt_length, magic_temp_value, use_fixed_seed]
 
-    def run(self, p, info, is_combinatorial, combinatorial_batches, is_magic_prompt, use_fixed_seed):
+    def run(self, p, info, is_combinatorial, combinatorial_batches, is_magic_prompt, magic_prompt_length, magic_temp_value, use_fixed_seed):
         fix_seed(p)
 
         original_prompt = p.prompt[0] if type(p.prompt) == list else p.prompt
@@ -60,8 +64,8 @@ class Script(scripts.Script):
             prompt_generator = RandomPromptGenerator(wildcard_manager, original_prompt, original_seed)
 
         if is_magic_prompt:
-            prompt_generator = MagicPromptGenerator(prompt_generator)
-        
+            prompt_generator = MagicPromptGenerator(prompt_generator, magic_prompt_length, magic_temp_value)
+
         num_images = p.n_iter * p.batch_size
         all_prompts = prompt_generator.generate(num_images)
         updated_count = len(all_prompts)
