@@ -11,27 +11,17 @@ class MagicPromptGenerator(PromptGenerator):
         from transformers import AutoTokenizer, AutoModelForCausalLM
         from transformers import pipeline
 
-        from modules.safe import unsafe_torch_load, torch
         from modules.devices import get_optimal_device
         # TODO this needs to be fixed
         device = 0 if get_optimal_device() == "cuda" else -1
 
-        try:
-            safe_load = torch.load
-            torch.load = unsafe_torch_load
+        if MagicPromptGenerator.generator is None:
+            tokenizer = AutoTokenizer       .from_pretrained("Gustavosta/MagicPrompt-Stable-Diffusion")
+            model     = AutoModelForCausalLM.from_pretrained("Gustavosta/MagicPrompt-Stable-Diffusion")
 
-            if MagicPromptGenerator.generator is None:
-                tokenizer = AutoTokenizer.from_pretrained("Gustavosta/MagicPrompt-Stable-Diffusion")
-                model = AutoModelForCausalLM.from_pretrained("Gustavosta/MagicPrompt-Stable-Diffusion")
-
-                MagicPromptGenerator.tokenizer = tokenizer
-                MagicPromptGenerator.model = model
-
-                MagicPromptGenerator.generator = pipeline(task="text-generation", model=model, tokenizer=tokenizer, device=device)
-
-            return MagicPromptGenerator.generator
-        finally:
-            torch.load = safe_load
+            MagicPromptGenerator.tokenizer = tokenizer
+            MagicPromptGenerator.model     = model
+            MagicPromptGenerator.generator = pipeline(task="text-generation", tokenizer=tokenizer, model=model, device=device)
 
         return MagicPromptGenerator.generator
 
