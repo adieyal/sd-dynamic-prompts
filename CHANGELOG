@@ -27,4 +27,4 @@
 0.13.7 Python 3.8 compatibility
 0.13.8 Allow sampling with replacement for variants, i.e. {2$$X|Y} can return X,X Y,Y X,Y and Y,X. Useful in combination with wildcards. {2$$__artists__} now also chooses two options from the artists.txt file.
 0.13.9 Added implicit lower and upper ranges to combinations - thanks to @galvanized
-0.14.0 Added the ability to change the combinations joiner from the default "," to anything you like, e.g. {1$$and$$red|blue} gives you red and blue
+0.14.0 Added the ability to change the combinations joiner from the default "," to anything you like, e.g. {1$$and$$red|blue} gives you red and blue - contributed by @cobryan05 
