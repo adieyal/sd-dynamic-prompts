@@ -47,11 +47,10 @@ class WildcardManager:
 
         return wildcards
 
-    def get_wildcard_hierarchy(self, path: str=None):
+    def get_wildcard_hierarchy(self, path: Path|None=None):
         if path is None:
             path = self._path
-
-        path = Path(path)
+        
         files = path.glob("*.txt")
         wildcards = [self.path_to_wilcard(f) for f in files]
         directories = [d for d in path.glob("*") if d.is_dir()]
