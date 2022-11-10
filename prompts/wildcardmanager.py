@@ -30,7 +30,7 @@ class WildcardManager:
         if relative:
             files = [f.relative_to(self._path) for f in files]
 
-        return files
+        return list(files)
     
     def match_files(self, wildcard:str) -> list[WildcardFile]:
         return [
