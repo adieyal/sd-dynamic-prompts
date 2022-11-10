@@ -29,3 +29,4 @@
 0.13.9 Added implicit lower and upper ranges to combinations - thanks to @galvanized
 0.14.0 Added the ability to change the combinations joiner from the default "," to anything you like, e.g. {1$$and$$red|blue} gives you red and blue - contributed by @cobryan05 
 0.15.0 Improvements to Magic Prompt by @SineSwiper - added a slider to adjust the prompt length and another to tune creativity.
+0.15.1 Fixed an error caused when setting wildcard_dir in config.json, also other minor bug fixes
