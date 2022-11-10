@@ -1,8 +1,12 @@
 from __future__ import annotations
+
+import logging
 from pathlib import Path
 from prompts import constants
 
 from .wildcardfile import WildcardFile
+
+logger = logging.getLogger(__name__)
 
 class WildcardManager:
     def __init__(self, path:Path):
@@ -11,7 +15,7 @@ class WildcardManager:
     def _directory_exists(self) -> bool:
         return self._path.exists() and self._path.is_dir()
 
-    def ensure_directory(self) -> bool:
+    def ensure_directory(self):
         try:
             self._path.mkdir(parents=True, exist_ok=True)
         except Exception as e:
