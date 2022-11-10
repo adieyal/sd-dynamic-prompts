@@ -24,7 +24,13 @@ logger.setLevel(logging.INFO)
 
 base_dir = Path(scripts.basedir())
 
-WILDCARD_DIR = getattr(opts, "wildcard_dir", base_dir / "wildcards")
+wildcard_dir = getattr(opts, "wildcard_dir", None)
+
+if wildcard_dir is None:
+    WILDCARD_DIR = base_dir / "wildcards"
+else:
+    WILDCARD_DIR = Path(wildcard_dir)
+    
 VERSION = "0.15.0"
 
 
