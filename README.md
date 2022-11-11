@@ -129,7 +129,7 @@ but won't match
 
 You can also used character ranges `[0-9]` and `[a-z]` and single wildcard characters `?`. For more examples see [this article](http://pymotw.com/2/glob/).
 
-### Combinatorial Generation
+## Combinatorial Generation
 Instead of generating random prompts from a template, combinatorial generation produced every possible prompt from the given string. For example:
 `I {love|hate} {New York|Chicago} in {June|July|August}`
 
@@ -164,7 +164,17 @@ Combinatorial generation can be useful if you want to create an image for every 
 
 Combinations are not yet supported, i.e. `{2$$a|b|c}` will treat `2$$a` as one of the options instead of selecting two of a, b and c.
 
+### Combinatorial Batches
 The combinatorial batches slider lets you repeat the same set of prompts a number of times with different seeds. The default number of batches is 1.
+
+### Increasing the maximum number of generations
+By default, the __Batch count__ silder of  automatic1111 has a maximum value of 100. This can limit the maximum number of generations when using combinatorial generation. You can change the maximum value of this slider by editing ui-config.json and change:
+
+	txt2img/Batch count/maximum": 100
+
+to something larger like:
+
+	txt2img/Batch count/maximum": 1000
 
 ## Fixed seed
 Select this if you want to use the same seed for every generated image. If there are no wildcards then all the images will be identical. It is useful if you want to test the effect of a particular modifier. For example:
