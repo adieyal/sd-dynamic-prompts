@@ -156,6 +156,8 @@ will produce:
 - My favourite season is Winter
 - My favourite season is Sprint
 
+<img src="images/combinatorial_generation.png"/>
+
 You also arbitrarily nest combinations inside wildcards and wildcards in combinations.
 
 Combinatorial generation can be useful if you want to create an image for every artist in a file. It can be enabled by checking the __Combinatorial generation__ checkbox in the ui. Note, __num batches__ changes meaning. With random generation, exactly __num_batches__ * __batch_size__ images are created. With combinatorial generation, at *most* __num_batches__ * __batch_size__ images are created. This upper limit ensures that you don't accidentially create a template that unexpectedly  produces thousands of images.
