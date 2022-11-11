@@ -3,6 +3,9 @@ import logging
 from string import Template
 from pathlib import Path
 import math
+import unicodedata
+import re
+import random
 
 import gradio as gr
 
@@ -31,15 +34,40 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
     
-VERSION = "0.15.2"
+VERSION = "0.16.0"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
 
+def slugify(value, allow_unicode=False):
+    """
+    Taken from https://github.com/django/django/blob/master/django/utils/text.py
+    Convert to ASCII if 'allow_unicode' is False. Convert spaces or repeated
+    dashes to single dashes. Remove characters that aren't alphanumerics,
+    underscores, or hyphens. Convert to lowercase. Also strip leading and
+    trailing whitespace, dashes, and underscores.
+    """
+    value = str(value)
+    if allow_unicode:
+        value = unicodedata.normalize('NFKC', value)
+    else:
+        value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode('ascii')
+    value = re.sub(r'[^\w\s-]', '', value.lower())
+    return re.sub(r'[-\s]+', '-', value).strip('-_')
+
+def get_unique_path(directory: Path, original_filename) -> Path:    
+    filename = original_filename
+    for i in range(1000):
+        path = (directory / filename).with_suffix(".txt")
+        if not path.exists():
+            return path
+        filename = f"{slugify(original_filename)}-{math.floor(random.random() * 1000)}"
+
+    raise Exception("Failed to find unique path")
 
 class Script(scripts.Script):
     def title(self):
-        return f"Dynamic Prompting v{VERSION}"
+        return f"Dynamic Prompts v{VERSION}"
 
     def ui(self, is_img2img):
         ui_creation = UiCreation(wildcard_manager)
@@ -59,6 +87,7 @@ class Script(scripts.Script):
         magic_temp_value = gr.Slider(label="Magic prompt creativity", value=0.7, minimum=0.1, maximum=3.0, step=0.10)
 
         use_fixed_seed = gr.Checkbox(label="Fixed seed", value=False, elem_id="is-fixed-seed")
+        write_prompts = gr.Checkbox(label="Write prompts to file", value=False, elem_id="write-prompts")
 
         info = gr.HTML(html)
 
@@ -70,6 +99,7 @@ class Script(scripts.Script):
             magic_prompt_length,
             magic_temp_value,
             use_fixed_seed,
+            write_prompts
         ]
 
     def run(
@@ -82,6 +112,7 @@ class Script(scripts.Script):
         magic_prompt_length,
         magic_temp_value,
         use_fixed_seed,
+        write_prompts,
     ):
         fix_seed(p)
 
@@ -123,6 +154,13 @@ class Script(scripts.Script):
         logger.info(
             f"Prompt matrix will create {updated_count} images in a total of {p.n_iter} batches."
         )
+
+        try:
+            if write_prompts:
+                prompt_filename = get_unique_path(Path(p.outpath_samples), slugify(original_prompt))
+                prompt_filename.write_text("\n".join(all_prompts))
+        except Exception as e:
+            logger.error(f"Failed to write prompts to file: {e}")
 
         p.prompt = all_prompts
         p.seed = all_seeds

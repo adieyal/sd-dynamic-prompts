@@ -31,3 +31,4 @@
 0.15.0 Improvements to Magic Prompt by @SineSwiper - added a slider to adjust the prompt length and another to tune creativity.
 0.15.1 Fixed an error caused when setting wildcard_dir in config.json, also other minor bug fixes
 0.15.2 Handle situation where no prompts are generated.
+0.16.0 Added a checkbox to enable writing all generated prompts to a text file.

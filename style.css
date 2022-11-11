@@ -61,3 +61,7 @@
 #is-fixed-seed:after {
     content: "Use the same seed for all prompts in this batch"
 }
+
+#write-prompts:after {
+    content: "Write all generated prompts to a file"
+}

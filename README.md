@@ -188,6 +188,9 @@ The first time you use it, the model is downloaded. It is approximately 500mb an
 <img src="images/magic_prompt.png"/>
 You can control the maximum prompt length with the **Max magic prompt length** slider. **Magic prompt creativity** can adjust the generated prompt but you will need to experiment with this setting.
 
+## Write prompts to file
+Check the write prompts to file checkbox in order to create a file with all generated prompts. The generated file is a slugified version of the prompt and can be found in the same directory as the generated images, e.g. outputs/txt2img-images
+<img src="images/write_prompts.png"/>
 
 ## WILDCARD_DIR
 The extension looks for wildcard files in WILDCARD_DIR. The default location is /path/to/stable-diffusion-webui/extensions/sd-dynamic-prompts/wildcards. It can also be manually defined in the main webui config.json under wildcard_dir. When in doubt, the help text for the extension in the webui lists the full path to WILDCARD_DIR
