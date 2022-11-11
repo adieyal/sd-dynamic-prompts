@@ -67,6 +67,9 @@ class CombinatorialPromptGenerator(PromptGenerator):
             new_prompts = self.generate_from_wildcards(template)
             templates.extend(new_prompts)
 
+            if len(templates) == 0:
+                break
+
             template = templates.pop(0)
             new_prompts = self.generate_from_variants(template)
             no_new_prompts = len(new_prompts) == 1
@@ -76,6 +79,9 @@ class CombinatorialPromptGenerator(PromptGenerator):
             else:
                 templates.extend(new_prompts)
 
+        if len(all_prompts) == 0:
+            logger.warning(f"No prompts generated for template: {self._template}")
+            return [self._template]
         return all_prompts[:max_prompts]
 
 
