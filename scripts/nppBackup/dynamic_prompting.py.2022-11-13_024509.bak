@@ -123,7 +123,7 @@ class Script(scripts.Script):
         write_prompts,
         UNLINK_SEED_FROM_PROMPT
     ):
-
+        print(f"title ; {self.title()}")
         constants.UNLINK_SEED_FROM_PROMPT=UNLINK_SEED_FROM_PROMPT;
         
         fix_seed(p)
@@ -196,7 +196,8 @@ class Script(scripts.Script):
 
         p.prompt = original_prompt
         p.seed = original_seed
-
+        
+        print(f"title ; {self.title()}")
 
 
 wildcard_manager.ensure_directory()
