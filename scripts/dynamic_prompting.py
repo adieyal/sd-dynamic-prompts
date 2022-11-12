@@ -69,6 +69,9 @@ class Script(scripts.Script):
     def title(self):
         return f"Dynamic Prompts v{VERSION}"
 
+    def show(self, is_img2img):
+        return scripts.AlwaysVisible
+
     def ui(self, is_img2img):
         ui_creation = UiCreation(wildcard_manager)
         wildcard_html = ui_creation.probe()
@@ -79,17 +82,19 @@ class Script(scripts.Script):
             wildcard_html=wildcard_html, WILDCARD_DIR=WILDCARD_DIR
         )
 
-        is_combinatorial = gr.Checkbox(label="Combinatorial generation", value=False, elem_id="is-combinatorial")
-        combinatorial_batches = gr.Slider(label="Combinatorial batches", min=1, max=10, step=1, value=1, elem_id="combinatorial-times")
+        with gr.Group():
+            with gr.Accordion("Dynamic Prompts", open=False):
+                is_combinatorial = gr.Checkbox(label="Combinatorial generation", value=False, elem_id="is-combinatorial")
+                combinatorial_batches = gr.Slider(label="Combinatorial batches", min=1, max=10, step=1, value=1, elem_id="combinatorial-times")
 
-        is_magic_prompt = gr.Checkbox(label="Magic prompt", value=False, elem_id="is-magicprompt")
-        magic_prompt_length = gr.Slider(label="Max magic prompt length", value=100, minimum=1, maximum=300, step=10)
-        magic_temp_value = gr.Slider(label="Magic prompt creativity", value=0.7, minimum=0.1, maximum=3.0, step=0.10)
+                is_magic_prompt = gr.Checkbox(label="Magic prompt", value=False, elem_id="is-magicprompt")
+                magic_prompt_length = gr.Slider(label="Max magic prompt length", value=100, minimum=1, maximum=300, step=10)
+                magic_temp_value = gr.Slider(label="Magic prompt creativity", value=0.7, minimum=0.1, maximum=3.0, step=0.10)
 
-        use_fixed_seed = gr.Checkbox(label="Fixed seed", value=False, elem_id="is-fixed-seed")
-        write_prompts = gr.Checkbox(label="Write prompts to file", value=False, elem_id="write-prompts")
+                use_fixed_seed = gr.Checkbox(label="Fixed seed", value=False, elem_id="is-fixed-seed")
+                write_prompts = gr.Checkbox(label="Write prompts to file", value=False, elem_id="write-prompts")
 
-        info = gr.HTML(html)
+                info = gr.HTML(html)
 
         return [
             info,
@@ -102,7 +107,7 @@ class Script(scripts.Script):
             write_prompts
         ]
 
-    def run(
+    def process(
         self,
         p,
         info,
@@ -162,16 +167,13 @@ class Script(scripts.Script):
         except Exception as e:
             logger.error(f"Failed to write prompts to file: {e}")
 
-        p.prompt = all_prompts
-        p.seed = all_seeds
+        p.all_prompts = all_prompts
+        p.all_seeds = all_seeds
 
         p.prompt_for_display = original_prompt
-        processed = process_images(p)
 
         p.prompt = original_prompt
         p.seed = original_seed
-
-        return processed
 
 
 wildcard_manager.ensure_directory()
