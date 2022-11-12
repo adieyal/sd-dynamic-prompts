@@ -1,0 +1,5 @@
+slender_arm
+thin_forearm
+slender_forearm
+juliet sleeve
+arms at sides 

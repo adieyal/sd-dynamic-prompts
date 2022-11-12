@@ -1,0 +1,49 @@
+(strangling:1)
+(1 gallow:1),lock
+(1 noose:1),lock
+(Noose strangled girl's neck:1)
+(garrotte:1)
+(suicide:1)
+(hanged:1)
+(hanging:1)
+(suffocation:1)
+(asphyxiation:1)
+(strappado:1)
+(choking:1)
+(bind:1)
+(bound:1)
+(bdsm:1)
+(bondage:1)
+(dog Collar)
+(chain:1)
+(handcuffs:1)
+(choker:1)
+(hanged neck:1)
+(hanging neck:1)
+(neck hanged:1)
+(neck hanging:1)
+(bound_legs:1)
+(bound_arms:1)
+(bound_feet:1)
+(arms_behind_back:1)
+(tied_up_nonsexual:1)
+(bound_ankles:1)
+(ribbon_bondage:1)
+(bound_calves:1)
+(bound_knees:1)
+(bound_thighs:1)
+(bound_torso:1)
+(bound_wrists:1)
+captured
+fetters
+forced
+specimen
+suspension
+frogtie
+hogtie
+box_tie
+Choking_on_object
+Autoerotic_asphyxiation
+skewer,
+(1 gallow:1.3),(1 noose:1.3),
+(1 gallow:1.3),(1 noose:1.3),lock

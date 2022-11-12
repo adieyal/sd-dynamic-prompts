@@ -1,0 +1,24 @@
+Ascot_Tie
+Bolo_Tie
+Cravate
+Jabot
+Stock_Tie
+amulet
+animal collar
+bell_choker
+bowtie
+chain_necklace
+choker
+cross_tie
+flower_necklace
+lanyard
+locket
+magatama
+neck_ribbon
+neckerchief
+necklace
+pendant
+pentacle
+ribbon_choker
+scarf
+stole

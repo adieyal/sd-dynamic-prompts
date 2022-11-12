@@ -1,0 +1,9 @@
+Bokeh
+Depth of Field
+DoF
+Digital Camera
+Optical Camera
+Long Exposure
+Short Exposure
+Over Exposed
+Focused

@@ -1,0 +1,62 @@
+Crowns
+ajirogasa
+aviator_cap
+beanie
+beret
+boater_hat
+bow_hairband
+bowler_hat
+bucket_hat
+circlet
+cloche_hat
+cowboy_hat
+deerstalker
+diadem
+dixie_cup_hat
+fedora
+female_service_cap
+fez_hat
+flat_cap
+flat_top_chef_hat
+frilled_hairband
+garrison_cap
+habit
+hair_ribbon
+hairband
+headband
+headdress
+lace-trimmed_hairband
+lace_hairband
+lolita_hairband
+maid_headdress
+mini_crown
+mini_santa_hat
+mini_top_hat
+mini_witch_hat
+mitre
+mob_cap
+mortarboard_collage_graduation_hat
+nurse_cap
+peaked_cap
+pith_helmet
+rice_hat
+sailor_hat
+santa_hat
+spiked_hairband
+straw_hat
+sun_hat
+sweatband
+tate_eboshi
+tiara
+tiara crown
+top_hat
+tricorne
+two-tone_hairband
+veil
+winged_hairband
+witch_hat
+wizard_hat
+big red cape
+frills hat
+frills cape
+witch hat

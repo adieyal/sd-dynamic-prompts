@@ -1,0 +1,13 @@
+buff
+elegant
+fit
+glamorous
+lanky
+ripped
+skinny
+slender
+slender_stomach
+slenderwaist
+thin
+thin_stomach
+thinwaist

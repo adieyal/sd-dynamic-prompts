@@ -1,0 +1,5 @@
+long_tongue
+open_mouth
+close_mouth
+stick_out_tongue
+drooling

@@ -1,0 +1,8 @@
+sharp_face
+pointed_face
+round_face
+egg-shaped_face
+triangular_face
+blush
+crying
+cried_so_sadly

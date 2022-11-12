@@ -1,0 +1,4 @@
+__body-light__
+__body-poor__
+__bodyshape__
+__body-short__

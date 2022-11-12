@@ -1,0 +1,7 @@
+pregnant *,
+(pregnacy:1),
+(pregnant:1),
+(inflation:1),
+(overflow:1),
+(stomach_bulge:1),
+(intestine is bulge:1),

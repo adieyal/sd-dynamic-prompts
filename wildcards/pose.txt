@@ -1,0 +1,47 @@
+against_glass
+against_tree
+against_wall
+animated
+balancing
+butterfly_sitting
+contrapposto
+crossed_legs
+elegant pose
+fetal_position
+full_scorpion
+holding_whip
+jumping
+leaning
+leaning_against_car
+leaning_against_motorcycle
+leaning_against_vehicle
+leaning_back
+leaning_forward
+leaning_on_object
+leaning_on_person
+lying
+on_back
+on_side
+on_stomach
+paw_pose
+reclining
+running
+seiza
+sitting
+sitting_on_lap
+sitting_on_person
+spread legs
+squatting
+squatting with spread legs
+stance
+standing
+standing_on_one_leg
+stretching
+tiptoes tiptoe_kiss
+waiting
+walking
+wariza
+yokozuwari
+exhibitionism
+(squatting:1.3)
+(spread legs:1.4)
