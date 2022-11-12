@@ -633,3 +633,9 @@ wrong-legs
 {more than five fingers on one hand}
 {over three finger\(fingers excluding thumb\)
 {over-three-legs}
+facial
+face only
+lower body
+from torso down
+upper body
+face through torso
