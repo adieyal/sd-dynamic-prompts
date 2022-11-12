@@ -67,6 +67,11 @@ def get_unique_path(directory: Path, original_filename) -> Path:
     raise Exception("Failed to find unique path")
 
 class Script(scripts.Script):
+    original_negative_prompt = None
+    
+    def __init__(self):
+        print(f"Script __init__ ;")
+
     def title(self):
         return f"Dynamic Prompts v{VERSION}"
 
@@ -127,9 +132,12 @@ class Script(scripts.Script):
         constants.UNLINK_SEED_FROM_PROMPT=UNLINK_SEED_FROM_PROMPT;
         
         fix_seed(p)
+        
+        #print(f"p.negative_prompt ; {p.negative_prompt}")
 
         original_prompt = p.prompt[0] if type(p.prompt) == list else p.prompt
-        original_negative_prompt = p.negative_prompt[0] if type(p.negative_prompt) == list else p.negative_prompt
+        if self.original_negative_prompt is None :
+            self.original_negative_prompt = p.negative_prompt[0] if type(p.negative_prompt) == list else p.negative_prompt
         original_seed = p.seed
 
         try:
@@ -147,14 +155,14 @@ class Script(scripts.Script):
                 prompt_generator, combinatorial_batches
             )
             
-            negative_prompt_generator = CombinatorialPromptGenerator(wildcard_manager, original_negative_prompt)
+            negative_prompt_generator = CombinatorialPromptGenerator(wildcard_manager, self.original_negative_prompt)
             negative_prompt_generator = BatchedCombinatorialPromptGenerator(negative_prompt_generator, combinatorial_batches)
         else:
             prompt_generator = RandomPromptGenerator(
                 wildcard_manager, original_prompt, original_seed
             )
             
-            negative_prompt_generator = RandomPromptGenerator(wildcard_manager, original_negative_prompt, original_seed)
+            negative_prompt_generator = RandomPromptGenerator(wildcard_manager, self.original_negative_prompt, original_seed)
 
         if is_magic_prompt:
             prompt_generator = MagicPromptGenerator(
@@ -191,6 +199,8 @@ class Script(scripts.Script):
         p.all_prompts = all_prompts
         p.negative_prompt = all_negative_prompts
         p.all_seeds = all_seeds
+        
+        #print(f"p.negative_prompt ; {p.negative_prompt}")
 
         p.prompt_for_display = original_prompt
 
