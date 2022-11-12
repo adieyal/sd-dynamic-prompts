@@ -39,11 +39,17 @@ As of v0.17.0, Dynamic Prompts is an AlwaysVisible script. That means that it wi
 
 ## Installation
 
-*Note* dynamic prompting is now an extension. To install, run the following command from within the webui directory:
+The extension can be installed directly from within the **Extensions** tab within the Webui
+<img src="images/installation.png"/>
+
+You can also install it manually by running the following command from within the webui directory:
 
 	git clone https://github.com/adieyal/sd-dynamic-prompting/ extensions/dynamic-prompts
 
-If you are upgrading from a version prior to 0.11.0, be sure to delete the old dynamic_promting.py from the webui's scripts directory and the old dynamic_prompting.js from the webui's javascript directory.
+## Compatible Scripts
+Dynamic Prompts works particularly well with the following scripts:
+- [randomize](https://github.com/stysmmaker/stable-diffusion-webui-randomize) if you want to randomise non-prompt parameters like steps, width/height, sample, CFG scale, etc. Both scripts can work concurrently.
+- X/Y Plot - setting Dynamic Prompts to <a href="##combinatorial-generation">combinatorial mode</a> while using X/Y Plot, lets you exhaustively test prompt and paramter variations simultaneously.
 
 
 ## Template syntax
