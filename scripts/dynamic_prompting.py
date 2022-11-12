@@ -34,7 +34,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
     
-VERSION = "0.17.0"
+VERSION = "0.17.1"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -123,7 +123,12 @@ class Script(scripts.Script):
 
         original_prompt = p.prompt[0] if type(p.prompt) == list else p.prompt
         original_seed = p.seed
-        if combinatorial_batches < 1:
+
+        try:
+            combinatorial_batches = int(combinatorial_batches)
+            if combinatorial_batches < 1:
+                combinatorial_batches = 1
+        except (ValueError, TypeError):
             combinatorial_batches = 1
 
         if is_combinatorial:
