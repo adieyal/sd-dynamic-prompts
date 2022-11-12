@@ -2,6 +2,8 @@
 
 A custom extension for [AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) that implements an expressive template language for random or combinatorial prompt generation along with features to support deep wildcard directory structures.
 
+<img src="images/extension.png"/>
+
 Using this script, the prompt:
 
 	A {house|apartment|lodge|cottage} in {summer|winter|autumn|spring} by {2$$artist1|artist2|artist3}
@@ -31,6 +33,9 @@ You can also use the same wildcard twice
 
 - I love Winter better than Summer
 - I love Spring better than Spring
+
+## AlwaysVisible
+As of v0.17.0, Dynamic Prompts is an AlwaysVisible script. That means that it will co-exist with other scripts like X/Y Plot without needing to explicitly enable it. Big thanks to [@stysmmaker](https://github.com/stysmmaker) for this small but significant change.
 
 ## Installation
 
