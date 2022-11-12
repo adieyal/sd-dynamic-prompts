@@ -1,2 +1,4 @@
 *.pyc
 \.*.sw*
+**/nppBackup
+**/.tmp.drivedownload
