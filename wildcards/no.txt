@@ -10,8 +10,8 @@
 4koma
 5koma
 abnormal fingers
-Akira Toriyama
-Andy Warhol
+akira toriyama
+andy warhol
 animal ears
 artist progress
 ass focus
@@ -35,7 +35,7 @@ bad leg anatomy
 bad perspective
 bad proportions
 before and after
-Black and White
+black and white
 blurred
 blurred background
 blurry
@@ -44,7 +44,7 @@ bust chart
 censored
 censorship
 chart
-Chemigram
+chemigram
 chubby thighs
 chubby_thighs
 cloned
@@ -55,13 +55,13 @@ comparison
 concept art
 cropped
 curtain
-Curvy
+curvy
 cut
-Damien Hirst
+damien hirst
 deformed
 disfigured
 dolphin
-Duotone
+duotone
 duplicate
 error
 expression chart
@@ -100,20 +100,20 @@ fused fingers
 fused leg
 fused thigh
 german romanticism
-Glitch art
-grotesque Anatomy
-Gustav Klimt
+glitch art
+grotesque anatomy
+gustav klimt
 height chart
-Henri de Toulouse-Lautrec
-High contrast
+henri de toulouse-lautrec
+high contrast
 inset
 invisible man
-Jamie Hewlett
-Jean-Michel Basquiat
+jamie hewlett
+jean-michel basquiat
 jpeg artifacts
-Juan Gris
-Kandinsky
-Keith Haring
+juan gris
+kandinsky
+keith haring
 kiss chart
 letter
 lineup
@@ -122,25 +122,25 @@ low quality fingers
 low quality hands
 low quality legs
 low quality lowres 2d
-low quality lowres 2D
+low quality lowres 2d
 low quality lowres 2d character
-low quality lowres 2D character
+low quality lowres 2d character
 low quality lowres 2d game
-low quality lowres 2D game
+low quality lowres 2d game
 low quality lowres 2d game scene
-low quality lowres 2D game scene
+low quality lowres 2d game scene
 low quality lowres 2koma
 low quality lowres 3d
-low quality lowres 3D
+low quality lowres 3d
 low quality lowres 3d character
-low quality lowres 3D character
-low quality lowres 3D game
+low quality lowres 3d character
+low quality lowres 3d game
 low quality lowres 3d game
 low quality lowres 3d game scene
-low quality lowres 3D game scene
+low quality lowres 3d game scene
 low quality lowres abnormal eye proportion
 low quality lowres abnormal feet abnormal fingers
-low quality lowres Abnormal hands
+low quality lowres abnormal hands
 low quality lowres abnormal hands
 low quality lowres abnormal legs
 low quality lowres anatomical nonsense
@@ -195,7 +195,7 @@ low quality lowres big face
 low quality lowres big mouth
 low quality lowres big muscles
 low quality lowres black clit
-low quality lowres Black hands
+low quality lowres black hands
 low quality lowres black hands
 low quality lowres black nipples
 low quality lowres black tongue
@@ -219,7 +219,7 @@ low quality lowres comic
 low quality lowres comparison
 low quality lowres concept art
 low quality lowres coprophilia
-low quality lowres Coprophilia
+low quality lowres coprophilia
 low quality lowres corpse
 low quality lowres cracked mouth
 low quality lowres cropped
@@ -303,7 +303,7 @@ low quality lowres game cg
 low quality lowres gay
 low quality lowres girl
 low quality lowres glasses
-low quality lowres Glasses
+low quality lowres glasses
 low quality lowres gloves
 low quality lowres goblin
 low quality lowres gorilla
@@ -323,14 +323,14 @@ low quality lowres huge calf
 low quality lowres huge haunch
 low quality lowres huge thighs
 low quality lowres humpbacked
-low quality lowres Humpbacked
+low quality lowres humpbacked
 low quality lowres incorrect limb
 low quality lowres insects
 low quality lowres interlocked fingers
 low quality lowres irrational human body
 low quality lowres jpeg
 low quality lowres jpeg artifacts
-low quality lowres JPEG artifacts
+low quality lowres jpeg artifacts
 low quality lowres jpegartifacts
 low quality lowres kobold
 low quality lowres koma
@@ -354,8 +354,8 @@ low quality lowres longbody
 low quality lowres lose finger
 low quality lowres lose leg
 low quality lowres low polygon 3d game
-low quality lowres low polygon 3D game
-low quality lowres low poylgon 3D game
+low quality lowres low polygon 3d game
+low quality lowres low poylgon 3d game
 low quality lowres low quality
 low quality lowres low res
 low quality lowres low resolution rough
@@ -401,11 +401,11 @@ low quality lowres more than 2 thighs
 low quality lowres more than two shoes
 low quality lowres more than_1_moon
 low quality lowres mosaic
-low quality lowres Multi fingering
 low quality lowres multi fingering
-low quality lowres Multi foot
+low quality lowres multi fingering
 low quality lowres multi foot
-low quality lowres Multifold
+low quality lowres multi foot
+low quality lowres multifold
 low quality lowres multifold
 low quality lowres multiple breasts
 low quality lowres multiple digit
@@ -465,7 +465,7 @@ low quality lowres poorly drawn shoes
 low quality lowres poorly drawn tentacles
 low quality lowres poorly drawn thigh gap
 low quality lowres pubic hair
-low quality lowres QR code
+low quality lowres qr code
 low quality lowres qr code
 low quality lowres realistic
 low quality lowres reference sheet
@@ -501,7 +501,7 @@ low quality lowres text
 low quality lowres text error
 low quality lowres text font ui
 low quality lowres the background is incoherent
-low quality lowres The background is incoherent
+low quality lowres the background is incoherent
 low quality lowres thick lips
 low quality lowres thick thighs
 low quality lowres tongue within mouth
@@ -537,19 +537,19 @@ low resolution
 lower body
 lowres
 lowresbad anatomy
-Luminogram
+luminogram
 malformed limbs
 many leg
 many thigh
 mask
-Milton Caniff
+milton caniff
 missing arm
 missing arms
 missing face
 missing fingers
 missing leg
 missing legs
-Monochromatic
+monochromatic
 monochrome
 more than 1 penis
 more than 2 breasts
@@ -588,13 +588,12 @@ mutilated
 nipples on navel
 nipples on stomach
 non-linear background
-non-linear background}
 noncontinuous leg
 normal quality
-Norman Rockwell
+norman rockwell
 nude
 obesity
-Orotone
+orotone
 over four fingers\(finger\)
 over one person in focus
 over two arms\(body\)
@@ -603,7 +602,7 @@ over-three-feet
 over-three-foot
 over-three-shoes
 photo inset
-Pixel Art
+pixel art
 pony
 poorly drawn face
 poorly drawn hands
@@ -613,23 +612,23 @@ portrait
 realistic
 reference inset
 reference sheet
-Roy Lichtenstein
-Roz Chast
+roy lichtenstein
+roz chast
 screencap inset
-Screentone
-Selective color
-Sepia
+screentone
+selective color
+sepia
 short arm
 signature
-Sketch
-Sonia Delaunay
+sketch
+sonia delaunay
 split leg
 split thigh
 spread pussy
 strange anatomy
 strange finger
 sunglight
-Tamara Lempicka
+tamara lempicka
 text
 thick thigh
 thick_thigh
@@ -645,7 +644,7 @@ upper body
 username
 variations
 very wide shot
-Watercolor
+watercolor
 watermark
 wide shot
 worst quality
