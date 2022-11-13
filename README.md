@@ -220,11 +220,10 @@ Jinja2 templates is an experimental feature that enables you to define prompts i
 
 To enable, open the advanced accordion and select __Enable Jinja2 templates__.
 <img src="images/jinja_templates.png">
-Jinja2 templates is an experimental feature for advanced template generation. It is not recommended for general use unless you are comfortable with writing scripts.<br><br>
 
 Here are some examples of what you can do with Jinja2 templates
 ### Literals
-	Literal strings work as expected:
+Literal strings work as expected:
 
     I love red roses
 
@@ -263,9 +262,9 @@ This will produce one prompt for each colour in the wildcard.txt file.
     {% endfor %}
 
 This will produce the following prompts:
-	- I love red roses
-	- I hate blue roses
-	- I hate green roses
+* I love red roses
+* I hate blue roses
+* I hate green roses
 
 These are trivial examples but the Jinja2 template language is very expressive. You can use it to develop sophisticated prompt templates. For more information see the <a href="https://jinja.palletsprojects.com/en/3.1.x/templates/">Jinja2 documentation.</a>.
 
