@@ -1,13 +1,17 @@
+(spread legs:1.4)
+(squatting:1.3)
 against glass
 against tree
 against wall
 animated
+arms up
 balancing
 butterfly sitting
+clothes lift
 contrapposto
 crossed legs
-clothes lift
 elegant pose
+exhibitionism
 fetal position
 full scorpion
 holding whip
@@ -29,9 +33,9 @@ reclining
 running
 seiza
 sitting
-skirt lift
 sitting on lap
 sitting on person
+skirt lift
 spread legs
 squatting
 squatting with spread legs
@@ -39,15 +43,12 @@ stance
 standing
 standing on one leg
 stretching
+The girl is tied to a pole with a leash
 tiptoes tiptoe kiss
+v arms
 waiting
 walking
 wariza
 yokozuwari
-exhibitionism
-The girl is tied to a pole with a leash
-arms up
 {arms up|standing|standing on one leg|The girl is tied to a pole with a leash|exhibitionism}
-{standing|standing on one leg|standing sex}
-(squatting:1.3)
-(spread legs:1.4)
+{standing|standing on one leg|standing sex|v arms},

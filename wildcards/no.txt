@@ -1,4 +1,7 @@
+(more than five fingers on one hand:1.5)
+(more than two arm per body:1.5)
 (more than two arms per body:1.5)
+(more than two leg per body:1.5)
 (more than two legs per body:1.5)
 (tentacle hair:1.3)
 2koma
@@ -13,24 +16,29 @@ animal ears
 artist progress
 ass focus
 bad anatomy
-bad anatomy\(arm\)
 bad anatomy\(arms\)
+bad anatomy\(arm\)
 bad anatomy\(body\)
-bad anatomy\(finger\)
 bad anatomy\(fingers\)
+bad anatomy\(finger\)
 bad anatomy\(hand\)
 bad anatomy\(leg\)
+bad arm anatomy
 bad arms
 bad detailed background
 bad detail\(finger\)
+bad finger anatomy
+bad hand anatomy
 bad hands
 bad handsmissing fingers
+bad leg anatomy
 bad perspective
 bad proportions
 before and after
 Black and White
 blurred
 blurred background
+blurry
 blurry body
 bust chart
 censored
@@ -38,6 +46,8 @@ censorship
 chart
 Chemigram
 chubby thighs
+chubby_thighs
+cloned
 cloned face
 close up
 comic
@@ -45,12 +55,14 @@ comparison
 concept art
 cropped
 curtain
+Curvy
 cut
 Damien Hirst
 deformed
 disfigured
 dolphin
 Duotone
+duplicate
 error
 expression chart
 expressions
@@ -73,9 +85,15 @@ extra navel
 extra nipples
 extra thigh
 extra toe
-extra legs
+extra_legs
+face only
+face through torso
+facial
+fat
 fat girl
 fewer digits
+from torso down
+fused
 fused anatomy
 fused arm
 fused fingers
@@ -103,21 +121,21 @@ low quality
 low quality fingers
 low quality hands
 low quality legs
-low quality lowres 2D
 low quality lowres 2d
-low quality lowres 2D character
+low quality lowres 2D
 low quality lowres 2d character
-low quality lowres 2D game
+low quality lowres 2D character
 low quality lowres 2d game
-low quality lowres 2D game scene
+low quality lowres 2D game
 low quality lowres 2d game scene
+low quality lowres 2D game scene
 low quality lowres 2koma
-low quality lowres 3D
 low quality lowres 3d
-low quality lowres 3D character
+low quality lowres 3D
 low quality lowres 3d character
-low quality lowres 3d game
+low quality lowres 3D character
 low quality lowres 3D game
+low quality lowres 3d game
 low quality lowres 3d game scene
 low quality lowres 3D game scene
 low quality lowres abnormal eye proportion
@@ -127,7 +145,6 @@ low quality lowres abnormal hands
 low quality lowres abnormal legs
 low quality lowres anatomical nonsense
 low quality lowres animal
-low quality lowres anime screencap
 low quality lowres anime screencap
 low quality lowres artifacts
 low quality lowres artist name
@@ -178,8 +195,8 @@ low quality lowres big face
 low quality lowres big mouth
 low quality lowres big muscles
 low quality lowres black clit
-low quality lowres black hands
 low quality lowres Black hands
+low quality lowres black hands
 low quality lowres black nipples
 low quality lowres black tongue
 low quality lowres black-white
@@ -285,8 +302,8 @@ low quality lowres futanari
 low quality lowres game cg
 low quality lowres gay
 low quality lowres girl
-low quality lowres Glasses
 low quality lowres glasses
+low quality lowres Glasses
 low quality lowres gloves
 low quality lowres goblin
 low quality lowres gorilla
@@ -305,16 +322,15 @@ low quality lowres huge breasts
 low quality lowres huge calf
 low quality lowres huge haunch
 low quality lowres huge thighs
-low quality lowres Humpbacked
 low quality lowres humpbacked
+low quality lowres Humpbacked
 low quality lowres incorrect limb
 low quality lowres insects
 low quality lowres interlocked fingers
-low quality lowres interlocked fingers
 low quality lowres irrational human body
 low quality lowres jpeg
-low quality lowres JPEG artifacts
 low quality lowres jpeg artifacts
+low quality lowres JPEG artifacts
 low quality lowres jpegartifacts
 low quality lowres kobold
 low quality lowres koma
@@ -337,8 +353,8 @@ low quality lowres long neck
 low quality lowres longbody
 low quality lowres lose finger
 low quality lowres lose leg
-low quality lowres low polygon 3D game
 low quality lowres low polygon 3d game
+low quality lowres low polygon 3D game
 low quality lowres low poylgon 3D game
 low quality lowres low quality
 low quality lowres low res
@@ -407,7 +423,6 @@ low quality lowres mutation
 low quality lowres mutation poorly drawn
 low quality lowres mutilated
 low quality lowres nipple penetration
-low quality lowres nipple penetration
 low quality lowres nitroplus
 low quality lowres normal quality
 low quality lowres nsfw
@@ -418,7 +433,6 @@ low quality lowres one hand with less than 5 digit
 low quality lowres one hand with less than 5 fingers
 low quality lowres one hand with more than 5 digit
 low quality lowres one hand with more than 5 fingers
-low quality lowres optical illusion
 low quality lowres optical illusion
 low quality lowres orc
 low quality lowres organs
@@ -451,11 +465,10 @@ low quality lowres poorly drawn shoes
 low quality lowres poorly drawn tentacles
 low quality lowres poorly drawn thigh gap
 low quality lowres pubic hair
-low quality lowres qr code
 low quality lowres QR code
+low quality lowres qr code
 low quality lowres realistic
 low quality lowres reference sheet
-low quality lowres retro artstyle
 low quality lowres retro artstyle
 low quality lowres ryona
 low quality lowres safety knickers
@@ -472,7 +485,6 @@ low quality lowres shit
 low quality lowres signature
 low quality lowres simple background
 low quality lowres skeleton
-low quality lowres skeleton girl
 low quality lowres skeleton girl
 low quality lowres sketch
 low quality lowres sonic (series)
@@ -496,7 +508,6 @@ low quality lowres tongue within mouth
 low quality lowres too long tongue
 low quality lowres too many fingers
 low quality lowres touhou
-low quality lowres traditional media
 low quality lowres traditional media
 low quality lowres tranny
 low quality lowres trans gender
@@ -530,6 +541,7 @@ Luminogram
 malformed limbs
 many leg
 many thigh
+mask
 Milton Caniff
 missing arm
 missing arms
@@ -544,15 +556,20 @@ more than 2 breasts
 more than 2 legs
 more than 2 nipples
 more than two arms
+more than two feet
 more than two hands
 more than two heads
 more than two legs
-more than two arms
-more than two feet
-more than two hands
-more than two legs
 more than two nipples
 more than two skirt
+more_than_two_arms
+more_than_two_feet
+more_than_two_hands
+more_than_two_legs
+more_than_two_nipples
+more_than_two_skirt
+multi arms
+multi legs
 multiful\(arms\)
 multiful\(fingers\)
 multiful\(hands\)
@@ -563,6 +580,7 @@ multiple penis
 multiple viewer
 multiple views
 mutated hands
+mutated hands and fingers
 mutated leg
 mutated thigh
 mutation
@@ -570,9 +588,12 @@ mutilated
 nipples on navel
 nipples on stomach
 non-linear background
+non-linear background}
 noncontinuous leg
 normal quality
 Norman Rockwell
+nude
+obesity
 Orotone
 over four fingers\(finger\)
 over one person in focus
@@ -611,6 +632,7 @@ sunglight
 Tamara Lempicka
 text
 thick thigh
+thick_thigh
 three leg
 three thigh
 too many fingers
@@ -619,6 +641,7 @@ triple leg
 turnaround
 twin head
 unclear architectural outline
+upper body
 username
 variations
 very wide shot
@@ -631,11 +654,6 @@ wrong-finger
 wrong-foot
 wrong-legs
 {more than five fingers on one hand}
+{more than one person in focus
 {over three finger\(fingers excluding thumb\)
 {over-three-legs}
-facial
-face only
-lower body
-from torso down
-upper body
-face through torso

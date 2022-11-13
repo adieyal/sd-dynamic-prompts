@@ -16,3 +16,4 @@ looking through legs
 looking to the side
 looking up
 facing viewer
+{looking at viewer|looking away|looking_down},
