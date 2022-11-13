@@ -268,6 +268,23 @@ This will produce the following prompts:
 
 These are trivial examples but the Jinja2 template language is very expressive. You can use it to develop sophisticated prompt templates. For more information see the <a href="https://jinja.palletsprojects.com/en/3.1.x/templates/">Jinja2 documentation.</a>.
 
+### Seting variables
+You can create a variable for further re-use, e.g.
+
+	{% with careers = ['doctor', 'lawyer', 'accountant'] %}
+		{% for career1 in careers %}
+			{% for career2 in careers %}
+				{% if career1 != career2 %}
+					{% prompt %}professional digital airbrush art of A {{ career1 }} and {{ career2 }}{% endprompt %}
+				{% endif %}
+			{% endfor %}
+		{% endfor %}
+	{% endwith %}
+
+the careers array is now avaible inside the {% with %} ... {% endwith %} block.
+
+### Batch count
+
 Note: Batch count works differently when using Jinja2 templates. If you set __Batch count__ to 1 and __Batch size__ to 1 and use this prompt:
 
 	{% for colour in ['blue', 'red', 'green'] %}
