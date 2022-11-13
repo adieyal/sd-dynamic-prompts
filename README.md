@@ -268,6 +268,14 @@ This will produce the following prompts:
 
 These are trivial examples but the Jinja2 template language is very expressive. You can use it to develop sophisticated prompt templates. For more information see the <a href="https://jinja.palletsprojects.com/en/3.1.x/templates/">Jinja2 documentation.</a>.
 
+Note: Batch count works differently when using Jinja2 templates. If you set __Batch count__ to 1 and __Batch size__ to 1 and use this prompt:
+
+	{% for colour in ['blue', 'red', 'green'] %}
+	    {% prompt %}I love {{ colour }} roses{% endprompt %}
+	{% endfor %}
+
+You will produce 3 images. This is due to the fact that {% prompt %}...{% endprompt %} creates one prompt for each colour. If you set __Batch count__ to 2, 6 images will be created. The __Combinatorial batches__ slider is also ignored since you can achieve the same effect as above by creating mulitple prompts in your template and then increasing __Batch count__.
+
 If you are using these templates, please let me know if they are useful.
 
 ## WILDCARD_DIR
