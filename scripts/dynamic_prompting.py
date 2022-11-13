@@ -25,6 +25,8 @@ from prompts import constants
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
+file_handler = logging.FileHandler('dynamic_prompting.py.log')
+logger.addHandler(file_handler)
 
 base_dir = Path(scripts.basedir())
 
@@ -67,11 +69,8 @@ def get_unique_path(directory: Path, original_filename) -> Path:
     raise Exception("Failed to find unique path")
 
 class Script(scripts.Script):
-    original_negative_prompt = None
+    #original_negative_prompt = None
     
-    def __init__(self):
-        print(f"Script __init__ ;")
-
     def title(self):
         return f"Dynamic Prompts v{VERSION}"
 
@@ -141,8 +140,8 @@ class Script(scripts.Script):
         #print(f"p.negative_prompt ; {p.negative_prompt}")
 
         original_prompt = p.prompt[0] if type(p.prompt) == list else p.prompt
-        if self.original_negative_prompt is None :
-            self.original_negative_prompt = p.negative_prompt[0] if type(p.negative_prompt) == list else p.negative_prompt
+        #if self.original_negative_prompt is None :
+        original_negative_prompt = p.negative_prompt[0] if type(p.negative_prompt) == list else p.negative_prompt
         original_seed = p.seed
 
         try:
@@ -153,6 +152,7 @@ class Script(scripts.Script):
             combinatorial_batches = 1
 
         if is_combinatorial:
+            print(f"is_combinatorial ;")
             prompt_generator = CombinatorialPromptGenerator(
                 wildcard_manager, original_prompt
             )
@@ -160,16 +160,18 @@ class Script(scripts.Script):
                 prompt_generator, combinatorial_batches
             )
             
-            negative_prompt_generator = CombinatorialPromptGenerator(wildcard_manager, self.original_negative_prompt)
+            negative_prompt_generator = CombinatorialPromptGenerator(wildcard_manager, original_negative_prompt)
             negative_prompt_generator = BatchedCombinatorialPromptGenerator(negative_prompt_generator, combinatorial_batches)
         else:
+            print(f"is_combinatorial not ;")
             prompt_generator = RandomPromptGenerator(
                 wildcard_manager, original_prompt, original_seed
             )
             
-            negative_prompt_generator = RandomPromptGenerator(wildcard_manager, self.original_negative_prompt, original_seed)
+            negative_prompt_generator = RandomPromptGenerator(wildcard_manager, original_negative_prompt, original_seed)
 
         if is_magic_prompt:
+            print(f"is_magic_prompt ;")
             prompt_generator = MagicPromptGenerator(
                 prompt_generator, magic_prompt_length, magic_temp_value
             )

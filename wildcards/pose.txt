@@ -7,6 +7,7 @@ animated
 arms up
 arm support 
 balancing
+bow pose
 butterfly sitting
 clothes lift
 contrapposto
@@ -36,7 +37,6 @@ seiza
 sitting
 sitting on lap
 sitting on person
-skirt lift
 spread legs
 squatting
 squatting with spread legs
@@ -53,3 +53,11 @@ wariza
 yokozuwari
 {arms up|standing|standing on one leg|The girl is tied to a pole with a leash|exhibitionism}
 {standing|standing on one leg|standing sex|v arms}
+horns pose
+pose variation
+variated pose
+alternate pose
+dynamic pose
+legs over head
+bow pose
+({{paw|bow} pose|legs over head|standing on one leg}:1.3)

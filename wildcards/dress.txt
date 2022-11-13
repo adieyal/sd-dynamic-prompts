@@ -1,3 +1,4 @@
+alternate costume
 (frilled dress:1)
 (frilled santa costume:1.63),(red beret:1.16),(off-shoulder dress:1.05),gloves,(white pantyhose:1.1)
 (gothic dress:1)
@@ -18,7 +19,6 @@ ahri clothes
 alchemist
 ao dai
 aran sweater
-artist
 asymmetrical dress
 backless dress
 ballgown
