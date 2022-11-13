@@ -1,1 +1,1 @@
-mask,no head,Monochromatic,monochrome
+mask,no head,Monochromatic,monochrome,multiple viewer,multiple views,multiple 4koma,2koma,3koma,4koma,5koma
