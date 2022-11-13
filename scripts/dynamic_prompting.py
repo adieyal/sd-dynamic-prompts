@@ -25,6 +25,7 @@ from prompts.generators import (
 
 from prompts.generators.jinjagenerator import JinjaGenerator
 from prompts.generators.promptgenerator import GeneratorException
+from prompts import constants
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -38,7 +39,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "0.18.0"
+VERSION = "0.19.0"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -167,6 +168,10 @@ class Script(scripts.Script):
 
                 with gr.Group():
                     with gr.Accordion("Advanced options", open=False):
+                        unlink_seed_from_prompt = gr.Checkbox(
+                            label="Unlink seed from prompt", value=False, elem_id="unlink-seed-from-prompt"
+                        )
+
                         enable_jinja_templates = gr.Checkbox(
                             label="Enable Jinja2 templates", value=False, elem_id="enable-jinja-templates"
                         )
@@ -182,6 +187,7 @@ class Script(scripts.Script):
             magic_temp_value,
             use_fixed_seed,
             write_prompts,
+            unlink_seed_from_prompt,
             enable_jinja_templates,
         ]
 
@@ -196,6 +202,7 @@ class Script(scripts.Script):
         magic_temp_value,
         use_fixed_seed,
         write_prompts,
+        unlink_seed_from_prompt,
         enable_jinja_templates,
     ):
         fix_seed(p)
@@ -203,6 +210,9 @@ class Script(scripts.Script):
         original_prompt = p.prompt[0] if type(p.prompt) == list else p.prompt
         original_seed = p.seed
         num_images = p.n_iter * p.batch_size
+
+        if unlink_seed_from_prompt:
+            constants.UNLINK_SEED_FROM_PROMPT = True
 
         try:
             combinatorial_batches = int(combinatorial_batches)

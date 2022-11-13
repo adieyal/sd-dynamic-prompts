@@ -66,6 +66,10 @@
     content: "Write all generated prompts to a file"
 }
 
+#unlink-seed-from-prompt:after {
+    content: "If this is set, then random prompts are generated, even if the seed is the same."
+}
+
 .dynamic-prompting h2 {
     font-size: 1.2em;
     font-weight: bolder;

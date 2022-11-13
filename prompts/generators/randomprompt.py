@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 class RandomPromptGenerator(PromptGenerator):
     def __init__(self, wildcard_manager: WildcardManager, template, seed:int = None):
         self._wildcard_manager = wildcard_manager
-        # Temporarily adding this here until I find a better place for it
+
         if constants.UNLINK_SEED_FROM_PROMPT:
             self._random = random
         else:
