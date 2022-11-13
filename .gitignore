@@ -2,3 +2,4 @@
 \.*.sw*
 **/nppBackup
 **/.tmp.drivedownload
+/wildcards/*.txt
