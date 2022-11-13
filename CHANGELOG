@@ -38,3 +38,4 @@
 0.19.0 Added a checkbox to enable unlinking seeds from prompts. This feature has been available for sometime but there hasn't been a checkbox in the ui to enable it.
 0.19.1 Added missing install.py to install Jinja2
 0.19.2 Fixed bug in MagicPrompt that broke prompts with pipes, https://github.com/adieyal/sd-dynamic-prompts/issues/54
+0.20.0 Added random, randint, and permutations jinja extensions

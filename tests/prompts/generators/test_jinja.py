@@ -191,3 +191,37 @@ class TestJinjaGenerator:
         with pytest.raises(GeneratorException):
             generator = JinjaGenerator(template, wildcard_manager)
             prompts = generator.generate()
+
+    def test_random(self):
+        with patch('random.random') as mock_choice:
+            mock_choice.return_value = 0.3
+            template = """
+            {% prompt %}My favourite number is {{ random() }}{% endprompt %}
+            """
+
+            generator = JinjaGenerator(template)
+            prompts = generator.generate()
+
+            assert len(prompts) == 1
+            assert prompts[0] == "My favourite number is 0.3"
+
+    def test_permutations(self):
+        template = """
+        {% for val in permutations(["red", "green", "blue"], 1, 2) %}
+            {% prompt %}My favourite colours are {{ val|join(' and ') }}{% endprompt %}
+        {% endfor %}
+        """
+
+        generator = JinjaGenerator(template)
+        prompts = generator.generate()
+
+        assert len(prompts) == 9
+        assert prompts[0] == "My favourite colours are red"
+        assert prompts[1] == "My favourite colours are green"
+        assert prompts[2] == "My favourite colours are blue"
+        assert prompts[3] == "My favourite colours are red and green"
+        assert prompts[4] == "My favourite colours are red and blue"
+        assert prompts[5] == "My favourite colours are green and red"
+        assert prompts[6] == "My favourite colours are green and blue"
+        assert prompts[7] == "My favourite colours are blue and red"
+        assert prompts[8] == "My favourite colours are blue and green"

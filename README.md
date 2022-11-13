@@ -268,7 +268,7 @@ This will produce the following prompts:
 
 These are trivial examples but the Jinja2 template language is very expressive. You can use it to develop sophisticated prompt templates. For more information see the <a href="https://jinja.palletsprojects.com/en/3.1.x/templates/">Jinja2 documentation.</a>.
 
-### Seting variables
+### Setting variables
 You can create a variable for further re-use, e.g.
 
 	{% with careers = ['doctor', 'lawyer', 'accountant'] %}
@@ -282,6 +282,36 @@ You can create a variable for further re-use, e.g.
 	{% endwith %}
 
 the careers array is now avaible inside the {% with %} ... {% endwith %} block.
+
+### Additional functions
+
+#### Random
+
+    This is a random number: {{ random() }}
+
+e.g. This is a random number: 0.694942884614521
+
+### Random Integer
+
+	My favourite number is {{ randint(1, 10) }}
+
+e.g. My favourite number is 6
+
+### Permutations
+
+	Generate all the possible permutations of elements in a list
+
+
+	{% for val in permutations(["red", "green", "blue"], 2) %}
+		{% prompt %}My favourite colours are {{ val|join(' and ') }}{% endprompt %}
+	{% endfor %}
+
+My favourite colours are red and green
+My favourite colours are red and blue
+My favourite colours are green and red
+My favourite colours are green and blue
+My favourite colours are blue and red
+My favourite colours are blue and green
 
 ### Batch count
 

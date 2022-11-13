@@ -1,27 +1,56 @@
-from jinja2 import Environment
-from jinja2.ext import Extension
-import jinja2.nodes
-import random
-from jinja2.exceptions import TemplateSyntaxError
-from pathlib import Path
-from prompts.generators import re_wildcard, re_combinations
-from prompts.generators.promptgenerator import GeneratorException
+from __future__ import annotations
 import logging
+import random
+from itertools import permutations
+
+import jinja2.nodes
+from jinja2 import Environment
+from jinja2.exceptions import TemplateSyntaxError
+from jinja2.ext import Extension
+
+from prompts.generators import re_combinations, re_wildcard
+from prompts.generators.promptgenerator import GeneratorException, PromptGenerator
 
 logger = logging.getLogger(__name__)
 
-class ChoiceExtension(Extension):
+
+class RandomExtension(Extension):
     def __init__(self, environment):
-        super(ChoiceExtension, self).__init__(environment)
-        environment.globals['choice'] = self.choice
+        super().__init__(environment)
+        environment.globals["choice"] = self.choice
+        environment.globals["random"] = self.random
+        environment.globals["randint"] = self.randint
 
     def choice(self, *items):
         return random.choice(items)
 
+    def random(self) -> float:
+        return random.random()
+
+    def randint(self, low: int, high: int) -> int:
+        return random.randint(low, high)
+
+
+class PermutationExtension(Extension):
+    def __init__(self, environment):
+        super().__init__(environment)
+        environment.globals["permutations"] = self.permutation
+
+    def permutation(self, items, low: int, high: int|None = None):
+        vars = []
+        if high is None:
+            high = low
+
+        for i in range(low, high + 1):
+            vars.extend(permutations(items, i))
+
+        return vars
+
+
 class WildcardExtension(Extension):
     def __init__(self, environment):
-        super(WildcardExtension, self).__init__(environment)
-        environment.globals['wildcard'] = self.wildcard
+        super().__init__(environment)
+        environment.globals["wildcard"] = self.wildcard
 
     def wildcard(self, wildcard_name):
         wm = self.environment.wildcard_manager
@@ -32,31 +61,32 @@ class WildcardExtension(Extension):
                 values.extend(self.wildcard(value))
             elif re_combinations.fullmatch(value):
                 val = re_combinations.findall(value)[0]
-                options = val.split('|')
-                choice_ext = ChoiceExtension(self.environment)
+                options = val.split("|")
+                choice_ext = RandomExtension(self.environment)
                 values.append(choice_ext.choice(options))
             else:
                 values.append(value)
         return values
 
+
 class PromptExtension(Extension):
     tags = {"prompt"}
 
     def __init__(self, environment):
-        super(PromptExtension, self).__init__(environment)
+        super().__init__(environment)
         environment.extend(prompt_blocks=[])
-
 
     def parse(self, parser):
         lineno = next(parser.stream).lineno
-        body = parser.parse_statements(['name:endprompt'], drop_needle=True)
-        return jinja2.nodes.CallBlock(self.call_method('_prompt', []), [], [], body).set_lineno(lineno)
+        body = parser.parse_statements(["name:endprompt"], drop_needle=True)
+        return jinja2.nodes.CallBlock(
+            self.call_method("_prompt", []), [], [], body
+        ).set_lineno(lineno)
 
     def _prompt(self, caller):
         self.environment.prompt_blocks.append(caller())
         return caller()
 
-from .promptgenerator import PromptGenerator
 
 class JinjaGenerator(PromptGenerator):
     def __init__(self, template, wildcard_manager=None):
@@ -65,7 +95,9 @@ class JinjaGenerator(PromptGenerator):
 
     def generate(self, num_prompts=1):
         try:
-            env = Environment(extensions=[ChoiceExtension, PromptExtension, WildcardExtension])
+            env = Environment(
+                extensions=[RandomExtension, PromptExtension, WildcardExtension, PermutationExtension]
+            )
             env.wildcard_manager = self._wildcard_manager
 
             prompts = []
