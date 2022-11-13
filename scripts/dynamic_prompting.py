@@ -99,7 +99,8 @@ class Script(scripts.Script):
 
                 use_fixed_seed = gr.Checkbox(label="Fixed seed", value=False, elem_id="is-fixed-seed")
                 write_prompts = gr.Checkbox(label="Write prompts to file", value=False, elem_id="write-prompts")
-                UNLINK_SEED_FROM_PROMPT = gr.Checkbox(label='UNLINK_SEED_FROM_PROMPT', value=True, elem_id="is-wildcardRe")
+                UNLINK_SEED_FROM_PROMPT = gr.Checkbox(label='UNLINK_SEED_FROM_PROMPT', value=True, elem_id="UNLINK_SEED_FROM_PROMPT")
+                keep_seed = gr.Checkbox(label='keep_seed -1', value=True, elem_id="keep_seed")
                 
                 info = gr.HTML(html)
 
@@ -112,7 +113,8 @@ class Script(scripts.Script):
             magic_temp_value,
             use_fixed_seed,
             write_prompts,
-            UNLINK_SEED_FROM_PROMPT
+            UNLINK_SEED_FROM_PROMPT,
+            keep_seed
         ]
 
     def process(
@@ -126,10 +128,13 @@ class Script(scripts.Script):
         magic_temp_value,
         use_fixed_seed,
         write_prompts,
-        UNLINK_SEED_FROM_PROMPT
+        UNLINK_SEED_FROM_PROMPT,
+        keep_seed
     ):
 
         constants.UNLINK_SEED_FROM_PROMPT=UNLINK_SEED_FROM_PROMPT;
+        if keep_seed :
+            p.seed=-1
         
         fix_seed(p)
         
