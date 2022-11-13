@@ -1,11 +1,11 @@
-(female_orgasm)
-(forced_orgasm)
+(female orgasm)
+(forced orgasm)
 angry face
 bokodere
 boring face
-chaotic_evil
-chaotic_good
-chaotic_neutral
+chaotic evil
+chaotic good
+chaotic neutral
 crazy face
 darudere
 disappointed face
@@ -13,23 +13,23 @@ embarrassed face
 giddy face
 gloomy face
 happy face
-lawful_evil
-lawful_good
-lawful_neutral
+lawful evil
+lawful good
+lawful neutral
 light face
 lonely face
 megadere
 menhera
 nervous face
-neutral_evil
-neutral_good
+neutral evil
+neutral good
 sad face
 scary face
 serious face
 shameful face
 sleepy face
 tired face
-true_neutral
+true neutral
 tsundere
 unstable face
 upset face

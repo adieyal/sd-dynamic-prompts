@@ -1,61 +1,61 @@
 Crowns
 ajirogasa
-aviator_cap
+aviator cap
 beanie
 beret
-boater_hat
-bow_hairband
-bowler_hat
-bucket_hat
+boater hat
+bow hairband
+bowler hat
+bucket hat
 circlet
-cloche_hat
-cowboy_hat
+cloche hat
+cowboy hat
 deerstalker
 diadem
-dixie_cup_hat
+dixie cup hat
 fedora
-female_service_cap
-fez_hat
-flat_cap
-flat_top_chef_hat
-frilled_hairband
-garrison_cap
+female service cap
+fez hat
+flat cap
+flat top chef hat
+frilled hairband
+garrison cap
 habit
-hair_ribbon
+hair ribbon
 hairband
 headband
 headdress
-lace-trimmed_hairband
-lace_hairband
-lolita_hairband
-maid_headdress
-mini_crown
-mini_santa_hat
-mini_top_hat
-mini_witch_hat
+lace-trimmed hairband
+lace hairband
+lolita hairband
+maid headdress
+mini crown
+mini santa hat
+mini top hat
+mini witch hat
 mitre
-mob_cap
-mortarboard_collage_graduation_hat
-nurse_cap
-peaked_cap
-pith_helmet
-rice_hat
-sailor_hat
-santa_hat
-spiked_hairband
-straw_hat
-sun_hat
+mob cap
+mortarboard collage graduation hat
+nurse cap
+peaked cap
+pith helmet
+rice hat
+sailor hat
+santa hat
+spiked hairband
+straw hat
+sun hat
 sweatband
-tate_eboshi
+tate eboshi
 tiara
 tiara crown
-top_hat
+top hat
 tricorne
-two-tone_hairband
+two-tone hairband
 veil
-winged_hairband
-witch_hat
-wizard_hat
+winged hairband
+witch hat
+wizard hat
 big red cape
 frills hat
 frills cape

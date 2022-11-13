@@ -1,15 +1,19 @@
 Elf
-Dark_Elf
-High_Elf
+Dark Elf
+High Elf
 Fairy
 Spirit
 Angel
+
 Elf girl
-Dark_Elf girl
-High_Elf girl
+Dark Elf girl
+High Elf girl
 Fairy girl
 Spirit girl
 Angel girl
+
+fox girl
+nobility
 solo
 sheep girl
 cat girl

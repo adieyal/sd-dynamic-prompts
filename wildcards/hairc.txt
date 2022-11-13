@@ -1,20 +1,20 @@
-Blonde_hair
-black_hair
-blue_hair
-brown_hair
-colored_inner_hair
-gradient_hair
-green_hair
-light_green_hair
-multicolored_hair
-orange_hair
-pink_hair
-purple_hair
-rainbow_hair
-red_hair
-sky_blue_hair
-split-color_hair
-streaked_hair
-two-tone_hair
-white_hair
-yellow_hair
+Blonde hair
+black hair
+blue hair
+brown hair
+colored inner hair
+gradient hair
+green hair
+light green hair
+multicolored hair
+orange hair
+pink hair
+purple hair
+rainbow hair
+red hair
+sky blue hair
+split-color hair
+streaked hair
+two-tone hair
+white hair
+yellow hair

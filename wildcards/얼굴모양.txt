@@ -1,8 +1,8 @@
-sharp_face
-pointed_face
-round_face
-egg-shaped_face
-triangular_face
+sharp face
+pointed face
+round face
+egg-shaped face
+triangular face
 blush
 crying
-cried_so_sadly
+cried so sadly

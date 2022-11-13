@@ -1,10 +1,10 @@
-distressed_face
-miserable_face
-suppressed_face
-crying_face
-despair_face
-frustrated_face
-aroused_face
-seduced_face
+distressed face
+miserable face
+suppressed face
+crying face
+despair face
+frustrated face
+aroused face
+seduced face
 surprised face
 sad face

@@ -1,4 +1,19 @@
+Knot hairband
 2 dallsheep horns
+head ribbon
+,
+Tiara-style hairband
+Jeweled fancy hair bands
+Bow hair bands
+Pearl-white beaded hair clips
+Hair Claw Clips
+Metal Juda pins
+Bow ties for hair 
+Bow clips
+Novelty bobby pins
+Embellished Barrette for girls
+Printed hairclips
+deer antlers
 head ribbon
 (hair bell:1.48), (jingle bell:1.22),
 (jingle bell:1.22),
@@ -7,3 +22,4 @@ large red ribbon
 large ribbon
 silver hair ribbon, 
 hair tie
+hair ornament

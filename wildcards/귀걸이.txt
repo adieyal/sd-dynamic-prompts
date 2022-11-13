@@ -1,20 +1,38 @@
-Bell_earrings
+earrings
+Magatama earrings
+Tassel earrings
+Yin yang earrings
+Shell earrings
+Bell earrings
+Crescent earrings
+Pom pom earrings
+Flower earrings
+Crystal earrings
+Strawberry earrings
+Snowflake earrings
+Star earrings
+Spade earrings
+Pill earrings
+Cross earrings
+Heart earrings
+Planet earrings
+Bell earrings
 chain earrings,
-Crescent_earrings
-Cross_earrings
-Crystal_earrings
-Flower_earrings
-Heart_earrings
-Magatama_earrings
-Pill_earrings
-Planet_earrings
-Pom_pom_earrings
-Shell_earrings
-Snowflake_earrings
-Spade_earrings
-Star_earrings
-Strawberry_earrings
-Tassel_earrings
-Yin_yang_earrings
+Crescent earrings
+Cross earrings
+Crystal earrings
+Flower earrings
+Heart earrings
+Magatama earrings
+Pill earrings
+Planet earrings
+Pom pom earrings
+Shell earrings
+Snowflake earrings
+Spade earrings
+Star earrings
+Strawberry earrings
+Tassel earrings
+Yin yang earrings
 chain earrings,
 earrings

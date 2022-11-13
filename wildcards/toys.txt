@@ -1,38 +1,42 @@
-(anal_object_insertion:1)
-(double_dildo:1)
-(double_penetration:1)
-(egg_vibrator:1)
-(object_insertion:1)
-(remote_control_vibrator:1)
-(remote_control_vibrator:1)
-(sex_toy:1)
-(shared_object_insertion:1)
-(vaginal_object_insertion:1)
+(anal object insertion:1)
+(double dildo:1)
+(double penetration:1)
+(egg vibrator:1)
+(object insertion:1)
+(remote control vibrator:1)
+(remote control vibrator:1)
+(sex toy:1)
+(shared object insertion:1)
+(vaginal object insertion:1)
 (vibrator:1)
-(vibrator_under_clothes:1)
-(vibrator_under_panties:1)
-anal_beads
-anal_tail
-bunny_vibrator
-butt_plug
-butt_plug_tail
-butterfly_vibrator
+(vibrator under clothes:1)
+(vibrator under panties:1)
+anal beads
+anal tail
+bunny vibrator
+butt plug
+butt plug tail
+butterfly vibrator
 dildo
-double_dildo
-dragon_dildo
-hitachi_magic_wand
-horse_dildo
-huge_dildo
+double dildo
+dragon dildo
+hitachi magic wand
+horse dildo
+huge dildo
 public vibrator
-spiked_dildo
+spiked dildo
 strap-on
-suction_cup_dildo
+suction cup dildo
 tail plug
 vibrator
-vibrator_in_anus
-vibrator_in_leg_garter
-vibrator_in_thigh_strap
-vibrator_in_thighhighs
-vibrator_under_pantyhose
+vibrator in anus
+vibrator in leg garter
+vibrator in thigh strap
+vibrator in thighhighs
+vibrator under pantyhose
 butt plug tail
 vibrator in *
+[vibrator under panties|vibrator under clothes|remote control vibrator]
+vibrator under panties,vibrator under clothes,remote control vibrator,
+Penetrate
+discreet vibrator

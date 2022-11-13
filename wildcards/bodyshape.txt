@@ -6,8 +6,8 @@ lanky
 ripped
 skinny
 slender
-slender_stomach
+slender stomach
 slenderwaist
 thin
-thin_stomach
+thin stomach
 thinwaist

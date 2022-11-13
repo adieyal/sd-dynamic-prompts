@@ -27,3 +27,4 @@ amber eye
 odd eye
 multicolored eye
 heterochromia
+empty eyes

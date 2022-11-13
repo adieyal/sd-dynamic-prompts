@@ -1,4 +1,4 @@
-absurdly_long_hair
+absurdly long hair
 asymmetrical bangs
 beige hair
 beehive hairdo
@@ -9,7 +9,7 @@ braided bun
 braided ponytail
 crown braid
 curly hair
-disheveled_hair
+disheveled hair
 double bun
 drill hair
 flipped hair
@@ -21,7 +21,7 @@ hair up
 half updo
 hime cut
 long wavy hair
-long_hair
+long hair
 low twintail
 low-braided long hair
 messy hair
@@ -47,4 +47,10 @@ shaggy cut
 hair flutter in the wind
 super long hair
 side blunt bangs
+Straight-across long hair,
+([hime cut|full bangs|blunt bang|Straight-across long hair]:1.2),
+hime cut,full bangs,blunt bang,Straight-across long hair,
 two-tone hair, curvy hair, medium hair
+bangs ,
+bangs,hime cut,long hair,black hair,blue hair,blunt bangs,very long hair,gradient hair,straight hair,gradient hair,
+bangs,hime cut,long hair,blunt bangs,very long hair,straight hair,gradient hair,

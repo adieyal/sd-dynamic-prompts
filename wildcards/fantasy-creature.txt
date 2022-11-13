@@ -18,6 +18,5 @@ Vampire
 Warlock
 Werewolf
 Wizard
-Zombie
 witches
 wizards

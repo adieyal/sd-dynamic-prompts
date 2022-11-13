@@ -1,7 +1,7 @@
-short_leg
-long_leg
-slender_leg
-thin_thighs
-slender_thighs
-thin_calf
-slender_calf
+short leg
+long leg
+slender leg
+thin thighs
+slender thighs
+thin calf
+slender calf

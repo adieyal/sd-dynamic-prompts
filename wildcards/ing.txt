@@ -145,7 +145,7 @@ bra lift
 bra on *
 bra pull
 bra removed
-bra, open
+bra open
 breast awe
 breast biting
 breast conscious

@@ -9,7 +9,7 @@
 abnormal fingers
 Akira Toriyama
 Andy Warhol
-animal_ears
+animal ears
 artist progress
 ass focus
 bad anatomy
@@ -37,7 +37,7 @@ censored
 censorship
 chart
 Chemigram
-chubby_thighs
+chubby thighs
 cloned face
 close up
 comic
@@ -73,7 +73,7 @@ extra navel
 extra nipples
 extra thigh
 extra toe
-extra_legs
+extra legs
 fat girl
 fewer digits
 fused anatomy
@@ -128,7 +128,7 @@ low quality lowres abnormal legs
 low quality lowres anatomical nonsense
 low quality lowres animal
 low quality lowres anime screencap
-low quality lowres anime_screencap
+low quality lowres anime screencap
 low quality lowres artifacts
 low quality lowres artist name
 low quality lowres artist progress
@@ -310,7 +310,7 @@ low quality lowres humpbacked
 low quality lowres incorrect limb
 low quality lowres insects
 low quality lowres interlocked fingers
-low quality lowres interlocked_fingers
+low quality lowres interlocked fingers
 low quality lowres irrational human body
 low quality lowres jpeg
 low quality lowres JPEG artifacts
@@ -383,7 +383,7 @@ low quality lowres more than 2 legs
 low quality lowres more than 2 nipples
 low quality lowres more than 2 thighs
 low quality lowres more than two shoes
-low quality lowres more_than_1_moon
+low quality lowres more than_1_moon
 low quality lowres mosaic
 low quality lowres Multi fingering
 low quality lowres multi fingering
@@ -407,7 +407,7 @@ low quality lowres mutation
 low quality lowres mutation poorly drawn
 low quality lowres mutilated
 low quality lowres nipple penetration
-low quality lowres nipple_penetration
+low quality lowres nipple penetration
 low quality lowres nitroplus
 low quality lowres normal quality
 low quality lowres nsfw
@@ -419,7 +419,7 @@ low quality lowres one hand with less than 5 fingers
 low quality lowres one hand with more than 5 digit
 low quality lowres one hand with more than 5 fingers
 low quality lowres optical illusion
-low quality lowres optical_illusion
+low quality lowres optical illusion
 low quality lowres orc
 low quality lowres organs
 low quality lowres owres
@@ -456,7 +456,7 @@ low quality lowres QR code
 low quality lowres realistic
 low quality lowres reference sheet
 low quality lowres retro artstyle
-low quality lowres retro_artstyle
+low quality lowres retro artstyle
 low quality lowres ryona
 low quality lowres safety knickers
 low quality lowres safety panties
@@ -473,7 +473,7 @@ low quality lowres signature
 low quality lowres simple background
 low quality lowres skeleton
 low quality lowres skeleton girl
-low quality lowres skeleton_girl
+low quality lowres skeleton girl
 low quality lowres sketch
 low quality lowres sonic (series)
 low quality lowres split tentacles
@@ -497,7 +497,7 @@ low quality lowres too long tongue
 low quality lowres too many fingers
 low quality lowres touhou
 low quality lowres traditional media
-low quality lowres traditional_media
+low quality lowres traditional media
 low quality lowres tranny
 low quality lowres trans gender
 low quality lowres transgender
@@ -547,12 +547,12 @@ more than two arms
 more than two hands
 more than two heads
 more than two legs
-more_than_two_arms
-more_than_two_feet
-more_than_two_hands
-more_than_two_legs
-more_than_two_nipples
-more_than_two_skirt
+more than two arms
+more than two feet
+more than two hands
+more than two legs
+more than two nipples
+more than two skirt
 multiful\(arms\)
 multiful\(fingers\)
 multiful\(hands\)
@@ -610,7 +610,7 @@ strange finger
 sunglight
 Tamara Lempicka
 text
-thick_thigh
+thick thigh
 three leg
 three thigh
 too many fingers

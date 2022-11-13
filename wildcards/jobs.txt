@@ -7,7 +7,7 @@ politician
 judge
 student
 hacker
-office_lady
+office lady
 guard
 janitor
 standard-bearer
@@ -24,19 +24,19 @@ waitress
 butler
 cashier
 maid
-Nurse_Maid
-Ladies_Maid
-Military_Maid
-Victoria_Maid
+Nurse Maid
+Ladies Maid
+Military Maid
+Victoria Maid
 CyberMaid
-Steampunk_Maid
-Japanese-style_Maid
-China-style_Maid
-Classic_maid
-Kitchen_Maid
-Faller_Maid
-French_Maid
-House_Maid
+Steampunk Maid
+Japanese-style Maid
+China-style Maid
+Classic maid
+Kitchen Maid
+Faller Maid
+French Maid
+House Maid
 Housekeeper
 scientist
 chemist
@@ -47,18 +47,18 @@ actress
 musician
 painter
 artist
-tennis_player
+tennis player
 teacher
-math_teacher
-science_teacher
-English_teacher
-health_teacher
-school_nurse
+math teacher
+science teacher
+English teacher
+health teacher
+school nurse
 driver
 pilot
-train_attendant
-train_conductor
-flight_attendant
+train attendant
+train conductor
+flight attendant
 doctor
 nurse
 slave
@@ -76,6 +76,6 @@ priest
 monk
 nun
 alchemist
-call_girl
+call girl
 prostitution
-Porno_Actor
+Porno Actor

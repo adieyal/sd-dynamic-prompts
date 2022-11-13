@@ -1,24 +1,24 @@
-Ascot_Tie
-Bolo_Tie
+Ascot Tie
+Bolo Tie
 Cravate
 Jabot
-Stock_Tie
+Stock Tie
 amulet
 animal collar
-bell_choker
+bell choker
 bowtie
-chain_necklace
+chain necklace
 choker
-cross_tie
-flower_necklace
+cross tie
+flower necklace
 lanyard
 locket
 magatama
-neck_ribbon
+neck ribbon
 neckerchief
 necklace
 pendant
 pentacle
-ribbon_choker
+ribbon choker
 scarf
 stole

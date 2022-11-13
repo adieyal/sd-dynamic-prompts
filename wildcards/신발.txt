@@ -1,30 +1,31 @@
-ankle_boots
+ankle boots
 bare foot
-clog_sandals
+clog sandals
 converse
-cross-laced_footwear
-cross-laced_sandals
+cross-laced footwear
+cross-laced sandals
 flats
 flip-flops
-footwear_ribbon
+footwear ribbon
 geta
-high_heel_boots
-high_heels
-high_tops
-kiltie_loafers
-knee_boots
-lace-up_boots
+high heel boots
+high heels
+high tops
+kiltie loafers
+knee boots
+lace-up boots
 loafers
-mary_janes
+mary janes
 okobo
-platform_footwear
-pointy_footwear
+platform footwear
+pointy footwear
 pumps
 sandals
 sneakers
-thigh_boots
-toeless_footwear
+thigh boots
+toeless footwear
 uwabaki
-wedge_heels
-winged_footwear
+wedge heels
+winged footwear
 zouri
+{bare foot|high heels|ballet shoes|Ballet heel}

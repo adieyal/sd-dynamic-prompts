@@ -1,49 +1,99 @@
-(strangling:1)
 (1 gallow:1),lock
-(1 noose:1),lock
-(Noose strangled girl's neck:1)
-(garrotte:1)
-(suicide:1)
-(hanged:1)
-(hanging:1)
-(suffocation:1)
-(asphyxiation:1)
-(strappado:1)
-(choking:1)
-(bind:1)
-(bound:1)
-(bdsm:1)
-(bondage:1)
-(dog Collar)
-(chain:1)
-(handcuffs:1)
-(choker:1)
-(hanged neck:1)
-(hanging neck:1)
-(neck hanged:1)
-(neck hanging:1)
-(bound_legs:1)
-(bound_arms:1)
-(bound_feet:1)
-(arms_behind_back:1)
-(tied_up_nonsexual:1)
-(bound_ankles:1)
-(ribbon_bondage:1)
-(bound_calves:1)
-(bound_knees:1)
-(bound_thighs:1)
-(bound_torso:1)
-(bound_wrists:1)
-captured
-fetters
-forced
-specimen
-suspension
-frogtie
-hogtie
-box_tie
-Choking_on_object
-Autoerotic_asphyxiation
-skewer,
+(1 gallow:1.3),
 (1 gallow:1.3),(1 noose:1.3),
 (1 gallow:1.3),(1 noose:1.3),lock
+(1 noose:1),lock
+(1 noose:1.3),
+(arms behind back:1)
+(asphyxiation:1)
+(bdsm:1)
+(bind:1)
+(bondage:1)
+(bound ankles:1)
+(bound arms:1)
+(bound calves:1)
+(bound feet:1)
+(bound knees:1)
+(bound legs:1)
+(bound thighs:1)
+(bound torso:1)
+(bound wrists:1)
+(bound:1)
+(chain:1)
+(choking:1)
+(dog Collar)
+(handcuffs:1)
+(hanged neck:1)
+(hanged:1)
+(hanged:1.2),
+(hanging neck:1)
+(hanging:1)
+(hanging:1.2),
+(neck hanged:1)
+(neck hanging:1)
+(Noose strangled girl's neck:1)
+(Noose strangled girl's neck:1.3),
+(ribbon bondage:1)
+(skewer:1.3),
+(strangling:1)
+(strangling:1.3),
+(strappado:1)
+(suffocation:1)
+(suicide:1)
+(suicide:1.3),
+(tied up nonsexual:1)
+([1 gallow|1 noose]:1.3)
+1 gallow
+1 noose
+arms behind back
+asphyxiation
+Autoerotic asphyxiation
+bdsm
+bind
+bondage
+bound
+bound ankles
+bound arms
+bound calves
+bound feet
+bound knees
+bound legs
+bound thighs
+bound torso
+bound wrists
+box tie
+captured
+chain
+choking
+Choking on object
+cuffs
+dog Collar
+fetters
+forced
+frogtie
+handcuffs
+hanged
+hanged neck
+hanging
+hanging neck
+hogtie
+lock
+mechanical restraints
+neck hanged
+neck hanging
+Noose strangled girl's neck
+ribbon bondage
+rope around girl's neck
+rope to neck,
+separated arms
+separated legs
+separated wrists
+shackles
+skewer,
+specimen
+strangling
+strappado
+suffocation
+suicide
+suspension
+tied up nonsexual

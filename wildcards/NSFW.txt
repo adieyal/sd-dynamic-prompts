@@ -6,3 +6,11 @@
 {0-1$$excessive} __sex__
 {0-1$$excessive} __masturbation__
 {0-1$$excessive} __xxx__
+,__insertion__
+,__pregnant__
+,__tentacles__
+,__toys-insert__
+,__bind__
+,__sex__
+,__masturbation__
+{1-7$__insertion__|__pregnant__|__tentacles__|__toys-insert_|__bind__|__sex__|__masturbation__}

@@ -1,16 +1,20 @@
+back focus
 cowboy shot
+Dutch angle
+eye contact
 face through thighs
+face to below knee
+feet out of frame
 front focus
 full body
 full shot
 fullbody
+girl focus
 italian shot
+out of frame
 solo focus
 upper body
+very wide shot
 whole body
 wide shot
-Dutch angle
-feet out of frame
-face to below knee
-full body
-whole body
+{full body|full shot|fullbody}

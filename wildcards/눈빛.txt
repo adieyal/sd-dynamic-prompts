@@ -1,8 +1,8 @@
-blanked_eyes
-bloodshot_pupils
-dilated_pupils
-empty_eyes
-flaming_pupils
-glowing_pupils
-sconstricted_pupils
+blanked eyes
+bloodshot pupils
+dilated pupils
+empty eyes
+flaming pupils
+glowing pupils
+sconstricted pupils
 blank stare

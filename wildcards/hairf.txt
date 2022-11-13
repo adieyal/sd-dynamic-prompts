@@ -1,9 +1,16 @@
-floating hair
-hair between eyes
-swept bangs
-blunt bangs
-hair over one eye
-hair over eyes
+
 asymmetrical bangs
 bangs
+blunt bangs
+floating hair
+forehead
+full bangs
+hair between eyes
+hair over eyes
+hair over one eye
+hime cut
+hime cut,full bangs,blunt bang,
 long bangs
+swept bangs
+[hime cut|full bangs|blunt bang],
+{blunt bang|hime cut}
