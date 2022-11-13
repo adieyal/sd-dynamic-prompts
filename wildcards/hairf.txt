@@ -9,8 +9,8 @@ hair between eyes
 hair over eyes
 hair over one eye
 hime cut
-hime cut,full bangs,blunt bang,
+hime cut,full bangs,blunt bang
 long bangs
 swept bangs
-[hime cut|full bangs|blunt bang],
+[hime cut|full bangs|blunt bang]
 {blunt bang|hime cut}

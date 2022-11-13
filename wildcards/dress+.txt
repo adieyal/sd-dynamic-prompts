@@ -3,4 +3,5 @@
 (skirt lift:1)
 (clothes lift:1)
 (torn clothes:1)
-(cleavage_skirt:1),(cleavage_dress:1),({clothes lift|skirt lift}:1),
+(cleavage_skirt:1),(cleavage_dress:1),({clothes lift|skirt lift}:1)
+camisole

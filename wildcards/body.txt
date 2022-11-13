@@ -3,7 +3,7 @@ __body-poor__
 __bodyshape__
 __body-short__
 [skinny|slender|thin stomach|slender stomach|thinwaist|slenderwaist]
-,skinny,slender,thin stomach,slender stomach,thinwaist,slenderwaist,
+skinny,slender,thin stomach,slender stomach,thinwaist,slenderwaist
 skinny
 slender
 thin stomach

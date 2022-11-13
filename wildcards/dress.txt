@@ -1,19 +1,19 @@
-ahri clothes
-bare wet see-through garter belt, wedding dress, 
 (frilled dress:1)
-(frilled santa costume:1.63), (red beret:1.16), (off-shoulder dress:1.05), gloves, (white pantyhose:1.1),
+(frilled santa costume:1.63),(red beret:1.16),(off-shoulder dress:1.05),gloves,(white pantyhose:1.1)
 (gothic dress:1)
 (gothic lolita:1)
 (gothic:1)
 (lolita fashion:1)
-(magical girl costume:1.2), 
+(magical girl costume:1.2)
+(nsfw realistic dress:1.22),(tiara:1.1)
 (school uniform:1)
 (victorian:1)
 (wedding dress:1)
 (witch:1)
-([cleavage skirt|cleavage dress|bare shoulder]:1.1),
+([cleavage skirt|cleavage dress|bare shoulder]:1.1)
 a-line dress
 actress
+ahri clothes
 ahri clothes
 alchemist
 ao dai
@@ -24,15 +24,18 @@ backless dress
 ballgown
 bandage dress
 bardot dress
+bare shoulder
+bare wet see-through garter belt,wedding dress
 bartender
 bathrobe
 bell-sleeve dress
 bikini
 bikini skirt
-black clothes
-black school uniform
 black china long dress
+black clothes
 black long dress
+black pantyhose
+black school uniform
 black top hanbok long coat
 blazer
 blazer dress
@@ -52,12 +55,12 @@ cardigan vest
 cashier
 cassock
 casual one-piece swimsuit
-cheongsam
 chanchanko
 changpao
 cheerleader
 chef
 chemist
+cheongsam
 chest sarashi
 china dress
 china long dress
@@ -69,7 +72,9 @@ chinese dress
 classic maid
 coat
 coat dress
+coat
 cocktail dress
+collared dress
 collared dress
 collared shirt
 compression shirt
@@ -77,6 +82,7 @@ conductor
 corset
 crop top
 cropped hoodie
+cropped jacket
 cropped jacket
 croupier
 cybermade
@@ -113,13 +119,14 @@ frilled sleeves
 funeral dress
 furisode
 geisha
-gloves, black yellow coat, bandaged wrist, torn clothes,earrings, floating crown, star halo,(goddess:1.05),
+gloves,black yellow coat,bandaged wrist,torn clothes,earrings,floating crown,star halo,(goddess:1.05)
 golf uniform
 Gothic and Lolita
 gothic dress
 gothic lolita
 gown
 greek dress
+green jacket
 guard
 habit
 hacker
@@ -146,6 +153,7 @@ house maid
 housekeeper
 idol
 impossible dress
+jacket
 jacket
 janitor
 japanese-style 
@@ -177,9 +185,11 @@ loincloth skirt
 lolita fashion
 long coat
 long dress
-long Hoodie,
+long dress
+long Hoodie
 long skirt
 long sleeve dress
+long sleeves
 lowleg bikini
 lowleg skirt
 maid
@@ -209,6 +219,7 @@ naked cloak
 naked coat
 naked hoodie
 naked jacket
+naked leaf dress
 naked overalls
 naked scarf
 naked sheet
@@ -223,17 +234,22 @@ nuss
 o-ring bikini
 o-ring bottom
 o-ring top
+off shoulder
 off-shoulder dress
 off-shoulder shirt
 office lady
 officer
 one shoulder dress
 one-piece swimsuit
+open clothes
+open coat
+open jacket
 open robe
 overall skirt
 overcoat
 pajamas
 pannier skirt
+pantyhose
 peacoat
 pencil dress
 peplum dress
@@ -253,11 +269,11 @@ princess silhouette dress
 print hoodie
 prisoner
 prostitution
-puffy long sleeves, no pants, oversized hoodie, (clothes cover thigh), sleeves covering hands
-puffy long sleeves, no pants, oversized button-up shirt, (clothes cover thigh:1.3), sleeves covering hands
-puffy long sleeves, no pants, oversized sweat shirt, (clothes cover thigh:1.3), sleeves covering hands dress
-puffy long sleeves, no pants, oversized sweat shirt, (clothes cover thigh:1.3), sleeves covering handsqipao dress
-puffy long sleeves, no pants, oversized T-shirt, (clothes cover thigh:1.3), sleeves covering hands
+puffy long sleeves,no pants,oversized button-up shirt,(clothes cover thigh:1.3),sleeves covering hands
+puffy long sleeves,no pants,oversized hoodie,(clothes cover thigh),sleeves covering hands
+puffy long sleeves,no pants,oversized sweat shirt,(clothes cover thigh:1.3),sleeves covering hands dress
+puffy long sleeves,no pants,oversized sweat shirt,(clothes cover thigh:1.3),sleeves covering handsqipao dress
+puffy long sleeves,no pants,oversized T-shirt,(clothes cover thigh:1.3),sleeves covering hands
 pullover
 qipao dress
 queen
@@ -266,6 +282,7 @@ ribbed sweater
 ribbon-trimmed dress
 robe
 royal dress
+royal dress,(nsfw realistic dress:1.22),(tiara:1.1)
 safari jacket
 sailor
 sailor (naval uniform)
@@ -277,8 +294,10 @@ school uniform
 science teacher
 scientist
 see-through
+see-through and wet
 see-through dress
 see-through skirt
+see-through
 serafuku (sailor uniform)
 sheath dress
 shepherd
@@ -287,7 +306,7 @@ shirt
 shirt dress
 short dress
 short kimono
-short pants,
+short pants
 short skirt
 shorts under skirt
 shoulder cape
@@ -310,7 +329,7 @@ standard-bearer
 Steampunk 
 steampunk maid
 strapless dress
-street wear,stylish, fashionable
+street wear,stylish,fashionable
 string bikini
 striped hoodie
 student
@@ -354,6 +373,8 @@ underwear
 underwear only
 undone sarashi
 unusual pupils
+veil
+veil dress
 vest
 victoria maid
 victorian
@@ -364,8 +385,12 @@ waiter
 waitress
 waitress clothes
 wedding dress
+wet clothes
 wet school uniform
-white dress, concert hall, white gloves, (pink skirt:1.1), short sleeves, white dress, white Frill, pink ribbon
+white dress
+white dress,concert hall,white gloves,(pink skirt:1.1),short sleeves,white dress,white Frill,pink ribbon
+white garter belt,wedding dress,Veil
+winter outfit,white beret,skirt under coat,(frilled plaid pleated skirt:1.1),gloves,(white pantyhose:1.1),shoes
 witch
 wizard
 wrap dress
@@ -375,50 +400,26 @@ yukata
 [gothic dress:corset:0.8]
 [gothic lolita dress:corset:0.8]
 [latex dress:school uniform:0.3]
+[latex dress:school uniform:0.3]
+[latex school uniform:binding rope:0.4]
 [latex school uniform:binding rope:0.4]
 [miko costume|school uniform]
+[miko costume|school uniform]
+[military uniform|wedding dress]
 [military uniform|wedding dress]
 [school uniform:corset:0.8]
+[school uniform:wedding dress:0.1]
 [school uniform:wedding dress:0.1]
 [victorian dress:corset:0.8]
 [victorian girl:corset:0.8]
 [wedding dress:corset:0.8]
 [wedding dress:military uniform:0.2]
+[wedding dress:military uniform:0.2]
 [wedding dress|corset]
 [wedding dress|leotard]
-[wedding dress:military uniform:0.2]
-[military uniform|wedding dress]
-[witch:corset:0.8]
-[__dress__|__shoulder__|cleavage skirt|cleavage dress],
-{vietnamese dress|sweater dress|short kimono|kimono|see-through|santa dress|qipao dress|priest|nun|maid|corset|china-style|witch|wedding dress|frilled dress|gothic lolita|gothic dress|lolita fashion|school uniform|victorian}
-white garter belt,wedding dress,Veil
 [white lavish ceremonial dress with jewelry:white clergy dress:0.3] 
-[school uniform:wedding dress:0.1]
-[miko costume|school uniform]
-[latex school uniform:binding rope:0.4]
-[latex dress:school uniform:0.3]
-veil
-veil dress
-white dress,
-collared dress,
-long dress,
-open clothes,
-coat,
-open coat,
-jacket,
-green jacket,
-open jacket,
-cropped jacket,
-long sleeves,
-see-through,
-black pantyhose,
-pantyhose,
-bare shoulder,
-off shoulder,
-naked leaf dress
 [witch:corset:0.8]
-royal dress, (nsfw realistic dress:1.22), (tiara:1.1)
-(nsfw realistic dress:1.22), (tiara:1.1)
-winter outfit, white beret, skirt under coat, (frilled plaid pleated skirt:1.1), gloves, (white pantyhose:1.1), shoes,
-see-through and wet
-wet clothes
+[witch:corset:0.8]
+[__dress__|__shoulder__|cleavage skirt|cleavage dress]
+{vietnamese dress|sweater dress|short kimono|kimono|see-through|santa dress|qipao dress|priest|nun|maid|corset|china-style|witch|wedding dress|frilled dress|gothic lolita|gothic dress|lolita fashion|school uniform|victorian}
+alternate costume

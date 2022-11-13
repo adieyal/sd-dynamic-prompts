@@ -18,4 +18,4 @@ very wide shot
 whole body
 wide shot
 {full body|full shot|fullbody}
-full body,full shot,fullbody,
+full body,full shot,fullbody
