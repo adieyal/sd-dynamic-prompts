@@ -36,3 +36,4 @@
 0.17.1 Minor bug fix checking type of combinatorial batches
 0.18.0 Added Jinja2 templates as an experimental feature
 0.19.0 Added a checkbox to enable unlinking seeds from prompts. This feature has been available for sometime but there hasn't been a checkbox in the ui to enable it.
+0.19.1 Added missing install.py to install Jinja2
