@@ -215,6 +215,62 @@ You can control the maximum prompt length with the **Max magic prompt length** s
 Check the write prompts to file checkbox in order to create a file with all generated prompts. The generated file is a slugified version of the prompt and can be found in the same directory as the generated images, e.g. outputs/txt2img-images
 <img src="images/write_prompts.png"/>
 
+## Jinja2 templates
+Jinja2 templates is an experimental feature that enables you to define prompts imperatively. This is an advanced feature and is only recommended for users who are comfortable writing scripts.
+
+To enable, open the advanced accordion and select __Enable Jinja2 templates__.
+<img src="images/jinja_templates.png">
+Jinja2 templates is an experimental feature for advanced template generation. It is not recommended for general use unless you are comfortable with writing scripts.<br><br>
+
+Here are some examples of what you can do with Jinja2 templates
+### Literals
+	Literal strings work as expected:
+
+    I love red roses
+
+### Random choices
+Similar to the standard `{A|B|C}` syntax
+
+    I love {{ choice('red', 'blue', 'green') }} roses
+    
+This will create one prompt and randomly choose one of the three colors.
+
+### Iterations
+
+    {% for colour in ['red', 'blue', 'green'] %}
+        {% prompt %}I love {{ colour }} roses{% endprompt %}
+    {% endfor %}
+
+This will produce three prompts, one for each color. The prompt tag is used to mark the text that will be used as the prompt. If no prompt tag is present then only one prompt is assumed
+
+### Wildcards
+Similar to the standard wildcard syntax
+
+    {% for colour in wildcard("__colours__") %}
+        {% prompt %}I love {{ colour }} roses{% endprompt %}
+    {% endfor %}
+
+This will produce one prompt for each colour in the wildcard.txt file.
+
+### Conditionals
+
+    {% for colour in ["red", "blue", "green"] %}
+        {% if colour == "red"}
+            {% prompt %}I love {{ colour }} roses{% endprompt %}
+        {% else %}
+            {% prompt %}I hate {{ colour }} roses{% endprompt %}
+        {% endif %}
+    {% endfor %}
+
+This will produce the following prompts:
+	- I love red roses
+	- I hate blue roses
+	- I hate green roses
+
+These are trivial examples but the Jinja2 template language is very expressive. You can use it to develop sophisticated prompt templates. For more information see the <a href="https://jinja.palletsprojects.com/en/3.1.x/templates/">Jinja2 documentation.</a>.
+
+If you are using these templates, please let me know if they are useful.
+
 ## WILDCARD_DIR
 The extension looks for wildcard files in WILDCARD_DIR. The default location is /path/to/stable-diffusion-webui/extensions/sd-dynamic-prompts/wildcards. It can also be manually defined in the main webui config.json under wildcard_dir. When in doubt, the help text for the extension in the webui lists the full path to WILDCARD_DIR
 

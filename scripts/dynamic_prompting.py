@@ -20,7 +20,11 @@ from prompts.generators import (
     CombinatorialPromptGenerator,
     MagicPromptGenerator,
     BatchedCombinatorialPromptGenerator,
+    PromptGenerator
 )
+
+from prompts.generators.jinjagenerator import JinjaGenerator
+from prompts.generators.promptgenerator import GeneratorException
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -33,11 +37,12 @@ if wildcard_dir is None:
     WILDCARD_DIR = base_dir / "wildcards"
 else:
     WILDCARD_DIR = Path(wildcard_dir)
-    
-VERSION = "0.17.1"
+
+VERSION = "0.18.0"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
+
 
 def slugify(value, allow_unicode=False):
     """
@@ -49,13 +54,18 @@ def slugify(value, allow_unicode=False):
     """
     value = str(value)
     if allow_unicode:
-        value = unicodedata.normalize('NFKC', value)
+        value = unicodedata.normalize("NFKC", value)
     else:
-        value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode('ascii')
-    value = re.sub(r'[^\w\s-]', '', value.lower())
-    return re.sub(r'[-\s]+', '-', value).strip('-_')
+        value = (
+            unicodedata.normalize("NFKD", value)
+            .encode("ascii", "ignore")
+            .decode("ascii")
+        )
+    value = re.sub(r"[^\w\s-]", "", value.lower())
+    return re.sub(r"[-\s]+", "-", value).strip("-_")
 
-def get_unique_path(directory: Path, original_filename) -> Path:    
+
+def get_unique_path(directory: Path, original_filename) -> Path:
     filename = original_filename
     for i in range(1000):
         path = (directory / filename).with_suffix(".txt")
@@ -64,6 +74,33 @@ def get_unique_path(directory: Path, original_filename) -> Path:
         filename = f"{slugify(original_filename)}-{math.floor(random.random() * 1000)}"
 
     raise Exception("Failed to find unique path")
+
+
+def old_generation(
+    original_prompt: str,
+    is_combinatorial: bool,
+    combinatorial_batches: int,
+    original_seed: int,
+
+) -> PromptGenerator:
+    if is_combinatorial:
+        prompt_generator = CombinatorialPromptGenerator(
+            wildcard_manager, original_prompt
+        )
+        prompt_generator = BatchedCombinatorialPromptGenerator(
+            prompt_generator, combinatorial_batches
+        )
+    else:
+        prompt_generator = RandomPromptGenerator(
+            wildcard_manager, original_prompt, original_seed
+        )
+
+    return prompt_generator
+    
+
+def new_generation(prompt) -> PromptGenerator:
+    generator = JinjaGenerator(prompt, wildcard_manager)
+    return generator
 
 class Script(scripts.Script):
     def title(self):
@@ -82,19 +119,59 @@ class Script(scripts.Script):
             wildcard_html=wildcard_html, WILDCARD_DIR=WILDCARD_DIR
         )
 
+        jinja_html_path = base_dir / "jinja_help.html"
+        jinja_help = jinja_html_path.open().read()
+
         with gr.Group():
             with gr.Accordion("Dynamic Prompts", open=False):
-                is_combinatorial = gr.Checkbox(label="Combinatorial generation", value=False, elem_id="is-combinatorial")
-                combinatorial_batches = gr.Slider(label="Combinatorial batches", min=1, max=10, step=1, value=1, elem_id="combinatorial-times")
+                is_combinatorial = gr.Checkbox(
+                    label="Combinatorial generation",
+                    value=False,
+                    elem_id="is-combinatorial",
+                )
+                combinatorial_batches = gr.Slider(
+                    label="Combinatorial batches",
+                    min=1,
+                    max=10,
+                    step=1,
+                    value=1,
+                    elem_id="combinatorial-times",
+                )
 
-                is_magic_prompt = gr.Checkbox(label="Magic prompt", value=False, elem_id="is-magicprompt")
-                magic_prompt_length = gr.Slider(label="Max magic prompt length", value=100, minimum=1, maximum=300, step=10)
-                magic_temp_value = gr.Slider(label="Magic prompt creativity", value=0.7, minimum=0.1, maximum=3.0, step=0.10)
+                is_magic_prompt = gr.Checkbox(
+                    label="Magic prompt", value=False, elem_id="is-magicprompt"
+                )
+                magic_prompt_length = gr.Slider(
+                    label="Max magic prompt length",
+                    value=100,
+                    minimum=1,
+                    maximum=300,
+                    step=10,
+                )
+                magic_temp_value = gr.Slider(
+                    label="Magic prompt creativity",
+                    value=0.7,
+                    minimum=0.1,
+                    maximum=3.0,
+                    step=0.10,
+                )
 
-                use_fixed_seed = gr.Checkbox(label="Fixed seed", value=False, elem_id="is-fixed-seed")
-                write_prompts = gr.Checkbox(label="Write prompts to file", value=False, elem_id="write-prompts")
+                use_fixed_seed = gr.Checkbox(
+                    label="Fixed seed", value=False, elem_id="is-fixed-seed"
+                )
+                write_prompts = gr.Checkbox(
+                    label="Write prompts to file", value=False, elem_id="write-prompts"
+                )
 
                 info = gr.HTML(html)
+
+                with gr.Group():
+                    with gr.Accordion("Advanced options", open=False):
+                        enable_jinja_templates = gr.Checkbox(
+                            label="Enable Jinja2 templates", value=False, elem_id="enable-jinja-templates"
+                        )
+
+                        jinja_info = gr.HTML(jinja_help)
 
         return [
             info,
@@ -104,7 +181,8 @@ class Script(scripts.Script):
             magic_prompt_length,
             magic_temp_value,
             use_fixed_seed,
-            write_prompts
+            write_prompts,
+            enable_jinja_templates,
         ]
 
     def process(
@@ -118,11 +196,13 @@ class Script(scripts.Script):
         magic_temp_value,
         use_fixed_seed,
         write_prompts,
+        enable_jinja_templates,
     ):
         fix_seed(p)
 
         original_prompt = p.prompt[0] if type(p.prompt) == list else p.prompt
         original_seed = p.seed
+        num_images = p.n_iter * p.batch_size
 
         try:
             combinatorial_batches = int(combinatorial_batches)
@@ -131,25 +211,31 @@ class Script(scripts.Script):
         except (ValueError, TypeError):
             combinatorial_batches = 1
 
-        if is_combinatorial:
-            prompt_generator = CombinatorialPromptGenerator(
-                wildcard_manager, original_prompt
-            )
-            prompt_generator = BatchedCombinatorialPromptGenerator(
-                prompt_generator, combinatorial_batches
-            )
-        else:
-            prompt_generator = RandomPromptGenerator(
-                wildcard_manager, original_prompt, original_seed
-            )
+        try:
+            
+            if enable_jinja_templates:
+                generator = new_generation(original_prompt)
+                
+            else:
+                generator = old_generation(
+                    original_prompt,
+                    is_combinatorial,
+                    combinatorial_batches,
+                    original_seed,
+                )
 
-        if is_magic_prompt:
-            prompt_generator = MagicPromptGenerator(
-                prompt_generator, magic_prompt_length, magic_temp_value
-            )
+            if is_magic_prompt:
+                generator = MagicPromptGenerator(
+                    generator, magic_prompt_length, magic_temp_value
+                )
 
-        num_images = p.n_iter * p.batch_size
-        all_prompts = prompt_generator.generate(num_images)
+            all_prompts = generator.generate(num_images)
+            
+        except GeneratorException as e:
+            logger.exception(e)
+            all_prompts = [str(e)]
+             
+
         updated_count = len(all_prompts)
         p.n_iter = math.ceil(updated_count / p.batch_size)
 
@@ -167,7 +253,9 @@ class Script(scripts.Script):
 
         try:
             if write_prompts:
-                prompt_filename = get_unique_path(Path(p.outpath_samples), slugify(original_prompt))
+                prompt_filename = get_unique_path(
+                    Path(p.outpath_samples), slugify(original_prompt)
+                )
                 prompt_filename.write_text("\n".join(all_prompts))
         except Exception as e:
             logger.error(f"Failed to write prompts to file: {e}")

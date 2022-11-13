@@ -34,3 +34,4 @@
 0.16.0 Added a checkbox to enable writing all generated prompts to a text file.
 0.17.0 Dynamic prompts is now an AlwaysVisible script. It now plays nicely with other scripts like X/Y plot. Big thanks to @stysmmaker
 0.17.1 Minor bug fix checking type of combinatorial batches
+0.18.0 Added Jinja2 templates as an experimental feature

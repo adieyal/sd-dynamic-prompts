@@ -1,0 +1,57 @@
+<div class="dynamic-prompting">
+    Jinja2 templates is an experimental feature for advanced template generation. It is not recommended for general use unless you are comfortable with writing scripts.<br><br>
+
+    <h3>Literals</h3>
+    <pre><code class="codeblock">
+    I love red roses
+    </code></pre>
+
+    <h3>Random choices</h3>
+    <pre><code class="codeblock">
+    I love {{ choice('red', 'blue', 'green') }} roses
+        </code></pre>
+    This will randomly choose one of the three colors.<br><br>
+
+    <h3>Iterations</h3>
+    <pre>
+        <code class="codeblock">
+    {% for colour in ['red', 'blue', 'green'] %}
+        {% prompt %}I love {{ colour }} roses{% endprompt %}
+    {% endfor %}
+        </code>
+    </pre>
+    This will produce three prompts, one for each color. The prompt tag is used to mark the text that will be used as the prompt. If no prompt tag is present then only one prompt is assumed<br><br>
+
+    <h3>Wildcards</h3>
+    <pre>
+        <code class="codeblock">
+    {% for colour in wildcard("__colours__") %}
+        {% prompt %}I love {{ colour }} roses{% endprompt %}
+    {% endfor %}
+        </code>
+    </pre>
+    This will produce one prompt for each colour in the wildcard.txt file. <br><br>
+
+    <h3>Conditionals</h3>
+    <pre>
+        <code class="codeblock">
+    {% for colour in ["red", "blue", "green"] %}
+        {% if colour == "red"}
+            {% prompt %}I love {{ colour }} roses{% endprompt %}
+        {% else %}
+            {% prompt %}I hate {{ colour }} roses{% endprompt %}
+        {% endif %}
+    {% endfor %}
+        </code>
+    </pre>
+    This will produce the following prompts:
+    <ul>
+        <li>I love red roses</li>
+        <li>I hate blue roses</li>
+        <li>I hate green roses</li>
+    </ul><br>
+
+    Jinja2 templates are based on the Jinja2 template engine. For more information see the <a href="https://jinja.palletsprojects.com/en/3.1.x/templates/">Jinja2 documentation.</a>.<br>
+
+    If you are using these templates, please let me know if they are useful.
+</div>

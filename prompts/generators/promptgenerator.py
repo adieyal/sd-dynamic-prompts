@@ -8,3 +8,5 @@ class PromptGenerator(ABC):
         pass
 
 
+class GeneratorException(Exception):
+    pass
