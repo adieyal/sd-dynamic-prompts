@@ -30,6 +30,18 @@ class TestJinjaGenerator:
             assert prompts[1] == "This is a blue rose"
             assert prompts[2] == "This is a red rose"
 
+    def test_weighted_choice(self):
+        with patch('random.choices') as mock_choice:
+            mock_choice.side_effect = "yellow"
+            template = """My favourite colour is {{ weighted_choice(("pink", 0.2), ("yellow", 0.3), ("black", 0.4), ("purple", 0.1)) }}"""
+
+            generator = JinjaGenerator(template)
+            prompts = generator.generate()
+
+            assert len(prompts) == 1
+            assert prompts[0] == "My favourite colour is yellow"
+            
+
     def test_two_choice_prompt(self):
         with patch('random.choice') as mock_choice:
             mock_choice.side_effect = ["red", "triangle", "blue", "square"]
