@@ -34,3 +34,17 @@
 0.16.0 Added a checkbox to enable writing all generated prompts to a text file.
 0.17.0 Dynamic prompts is now an AlwaysVisible script. It now plays nicely with other scripts like X/Y plot. Big thanks to @stysmmaker
 0.17.1 Minor bug fix checking type of combinatorial batches
+0.18.0 Added Jinja2 templates as an experimental feature
+0.19.0 Added a checkbox to enable unlinking seeds from prompts. This feature has been available for sometime but there hasn't been a checkbox in the ui to enable it.
+0.19.1 Added missing install.py to install Jinja2
+0.19.2 Fixed bug in MagicPrompt that broke prompts with pipes, https://github.com/adieyal/sd-dynamic-prompts/issues/54
+0.20.0 Added random, randint, and permutations jinja extensions
+0.20.1 Using launch.run_pip instead of subprocess to install dependencies
+0.21.0 Added a checkbox to disable dynamic prompts if needed
+0.22.0 Added a weighted choice function to jinja2 templates
+0.23.0 Added I'm feeling lucky for the ultimate in lazy prompting
+0.23.1 Fixed a bug that didn't limit the number of prompts when using combinatorial generation and large wildcard files
+0.24.0 I'm feeling lucky now using the prompt as a search string.
+0.24.1 Re-wrote combinatorial generation to use a queue instead of recursion
+0.24.2 Minor bug fix in weighted choice jinja2 extension
+0.24.3 Added shuffle to combinatorial generation so that a different subset of prompts is generated every time if the total number of prompts is greater than Batch size * Batch count

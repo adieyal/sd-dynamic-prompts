@@ -3,3 +3,4 @@
 **/nppBackup
 **/.tmp.drivedownload
 **/.tmp.driveupload
+.env

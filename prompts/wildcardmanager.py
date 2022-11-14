@@ -33,6 +33,7 @@ class WildcardManager:
         return list(files)
     
     def match_files(self, wildcard:str) -> list[WildcardFile]:
+        wildcard = wildcard.strip("__")
         return [
             WildcardFile(path) for path in self._path.rglob(f"{wildcard}.{constants.WILDCARD_SUFFIX}")
         ]
@@ -46,6 +47,10 @@ class WildcardManager:
         wildcards = [self.path_to_wilcard(f) for f in files]
 
         return wildcards
+
+    def get_all_values(self, wildcard:str) -> list[str]:
+        files = self.match_files(wildcard)
+        return list(set().union(*[f.get_wildcards() for f in files]))
 
     def get_wildcard_hierarchy(self, path: Path|None=None):
         if path is None:

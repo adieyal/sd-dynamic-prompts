@@ -18,7 +18,7 @@ class RandomPromptGenerator(PromptGenerator):
         #logger.info(f"RandomPromptGenerator.__init__ ;")
         print(f"RandomPromptGenerator.__init__ ;")
         self._wildcard_manager = wildcard_manager
-        # Temporarily adding this here until I find a better place for it
+
         if constants.UNLINK_SEED_FROM_PROMPT:
             self._random = random
         else:

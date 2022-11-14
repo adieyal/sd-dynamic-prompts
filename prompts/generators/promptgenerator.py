@@ -4,7 +4,9 @@ import re
 
 class PromptGenerator(ABC):
     @abstractmethod
-    def generate(self, *args, **kwargs) -> str:
+    def generate(self, *args, **kwargs) -> list[str]:
         pass
 
 
+class GeneratorException(Exception):
+    pass
