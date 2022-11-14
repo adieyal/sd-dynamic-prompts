@@ -1,3 +1,3 @@
-import subprocess
+import launch
 
-subprocess.run(['pip', 'install', 'Jinja2==3.1.2'])
+launch.run_pip("install Jinja2==3.1.2", desc='Installing Jinja2==3.1.2')
