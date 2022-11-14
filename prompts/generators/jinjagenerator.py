@@ -27,7 +27,7 @@ class RandomExtension(Extension):
 
     def weighted_choice(self, *items):
         population, weights = zip(*items)
-        return random.choices(population, weights=weights)
+        return random.choices(population, weights=weights)[0]
 
     def random(self) -> float:
         return random.random()
