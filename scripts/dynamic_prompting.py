@@ -40,7 +40,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "0.24.3"
+VERSION = "0.24.4"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -171,7 +171,8 @@ class Script(scripts.Script):
                     label="Write prompts to file", value=False, elem_id="write-prompts"
                 )
 
-                info = gr.HTML(html)
+                with gr.Accordion("Help", open=False):
+                    info = gr.HTML(html)
 
                 with gr.Group():
                     with gr.Accordion("Advanced options", open=False):
@@ -183,7 +184,8 @@ class Script(scripts.Script):
                             label="Enable Jinja2 templates", value=False, elem_id="enable-jinja-templates"
                         )
 
-                        jinja_info = gr.HTML(jinja_help)
+                        with gr.Accordion("Help for Jinja2 templates", open=False):
+                            jinja_info = gr.HTML(jinja_help)
 
         return [
             info,

@@ -48,3 +48,4 @@
 0.24.1 Re-wrote combinatorial generation to use a queue instead of recursion
 0.24.2 Minor bug fix in weighted choice jinja2 extension
 0.24.3 Added shuffle to combinatorial generation so that a different subset of prompts is generated every time if the total number of prompts is greater than Batch size * Batch count
+0.24.4 Tucked help into separate accordions to prevent too much clutter
