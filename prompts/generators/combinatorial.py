@@ -1,6 +1,7 @@
 from __future__ import annotations
 from itertools import chain
 import logging
+import random
 
 from prompts.wildcardmanager import WildcardManager
 from prompts import constants
@@ -48,7 +49,10 @@ class CombinatorialPromptGenerator(PromptGenerator):
 
             wildcard = wildcards[0]
             wildcard_files = self._wildcard_manager.match_files(wildcard)
-            for val in chain(*[f.get_wildcards() for f in wildcard_files]):
+            wildcard_values = list(chain(*[f.get_wildcards() for f in wildcard_files]))
+            random.shuffle(wildcard_values)
+
+            for val in wildcard_values:
                 new_template = template.replace(f"__{wildcard}__", val, 1)
                 templates.append(new_template)
                 if len(templates) >= max_prompts:
