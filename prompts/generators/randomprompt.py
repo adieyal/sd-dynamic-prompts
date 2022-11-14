@@ -30,7 +30,8 @@ class RandomPromptGenerator(PromptGenerator):
     def _parse_range(self, range_str, num_variants):
         default_low = 0
         default_high = num_variants
-
+        print(f"_parse_range1 : {range_str} ; {num_variants}")
+        
         if range_str is None:
             return None
 
@@ -42,8 +43,8 @@ class RandomPromptGenerator(PromptGenerator):
             high = int(parts[1]) if parts[1] else default_high
         else:
             raise Exception(f"Unexpected range {range_str}")
-        print(f"_parse_range : {len(parts)} , {parts}")
-        print(f"_parse_range : {low} , {high}")
+        print(f"_parse_range2 : {len(parts)} , {parts}")
+        print(f"_parse_range3 : {low} , {high}")
         return min(low, high), max(low, high)
 
     def _parse_combinations(self, combinations_str):
@@ -53,6 +54,7 @@ class RandomPromptGenerator(PromptGenerator):
         quantity = splits.pop(0) if len(splits) > 1 else str(constants.DEFAULT_NUM_COMBINATIONS)
         joiner = splits.pop(0) if len(splits) > 1 else constants.DEFAULT_COMBO_JOINER
         variants[0] = splits[0]
+        print(f"_parse_combinations.variants : {variants}")
         low_range, high_range = self._parse_range(quantity, len(variants))
         #logger.info(f"_parse_combinations.joiner : {joiner}")
         print(f"_parse_combinations.joiner : {joiner}")

@@ -47,7 +47,7 @@ multicolored eye,changpao,multicolored hair,wedge heels,horns pose,artist,open m
 nsfw,cum,corruption, wet, aroused,standing, legs over head,dynamic sex,small breasts, one eye over hair, 
 petite,  lolita fashion, frilled dress, hime cut, bangs, red eyes, 
 pink streaked white-blue hair, long hair, two side up, medium breast, (red eyes, orange eyes:0.9), wide shot, from side, (full body), ankle ribbon, 
-pussy juice,masterpiece,solo,{{half-closed eyes}},{0-$$shame},solo focus,detailed tongue,from above,embracing,no pants,looking at viewer,outstretched arms,heavy-lidded eyes,colorful
+(pussy juice:2.0),masterpiece,solo,{{half-closed eyes}},{0-$$shame},solo focus,detailed tongue,from above,embracing,no pants,looking at viewer,outstretched arms,heavy-lidded eyes,colorful
 royal dress + cute girl, (nsfw realistic dress:1.22), (small body + feminine:1.16), (tiara:1.1)
 scary face
 shenhe (genshin impact), blue eyes, grey hair, bangs, hair over one eye, long hair
@@ -63,3 +63,5 @@ victorian lady at ocean, (((waist shot))), pony tail hair, Francois Boucher, alp
 __미유키__
 [wedding dress:corset:0.8],slender stomach,NSFW,((sex from behind, double penetration ,  [vibrator under panties|vibrator under clothes|remote control vibrator] , excessive spiked dildo ,  tentacles in thighhighs , excessive sex ,  handcuffs , excessive suction cup dildo ):1.1),(standing on one leg:1.3)
 [witch:corset:0.8],NSFW,(([vibrator under panties|vibrator under clothes|remote control vibrator],excessive deepthroat):1.1),(bow pose:1.3)
+maruzensky_(umamusume), aqua eyes, horse ears, bangs, horse tail, very long wavy brown-red hair, large breasts, hair between eyes, wavy long sidelocks, 
+chibi

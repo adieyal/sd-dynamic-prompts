@@ -44,3 +44,4 @@ super detail,UHD
 [oil painting|watercolor],(masterpiece:1.22),(brush stroke:1.6),(best quality:1.1),(finely detailed eyes and detailed face:1.3),realistic,pretty face,intricate details,(perfect anatomy:1.1),(cinematic light)
 {{{Realistic painting}}},{masterpiece},illustration,beautiful detailed,colourful,finely detailed,dramatic light,intricate details,painted in the stlye of {{{{Cynical realism}}}}
 {{{{{{extremely detailed CG}}}}}},{{{{8k wallpaper}}}},high resolution illustration,hyper detailed,highres,Intricate and refined delicate details
+(extremely detailed CG unity 8k wallpaper, masterpiece, best quality, ultra-detailed), (best illumination, best shadow, an extremely delicate and beautiful), finely detail, (illustration), lustrous skin, (painting), (sketch), 
