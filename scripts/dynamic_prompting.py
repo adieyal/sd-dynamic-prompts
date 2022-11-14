@@ -39,7 +39,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "0.20.1"
+VERSION = "0.21.0"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -125,6 +125,8 @@ class Script(scripts.Script):
 
         with gr.Group():
             with gr.Accordion("Dynamic Prompts", open=False):
+                is_enabled = gr.Checkbox(label="Dynamic Prompts enabled", value=True)
+
                 is_combinatorial = gr.Checkbox(
                     label="Combinatorial generation",
                     value=False,
@@ -180,6 +182,7 @@ class Script(scripts.Script):
 
         return [
             info,
+            is_enabled,
             is_combinatorial,
             combinatorial_batches,
             is_magic_prompt,
@@ -195,6 +198,7 @@ class Script(scripts.Script):
         self,
         p,
         info,
+        is_enabled,
         is_combinatorial,
         combinatorial_batches,
         is_magic_prompt,
@@ -205,6 +209,10 @@ class Script(scripts.Script):
         unlink_seed_from_prompt,
         enable_jinja_templates,
     ):
+
+        if not is_enabled:
+            return p
+
         fix_seed(p)
 
         original_prompt = p.prompt[0] if type(p.prompt) == list else p.prompt

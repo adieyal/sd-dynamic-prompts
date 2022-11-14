@@ -40,3 +40,4 @@
 0.19.2 Fixed bug in MagicPrompt that broke prompts with pipes, https://github.com/adieyal/sd-dynamic-prompts/issues/54
 0.20.0 Added random, randint, and permutations jinja extensions
 0.20.1 Using launch.run_pip instead of subprocess to install dependencies
+0.21.0 Added a checkbox to disable dynamic prompts if needed
