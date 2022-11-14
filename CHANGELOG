@@ -43,3 +43,4 @@
 0.21.0 Added a checkbox to disable dynamic prompts if needed
 0.22.0 Added a weighted choice function to jinja2 templates
 0.23.0 Added I'm feeling lucky for the ultimate in lazy prompting
+0.23.1 Fixed a bug that didn't limit the number of prompts when using combinatorial generation and large wildcard files

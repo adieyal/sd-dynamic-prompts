@@ -40,7 +40,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "0.23.0"
+VERSION = "0.23.1"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -228,7 +228,7 @@ class Script(scripts.Script):
 
         if unlink_seed_from_prompt:
             constants.UNLINK_SEED_FROM_PROMPT = True
-
+        
         try:
             combinatorial_batches = int(combinatorial_batches)
             if combinatorial_batches < 1:
