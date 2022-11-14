@@ -49,3 +49,4 @@
 0.24.2 Minor bug fix in weighted choice jinja2 extension
 0.24.3 Added shuffle to combinatorial generation so that a different subset of prompts is generated every time if the total number of prompts is greater than Batch size * Batch count
 0.24.4 Tucked help into separate accordions to prevent too much clutter
+0.25.0 Negative prompts are now dynamic, Big thanks to @lilly1987

@@ -40,7 +40,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "0.24.4"
+VERSION = "0.25.0"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -105,6 +105,26 @@ def new_generation(prompt) -> PromptGenerator:
     return generator
 
 class Script(scripts.Script):
+    def _create_generator(self, original_prompt, original_seed, is_feeling_lucky, enable_jinja_templates, is_combinatorial, is_magic_prompt, combinatorial_batches, magic_prompt_length, magic_temp_value):
+        if is_feeling_lucky:
+            generator = FeelingLuckyGenerator(original_prompt)
+        elif enable_jinja_templates:
+            generator = new_generation(original_prompt)
+        else:
+            generator = old_generation(
+                original_prompt,
+                is_combinatorial,
+                combinatorial_batches,
+                original_seed,
+            )
+
+        if is_magic_prompt:
+            generator = MagicPromptGenerator(
+                generator, magic_prompt_length, magic_temp_value
+            )
+
+        return generator
+    
     def title(self):
         return f"Dynamic Prompts v{VERSION}"
 
@@ -202,6 +222,16 @@ class Script(scripts.Script):
             enable_jinja_templates,
         ]
 
+    def process_batch(self, p, *args, **kwargs):
+        generator = self._negative_prompt_generator
+
+        try:
+            p.negative_prompt = generator.generate(1)[0]
+        except GeneratorException as e:
+            logger.exception(e)
+            all_prompts = [str(e)]
+            p.negative_prompt = str(e)
+
     def process(
         self,
         p,
@@ -239,28 +269,37 @@ class Script(scripts.Script):
             combinatorial_batches = 1
 
         try:
-            if is_feeling_lucky:
-                generator = FeelingLuckyGenerator(original_prompt)
-            elif enable_jinja_templates:
-                generator = new_generation(original_prompt)
-            else:
-                generator = old_generation(
-                    original_prompt,
-                    is_combinatorial,
-                    combinatorial_batches,
-                    original_seed,
-                )
+            generator = self._create_generator(
+                original_prompt,
+                original_seed,
+                is_feeling_lucky,
+                enable_jinja_templates,
+                is_combinatorial,
+                is_magic_prompt,
+                combinatorial_batches,
+                magic_prompt_length,
+                magic_temp_value,
+            )
 
-            if is_magic_prompt:
-                generator = MagicPromptGenerator(
-                    generator, magic_prompt_length, magic_temp_value
-                )
+            self._negative_prompt_generator = self._create_generator(
+                p.negative_prompt,
+                original_seed,
+                is_feeling_lucky,
+                enable_jinja_templates,
+                is_combinatorial,
+                is_magic_prompt,
+                combinatorial_batches,
+                magic_prompt_length,
+                magic_temp_value,
+            )
 
             all_prompts = generator.generate(num_images)
+            p.negative_prompt = self._negative_prompt_generator.generate(1)[0]
             
         except GeneratorException as e:
             logger.exception(e)
             all_prompts = [str(e)]
+            p.negative_prompt = str(e)
              
 
         updated_count = len(all_prompts)
