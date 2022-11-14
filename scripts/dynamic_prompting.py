@@ -40,7 +40,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "0.23.1"
+VERSION = "0.24.0"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -238,7 +238,7 @@ class Script(scripts.Script):
 
         try:
             if is_feeling_lucky:
-                generator = FeelingLuckyGenerator()
+                generator = FeelingLuckyGenerator(original_prompt)
             elif enable_jinja_templates:
                 generator = new_generation(original_prompt)
             else:
