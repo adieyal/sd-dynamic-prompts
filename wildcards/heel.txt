@@ -1,0 +1,6 @@
+bare foot
+high heels
+ballet shoes
+Ballet heel
+wedge heels
+{bare foot|high heels|ballet shoes|Ballet heel},

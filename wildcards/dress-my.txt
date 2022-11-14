@@ -1,0 +1,38 @@
+([cleavage skirt|cleavage dress|bare shoulder]:1.1)
+ahri clothes
+black china long dress
+black long dress
+black top hanbok long coat
+breastless clothes
+China-style
+chinese clothes
+corset
+frilled dress
+frilled sleeves
+Gothic and Lolita
+gothic dress
+gothic lolita
+halter dress
+kimono
+lolita fashion
+Maid
+naked towel
+nun
+priest
+puffy long sleeves,no pants,oversized button-up shirt,(clothes cover thigh:1.3),sleeves covering hands
+puffy long sleeves,no pants,oversized hoodie,(clothes cover thigh),sleeves covering hands
+puffy long sleeves,no pants,oversized sweat shirt,(clothes cover thigh:1.3),sleeves covering handsqipao dress
+puffy long sleeves,no pants,oversized T-shirt,(clothes cover thigh:1.3),sleeves covering hands
+santa dress
+school uniform
+see-through
+see-through skirt
+short kimono
+sweater dress
+tight dress
+transparent pleant skirt
+victorian
+vietnamese dress
+wedding dress
+witch
+[__dress__|__shoulder__|cleavage skirt|cleavage dress]

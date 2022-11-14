@@ -1,0 +1,2 @@
+bare shoulder,{0-$$collarbone}
+off shoulder,{0-$$collarbone}

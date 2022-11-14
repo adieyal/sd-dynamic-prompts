@@ -1,0 +1,19 @@
+Elf
+Dark Elf
+High Elf
+Fairy
+Spirit
+Angel
+
+Elf girl
+Dark Elf girl
+High Elf girl
+Fairy girl
+Spirit girl
+Angel girl
+
+fox girl
+nobility
+solo
+sheep girl
+cat girl

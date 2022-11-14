@@ -1,0 +1,28 @@
+my
+	__set__
+		__eyes__|__eyecolor__|__ears__|__dress__|__dress-my__|__dress-acc__|__color__ hair|__hair__|__hairacc__|__hairc__|__hairf__|__heel__|__ing__|__jobs__|__body__|__arm__|__clitoris__|__leg__|__mouth__|__noun-beauty__|__noun-emote__|__punk__|__모자__|__귀걸이__
+		__body__|__속옷__
+			__body-light__
+			__body-poor__
+			__bodyshape__
+			__body-short__
+	__캐릭__
+	__xx-MY__
+	__필수__
+		__details__,__화질__,{__시선__|,},(__focus__:1.1),{__표정__|__표정1__},Choker,({0-$$excessive} {skirt lift|dress lift|clothes lift|no panties}:1),{{__artist-my__}|,},{0-1$$__사진효과__},{0-1$$standing|standing on one leg|__pose__}
+		__pose__
+	__NSFW__
+		__insertion__
+		__pregnant__
+		__tentacles__
+		__toys__
+		__toys-insert__
+		__bind__
+		__sex__
+		__masturbation__
+		__xxx__
+		__입__
+	__wildcards__
+	__입__
+
+	

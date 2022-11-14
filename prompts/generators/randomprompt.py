@@ -8,11 +8,17 @@ from prompts.wildcardmanager import WildcardManager
 from . import PromptGenerator, re_combinations, re_wildcard
 
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+file_handler = logging.FileHandler('randomprompt.py.log')
+logger.addHandler(file_handler)
+
 
 class RandomPromptGenerator(PromptGenerator):
     def __init__(self, wildcard_manager: WildcardManager, template, seed:int = None):
+        #logger.info(f"RandomPromptGenerator.__init__ ;")
+        print(f"RandomPromptGenerator.__init__ ;")
         self._wildcard_manager = wildcard_manager
-        # Temporarily adding this here until I find a better place for it
+
         if constants.UNLINK_SEED_FROM_PROMPT:
             self._random = random
         else:
@@ -24,7 +30,8 @@ class RandomPromptGenerator(PromptGenerator):
     def _parse_range(self, range_str, num_variants):
         default_low = 0
         default_high = num_variants
-
+        print(f"_parse_range1 : {range_str} ; {num_variants}")
+        
         if range_str is None:
             return None
 
@@ -36,17 +43,21 @@ class RandomPromptGenerator(PromptGenerator):
             high = int(parts[1]) if parts[1] else default_high
         else:
             raise Exception(f"Unexpected range {range_str}")
-
+        print(f"_parse_range2 : {len(parts)} , {parts}")
+        print(f"_parse_range3 : {low} , {high}")
         return min(low, high), max(low, high)
 
     def _parse_combinations(self, combinations_str):
         variants = [s.strip() for s in combinations_str.split("|")]
         splits = variants[0].split("$$")
+        # 숫자 범위
         quantity = splits.pop(0) if len(splits) > 1 else str(constants.DEFAULT_NUM_COMBINATIONS)
         joiner = splits.pop(0) if len(splits) > 1 else constants.DEFAULT_COMBO_JOINER
         variants[0] = splits[0]
+        print(f"_parse_combinations.variants : {variants}")
         low_range, high_range = self._parse_range(quantity, len(variants))
-
+        #logger.info(f"_parse_combinations.joiner : {joiner}")
+        print(f"_parse_combinations.joiner : {joiner}")
         return (low_range, high_range), joiner, variants
 
     def _replace_combinations(self, match):
@@ -63,6 +74,8 @@ class RandomPromptGenerator(PromptGenerator):
                 picked = self._random.choices(variants, k=quantity)
             else:
                 picked = self._random.sample(variants, quantity)
+            #logger.info(f"_replace_combinations.joiner : {joiner}")
+            print(f"_replace_combinations.joiner : {joiner} ; {picked}")
             return f" {joiner} ".join(picked)
         except ValueError as e:
             logger.exception(e)
@@ -93,7 +106,8 @@ class RandomPromptGenerator(PromptGenerator):
     def pick_variant(self, template):
         if template is None:
             return None
-
+        #logger.info(f"pick_variant")
+        print(f"pick_variant")
         return re_combinations.sub(lambda x: self._replace_combinations(x), template)
 
     def pick_wildcards(self, template):
@@ -107,9 +121,15 @@ class RandomPromptGenerator(PromptGenerator):
             if counter > constants.MAX_RECURSIONS:
                 raise Exception("Too many recursions, something went wrong with generating the prompt")
 
+            #logger.info(f"prompt1 {old_prompt}")
+            #print(f"prompt1 {old_prompt}")
             prompt = self.pick_variant(old_prompt)
+            #logger.info(f"prompt2 {prompt}")
+            #print(f"prompt2 {prompt}")
             prompt = self.pick_wildcards(prompt)
-
+            #logger.info(f"prompt3 {prompt}")
+            #print(f"prompt3 {prompt}")
+            
             if prompt == old_prompt:
                 logger.info(f"Prompt: {prompt}")
                 return prompt

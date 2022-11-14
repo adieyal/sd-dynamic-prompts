@@ -1,0 +1,425 @@
+alternate costume
+(frilled dress:1)
+(frilled santa costume:1.63),(red beret:1.16),(off-shoulder dress:1.05),gloves,(white pantyhose:1.1)
+(gothic dress:1)
+(gothic lolita:1)
+(gothic:1)
+(lolita fashion:1)
+(magical girl costume:1.2)
+(nsfw realistic dress:1.22),(tiara:1.1)
+(school uniform:1)
+(victorian:1)
+(wedding dress:1)
+(witch:1)
+([cleavage skirt|cleavage dress|bare shoulder]:1.1)
+a-line dress
+actress
+ahri clothes
+ahri clothes
+alchemist
+ao dai
+aran sweater
+asymmetrical dress
+backless dress
+ballgown
+bandage dress
+bardot dress
+bare shoulder
+bare wet see-through garter belt,wedding dress
+bartender
+bathrobe
+bell-sleeve dress
+bikini
+bikini skirt
+black china long dress
+black clothes
+black long dress
+black pantyhose
+black school uniform
+black top hanbok long coat
+blazer
+blazer dress
+blouse
+bodycon dress
+bodyguard
+breastless clothes
+budget sarashi
+business suit
+butler
+call girl
+camisole
+cape
+capelet
+cardigan
+cardigan vest
+cashier
+cassock
+casual one-piece swimsuit
+chanchanko
+changpao
+cheerleader
+chef
+chemist
+cheongsam
+chest sarashi
+china dress
+china long dress
+China-style
+china-style 
+china-style maid
+chinese clothes
+chinese dress
+classic maid
+coat
+coat dress
+coat
+cocktail dress
+collared dress
+collared dress
+collared shirt
+compression shirt
+conductor
+corset
+crop top
+cropped hoodie
+cropped jacket
+cropped jacket
+croupier
+cybermade
+cybermaid
+denim dress
+dentist
+dirndl
+doctor
+dominatrix
+dotera
+downblouse
+dress shirt
+dress swimsuit
+driver
+duffel coat
+empire waist dress
+engineer
+english teacher
+evening dress
+evening gown
+faller 
+faller maid
+farmer
+flared skirt
+flight attendant
+florist
+flowing dress
+french 
+french maid
+frill
+frilled dress
+frilled shirt
+frilled sleeves
+funeral dress
+furisode
+geisha
+gloves,black yellow coat,bandaged wrist,torn clothes,earrings,floating crown,star halo,(goddess:1.05)
+golf uniform
+Gothic and Lolita
+gothic dress
+gothic lolita
+gown
+greek dress
+green jacket
+guard
+habit
+hacker
+hakama
+hakama short skirt
+hakama skirt
+half-dress
+halter dress
+halterneck
+hanbok
+handkerchief hem dress
+hanten
+haori
+happi
+harem outfit
+health teacher
+high-low skirt
+high-waist skirt
+highleg dress
+hobble dress
+hoodie
+house 
+house maid
+housekeeper
+idol
+impossible dress
+jacket
+jacket
+janitor
+japanese-style 
+japanese-style maid
+judge
+kimono
+kimono dress
+kimono skirt
+king
+Kitchen 
+Kitchen Maid
+knight
+lace
+lace frill
+lace-trimmed dress
+Ladies 
+Ladies Maid
+latex dress
+layered dress
+layered kimono
+layered skirt
+layered white red and gold dress
+letterman jacket
+librarian
+lifeguard
+lingerie
+loincloth
+loincloth skirt
+lolita fashion
+long coat
+long dress
+long dress
+long Hoodie
+long skirt
+long sleeve dress
+long sleeves
+lowleg bikini
+lowleg skirt
+maid
+Maid
+maid clothes
+maid style
+math teacher
+maxi dress
+meiji schoolgirl uniform
+merchant
+mermaid silhouette dress
+mermaid skirt
+micro bikini
+micro skirt
+midi dress
+midriff sarashi
+miko
+military maid
+military uniform
+mini dress
+miniskirt
+monk
+musician
+naked cape
+naked capelet
+naked cloak
+naked coat
+naked hoodie
+naked jacket
+naked leaf dress
+naked overalls
+naked scarf
+naked sheet
+naked shirt
+naked towel
+negligee
+nightgown
+nun
+nurse
+nurse maid
+nuss 
+o-ring bikini
+o-ring bottom
+o-ring top
+off shoulder
+off-shoulder dress
+off-shoulder shirt
+office lady
+officer
+one shoulder dress
+one-piece swimsuit
+open clothes
+open coat
+open jacket
+open robe
+overall skirt
+overcoat
+pajamas
+pannier skirt
+pantyhose
+peacoat
+pencil dress
+peplum dress
+pilot
+pinafore dress
+pinapo dress
+plaid miniskirt
+pleated dress
+pleated skirt
+plunging neckline
+politician
+polka dot hoodie
+porno actor
+pouf dress
+priest
+princess silhouette dress
+print hoodie
+prisoner
+prostitution
+puffy long sleeves,no pants,oversized button-up shirt,(clothes cover thigh:1.3),sleeves covering hands
+puffy long sleeves,no pants,oversized hoodie,(clothes cover thigh),sleeves covering hands
+puffy long sleeves,no pants,oversized sweat shirt,(clothes cover thigh:1.3),sleeves covering hands dress
+puffy long sleeves,no pants,oversized sweat shirt,(clothes cover thigh:1.3),sleeves covering handsqipao dress
+puffy long sleeves,no pants,oversized T-shirt,(clothes cover thigh:1.3),sleeves covering hands
+pullover
+qipao dress
+queen
+raincoat
+ribbed sweater
+ribbon-trimmed dress
+robe
+royal dress
+royal dress,(nsfw realistic dress:1.22),(tiara:1.1)
+safari jacket
+sailor
+sailor (naval uniform)
+santa
+santa dress
+sarashi
+school nurse
+school uniform
+science teacher
+scientist
+see-through
+see-through and wet
+see-through dress
+see-through skirt
+see-through
+serafuku (sailor uniform)
+sheath dress
+shepherd
+shift dress
+shirt
+shirt dress
+short dress
+short kimono
+short pants
+short skirt
+shorts under skirt
+shoulder cape
+side slit
+side-tie bikini bottom
+skirt
+skirt pants
+skirt suit
+skirtsuit
+slave
+sleeveless
+sleeveless dress
+sleeveless hoodie
+sleeveless shirt
+sleeveless turtleneck
+slip dress
+snata dress
+spy
+standard-bearer
+Steampunk 
+steampunk maid
+strapless dress
+street wear,stylish,fashionable
+string bikini
+striped hoodie
+student
+suit jacket
+sun dress
+sundress
+suspender skirt
+sweater
+sweater dress
+sweater vest
+t-shirt
+t-shirt dress
+tailcoat
+tangzhuang
+tank top
+tankini
+tasuki
+taut dress
+tea length dress
+teacher
+tennis dress
+tennis player
+tennis uniform
+thong bikini
+tight dress
+tight skirt
+traditional attire
+train attendant
+train conductor
+transparent pleant skirt
+trapeze dress
+trench coat
+tube dress
+tube top
+tulip skirt
+turtleneck
+tutu
+uchikake=(wedding kimono)
+unbuttoned white shirt
+underwear
+underwear only
+undone sarashi
+unusual pupils
+veil
+veil dress
+vest
+victoria maid
+victorian
+victorian skirt
+vietnamese dress
+waistcoat
+waiter
+waitress
+waitress clothes
+wedding dress
+wet clothes
+wet school uniform
+white dress
+white dress,concert hall,white gloves,(pink skirt:1.1),short sleeves,white dress,white Frill,pink ribbon
+white garter belt,wedding dress,Veil
+winter outfit,white beret,skirt under coat,(frilled plaid pleated skirt:1.1),gloves,(white pantyhose:1.1),shoes
+witch
+wizard
+wrap dress
+wrap skirt
+yamakasa
+yukata
+[gothic dress:corset:0.8]
+[gothic lolita dress:corset:0.8]
+[latex dress:school uniform:0.3]
+[latex dress:school uniform:0.3]
+[latex school uniform:binding rope:0.4]
+[latex school uniform:binding rope:0.4]
+[miko costume|school uniform]
+[miko costume|school uniform]
+[military uniform|wedding dress]
+[military uniform|wedding dress]
+[school uniform:corset:0.8]
+[school uniform:wedding dress:0.1]
+[school uniform:wedding dress:0.1]
+[victorian dress:corset:0.8]
+[victorian girl:corset:0.8]
+[wedding dress:corset:0.8]
+[wedding dress:military uniform:0.2]
+[wedding dress:military uniform:0.2]
+[wedding dress|corset]
+[wedding dress|leotard]
+[white lavish ceremonial dress with jewelry:white clergy dress:0.3] 
+[witch:corset:0.8]
+[witch:corset:0.8]
+[__dress__|__shoulder__|cleavage skirt|cleavage dress]
+{vietnamese dress|sweater dress|short kimono|kimono|see-through|santa dress|qipao dress|priest|nun|maid|corset|china-style|witch|wedding dress|frilled dress|gothic lolita|gothic dress|lolita fashion|school uniform|victorian}
+alternate costume

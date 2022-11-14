@@ -211,9 +211,137 @@ The first time you use it, the model is downloaded. It is approximately 500mb an
 <img src="images/magic_prompt.png"/>
 You can control the maximum prompt length with the **Max magic prompt length** slider. **Magic prompt creativity** can adjust the generated prompt but you will need to experiment with this setting.
 
+## I'm feeling lucky
+Use the [lexica.art](https://lexica.art) API to create random prompts. Useful if you're looking for inspiration, or are simply too lazy to think of your own prompts. When this option is selected, the prompt in the main prompt box is used as a search string. For example, prompt "Mech warrior" might return:
+
+* A large robot stone statue in the middle of a forest by Greg Rutkowski, Sung Choi, Mitchell Mohrhauser, Maciej Kuciara, Johnson Ting, Maxim Verehin, Peter Konig, final fantasy , 8k photorealistic, cinematic lighting, HD, high details, atmospheric,
+* a beautiful portrait painting of a ( ( ( cyberpunk ) ) ) armor by simon stalenhag and pascal blanche and alphonse mucha and nekro. in style of digital art. colorful comic, film noirs, symmetry, brush stroke, vibrating colors, hyper detailed. octane render. trending on artstation
+* symmetry!! portrait of a robot astronaut, floral! horizon zero dawn machine, intricate, elegant, highly detailed, digital painting, artstation, concept art, smooth, sharp focus, illustration, art by artgerm and greg rutkowski and alphonse mucha, 8 k
+
+<img src="images/feeling-lucky.png">
+
+Leaving the prompt box blank returns a list of completely randomly chosen prompts.
+
+
 ## Write prompts to file
 Check the write prompts to file checkbox in order to create a file with all generated prompts. The generated file is a slugified version of the prompt and can be found in the same directory as the generated images, e.g. outputs/txt2img-images
 <img src="images/write_prompts.png"/>
+
+## Jinja2 templates
+Jinja2 templates is an experimental feature that enables you to define prompts imperatively. This is an advanced feature and is only recommended for users who are comfortable writing scripts.
+
+To enable, open the advanced accordion and select __Enable Jinja2 templates__.
+<img src="images/jinja_templates.png">
+
+Here are some examples of what you can do with Jinja2 templates
+### Literals
+Literal strings work as expected:
+
+    I love red roses
+
+### Random choices
+Similar to the standard `{A|B|C}` syntax
+
+    I love {{ choice('red', 'blue', 'green') }} roses
+    
+This will create one prompt and randomly choose one of the three colors.
+
+### Iterations
+
+    {% for colour in ['red', 'blue', 'green'] %}
+        {% prompt %}I love {{ colour }} roses{% endprompt %}
+    {% endfor %}
+
+This will produce three prompts, one for each color. The prompt tag is used to mark the text that will be used as the prompt. If no prompt tag is present then only one prompt is assumed
+
+### Wildcards
+Similar to the standard wildcard syntax
+
+    {% for colour in wildcard("__colours__") %}
+        {% prompt %}I love {{ colour }} roses{% endprompt %}
+    {% endfor %}
+
+This will produce one prompt for each colour in the wildcard.txt file.
+
+### Conditionals
+
+    {% for colour in ["red", "blue", "green"] %}
+        {% if colour == "red"}
+            {% prompt %}I love {{ colour }} roses{% endprompt %}
+        {% else %}
+            {% prompt %}I hate {{ colour }} roses{% endprompt %}
+        {% endif %}
+    {% endfor %}
+
+This will produce the following prompts:
+* I love red roses
+* I hate blue roses
+* I hate green roses
+
+These are trivial examples but the Jinja2 template language is very expressive. You can use it to develop sophisticated prompt templates. For more information see the <a href="https://jinja.palletsprojects.com/en/3.1.x/templates/">Jinja2 documentation.</a>.
+
+### Setting variables
+You can create a variable for further re-use, e.g.
+
+	{% with careers = ['doctor', 'lawyer', 'accountant'] %}
+		{% for career1 in careers %}
+			{% for career2 in careers %}
+				{% if career1 != career2 %}
+					{% prompt %}professional digital airbrush art of A {{ career1 }} and {{ career2 }}{% endprompt %}
+				{% endif %}
+			{% endfor %}
+		{% endfor %}
+	{% endwith %}
+
+the careers array is now avaible inside the {% with %} ... {% endwith %} block.
+
+### Additional functions
+
+#### Random
+
+    This is a random number: {{ random() }}
+
+e.g. This is a random number: 0.694942884614521
+
+### Random Integer
+
+	My favourite number is {{ randint(1, 10) }}
+
+e.g. My favourite number is 6
+
+### Weighted selection
+
+	My favourite colour is {{ weighted_choice(("pink", 0.2), ("yellow", 0.3), ("black", 0.4), ("purple", 0.1)) }}
+
+Will select one of the colours according to their weight, i.e. pink 20% of the time, yellow 30% of the time, etc
+
+### Permutations
+
+	Generate all the possible permutations of elements in a list
+
+
+	{% for val in permutations(["red", "green", "blue"], 2) %}
+		{% prompt %}My favourite colours are {{ val|join(' and ') }}{% endprompt %}
+	{% endfor %}
+
+My favourite colours are red and green
+My favourite colours are red and blue
+My favourite colours are green and red
+My favourite colours are green and blue
+My favourite colours are blue and red
+My favourite colours are blue and green
+
+### Batch count
+
+Note: Batch count works differently when using Jinja2 templates. If you set __Batch count__ to 1 and __Batch size__ to 1 and use this prompt:
+
+	{% for colour in ['blue', 'red', 'green'] %}
+	    {% prompt %}I love {{ colour }} roses{% endprompt %}
+	{% endfor %}
+
+You will produce 3 images. This is due to the fact that {% prompt %}...{% endprompt %} creates one prompt for each colour. If you set __Batch count__ to 2, 6 images will be created. The __Combinatorial batches__ slider is also ignored since you can achieve the same effect as above by creating mulitple prompts in your template and then increasing __Batch count__.
+
+If you are using these templates, please let me know if they are useful.
 
 ## WILDCARD_DIR
 The extension looks for wildcard files in WILDCARD_DIR. The default location is /path/to/stable-diffusion-webui/extensions/sd-dynamic-prompts/wildcards. It can also be manually defined in the main webui config.json under wildcard_dir. When in doubt, the help text for the extension in the webui lists the full path to WILDCARD_DIR

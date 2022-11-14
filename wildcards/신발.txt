@@ -1,0 +1,31 @@
+ankle boots
+bare foot
+clog sandals
+converse
+cross-laced footwear
+cross-laced sandals
+flats
+flip-flops
+footwear ribbon
+geta
+high heel boots
+high heels
+high tops
+kiltie loafers
+knee boots
+lace-up boots
+loafers
+mary janes
+okobo
+platform footwear
+pointy footwear
+pumps
+sandals
+sneakers
+thigh boots
+toeless footwear
+uwabaki
+wedge heels
+winged footwear
+zouri
+{bare foot|high heels|ballet shoes|Ballet heel}

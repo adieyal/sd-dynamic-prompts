@@ -1,0 +1,81 @@
+florist
+librarian
+croupier
+merchant
+shepherd
+politician
+judge
+student
+hacker
+office lady
+guard
+janitor
+standard-bearer
+officer
+lifeguard
+sailor
+spy
+chef
+conductor
+bodyguard
+bartender
+waiter
+waitress
+butler
+cashier
+maid
+Nurse Maid
+Ladies Maid
+Military Maid
+Victoria Maid
+CyberMaid
+Steampunk Maid
+Japanese-style Maid
+China-style Maid
+Classic maid
+Kitchen Maid
+Faller Maid
+French Maid
+House Maid
+Housekeeper
+scientist
+chemist
+engineer
+geisha
+idol
+actress
+musician
+painter
+artist
+tennis player
+teacher
+math teacher
+science teacher
+English teacher
+health teacher
+school nurse
+driver
+pilot
+train attendant
+train conductor
+flight attendant
+doctor
+nurse
+slave
+dentist
+farmer
+queen
+king
+dominatrix
+knight
+prisoner
+witch
+wizard
+miko
+priest
+monk
+nun
+alchemist
+call girl
+prostitution
+Porno Actor

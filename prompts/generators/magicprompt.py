@@ -16,7 +16,6 @@ class MagicPromptGenerator(PromptGenerator):
 
         from modules.devices import get_optimal_device
 
-        # TODO this needs to be fixed
         device = 0 if get_optimal_device() == "cuda" else -1
 
         if MagicPromptGenerator.generator is None:
@@ -53,6 +52,7 @@ class MagicPromptGenerator(PromptGenerator):
                 max_length=self._max_prompt_length,
                 temperature=self._temperature,
             )[0]["generated_text"]
+
             magic_prompt = self.clean_up_magic_prompt(magic_prompt)
             new_prompts.append(magic_prompt)
 
@@ -70,7 +70,7 @@ class MagicPromptGenerator(PromptGenerator):
 
         # clean up whitespace in hyphens between words
         prompt = re.sub(r"\b\s+\-\s+\b", "-", prompt)
-        prompt = re.sub(r"\s*[,;|:\.]+\s*", ", ", prompt)  # other analogues to ', '
+        prompt = re.sub(r"\s*[,;\.]+\s*", ", ", prompt)  # other analogues to ', '
         prompt = re.sub(r"\s+_+\s+", " ", prompt)  # useless underscores between phrases
         prompt = re.sub(r"\b,\s*,\s*\b", ", ", prompt)  # empty phrases
 

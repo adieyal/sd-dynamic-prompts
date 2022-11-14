@@ -4,3 +4,5 @@
 **/.tmp.drivedownload
 /wildcards/*.txt
 **/.tmp.driveupload
+.env
+
