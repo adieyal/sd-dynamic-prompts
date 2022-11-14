@@ -29,33 +29,32 @@ class CombinatorialPromptGenerator(PromptGenerator):
             return [seed_template]
         return templates
 
-    def generate_from_wildcards(self, seed_template, max_prompts, recursion=0) -> list[str]:
+    def generate_from_wildcards(self, seed_template, max_prompts) -> list[str]:
         templates = []
+        new_templates = set()
 
-        if recursion > constants.MAX_RECURSIONS:
-            raise Exception("Too many recursions, something went wrong with generating the prompt: " + seed_template)
+        templates = [seed_template]
+        while True:
+            if len(templates) == 0:
+                break
 
-        template = seed_template
-        wildcards = re_wildcard.findall(template)
-        if len(wildcards) == 0:
-            return [template]
+            template = templates.pop(0)
+            wildcards = re_wildcard.findall(template)
+            if len(wildcards) == 0:
+                new_templates.add(template)
+                if len(new_templates) > max_prompts:
+                    break
+                continue
 
-        for wildcard in wildcards:
+            wildcard = wildcards[0]
             wildcard_files = self._wildcard_manager.match_files(wildcard)
             for val in chain(*[f.get_wildcards() for f in wildcard_files]):
                 new_template = template.replace(f"__{wildcard}__", val, 1)
-                logger.debug(f"New template: {new_template}")
-                
+                templates.append(new_template)
                 if len(templates) >= max_prompts:
                     break
-                templates.append(new_template)
-                
 
-        new_templates = []
-        for template in templates:
-            new_templates += self.generate_from_wildcards(template, max_prompts, recursion=recursion + 1)
-
-        return list(set(new_templates))
+        return list(new_templates)[0:max_prompts]
 
 
     def generate(self, max_prompts=constants.MAX_IMAGES) -> list[str]:
@@ -64,7 +63,7 @@ class CombinatorialPromptGenerator(PromptGenerator):
 
         while True:
             all_prompts = list(set(all_prompts))
-            if len(templates) == 0 or len(all_prompts) > max_prompts:
+            if len(templates) == 0 or len(all_prompts) >= max_prompts:
                 break
 
             template = templates.pop(0)
