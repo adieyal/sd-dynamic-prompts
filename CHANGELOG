@@ -45,3 +45,4 @@
 0.23.0 Added I'm feeling lucky for the ultimate in lazy prompting
 0.23.1 Fixed a bug that didn't limit the number of prompts when using combinatorial generation and large wildcard files
 0.24.0 I'm feeling lucky now using the prompt as a search string.
+0.24.1 Re-wrote combinatorial generation to use a queue instead of recursion
