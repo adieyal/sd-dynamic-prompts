@@ -58,6 +58,10 @@
     content: "Automatically update your prompt with interesting modifiers. (Runs slowly the first time)"
 }
 
+#is-feelinglucky:after {
+    content: "Generate random prompts from lexica.art (the main prompt is ignored)."
+}
+
 #is-fixed-seed:after {
     content: "Use the same seed for all prompts in this batch"
 }

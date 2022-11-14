@@ -42,3 +42,4 @@
 0.20.1 Using launch.run_pip instead of subprocess to install dependencies
 0.21.0 Added a checkbox to disable dynamic prompts if needed
 0.22.0 Added a weighted choice function to jinja2 templates
+0.23.0 Added I'm feeling lucky for the ultimate in lazy prompting

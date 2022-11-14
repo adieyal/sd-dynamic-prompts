@@ -98,7 +98,7 @@ class JinjaGenerator(PromptGenerator):
         self._template = template
         self._wildcard_manager = wildcard_manager
 
-    def generate(self, num_prompts=1):
+    def generate(self, num_prompts=1) -> list[str]:
         try:
             env = Environment(
                 extensions=[RandomExtension, PromptExtension, WildcardExtension, PermutationExtension]

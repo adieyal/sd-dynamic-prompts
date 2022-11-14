@@ -20,7 +20,8 @@ from prompts.generators import (
     CombinatorialPromptGenerator,
     MagicPromptGenerator,
     BatchedCombinatorialPromptGenerator,
-    PromptGenerator
+    PromptGenerator,
+    FeelingLuckyGenerator
 )
 
 from prompts.generators.jinjagenerator import JinjaGenerator
@@ -39,7 +40,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "0.22.0"
+VERSION = "0.23.0"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -159,6 +160,10 @@ class Script(scripts.Script):
                     step=0.10,
                 )
 
+                is_feeling_lucky = gr.Checkbox(
+                    label="I'm feeling lucky", value=False, elem_id="is-feelinglucky"
+                )
+
                 use_fixed_seed = gr.Checkbox(
                     label="Fixed seed", value=False, elem_id="is-fixed-seed"
                 )
@@ -186,6 +191,7 @@ class Script(scripts.Script):
             is_combinatorial,
             combinatorial_batches,
             is_magic_prompt,
+            is_feeling_lucky,
             magic_prompt_length,
             magic_temp_value,
             use_fixed_seed,
@@ -202,6 +208,7 @@ class Script(scripts.Script):
         is_combinatorial,
         combinatorial_batches,
         is_magic_prompt,
+        is_feeling_lucky,
         magic_prompt_length,
         magic_temp_value,
         use_fixed_seed,
@@ -230,10 +237,10 @@ class Script(scripts.Script):
             combinatorial_batches = 1
 
         try:
-            
-            if enable_jinja_templates:
+            if is_feeling_lucky:
+                generator = FeelingLuckyGenerator()
+            elif enable_jinja_templates:
                 generator = new_generation(original_prompt)
-                
             else:
                 generator = old_generation(
                     original_prompt,
