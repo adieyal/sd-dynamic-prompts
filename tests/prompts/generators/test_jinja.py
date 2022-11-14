@@ -205,6 +205,20 @@ class TestJinjaGenerator:
             assert len(prompts) == 1
             assert prompts[0] == "My favourite number is 0.3"
 
+    def test_weighted_choice(self):
+        with patch('random.choices') as mock_choice:
+            mock_choice.side_effect = ["yellow"]
+            template = """My favourite colour is {{ weighted_choice(("pink", 0.2), ("yellow", 0.3), ("black", 0.4), ("purple", 0.1)) }}"""
+
+            generator = JinjaGenerator(template)
+            prompts = generator.generate()
+
+            assert len(prompts) == 1
+            assert prompts[0] == "My favourite colour is yellow"
+            
+            assert mock_choice.call_args[0][0] == ("pink", "yellow", "black", "purple")
+            assert mock_choice.call_args[1]["weights"] == (0.2, 0.3, 0.4, 0.1)
+
     def test_permutations(self):
         template = """
         {% for val in permutations(["red", "green", "blue"], 1, 2) %}

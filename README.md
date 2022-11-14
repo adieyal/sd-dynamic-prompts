@@ -297,6 +297,12 @@ e.g. This is a random number: 0.694942884614521
 
 e.g. My favourite number is 6
 
+### Weighted selection
+
+	My favourite colour is {{ weighted_choice(("pink", 0.2), ("yellow", 0.3), ("black", 0.4), ("purple", 0.1)) }}
+
+Will select one of the colours according to their weight, i.e. pink 20% of the time, yellow 30% of the time, etc
+
 ### Permutations
 
 	Generate all the possible permutations of elements in a list
