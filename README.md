@@ -228,7 +228,7 @@ Check the write prompts to file checkbox in order to create a file with all gene
 <img src="images/write_prompts.png"/>
 
 ## Jinja2 templates
-Jinja2 templates is an experimental feature that enables you to define prompts imperatively. This is an advanced feature and is only recommended for users who are comfortable writing scripts.
+[Jinja2 templates](https://jinja.palletsprojects.com/en/3.1.x/templates/) is an experimental feature that enables you to define prompts imperatively. This is an advanced feature and is only recommended for users who are comfortable writing scripts.
 
 To enable, open the advanced accordion and select __Enable Jinja2 templates__.
 <img src="images/jinja_templates.png">
