@@ -171,3 +171,26 @@ Note: Batch count works differently when using Jinja2 templates. If you set __Ba
 You will produce 3 images. This is due to the fact that {% prompt %}...{% endprompt %} creates one prompt for each colour. If you set __Batch count__ to 2, 6 images will be created. The __Combinatorial batches__ slider is also ignored since you can achieve the same effect as above by creating mulitple prompts in your template and then increasing __Batch count__.
 
 If you are using these templates, please let me know if they are useful.
+
+## Cookbook
+
+### [Prompt Editing](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#prompt-editing)
+
+	{% for i in range(11) %}
+		{% prompt %}[dog:cat:{{ i/10 }}]{% endprompt %}
+	{% endfor %}
+
+Using Automatic1111's prompt editing feature, these prompts are generated:
+[dog:cat:0]
+[dog:cat:0.1]
+[dog:cat:0.2]
+[dog:cat:0.3]
+[dog:cat:0.4]
+[dog:cat:0.5]
+[dog:cat:0.6]
+[dog:cat:0.7]
+[dog:cat:0.8]
+[dog:cat:0.9]
+[dog:cat:1]
+
+Automatic1111 will render with dog for the first x% of steps, and then switch to using cat.
