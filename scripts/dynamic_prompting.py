@@ -41,7 +41,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "0.26.0"
+VERSION = "0.27.0"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -194,6 +194,10 @@ class Script(scripts.Script):
                     label="Write prompts to file", value=False, elem_id="write-prompts"
                 )
 
+                no_image_generation = gr.Checkbox(
+                    label="Don't generate images", value=False, elem_id="no-image-generation"
+                )
+
                 with gr.Accordion("Help", open=False):
                     info = gr.HTML(html)
 
@@ -228,6 +232,7 @@ class Script(scripts.Script):
             unlink_seed_from_prompt,
             disable_negative_prompt,
             enable_jinja_templates,
+            no_image_generation
         ]
 
     def process_batch(self, p, *args, **kwargs):
@@ -256,6 +261,7 @@ class Script(scripts.Script):
         unlink_seed_from_prompt,
         disable_negative_prompt,
         enable_jinja_templates,
+        no_image_generation,
     ):
 
         if not is_enabled:
@@ -339,6 +345,10 @@ class Script(scripts.Script):
             logger.error(f"Failed to write prompts to file: {e}")
 
         p.all_prompts = all_prompts
+        if no_image_generation:
+            # Need a minimum of batch size images to avoid errors
+            p.batch_size = 1
+            p.all_prompts = all_prompts[0:1]
         p.all_seeds = all_seeds
 
         p.prompt_for_display = original_prompt

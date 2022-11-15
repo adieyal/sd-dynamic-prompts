@@ -52,3 +52,4 @@
 0.25.0 Negative prompts are now dynamic, Big thanks to @lilly1987
 0.25.1 Explicitly setting encoding when writing prompts to file. Also ignoring errors
 0.26.0 Added option to disable the negative prompt
+0.27.0 Added option to disable image generation - useful in combination with writing prompts to file

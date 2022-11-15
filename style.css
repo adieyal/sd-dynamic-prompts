@@ -78,6 +78,10 @@
     content: "Useful for I'm feeling lucky and Magic Prompt. If this is set, then negative prompts are not generated."
 }
 
+#no-image-generation:after {
+    content: "Disable image generation. Useful if you only want to generate text prompts."
+}
+
 .dynamic-prompting h2 {
     font-size: 1.2em;
     font-weight: bolder;
