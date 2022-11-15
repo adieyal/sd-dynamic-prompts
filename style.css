@@ -74,6 +74,10 @@
     content: "If this is set, then random prompts are generated, even if the seed is the same."
 }
 
+#disable-negative-prompt:after {
+    content: "Useful for I'm feeling lucky and Magic Prompt. If this is set, then negative prompts are not generated."
+}
+
 .dynamic-prompting h2 {
     font-size: 1.2em;
     font-weight: bolder;

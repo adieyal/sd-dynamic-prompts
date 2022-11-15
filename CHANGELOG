@@ -51,3 +51,4 @@
 0.24.4 Tucked help into separate accordions to prevent too much clutter
 0.25.0 Negative prompts are now dynamic, Big thanks to @lilly1987
 0.25.1 Explicitly setting encoding when writing prompts to file. Also ignoring errors
+0.26.0 Added option to disable the negative prompt

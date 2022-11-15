@@ -21,7 +21,8 @@ from prompts.generators import (
     MagicPromptGenerator,
     BatchedCombinatorialPromptGenerator,
     PromptGenerator,
-    FeelingLuckyGenerator
+    FeelingLuckyGenerator,
+    DummyGenerator
 )
 
 from prompts.generators.jinjagenerator import JinjaGenerator
@@ -40,7 +41,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "0.25.1"
+VERSION = "0.26.0"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -105,8 +106,10 @@ def new_generation(prompt) -> PromptGenerator:
     return generator
 
 class Script(scripts.Script):
-    def _create_generator(self, original_prompt, original_seed, is_feeling_lucky, enable_jinja_templates, is_combinatorial, is_magic_prompt, combinatorial_batches, magic_prompt_length, magic_temp_value):
-        if is_feeling_lucky:
+    def _create_generator(self, original_prompt, original_seed, is_dummy=False, is_feeling_lucky=False, enable_jinja_templates=False, is_combinatorial=False, is_magic_prompt=False, combinatorial_batches=1, magic_prompt_length=100, magic_temp_value=0.7):
+        if is_dummy:
+            return DummyGenerator(original_prompt)
+        elif is_feeling_lucky:
             generator = FeelingLuckyGenerator(original_prompt)
         elif enable_jinja_templates:
             generator = new_generation(original_prompt)
@@ -200,6 +203,10 @@ class Script(scripts.Script):
                             label="Unlink seed from prompt", value=False, elem_id="unlink-seed-from-prompt"
                         )
 
+                        disable_negative_prompt = gr.Checkbox(
+                            label="Disable negative prompt", value=False, elem_id="disable-negative-prompt"
+                        )
+
                         enable_jinja_templates = gr.Checkbox(
                             label="Enable Jinja2 templates", value=False, elem_id="enable-jinja-templates"
                         )
@@ -219,6 +226,7 @@ class Script(scripts.Script):
             use_fixed_seed,
             write_prompts,
             unlink_seed_from_prompt,
+            disable_negative_prompt,
             enable_jinja_templates,
         ]
 
@@ -246,6 +254,7 @@ class Script(scripts.Script):
         use_fixed_seed,
         write_prompts,
         unlink_seed_from_prompt,
+        disable_negative_prompt,
         enable_jinja_templates,
     ):
 
@@ -272,25 +281,28 @@ class Script(scripts.Script):
             generator = self._create_generator(
                 original_prompt,
                 original_seed,
-                is_feeling_lucky,
-                enable_jinja_templates,
-                is_combinatorial,
-                is_magic_prompt,
-                combinatorial_batches,
-                magic_prompt_length,
-                magic_temp_value,
+                is_feeling_lucky=is_feeling_lucky,
+                enable_jinja_templates=enable_jinja_templates,
+                is_combinatorial=is_combinatorial,
+                is_magic_prompt=is_magic_prompt,
+                combinatorial_batches=combinatorial_batches,
+                magic_prompt_length=magic_prompt_length,
+                magic_temp_value=magic_temp_value,
+                is_dummy=False
             )
 
+        
             self._negative_prompt_generator = self._create_generator(
                 p.negative_prompt,
                 original_seed,
-                is_feeling_lucky,
-                enable_jinja_templates,
-                is_combinatorial,
-                is_magic_prompt,
-                combinatorial_batches,
-                magic_prompt_length,
-                magic_temp_value,
+                is_feeling_lucky=is_feeling_lucky,
+                enable_jinja_templates=enable_jinja_templates,
+                is_combinatorial=is_combinatorial,
+                is_magic_prompt=is_magic_prompt,
+                combinatorial_batches=combinatorial_batches,
+                magic_prompt_length=magic_prompt_length,
+                magic_temp_value=magic_temp_value,
+                is_dummy=disable_negative_prompt,
             )
 
             all_prompts = generator.generate(num_images)
