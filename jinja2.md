@@ -194,4 +194,7 @@ Using Automatic1111's prompt editing feature, these prompts are generated:
 [dog:cat:0.9]
 [dog:cat:1]
 ```
+
 Automatic1111 will render with dog for the first x% of steps, and then switch to using cat.
+
+<img src="images/prompt_editing.jpg"/>
