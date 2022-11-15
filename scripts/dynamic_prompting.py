@@ -40,7 +40,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "0.25.0"
+VERSION = "0.25.1"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -322,7 +322,7 @@ class Script(scripts.Script):
                 prompt_filename = get_unique_path(
                     Path(p.outpath_samples), slugify(original_prompt)
                 )
-                prompt_filename.write_text("\n".join(all_prompts))
+                prompt_filename.write_text("\n".join(all_prompts), encoding=constants.DEFAULT_ENCODING, errors="ignore")
         except Exception as e:
             logger.error(f"Failed to write prompts to file: {e}")
 
