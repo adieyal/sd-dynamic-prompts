@@ -59,7 +59,7 @@
 }
 
 #is-feelinglucky:after {
-    content: "Generate random prompts from lexica.art (the main prompt is ignored)."
+    content: "Generate random prompts from lexica.art (your prompt is used as a search query)."
 }
 
 #is-fixed-seed:after {
