@@ -41,7 +41,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "0.27.0"
+VERSION = "0.27.1"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -151,45 +151,45 @@ class Script(scripts.Script):
             with gr.Accordion("Dynamic Prompts", open=False):
                 is_enabled = gr.Checkbox(label="Dynamic Prompts enabled", value=True)
 
-                is_combinatorial = gr.Checkbox(
-                    label="Combinatorial generation",
-                    value=False,
-                    elem_id="is-combinatorial",
-                )
-                combinatorial_batches = gr.Slider(
-                    label="Combinatorial batches",
-                    min=1,
-                    max=10,
-                    step=1,
-                    value=1,
-                    elem_id="combinatorial-times",
-                )
+                with gr.Group():
+                    is_combinatorial = gr.Checkbox(
+                        label="Combinatorial generation",
+                        value=False,
+                        elem_id="is-combinatorial",
+                    )
+                    combinatorial_batches = gr.Slider(
+                        label="Combinatorial batches",
+                        min=1,
+                        max=10,
+                        step=1,
+                        value=1,
+                        elem_id="combinatorial-times",
+                    )
 
-                is_magic_prompt = gr.Checkbox(
-                    label="Magic prompt", value=False, elem_id="is-magicprompt"
-                )
-                magic_prompt_length = gr.Slider(
-                    label="Max magic prompt length",
-                    value=100,
-                    minimum=1,
-                    maximum=300,
-                    step=10,
-                )
-                magic_temp_value = gr.Slider(
-                    label="Magic prompt creativity",
-                    value=0.7,
-                    minimum=0.1,
-                    maximum=3.0,
-                    step=0.10,
-                )
+                with gr.Group():
+                    is_magic_prompt = gr.Checkbox(
+                        label="Magic prompt", value=False, elem_id="is-magicprompt"
+                    )
+                    magic_prompt_length = gr.Slider(
+                        label="Max magic prompt length",
+                        value=100,
+                        minimum=1,
+                        maximum=300,
+                        step=10,
+                    )
+                    magic_temp_value = gr.Slider(
+                        label="Magic prompt creativity",
+                        value=0.7,
+                        minimum=0.1,
+                        maximum=3.0,
+                        step=0.10,
+                    )
 
                 is_feeling_lucky = gr.Checkbox(
                     label="I'm feeling lucky", value=False, elem_id="is-feelinglucky"
                 )
 
-                use_fixed_seed = gr.Checkbox(
-                    label="Fixed seed", value=False, elem_id="is-fixed-seed"
-                )
+                
                 write_prompts = gr.Checkbox(
                     label="Write prompts to file", value=False, elem_id="write-prompts"
                 )
@@ -202,6 +202,15 @@ class Script(scripts.Script):
                     info = gr.HTML(html)
 
                 with gr.Group():
+                    with gr.Accordion("Jinja2 templates", open=False):
+                        enable_jinja_templates = gr.Checkbox(
+                            label="Enable Jinja2 templates", value=False, elem_id="enable-jinja-templates"
+                        )
+
+                        with gr.Accordion("Help for Jinja2 templates", open=False):
+                            jinja_info = gr.HTML(jinja_help)
+
+                with gr.Group():
                     with gr.Accordion("Advanced options", open=False):
                         unlink_seed_from_prompt = gr.Checkbox(
                             label="Unlink seed from prompt", value=False, elem_id="unlink-seed-from-prompt"
@@ -211,12 +220,11 @@ class Script(scripts.Script):
                             label="Disable negative prompt", value=False, elem_id="disable-negative-prompt"
                         )
 
-                        enable_jinja_templates = gr.Checkbox(
-                            label="Enable Jinja2 templates", value=False, elem_id="enable-jinja-templates"
+                        use_fixed_seed = gr.Checkbox(
+                           label="Fixed seed", value=False, elem_id="is-fixed-seed"
                         )
 
-                        with gr.Accordion("Help for Jinja2 templates", open=False):
-                            jinja_info = gr.HTML(jinja_help)
+                        
 
         return [
             info,
@@ -349,6 +357,7 @@ class Script(scripts.Script):
             # Need a minimum of batch size images to avoid errors
             p.batch_size = 1
             p.all_prompts = all_prompts[0:1]
+
         p.all_seeds = all_seeds
 
         p.prompt_for_display = original_prompt

@@ -53,3 +53,4 @@
 0.25.1 Explicitly setting encoding when writing prompts to file. Also ignoring errors
 0.26.0 Added option to disable the negative prompt
 0.27.0 Added option to disable image generation - useful in combination with writing prompts to file
+0.27.1 Slight ui re-organisation
