@@ -1,0 +1,15 @@
+__aberration__
+__beast__
+__celestial__
+__construct__
+__dragon__
+__elemental__
+__fey__
+__fiend__
+__giant__
+__humanoid__
+__monstrosity__
+__ooze__
+__plant__
+__swarm__
+__undead__

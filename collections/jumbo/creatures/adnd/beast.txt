@@ -1,0 +1,89 @@
+Allosaurus
+Ankylosaurus
+Ape
+Axe Beak
+Baboon
+Badger
+Bat
+Black Bear
+Blood Hawk
+Boar
+Brown Bear
+Camel
+Cat
+Constrictor Snake
+Crab
+Crocodile
+Deer
+Dire Wolf
+Draft Horse
+Eagle
+Elephant
+Elk
+Flying Snake
+Frog
+Giant Ape
+Giant Badger
+Giant Bat
+Giant Boar
+Giant Centipede
+Giant Constrictor Snake
+Giant Crab
+Giant Crocodile
+Giant Eagle
+Giant Elk
+Giant Fire Beetle
+Giant Frog
+Giant Goat
+Giant Hyena
+Giant Lizard
+Giant Octopus
+Giant Owl
+Giant Poisonous Snake
+Giant Rat
+Giant Scorpion
+Giant Sea Horse
+Giant Shark
+Giant Spider
+Giant Toad
+Giant Vulture
+Giant Wasp
+Giant Weasel
+Giant Wolf Spider
+Goat
+Hawk
+Hunter Shark
+Hyena
+Jackal
+Killer Whale
+Lion
+Lizard
+Mammoth
+Mastiff
+Mule
+Octopus
+Owl
+Panther
+Plesiosaurus
+Poisonous Snake
+Polar Bear
+Pony
+Pteranodon
+Quipper
+Rat
+Raven
+Reef Shark
+Rhinoceros
+Riding Horse
+Saber-Toothed Tiger
+Scorpion
+Sea Horse
+Spider
+Stirge
+Tiger
+Triceratops
+Tyrannosaurus Rex
+Vulture
+Warhorse
+Weasel
+Wolf

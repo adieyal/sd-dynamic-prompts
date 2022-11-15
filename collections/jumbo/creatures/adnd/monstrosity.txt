@@ -1,0 +1,51 @@
+Abominable Yeti
+Androsphinx
+Ankheg
+Basilisk
+Behir
+Bulette
+Carrion Crawler
+Centaur
+Chimera
+Cockatrice
+Darkmantle
+Death Dog
+Displacer Beast
+Drider
+Ettercap
+Gorgon
+Grick
+Grick alpha
+Griffon
+Guardian Naga
+Gynosphinx
+Harpy
+Hippogriff
+Hook Horror
+Hydra
+Lamia
+Manticore
+Medusa
+Merrow
+Minotaur
+Owlbear
+Peryton
+Phase Spider
+Piercer
+Purple Worm
+Remorhaz
+Roc
+Roper
+Rust Monster
+Spirit Naga
+Umber Hulk
+Winter Wolf
+Worg
+Yeti
+Young Remorhaz
+Yuan-ti Abomination
+Yuan-ti Malison
+Doppelganger
+Mimic
+Kraken
+Tarrasque

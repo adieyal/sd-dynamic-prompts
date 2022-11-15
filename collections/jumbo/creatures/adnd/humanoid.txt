@@ -1,0 +1,71 @@
+Aarakocra
+Acolyte
+Archmage
+Assassin
+Bandit
+Bandit Captain
+Berserker
+Commoner
+Cult Fanatic
+Cultist
+Druid
+Gladiator
+Guard
+Knight
+Mage
+Noble
+Priest
+Scout
+Spy
+Thug
+Tribal Warrior
+Veteran
+Bullywug
+Duergar
+Drow
+Drow Elite Warrior
+Drow Mage
+Drow Priestess of Lolth
+Githyanki Knight
+Githyanki Warrior
+Githzerai Monk
+Githzerai Zerth
+Gnoll
+Gnoll Pack Lord
+Deep Gnome (Svirfneblin)
+Bugbear
+Bugbear Chief
+Goblin
+Goblin Boss
+Hobgoblin
+Hobgoblin Captain
+Hobgoblin Warlord
+Grimlock
+Werebear
+Wereboar
+Wererat
+Weretiger
+Werewolf
+Half-Red Dragon Veteran
+Kenku
+Kobold
+Winged Kobold
+Kuo-toa
+Kuo-toa Archpriest
+Kuo-toa Whip
+Lizard King/Queen
+Lizardfolk
+Lizardfolk Shaman
+Merfolk
+Orc
+Orc Eye of Gruumsh
+Orc War Chief
+Orog
+Quaggoth
+Sahuagin
+Sahuagin Baron
+Sahuagin Priestess
+Jackalwere
+Thri-kreen
+Troglodyte
+Yuan-ti Pureblood
