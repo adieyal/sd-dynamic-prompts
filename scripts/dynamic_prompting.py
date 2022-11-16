@@ -41,7 +41,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "0.27.3"
+VERSION = "0.27.4"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -107,6 +107,20 @@ def new_generation(prompt) -> PromptGenerator:
 
 class Script(scripts.Script):
     def _create_generator(self, original_prompt, original_seed, is_dummy=False, is_feeling_lucky=False, enable_jinja_templates=False, is_combinatorial=False, is_magic_prompt=False, combinatorial_batches=1, magic_prompt_length=100, magic_temp_value=0.7):
+        logger.debug(f"""
+        Creating generator:
+            original_prompt: {original_prompt}
+            original_seed: {original_seed}
+            is_dummy: {is_dummy}
+            is_feeling_lucky: {is_feeling_lucky}
+            enable_jinja_templates: {enable_jinja_templates}
+            is_combinatorial: {is_combinatorial}
+            is_magic_prompt: {is_magic_prompt}
+            combinatorial_batches: {combinatorial_batches}
+            magic_prompt_length: {magic_prompt_length}
+            magic_temp_value: {magic_temp_value}
+        """)
+
         if is_dummy:
             return DummyGenerator(original_prompt)
         elif is_feeling_lucky:
@@ -262,6 +276,7 @@ class Script(scripts.Script):
         **kwargs
     ):
         if not is_enabled:
+            logger.debug("Dynamic prompts disabled - exiting")
             return p
         
         generator = self._negative_prompt_generator
@@ -293,6 +308,7 @@ class Script(scripts.Script):
     ):
 
         if not is_enabled:
+            logger.debug("Dynamic prompts disabled - exiting")
             return p
 
         fix_seed(p)
@@ -312,6 +328,7 @@ class Script(scripts.Script):
             combinatorial_batches = 1
 
         try:
+            logger.debug("Creating positive generator")
             generator = self._create_generator(
                 original_prompt,
                 original_seed,
@@ -325,7 +342,7 @@ class Script(scripts.Script):
                 is_dummy=False
             )
 
-        
+            logger.debug("Creating negative generator")
             self._negative_prompt_generator = self._create_generator(
                 p.negative_prompt,
                 original_seed,
@@ -374,6 +391,7 @@ class Script(scripts.Script):
 
         p.all_prompts = all_prompts
         if no_image_generation:
+            logger.debug("No image generation requested - exiting")
             # Need a minimum of batch size images to avoid errors
             p.batch_size = 1
             p.all_prompts = all_prompts[0:1]
