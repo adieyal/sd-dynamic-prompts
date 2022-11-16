@@ -46,19 +46,26 @@ class MagicPromptGenerator(PromptGenerator):
 
         new_prompts = []
         for i in trange(len(prompts), desc="Generating Magic prompts"):
-            prompt = prompts[i]
+            orig_prompt = prompts[i]
             magic_prompt = self._generator(
-                prompt,
+                orig_prompt,
                 max_length=self._max_prompt_length,
                 temperature=self._temperature,
             )[0]["generated_text"]
 
-            magic_prompt = self.clean_up_magic_prompt(magic_prompt)
+            magic_prompt = self.clean_up_magic_prompt(orig_prompt, magic_prompt)
             new_prompts.append(magic_prompt)
 
         return new_prompts
 
-    def clean_up_magic_prompt(self, prompt):
+    def clean_up_magic_prompt(self, orig_prompt, prompt):
+        # remove the original prompt to keep it out of the MP fixes
+        removed_prompt_prefix = False
+        if re.search('^' + re.escape(orig_prompt), prompt):
+            prompt = prompt.replace(orig_prompt, '', 1)
+            removed_prompt_prefix = True
+
+        # old-style weight elevation
         prompt = prompt.translate(str.maketrans("{}", "()")).strip()
 
         # useless non-word characters at the begin/end
@@ -70,7 +77,7 @@ class MagicPromptGenerator(PromptGenerator):
 
         # clean up whitespace in hyphens between words
         prompt = re.sub(r"\b\s+\-\s+\b", "-", prompt)
-        prompt = re.sub(r"\s*[,;\.]+\s*", ", ", prompt)  # other analogues to ', '
+        prompt = re.sub(r"\s*[,;\.]+\s*(?=[a-zA-Z(])", ", ", prompt)  # other analogues to ', '
         prompt = re.sub(r"\s+_+\s+", " ", prompt)  # useless underscores between phrases
         prompt = re.sub(r"\b,\s*,\s*\b", ", ", prompt)  # empty phrases
 
@@ -81,5 +88,9 @@ class MagicPromptGenerator(PromptGenerator):
             weight = round(pow(1.1, len(match[1])), 2)
 
             prompt = prompt.replace(full_match, f"({phrase}:{weight})")
+
+        # Put the original prompt back in
+        if removed_prompt_prefix:
+            prompt = orig_prompt + " " + prompt
 
         return prompt
