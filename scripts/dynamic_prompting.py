@@ -41,7 +41,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "0.27.1"
+VERSION = "0.27.2"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -244,6 +244,8 @@ class Script(scripts.Script):
         ]
 
     def process_batch(self, p, *args, **kwargs):
+        if "is_enabled" in kwargs and not kwargs["is_enabled"]:
+            return p
         generator = self._negative_prompt_generator
 
         try:
