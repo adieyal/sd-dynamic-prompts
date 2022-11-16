@@ -187,7 +187,7 @@ class Script(scripts.Script):
                     magic_prompt_length = gr.Slider(
                         label="Max magic prompt length",
                         value=100,
-                        minimum=1,
+                        minimum=30,
                         maximum=300,
                         step=10,
                     )
