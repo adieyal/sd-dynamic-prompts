@@ -29,9 +29,9 @@ from prompts.generators.jinjagenerator import JinjaGenerator
 from prompts.generators.promptgenerator import GeneratorException
 from prompts import constants
 
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-
+logger.setLevel(logging.DEBUG)
 base_dir = Path(scripts.basedir())
 
 wildcard_dir = getattr(opts, "wildcard_dir", None)
