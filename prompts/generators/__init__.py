@@ -11,3 +11,4 @@ from .dummygenerator import DummyGenerator
 from .feelinglucky import FeelingLuckyGenerator
 from .magicprompt import MagicPromptGenerator
 from .randomprompt import RandomPromptGenerator
+from .attentiongenerator import AttentionGenerator

@@ -59,3 +59,4 @@
 0.27.4 Added debug logging
 0.28.0 Added tooltips to all components, with thanks to @Eugenii10
 0.28.1 Minor magic prompt fixes, with thanks to @SineSwiper
+0.29.0 Added attention grabber

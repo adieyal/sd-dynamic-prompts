@@ -82,6 +82,10 @@
     content: "Disable image generation. Useful if you only want to generate text prompts."
 }
 
+#is-attention-grabber:after {
+    content: "Add emphasis to a randomly selected keyword in the prompt."
+}
+
 .dynamic-prompting h2 {
     font-size: 1.2em;
     font-weight: bolder;

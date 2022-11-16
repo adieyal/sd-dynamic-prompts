@@ -22,7 +22,8 @@ from prompts.generators import (
     BatchedCombinatorialPromptGenerator,
     PromptGenerator,
     FeelingLuckyGenerator,
-    DummyGenerator
+    DummyGenerator,
+    AttentionGenerator
 )
 
 from prompts.generators.jinjagenerator import JinjaGenerator
@@ -41,7 +42,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "0.28.1"
+VERSION = "0.29.0"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -106,7 +107,7 @@ def new_generation(prompt) -> PromptGenerator:
     return generator
 
 class Script(scripts.Script):
-    def _create_generator(self, original_prompt, original_seed, is_dummy=False, is_feeling_lucky=False, enable_jinja_templates=False, is_combinatorial=False, is_magic_prompt=False, combinatorial_batches=1, magic_prompt_length=100, magic_temp_value=0.7):
+    def _create_generator(self, original_prompt, original_seed, is_dummy=False, is_feeling_lucky=False, is_attention_grabber=False, enable_jinja_templates=False, is_combinatorial=False, is_magic_prompt=False, combinatorial_batches=1, magic_prompt_length=100, magic_temp_value=0.7):
         logger.debug(f"""
         Creating generator:
             original_prompt: {original_prompt}
@@ -140,6 +141,8 @@ class Script(scripts.Script):
                 generator, magic_prompt_length, magic_temp_value
             )
 
+        if is_attention_grabber:
+            generator = AttentionGenerator(generator)
         return generator
     
     def title(self):
@@ -180,28 +183,33 @@ class Script(scripts.Script):
                         elem_id="combinatorial-times",
                     )
 
-                with gr.Group():
-                    is_magic_prompt = gr.Checkbox(
-                        label="Magic prompt", value=False, elem_id="is-magicprompt"
-                    )
-                    magic_prompt_length = gr.Slider(
-                        label="Max magic prompt length",
-                        value=100,
-                        minimum=30,
-                        maximum=300,
-                        step=10,
-                    )
-                    magic_temp_value = gr.Slider(
-                        label="Magic prompt creativity",
-                        value=0.7,
-                        minimum=0.1,
-                        maximum=3.0,
-                        step=0.10,
+                with gr.Box():
+                    with gr.Group():
+                        is_magic_prompt = gr.Checkbox(
+                            label="Magic prompt", value=False, elem_id="is-magicprompt"
+                        )
+                        magic_prompt_length = gr.Slider(
+                            label="Max magic prompt length",
+                            value=100,
+                            minimum=30,
+                            maximum=300,
+                            step=10,
+                        )
+                        magic_temp_value = gr.Slider(
+                            label="Magic prompt creativity",
+                            value=0.7,
+                            minimum=0.1,
+                            maximum=3.0,
+                            step=0.10,
+                        )
+
+                    is_feeling_lucky = gr.Checkbox(
+                        label="I'm feeling lucky", value=False, elem_id="is-feelinglucky"
                     )
 
-                is_feeling_lucky = gr.Checkbox(
-                    label="I'm feeling lucky", value=False, elem_id="is-feelinglucky"
-                )
+                    is_attention_grabber = gr.Checkbox(
+                        label="Attention grabber", value=False, elem_id="is-attention-grabber"
+                    )
 
                 
                 write_prompts = gr.Checkbox(
@@ -247,6 +255,7 @@ class Script(scripts.Script):
             combinatorial_batches,
             is_magic_prompt,
             is_feeling_lucky,
+            is_attention_grabber,
             magic_prompt_length,
             magic_temp_value,
             use_fixed_seed,
@@ -264,6 +273,7 @@ class Script(scripts.Script):
         combinatorial_batches,
         is_magic_prompt,
         is_feeling_lucky,
+        is_attention_grabber,
         magic_prompt_length,
         magic_temp_value,
         use_fixed_seed,
@@ -297,6 +307,7 @@ class Script(scripts.Script):
         combinatorial_batches,
         is_magic_prompt,
         is_feeling_lucky,
+        is_attention_grabber,
         magic_prompt_length,
         magic_temp_value,
         use_fixed_seed,
@@ -333,6 +344,7 @@ class Script(scripts.Script):
                 original_prompt,
                 original_seed,
                 is_feeling_lucky=is_feeling_lucky,
+                is_attention_grabber=is_attention_grabber,
                 enable_jinja_templates=enable_jinja_templates,
                 is_combinatorial=is_combinatorial,
                 is_magic_prompt=is_magic_prompt,
@@ -347,6 +359,7 @@ class Script(scripts.Script):
                 p.negative_prompt,
                 original_seed,
                 is_feeling_lucky=is_feeling_lucky,
+                is_attention_grabber=is_attention_grabber,
                 enable_jinja_templates=enable_jinja_templates,
                 is_combinatorial=is_combinatorial,
                 is_magic_prompt=is_magic_prompt,

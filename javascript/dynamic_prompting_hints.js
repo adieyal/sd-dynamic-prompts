@@ -23,6 +23,7 @@ If you're running low on VRAM, you might get a CUDA error.`.trim(),
 
 "Max magic prompt length": "Controls the maximum length in tokens of the generated prompt.",
 "Magic prompt creativity": "Adjusts the generated prompt. You will need to experiment with this setting.",
+
 "I'm feeling lucky": `
 Uses the lexica.art API to create random prompts.
 The prompt in the main prompt box is used as a search string.
@@ -30,11 +31,13 @@ Leaving the prompt box blank returns a list of completely randomly chosen prompt
 Try it out, it can be quite fun.
 `.trim(),
 
+"Attention grabber": `Randomly selects a keyword from the prompt and adds emphasis to it. Try this with Fixed Seed enabled.`.trim(),
+
 "Write prompts to file": `
 The generated file is a slugified version of the prompt and can be found in the same directory as the generated images.
 E.g. in ./outputs/txt2img-images/.`.trim(),
 
-"Don't generate images": "Be sure to check the 'Write prompts to file' checkbox if you don't want to lose the generated prompts.",
+"Don't generate images": "Be sure to check the 'Write prompts to file' checkbox if you don't want to lose the generated prompts. Note, one image is still generated.",
 "Enable Jinja2 templates": "Jinja2 templates are an expressive alternative to the standard syntax. See the Help section below for instructions.",
 "Unlink seed from prompt": "Check this if you want to generate random prompts, even if your seed is fixed",
 "Disable negative prompt": "Ignore the negative prompt. Magic Prompt and I'm feeling lucky generate negative prompts by default, check this to disable that functionality.",
