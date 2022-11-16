@@ -41,7 +41,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "0.27.2"
+VERSION = "0.27.3"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -243,9 +243,27 @@ class Script(scripts.Script):
             no_image_generation
         ]
 
-    def process_batch(self, p, *args, **kwargs):
-        if "is_enabled" in kwargs and not kwargs["is_enabled"]:
+    def process_batch(self, p,
+        info,
+        is_enabled,
+        is_combinatorial,
+        combinatorial_batches,
+        is_magic_prompt,
+        is_feeling_lucky,
+        magic_prompt_length,
+        magic_temp_value,
+        use_fixed_seed,
+        write_prompts,
+        unlink_seed_from_prompt,
+        disable_negative_prompt,
+        enable_jinja_templates,
+        no_image_generation,
+        *args,
+        **kwargs
+    ):
+        if not is_enabled:
             return p
+        
         generator = self._negative_prompt_generator
 
         try:
