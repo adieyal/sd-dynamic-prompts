@@ -11,7 +11,7 @@ class AttentionGenerator(PromptGenerator):
 
     def _add_emphasis(self, prompt):
         doc = self._nlp(prompt)
-        keywords = doc.ents
+        keywords = [k for k in doc.noun_chunks]
         if len(keywords) == 0:
             return prompt
 
