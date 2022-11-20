@@ -370,6 +370,9 @@ class Script(scripts.Script):
             )
 
             all_prompts = generator.generate(num_images)
+            logger.debug("Printing positive prompts")
+            for prompt in all_prompts:
+                logger.debug(f"Prompt: {prompt}")
             p.negative_prompt = self._negative_prompt_generator.generate(1)[0]
             
         except GeneratorException as e:
@@ -415,6 +418,10 @@ class Script(scripts.Script):
 
         p.prompt = original_prompt
         p.seed = original_seed
+
+        logger.debug("Finall positive prompts check")
+        for prompt in p.all_prompts:
+            logger.debug(f"Prompt: {prompt}")
 
 
 wildcard_manager.ensure_directory()
