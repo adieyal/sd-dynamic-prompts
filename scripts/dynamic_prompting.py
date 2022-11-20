@@ -42,7 +42,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "0.29.1"
+VERSION = "0.29.2"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
