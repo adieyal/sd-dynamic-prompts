@@ -222,6 +222,15 @@ Use the [lexica.art](https://lexica.art) API to create random prompts. Useful if
 
 Leaving the prompt box blank returns a list of completely randomly chosen prompts.
 
+## Attention grabber
+This option randomly selects a keyword in your prompt and adds a random amount of emphasis. Below is an example of how this affects the prompt:
+
+	a portrait an anthropomorphic panda mage casting a spell, wearing mage robes, landscape in background, cute, dnd character art portrait, by jason felix and peter mohrbacher, cinematic lighting
+
+<img src="images/emphasis.png">
+
+Tick the __Fixed seed__ checkbox under __Advanced options__ to see how emphasis changes your image without changing seed.
+
 
 ## Write prompts to file
 Check the write prompts to file checkbox in order to create a file with all generated prompts. The generated file is a slugified version of the prompt and can be found in the same directory as the generated images, e.g. outputs/txt2img-images
