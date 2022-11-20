@@ -107,7 +107,7 @@ def new_generation(prompt) -> PromptGenerator:
     return generator
 
 class Script(scripts.Script):
-    def _create_generator(self, original_prompt, original_seed, is_dummy=False, is_feeling_lucky=False, is_attention_grabber=False, enable_jinja_templates=False, is_combinatorial=False, is_magic_prompt=False, combinatorial_batches=1, magic_prompt_length=100, magic_temp_value=0.7):
+    def _create_generator(self, label, original_prompt, original_seed, is_dummy=False, is_feeling_lucky=False, is_attention_grabber=False, enable_jinja_templates=False, is_combinatorial=False, is_magic_prompt=False, combinatorial_batches=1, magic_prompt_length=100, magic_temp_value=0.7):
         logger.debug(f"""
         Creating generator:
             original_prompt: {original_prompt}
@@ -138,7 +138,7 @@ class Script(scripts.Script):
 
         if is_magic_prompt:
             generator = MagicPromptGenerator(
-                generator, magic_prompt_length, magic_temp_value
+                label, generator, magic_prompt_length, magic_temp_value
             )
 
         if is_attention_grabber:
@@ -341,6 +341,7 @@ class Script(scripts.Script):
         try:
             logger.debug("Creating positive generator")
             generator = self._create_generator(
+                "Positive prompt generator",
                 original_prompt,
                 original_seed,
                 is_feeling_lucky=is_feeling_lucky,
@@ -356,6 +357,7 @@ class Script(scripts.Script):
 
             logger.debug("Creating negative generator")
             self._negative_prompt_generator = self._create_generator(
+                "Negative prompt generator",
                 p.negative_prompt,
                 original_seed,
                 is_feeling_lucky=is_feeling_lucky,
@@ -419,7 +421,7 @@ class Script(scripts.Script):
         p.prompt = original_prompt
         p.seed = original_seed
 
-        logger.debug("Finall positive prompts check")
+        logger.debug("Final positive prompts check")
         for prompt in p.all_prompts:
             logger.debug(f"Prompt: {prompt}")
 
