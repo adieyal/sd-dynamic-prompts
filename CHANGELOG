@@ -62,3 +62,4 @@
 0.29.0 Added attention grabber
 0.29.1 Changed attention grabber to use noun phrases
 0.29.2 Fixed camera models file in the jumbo collection - see https://github.com/adieyal/sd-dynamic-prompts/issues/69
+0.29.3 Fixed localization for help text - see https://github.com/adieyal/sd-dynamic-prompts/issues/68
