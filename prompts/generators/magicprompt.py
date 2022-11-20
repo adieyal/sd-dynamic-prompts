@@ -61,8 +61,8 @@ class MagicPromptGenerator(PromptGenerator):
     def clean_up_magic_prompt(self, orig_prompt, prompt):
         # remove the original prompt to keep it out of the MP fixes
         removed_prompt_prefix = False
-        if re.search('^' + re.escape(orig_prompt), prompt):
-            prompt = prompt.replace(orig_prompt, '', 1)
+        if re.search("^" + re.escape(orig_prompt), prompt):
+            prompt = prompt.replace(orig_prompt, "", 1)
             removed_prompt_prefix = True
 
         # old-style weight elevation
