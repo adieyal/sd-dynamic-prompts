@@ -50,42 +50,6 @@
     border: 2px solid #0C111C;
 }
 
-#is-combinatorial:after {
-    content: "Generate all possible prompts up to a maximum of Batch count * Batch size)"
-}
-
-#is-magicprompt:after {
-    content: "Automatically update your prompt with interesting modifiers. (Runs slowly the first time)"
-}
-
-#is-feelinglucky:after {
-    content: "Generate random prompts from lexica.art (your prompt is used as a search query)."
-}
-
-#is-fixed-seed:after {
-    content: "Use the same seed for all prompts in this batch"
-}
-
-#write-prompts:after {
-    content: "Write all generated prompts to a file"
-}
-
-#unlink-seed-from-prompt:after {
-    content: "If this is set, then random prompts are generated, even if the seed is the same."
-}
-
-#disable-negative-prompt:after {
-    content: "Useful for I'm feeling lucky and Magic Prompt. If this is set, then negative prompts are not generated."
-}
-
-#no-image-generation:after {
-    content: "Disable image generation. Useful if you only want to generate text prompts."
-}
-
-#is-attention-grabber:after {
-    content: "Add emphasis to a randomly selected keyword in the prompt."
-}
-
 .dynamic-prompting h2 {
     font-size: 1.2em;
     font-weight: bolder;
