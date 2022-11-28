@@ -30,9 +30,9 @@ from prompts.generators.jinjagenerator import JinjaGenerator
 from prompts.generators.promptgenerator import GeneratorException
 from prompts import constants
 
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-
+logger.setLevel(logging.DEBUG)
 base_dir = Path(scripts.basedir())
 
 wildcard_dir = getattr(opts, "wildcard_dir", None)
@@ -107,7 +107,7 @@ def new_generation(prompt) -> PromptGenerator:
     return generator
 
 class Script(scripts.Script):
-    def _create_generator(self, original_prompt, original_seed, is_dummy=False, is_feeling_lucky=False, is_attention_grabber=False, enable_jinja_templates=False, is_combinatorial=False, is_magic_prompt=False, combinatorial_batches=1, magic_prompt_length=100, magic_temp_value=0.7):
+    def _create_generator(self, label, original_prompt, original_seed, is_dummy=False, is_feeling_lucky=False, is_attention_grabber=False, enable_jinja_templates=False, is_combinatorial=False, is_magic_prompt=False, combinatorial_batches=1, magic_prompt_length=100, magic_temp_value=0.7):
         logger.debug(f"""
         Creating generator:
             original_prompt: {original_prompt}
@@ -138,7 +138,7 @@ class Script(scripts.Script):
 
         if is_magic_prompt:
             generator = MagicPromptGenerator(
-                generator, magic_prompt_length, magic_temp_value
+                label, generator, magic_prompt_length, magic_temp_value
             )
 
         if is_attention_grabber:
@@ -341,6 +341,7 @@ class Script(scripts.Script):
         try:
             logger.debug("Creating positive generator")
             generator = self._create_generator(
+                "Positive prompt generator",
                 original_prompt,
                 original_seed,
                 is_feeling_lucky=is_feeling_lucky,
@@ -356,6 +357,7 @@ class Script(scripts.Script):
 
             logger.debug("Creating negative generator")
             self._negative_prompt_generator = self._create_generator(
+                "Negative prompt generator",
                 p.negative_prompt,
                 original_seed,
                 is_feeling_lucky=is_feeling_lucky,
@@ -370,6 +372,11 @@ class Script(scripts.Script):
             )
 
             all_prompts = generator.generate(num_images)
+
+            logger.debug("Printing positive prompts")
+            for prompt in all_prompts:
+                logger.debug(f"Prompt: {prompt}")
+            #p.negative_prompt = self._negative_prompt_generator.generate(1)[0]
             p.all_negative_prompts = self._negative_prompt_generator.generate(num_images)
             
         except GeneratorException as e:
@@ -415,6 +422,10 @@ class Script(scripts.Script):
 
         p.prompt = original_prompt
         p.seed = original_seed
+
+        logger.debug("Final positive prompts check")
+        for prompt in p.all_prompts:
+            logger.debug(f"Prompt: {prompt}")
 
 
 wildcard_manager.ensure_directory()
