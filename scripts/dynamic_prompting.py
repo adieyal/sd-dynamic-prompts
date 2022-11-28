@@ -42,7 +42,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "0.29.4"
+VERSION = "0.29.5"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -166,7 +166,7 @@ class Script(scripts.Script):
 
         with gr.Group():
             with gr.Accordion("Dynamic Prompts", open=False):
-                is_enabled = gr.Checkbox(label="Dynamic Prompts enabled", value=True)
+                is_enabled = gr.Checkbox(label="Dynamic Prompts enabled", value=True, elem_id="dynamic-prompts-enabled")
 
                 with gr.Group():
                     is_combinatorial = gr.Checkbox(
@@ -288,7 +288,7 @@ class Script(scripts.Script):
         if not is_enabled:
             logger.debug("Dynamic prompts disabled - exiting")
             return p
-        
+
         generator = self._negative_prompt_generator
 
         try:
@@ -321,7 +321,7 @@ class Script(scripts.Script):
         if not is_enabled:
             logger.debug("Dynamic prompts disabled - exiting")
             return p
-
+        
         fix_seed(p)
 
         original_prompt = p.prompt[0] if type(p.prompt) == list else p.prompt

@@ -64,3 +64,4 @@
 0.29.2 Fixed camera models file in the jumbo collection - see https://github.com/adieyal/sd-dynamic-prompts/issues/69
 0.29.3 Fixed localization for help text - see https://github.com/adieyal/sd-dynamic-prompts/issues/68
 0.29.4 Fixed pipe (|) in combinations string - see https://github.com/adieyal/sd-dynamic-prompts/issues/54
+0.29.5 Added link to documentation on github
