@@ -7,6 +7,9 @@ from prompts import constants
 from prompts.wildcardmanager import WildcardManager
 from . import PromptGenerator, re_combinations, re_wildcard
 
+variant_range = tuple[int, int]
+options = list[str]
+
 logger = logging.getLogger(__name__)
 
 class RandomPromptGenerator(PromptGenerator):
@@ -21,12 +24,12 @@ class RandomPromptGenerator(PromptGenerator):
                 self._random.seed(seed)
         self._template = template
 
-    def _parse_range(self, range_str, num_variants):
+    def _parse_range(self, range_str: str, num_variants: int) -> variant_range:
         default_low = 0
         default_high = num_variants
 
         if range_str is None:
-            return None
+            return (default_low, default_high)
 
         parts = range_str.split("-")
         if len(parts) == 1:
@@ -39,12 +42,21 @@ class RandomPromptGenerator(PromptGenerator):
 
         return min(low, high), max(low, high)
 
-    def _parse_combinations(self, combinations_str):
-        variants = [s.strip() for s in combinations_str.split("|")]
-        splits = variants[0].split("$$")
-        quantity = splits.pop(0) if len(splits) > 1 else str(constants.DEFAULT_NUM_COMBINATIONS)
-        joiner = splits.pop(0) if len(splits) > 1 else constants.DEFAULT_COMBO_JOINER
-        variants[0] = splits[0]
+    def _parse_combinations(self, combinations_str: str) -> tuple[variant_range, str, options]:
+        variants = combinations_str.split("|")
+        joiner = constants.DEFAULT_COMBO_JOINER
+        quantity = str(constants.DEFAULT_NUM_COMBINATIONS)
+
+        sections = combinations_str.split("$$")
+
+        if len(sections) == 3:
+            joiner = sections[1]
+            sections.pop(1)
+
+        if len(sections) == 2:
+            quantity = sections[0]
+            variants = sections[1].split("|")
+
         low_range, high_range = self._parse_range(quantity, len(variants))
 
         return (low_range, high_range), joiner, variants

@@ -117,42 +117,68 @@ class TestRandomPromptVariants:
         assert variant == "I love bread"
 
     def test_parse_combinations(self, generator):
-        quantity, joiner, options = generator._parse_combinations("bread|butter")
+        quantity, _, options = generator._parse_combinations("bread|butter")
         assert quantity == (constants.DEFAULT_NUM_COMBINATIONS, constants.DEFAULT_NUM_COMBINATIONS)
-        assert joiner == constants.DEFAULT_COMBO_JOINER
         assert options == ["bread", "butter"]
 
-        quantity, joiner, options = generator._parse_combinations("2$$bread|butter")
+        quantity, _, options = generator._parse_combinations("2$$bread|butter")
         assert quantity == (2, 2)
-        assert joiner == constants.DEFAULT_COMBO_JOINER
         assert options == ["bread", "butter"]
 
-        quantity, joiner, options = generator._parse_combinations("1-2$$bread|butter")
+        quantity, _, options = generator._parse_combinations("1-2$$bread|butter")
         assert quantity == (1, 2)
-        assert joiner == constants.DEFAULT_COMBO_JOINER
         assert options == ["bread", "butter"]
 
-        quantity, joiner, options = generator._parse_combinations("2-1$$bread|butter")
+        quantity, _, options = generator._parse_combinations("2-1$$bread|butter")
         assert quantity == (1, 2)
-        assert joiner == constants.DEFAULT_COMBO_JOINER
         assert options == ["bread", "butter"]
 
-        quantity, joiner, options = generator._parse_combinations("1-$$bread|butter")
+        quantity, _, options = generator._parse_combinations("1-$$bread|butter")
         assert quantity == (1, 2)
-        assert joiner == constants.DEFAULT_COMBO_JOINER
         assert options == ["bread", "butter"]
 
-        quantity, joiner, options = generator._parse_combinations("-1$$bread|butter")
+        quantity, _, options = generator._parse_combinations("-1$$bread|butter")
         assert quantity == (0, 1)
-        assert joiner == constants.DEFAULT_COMBO_JOINER
         assert options == ["bread", "butter"]
 
-        quantity, joiner, options = generator._parse_combinations("2$$and$$bread|butter")
+        quantity, _, options = generator._parse_combinations("2$$and$$bread|butter")
         assert quantity == (2, 2)
-        assert joiner == "and"
         assert options == ["bread", "butter"]
 
-        quantity, joiner, options = generator._parse_combinations("")
+        quantity, _, options = generator._parse_combinations("")
         assert quantity == (1, 1)
-        assert joiner == ","
         assert options == [""]
+
+    def test_joiner(self, generator):
+        _, joiner, _ = generator._parse_combinations("bread|butter")
+        assert joiner == constants.DEFAULT_COMBO_JOINER
+
+        _, joiner, _ = generator._parse_combinations("2$$bread|butter")
+        assert joiner == constants.DEFAULT_COMBO_JOINER
+
+        _, joiner, _ = generator._parse_combinations("2$$and$$bread|butter")
+        assert joiner == "and"
+
+        _, joiner, _ = generator._parse_combinations("")
+        assert joiner == ","
+
+        _, joiner, _ = generator._parse_combinations("2$$|$$bread|butter")
+        assert joiner == "|"
+    
+    def test_photographers(self, generator):
+        quantity, joiner, options = generator._parse_combinations("2-4$$|$$a|b|c")
+        
+class TestGeneratorPrompt:
+    def test_simple(self, generator):
+        template = "I love {bread|butter}"
+        generator._template = template
+
+        prompt = generator.generate(1)
+        assert prompt == ["I love butter"]
+
+        prompt = generator.generate(2)
+        assert prompt == ["I love butter", "I love butter"]
+
+        prompt = generator.generate(4)
+        print(prompt)
+        assert prompt == ["I love butter", "I love bread", "I love butter", "I love bread"]
