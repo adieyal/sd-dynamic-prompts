@@ -67,3 +67,4 @@
 0.29.5 Added link to documentation on github
 0.29.6 Maximum filesize for prompts is 50 to prevent issues on windows
 0.29.7 Removed python type aliases for backwards compatibility
+0.29.8 Fixed unlink seed from prompt - see https://github.com/adieyal/sd-dynamic-prompts/issues/80
