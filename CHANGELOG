@@ -65,3 +65,4 @@
 0.29.3 Fixed localization for help text - see https://github.com/adieyal/sd-dynamic-prompts/issues/68
 0.29.4 Fixed pipe (|) in combinations string - see https://github.com/adieyal/sd-dynamic-prompts/issues/54
 0.29.5 Added link to documentation on github
+0.29.6 Maximum filesize for prompts is 50 to prevent issues on windows
