@@ -6,9 +6,34 @@ import random
 from prompts import constants
 from prompts.wildcardmanager import WildcardManager
 from . import PromptGenerator, re_combinations, re_wildcard
+from modules.shared import opts,state
+
+is_debug = getattr(opts, "is_debug", False)
 
 logger = logging.getLogger(__name__)
+logger.handlers.clear()
+logger.setLevel(logging.DEBUG)
 
+# 일반 핸들러. 할 필요 업음. 이미 메인에서 출력해줌
+streamFormatter = logging.Formatter("sp %(asctime)s %(levelname)s\t: %(message)s")
+streamHandler = logging.StreamHandler()
+if is_debug :
+    streamHandler.setLevel(logging.DEBUG)
+else:
+    streamHandler.setLevel(logging.INFO)
+#streamHandler.setLevel(logging.WARNING)
+streamHandler.setFormatter(streamFormatter)
+logger.addHandler(streamHandler)
+
+# 파일 핸들러
+fileFormatter = logging.Formatter("%(asctime)s %(levelname)s %(message)s")
+fileHandler = logging.FileHandler(f"{__name__}.log")
+fileHandler.setLevel(logging.DEBUG)
+fileHandler.setFormatter(fileFormatter)
+logger.addHandler(fileHandler)
+
+if is_debug :
+    logger.debug('==== DEBUG ====')
 
 class RandomPromptGenerator(PromptGenerator):
     def __init__(
@@ -129,12 +154,24 @@ class RandomPromptGenerator(PromptGenerator):
                 raise Exception(
                     "Too many recursions, something went wrong with generating the prompt"
                 )
-
-            prompt = self.pick_variant(old_prompt)
+            
+            counter1 = 0
+            while True:
+                counter1 += 1
+                if counter1 > constants.MAX_RECURSIONS:
+                    raise Exception(
+                        "Too many recursions, something went wrong with generating the prompt"
+                    )
+                    
+                prompt = self.pick_variant(old_prompt)
+                logger.debug(f"Prompt v: {prompt}")
+                if prompt == old_prompt:
+                    break
+                old_prompt = prompt
+            
             prompt = self.pick_wildcards(prompt)
-
+            logger.debug(f"Prompt w: {prompt}")
             if prompt == old_prompt:
-                logger.info(f"Prompt: {prompt}")
                 return prompt
             old_prompt = prompt
 

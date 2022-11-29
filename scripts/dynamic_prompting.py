@@ -31,7 +31,6 @@ from prompts.generators.promptgenerator import GeneratorException
 from prompts import constants
 from prompts.utils import slugify
 
-logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 base_dir = Path(scripts.basedir())
@@ -134,7 +133,7 @@ class Script(scripts.Script):
 
         if is_magic_prompt:
             generator = MagicPromptGenerator(
-                label, generator, magic_prompt_length, magic_temp_value
+                generator, magic_prompt_length, magic_temp_value
             )
 
         if is_attention_grabber:
@@ -349,7 +348,6 @@ class Script(scripts.Script):
         try:
             logger.debug("Creating positive generator")
             generator = self._create_generator(
-                "Positive prompt generator",
                 original_prompt,
                 original_seed,
                 is_feeling_lucky=is_feeling_lucky,
@@ -366,7 +364,6 @@ class Script(scripts.Script):
 
             logger.debug("Creating negative generator")
             self._negative_prompt_generator = self._create_generator(
-                "Negative prompt generator",
                 p.negative_prompt,
                 original_seed,
                 is_feeling_lucky=is_feeling_lucky,
@@ -433,9 +430,6 @@ class Script(scripts.Script):
         p.prompt = original_prompt
         p.seed = original_seed
 
-        logger.debug("Final positive prompts check")
-        for prompt in p.all_prompts:
-            logger.debug(f"Prompt: {prompt}")
 
 
 wildcard_manager.ensure_directory()

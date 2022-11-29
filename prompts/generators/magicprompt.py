@@ -1,13 +1,12 @@
 from __future__ import annotations
 from . import PromptGenerator
-import logging
+
 import re
 from tqdm import trange
 
 MODEL_NAME = "Gustavosta/MagicPrompt-Stable-Diffusion"
 
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
+
 class MagicPromptGenerator(PromptGenerator):
     generator = None
 
@@ -33,41 +32,30 @@ class MagicPromptGenerator(PromptGenerator):
 
     def __init__(
         self,
-        label: str,
         prompt_generator: PromptGenerator,
         max_prompt_length: int = 100,
         temperature: float = 0.7,
     ):
-        self._label = label
         self._generator = self._load_pipeline()
         self._prompt_generator = prompt_generator
         self._max_prompt_length = max_prompt_length
         self._temperature = float(temperature)
-        logger.debug(f"{self._label} - MagicPromptGenerator initialized")
-        logger.debug(self._generator)
 
     def generate(self, *args, **kwargs) -> list[str]:
-        logger.debug(f"{self._label} - Start of magic prompt generation")
         prompts = self._prompt_generator.generate(*args, **kwargs)
-        logger.debug(f"{self._label} - Got prompts from prompt generator")
-        logger.debug(prompts)
 
         new_prompts = []
         for i in trange(len(prompts), desc="Generating Magic prompts"):
-            logger.debug(f"{self._label} - Generating magic prompt for {prompts[i]}")
             orig_prompt = prompts[i]
             magic_prompt = self._generator(
                 orig_prompt,
                 max_length=self._max_prompt_length,
                 temperature=self._temperature,
             )[0]["generated_text"]
-            logger.debug(f"{self._label} - Got magic prompt: {magic_prompt}")
 
             magic_prompt = self.clean_up_magic_prompt(orig_prompt, magic_prompt)
-            logger.debug(f"{self._label} - Cleaned up magic prompt: {magic_prompt}")
             new_prompts.append(magic_prompt)
 
-        logger.debug(f"{self._label} - Returning {len(new_prompts)} magic prompts")
         return new_prompts
 
     def clean_up_magic_prompt(self, orig_prompt, prompt):
