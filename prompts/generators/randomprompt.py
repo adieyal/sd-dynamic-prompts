@@ -7,9 +7,6 @@ from prompts import constants
 from prompts.wildcardmanager import WildcardManager
 from . import PromptGenerator, re_combinations, re_wildcard
 
-variant_range = tuple[int, int]
-options = list[str]
-
 logger = logging.getLogger(__name__)
 
 class RandomPromptGenerator(PromptGenerator):
@@ -24,7 +21,7 @@ class RandomPromptGenerator(PromptGenerator):
                 self._random.seed(seed)
         self._template = template
 
-    def _parse_range(self, range_str: str, num_variants: int) -> variant_range:
+    def _parse_range(self, range_str: str, num_variants: int) -> tuple[int, int]:
         default_low = 0
         default_high = num_variants
 
@@ -42,7 +39,7 @@ class RandomPromptGenerator(PromptGenerator):
 
         return min(low, high), max(low, high)
 
-    def _parse_combinations(self, combinations_str: str) -> tuple[variant_range, str, options]:
+    def _parse_combinations(self, combinations_str: str) -> tuple[tuple[int, int], str, list[str]]:
         variants = combinations_str.split("|")
         joiner = constants.DEFAULT_COMBO_JOINER
         quantity = str(constants.DEFAULT_NUM_COMBINATIONS)
