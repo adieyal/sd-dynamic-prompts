@@ -3,7 +3,7 @@ sddp_loaded = false
 onUiUpdate(function(){
   if (!sddp_loaded) {
     check_collapsibles();
-    gradioApp().getElementById("dynamic-prompts-enabled").append("Completed documentation is available at https://github.com/adieyal/sd-dynamic-prompts")
+    gradioApp().getElementById("dynamic-prompts-enabled").append("Complete documentation is available at https://github.com/adieyal/sd-dynamic-prompts")
     gradioApp().getElementById("is-combinatorial").append("Generate all possible prompts up to a maximum of Batch count * Batch size)")
     gradioApp().getElementById("is-magicprompt").append("Automatically update your prompt with interesting modifiers. (Runs slowly the first time)")
     gradioApp().getElementById("is-feelinglucky").append("Generate random prompts from lexica.art (your prompt is used as a search query).")

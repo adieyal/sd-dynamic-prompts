@@ -1,3 +1,4 @@
+import random
 import pytest
 
 from prompts import wildcardmanager
@@ -12,11 +13,14 @@ def wildcard_manager():
 
 @pytest.fixture
 def seed():
-    return 0
+    s = 0
+    random.seed(s)
+
+    return s
 
 @pytest.fixture
 def generator(wildcard_manager, seed):
-    return RandomPromptGenerator(wildcard_manager, "A template", seed=seed)
+    return RandomPromptGenerator(wildcard_manager, "A template", seed=seed, unlink_seed_from_prompt=False)
 
 class TestRandomPromptVariants:
     def test_simple_pick_variant(self, generator):
@@ -180,5 +184,30 @@ class TestGeneratorPrompt:
         assert prompt == ["I love butter", "I love butter"]
 
         prompt = generator.generate(4)
-        print(prompt)
         assert prompt == ["I love butter", "I love bread", "I love butter", "I love bread"]
+
+class TestUnlinkSeedFromPrompt:
+    def test_unlink_seed_from_prompt(self, wildcard_manager):
+        generator = RandomPromptGenerator(wildcard_manager, "A template")
+        assert generator._unlink_seed_from_prompt == constants.UNLINK_SEED_FROM_PROMPT
+        
+        random.seed(0)
+        for i in range(5):
+            generator = RandomPromptGenerator(wildcard_manager, "A template", unlink_seed_from_prompt=False, seed=0)
+            generator._template = "I love {1-2$$red|green|blue}"
+            
+            prompt = generator.generate(5)
+            assert prompt == ['I love green , red', 'I love blue , green', 'I love green , blue', 'I love blue , red', 'I love green']
+
+        prev_prompt = None
+        random.seed(0)
+        for i in range(5):
+            generator = RandomPromptGenerator(wildcard_manager, "A template", unlink_seed_from_prompt=True, seed=0)
+            generator._template = "I love {1-2$$red|green|blue}"
+
+            prompt = generator.generate(5)
+            assert prompt != prev_prompt
+            prev_prompt = prompt
+
+
+
