@@ -2,3 +2,6 @@
 \.*.sw*
 .env
 wildcards
+**/nppBackup/
+**/.tmp.drivedownload/
+**/.tmp.driveupload/

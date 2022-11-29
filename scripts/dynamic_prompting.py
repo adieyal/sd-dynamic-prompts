@@ -32,8 +32,7 @@ from prompts import constants
 from prompts.utils import slugify
 
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-
+logger.setLevel(logging.DEBUG)
 base_dir = Path(scripts.basedir())
 
 wildcard_dir = getattr(opts, "wildcard_dir", None)
@@ -88,6 +87,7 @@ def new_generation(prompt) -> PromptGenerator:
 
 
 class Script(scripts.Script):
+
     def _create_generator(
         self,
         original_prompt,
@@ -302,11 +302,11 @@ class Script(scripts.Script):
         generator = self._negative_prompt_generator
 
         try:
-            p.negative_prompt = generator.generate(1)[0]
+            p.all_negative_prompts = generator.generate(1)
         except GeneratorException as e:
             logger.exception(e)
             all_prompts = [str(e)]
-            p.negative_prompt = str(e)
+            p.all_negative_prompts = str(e)
 
     def process(
         self,
@@ -379,12 +379,14 @@ class Script(scripts.Script):
             )
 
             all_prompts = generator.generate(num_images)
-            p.negative_prompt = self._negative_prompt_generator.generate(1)[0]
+            #p.negative_prompt = self._negative_prompt_generator.generate(1)[0]
+            p.all_negative_prompts = self._negative_prompt_generator.generate(num_images)
 
         except GeneratorException as e:
             logger.exception(e)
             all_prompts = [str(e)]
-            p.negative_prompt = str(e)
+            #p.negative_prompt = str(e)
+            p.all_negative_prompts = str(e)
 
         updated_count = len(all_prompts)
         p.n_iter = math.ceil(updated_count / p.batch_size)
@@ -427,6 +429,7 @@ class Script(scripts.Script):
 
         p.prompt = original_prompt
         p.seed = original_seed
+
 
 
 wildcard_manager.ensure_directory()
