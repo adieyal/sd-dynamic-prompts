@@ -70,3 +70,4 @@
 0.29.8 Fixed unlink seed from prompt - see https://github.com/adieyal/sd-dynamic-prompts/issues/80
 0.29.9 Now using all_negative_prompts. Each image now uses its own negative prompt. Thanks to @lilly1987 
 0.29.10 Fixed a bug the occurred when more positive prompts are created than negative prompts.
+0.29.11 Wildcards are sorted alphabetically before use - https://github.com/adieyal/sd-dynamic-prompts/issues/85

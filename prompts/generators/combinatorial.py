@@ -32,7 +32,7 @@ class CombinatorialPromptGenerator(PromptGenerator):
 
     def generate_from_wildcards(self, seed_template, max_prompts) -> list[str]:
         templates = []
-        new_templates = set()
+        new_templates = []
 
         templates = [seed_template]
         while True:
@@ -42,15 +42,13 @@ class CombinatorialPromptGenerator(PromptGenerator):
             template = templates.pop(0)
             wildcards = re_wildcard.findall(template)
             if len(wildcards) == 0:
-                new_templates.add(template)
+                new_templates.append(template)
                 if len(new_templates) > max_prompts:
                     break
                 continue
 
             wildcard = wildcards[0]
-            wildcard_files = self._wildcard_manager.match_files(wildcard)
-            wildcard_values = list(chain(*[f.get_wildcards() for f in wildcard_files]))
-            random.shuffle(wildcard_values)
+            wildcard_values = self._wildcard_manager.get_all_values(wildcard)
 
             for val in wildcard_values:
                 new_template = template.replace(f"__{wildcard}__", val, 1)

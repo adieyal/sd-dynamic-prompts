@@ -97,13 +97,7 @@ class RandomPromptGenerator(PromptGenerator):
             return ""
 
         wildcard = match.groups()[0]
-        wildcard_files = self._wildcard_manager.match_files(wildcard)
-
-        if len(wildcard_files) == 0:
-            logging.warning(f"Could not find any wildcard files matching {wildcard}")
-            return ""
-
-        wildcards = set().union(*[f.get_wildcards() for f in wildcard_files])
+        wildcards = self._wildcard_manager.get_all_values(wildcard)
 
         if len(wildcards) > 0:
             return self._random.choice(list(wildcards))

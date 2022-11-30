@@ -50,7 +50,7 @@ class WildcardManager:
 
     def get_all_values(self, wildcard:str) -> list[str]:
         files = self.match_files(wildcard)
-        return list(set().union(*[f.get_wildcards() for f in files]))
+        return sorted(set().union(*[f.get_wildcards() for f in files]))
 
     def get_wildcard_hierarchy(self, path: Path|None=None):
         if path is None:
