@@ -43,7 +43,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "0.29.9"
+VERSION = "0.29.10"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -350,12 +350,19 @@ class Script(scripts.Script):
 
             all_prompts = generator.generate(num_images)
             all_negative_prompts = negative_prompt_generator.generate(num_images)
+            total_prompts = len(all_prompts)
+
+            if len(all_negative_prompts) < total_prompts:
+                all_negative_prompts = all_negative_prompts * (
+                    total_prompts // len(all_negative_prompts) + 1
+                )
+
+            all_negative_prompts = all_negative_prompts[:total_prompts]
 
         except GeneratorException as e:
             logger.exception(e)
             all_prompts = [str(e)]
             all_negative_prompts = [str(e)]
-            # p.negative_prompt = str(e)
 
         updated_count = len(all_prompts)
         p.n_iter = math.ceil(updated_count / p.batch_size)
