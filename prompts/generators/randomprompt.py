@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 import logging
 from random import Random
 import random
@@ -9,13 +10,84 @@ from . import PromptGenerator, re_combinations, re_wildcard
 
 logger = logging.getLogger(__name__)
 
+MAX_SELECTION_ITERATIONS = 100
+
+
+class CombinationSelector:
+    def __init__(
+        self, wildcard_manager: WildcardManager, options: list[str], rand=None
+    ):
+        if rand is None:
+            self._random = random
+        else:
+            self._random = rand
+
+        get_option = (
+            lambda option: wildcard_manager.get_all_values(option)
+            if wildcard_manager.is_wildcard(option)
+            else [option]
+        )
+
+        self._options = [get_option(o) for o in options]
+
+    def pick(self, count=1) -> list[str]:
+        picked = []
+
+        if len(self._options) == 0:
+            return picked
+
+        for i in range(count):
+            option = self._random.choice(self._options)
+            picked.append(self._random.choice(option))
+
+        return picked
+
+
+class CombinationCollector:
+    def __init__(self, selector: CombinationSelector, rand=None):
+        if rand is None:
+            self._random = random
+        else:
+            self._random = rand
+
+        self._selector = selector
+
+    def collect(self, count: int | tuple[int, int], duplicates=False) -> list[str]:
+        """
+        Attempts to collect count combinations from the selector without duplicates
+        if this is impossible, it will return as many as possible without duplicates
+        """
+
+        collected = []
+        iterations = 0
+
+        if isinstance(count, int):
+            min_count = max_count = count
+        else:
+            min_count, max_count = count
+        num_to_collect = self._random.randint(min_count, max_count)
+
+        while len(collected) < num_to_collect:
+            iterations += 1
+            if iterations > MAX_SELECTION_ITERATIONS:
+                return collected
+
+            picked = self._selector.pick()[0]
+            if not duplicates and picked in collected:
+                continue
+
+            iterations = 0
+            collected.append(picked)
+
+        return collected
+
 
 class RandomPromptGenerator(PromptGenerator):
     def __init__(
         self,
         wildcard_manager: WildcardManager,
         template,
-        seed: int = None,
+        seed: int | None = None,
         unlink_seed_from_prompt: bool = constants.UNLINK_SEED_FROM_PROMPT,
     ):
         self._wildcard_manager = wildcard_manager
@@ -27,8 +99,7 @@ class RandomPromptGenerator(PromptGenerator):
             self._random = Random()
             if seed is not None:
                 self._random.seed(seed)
-            
-        
+
         self._template = template
 
     def _parse_range(self, range_str: str, num_variants: int) -> tuple[int, int]:
@@ -79,17 +150,13 @@ class RandomPromptGenerator(PromptGenerator):
         (low_range, high_range), joiner, variants = self._parse_combinations(
             combinations_str
         )
-        quantity = self._random.randint(low_range, high_range)
-        try:
-            allow_repeats = len(variants) < quantity
-            if allow_repeats:
-                picked = self._random.choices(variants, k=quantity)
-            else:
-                picked = self._random.sample(variants, quantity)
-            return f" {joiner} ".join(picked)
-        except ValueError as e:
-            logger.exception(e)
-            return ""
+
+        selector = CombinationSelector(
+            self._wildcard_manager, variants, rand=self._random
+        )
+        collector = CombinationCollector(selector, rand=self._random)
+        collected = collector.collect((low_range, high_range))
+        return f" {joiner} ".join(collected)
 
     def _replace_wildcard(self, match):
         if match is None or len(match.groups()) == 0:

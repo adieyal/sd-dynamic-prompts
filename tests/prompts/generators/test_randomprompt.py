@@ -1,15 +1,17 @@
 import random
+from unittest import mock
 import pytest
 
-from prompts import wildcardmanager
-from prompts.generators.randomprompt import RandomPromptGenerator
+from prompts.wildcardmanager import WildcardManager
+from prompts.generators.randomprompt import RandomPromptGenerator, CombinationSelector
 
 from prompts import constants
 
 
 @pytest.fixture
 def wildcard_manager():
-    return wildcardmanager.WildcardManager(None)
+    return WildcardManager(None)
+
 
 @pytest.fixture
 def seed():
@@ -18,9 +20,13 @@ def seed():
 
     return s
 
+
 @pytest.fixture
 def generator(wildcard_manager, seed):
-    return RandomPromptGenerator(wildcard_manager, "A template", seed=seed, unlink_seed_from_prompt=False)
+    return RandomPromptGenerator(
+        wildcard_manager, "A template", seed=seed, unlink_seed_from_prompt=False
+    )
+
 
 class TestRandomPromptVariants:
     def test_simple_pick_variant(self, generator):
@@ -44,17 +50,17 @@ class TestRandomPromptVariants:
         assert variant == "I love butter , bread"
 
         variant = generator.pick_variant(template)
-        assert variant == "I love butter , bread"
+        assert variant == "I love bread , butter"
 
         variant = generator.pick_variant(template)
-        assert variant == "I love butter , bread"
+        assert variant == "I love bread , butter"
 
     def test_multiple_variant_one_option(self, generator):
         template = "I love {2$$bread}"
         generator._template = template
 
         variant = generator.pick_variant(template)
-        assert variant == "I love bread , bread"
+        assert variant == "I love bread"
 
     def test_multiple_variant_zero_options(self, generator):
         template = "I love {}"
@@ -71,13 +77,13 @@ class TestRandomPromptVariants:
         assert variant == "I love butter , bread"
 
         variant = generator.pick_variant(template)
-        assert variant == "I love butter , bread"
+        assert variant == "I love bread , butter"
 
         variant = generator.pick_variant(template)
-        assert variant == "I love butter , bread"
+        assert variant == "I love bread , butter"
 
         variant = generator.pick_variant(template)
-        assert variant == "I love bread"
+        assert variant == "I love butter"
 
         variant = generator.pick_variant(template)
         assert variant == "I love bread , butter"
@@ -90,12 +96,6 @@ class TestRandomPromptVariants:
         assert variant == "I love butter"
 
         variant = generator.pick_variant(template)
-        assert variant == "I love "
-
-        variant = generator.pick_variant(template)
-        assert variant == "I love butter"
-
-        variant = generator.pick_variant(template)
         assert variant == "I love butter"
 
         variant = generator.pick_variant(template)
@@ -103,6 +103,12 @@ class TestRandomPromptVariants:
 
         variant = generator.pick_variant(template)
         assert variant == "I love bread , butter"
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love "
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love butter , bread"
 
     def test_variant_range_missing_upper(self, generator):
         template = "I love {1-$$bread|butter}"
@@ -112,17 +118,20 @@ class TestRandomPromptVariants:
         assert variant == "I love butter , bread"
 
         variant = generator.pick_variant(template)
-        assert variant == "I love butter , bread"
+        assert variant == "I love bread , butter"
 
         variant = generator.pick_variant(template)
-        assert variant == "I love butter , bread"
+        assert variant == "I love bread , butter"
 
         variant = generator.pick_variant(template)
-        assert variant == "I love bread"
+        assert variant == "I love butter"
 
     def test_parse_combinations(self, generator):
         quantity, _, options = generator._parse_combinations("bread|butter")
-        assert quantity == (constants.DEFAULT_NUM_COMBINATIONS, constants.DEFAULT_NUM_COMBINATIONS)
+        assert quantity == (
+            constants.DEFAULT_NUM_COMBINATIONS,
+            constants.DEFAULT_NUM_COMBINATIONS,
+        )
         assert options == ["bread", "butter"]
 
         quantity, _, options = generator._parse_combinations("2$$bread|butter")
@@ -168,10 +177,11 @@ class TestRandomPromptVariants:
 
         _, joiner, _ = generator._parse_combinations("2$$|$$bread|butter")
         assert joiner == "|"
-    
+
     def test_photographers(self, generator):
         quantity, joiner, options = generator._parse_combinations("2-4$$|$$a|b|c")
-        
+
+
 class TestGeneratorPrompt:
     def test_simple(self, generator):
         template = "I love {bread|butter}"
@@ -184,30 +194,39 @@ class TestGeneratorPrompt:
         assert prompt == ["I love butter", "I love butter"]
 
         prompt = generator.generate(4)
-        assert prompt == ["I love butter", "I love bread", "I love butter", "I love bread"]
+        assert prompt == [
+            "I love bread",
+            "I love bread",
+            "I love butter",
+            "I love butter",
+        ]
+
 
 class TestUnlinkSeedFromPrompt:
     def test_unlink_seed_from_prompt(self, wildcard_manager):
         generator = RandomPromptGenerator(wildcard_manager, "A template")
         assert generator._unlink_seed_from_prompt == constants.UNLINK_SEED_FROM_PROMPT
-        
+
         random.seed(0)
         for i in range(5):
-            generator = RandomPromptGenerator(wildcard_manager, "A template", unlink_seed_from_prompt=False, seed=0)
+            generator = RandomPromptGenerator(
+                wildcard_manager, "A template", unlink_seed_from_prompt=False, seed=0
+            )
             generator._template = "I love {1-2$$red|green|blue}"
-            
+
             prompt = generator.generate(5)
-            assert prompt == ['I love green , red', 'I love blue , green', 'I love green , blue', 'I love blue , red', 'I love green']
+            assert prompt == ['I love green , blue', 'I love green', 'I love blue', 'I love green', 'I love blue']
+            
 
         prev_prompt = None
         random.seed(0)
         for i in range(5):
-            generator = RandomPromptGenerator(wildcard_manager, "A template", unlink_seed_from_prompt=True, seed=0)
+            generator = RandomPromptGenerator(
+                wildcard_manager, "A template", unlink_seed_from_prompt=True, seed=0
+            )
             generator._template = "I love {1-2$$red|green|blue}"
 
             prompt = generator.generate(5)
             assert prompt != prev_prompt
             prev_prompt = prompt
-
-
 

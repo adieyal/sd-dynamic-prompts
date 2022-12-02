@@ -4,6 +4,13 @@ from pathlib import Path
 from prompts.wildcardmanager import WildcardManager, WildcardFile
 
 class TestWildcardManager:
+    def test_is_wildcard(self):
+        wm = WildcardManager(Path("test_data/wildcards"))
+        assert wm.is_wildcard("__test__")
+        assert not wm.is_wildcard("test")
+
+
+        
     def test_get_all_values(self):
         with mock.patch("prompts.wildcardmanager.WildcardManager.match_files") as mock_get_files:
             wildcard_files = [
