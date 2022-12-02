@@ -43,7 +43,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "0.29.12"
+VERSION = "0.29.13"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -305,6 +305,8 @@ class Script(scripts.Script):
         fix_seed(p)
 
         original_prompt = p.all_prompts[0] if len(p.all_prompts) > 0 else p.prompt
+        original_negative_prompt = p.all_negative_prompts[0] if len(p.all_negative_prompts) > 0 else p.negative_prompt
+
         original_seed = p.seed
         num_images = p.n_iter * p.batch_size
 
@@ -334,7 +336,7 @@ class Script(scripts.Script):
 
             logger.debug("Creating negative generator")
             negative_prompt_generator = self._create_generator(
-                p.negative_prompt,
+                original_negative_prompt,
                 original_seed,
                 is_feeling_lucky=is_feeling_lucky,
                 is_attention_grabber=is_attention_grabber,
