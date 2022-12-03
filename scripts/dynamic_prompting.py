@@ -3,8 +3,6 @@ import logging
 from string import Template
 from pathlib import Path
 import math
-import unicodedata
-import re
 import random
 
 import gradio as gr
@@ -31,22 +29,31 @@ from prompts.generators.promptgenerator import GeneratorException
 from prompts import constants
 from prompts.utils import slugify
 
+from ui import wildcards_tab
+
+
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
+
+is_debug = getattr(opts, "is_debug", False)
+if is_debug:
+    logger.setLevel(logging.DEBUG)
 
 base_dir = Path(scripts.basedir())
 
 wildcard_dir = getattr(opts, "wildcard_dir", None)
+
 
 if wildcard_dir is None:
     WILDCARD_DIR = base_dir / "wildcards"
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "0.29.15"
+VERSION = "1.0"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
+wildcards_tab.initialize(wildcard_manager)
 
 
 def get_unique_path(directory: Path, original_filename) -> Path:
@@ -163,7 +170,7 @@ class Script(scripts.Script):
         jinja_html_path = base_dir / "jinja_help.html"
         jinja_help = jinja_html_path.open().read()
 
-        with gr.Group():
+        with gr.Group(elem_id="dynamic-prompting"):
             with gr.Accordion("Dynamic Prompts", open=False):
                 is_enabled = gr.Checkbox(
                     label="Dynamic Prompts enabled",

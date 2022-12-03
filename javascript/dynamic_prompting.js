@@ -1,6 +1,6 @@
 sddp_loaded = false
 
-onUiUpdate(function(){
+onUiUpdate(function () {
   if (!sddp_loaded) {
     check_collapsibles();
     gradioApp().getElementById("dynamic-prompts-enabled").append("Complete documentation is available at https://github.com/adieyal/sd-dynamic-prompts")
@@ -13,14 +13,20 @@ onUiUpdate(function(){
     gradioApp().getElementById("disable-negative-prompt").append("Useful for I'm feeling lucky and Magic Prompt. If this is set, then negative prompts are not generated.")
     gradioApp().getElementById("no-image-generation").append("Disable image generation. Useful if you only want to generate text prompts.")
     gradioApp().getElementById("is-attention-grabber").append("Add emphasis to a randomly selected keyword in the prompt.")
+
+    
     sddp_loaded = true;
   }
+})
+
+onUiTabChange(function (x) {
+  gradioApp().querySelector("#load_tree_button").click()
 })
 
 function check_collapsibles() {
   var coll = gradioApp().querySelectorAll(".collapsible")
   for (var i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
+    coll[i].addEventListener("click", function () {
       this.classList.toggle("active");
       var content = this.nextElementSibling;
       if (content.style.display === "block") {
@@ -33,5 +39,39 @@ function check_collapsibles() {
         this.style.borderRadius = "8px 8px 0px 0px"
       }
     });
+  }
+}
+
+function setupTree(x) {
+  let js = gradioApp().querySelector("#tree_textbox textarea").value
+  let json = JSON.parse(js)
+  let treeDiv = gradioApp().querySelector("#html_id")
+  let t = new TreeView(json, treeDiv)
+
+  t.on('select', function (x) { nodeSelected(x) });
+}
+
+function nodeSelected(x) {
+  if (x["data"] != undefined) {
+    gradioApp().querySelector("#scratch_textbox textarea").value = JSON.stringify(x["data"], null, 2)
+    gradioApp().querySelector("#action_button").click()
+  }
+}
+
+function receiveTreeEvent(x) {
+  let js = gradioApp().querySelector("#scratch_textbox textarea").value
+  let json = JSON.parse(js)
+
+  return json
+}
+
+function saveFile(x) {
+  let js = gradioApp().querySelector("#scratch_textbox textarea").value
+  let json = JSON.parse(js)
+  let contents = gradioApp().querySelector("#file_edit_box_id textarea").value
+
+  return {
+    "wildcard": json,
+    "contents": contents
   }
 }

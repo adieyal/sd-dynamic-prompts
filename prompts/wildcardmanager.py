@@ -39,6 +39,9 @@ class WildcardManager:
             for path in self._path.rglob(f"{wildcard}.{constants.WILDCARD_SUFFIX}")
         ]
 
+    def wildcard_to_path(self, wildcard: str) -> Path:
+        return (self._path / wildcard.strip("__")).with_suffix("." + constants.WILDCARD_SUFFIX)
+
     def path_to_wilcard(self, path: Path) -> str:
         rel_path = path.relative_to(self._path)
         return f"__{rel_path.with_suffix('')}__"

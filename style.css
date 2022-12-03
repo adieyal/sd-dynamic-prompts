@@ -1,4 +1,4 @@
-.dynamic-prompting .collapsible {
+#dynamic-prompting .collapsible {
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -15,13 +15,13 @@
     font-size: 15px;
 }
 
-.dynamic-prompting .active, .collapsible:hover {
+#dynamic-prompting .active, .collapsible:hover {
     background-color: #555;
     border: 1px solid #eee;
     color: white;
 }
 
-.dynamic-prompting .content {
+#dynamic-prompting .content {
     padding: 0 18px;
     display: none;
     overflow: hidden;
@@ -32,34 +32,45 @@
     border-radius: 0px 0px 8px 8px;
 }
 
-.dynamic-prompting .codeblock {
+#dynamic-prompting .codeblock {
     color: #50a080;
 }
 
-.dark .dynamic-prompting .collapsible {
+.dark #dynamic-prompting .collapsible {
     background-color: rgb(31, 41, 55);
     border: 2px solid rgb(31, 41, 55);
 }
 
-.dark .dynamic-prompting .active, .collapsible:hover {
+.dark #dynamic-prompting .active, .collapsible:hover {
     background-color: #06080D;
     border: 2px solid #06080D;
 }
 
-.dark .dynamic-prompting .content {
+.dark #dynamic-prompting .content {
     border: 2px solid #0C111C;
 }
 
-.dynamic-prompting h2 {
+#dynamic-prompting h2 {
     font-size: 1.2em;
     font-weight: bolder;
 }
 
-.dynamic-prompting h3 {
+#dynamic-prompting h3 {
     font-size: 1.1em;
     font-weight: bolder;
 }
 
-.dynamic-prompting a {
+#dynamic-prompting a {
     color: #50a080;
 }
+
+.tree-leaf { position: relative; }
+.tree-leaf .tree-child-leaves { display: block; margin-left: 15px; }
+.tree-leaf .hidden { display: none; }
+.tree-leaf .tree-expando { background: #ddd; border-radius: 3px; cursor: pointer; float: left; height: 10px; line-height: 10px; position: relative; text-align: center; top: 5px; width: 10px; }
+.tree-leaf .hidden { visibility: hidden; }
+.tree-leaf .tree-expando:hover { background: #aaa; }
+.tree-leaf .tree-leaf-text { cursor: pointer; float: left; margin-left: 5px; }
+.tree-leaf .tree-leaf-text:hover { color: blue; }
+.tree-leaf .tree-leaf-content:before, .tree-leaf .tree-leaf-content:after { content: " "; display: table; }
+.tree-leaf .tree-leaf-content:after { clear: both; }
