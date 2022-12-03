@@ -73,4 +73,5 @@
 0.29.11 Wildcards are sorted alphabetically before use - https://github.com/adieyal/sd-dynamic-prompts/issues/85
 0.29.12 Fixes broken styles = https://github.com/adieyal/sd-dynamic-prompts/issues/73
 0.29.13 Fixes broken styles for negative prompts = https://github.com/adieyal/sd-dynamic-prompts/issues/73
-0.29.14 Fixes duplicate wildcards = https://github.com/adieyal/sd-dynamic-prompts/issues/88
+0.29.14 Fixes duplicate wildcards - https://github.com/adieyal/sd-dynamic-prompts/issues/88
+0.29.15 Fixes fixed magic prompt - seed issue - https://github.com/adieyal/sd-dynamic-prompts/issues/90

@@ -1,18 +1,22 @@
 from __future__ import annotations
 from . import PromptGenerator
-
+import random
 import re
 from tqdm import trange
 
+from transformers import set_seed
+from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers import pipeline
+
+
 MODEL_NAME = "Gustavosta/MagicPrompt-Stable-Diffusion"
+MAX_SEED = 2 ** 32 - 1
 
 
 class MagicPromptGenerator(PromptGenerator):
     generator = None
 
     def _load_pipeline(self):
-        from transformers import AutoTokenizer, AutoModelForCausalLM
-        from transformers import pipeline
 
         from modules.devices import get_optimal_device
 
@@ -35,11 +39,15 @@ class MagicPromptGenerator(PromptGenerator):
         prompt_generator: PromptGenerator,
         max_prompt_length: int = 100,
         temperature: float = 0.7,
+        seed: int | None = None,
     ):
         self._generator = self._load_pipeline()
         self._prompt_generator = prompt_generator
         self._max_prompt_length = max_prompt_length
         self._temperature = float(temperature)
+
+        if seed is not None:
+            set_seed(int(seed))
 
     def generate(self, *args, **kwargs) -> list[str]:
         prompts = self._prompt_generator.generate(*args, **kwargs)
@@ -77,7 +85,9 @@ class MagicPromptGenerator(PromptGenerator):
 
         # clean up whitespace in hyphens between words
         prompt = re.sub(r"\b\s+\-\s+\b", "-", prompt)
-        prompt = re.sub(r"\s*[,;\.]+\s*(?=[a-zA-Z(])", ", ", prompt)  # other analogues to ', '
+        prompt = re.sub(
+            r"\s*[,;\.]+\s*(?=[a-zA-Z(])", ", ", prompt
+        )  # other analogues to ', '
         prompt = re.sub(r"\s+_+\s+", " ", prompt)  # useless underscores between phrases
         prompt = re.sub(r"\b,\s*,\s*\b", ", ", prompt)  # empty phrases
 

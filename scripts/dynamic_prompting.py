@@ -44,6 +44,7 @@ else:
     WILDCARD_DIR = Path(wildcard_dir)
 
 VERSION = "0.29.14"
+VERSION = "0.29.15"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -137,7 +138,7 @@ class Script(scripts.Script):
 
         if is_magic_prompt:
             generator = MagicPromptGenerator(
-                generator, magic_prompt_length, magic_temp_value
+                generator, magic_prompt_length, magic_temp_value, seed=original_seed
             )
 
         if is_attention_grabber:
