@@ -43,7 +43,6 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "0.29.14"
 VERSION = "0.29.15"
 
 
@@ -306,7 +305,11 @@ class Script(scripts.Script):
         fix_seed(p)
 
         original_prompt = p.all_prompts[0] if len(p.all_prompts) > 0 else p.prompt
-        original_negative_prompt = p.all_negative_prompts[0] if len(p.all_negative_prompts) > 0 else p.negative_prompt
+        original_negative_prompt = (
+            p.all_negative_prompts[0]
+            if len(p.all_negative_prompts) > 0
+            else p.negative_prompt
+        )
 
         original_seed = p.seed
         num_images = p.n_iter * p.batch_size
