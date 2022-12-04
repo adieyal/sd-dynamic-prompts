@@ -76,3 +76,4 @@
 0.29.14 Fixes duplicate wildcards - https://github.com/adieyal/sd-dynamic-prompts/issues/88
 0.29.15 Fixes fixed magic prompt - seed issue - https://github.com/adieyal/sd-dynamic-prompts/issues/90
 1.0 Added a rudimentary wildcard manager - more to follow
+1.0.1 Ensure that the wildcards tree is only loaded once

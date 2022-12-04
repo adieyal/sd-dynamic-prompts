@@ -1,4 +1,5 @@
 sddp_loaded = false
+sddp_wildcards_loaded = false
 
 onUiUpdate(function () {
   if (!sddp_loaded) {
@@ -20,7 +21,10 @@ onUiUpdate(function () {
 })
 
 onUiTabChange(function (x) {
-  gradioApp().querySelector("#load_tree_button").click()
+  if (!sddp_wildcards_loaded && uiCurrentTab.innerText =='Wildcards Manager') {
+      gradioApp().querySelector("#load_tree_button").click()
+      sddp_wildcards_loaded = true;
+  }
 })
 
 function check_collapsibles() {
