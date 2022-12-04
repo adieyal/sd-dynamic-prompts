@@ -1,0 +1,7 @@
+__elf/archer__
+__elf/cleric__
+__elf/general__
+__elf/noble__
+__elf/scout__
+__elf/shaman__
+__elf/wizard__

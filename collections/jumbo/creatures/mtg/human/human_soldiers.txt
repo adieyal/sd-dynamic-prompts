@@ -1,0 +1,356 @@
+Herald of Anafenza
+Nav Squad Commandos
+Shu Cavalry
+Shu Elite Infantry
+Shu Grain Caravan
+Brokers Veteran
+Snare Tactician
+Company Commander
+Kongming's Contraptions
+Lavabrink Venturer
+Law-Rune Enforcer
+Gideon's Avenger
+Gideon's Company
+Gideon's Lawkeeper
+Jungle Patrol
+Flanking Troops
+Caldaia Guardian
+Reborn Hero
+Blade Instructor
+Everdawn Champion
+Pikemen
+Kytheon's Irregulars
+Volunteer Militia
+Volunteer Reserves
+Lowland Tracker
+Loyal Sentry
+Whisper Squad
+Independent Troops
+Elite Inquisitor
+Elite Javelineer
+Elite Scaleguard
+Elite Skirmisher
+Elite Vanguard
+Elspeth's Devotee
+Field Marshal
+Spire Patrol
+Fallaji Chaindancer
+Fallaji Vanguard
+Thalia's Lieutenant
+Expendable Troops
+Tomakul Honor Guard
+Parish-Blade Trainee
+Park Heights Maverick
+Stoic Champion
+Infantry Veteran
+Honor Guard
+Guardians of Akrasa
+Moorland Inquisitor
+Cemetery Protector
+Azorius Arrester
+Mirage Phalanx
+Captain of the Watch
+Kill-Zone Acrobat
+Zhalfirin Decoy
+Shock Troops
+Ceremonial Guard
+Bastion Protector
+Battalion Foot Soldier
+Consul's Lieutenant
+Tithe Taker
+Tocatli Honor Guard
+Akrasan Squire
+Akroan Crusader
+Akroan Hoplite
+Akroan Jailer
+Akroan Phalanx
+Akroan Sergeant
+Akroan Skyguard
+Nightguard Patrol
+Border Guard
+Throne Warden
+Air Marshal
+Daru Cavalier
+Daru Lancer
+Daru Warchief
+Retrieval Agent
+Iroas's Champion
+Ironfist Crusher
+Bounty Agent
+Wingshield Agent
+Doomed Traveler
+Hero of Iroas
+Hero of the Dunes
+Hero of the Games
+Hero of the Winds
+Roc Hunter
+Savior of Ollenbock
+Keen Glidemaster
+Keen-Eared Sentry
+Keeper of the Accord
+Shu Soldier-Farmers
+Tenth District Guard
+Tenth District Legionnaire
+Tenth District Veteran
+Dromoka Captain
+Opportunist
+Wei Ambush Force
+Wei Elite Companions
+Shield Bearer
+Shield Mate
+Squad Captain
+Wojek Bodyguard
+Wojek Halberdiers
+Armament Corps
+Bushmeat Poacher
+Inspiring Commander
+Selfless Squire
+Dauntless Cathar
+Dauntless River Marshal
+Perimeter Captain
+Perimeter Patrol
+Perimeter Sergeant
+Conclave Equenaut
+Conclave Phalanx
+Thundersong Trumpeter
+Palace Guard
+Palace Jailer
+Palace Sentinels
+Veteran Swordsmith
+Pearlspear Courier
+Radiant's Dragoons
+Town Sentry
+Crowd Favorites
+Hanweir Garrison
+Deftblade Elite
+Cloudreach Cavalry
+Gempalm Avenger
+General's Enforcer
+Giltspire Avenger
+Gerrard's Irregulars
+Llanowar Cavalry
+Duelcraft Trainer
+Serra Zealot
+Servant of the Scale
+Wing Commando
+Fabled Hero
+Phalanx Leader
+Phalanx Vanguard
+Oracle's Attendants
+Desperate Sentry
+Stormfront Riders
+Eager Cadet
+Swiftblade Vindicator
+Icatian Infantry
+Icatian Javelineers
+Icatian Lieutenant
+Icatian Phalanx
+Icatian Skirmishers
+Foriysian Brigade
+Foriysian Interceptor
+Dapper Shieldmate
+Impetuous Sunchaser
+Ignoble Soldier
+Ikiral Outrider
+Slayer of the Wicked
+Guardian of New Benalia
+Guardian Shield-Bearer
+Skyspear Cavalry
+Abzan Falconer
+Liege of the Axe
+Lieutenants of the Guard
+Baneslayer Aspirant
+Bant Sojourners
+Bant Sureblade
+Ardent Militia
+Ardent Recruit
+Ardent Soldier
+Auriok Bladewarden
+Auriok Edgewright
+Auriok Glaivemaster
+Auriok Salvagers
+Battlefield Butcher
+Salt Road Quartermasters
+Garenbrig Squire
+Precinct Captain
+Trap Digger
+Trap Runner
+Seasoned Marshal
+Branded Brawlers
+Nightsquad Commando
+Cho-Arrim Legate
+Gustcloak Runner
+Gustcloak Sentinel
+Checkpoint Officer
+Flailing Soldier
+Crusader of Odric
+Valiant Guard
+Valiant Rescuer
+Resistance Squad
+Resolute Reinforcements
+Skyrider Trainee
+Alaborn Grenadier
+Alaborn Musketeer
+Alaborn Trooper
+Fairgrounds Patrol
+Falconer Adept
+Firefist Striker
+Fireflux Squad
+Search Party Captain
+Surging Sentinels
+Ritual Guardian
+Forerunner of the Empire
+Battlewise Hoplite
+Kjeldoran Guard
+Kjeldoran Home Guard
+Kjeldoran Javelineer
+Kjeldoran Outrider
+Kjeldoran Phalanx
+Kjeldoran Royal Guard
+Kjeldoran Skycaptain
+Resistance Fighter
+Vampire Slayer
+Aeronaut Cavalry
+Fault Riders
+Favored Hoplite
+Favored of Iroas
+Steelshaper Apprentice
+Stern Constable
+Stern Marshal
+Siege Striker
+Siege Veteran
+Bomber Corps
+Sungold Sentinel
+Sunhome Stalwart
+Eiganjo Free-Riders
+Elder Cathar
+Haazda Marshal
+Haazda Officer
+Haazda Shield Mate
+Haazda Snare Squad
+Staunch Defenders
+Steadfast Cathar
+Steadfast Sentry
+Votary of the Conclave
+Heavy Ballista
+Heavy Infantry
+Ambush Paratrooper
+Ampryn Tactician
+Midnight Duelist
+Midnight Guard
+Elgaud Shieldmate
+Elite Arrester
+Paliano Vanguard
+Aerial Caravan
+Boros Swiftblade
+Royal Trooper
+Intrepid Hero
+Stalwart Pathlighter
+Stalwart Shield-Bearers
+Standing Army
+Standing Troops
+Basilica Guards
+Gavony Dawnguard
+Gavony Ironwright
+Gavony Silversmith
+Gavony Trapper
+Paragon of New Dawns
+Paranoid Parish-Blade
+Benalish Commander
+Benalish Heralds
+Benalish Hero
+Benalish Infantry
+Benalish Trapper
+Benalish Veteran
+Wu Admiral
+Wu Elite Cavalry
+Wu Infantry
+Wu Light Cavalry
+Squire
+Soldier of the Pantheon
+Dawnbringer Charioteers
+Foot Soldiers
+Fiend Binder
+Zealots en-Dal
+Meng Huo's Horde
+Mentor of the Meek
+Keldon Arsonist
+Keldon Firebombers
+Conscripted Infantry
+Glory Seeker
+Thraben Inspector
+Thraben Standard Bearer
+Thraben Valiant
+Master Decoy
+Master of Arms
+Scalebane's Elite
+Scaleguard Sentinels
+Militia Bugler
+Militia Rallier
+Gravel Slinger
+Helionaut
+Weathered Bodyguards
+Enlistment Officer
+Adherent of Hope
+Boros Challenger
+Boros Elite
+Mine Bearer
+Recruiter of the Guard
+Recruitment Officer
+Red Cliffs Armada
+Catapult Master
+Catapult Squad
+Cathar Commando
+Sunlit Hoplite
+Sunspire Gatekeepers
+Sunstrike Legionnaire
+Daysquad Marshal
+Ravaging Horde
+Fencing Ace
+Sergeant-at-Arms
+Champion of the Parish
+Estwald Shieldbasher
+Reverent Hoplite
+Court Street Denizen
+Martyr for the Cause
+Warlord's Elite
+Whip Sergeant
+Veteran Armorer
+Veteran Armorsmith
+Veteran Brawlers
+Veteran Cathar
+Descendant of Kiyomaro
+Kjeldoran Elite Guard
+Kjeldoran Escort
+Renegade Troops
+Renegade Warlord
+Topan Freeblade
+Frontline Strategist
+Bloodcrazed Hoplite
+Makeshift Battalion
+Vernadi Shieldmate
+Relic Seeker
+Righteous Avengers
+Auriok Steelshaper
+Auriok Sunchaser
+Auriok Survivors
+God-Favored General
+Dream Fighter
+Wyrm's Crossing Patrol
+Fresh-Faced RecruitKazandu Blademaster
+Veteran Warleader
+Affa Protector
+Resolute Blademaster
+Hada Freeblade
+Weapons TrainerRanger en-VecMounted Archers
+Crossbow Infantry
+Longbow Archer
+Fire Bowman
+Elite Archers
+D'Avenant ArcherKeldon BerserkerHanweir Militia Captain // Westvale Cult LeaderThraben Sentry // Thraben MilitiaMourning Patrol // Morning ApparitionLoyal Cathar // Unhallowed CatharSilverflame Squire // On AlertAngelfire CrusaderBushi Tenderfoot // Kenzo the HardheartedFaithful Squire // Kaiso, Memory of LoyaltyRanger of Eos
+Ranger-Captain of Eos
+Firebrand RangerWhipcorderMountain BanditHonorable Scout
+Icatian Scout
+Advance Scout
+Veteran ExplorerSandstone WarriorBallista Watcher // Ballista Wielder
+Brutal Cathar // Moonrage BruteWizened Arbiter

@@ -1,0 +1,2 @@
+__djinn/general__
+__djinn/wizard__

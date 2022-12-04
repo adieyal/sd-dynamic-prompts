@@ -1,0 +1,9 @@
+__cat/advisor__
+__cat/citizen__
+__cat/cleric__
+__cat/demon__
+__cat/monk__
+__cat/rogue__
+__cat/scout__
+__cat/spirit__
+__cat/warrior__

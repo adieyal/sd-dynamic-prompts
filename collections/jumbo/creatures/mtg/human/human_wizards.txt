@@ -1,0 +1,464 @@
+Protean Thaumaturge
+Youthful Scholar
+Radiant Performer
+Star Pupil
+Graceful Adept
+Riptide Biologist
+Riptide Chronologist
+Riptide Director
+Riptide Entrancer
+Snapcaster Mage
+Sorcerer of the Fang
+Sorceress Queen
+Lunar Mystic
+Sly Instigator
+Flux Channeler
+Dimir Guildmage
+Minamo Scrollkeeper
+Minamo Sightbender
+Irencrag Pyromancer
+Mundungu
+Senate Guildmage
+Rockslide Sorcerer
+Puppeteer
+Laboratory Maniac
+Vortex Runner
+Tolarian Emissary
+Tolarian Entrancer
+Tolarian Scholar
+Whispering Wizard
+Burning Prophet
+Elite Instructor
+Lighthouse Chronologist
+Tribute Mage
+Trinket Mage
+Ghosthelm Courier
+Harmonic Prodigy
+Necra Disciple
+Meddling Mage
+Onyx Mage
+Disruptive Pitmage
+Disruptive Student
+Prodigal Pyromancer
+Prodigal Sorcerer
+Azorius Aethermage
+Azorius Justiciar
+Patron Wizard
+Sinister Concierge
+Havengul Runebinder
+Bogbrew Witch
+Capricious Sorcerer
+Captain of the Mists
+Temporal Adept
+Shivan Emissary
+Planebound Accomplice
+Rummaging Wizard
+Arcane Artisan
+Arcane Savant
+Dreamstealer
+Drifter il-Dal
+Stonewise Fortifier
+Reflector Mage
+Duskmantle Guildmage
+Wingcrafter
+Wingspan Mentor
+Survivor of the Unseen
+Artful Looter
+Artisan of Forms
+Prophet of Kruphix
+Grim Haruspex
+Grim Lavamancer
+Mage il-Vec
+Keen Duelist
+Jubilant Skybonder
+Dromoka Dunecaster
+Terraformer
+Supreme Inquisitor
+Suq'Ata Firewalker
+Oracle en-Vec
+Novice Occultist
+Mystic Archaeologist
+Flesh Carver
+Fleshformer
+Exhibition Magician
+Wojek Embermage
+Armorer Guildmage
+Dark Confidant
+Pondering Mage
+Portal Mage
+Lord of the Unreal
+Lore Weaver
+Blightcaster
+Sea Gate Oracle
+Crafty Pathmage
+Magus of the Abyss
+Magus of the Arena
+Magus of the Balance
+Magus of the Bazaar
+Magus of the Bridge
+Magus of the Candelabra
+Magus of the Coffers
+Magus of the Disk
+Magus of the Future
+Magus of the Jar
+Magus of the Library
+Magus of the Mind
+Magus of the Mirror
+Magus of the Moat
+Magus of the Moon
+Magus of the Order
+Magus of the Scroll
+Magus of the Tabernacle
+Magus of the Unseen
+Soul-Scar Mage
+Teferi's Protege
+Omenspeaker
+Omnispell Adept
+Legion Guildmage
+Thunderscape Battlemage
+Thunderscape Master
+Pain Seer
+Incursion Specialist
+Disciple of Bolas
+Disciple of Caelus Nin
+Disciple of Kangee
+Disciple of the Ring
+Bog Initiate
+Balshan Beguiler
+Raffine's Informant
+Rage Weaver
+Heartfire Immolator
+Brushstroke Paintermage
+Ana Battlemage
+Ana Disciple
+Anarchist
+Imagecrafter
+Scornful Egotist
+Krovikan Elementalist
+Krovikan Sorcerer
+Hapless Researcher
+Dega Disciple
+Scholar of the Ages
+Sadistic Augermage
+Sage of Epityr
+Sage of Hours
+Sage of Mysteries
+Shadowmage Infiltrator
+Gempalm Sorcerer
+Venerated Teacher
+Murmuring Mystic
+Musician
+Dualcaster Mage
+Beguiler of Wills
+Windrider Wizard
+Neurok Invisimancer
+Neurok Prodigy
+Neurok Transmuter
+New Prahv Guildmage
+Liliana's Scrounger
+Facet Reader
+Sandcrafter Mage
+Stormchaser Mage
+Stormscape Apprentice
+Stormscape Master
+Revolutionist
+Eager First-Year
+Pit Keeper
+Biomathematician
+Biovisionary
+Blood Cultist
+Skaab Wrangler
+Cunning Geysermage
+Cunning Lethemancer
+Cuombajj Witches
+Ruthless Technomancer
+Azure Mage
+Daring Apprentice
+Imperious Mindbreaker
+Umbra Mystic
+Skyward Eye Prophets
+Bant Battlemage
+Brine Seer
+Sparkmage Apprentice
+Spawnbroker
+League Guildmage
+Pyromantic Pilgrim
+Silumgar Sorcerer
+Merchant of Secrets
+Mercurial Chemister
+Galvanic Alchemist
+Sighted-Caste Sorcerer
+Ardent Electromancer
+Auramancer
+Auratouched Mage
+Voidmage Apprentice
+Overwhelmed Apprentice
+Ovinomancer
+Soldevi Sage
+Aphetto Alchemist
+Aphetto Exterminator
+Aphetto Grifter
+Aphetto Runecaster
+Apprentice Sorcerer
+Apprentice Wizard
+Demon's Herald
+Sea Gate Stormcaller
+Death Cultist
+Drownyard Explorers
+Riptide Survivor
+Skirk Alarmist
+Nightshade Seer
+Rimewind Cryomancer
+Rimewind Taskmage
+Archivist
+Archmage Emeritus
+Exclusion Mage
+Gust Walker
+Gustrider Exuberant
+Nivix Guildmage
+Lat-Nam Adept
+Erratic Visionary
+Escape Artist
+Smogsteed Rider
+Lumengrid Sentinel
+Lumengrid Warden
+Alabaster Mage
+Alchemist's Apprentice
+Civic Guildmage
+Information Dealer
+Stern Mentor
+Stern Proctor
+Obsessive Astronomer
+Obsessive Stitcher
+Reckless Embermage
+Reckless Scholar
+Rakdos Augermage
+Firefist Adept
+Coastal Wizard
+Moniker Mage
+Thought Courier
+Thoughtpicker Witch
+Academy Elite
+Academy Journeymage
+Academy Loremaster
+Academy Researchers
+Battlefield Thaumaturge
+Bazaar Trademage
+Research Assistant
+Treasure Mage
+Sphinx's Disciple
+Aether Adept
+Aether Channeler
+Fatespinner
+Fathom Mage
+Voidmage Husher
+Voidmage Prodigy
+Voidwielder
+Grixis Battlemage
+Grixis Illusionist
+Sunhome Guildmage
+El-Hajjâj
+Dakmor Sorceress
+Micromancer
+Midnight Pathlighter
+Midvast Protector
+Elite Arcanist
+Elite Guardmage
+House Guildmage
+Zuran Enchanter
+Zuran Spellcaster
+Lost Auramancers
+Passwall Adept
+Pathmaker Initiate
+Fireslinger
+Firmament Sage
+Granger Guildmage
+Seeker of Insight
+Cinder Seer
+Orzhov Guildmage
+Paragon of Gathering Mists
+Benalish Emissary
+Ghitu Amplifier
+Ghitu Chronicler
+Ghitu Journeymage
+Ghitu Lavarunner
+Jasmine Seer
+Thornscape Apprentice
+Thornscape Master
+Caligo Skin-Witch
+Thundering Sparkmage
+Thunderscape Apprentice
+Telepathic Spies
+Drannith Magistrate
+Drannith Stinger
+Keeper of the Beasts
+Keeper of the Cadence
+Keeper of the Dead
+Keeper of the Flame
+Keeper of the Light
+Keeper of the Mind
+Triskaidekaphile
+Thraben Heretic
+Might Weaver
+Symmetry Sage
+Scrivener
+Dismissive Pyromancer
+Wizard Mentor
+Wizards of Thay
+Echo Mage
+Echo Tracer
+Boneclad Necromancer
+Master of the Veil
+Willbender
+Willbreaker
+Clever Lumimancer
+Exultant Cultist
+Boros Guildmage
+Dragon's Eye Savants
+Balduvian Conjurer
+Balduvian Frostwaker
+Shaper Guildmage
+Mindreaver
+Meletis Astronomer
+Meletis Charlatan
+Cathartic Adept
+Shadow Guildmage
+Sunscape Apprentice
+Sunscape Battlemage
+Sunscape Master
+Sunscourge Champion
+Trophy Mage
+Sylvan Safekeeper
+Raven Guild Initiate
+Fervent Paincaster
+Watcher for Tomorrow
+Separatist Voidmage
+Serendib Sorcerer
+Manic Scribe
+Manifestation Sage
+Courtly Provocateur
+Covert Operative
+Martyr of Bones
+Martyr of Frost
+Blinding Mage
+Timebender
+Warden of the Beyond
+Quandrix Apprentice
+Deputy of Acquittals
+Deranged Assistant
+Descendant of Soramaro
+Archaeomancer
+Archaeomender
+Fugitive Wizard
+Frontline Sage
+Magus of the Vineyard
+Magus of the Wheel
+Magus of the Will
+Spellseeker
+Spellweaver Duo
+Magmatic Channeler
+Verduran Emissary
+Izzet Chronarch
+Izzet Guildmage
+Izzet Staticaster
+Hisoka's Guard
+Historian of Zhalfir
+Spirit Weaver
+Ashiok's Adept
+Ashiok's Forerunner
+Vizkopa Guildmage
+Urborg Emissary
+Auriok Windwalker
+God-Pharaoh's Faithful
+Xathrid NecromancerGorion, Wise Mentor
+Rionya, Fire Dancer
+Braids, Conjurer Adept
+Eutropia the Twice-Favored
+Princess Lucrezia
+Kydele, Chosen of Kruphix
+Teferi, Mage of Zhalfir
+Venser, Shaper Savant
+Jadar, Ghoulcaller of Nephalia
+Nebuchadnezzar
+Triad of Fates
+Stitcher Geralf
+Geralf, Visionary Stitcher
+Circu, Dimir Lobotomist
+Azami, Lady of Scrolls
+Zimone, Quandrix Prodigy
+Marchesa, the Black Rose
+Linessa, Zephyr Mage
+Hakim, Loreweaver
+Haldan, Avid Arcanist
+Naban, Dean of Iteration
+Donal, Herald of Wings
+Maga, Traitor to Mortals
+Kaza, Roil Chaser
+Sevinne, the Chronoclasm
+Tibor and Lumia
+Vhal, Candlekeep Researcher
+Raff Capashen, Ship's Mage
+Raff, Weatherlight Stalwart
+Inalla, Archmage Ritualist
+Naru Meha, Master Wizard
+Kess, Dissident Mage
+Vela the Night-Clad
+Gisa and Geralf
+Gisa, Glorious Resurrector
+The Raven Man
+Jhoira of the Ghitu
+Jodah, Archmage Eternal
+Jodah, the Unifier
+Lim-Dûl the Necromancer
+Inga Rune-Eyes
+Deekah, Fractal Theorist
+Dynaheir, Invoker Adept
+Ith, High Arcanist
+Ixidor, Reality Sculptor
+Lier, Disciple of the Drowned
+Baral, Chief of Compliance
+Volo, Guide to Monsters
+Volo, Itinerant Scholar
+Jalira, Master Polymorphist
+Riku of Two Reflections
+Mangara of Corondor
+Isareth the Awakener
+Ertai, Wizard Adept
+Eruth, Tormented Prophet
+Vadrik, Astral Archmage
+Ludevic, Necro-Alchemist
+Rasputin Dreamweaver
+Rasputin, the Oneiromancer
+Endrek Sahr, Master Breeder
+Barrin, Master Wizard
+Barrin, Tolarian Archmage
+Stenn, Paranoid Partisan
+Eleven, the Mage
+Zur the Enchanter
+Zur, Eternal Schemer
+Gadwick, the Wizened
+Gale, Waterdeep Prodigy
+Grandmother Sengir
+Sefris of the Hidden Ways
+Cecily, Haunted Mage
+Ghen, Arcanum Weaver
+Cabal Patriarch
+Tuknir Deathlock
+Heidar, Rimewind Master
+Adeliz, the Cinder Wind
+Taigam, Sidisi's Hand
+Garth One-Eye
+Hama Pashar, Ruin Seeker
+Rayne, Academy Chancellor
+Blind Seer
+Oskar, Rubbish Reclaimer
+Kaho, Minamo Historian
+Ghoulcaller Gisa
+Mairsil, the Pretender
+Rona, Sheoldred's Faithful
+Hisoka, Minamo Sensei
+Rielle, the EverwiseHalimar Excavator
+Halimar Tidecaller
+Spawnbinder MagePoppet Stitcher 
+Warped Researcher
+Cytoplast Manipulator

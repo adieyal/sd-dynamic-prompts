@@ -1,0 +1,6 @@
+__angel/advisor__
+__angel/berserker__
+__angel/cleric__
+__angel/general__
+__angel/soldier__
+__angel/spirit__

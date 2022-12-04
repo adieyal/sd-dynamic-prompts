@@ -1,0 +1,10 @@
+Ironclaw Orcs
+Brassclaw Orcs
+Orcish Conscripts
+Orcish Farmer
+Orcish Librarian
+Orcish Lumberjack
+Orcish Mechanics
+Orcish Settlers
+Orcish Squatters
+Orcish Veteran

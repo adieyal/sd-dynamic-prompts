@@ -1,0 +1,3 @@
+__efreet/general__
+__efreet/monk__
+__efreet/shaman__

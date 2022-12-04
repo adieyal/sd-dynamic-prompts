@@ -1,0 +1,4 @@
+__goblin/artificer__
+__goblin/shaman__
+__goblin/_
+__goblin/warrior__

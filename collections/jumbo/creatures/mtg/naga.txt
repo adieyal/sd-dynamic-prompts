@@ -1,0 +1,3 @@
+__naga/cleric__
+__naga/shaman__
+__naga/warrior__

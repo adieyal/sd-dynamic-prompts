@@ -1,0 +1,4 @@
+__merfolk/general__
+__merfolk/rogue__
+__merfolk/shaman__
+__merfolk/wizard__

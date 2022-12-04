@@ -1,0 +1,7 @@
+__giant/berserker__
+__giant/druid__
+__giant/general__
+__giant/knight__
+__giant/shaman__
+__giant/soldier__
+__giant/warrior__

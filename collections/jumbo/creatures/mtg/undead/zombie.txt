@@ -1,0 +1,264 @@
+Aphetto Vulture
+Archghoul of Thraben
+Armored Skaab
+Ashen Ghoul
+Attendant of Vraska
+Balduvian Dead
+Balduvian Fallen
+Baloth Null
+Barrow Ghoul
+Binding Mummy
+Bladestitched Skaab
+Bladewing's Thrall
+Blind CreeperCrow of Dark Tidings
+Bloodletter
+Bog Raiders
+Bone Dancer
+Boneknitter
+Brain Gorgers
+Buried Ogre
+Butcher Ghoul
+Cackling Fiend
+Caged Zombie
+Carnophage
+Carrion Crow
+Carrion Feeder
+Carrion Screecher
+Carrion Wurm
+Cemetery Desecrator
+Cemetery Reaper
+Champion of the Perished
+Coffin Puppets
+Corpse Blockade
+Corpulent Corpse
+Cryptbreaker
+Crypt Champion
+Crypt Creeper
+Cursed Minotaur
+Custodi Lich
+Cyclopean Mummy
+Dakmor Ghoul
+Deadhead
+Dead Reveler
+Deathbringer Thoctar
+Deepwood Ghoul
+Diregraf Captain
+Diregraf Ghoul
+Diregraf Horde
+Diver Skaab
+Drakestown Forgotten
+Draugr Recruiter
+Dreadhorde Butcher
+Dread WandererUndead Minotaur
+Dread Wight
+Dreadwing
+Dreg Reaver
+Dregscape Zombie
+Dripping Dead
+Dross Crocodile
+Dross Prowler
+Drowned
+Drunau Corpse Trawler
+Dungeon Crawler
+Dutiful Servants
+Embalmed Brawler
+Erstwhile Trooper
+Eternal of Harsh TruthsMoldering Karok
+Eternal Taskmaster
+Everlasting Lich
+Extremely Slow Zombie
+Falcon AbominationRotlung Reanimator
+Fallen Cleric
+Famished Ghoul
+Fan Bearer
+Farbog Boneflinger
+Festering Goblin
+Festering Mummy
+Fleshbag Marauder
+Forlorn Pseudamma
+Forsaken Drifters
+Frankenstein's Monster
+Frightshroud Courier
+Gangrenous Zombies
+Gavony Unhallowed
+Gempalm Polluter
+Geralf's Messenger
+Ghastly Remains
+Ghoulraiser
+Gluttonous Zombie
+Gnawing Zombie
+Golgari Rotwurm
+Graf Reaver
+Gravebane Zombie
+Gravecrawler
+Grave Defiler
+Gravedigger
+Grave Scrabbler
+Gravespawn Sovereign
+Graveyard Marshal
+Gray Merchant of Asphodel
+Grim Initiate
+Grim Physician
+Gristle Grinner
+Grixis Grimblade
+Grixis Sojourners
+Grotesque Hybrid
+Gutter Skulk
+Haunted Dead
+Headless Rider
+Headless Skaab
+Herald of the Dreadhorde
+Highborn Ghoul
+Hobbling Zombie
+Hoisted Hireling
+Hunted Ghoul
+Infectious Host
+Jarl of the Forsaken
+Jhessian Zombies
+Khabál Ghoul
+Kheru DreadmawStitched Drake
+Larder Zombie
+Lava Zombie
+Lazotep Reaver
+Legions of Lim-Dûl
+Lifebane Zombie
+Lightning Reaver
+Liliana's Elite
+Liliana's Reaver
+Liliana's Steward
+Lim-Dûl's Cohort
+Lord of the Accursed
+Lord of the Undead
+Loyal Subordinate
+Lurching Rotbeast
+Maalfeld Twins
+Maggot Carrier
+Marauding BoneslasherNefashu
+Marsh HulkRancid Rats
+Mass of Ghouls
+Merciless Eternal
+Miasmic Mummy
+Mindleech Ghoul
+Mindless Null
+Minotaur Abomination
+Mournful Zombie
+Mummy Paramount
+Murk Dwellers
+Necromancer's Assistant
+Nested Shambler
+Nightscape Familiar
+Nim Abomination
+Nim Devourer
+Nim Grotesque
+Nim Lasher
+Nim Shambler
+Nim Shrieker
+Noosegraf Mob
+Noxious Ghoul
+Null ChampionTerrus Wurm
+Odunos River Trawler
+Organ Grinder
+Organ Hoarder
+Phylactery Lich
+Plaguebearer
+Plague Belcher
+Plague Wight
+Polluted Dead
+Pontiff of Blight
+Possessed Skaab
+Poxwalkers
+Prized Amalgam
+Putrid GoblinToken: Steadfast Sentinel
+Pyre Zombie
+Ragamuffyn
+Rank and File
+Rank Officer
+Raving Dead
+Relentless Dead
+Relentless Skaabs
+Repository Skaab
+Returned Phalanx
+Risen Executioner
+Roofstalker Wight
+Rotcrown Ghoul
+Rot Hulk
+Rottenheart Ghoul
+Rotting Legion
+Rotting RatsUbul Sar Gatekeepers
+Sangrophage
+Scathe Zombies
+Scavenging Ghoul
+Scrapskin Drake
+Screeching Skaab
+Seagraf Skaab
+Selhoff Entomber
+Sepulcher Ghoul
+Servant of Tymaret
+Severed Legion
+Sewer Shambler
+Sewn-Eye DrakeShambling Goblin
+Shambling Attendants
+Shambling Ghast
+Shambling Ghoul
+Shepherd of Rot
+Sibsig Host
+Sibsig Icebreakers
+Sibsig Muckdraggers
+Siege Zombie
+Sightless Ghoul
+Silumgar Scavenger
+Skinthinner
+Skull Skaab
+Skywarp Skaab
+Smokespew InvokerZombie Ogre
+Spark Reaper
+Sparring Mummy
+Spined Basher
+Stitched Assistant
+Stitcher's Supplier
+Sultai Emissary
+Sutured Ghoul
+Tainted Adversary
+Tattered Drake
+Temp of the Damned
+The Fallen
+The Fallen Apart
+Those Who Serve
+Token: Anointer PriestToken: Trueheart Duelist
+Token: Proven CombatantDisposal Mummy
+Token: Temmet, Vizier of Naktamun
+Token: Unwavering Initiate
+Twisted Abomination
+Two-Headed Zombie
+Unbreathing Horde
+Undead Alchemist
+Undead Butler
+Undead Executioner
+Undead Servant
+Undead Warchief
+Unhallowed PhalanxAccursed Horde
+Unraveling Mummy
+Veilborn Ghoul
+Vengeful Dead
+Vengeful Pharaoh
+Voracious Null
+Wailing Ghoul
+Walking Corpse
+Walking Dead
+Walking Desecration
+Waning Wurm
+Warpath Ghoul
+Wayward Servant
+Whipstitched Zombie
+Wight
+Wight of Precinct Six
+Withered Wretch
+Woebearer
+ZombieAbattoir Ghoul
+Zombie Brute
+Zombie Cannibal
+Zombie Cutthroat
+ZombieHaunted Cadaver
+Zombie Mob
+Zombie Scavengers
+Zombified

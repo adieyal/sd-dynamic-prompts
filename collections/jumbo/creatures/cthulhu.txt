@@ -1,0 +1,7 @@
+__cthulhu/earth_native__
+__cthulhu/extinct__
+__cthulhu/extra_dimensional__
+__cthulhu/extra_terrestrial__
+__cthulhu/non_sapient__
+__cthulhu/outergods__
+__cthulhu/sapient__

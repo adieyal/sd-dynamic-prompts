@@ -1,0 +1,5 @@
+__ogre/berserker__
+__ogre/general__
+__ogre/mutant__
+__ogre/rogue__
+__ogre/warrior__

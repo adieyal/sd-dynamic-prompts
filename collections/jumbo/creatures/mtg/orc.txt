@@ -1,0 +1,6 @@
+__orc/berserker__
+__orc/general__
+__orc/rogue__
+__orc/shaman__
+__orc/warrior__
+__orc/wizard__

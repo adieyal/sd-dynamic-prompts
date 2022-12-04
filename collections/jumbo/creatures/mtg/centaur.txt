@@ -1,0 +1,3 @@
+__centaur/archer__
+__centaur/cleric__
+__centaur/warrior__

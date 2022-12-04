@@ -1,0 +1,6 @@
+__dwarf/artificer__
+__dwarf/cleric__
+__dwarf/general__
+__dwarf/pilot__
+__dwarf/shaman__
+__dwarf/soldier__

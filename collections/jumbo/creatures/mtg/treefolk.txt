@@ -1,0 +1,2 @@
+__treefolk/shaman__
+__treefolk/warrior__

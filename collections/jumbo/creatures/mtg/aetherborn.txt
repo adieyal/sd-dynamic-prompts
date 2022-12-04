@@ -1,0 +1,3 @@
+__aetherborn/artificer__
+__aetherborn/rogue__
+__aetherborn/warrior__

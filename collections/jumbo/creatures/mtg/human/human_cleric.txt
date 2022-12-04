@@ -1,0 +1,273 @@
+Abbey Matron
+Abzan Battle Priest
+Academy Rector
+Acolyte of Affliction
+Acolyte of Xathrid
+Aerie Worshippers
+Airlift Chaplain
+Akroma's Devoted
+Ancestor's Chosen
+Ancestor's Prophet
+Angelheart Protector
+Angel's Herald
+Angus Mackenzie
+Anointed Chorister
+Anointed Peacekeeper
+Anointer of Champions
+Anointer Priest
+Apostle of Purifying Light
+Arashin Cleric
+Archfiend's Vessel
+Archpriest of Iona
+Arcus Acolyte
+Arena Rector
+Asmira, Holy Avenger
+Atalya, Samite Master
+Augur il-Vec
+Auriok Champion
+Auspicious Ancestor
+Avacynian Priest
+Bane's Invoker
+Banisher Priest
+Battlefield Medic
+Beacon of Destiny
+Beloved Chaplain
+Benalish Faithbonder
+Benalish Missionary
+Benevolent Bodyguard
+Bishop of Wings
+Blade Historian
+Blessed Orator
+Blighted Shaman
+Blood Celebrant
+Bonecaller Cleric
+Brine Shaman
+Cabal Archon
+Cabal Evangel
+Cabal Executioner
+Cabal Slaver
+Caregiver
+Cathedral Sanctifier
+Celestial Enforcer
+Celestus Sanctifier
+Clergy en-Vec
+Clergy of the Holy Nimbus
+Cleric of the Forward Order
+Codespell Cleric
+Combat MedicCustodi Soulbinders
+Confessor
+Containment Priest
+Court Cleric
+Crimson Acolyte
+Crossroads Consecrator
+Custodi Peacekeeper
+Custodi Soulcaller
+Dark Supplicant
+Daru Healer
+Daru Mender
+Daru Sanctifier
+Daru Spiritualist
+Daunting Defender
+D'Avenant HealerBalduvian Shaman
+Dawnbringer Cleric
+Dawning Purist
+Daybreak Chaplain
+Deathmark Prelate
+Death Speakers
+Dedicated Martyr
+Defender en-Vec
+Defender of the Order
+Demon's Disciple
+Devoted Caretaker
+Devout Chaplain
+Diregraf Escort
+Disciple of Grace
+Disciple of Griselbrand
+Disciple of Law
+Disciple of Malice
+Disciple of Phenax
+Disciple of Tevesh Szat
+Disciple of the Sun
+Disciple of the Vault
+Doomskar Oracle
+Drannith Healer
+Duskfang Mentor
+Earthblighter
+Ebonblade Reaper
+Edgewalker
+Elgaud Inquisitor
+Elite Spellbinder
+Emissary of Sunrise
+Empty-Shrine Kannushi
+Ephara's Warden
+Evangel of Heliod
+Exava, Rakdos Blood Witch
+Exiled Doomsayer
+Exorcist
+Faith Healer
+False Prophet
+Farrelite Priest
+Femeref Healer
+Field Surgeon
+Fiend Hunter
+Foothill Guide
+Fountain Watch
+Freyalise Supplicant
+Frontline Medic
+Glowrider
+Grand Abolisher
+Grassland Crusader
+Haazda Exonerator
+Hallowed Healer
+Hapatra, Vizier of Poisons
+Harsh Mentor
+Hazduhr the Abbot
+Headhunter
+Hedron-Field Purists
+Hekma Sentinels
+Heliod's Pilgrim
+High Priest of Penance
+Holy Justiciar
+Icatian Priest
+Impassioned Orator
+Imperious Oligarch
+Infernal Caretaker
+Jhessian Balmgiver
+Kaalia of the Vast
+Kaalia, Zenith Seeker
+Kabira EvangelSamite Archer
+Karona's Zealot
+Keensight Mentor
+Keepers of the Faith
+Kei Takahashi
+Kinjalli's Caller
+Kyler, Sigardian Emissary
+Lady Evangela
+Lorehold Apprentice
+Luminarch Aspirant
+Lyzolda, the Blood Witch
+Mangara, the Diplomat
+Martyr of Sands
+Master Apothecary
+Master Healer
+Mikaeus, the Lunarch
+Militant Inquisitor
+Ministrant of Obligation
+Miracle Worker
+Mother of Goons
+Mother of Runes
+Nearheath Chaplain
+Nearheath Pilgrim
+Niambi, Esteemed Speaker
+Niambi, Faithful Healer
+Nikara, Lair Scavenger
+Nils, Discipline Enforcer
+Noble Benefactor
+Noble Templar
+Nova Cleric
+Obsidian Acolyte
+Ollenbock Escort
+Ondu War Cleric
+Order of the Stars
+Orim, Samite Healer
+Oriss, Samite Guardian
+Orzhov Pontiff
+Pilgrim of Justice
+Pilgrim of Virtue
+Planar Guide
+Preacher
+Priest of Forgotten Gods
+Priest of Iroas
+Priest of the Blessed Graf
+Priest of the Blood Rite
+Priest of the Wakening Sun
+Pulsemage Advocate
+Qarsi High Priest
+Qarsi Sadist
+Ragnar
+Ravos, Soultender
+Revered Elder
+Royal Herbalist
+Sacred Guide
+Samite Alchemist
+Samite Elder
+Samite Healer
+Samite Herbalist
+Samite Pilgrim
+Sanctifier en-Vec
+Sanctifier of Souls
+Sanctum Custodian
+Sanctum Guardian
+Sanctum Prelate
+Scholar of Athreos
+Scribe of the Mindful
+Selfless Cathar
+Selfless Exorcist
+Serene Steward
+Serra Inquisitors
+Servant of Nefarox
+Setessan Battle Priest
+Shadowborn Apostle
+Shadow-Rite Priest
+Shadowstorm Vizier
+Shieldmage Advocate
+Sigardian Priest
+Sigardian Zealot
+Silent Attendant
+Silverquill Silencer
+Sin Collector
+Sister Hospitaller
+Skirsdag Flayer
+Skirsdag High Priest
+Skirsdag Supplicant
+Soldevi Adnate
+Soldevi Heretic
+Songstitcher
+Soulmender
+Soul's Attendant
+Soul Shepherd
+Soul Warden
+Speaker of the Heavens
+Starfield Mystic
+Starnheim Aspirant
+Steadfast Sentinel
+Stern Judge
+Storm ShamanGoldnight Commander
+Stronghold Confessor
+Suncleanser
+Sylvan Hierophant
+Syndicate Guildmage
+Syndic of Tithes
+Temmet, Vizier of Naktamun
+Temple Acolyte
+Teroh's Faithful
+Thalia's Geistcaller
+Thalisse, Reverent Medium
+Thraben Doomsayer
+Tireless Missionaries
+Torens, Fist of the Angels
+Tourach, Dread Cantor
+Traveling Minister
+Troubled Healer
+True Believer
+Tymna the Weaver
+Undead Slayer
+Urbis Protector
+Victory's Envoy
+Vigilant Martyr
+Vile Deacon
+Vizier of Deferment
+Vizier of Remedies
+Vizier of the Anointed
+Vizier of the True
+Vizier of Tumbling Sands
+Vizkopa Confessor
+War Oracle
+War Priest of Thune
+Whipgrass Entangler
+Whisper, Blood Liturgist
+Wingmantle Chaplain
+Witch Hunter
+Wojek Apothecary
+Yawgmoth, Thran Physician
+Zealous Inquisitor

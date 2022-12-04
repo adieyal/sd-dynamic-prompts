@@ -1,0 +1,10 @@
+__bird/beast__
+__bird/citizen__
+__bird/cleric__
+__bird/general__
+__bird/rogue__
+__bird/scout__
+__bird/shaman__
+__bird/soldier__
+__bird/warrior__
+__bird/wizard__
