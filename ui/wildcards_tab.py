@@ -58,8 +58,11 @@ def on_ui_tabs():
                     html = gr.HTML("", elem_id="html_id")
                     load_tree = gr.Button("Load", full_width=True, elem_id="load_tree_button")
                 with gr.Column():
+                    file_name = gr.Textbox(
+                        "", elem_id="file_name_id", interactive=False, label="Wildcards file"
+                    )
                     file_edit_box = gr.Textbox(
-                        "", elem_id="file_edit_box_id", lines=10, interactive=True
+                        "", elem_id="file_edit_box_id", lines=10, interactive=True, label="File editor"
                     )
                     save_button = gr.Button("Save wildcards", full_width=True)
 

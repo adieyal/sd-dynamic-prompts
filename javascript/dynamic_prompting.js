@@ -65,6 +65,8 @@ function nodeSelected(x) {
 function receiveTreeEvent(x) {
   let js = gradioApp().querySelector("#scratch_textbox textarea").value
   let json = JSON.parse(js)
+  let filenameElement = gradioApp().querySelector("#file_name_id textarea")
+  filenameElement.value = json["name"]
 
   return json
 }
