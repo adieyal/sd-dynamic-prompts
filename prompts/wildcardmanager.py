@@ -61,8 +61,8 @@ class WildcardManager:
             path = self._path
 
         files = path.glob("*.txt")
-        wildcards = [self.path_to_wilcard(f) for f in files]
-        directories = [d for d in path.glob("*") if d.is_dir()]
+        wildcards = sorted([self.path_to_wilcard(f) for f in files])
+        directories = sorted([d for d in path.glob("*") if d.is_dir()])
 
         hierarchy = {d.name: self.get_wildcard_hierarchy(d) for d in directories}
         return (wildcards, hierarchy)
