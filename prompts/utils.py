@@ -1,6 +1,8 @@
 import unicodedata
 import re
-
+import math
+import random
+from pathlib import Path
 
 def slugify(value, allow_unicode=False, max_length=50):
     """
@@ -22,3 +24,14 @@ def slugify(value, allow_unicode=False, max_length=50):
     value = re.sub(r"[^\w\s-]", "", value.lower())
     value = re.sub(r"[-\s]+", "-", value).strip("-_")
     return value[0:max_length]
+
+
+def get_unique_path(directory: Path, original_filename, suffix="txt") -> Path:
+    filename = original_filename
+    for i in range(1000):
+        path = (directory / filename).with_suffix("." + suffix)
+        if not path.exists():
+            return path
+        filename = f"{slugify(original_filename)}-{math.floor(random.random() * 1000)}"
+
+    raise Exception("Failed to find unique path")

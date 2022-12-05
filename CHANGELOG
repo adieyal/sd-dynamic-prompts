@@ -79,3 +79,4 @@
 1.0.1 Ensure that the wildcards tree is only loaded once
 1.0.2 Wildcard hierarchy is now alphabetically sorted
 1.0.3 Improved wildcards tab interface
+1.1.0 Updated write prompts to file. Now outputs a csv files with both positive and negative prompts

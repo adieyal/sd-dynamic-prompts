@@ -3,7 +3,6 @@ import logging
 from string import Template
 from pathlib import Path
 import math
-import random
 
 import gradio as gr
 
@@ -27,8 +26,8 @@ from prompts.generators import (
 from prompts.generators.jinjagenerator import JinjaGenerator
 from prompts.generators.promptgenerator import GeneratorException
 from prompts import constants
-from prompts.utils import slugify
-
+from prompts.utils import slugify, get_unique_path
+from prompts import prompt_writer
 from ui import wildcards_tab
 
 
@@ -49,22 +48,11 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "1.0.3"
+VERSION = "1.1.0"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
 wildcards_tab.initialize(wildcard_manager)
-
-
-def get_unique_path(directory: Path, original_filename) -> Path:
-    filename = original_filename
-    for i in range(1000):
-        path = (directory / filename).with_suffix(".txt")
-        if not path.exists():
-            return path
-        filename = f"{slugify(original_filename)}-{math.floor(random.random() * 1000)}"
-
-    raise Exception("Failed to find unique path")
 
 
 def old_generation(
@@ -327,7 +315,7 @@ class Script(scripts.Script):
                 combinatorial_batches = 1
         except (ValueError, TypeError):
             combinatorial_batches = 1
-
+        
         try:
             logger.debug("Creating positive generator")
             generator = self._create_generator(
@@ -393,15 +381,12 @@ class Script(scripts.Script):
         )
 
         try:
+            
             if write_prompts:
                 prompt_filename = get_unique_path(
-                    Path(p.outpath_samples), slugify(original_prompt)
+                    Path(p.outpath_samples), slugify(original_prompt), suffix="csv"
                 )
-                prompt_filename.write_text(
-                    "\n".join(all_prompts),
-                    encoding=constants.DEFAULT_ENCODING,
-                    errors="ignore",
-                )
+                prompt_writer.write_prompts(prompt_filename, original_prompt, original_negative_prompt, all_prompts, all_negative_prompts)
         except Exception as e:
             logger.error(f"Failed to write prompts to file: {e}")
 
