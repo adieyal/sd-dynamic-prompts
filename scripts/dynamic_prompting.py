@@ -48,7 +48,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "1.1.0"
+VERSION = "1.2.0"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -77,8 +77,35 @@ def old_generation(
     return prompt_generator
 
 
-def new_generation(prompt) -> PromptGenerator:
-    generator = JinjaGenerator(prompt, wildcard_manager)
+def new_generation(prompt, p) -> PromptGenerator:
+    context = {
+        "model": {
+            "filename": p.sd_model.sd_checkpoint_info.filename,
+            "title": p.sd_model.sd_checkpoint_info.title,
+            "hash": p.sd_model.sd_checkpoint_info.hash,  
+            "model_name": p.sd_model.sd_checkpoint_info.model_name,
+        },
+        "image": {
+            "width": p.width,
+            "height": p.height,
+        },
+        "parameters": {
+            "steps": p.steps,
+            "batch_size": p.batch_size,
+            "num_batches": p.n_iter,
+            "width": p.width,
+            "height": p.height,
+            "cfg_scale": p.cfg_scale,
+            "sampler_name": p.sampler_name,
+            "seed": p.seed,
+        },
+        "prompt": {
+            "prompt": prompt,
+            "negative_prompt": p.negative_prompt,
+        }
+    }
+
+    generator = JinjaGenerator(prompt, wildcard_manager, context)
     return generator
 
 
@@ -120,7 +147,7 @@ class Script(scripts.Script):
         elif is_feeling_lucky:
             generator = FeelingLuckyGenerator(original_prompt)
         elif enable_jinja_templates:
-            generator = new_generation(original_prompt)
+            generator = new_generation(original_prompt, self._p)
         else:
             generator = old_generation(
                 original_prompt,
@@ -296,6 +323,8 @@ class Script(scripts.Script):
         if not is_enabled:
             logger.debug("Dynamic prompts disabled - exiting")
             return p
+        
+        self._p = p
 
         fix_seed(p)
 

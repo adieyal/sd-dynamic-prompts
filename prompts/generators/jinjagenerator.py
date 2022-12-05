@@ -94,9 +94,15 @@ class PromptExtension(Extension):
 
 
 class JinjaGenerator(PromptGenerator):
-    def __init__(self, template, wildcard_manager=None):
+    def __init__(self, template, wildcard_manager=None, context=None):
         self._template = template
         self._wildcard_manager = wildcard_manager
+
+        if context is not None:
+            self._context = context
+        else:
+            self._context = {}
+
 
     def generate(self, num_prompts=1) -> list[str]:
         try:
@@ -105,10 +111,11 @@ class JinjaGenerator(PromptGenerator):
             )
             env.wildcard_manager = self._wildcard_manager
 
+
             prompts = []
             for i in range(num_prompts):
                 template = env.from_string(self._template)
-                s = template.render()
+                s = template.render(**self._context)
                 prompts.append(s)
 
             if env.prompt_blocks:
