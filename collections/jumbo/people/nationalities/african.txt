@@ -1,0 +1,6 @@
+__east-africa__
+__southern-africa__
+__west-africa__
+__north-africa__
+__central-africa__
+__african-islands__

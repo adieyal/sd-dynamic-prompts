@@ -1,0 +1,7 @@
+__balkan__
+__baltic__
+__scandinavian__
+__central-europe__
+__northwest-europe__
+__south-europe__
+__east-europe__

@@ -1,0 +1,8 @@
+__african__
+__europe__
+__south-america__
+__north-america__
+__asia__
+__oceania__
+__atlantic-islands__
+__central-america__
