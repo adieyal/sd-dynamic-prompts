@@ -101,7 +101,6 @@ def load_tree_callback(js):
     return json.dumps(hierarchy)
 
 def receive_tree_event(s):
-    s = s.replace("'", '"')
     js = json.loads(s)
     values = wildcard_manager.get_all_values(js["name"])
     path = wildcard_manager.wildcard_to_path(js["name"])
@@ -111,7 +110,7 @@ def receive_tree_event(s):
 
 def save_file_callback(js):
     try:
-        wildcard_json = js.replace("'", '"')
+        wildcard_json = js
         js = json.loads(wildcard_json)
 
         if "wildcard" in js and "name" in js["wildcard"]:

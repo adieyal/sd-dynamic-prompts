@@ -68,7 +68,7 @@ function receiveTreeEvent(x) {
   let filenameElement = gradioApp().querySelector("#file_name_id textarea")
   filenameElement.value = json["name"]
 
-  return json
+  return JSON.stringify(json)
 }
 
 function saveFile(x) {
@@ -76,8 +76,8 @@ function saveFile(x) {
   let json = JSON.parse(js)
   let contents = gradioApp().querySelector("#file_edit_box_id textarea").value
 
-  return {
+  return JSON.stringify({
     "wildcard": json,
     "contents": contents
-  }
+  })
 }

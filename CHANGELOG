@@ -82,3 +82,4 @@
 1.1.0 Updated write prompts to file. Now outputs a csv files with both positive and negative prompts
 1.2.0 Added render variables to jinja2 context - see the jinja2.md for details
 1.2.1 Removed white space from wildcards when saving
+1.2.2 Fixed passing json between frontend and backend - now explicitly stringifying in the frontend
