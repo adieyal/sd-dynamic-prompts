@@ -1,92 +1,92 @@
-Aero	
-Air Force blue	
-Air superiority blue	
-Alice Blue	
-Argentinian Blue	
-Azul	
-Azure	
-Baby blue	
-Berkeley Blue	
+Aero
+Air Force blue
+Air superiority blue
+Alice Blue
+Argentinian Blue
+Azul
+Azure
+Baby blue
+Berkeley Blue
 Bice blue
-Bleu de France	
-Blue	
+Bleu de France
+Blue
 Blue (Crayola)
-Blue-gray	
-Blue (Munsell)	
-Blue (NCS)	
-Bondi blue	
-Brandeis blue	
-Byzantine blue	
-Cambridge blue	
-Carolina blue	
-Celestial Blue	
+Blue-gray
+Blue (Munsell)
+Blue (NCS)
+Bondi blue
+Brandeis blue
+Byzantine blue
+Cambridge blue
+Carolina blue
+Celestial Blue
 Celtic Blue
-Cerulean	
-Chefchaouen Blue	
-Chrysler blue	
-Cobalt blue	
-Columbia blue	
-Cornflower blue	
-Dark blue	
-Deep Sky Blue	
+Cerulean
+Chefchaouen Blue
+Chrysler blue
+Cobalt blue
+Columbia blue
+Cornflower blue
+Dark blue
+Deep Sky Blue
 Delft Blue
-Denim	
-Dodger blue	
-Duke blue	
-Egyptian blue	
-Electric indigo	
-Federal blue	
-French Blue	
-Glaucous	
-Green-blue	
-Honolulu Blue	
+Denim
+Dodger blue
+Duke blue
+Egyptian blue
+Electric indigo
+Federal blue
+French Blue
+Glaucous
+Green-blue
+Honolulu Blue
 Ice blue
-Indigo	
-Indigo dye	
-International Klein Blue	
-Jordy Blue	
-Lapis Lazuli	
-Light blue	
-Light Sky Blue	
-Majorelle Blue	
-Marian blue	
+Indigo
+Indigo dye
+International Klein Blue
+Jordy Blue
+Lapis Lazuli
+Light blue
+Light Sky Blue
+Majorelle Blue
+Marian blue
 Maya blue
-Medium blue	
-Medium slate blue	
-Midnight blue	
-Navy blue	
-Neon blue	
-Non-photo blue	
-Oxford Blue	
+Medium blue
+Medium slate blue
+Midnight blue
+Navy blue
+Neon blue
+Non-photo blue
+Oxford Blue
 Palatinate blue
-Pale azure	
-Penn Blue	
-Periwinkle	
-Persian blue	
-Phthalo blue	
-Picton Blue	
-Polynesian blue	
-Powder blue	
-Prussian blue	
+Pale azure
+Penn Blue
+Periwinkle
+Persian blue
+Phthalo blue
+Picton Blue
+Polynesian blue
+Powder blue
+Prussian blue
 Resolution Blue
-RISD Blue	
-Royal Blue 
-Ruddy Blue	
-Sapphire	
-Savoy blue	
-Silver Lake Blue	
-Sky blue	
+RISD Blue
+Royal Blue
+Ruddy Blue
+Sapphire
+Savoy blue
+Silver Lake Blue
+Sky blue
 Space cadet
-Steel blue	
-Tang Blue	
-True Blue	
-Tufts Blue	
-UCLA Blue	
-Ultramarine	
-United Nations Blue	
-Uranian Blue	
-Violet-blue	
+Steel blue
+Tang Blue
+True Blue
+Tufts Blue
+UCLA Blue
+Ultramarine
+United Nations Blue
+Uranian Blue
+Violet-blue
 Vista Blue
-Yale Blue	
-YInMn Blue	
+Yale Blue
+YInMn Blue
 Zaffre

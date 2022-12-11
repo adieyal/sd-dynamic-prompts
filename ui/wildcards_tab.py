@@ -1,5 +1,6 @@
 from __future__ import annotations
 import logging
+import os
 from modules import script_callbacks
 import gradio as gr
 import json
@@ -120,7 +121,9 @@ def save_file_callback(js):
             contents=js["contents"]
 
             with path.open("w") as f:
-                f.write(contents)
+                contents = contents.splitlines()
+                for c in contents:
+                    f.write(c.strip() + os.linesep)
     except Exception as e:
         logger.exception(e)
 

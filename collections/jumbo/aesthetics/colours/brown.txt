@@ -1,66 +1,66 @@
-Auburn	
-Beaver	
-Beige	
-Bistre	
-Black bean	
-Black olive	
-Bole	
-Bone	
+Auburn
+Beaver
+Beige
+Bistre
+Black bean
+Black olive
+Bole
+Bone
 Bronze
-Brown	
-Brown sugar	
-Buff	
-Burgundy	
-Burnt sienna	
-Burnt umber	
-Camel	
-Caput mortuum	
-Caramel	
+Brown
+Brown sugar
+Buff
+Burgundy
+Burnt sienna
+Burnt umber
+Camel
+Caput mortuum
+Caramel
 Chamoisee
-Chestnut	
-Chocolate	
-Citron	
-Cocoa Brown	
-Coffee	
-Copper	
-Cordovan	
-Coyote	
-Desert sand	
+Chestnut
+Chocolate
+Citron
+Cocoa Brown
+Coffee
+Copper
+Cordovan
+Coyote
+Desert sand
 Drab dark brown
-Dun	
-Earth yellow	
-Ecru	
-Fallow	
-Fawn	
-Field drab	
-Fulvous	Golden brown	
-Goldenrod	
+Dun
+Earth yellow
+Ecru
+Fallow
+Fawn
+Field drab
+Fulvous	Golden brown
+Goldenrod
 Harvest gold
-Khaki	
+Khaki
 Kobicha
-Lion	
-Liver	
-Mahogany	
-Maroon	
-Ochre	
-Raw umber	
-Red-brown	
+Lion
+Liver
+Mahogany
+Maroon
+Ochre
+Raw umber
+Red-brown
 Redwood
-Rufous	
-Russet	
-Rust	
-Sand	
-Sandy brown	
-Satin sheen gold	
-Seal brown	
-Sepia	
-Sienna	
+Rufous
+Russet
+Rust
+Sand
+Sandy brown
+Satin sheen gold
+Seal brown
+Sepia
+Sienna
 Sinopia
-Tan	
-Taupe	
-Tawny	
-Umber	
-Van Dyke	
-Walnut brown	
-Wenge	
+Tan
+Taupe
+Tawny
+Umber
+Van Dyke
+Walnut brown
+Wenge
 Wheat
