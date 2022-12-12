@@ -1,0 +1,6 @@
+Acinaces
+Chereb
+{Kilij|Pulwar|Shamshir|Talwar|Yataghan|Khanjar|Saif|Scimitar|Zulfiqar}
+__war/weapons/swords/east_asian__
+__war/weapons/swords/south_asian__
+__war/weapons/swords/south_east_asian__

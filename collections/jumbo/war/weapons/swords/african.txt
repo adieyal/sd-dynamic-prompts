@@ -1,0 +1,18 @@
+# North African swords
+Flyssa
+Kaskara
+Khopesh
+Mameluke sword
+Nimcha
+
+# East African swords
+Billao
+Shotel
+
+# West African swords
+Akrafena
+Ida
+Takoba
+
+# Central African swords
+Mambele
