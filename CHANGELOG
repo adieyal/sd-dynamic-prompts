@@ -85,3 +85,4 @@
 1.2.2 Fixed passing json between frontend and backend - now explicitly stringifying in the frontend
 1.2.3 Added natioanlities wildcards
 1.3.0 Added mechanism to copy collections to wildcards
+1.3.1 Fixed path in wildcard files

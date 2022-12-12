@@ -1,4 +1,4 @@
-__meiji_era__
-__taisho_era__
-__showa_era__
-__heisei_era__
+__artists/Japanese Art/nihonga/meiji_era__
+__artists/Japanese Art/nihonga/taisho_era__
+__artists/Japanese Art/nihonga/showa_era__
+__artists/Japanese Art/nihonga/heisei_era__

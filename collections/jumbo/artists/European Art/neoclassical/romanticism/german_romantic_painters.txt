@@ -19,5 +19,5 @@ Johannes Veit
 Johann Friedrich Overbeck
 Konrad Eberhard
 Philipp Otto Runge
-__nazarene_painters__
-__dusseldorf_school__
+__artists/European Art/neoclassical/romanticism/nazarene_painters__
+__artists/European Art/neoclassical/romanticism/dusseldorf_school__

@@ -1,3 +1,3 @@
-__centaur/archer__
-__centaur/cleric__
-__centaur/warrior__
+__creatures/mtg/centaur/centaur_archer__
+__creatures/mtg/centaur/centaur_cleric__
+__creatures/mtg/centaur/centaur_warrior__

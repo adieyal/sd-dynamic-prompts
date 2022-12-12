@@ -117,13 +117,15 @@ William B. T. Trego
 William Glackens
 William Nichols (artist)
 Winslow Homer
-__realism/american_realism__
-__realism/british_realism__
-__realism/bulgarian_realism__
-__realism/finnish_realism__
-__realism/french_realism__
-__realism/hungarian_realism__
-__realism/norwegian_realism__
-__realism/portuguese_realism__
-__realism/russian_realism__
-__realism/slovenian_realism__
+__artists/European Art/neoclassical/realism/american_realism__
+__artists/European Art/neoclassical/realism/british_realism__
+__artists/European Art/neoclassical/realism/bulgarian_realism__
+__artists/European Art/neoclassical/realism/finnish_realism__
+__artists/European Art/neoclassical/realism/french_realism__
+__artists/European Art/neoclassical/realism/hungarian_realism__
+__artists/European Art/neoclassical/realism/norwegian_realism__
+__artists/European Art/neoclassical/realism/peredvizhniki__
+__artists/European Art/neoclassical/realism/portuguese_realism__
+__artists/European Art/neoclassical/realism/russian_realism__
+__artists/European Art/neoclassical/realism/slovenian_realism__
+__artists/European Art/neoclassical/realism/soviet_realism__

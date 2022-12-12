@@ -1,8 +1,8 @@
-__african__
-__europe__
-__south-america__
-__north-america__
-__asia__
-__oceania__
-__atlantic-islands__
-__central-america__
+__people/nationalities/african__
+__people/nationalities/europe__
+__people/nationalities/south-america__
+__people/nationalities/north-america__
+__people/nationalities/asia__
+__people/nationalities/oceania__
+__people/nationalities/atlantic-islands__
+__people/nationalities/central-america__

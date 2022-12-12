@@ -1,2 +1,2 @@
-__djinn/general__
-__djinn/wizard__
+__creatures/mtg/djinn/djinn_general__
+__creatures/mtg/djinn/djinn_wizard__

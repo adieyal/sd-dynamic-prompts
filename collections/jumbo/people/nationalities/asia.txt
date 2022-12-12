@@ -1,6 +1,6 @@
 Russian
-__middle-east__
-__southeast-asia__
-__east-asia__
-__central-asia__
-__south-asia__
+__people/nationalities/middle-east__
+__people/nationalities/southeast-asia__
+__people/nationalities/east-asia__
+__people/nationalities/central-asia__
+__people/nationalities/south-asia__

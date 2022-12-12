@@ -1,5 +1,5 @@
-__kor/soldier_ally__
-__kor/soldier__
-__kor/spirit__
-__kor/warrior__
-__kor/wizard__
+__creatures/mtg/kor/kor_soldier__
+__creatures/mtg/kor/kor_soldier_ally__
+__creatures/mtg/kor/kor_spirit__
+__creatures/mtg/kor/kor_warrior__
+__creatures/mtg/kor/kor_wizard__

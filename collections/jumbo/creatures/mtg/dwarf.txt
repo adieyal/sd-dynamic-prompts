@@ -1,6 +1,6 @@
-__dwarf/artificer__
-__dwarf/cleric__
-__dwarf/general__
-__dwarf/pilot__
-__dwarf/shaman__
-__dwarf/soldier__
+__creatures/mtg/dwarf/dwarf_artificer__
+__creatures/mtg/dwarf/dwarf_cleric__
+__creatures/mtg/dwarf/dwarf_general__
+__creatures/mtg/dwarf/dwarf_pilot__
+__creatures/mtg/dwarf/dwarf_shaman__
+__creatures/mtg/dwarf/dwarf_soldier__

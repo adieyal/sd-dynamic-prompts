@@ -1,11 +1,11 @@
-__italian_baroque_painters__
-__french_baroque_painters__
-__british_baroque_painters__
-__czech_baroque_painters__
-__danish_baroque_painters__
-__german_baroque_painters__
-__greek_baroque_painters__
-__netherlandish_baroque_painters__
-__flemish_baroque_painters__
-__quadratura__
-__spanish_baroque_painters__
+__artists/European Art/baroque/italian_baroque_painters__
+__artists/European Art/baroque/french_baroque_painters__
+__artists/European Art/baroque/british_baroque_painters__
+__artists/European Art/baroque/czech_baroque_painters__
+__artists/European Art/baroque/danish_baroque_painters__
+__artists/European Art/baroque/german_baroque_painters__
+__artists/European Art/baroque/greek_baroque_painters__
+__artists/European Art/baroque/netherlandish_baroque_painters__
+__artists/European Art/baroque/flemish_baroque_painters__
+__artists/European Art/baroque/quadratura__
+__artists/European Art/baroque/spanish_baroque_painters__

@@ -1,2 +1,2 @@
-__treefolk/shaman__
-__treefolk/warrior__
+__creatures/mtg/treefolk/treefolk_shaman__
+__creatures/mtg/treefolk/treefolk_warrior__

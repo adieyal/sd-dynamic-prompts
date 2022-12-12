@@ -1,4 +1,4 @@
-__east-atlantic__
-__north-atlantic__
-__west-atlantic__
-__south-atlantic__
+__people/nationalities/east-atlantic__
+__people/nationalities/north-atlantic__
+__people/nationalities/west-atlantic__
+__people/nationalities/south-atlantic__

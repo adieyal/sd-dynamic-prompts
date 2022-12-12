@@ -1,4 +1,4 @@
-__merfolk/general__
-__merfolk/rogue__
-__merfolk/shaman__
-__merfolk/wizard__
+__creatures/mtg/merfolk/merfolk_general__
+__creatures/mtg/merfolk/merfolk_rogue__
+__creatures/mtg/merfolk/merfolk_shaman__
+__creatures/mtg/merfolk/merfolk_wizard__

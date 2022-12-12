@@ -1,2 +1,2 @@
-__meiji_era__
-__taisho_era__
+__artists/Japanese Art/yoga/meiji_era__
+__artists/Japanese Art/yoga/taisho_era__
