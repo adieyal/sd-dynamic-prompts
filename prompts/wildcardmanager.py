@@ -70,3 +70,16 @@ class WildcardManager:
     def is_wildcard(self, text: str) -> bool:
         return text.startswith("__") and text.endswith("__")
 
+    def get_collection_path(self) -> Path:
+        return self._path.parent / "collections"
+
+    def get_collections(self) -> list[str]:
+        return list(self.get_collection_dirs().keys())
+
+    def get_collection_dirs(self) -> dict[str, Path]:
+        collection_path = self.get_collection_path()
+        collection_dirs = [x for x in collection_path.glob("*") if x.is_dir()]
+        collection_names = [str(c.relative_to(collection_path)) for c in collection_dirs]
+
+        return dict(zip(collection_names, collection_dirs))
+

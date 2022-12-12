@@ -1,26 +1,3 @@
-#dynamic-prompting .collapsible {
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: 1px solid #eee;;
-    border-right-style: solid;
-    border-top-style: solid;
-    border-left-style: solid;
-    border-bottom-style: solid;
-    border-radius: 8px 8px 8px 8px;
-    padding: 5px;
-    margin-top: 10px;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-}
-
-#dynamic-prompting .active, .collapsible:hover {
-    background-color: #555;
-    border: 1px solid #eee;
-    color: white;
-}
-
 #dynamic-prompting .content {
     padding: 0 18px;
     display: none;
