@@ -1,7 +1,7 @@
-__elf/archer__
-__elf/cleric__
-__elf/general__
-__elf/noble__
-__elf/scout__
-__elf/shaman__
-__elf/wizard__
+__creatures/mtg/elf/elf_archer__
+__creatures/mtg/elf/elf_cleric__
+__creatures/mtg/elf/elf_general__
+__creatures/mtg/elf/elf_noble__
+__creatures/mtg/elf/elf_scout__
+__creatures/mtg/elf/elf_shaman__
+__creatures/mtg/elf/elf_wizard__

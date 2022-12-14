@@ -1,30 +1,30 @@
 # Originally sourced from https://en.wikipedia.org/wiki/Periods_in_Western_art_history
-__impressionism__
+__style/artperiods/impressionism__
 Cos Cob Art Colony
 Heidelberg School
 Arts and Crafts movement
 Tonalism
-__symbolism__
-__post_impressionism__
-__neo_impressionism__
-__art_nouveau__
+__style/artperiods/symbolism__
+__style/artperiods/post_impressionism__
+__style/artperiods/neo_impressionism__
+__style/artperiods/art_nouveau__
 Russian avant-garde
 Art à la Rue
 Young Poland
 Hagenbund
 Fauvism
-__expressionism__
+__style/artperiods/expressionism__
 Bloomsbury Group
-__cubism__
+__style/artperiods/cubism__
 Ashcan School
 Art Deco
-__futurism__
+__style/artperiods/futurism__
 Rayonism
 Synchromism
 Universal Flowering
 Vorticism
 Biomorphism
-__suprematism__
+__style/artperiods/suprematism__
 Dada
 Proletkult
 Productijism
@@ -33,9 +33,9 @@ Pittura Metafisica
 Arbeitsrat für Kunst
 Bauhaus
 Others group of artists
-__constructivism__
+__style/artperiods/constructivism__
 Precisionism
-__surrealism__
+__style/artperiods/surrealism__
 Devetsil
 Group of Seven
 Harlem renaissance
@@ -44,9 +44,9 @@ American scene painting
 Grupo Montparnasse
 Northwest School
 Social realism
-__socialist_realism__
+__style/artperiods/socialist_realism__
 Abstraction-Création
 Allianz
-__abstract_expressionism__
+__style/artperiods/abstract_expressionism__
 Art informel
 {Outsider art|Art brut}

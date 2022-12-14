@@ -260,5 +260,5 @@ William M. Timlin
 William Stout
 Wojciech Siudmak
 Yasuyuki Honne
-__fantasy/tolkien__
+__artists/genre/fantasy/tolkien__
 Yoshitaka Amano

@@ -1,66 +1,66 @@
-Amaranth purple	
-Barn red	
-Bittersweet	
-Bittersweet shimmer	
-Blood red	
+Amaranth purple
+Barn red
+Bittersweet
+Bittersweet shimmer
+Blood red
 Bright pink
-Burgundy	
-Candy apple red	
-Cantaloupe melon	
+Burgundy
+Candy apple red
+Cantaloupe melon
 Cardinal
-Carmine	
-Cerise	
-Chili red	
-Chocolate cosmos	
-Cinnabar	
-Claret	
-Coquelicot	
-Coral pink	
-Cordovan	
+Carmine
+Cerise
+Chili red
+Chocolate cosmos
+Cinnabar
+Claret
+Coquelicot
+Coral pink
+Cordovan
 Cornell red
-Crimson	
-Dark red	
-Falu red	
-Fire brick	
-Fire engine red	
-Folly	
-Garnet	
-Imperial red	
-Indian red	
+Crimson
+Dark red
+Falu red
+Fire brick
+Fire engine red
+Folly
+Garnet
+Imperial red
+Indian red
 Jasper
-Light coral	
-Light red	
-Madder	
-Mahogany	
-Maroon	
-Misty rose	
+Light coral
+Light red
+Madder
+Mahogany
+Maroon
+Misty rose
 Off-red
-Old rose	
-OU crimson	
+Old rose
+OU crimson
 Penn red
-Persian red	
-Pink	
-Poppy	
+Persian red
+Pink
+Poppy
 Red
-Red	
-Red-brown	
-Redwood	
-Rojo	
-Rose	
-Rose ebony	
-Rose red	
-Rose taupe	
-Rose vale	
-Rosewood	
-Rosy brown	
+Red
+Red-brown
+Redwood
+Rojo
+Rose
+Rose ebony
+Rose red
+Rose taupe
+Rose vale
+Rosewood
+Rosy brown
 Rust
-Rusty red	
-Salmon	
-Salmon pink	
-Scarlet	
-Syracuse red-orange	
+Rusty red
+Salmon
+Salmon pink
+Scarlet
+Syracuse red-orange
 Tea rose
-Tomato	
-Turkey red	
-Vermilion	
+Tomato
+Turkey red
+Vermilion
 Wine

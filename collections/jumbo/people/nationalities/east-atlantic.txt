@@ -1,0 +1,33 @@
+Azorean
+Canarian
+Cape Verdean
+Chicharrero
+{Corvino|Corvense}
+English
+Faialense
+{Florense|Florentino}
+Gomero
+Graciosense
+Irish
+Lanzaroteno
+Madeiran
+Maiense
+Majorero
+{Manx|Manxman}
+Mariense
+Micaelense
+Miquelonnais
+Northern Irish
+Palmero
+{Picoense|Picaroto}
+Portossantense
+Saint Martin
+Saint-Pierrais
+{Santomean|Sao Tomean}
+Sãojorgense
+Scottish
+Sint Maarten
+Terceirense
+Tinerfeno
+Vincentian
+Welsh

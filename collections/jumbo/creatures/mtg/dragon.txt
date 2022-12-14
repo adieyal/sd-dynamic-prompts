@@ -1,6 +1,6 @@
-__dragon/avatar__
-__dragon/spirit__
-__dragon/_
-__dragon/warrior__
-__dragon/wizard__
-__dragon/elder_dragon__
+__creatures/mtg/dragon/dragon__
+__creatures/mtg/dragon/dragon_avatar__
+__creatures/mtg/dragon/dragon_spirit__
+__creatures/mtg/dragon/dragon_warrior__
+__creatures/mtg/dragon/dragon_wizard__
+__creatures/mtg/dragon/elder_dragon__

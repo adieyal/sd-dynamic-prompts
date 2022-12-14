@@ -1,0 +1,7 @@
+__people/nationalities/balkan__
+__people/nationalities/baltic__
+__people/nationalities/scandinavian__
+__people/nationalities/central-europe__
+__people/nationalities/northwest-europe__
+__people/nationalities/south-europe__
+__people/nationalities/east-europe__

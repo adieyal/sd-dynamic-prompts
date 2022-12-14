@@ -1,9 +1,14 @@
 from __future__ import annotations
 import logging
+import shutil
+import random
+import os
 from modules import script_callbacks
+import modules.scripts as scripts
 import gradio as gr
 import json
 from pathlib import Path
+from glob import glob
 
 from prompts.wildcardmanager import WildcardManager
 
@@ -11,6 +16,7 @@ logger = logging.getLogger(__name__)
 
 wildcard_manager: WildcardManager
 
+BASE_DIR = scripts.basedir()
 
 def initialize(manager: WildcardManager):
     global tree_json
@@ -46,17 +52,28 @@ def format_json(js):
 def on_ui_tabs():
     header_html = f"""
     <p>Manage wildcards for Dynamic Prompts</p>
-    <p>This is a work in progress. Please <a href="https://github.com/adieyal/sd-dynamic-prompts/issues">report</a> any bugs.</p>
-    <br>
-    <p>If you don't see any wildcards here, make sure you place wildcard files ending in .txt in a folder called "{wildcard_manager._path}". The collections folder contains thousands of wildcards which you can use or modify.</p>
+    <ol>
+        <li>1. Create your wildcard library by copying a collection using the dropdown below.</li>
+        <li>2. Click on any of the files that appear in the tree to edit them.</li>
+        <li>3. Use the wildcard in your script by typing the name of the file or copying the text from the Wildcards file text box</li>
+        <li>4. Optional - add your own wildcards files to the {wildcard_manager._path} folder</li>
+    </ol>
     """
+
+    available_collections = [str(c) for c in wildcard_manager.get_collections()]
     with gr.Blocks() as wildcards_tab:
         with gr.Group(elem_id="dynamic-prompting"):
             with gr.Row():
                 with gr.Column():
                     gr.HTML(header_html)
                     html = gr.HTML("", elem_id="html_id")
-                    load_tree = gr.Button("Load", full_width=True, elem_id="load_tree_button")
+                    collection_dropdown = gr.Dropdown(choices=available_collections, type="value", label="Select a collection", elem_id="collection_dropdown")
+                    with gr.Row():
+                        collection_copy_button = gr.Button("Copy collection", full_width=True, elem_id="collection_copy_button")
+                        overwrite_checkbox = gr.Checkbox(label="Overwrite existing", elem_id="overwrite_checkbox", value=False)
+                    with gr.Row():
+                        load_tree = gr.Button("Refresh wildcards", elem_id="load_tree_button")
+                        delete_tree = gr.Button("Delect all wildcards", elem_id="delete_tree_button")
                 with gr.Column():
                     file_name = gr.Textbox(
                         "", elem_id="file_name_id", interactive=False, label="Wildcards file"
@@ -78,7 +95,11 @@ def on_ui_tabs():
         )
 
         load_tree.click(
-            load_tree_callback, _js="setupTree", inputs=[hidden_hierarchy], outputs=[hidden_textbox],
+            load_tree_callback, inputs=[], outputs=[hidden_textbox],
+        )
+
+        delete_tree.click(
+            delete_tree_callback, _js="deleteTree", inputs=[], outputs=[hidden_textbox],
         )
 
         hidden_action_button.click(
@@ -92,15 +113,67 @@ def on_ui_tabs():
             save_file_callback, _js="saveFile", inputs=[file_edit_box], outputs=[hidden_textbox]
         )
 
+        collection_copy_button.click(
+            copy_collection_callback, inputs=[overwrite_checkbox, collection_dropdown], outputs=[hidden_textbox]
+        )
+
     return ((wildcards_tab, "Wildcards Manager", "wildcards_tab"),)
 
-def load_tree_callback(js):
+def create_payload(action, result, payload):
+    return json.dumps({
+        "action": action,
+        "result": result,
+        "payload": payload,
+        "id": random.randint(0, 1000000),
+    })
+
+def copy_collection_callback(overwrite_checkbox, collection):
+    collection_paths = wildcard_manager.get_collection_dirs()
+    if collection in collection_paths:
+        collection_path = collection_paths[collection]
+        for file in collection_path.glob("**/*"):
+            if file.is_file():
+                target_path = wildcard_manager._path / file.relative_to(collection_path)
+                if not target_path.exists() or overwrite_checkbox:
+                    target_path.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copy(file, target_path)
+        
+        return load_tree_callback()
+
+    return create_payload(
+        "copy collection",
+        "failed",
+        json.dumps([])
+    )
+
+def load_tree_callback():
     hierarchy = load_hierarchy()
 
-    return json.dumps(hierarchy)
+    return create_payload(
+        "load tree",
+        "success",
+        json.dumps(hierarchy)
+    )
+
+def delete_tree_callback(confirm_delete=True):
+    if confirm_delete:
+        shutil.rmtree(wildcard_manager._path)
+        wildcard_manager._path.mkdir(parents=True, exist_ok=True)
+        hierarchy = load_hierarchy()
+
+
+        return create_payload(
+            "load tree",
+            "success",
+            json.dumps(hierarchy)
+        )
+    return create_payload(
+        "delete tree",
+        "failed",
+        json.dumps([])
+    )
 
 def receive_tree_event(s):
-    s = s.replace("'", '"')
     js = json.loads(s)
     values = wildcard_manager.get_all_values(js["name"])
     path = wildcard_manager.wildcard_to_path(js["name"])
@@ -110,7 +183,7 @@ def receive_tree_event(s):
 
 def save_file_callback(js):
     try:
-        wildcard_json = js.replace("'", '"')
+        wildcard_json = js
         js = json.loads(wildcard_json)
 
         if "wildcard" in js and "name" in js["wildcard"]:
@@ -120,7 +193,9 @@ def save_file_callback(js):
             contents=js["contents"]
 
             with path.open("w") as f:
-                f.write(contents)
+                contents = contents.splitlines()
+                for c in contents:
+                    f.write(c.strip() + os.linesep)
     except Exception as e:
         logger.exception(e)
 

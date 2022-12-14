@@ -1,4 +1,4 @@
-__goblin/artificer__
-__goblin/shaman__
-__goblin/_
-__goblin/warrior__
+__creatures/mtg/goblin/goblin__
+__creatures/mtg/goblin/goblin_artificer__
+__creatures/mtg/goblin/goblin_shaman__
+__creatures/mtg/goblin/goblin_warrior__

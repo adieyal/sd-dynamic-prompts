@@ -1,0 +1,4 @@
+__people/nationalities/australasia__
+__people/nationalities/melanesia__
+__people/nationalities/micronesia__
+__people/nationalities/polynesia__

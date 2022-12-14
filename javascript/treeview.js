@@ -152,6 +152,10 @@
           this.data = data;
           render(this);
         }
+
+        TreeView.prototype.render = function () {
+          render(this);
+        };
   
         /**
          * Expands a leaflet by the expando or the leaf text

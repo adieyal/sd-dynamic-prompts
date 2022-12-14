@@ -194,6 +194,6 @@ Vitale da Bologna
 Vittore Belliniano
 Vittore Carpaccio
 Zanetto Bugatto
-__quattrocentro_painters__
-__italian_mannerist_painters__
+__artists/European Art/renaissance/quattrocento_painters__
+__artists/European Art/renaissance/italian_mannerist_painters__
 {Raffaello Santini|Raphael}

@@ -1,35 +1,35 @@
-Alice blue	
-Aqua	
-Aquamarine	
-Azure	
-Blue-green	
-Capri	
-Caribbean Current	
+Alice blue
+Aqua
+Aquamarine
+Azure
+Blue-green
+Capri
+Caribbean Current
 Celeste	Cerulean
 Cyan
-Dark cyan	
-Electric blue	
-Fluorescent cyan	
-Jungle green	
-Keppel	Ice blue	
-Light cyan	
-Light sea green	
-Mint	
+Dark cyan
+Electric blue
+Fluorescent cyan
+Jungle green
+Keppel	Ice blue
+Light cyan
+Light sea green
+Mint
 Mint green
-Moonstone	
-Myrtle Green	
-Pacific cyan	
-Persian green	
-Pine green	
-Process Cyan	
-Robin egg blue	
-Sea green	
+Moonstone
+Myrtle Green
+Pacific cyan
+Persian green
+Pine green
+Process Cyan
+Robin egg blue
+Sea green
 Skobeloff
-Sky blue 
-Spring green	
-Teal	
-Tiffany Blue	
-Turquoise	
-Verdigris	
-Vivid sky blue	
+Sky blue
+Spring green
+Teal
+Tiffany Blue
+Turquoise
+Verdigris
+Vivid sky blue
 Zomp

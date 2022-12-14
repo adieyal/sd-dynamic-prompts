@@ -1,0 +1,4 @@
+__people/nationalities/east-atlantic__
+__people/nationalities/north-atlantic__
+__people/nationalities/west-atlantic__
+__people/nationalities/south-atlantic__

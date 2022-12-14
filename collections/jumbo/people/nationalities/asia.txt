@@ -1,0 +1,6 @@
+Russian
+__people/nationalities/middle-east__
+__people/nationalities/southeast-asia__
+__people/nationalities/east-asia__
+__people/nationalities/central-asia__
+__people/nationalities/south-asia__

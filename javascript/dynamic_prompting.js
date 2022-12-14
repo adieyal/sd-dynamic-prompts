@@ -1,10 +1,10 @@
 sddp_loaded = false
 sddp_wildcards_loaded = false
+sddp_ui = null
 
 onUiUpdate(function () {
   if (!sddp_loaded) {
-    check_collapsibles();
-    gradioApp().getElementById("dynamic-prompts-enabled").append("Complete documentation is available at https://github.com/adieyal/sd-dynamic-prompts")
+    gradioApp().getElementById("dynamic-prompts-enabled").append("Complete documentation is available at https://github.com/adieyal/sd-dynamic-prompts. ")
     gradioApp().getElementById("is-combinatorial").append("Generate all possible prompts up to a maximum of Batch count * Batch size)")
     gradioApp().getElementById("is-magicprompt").append("Automatically update your prompt with interesting modifiers. (Runs slowly the first time)")
     gradioApp().getElementById("is-feelinglucky").append("Generate random prompts from lexica.art (your prompt is used as a search query).")
@@ -16,7 +16,7 @@ onUiUpdate(function () {
     gradioApp().getElementById("is-attention-grabber").append("Add emphasis to a randomly selected keyword in the prompt.")
     gradioApp().getElementById("enable-comments").append("Enable the use of C-style comments in the prompt (// and /* ... */).")
 
-    
+    sddp_ui = new SDDPUI()
     sddp_loaded = true;
   }
 })
@@ -28,32 +28,45 @@ onUiTabChange(function (x) {
   }
 })
 
-function check_collapsibles() {
-  var coll = gradioApp().querySelectorAll(".collapsible")
-  for (var i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.display === "block") {
-        content.style.display = "none";
-        this.style.borderBottomStyle = "solid";
-        this.style.borderRadius = "8px"
-      } else {
-        content.style.display = "block";
-        this.style.borderBottomStyle = "none";
-        this.style.borderRadius = "8px 8px 0px 0px"
-      }
-    });
+class SDDPUI {
+  constructor() {
+    this._scratch = gradioApp().querySelector("#scratch_textbox textarea")
+    this._tree_textbox = gradioApp().querySelector("#tree_textbox textarea")
+    this._timeout = setInterval(this._onTick.bind(this), 500)
+    this._last_message = null
+    this._tree = null
   }
-}
 
-function setupTree(x) {
-  let js = gradioApp().querySelector("#tree_textbox textarea").value
-  let json = JSON.parse(js)
-  let treeDiv = gradioApp().querySelector("#html_id")
-  let t = new TreeView(json, treeDiv)
+  _onTick() {
+    let msg = this._scratch.value
+    if (msg != "") {
+      msg = JSON.parse(msg)
+      if (msg.id != this._last_message) {
+        this._last_message = msg.id;
+        if (msg.action == "load tree" && msg.result == 'success') {
+          let tree_js = JSON.parse(msg.payload)
+          this.setupTree(tree_js)
+        }
+      }
+    }
+  }
 
-  t.on('select', function (x) { nodeSelected(x) });
+  setupTree(json) {
+    if (this._tree == null) {
+      let treeDiv = gradioApp().querySelector("#html_id")
+      this._tree = new TreeView(json, treeDiv)
+      this._tree.on('select', function (x) { nodeSelected(x) });
+    } else {
+      this._tree.data = json
+      this._tree.render()
+    }
+  }
+
+  deleteTree() {
+    return true;
+    let response = confirm("Are you sure you want to delete all your wildcards?")
+    return response
+  }
 }
 
 function nodeSelected(x) {
@@ -69,7 +82,11 @@ function receiveTreeEvent(x) {
   let filenameElement = gradioApp().querySelector("#file_name_id textarea")
   filenameElement.value = json["name"]
 
-  return json
+  return JSON.stringify(json)
+}
+
+function deleteTree() {
+  return sddp_ui.deleteTree()
 }
 
 function saveFile(x) {
@@ -77,8 +94,8 @@ function saveFile(x) {
   let json = JSON.parse(js)
   let contents = gradioApp().querySelector("#file_edit_box_id textarea").value
 
-  return {
+  return JSON.stringify({
     "wildcard": json,
     "contents": contents
-  }
+  })
 }

@@ -1,6 +1,6 @@
-__angel/advisor__
-__angel/berserker__
-__angel/cleric__
-__angel/general__
-__angel/soldier__
-__angel/spirit__
+__creatures/mtg/angel/angel_advisor__
+__creatures/mtg/angel/angel_berserker__
+__creatures/mtg/angel/angel_cleric__
+__creatures/mtg/angel/angel_general__
+__creatures/mtg/angel/angel_soldier__
+__creatures/mtg/angel/angel_spirit__

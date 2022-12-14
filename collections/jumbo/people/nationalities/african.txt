@@ -1,0 +1,6 @@
+__people/nationalities/east-africa__
+__people/nationalities/southern-africa__
+__people/nationalities/west-africa__
+__people/nationalities/north-africa__
+__people/nationalities/central-africa__
+__people/nationalities/african-islands__

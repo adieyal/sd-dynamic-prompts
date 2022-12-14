@@ -1,18 +1,18 @@
-__impressionism__
-__expressionism__/__expressionism__
-__abstract expressionism__/__abstract expressionism__
-__american_impressionism__
-__cobs_art_colony__
-__heidelberg_school__
-__luminism_impressionism__
-__tonalism__
-__post_impressionism__
-__les_nabis__
-__cloisonnism__
-__synthetism__
-__neo_impressionism__
-__art_nouveau__
-__russion_avantgarde__
-__young_poland__
-__hagenbund__
-__fauvism__
+__artists/European Art/modern/impressionism__
+__artists/European Art/modern/expressionism__
+__artists/European Art/modern/abstract_expressionism/abstract_expressionism__
+__artists/European Art/modern/american_impressionism__
+__artists/European Art/modern/cobs_art_colony__
+__artists/European Art/modern/heidelberg_school__
+__artists/European Art/modern/luminism_impressionism__
+__artists/European Art/modern/tonalism__
+__artists/European Art/modern/post_impressionism__
+__artists/European Art/modern/les_nabis__
+__artists/European Art/modern/cloisonnism__
+__artists/European Art/modern/synthetism__
+__artists/European Art/modern/neo_impressionism__
+__artists/European Art/modern/art_nouveau__
+__artists/European Art/modern/russion_avantgarde__
+__artists/European Art/modern/young_poland__
+__artists/European Art/modern/hagenbund__
+__artists/European Art/modern/fauvism__

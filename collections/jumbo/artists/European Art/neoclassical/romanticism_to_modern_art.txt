@@ -1,10 +1,9 @@
-__norwich_school__
-__biedermeier__
-__realism__
-__barbizon_school__
-__peredvizhniki__
-__hague_school__
-__american_barbizon_school__
-__spanish_electicism__
-__macchiaioli__
-__pre_raphaelite_brotherhood__
+__artists/European Art/neoclassical/norwich_school__
+__artists/European Art/neoclassical/biedermeier__
+__artists/European Art/neoclassical/realism__
+__artists/European Art/neoclassical/realism__
+__artists/European Art/neoclassical/hague_school__
+__artists/European Art/neoclassical/american_barbizon_school__
+__artists/European Art/neoclassical/spanish_electicism__
+__artists/European Art/neoclassical/macchiaioli__
+__artists/European Art/neoclassical/pre_raphaelite_brotherhood__

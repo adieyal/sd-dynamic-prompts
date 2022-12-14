@@ -1,39 +1,39 @@
-Alabaster	
-Alice blue	
-Anti-flash white	
-Antique white	
-Azure white	
-Baby powder	
-Beige	
-Bone	
-Champagne	
+Alabaster
+Alice blue
+Anti-flash white
+Antique white
+Azure white
+Baby powder
+Beige
+Bone
+Champagne
 Cornsilk
-Cosmic latte	
-Cream	
-Dutch white	
-Eggshell	
-Flax	
-Floral white	
-Ghost white	
-Honeydew	
-Isabelline	
+Cosmic latte
+Cream
+Dutch white
+Eggshell
+Flax
+Floral white
+Ghost white
+Honeydew
+Isabelline
 Ivory
-Lavender blush	
-Lemon chiffon	
-Linen	
-Magnolia	
-Mint cream	
-Misty rose	
-Navajo white	
-Nyanza	
-Old lace	
+Lavender blush
+Lemon chiffon
+Linen
+Magnolia
+Mint cream
+Misty rose
+Navajo white
+Nyanza
+Old lace
 Papaya whip
-Parchment	
-Peach	
-Pearl	
-Platinum	
-Seasalt	
-Seashell	
-Snow	
-Vanilla	White	
+Parchment
+Peach
+Pearl
+Platinum
+Seasalt
+Seashell
+Snow
+Vanilla	White
 White smoke
