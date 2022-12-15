@@ -14,6 +14,7 @@ onUiUpdate(function () {
     gradioApp().getElementById("disable-negative-prompt").append("Useful for I'm feeling lucky and Magic Prompt. If this is set, then negative prompts are not generated.")
     gradioApp().getElementById("no-image-generation").append("Disable image generation. Useful if you only want to generate text prompts.")
     gradioApp().getElementById("is-attention-grabber").append("Add emphasis to a randomly selected keyword in the prompt.")
+    gradioApp().getElementById("enable-comments").append("Enable the use of C-style comments in the prompt (// and /* ... */).")
 
     sddp_ui = new SDDPUI()
     sddp_loaded = true;
