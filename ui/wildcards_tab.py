@@ -73,7 +73,7 @@ def on_ui_tabs():
                         overwrite_checkbox = gr.Checkbox(label="Overwrite existing", elem_id="overwrite_checkbox", value=False)
                     with gr.Row():
                         load_tree = gr.Button("Refresh wildcards", elem_id="load_tree_button")
-                        delete_tree = gr.Button("Delect all wildcards", elem_id="delete_tree_button")
+                        delete_tree = gr.Button("Delete all wildcards", elem_id="delete_tree_button")
                 with gr.Column():
                     file_name = gr.Textbox(
                         "", elem_id="file_name_id", interactive=False, label="Wildcards file"
