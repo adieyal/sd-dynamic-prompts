@@ -85,6 +85,22 @@ Options are chosen randomly with replacement. This means that {2$$opt1|opt2} can
 
 This is useful in conjunction with wildcards (see below).
 
+Options can be assigned relative weights using a :: prefix operator.
+
+	photo of a {3::blue|red} ball
+
+This will generate 3 photos of a blue ball per every 1 photo of a red ball.
+
+	photo of a {blue|0.25::red} ball
+	
+Decimals also work as expected: this will generate 4 photos of a blue ball per every 1 photo of a red ball.
+
+	photo portrait of a {59::white|21::latino|14::black|8::asian} {man|woman}
+
+This would generate photo portraits of men and women of different races, proportional to the 2020 U.S. census.
+
+If you omit the :: prefix, it will have a default weight of 1.0. (Equivalent to 1::prompt)
+
 ### Wildcard files
 Wildcards are text files (ending in .txt). Each line contains a term, artist name, or modifier. The wildcard file can then be embedded in your prompt by removing the .txt extension and surrounding it with double underscores. e.g:
 
