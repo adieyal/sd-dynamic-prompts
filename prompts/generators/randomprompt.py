@@ -15,7 +15,7 @@ MAX_SELECTION_ITERATIONS = 100
 
 class CombinationSelector:
     def __init__(
-        self, wildcard_manager: WildcardManager, options: list[str], weights: list[float], rand=None
+        self, wildcard_manager: WildcardManager, options: list[str], weights: list[float]|None=None, rand=None
     ):
         if rand is None:
             self._random = random
@@ -29,8 +29,10 @@ class CombinationSelector:
         )
 
         self._options = [get_option(o) for o in options]
-        self._weights = [weights[i] if i < len(weights) else 1.0
-                         for i in range(len(self._options))]
+        if weights is None:
+            self._weights = [1.0 for _ in range(len(self._options))]
+        else:
+            self._weights = weights
 
     def pick(self, count=1) -> list[str]:
         picked = []

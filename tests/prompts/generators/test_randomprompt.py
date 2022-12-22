@@ -3,7 +3,7 @@ from unittest import mock
 import pytest
 
 from prompts.wildcardmanager import WildcardManager
-from prompts.generators.randomprompt import RandomPromptGenerator, CombinationSelector
+from prompts.generators.randomprompt import RandomPromptGenerator
 
 from prompts import constants
 

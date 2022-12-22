@@ -11,14 +11,14 @@ def wildcard_manager():
 class TestCombinationSelector:
     def test_rejects_empty(self, wildcard_manager):
         options = []
-        selector = CombinationSelector(wildcard_manager, options, [])
+        selector = CombinationSelector(wildcard_manager, options)
         
         selections = selector.pick()
         assert len(selections) == 0
 
     def test_selects_one(self, wildcard_manager):
         options = ["a"]
-        selector = CombinationSelector(wildcard_manager, options, [])
+        selector = CombinationSelector(wildcard_manager, options)
         
         selections = selector.pick()
         assert len(selections) == 1
@@ -26,7 +26,7 @@ class TestCombinationSelector:
 
     def test_selects_multiple(self, wildcard_manager):
         options = ["a", "b", "c", "d"]
-        selector = CombinationSelector(wildcard_manager, options, [])
+        selector = CombinationSelector(wildcard_manager, options)
 
         with mock.patch("random.choices", side_effect=[
             ["a"],
@@ -59,7 +59,7 @@ class TestCombinationSelector:
                 "blue"
             ]):
                 with mock.patch.object(wildcard_manager, "get_all_values", return_value=colours):
-                    selector = CombinationSelector(wildcard_manager, options, [])
+                    selector = CombinationSelector(wildcard_manager, options)
                     selections = selector.pick(3)
                     assert len(selections) == 3
                     assert selections[0] == "red"
@@ -83,7 +83,7 @@ class TestCombinationSelector:
             "a"
             ]):
                 with mock.patch.object(wildcard_manager, "get_all_values", return_value=colours):
-                    selector = CombinationSelector(wildcard_manager, options, [])
+                    selector = CombinationSelector(wildcard_manager, options)
                     selections = selector.pick(4)
                     assert len(selections) == 4
                     assert selections[0] == "red"
@@ -111,7 +111,7 @@ class TestCombinationSelector:
                 with mock.patch.object(wildcard_manager, "get_all_values", side_effect=[
                     colours, animals
                 ]):
-                    selector = CombinationSelector(wildcard_manager, options, [])
+                    selector = CombinationSelector(wildcard_manager, options)
                     selections = selector.pick(4)
                     assert len(selections) == 4
                     assert selections[0] == "red"
