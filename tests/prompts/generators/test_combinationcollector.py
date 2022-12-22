@@ -56,4 +56,3 @@ class TestCombinationSelector:
         assert len(collected) == 1
 
         collector.collect(2, duplicates=True)
-
