@@ -170,6 +170,8 @@ class RandomPromptGenerator(PromptGenerator):
             combinations_str
         )
 
+        variants = [self.generate_prompt(v) for v in variants]
+
         selector = CombinationSelector(
             self._wildcard_manager, variants, weights, rand=self._random
         )
