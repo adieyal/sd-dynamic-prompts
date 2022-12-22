@@ -15,7 +15,7 @@ MAX_SELECTION_ITERATIONS = 100
 
 class CombinationSelector:
     def __init__(
-        self, wildcard_manager: WildcardManager, options: list[str], rand=None
+        self, wildcard_manager: WildcardManager, options: list[str], weights: list[float], rand=None
     ):
         if rand is None:
             self._random = random
@@ -29,6 +29,8 @@ class CombinationSelector:
         )
 
         self._options = [get_option(o) for o in options]
+        self._weights = [weights[i] if i < len(weights) else 1.0
+                         for i in range(len(self._options))]
 
     def pick(self, count=1) -> list[str]:
         picked = []
@@ -37,7 +39,10 @@ class CombinationSelector:
             return picked
 
         for i in range(count):
-            option = self._random.choice(self._options)
+            option = self._random.choices(
+                population=self._options,
+                weights=self._weights
+            )[0]
             picked.append(self._random.choice(option))
 
         return picked
@@ -120,9 +125,19 @@ class RandomPromptGenerator(PromptGenerator):
 
         return min(low, high), max(low, high)
 
+    def _parse_weight(self, variant_str: str) -> tuple[float, str]:
+        parts = variant_str.split("::")
+
+        if len(parts) == 1:
+            return [1.0, variant_str]
+        elif len(parts) == 2:
+            return [float(parts[0]), parts[1]]
+        else:
+            raise Exception(f"Unexpected weighted variant {variant_str}")
+
     def _parse_combinations(
         self, combinations_str: str
-    ) -> tuple[tuple[int, int], str, list[str]]:
+    ) -> tuple[tuple[int, int], str, list[str], list[float]]:
         variants = combinations_str.split("|")
         joiner = constants.DEFAULT_COMBO_JOINER
         quantity = str(constants.DEFAULT_NUM_COMBINATIONS)
@@ -139,7 +154,9 @@ class RandomPromptGenerator(PromptGenerator):
 
         low_range, high_range = self._parse_range(quantity, len(variants))
 
-        return (low_range, high_range), joiner, variants
+        weights, variants = zip(*[self._parse_weight(v) for v in variants])
+
+        return (low_range, high_range), joiner, list(variants), list(weights)
 
     def _replace_combinations(self, match):
         if match is None or len(match.groups()) == 0:
@@ -147,12 +164,12 @@ class RandomPromptGenerator(PromptGenerator):
             return ""
 
         combinations_str = match.groups()[0]
-        (low_range, high_range), joiner, variants = self._parse_combinations(
+        (low_range, high_range), joiner, variants, weights = self._parse_combinations(
             combinations_str
         )
 
         selector = CombinationSelector(
-            self._wildcard_manager, variants, rand=self._random
+            self._wildcard_manager, variants, weights, rand=self._random
         )
         collector = CombinationCollector(selector, rand=self._random)
         collected = collector.collect((low_range, high_range))

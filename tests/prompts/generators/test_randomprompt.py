@@ -37,10 +37,44 @@ class TestRandomPromptVariants:
         assert variant == "I love butter"
 
         variant = generator.pick_variant(template)
-        assert variant == "I love butter"
+        assert variant == "I love bread"
 
         variant = generator.pick_variant(template)
         assert variant == "I love butter"
+
+    def test_simple_pick_variant_weights(self, generator):
+        template = "I love {10::bread|butter}"
+        generator._template = template
+
+        variant = generator.pick_variant(template)
+        assert variant == 'I love bread'
+
+        variant = generator.pick_variant(template)
+        assert variant == 'I love bread'
+
+        variant = generator.pick_variant(template)
+        assert variant == 'I love butter'
+
+        variant = generator.pick_variant(template)
+        assert variant == 'I love bread'
+
+        variant = generator.pick_variant(template)
+        assert variant == 'I love bread'
+
+        variant = generator.pick_variant(template)
+        assert variant == 'I love butter'
+
+        variant = generator.pick_variant(template)
+        assert variant == 'I love bread'
+
+        variant = generator.pick_variant(template)
+        assert variant == 'I love bread'
+
+        variant = generator.pick_variant(template)
+        assert variant == 'I love bread'
+
+        variant = generator.pick_variant(template)
+        assert variant == 'I love bread'
 
     def test_multiple_pick_variant(self, generator):
         template = "I love {2$$bread|butter}"
@@ -50,10 +84,10 @@ class TestRandomPromptVariants:
         assert variant == "I love butter , bread"
 
         variant = generator.pick_variant(template)
-        assert variant == "I love bread , butter"
+        assert variant == "I love butter , bread"
 
         variant = generator.pick_variant(template)
-        assert variant == "I love bread , butter"
+        assert variant == "I love butter , bread"
 
     def test_multiple_variant_one_option(self, generator):
         template = "I love {2$$bread}"
@@ -77,16 +111,22 @@ class TestRandomPromptVariants:
         assert variant == "I love butter , bread"
 
         variant = generator.pick_variant(template)
-        assert variant == "I love bread , butter"
+        assert variant == "I love butter , bread"
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love butter , bread"
 
         variant = generator.pick_variant(template)
         assert variant == "I love bread , butter"
 
         variant = generator.pick_variant(template)
-        assert variant == "I love butter"
+        assert variant == "I love bread , butter"
 
         variant = generator.pick_variant(template)
-        assert variant == "I love bread , butter"
+        assert variant == "I love butter , bread"
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love bread"
 
     def test_variant_range_missing_lower(self, generator):
         template = "I love {-2$$bread|butter}"
@@ -96,19 +136,19 @@ class TestRandomPromptVariants:
         assert variant == "I love butter"
 
         variant = generator.pick_variant(template)
-        assert variant == "I love butter"
-
-        variant = generator.pick_variant(template)
-        assert variant == "I love butter"
-
-        variant = generator.pick_variant(template)
-        assert variant == "I love bread , butter"
-
-        variant = generator.pick_variant(template)
         assert variant == "I love "
 
         variant = generator.pick_variant(template)
-        assert variant == "I love butter , bread"
+        assert variant == "I love butter"
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love butter"
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love bread"
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love bread , butter"
 
     def test_variant_range_missing_upper(self, generator):
         template = "I love {1-$$bread|butter}"
@@ -118,68 +158,100 @@ class TestRandomPromptVariants:
         assert variant == "I love butter , bread"
 
         variant = generator.pick_variant(template)
-        assert variant == "I love bread , butter"
+        assert variant == "I love butter , bread"
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love butter , bread"
 
         variant = generator.pick_variant(template)
         assert variant == "I love bread , butter"
 
         variant = generator.pick_variant(template)
-        assert variant == "I love butter"
+        assert variant == "I love bread , butter"
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love butter , bread"
+
+        variant = generator.pick_variant(template)
+        assert variant == "I love bread"
 
     def test_parse_combinations(self, generator):
-        quantity, _, options = generator._parse_combinations("bread|butter")
+        quantity, _, options, weights = generator._parse_combinations("bread|butter")
         assert quantity == (
             constants.DEFAULT_NUM_COMBINATIONS,
             constants.DEFAULT_NUM_COMBINATIONS,
         )
         assert options == ["bread", "butter"]
+        assert weights == [1.0, 1.0]
 
-        quantity, _, options = generator._parse_combinations("2$$bread|butter")
+        quantity, _, options, weights = generator._parse_combinations("2$$bread|butter")
         assert quantity == (2, 2)
         assert options == ["bread", "butter"]
+        assert weights == [1.0, 1.0]
 
-        quantity, _, options = generator._parse_combinations("1-2$$bread|butter")
+        quantity, _, options, weights = generator._parse_combinations("1-2$$bread|butter")
         assert quantity == (1, 2)
         assert options == ["bread", "butter"]
+        assert weights == [1.0, 1.0]
 
-        quantity, _, options = generator._parse_combinations("2-1$$bread|butter")
+        quantity, _, options, weights = generator._parse_combinations("2-1$$bread|butter")
         assert quantity == (1, 2)
         assert options == ["bread", "butter"]
+        assert weights == [1.0, 1.0]
 
-        quantity, _, options = generator._parse_combinations("1-$$bread|butter")
+        quantity, _, options, weights = generator._parse_combinations("1-$$bread|butter")
         assert quantity == (1, 2)
         assert options == ["bread", "butter"]
+        assert weights == [1.0, 1.0]
 
-        quantity, _, options = generator._parse_combinations("-1$$bread|butter")
+        quantity, _, options, weights = generator._parse_combinations("-1$$bread|butter")
         assert quantity == (0, 1)
         assert options == ["bread", "butter"]
+        assert weights == [1.0, 1.0]
 
-        quantity, _, options = generator._parse_combinations("2$$and$$bread|butter")
+        quantity, _, options, weights = generator._parse_combinations("2$$and$$bread|butter")
         assert quantity == (2, 2)
         assert options == ["bread", "butter"]
+        assert weights == [1.0, 1.0]
 
-        quantity, _, options = generator._parse_combinations("")
+        quantity, _, options, weights = generator._parse_combinations("")
         assert quantity == (1, 1)
         assert options == [""]
+        assert weights == [1.0]
+
+        quantity, _, options, weights = generator._parse_combinations("3::bread|2::butter")
+        assert quantity == (1, 1)
+        assert options == ["bread", "butter"]
+        assert weights == [3.0, 2.0]
+
+        quantity, _, options, weights = generator._parse_combinations("1.3::bread|butter")
+        assert quantity == (1, 1)
+        assert options == ["bread", "butter"]
+        assert weights == [1.3, 1.0]
+
+        quantity, _, options, weights = generator._parse_combinations("1-2$$2.5::bread|butter")
+        assert quantity == (1, 2)
+        assert options == ["bread", "butter"]
+        assert weights == [2.5, 1.0]
 
     def test_joiner(self, generator):
-        _, joiner, _ = generator._parse_combinations("bread|butter")
+        _, joiner, _, _ = generator._parse_combinations("bread|butter")
         assert joiner == constants.DEFAULT_COMBO_JOINER
 
-        _, joiner, _ = generator._parse_combinations("2$$bread|butter")
+        _, joiner, _, _ = generator._parse_combinations("2$$bread|butter")
         assert joiner == constants.DEFAULT_COMBO_JOINER
 
-        _, joiner, _ = generator._parse_combinations("2$$and$$bread|butter")
+        _, joiner, _, _ = generator._parse_combinations("2$$and$$bread|butter")
         assert joiner == "and"
 
-        _, joiner, _ = generator._parse_combinations("")
+        _, joiner, _, _ = generator._parse_combinations("")
         assert joiner == ","
 
-        _, joiner, _ = generator._parse_combinations("2$$|$$bread|butter")
+        _, joiner, _, _ = generator._parse_combinations("2$$|$$bread|butter")
         assert joiner == "|"
 
     def test_photographers(self, generator):
-        quantity, joiner, options = generator._parse_combinations("2-4$$|$$a|b|c")
+        quantity, joiner, options, weights = generator._parse_combinations("2-4$$|$$a|b|c")
 
 
 class TestGeneratorPrompt:
@@ -191,14 +263,14 @@ class TestGeneratorPrompt:
         assert prompt == ["I love butter"]
 
         prompt = generator.generate(2)
-        assert prompt == ["I love butter", "I love butter"]
+        assert prompt == ["I love bread", "I love butter"]
 
         prompt = generator.generate(4)
         assert prompt == [
             "I love bread",
             "I love bread",
             "I love butter",
-            "I love butter",
+            "I love bread",
         ]
 
 
@@ -215,7 +287,7 @@ class TestUnlinkSeedFromPrompt:
             generator._template = "I love {1-2$$red|green|blue}"
 
             prompt = generator.generate(5)
-            assert prompt == ['I love green , blue', 'I love green', 'I love blue', 'I love green', 'I love blue']
+            assert prompt == ['I love blue , red', 'I love blue , green', 'I love red', 'I love blue , red', 'I love green , blue']
             
 
         prev_prompt = None
