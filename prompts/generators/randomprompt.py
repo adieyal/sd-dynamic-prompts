@@ -15,26 +15,27 @@ MAX_SELECTION_ITERATIONS = 100
 
 class CombinationSelector:
     def __init__(
-        self, wildcard_manager: WildcardManager, options: list[str], weights: list[float]|None=None, rand=None
+        self,
+        generator: RandomPromptGenerator,
+        options: list[str],
+        weights: list[float] | None = None,
+        rand=None,
     ):
+
+        self._generator = generator
         if rand is None:
             self._random = random
         else:
             self._random = rand
 
-        get_option = (
-            lambda option: wildcard_manager.get_all_values(option)
-            if wildcard_manager.is_wildcard(option)
-            else [option]
-        )
-
-        self._options = [get_option(o) for o in options]
+        self._options = [[x] for x in options]
         if weights is None:
             self._weights = [1.0 for _ in range(len(self._options))]
         else:
             self._weights = weights
 
     def pick(self, count=1) -> list[str]:
+
         picked = []
 
         if len(self._options) == 0:
@@ -42,10 +43,11 @@ class CombinationSelector:
 
         for i in range(count):
             option = self._random.choices(
-                population=self._options,
-                weights=self._weights
+                population=self._options, weights=self._weights
             )[0]
-            picked.append(self._random.choice(option))
+            choice = self._random.choice(option)
+            processed_choice = self._generator.generate_prompt(choice)
+            picked.append(processed_choice)
 
         return picked
 
@@ -170,11 +172,7 @@ class RandomPromptGenerator(PromptGenerator):
             combinations_str
         )
 
-        variants = [self.generate_prompt(v) for v in variants]
-
-        selector = CombinationSelector(
-            self._wildcard_manager, variants, weights, rand=self._random
-        )
+        selector = CombinationSelector(self, variants, weights, rand=self._random)
         collector = CombinationCollector(selector, rand=self._random)
         collected = collector.collect((low_range, high_range))
         return f" {joiner} ".join(collected)
@@ -224,4 +222,3 @@ class RandomPromptGenerator(PromptGenerator):
         all_prompts = [self.generate_prompt(self._template) for _ in range(num_prompts)]
 
         return all_prompts
-
