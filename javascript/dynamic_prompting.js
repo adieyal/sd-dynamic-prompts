@@ -63,7 +63,6 @@ class SDDPUI {
   }
 
   deleteTree() {
-    return true;
     let response = confirm("Are you sure you want to delete all your wildcards?")
     return response
   }
