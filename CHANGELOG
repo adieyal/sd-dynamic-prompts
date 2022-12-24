@@ -91,3 +91,4 @@
 1.4.0 Added option to weight prompts in combinationselector - thanks to @shoffing
 1.4.1 Fixed sub-prompts in combination - see https://github.com/adieyal/sd-dynamic-prompts/issues/117
 1.4.2 The change for 1.4.1 broke the ability to use wildcards in combination braces, e.g. {2$$__colours__}, 1.4.2. fixes this.
+1.4.3 Added animal wildcards to the jumbo collection
