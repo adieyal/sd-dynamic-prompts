@@ -1,4 +1,5 @@
 # Originally sourced from https://aesthetics.fandom.com/wiki/List_of_Aesthetics
+# Also, have a look at this great study by @Jonseed - https://www.reddit.com/r/StableDiffusion/comments/zon9zn/648_aesthetic_modifiers_study_based_on_aesthetics/
 '70s Disco
 2-Tone
 1950's Suburbia
@@ -425,7 +426,6 @@ Onii Kei
 Oshare Kei
 Otaku
 Otherkin
-P
 Pachuco
 Pale Grunge
 Paleocore
