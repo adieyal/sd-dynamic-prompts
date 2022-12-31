@@ -1,3 +1,4 @@
+- 1.5.3 Fixed a bug caused in older python versions when using collections.abc.Iterable instead of typing.Iterable - https://github.com/adieyal/sd-dynamic-prompts/discussions/140
 - 1.5.2 Added a large number of birds to the jumbo collection
 - 1.5.1 Added configuration slides for min and max attention. The default has been changed to 1.1-1.5
 - 1.5.0 Updated prompt parser to use pyparsing which allows for arbitrary recursive prompts and fixes some long-time bugs. There may be a few wrinkles that still need to be iron out
