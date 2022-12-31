@@ -1,15 +1,12 @@
 from __future__ import annotations
+
 import pyparsing as pp
-from collections.abc import Iterable
 from typing import cast
-from dataclasses import dataclass
 import logging
 
 from .commands import SequenceCommand, LiteralCommand, VariantCommand, WildcardCommand
 
 logger = logging.getLogger(__name__)
-
-printable = pp.pyparsing_unicode.Latin1.printables
 
 def parse_bound_expr(expr, max_options):
     lbound = 1
@@ -85,12 +82,11 @@ class Parser:
         return wildcard
 
     def _configure_literal_sequence(self):
-        non_literal_chars = "{}|$[]"
+        non_literal_chars = r"{}|$\[\]"
         wildcard_enclosure = pp.Suppress("__")
 
         prompt_editing = self._configure_prompt_editing()
-
-        literal = pp.Word(printable, exclude_chars=non_literal_chars)("literal")
+        literal = pp.Regex(rf"[^{non_literal_chars}\s]+")("literal")
         literal_sequence = (pp.OneOrMore(~wildcard_enclosure + literal))("literal_sequence")
 
         return prompt_editing | literal_sequence

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from collections import OrderedDict
 from typing import Iterable
+from collections import OrderedDict
 
 from .parse import (
     ActionBuilder,

@@ -52,9 +52,9 @@ class TestParser:
         assert variant[0] == "I, love. punctuation"
 
     def test_literal_with_accents(self, parser: Parser):
-        sequence = parser.parse("Test änder")
+        sequence = parser.parse("Test änderō")
         assert len(sequence) == 1
-        assert sequence[0] == "Test änder"
+        assert sequence[0] == "Test änderō"
 
     def test_wildcard(self, parser: Parser):
         sequence = parser.parse("__colours__")
