@@ -19,9 +19,8 @@ This will choose 4 options and join them together with 'and' instead of the defa
 
 An omitted minimum is assumed to be 0 and an omitted maximum is assumed to be the number of options.
 
-
 	{opt1|opt2|opt3}
-    
+
 If you omit the $$ prefix, one item will be selected. (Equivalent to 1$$)
 
 Options are chosen randomly with replacement. This means that {2$$opt1|opt2} can return any of the following:
@@ -110,3 +109,21 @@ In most cases, whitespace is ignored which allows you to create more expressive 
     	|dwarf weilding a warhammer, __colours__ beard
 	}, 
 	knows the meaning of life, warrior, hyper-realistic, peaceful, dark fantasy, unreal engine, 8k
+
+## Prompt development
+The flexibility provided in the templating language makes it easy to start developing more sophisticated prompts, e.g,here is a prompt for an engagement ring. 
+
+    Elegant solitaire engagement ring. 
+    {classic|petite|thin|cigar|tapered|twisted}     # Band design
+    {silver|{white|rose|yellow}gold|platinum}       # Band metal
+    {round|faceted|honeycomb}                       # Band texture
+    band with a
+    {round|brilliant|oval|heart-shaped}             # Stone cut
+    __items/materials/gems__                        # Gem type. 
+
+Below are some example prompts generated from this pattern:
+- Elegant solitaire engagement ring. tapered rose gold round band with a brilliant anthophyllite
+- Elegant solitaire engagement ring. thin yellow gold faceted band with a brilliant grandidierite
+- Elegant solitaire engagement ring. cigar platinum faceted band with a brilliant tusionite
+- Elegant solitaire engagement ring. thin yellow gold honeycomb band with a oval bowenite
+- Elegant solitaire engagement ring. classic silver round band with a heart-shaped musgravite
