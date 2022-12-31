@@ -2,7 +2,7 @@
 - 1.5.1 Added configuration slides for min and max attention. The default has been changed to 1.1-1.5
 - 1.5.0 Updated prompt parser to use pyparsing which allows for arbitrary recursive prompts and fixes some long-time bugs. There may be a few wrinkles that still need to be iron out
 - 1.4.4 Added confirm prompt when deleting wildcards. Wildcards are also sent to Trash instead of being deleted outright
-- - 1.4.3 Added animal wildcards to the jumbo collection
+- 1.4.3 Added animal wildcards to the jumbo collection
 - 1.4.2 The change for 1.4.1 broke the ability to use wildcards in combination braces, e.g. `{2$$__colours__}`, 1.4.2. fixes this.
 - 1.4.1 Fixed sub-prompts in combination - see [#117](https://github.com/adieyal/sd-dynamic-prompts/issues/117)
 - 1.4.0 Added option to weight prompts in combinationselector - thanks to [@shoffing](https://github.com/shoffing)
