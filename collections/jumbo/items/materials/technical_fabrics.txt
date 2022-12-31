@@ -1,0 +1,12 @@
+# Original source: https://github.com/dariusk/corpora/blob/master/data/materials/technical-fabrics.json
+gore-tex
+iron-on
+kevlar
+microfiber
+polar fleece
+polyurethane
+smartwool
+space blanket
+spandex
+vinyl
+polyester
