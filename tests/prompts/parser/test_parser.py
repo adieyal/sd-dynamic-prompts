@@ -51,6 +51,11 @@ class TestParser:
         variant = cast(VariantCommand, sequence)
         assert variant[0] == "I, love. punctuation"
 
+    def test_literal_with_accents(self, parser: Parser):
+        sequence = parser.parse("Test änder")
+        assert len(sequence) == 1
+        assert sequence[0] == "Test änder"
+
     def test_wildcard(self, parser: Parser):
         sequence = parser.parse("__colours__")
         assert len(sequence) == 1
@@ -67,6 +72,12 @@ class TestParser:
         assert type(wildcard_command) == WildcardCommand
         wildcard_command = cast(WildcardCommand, wildcard_command)
         assert wildcard_command.wildcard == "path/to/colours"
+
+    def test_wildcard_with_accents(self, parser: Parser):
+        sequence = parser.parse("__änder__")
+        assert len(sequence) == 1
+        wildcard_command = cast(WildcardCommand, sequence[0])
+        assert wildcard_command.wildcard == "änder"
 
     def test_weight(self, parser: Parser):
         weight = parser._configure_weight()
@@ -95,12 +106,13 @@ class TestParser:
         assert sequence2[0] == LiteralCommand("dog")
 
     def test_variant_with_different_characters(self, parser: Parser):
-        sequence = parser.parse("{new york|washing-ton!}")
+        sequence = parser.parse("{new york|washing-ton!|änder}")
 
         variant = cast(VariantCommand, sequence[0])
-        assert len(variant) == 2
+        assert len(variant) == 3
         assert variant[0][0] == "new york"
         assert variant[1][0] == "washing-ton!"
+        assert variant[2][0] == "änder"
 
     def test_variant_breaks_without_closing_bracket(self, parser: Parser):
         with pytest.raises(ParseException):
