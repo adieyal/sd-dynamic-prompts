@@ -1,3 +1,4 @@
+- 1.5.2 Added a large number of birds to the jumbo collection
 - 1.5.1 Added configuration slides for min and max attention. The default has been changed to 1.1-1.5
 - 1.5.0 Updated prompt parser to use pyparsing which allows for arbitrary recursive prompts and fixes some long-time bugs. There may be a few wrinkles that still need to be iron out
 - 1.4.4 Added confirm prompt when deleting wildcards. Wildcards are also sent to Trash instead of being deleted outright
