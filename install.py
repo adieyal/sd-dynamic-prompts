@@ -9,3 +9,5 @@ if not launch.is_installed("spacy"):
     launch.run_pip("install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.4.1/en_core_web_sm-3.4.1.tar.gz", desc='Installing en_core_web_sm==3.4.1')
 if not launch.is_installed("send2trash"):
     launch.run_pip("install Send2Trash==1.8.0", desc='Send2Trash==1.8.0')
+if not launch.is_installed("pyparsing"):
+    launch.run_pip("install pyparsing==3.0.9", desc='pyparsing==3.0.0')

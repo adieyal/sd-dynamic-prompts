@@ -5,15 +5,17 @@ import random
 
 from prompts.wildcardmanager import WildcardManager
 from prompts import constants
+from prompts.parser.combinatorial_generator import CombinatorialGenerator
 from . import PromptGenerator, re_combinations, re_wildcard
 
 logger = logging.getLogger(__name__)
 
 
 class CombinatorialPromptGenerator(PromptGenerator):
-    def __init__(self, wildcardmanager: WildcardManager, template):
-        self._wildcard_manager = wildcardmanager
+    def __init__(self, wildcard_manager: WildcardManager, template):
+        self._wildcard_manager = wildcard_manager
         self._template = template
+        self._generator = CombinatorialGenerator(wildcard_manager)
 
     def generate_from_variants(self, seed_template):
         templates = [seed_template]
@@ -60,6 +62,13 @@ class CombinatorialPromptGenerator(PromptGenerator):
 
 
     def generate(self, max_prompts=constants.MAX_IMAGES) -> list[str]:
+        if self._template is None or len(self._template) == 0:
+            return [""]
+        prompts = self._generator.generate_prompts(self._template, max_prompts)
+        prompts = list(prompts)
+        return prompts
+
+    def generate_old(self, max_prompts=constants.MAX_IMAGES) -> list[str]:
         templates = [self._template]
         all_prompts = []
 

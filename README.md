@@ -34,9 +34,6 @@ You can also use the same wildcard twice
 - I love Winter better than Summer
 - I love Spring better than Spring
 
-## AlwaysVisible
-As of v0.17.0, Dynamic Prompts is an AlwaysVisible script. That means that it will co-exist with other scripts like X/Y Plot without needing to explicitly enable it. Big thanks to [@stysmmaker](https://github.com/stysmmaker) for this small but significant change.
-
 ## Installation
 
 The extension can be installed directly from within the **Extensions** tab within the Webui
@@ -63,8 +60,8 @@ This will randomly combine two of the options for every batch, separated with a 
 
 This will use a random number of options between 1 and 3 for each batch. 
 
-If the quantity of combinations chosen is greater than the number of options listed then options may be repeated in the output.
-If the quantity of combination chosen is less than or equal to the number of options listed then the same options will not be chosen more than once.
+If the number of combinations chosen is greater than the number of options listed then options may be repeated in the output.
+If the number of combinations chosen is less than or equal to the number of options listed then the same options will not be chosen more than once.
 
 	{4$$and$$opt1|opt2|opt3|opt4|opt5}
 
@@ -120,11 +117,16 @@ will choose between 2 and 4 options from adjective.txt, join them together with 
 
 
 ### Nesting
-You can nest combinations inside wildcards. This means that you can create more advanced templates. For example:
+You can nest inside combinations. This means that you can create more advanced templates. For example:
 
     {__seasons__|__timeofday__}
 
 This will then either choose a season from seasons.txt or a time of day from timeofday.txt.
+
+Combinations can also be nested inside other combinations, e.g. 
+
+    {{a|b|c}|d}
+
 
 ### Recursion
 Prompts are processed recursively. If a wildcard file contains a row with dynamic syntax, then that will be resolved as well. For example if seasons.txt contains the following rows:
@@ -140,6 +142,14 @@ if the 3rd row is chosen, then either Autumn or Fall will be selected. You could
 	__winter_in_different_languages__
 	{Autumn|Fall}
 	Spring
+
+## Comments
+Python and c-style comments are supported:
+
+    Test string
+    # This  a comment until the end of the line
+    // this is also a comment until the end of the line
+    {A|/* this is an inline comment */B}
 
 ### Fuzzy Glob/recursive wildcard file/directory matching
 In addition to standard wildcard tokens such as `__times__` -> `times.txt`, you can also use globbing to match against multiple files at once.

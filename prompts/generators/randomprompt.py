@@ -6,6 +6,7 @@ import random
 
 from prompts import constants
 from prompts.wildcardmanager import WildcardManager
+from prompts.parser.random_generator import RandomGenerator
 from . import PromptGenerator, re_combinations, re_wildcard
 
 logger = logging.getLogger(__name__)
@@ -110,6 +111,7 @@ class RandomPromptGenerator(PromptGenerator):
                 self._random.seed(seed)
 
         self._template = template
+        self._generator = RandomGenerator(wildcard_manager)
 
     def _parse_range(self, range_str: str, num_variants: int) -> tuple[int, int]:
         default_low = 0
@@ -218,7 +220,14 @@ class RandomPromptGenerator(PromptGenerator):
                 return prompt
             old_prompt = prompt
 
-    def generate(self, num_prompts) -> list[str]:
+    def generate_old(self, num_prompts) -> list[str]:
         all_prompts = [self.generate_prompt(self._template) for _ in range(num_prompts)]
 
         return all_prompts
+
+    def generate(self, max_prompts=constants.MAX_IMAGES) -> list[str]:
+        if self._template is None or len(self._template) == 0:
+            return [""]
+        prompts = self._generator.generate_prompts(self._template, max_prompts)
+        prompts = list(prompts)
+        return prompts

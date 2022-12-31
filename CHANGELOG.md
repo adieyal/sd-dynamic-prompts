@@ -1,0 +1,96 @@
+- 1.5.0 Updated prompt parser to use pyparsing which allows for arbitrary recursive prompts and fixes some long-time bugs. There may be a few wrinkles that still need to be iron out
+- 1.4.4 Added confirm prompt when deleting wildcards. Wildcards are also sent to Trash instead of being deleted outright
+- - 1.4.3 Added animal wildcards to the jumbo collection
+- 1.4.2 The change for 1.4.1 broke the ability to use wildcards in combination braces, e.g. `{2$$__colours__}`, 1.4.2. fixes this.
+- 1.4.1 Fixed sub-prompts in combination - see [#117](https://github.com/adieyal/sd-dynamic-prompts/issues/117)
+- 1.4.0 Added option to weight prompts in combinationselector - thanks to [@shoffing](https://github.com/shoffing)
+- 1.3.3 Removed junk file
+- 1.3.2 Added c-style comments - thanks to @space-nuko
+- 1.3.1 Fixed path in wildcard files
+- 1.3.0 Added mechanism to copy collections to wildcards
+- 1.2.3 Added natioanlities wildcards
+- 1.2.2 Fixed passing json between frontend and backend - now explicitly stringifying in the frontend
+- 1.2.1 Removed white space from wildcards when saving
+- 1.2.0 Added render variables to jinja2 context - see the jinja2.md for details
+- 1.1.0 Updated write prompts to file. Now outputs a csv files with both positive and negative prompts
+- 1.0.3 Improved wildcards tab interface
+- 1.0.2 Wildcard hierarchy is now alphabetically sorted
+- 1.0.1 Ensure that the wildcards tree is only loaded once
+- 1.0 Added a rudimentary wildcard manager - more to follow
+- 0.29.15 Fixes fixed magic prompt - seed issue - https://github.com/adieyal/sd-dynamic-prompts/issues/90
+- 0.29.14 Fixes duplicate wildcards - https://github.com/adieyal/sd-dynamic-prompts/issues/88
+- 0.29.13 Fixes broken styles for negative prompts = https://github.com/adieyal/sd-dynamic-prompts/issues/73
+- 0.29.12 Fixes broken styles = https://github.com/adieyal/sd-dynamic-prompts/issues/73
+- 0.29.11 Wildcards are sorted alphabetically before use - https://github.com/adieyal/sd-dynamic-prompts/issues/85
+- 0.29.10 Fixed a bug the occurred when more positive prompts are created than negative prompts.
+- 0.29.9 Now using all_negative_prompts. Each image now uses its own negative prompt. Thanks to @lilly1987 
+- 0.29.8 Fixed unlink seed from prompt - see https://github.com/adieyal/sd-dynamic-prompts/issues/80
+- 0.29.7 Removed python type aliases for backwards compatibility
+- 0.29.6 Maximum filesize for prompts is 50 to prevent issues on windows
+- 0.29.5 Added link to documentation on github
+- 0.29.4 Fixed pipe (|) in combinations string - see https://github.com/adieyal/sd-dynamic-prompts/issues/54
+- 0.29.3 Fixed localization for help text - see https://github.com/adieyal/sd-dynamic-prompts/issues/68
+- 0.29.2 Fixed camera models file in the jumbo collection - see https://github.com/adieyal/sd-dynamic-prompts/issues/69
+- 0.29.1 Changed attention grabber to use noun phrases
+- 0.29.0 Added attention grabber
+- 0.28.1 Minor magic prompt fixes, with thanks to @SineSwiper
+- 0.28.0 Added tooltips to all components, with thanks to @Eugenii10
+- 0.27.4 Added debug logging
+- 0.27.3 Another fix for https://github.com/adieyal/sd-dynamic-prompts/issues/62
+- 0.27.2 Fixed bug when dynamic prompts is disabled - see https://github.com/adieyal/sd-dynamic-prompts/issues/62
+- 0.27.1 Slight ui re-organisation
+- 0.27.0 Added option to disable image generation - useful in combination with writing prompts to file
+- 0.26.0 Added option to disable the negative prompt
+- 0.25.1 Explicitly setting encoding when writing prompts to file. Also ignoring errors
+- 0.25.0 Negative prompts are now dynamic, Big thanks to @lilly1987
+- 0.24.4 Tucked help into separate accordions to prevent too much clutter
+- 0.24.3 Added shuffle to combinatorial generation so that a different subset of prompts is generated every time if the total number of prompts is greater than Batch size * Batch count
+- 0.24.2 Minor bug fix in weighted choice jinja2 extension
+- 0.24.1 Re-wrote combinatorial generation to use a queue instead of recursion
+- 0.24.0 I'm feeling lucky now using the prompt as a search string.
+- 0.23.1 Fixed a bug that didn't limit the number of prompts when using combinatorial generation and large wildcard files
+- 0.23.0 Added I'm feeling lucky for the ultimate in lazy prompting
+- 0.22.0 Added a weighted choice function to jinja2 templates
+- 0.21.0 Added a checkbox to disable dynamic prompts if needed
+- 0.20.1 Using launch.run_pip instead of subprocess to install dependencies
+- 0.20.0 Added random, randint, and permutations jinja extensions
+- 0.19.2 Fixed bug in MagicPrompt that broke prompts with pipes, https://github.com/adieyal/sd-dynamic-prompts/issues/54
+- 0.19.1 Added missing install.py to install Jinja2
+- 0.19.0 Added a checkbox to enable unlinking seeds from prompts. This feature has been available for sometime but there hasn't been a checkbox in the ui to enable it.
+- 0.18.0 Added Jinja2 templates as an experimental feature
+- 0.17.1 Minor bug fix checking type of combinatorial batches
+- 0.17.0 Dynamic prompts is now an AlwaysVisible script. It now plays nicely with other scripts like X/Y plot. Big thanks to @stysmmaker
+- 0.16.0 Added a checkbox to enable writing all generated prompts to a text file.
+- 0.15.2 Handle situation where no prompts are generated.
+- 0.15.1 Fixed an error caused when setting wildcard_dir in config.json, also other minor bug fixes
+- 0.15.0 Improvements to Magic Prompt by @SineSwiper - added a slider to adjust the prompt length and another to tune creativity.
+- 0.14.0 Added the ability to change the combinations joiner from the default "," to anything you like, e.g. {1$$and$$red|blue} gives you red and blue - contributed by @cobryan05 
+- 0.13.9 Added implicit lower and upper ranges to combinations - thanks to @galvanized
+- 0.13.8 Allow sampling with replacement for variants, i.e. {2$$X|Y} can return X,X Y,Y X,Y and Y,X. Useful in combination with wildcards. {2$$__artists__} now also chooses two options from the artists.txt file.
+- 0.13.7 Python 3.8 compatibility
+- 0.13.6 Moved wildcards into the collections directory and added the parrot zone collection with thanks to @jmpaz 
+- 0.13.5 Updated stylesheet from @Yaiol to fix light and dark theme
+- 0.13.4 Fixed 0.13.3, but thiss time for real
+- 0.13.3 Added an option to revert 0.9.1. There isn't a ui for it yet, but you can edit constants.py. Change to UNLINK_SEED_FROM_PROMPT = True
+- 0.13.2 Fixed combinatorial bug which generated duplicate templates
+- 0.13.1 Fixed light mode css
+- 0.13.0 Added same seed checkbox to keep the seed constant for all generations.
+- 0.12.0 Added a slider to enable combinatorial generation in batches, in other words, run the same set of prompts with different seeds
+- 0.11.0 Migrated to an extension
+- 0.10.0 Added magic prompts
+- 0.9.2 Added additional artists and refactored code.
+- 0.9.1 Added local Random instance to ensure repeatability without changing the global random number generator
+- 0.9.0 Started a modifer library. Turns out it's much better than the long unsorted lists of artists you find elsewhere.
+- 0.8.0 Combinatorial generation 
+- 0.7.0 Updated wildcard ui by @TheAwesomeGoat.7.0 Updated wildcard ui by @TheAwesomeGoat
+- 0.6.0 Added path globbing for wildcards. Thanks for @evanjs for the idea and original implementation
+- 0.5.0 The script can now handle nested wildcard directories in order to make it easier to organise large wildcard collections. Comments and empty lines are now ignored. Both features thanks to @evanjs 
+- 0.4.5 Enabled generation of grids
+- 0.4.4 Fixed bug where num_batches was being interpreted as num_images
+- 0.4.3 Printing prompts at logger level INFO
+- 0.4.2 Ignoring unknown characters in non-utf8 encoding wildcard files
+- 0.4.1 Fixed regular expression for wildcards, it previously didn't allow wildcard files with underscores in them.
+- 0.4 Rows in a wildcard file that contain dynamic syntax will be resolved. This enables recusive resolution. See [this](https://github.com/adieyal/sd-dynamic-prompting/issues/3) feature request for a use case
+- 0.3 Added interval implementation for combinations, i.e. you can now use {1-2$$op1|opt2|opt3} which will choose one or two options. Thanks to @galvanized for this.
+- 0.2 Fixed Batch img2img implementation
+- 0.1 Initial implementation
