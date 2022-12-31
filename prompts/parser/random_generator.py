@@ -1,7 +1,7 @@
 from __future__ import annotations
+
 import random
-from collections.abc import Iterable
-from typing import Iterator, cast
+from typing import Iterator, cast, Iterable
 
 from .parse import Parser, ActionBuilder
 from .commands import SequenceCommand, Command, LiteralCommand, VariantCommand, WildcardCommand

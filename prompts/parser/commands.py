@@ -1,4 +1,6 @@
-from collections.abc import Iterable
+from __future__ import annotations
+
+from typing import Iterable
 import logging
 
 logger = logging.getLogger(__name__)

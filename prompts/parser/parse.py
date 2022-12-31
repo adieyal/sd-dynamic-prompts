@@ -1,9 +1,9 @@
 from __future__ import annotations
-import pyparsing as pp
-from collections.abc import Iterable
+
 from typing import cast
-from dataclasses import dataclass
 import logging
+
+import pyparsing as pp
 
 from .commands import SequenceCommand, LiteralCommand, VariantCommand, WildcardCommand
 
