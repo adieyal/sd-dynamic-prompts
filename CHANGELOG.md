@@ -1,3 +1,4 @@
+- 1.5.5 Fixed resolving nested prompts in wildcard files in random generator
 - 1.5.4 Fixed parsing bug with non ascii characters
 - 1.5.3 Fixed a bug caused in older python versions when using collections.abc.Iterable instead of typing.Iterable - https://github.com/adieyal/sd-dynamic-prompts/discussions/140
 - 1.5.2 Added a large number of birds to the jumbo collection
