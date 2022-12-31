@@ -1,0 +1,128 @@
+# Originally sourced from Clements Checklist v2022
+White-bellied Minivet
+Jerdon's Minivet
+Fiery Minivet
+Small Minivet
+Gray-chinned Minivet
+Gray-chinned Minivet (Gray-chinned)
+Gray-chinned Minivet (Gray-throated)
+Sunda Minivet
+Short-billed Minivet
+Flores Minivet
+Long-tailed Minivet
+Orange Minivet
+Scarlet Minivet
+Scarlet Minivet (Scarlet)
+Scarlet Minivet (Philippine Red)
+Scarlet Minivet (Philippine Yellow)
+Scarlet Minivet (Javan)
+Ryukyu Minivet
+Ashy Minivet
+Ryukyu/Ashy Minivet
+Brown-rumped Minivet
+Ashy/Brown-rumped Minivet
+Rosy Minivet
+minivet sp. (red minivet sp.)
+minivet sp. (gray minivet sp.)
+minivet sp.
+Comoros Cuckooshrike
+Madagascar Cuckooshrike
+Grauer's Cuckooshrike
+Gray Cuckooshrike
+White-breasted Cuckooshrike
+Stout-billed Cuckooshrike
+Hooded Cuckooshrike
+Pied Cuckooshrike
+Cerulean Cuckooshrike
+Ground Cuckooshrike
+Barred Cuckooshrike
+Boyer's Cuckooshrike
+Black-faced Cuckooshrike
+North Melanesian Cuckooshrike
+White-bellied Cuckooshrike
+Moluccan Cuckooshrike
+Manus Cuckooshrike
+South Melanesian Cuckooshrike
+Large Cuckooshrike
+Large Cuckooshrike (Indian)
+Large Cuckooshrike (Large)
+Large Cuckooshrike (Malayan)
+Bar-bellied Cuckooshrike
+Bar-bellied Cuckooshrike (Bar-bellied)
+Bar-bellied Cuckooshrike (Visayan)
+Andaman Cuckooshrike
+Sunda Cuckooshrike
+Javan Cuckooshrike
+Wallacean Cuckooshrike
+Buru Cuckooshrike
+White-rumped Cuckooshrike
+Slaty Cuckooshrike
+Coracina sp.
+Ghana Cuckooshrike
+Oriole Cuckooshrike
+Black Cuckooshrike
+Petit's Cuckooshrike
+Red-shouldered Cuckooshrike
+Purple-throated Cuckooshrike
+african cuckooshrike sp.
+Golden Cuckooshrike
+McGregor's Cuckooshrike
+Polynesian Triller
+Samoan Triller
+Long-tailed Triller
+White-shouldered Triller
+White-winged Triller
+Black-browed Triller
+Black-browed Triller (Black-browed)
+Black-browed Triller (Biak)
+White-browed Triller
+Varied Triller
+Mussau Triller
+Black-and-white Triller
+Black-and-white Triller (Northern)
+Black-and-white Triller (Southern)
+White-rumped Triller
+Pied Triller
+Rufous-bellied Triller
+Reunion Cuckooshrike
+Mauritius Cuckooshrike
+Black-winged Cuckooshrike
+Black-headed Cuckooshrike
+Large/Black-headed Cuckooshrike
+Lesser Cuckooshrike
+Indochinese Cuckooshrike
+Lalage sp.
+Pygmy Cuckooshrike
+Halmahera Cuckooshrike
+Blue Cuckooshrike
+New Caledonian Cuckooshrike
+Blackish Cuckooshrike
+White-winged Cuckooshrike
+Black-bellied Cicadabird
+Pale Cicadabird
+Kai Cicadabird
+Pale-shouldered Cicadabird
+Black-bibbed Cuckooshrike
+Manus Cicadabird
+Makira Cicadabird
+Solomons Cuckooshrike
+Solomons Cuckooshrike (Solomon)
+Solomons Cuckooshrike (New Georgia)
+Papuan Cicadabird
+Sulawesi Cicadabird
+Sula Cicadabird
+Common Cicadabird
+Common Cicadabird (Slender-billed)
+Common Cicadabird (Obi)
+Common Cicadabird (Moluccan)
+Common Cicadabird (Geelvink)
+Common Cicadabird (Rossel)
+Common Cicadabird (Melanesian)
+Common Cicadabird (Gray-capped)
+Common Cicadabird (Palau)
+Common Cicadabird (Yap)
+Common Cicadabird (Pohnpei)
+Gray-headed Cicadabird
+Black Cicadabird
+Edolisoma sp.
+cuckooshrike sp.

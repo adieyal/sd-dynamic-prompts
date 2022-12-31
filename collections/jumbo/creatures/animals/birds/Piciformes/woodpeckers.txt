@@ -1,0 +1,401 @@
+# Originally sourced from Clements Checklist v2022
+Eurasian Wryneck
+Rufous-necked Wryneck
+Rufous-necked Wryneck (Rufous-necked)
+Rufous-necked Wryneck (Bar-throated)
+Rufous-necked Wryneck (Ethiopian)
+Speckled Piculet
+Bar-breasted Piculet
+Orinoco Piculet
+Lafresnaye's Piculet
+Golden-spangled Piculet
+Golden-spangled Piculet (Undulated)
+Golden-spangled Piculet (Buffon's)
+Golden-spangled Piculet (Pernambuco)
+Golden-spangled Piculet (Bahia)
+Ecuadorian Piculet
+Scaled Piculet
+Scaled Piculet (Scaled)
+Scaled Piculet (Black-dotted)
+White-bellied Piculet
+White-bellied Piculet (White-bellied)
+White-bellied Piculet (Mangrove)
+Arrowhead Piculet
+Spotted Piculet
+Speckle-chested Piculet
+Varzea Piculet
+White-barred Piculet
+White-barred Piculet (Marajo)
+White-barred Piculet (White-barred)
+Ocellated Piculet
+White-barred/Ocellated Piculet
+Ochre-collared Piculet
+White-barred x Ochre-collared Piculet (hybrid)
+White-barred/Ochre-collared Piculet
+White-wedged Piculet
+White-barred x White-wedged Piculet (hybrid)
+White-barred/White-wedged Piculet
+Rusty-necked Piculet
+Rufous-breasted Piculet
+Ochraceous Piculet
+Mottled Piculet
+Plain-breasted Piculet
+Fine-barred Piculet
+Olivaceous Piculet
+Grayish Piculet
+Chestnut Piculet
+new world piculet sp.
+African Piculet
+Rufous Piculet
+White-browed Piculet
+Rufous/White-browed Piculet
+Antillean Piculet
+Gray-and-buff Woodpecker
+Gray-and-buff Woodpecker (Gray-and-buff)
+Gray-and-buff Woodpecker (Red-crested)
+Heart-spotted Woodpecker
+Williamson's Sapsucker
+Yellow-bellied Sapsucker
+Red-naped Sapsucker
+Yellow-bellied x Red-naped Sapsucker (hybrid)
+Yellow-bellied/Red-naped Sapsucker
+Red-breasted Sapsucker
+Red-breasted Sapsucker (ruber)
+Red-breasted Sapsucker (daggetti)
+Yellow-bellied x Red-breasted Sapsucker (hybrid)
+Red-naped x Red-breasted Sapsucker (hybrid)
+Red-naped/Red-breasted Sapsucker
+sapsucker sp.
+Cuban Green Woodpecker
+White Woodpecker
+Lewis's Woodpecker
+Guadeloupe Woodpecker
+Puerto Rican Woodpecker
+Red-headed Woodpecker
+Acorn Woodpecker
+Acorn Woodpecker (Acorn)
+Acorn Woodpecker (Narrow-fronted)
+Golden-naped Woodpecker
+Yellow-tufted Woodpecker
+Yellow-fronted Woodpecker
+Beautiful Woodpecker
+Black-cheeked Woodpecker
+White-fronted Woodpecker
+Hispaniolan Woodpecker
+Jamaican Woodpecker
+Golden-cheeked Woodpecker
+Gray-breasted Woodpecker
+Yucatan Woodpecker
+Red-crowned Woodpecker
+Gila Woodpecker
+Hoffmann's Woodpecker
+Red-crowned x Hoffmann's Woodpecker (hybrid)
+Golden-fronted Woodpecker
+Golden-fronted Woodpecker (Northern)
+Golden-fronted Woodpecker (Velasquez's)
+Golden-fronted Woodpecker (West Mexico)
+Hoffmann's x Golden-fronted Woodpecker (hybrid)
+Hoffmann's/Golden-fronted Woodpecker
+Red-bellied Woodpecker
+Golden-fronted x Red-bellied Woodpecker (hybrid)
+Golden-fronted/Red-bellied Woodpecker
+West Indian Woodpecker
+Melanerpes sp.
+Eurasian Three-toed Woodpecker
+Eurasian Three-toed Woodpecker (Eurasian)
+Eurasian Three-toed Woodpecker (Dark-bodied)
+American Three-toed Woodpecker
+American Three-toed Woodpecker (Rocky Mts.)
+American Three-toed Woodpecker (Northwest)
+American Three-toed Woodpecker (Eastern)
+Black-backed Woodpecker
+American Three-toed/Black-backed Woodpecker
+Sulawesi Pygmy Woodpecker
+Philippine Pygmy Woodpecker
+Sulu Pygmy Woodpecker
+Brown-capped Pygmy Woodpecker
+Sunda Pygmy Woodpecker
+Gray-capped Pygmy Woodpecker
+Brown-capped/Gray-capped Pygmy Woodpecker
+Japanese Pygmy Woodpecker
+Yellow-crowned Woodpecker
+Middle Spotted Woodpecker
+Brown-fronted Woodpecker
+Arabian Woodpecker
+Abyssinian Woodpecker
+Melancholy Woodpecker
+Gabon Woodpecker
+Elliot's Woodpecker
+Elliot's Woodpecker (Elliot's)
+Elliot's Woodpecker (Johnston's)
+Little Gray Woodpecker
+Speckle-breasted Woodpecker
+Cardinal Woodpecker
+Bearded Woodpecker
+Fire-bellied Woodpecker
+Golden-crowned Woodpecker
+Stierling's Woodpecker
+Brown-backed Woodpecker
+African Gray Woodpecker
+African Gray Woodpecker (Sahel)
+African Gray Woodpecker (Gray)
+Mountain Gray Woodpecker
+Olive Woodpecker
+Olive Woodpecker (Red-bellied)
+Olive Woodpecker (Montane)
+Olive Woodpecker (Southern)
+Rufous-bellied Woodpecker
+Fulvous-breasted Woodpecker
+Freckle-breasted Woodpecker
+Stripe-breasted Woodpecker
+Okinawa Woodpecker
+White-backed Woodpecker
+White-backed Woodpecker (Lilford's)
+White-backed Woodpecker (White-backed)
+White-backed Woodpecker (Amami)
+Darjeeling Woodpecker
+Great Spotted Woodpecker
+Great Spotted Woodpecker (Canarian)
+Great Spotted Woodpecker (Atlas)
+Great Spotted Woodpecker (Great Spotted)
+Great Spotted Woodpecker (poelzami)
+Great Spotted Woodpecker (japonicus)
+Great Spotted Woodpecker (cabanisi/stresemanni)
+White-winged Woodpecker
+Himalayan Woodpecker
+Syrian Woodpecker
+Great Spotted x Syrian Woodpecker (hybrid)
+Great Spotted/Syrian Woodpecker
+Sind Woodpecker
+Dendrocopos sp.
+Lesser Spotted Woodpecker
+Crimson-breasted Woodpecker
+Crimson-breasted Woodpecker (Scarlet-breasted)
+Crimson-breasted Woodpecker (Crimson-breasted)
+Darjeeling/Crimson-breasted Woodpecker
+Downy Woodpecker
+Downy Woodpecker (Eastern)
+Downy Woodpecker (Rocky Mts.)
+Downy Woodpecker (Pacific)
+Nuttall's Woodpecker
+Downy x Nuttall's Woodpecker (hybrid)
+Ladder-backed Woodpecker
+Downy x Ladder-backed Woodpecker (hybrid)
+Downy/Ladder-backed Woodpecker
+Nuttall's x Ladder-backed Woodpecker (hybrid)
+Nuttall's/Ladder-backed Woodpecker
+Red-cockaded Woodpecker
+Hairy Woodpecker
+Hairy Woodpecker (Eastern)
+Hairy Woodpecker (Pacific)
+Hairy Woodpecker (Rocky Mts.)
+Hairy Woodpecker (South Mexican)
+Hairy Woodpecker (Costa Rican)
+Downy x Hairy Woodpecker (hybrid)
+Downy/Hairy Woodpecker
+Nuttall's x Hairy Woodpecker (hybrid)
+Ladder-backed x Hairy Woodpecker (hybrid)
+White-headed Woodpecker
+Smoky-brown Woodpecker
+Strickland's Woodpecker
+Arizona Woodpecker
+Red-rumped Woodpecker
+Golden-collared Woodpecker
+White-spotted Woodpecker
+Checkered Woodpecker
+Striped Woodpecker
+Blood-colored Woodpecker
+Little Woodpecker
+Blood-colored x Little Woodpecker (hybrid)
+Dot-fronted Woodpecker
+Scarlet-backed Woodpecker
+Yellow-vented Woodpecker
+Bar-bellied Woodpecker
+Red-stained Woodpecker
+Little/Red-stained Woodpecker
+Choco Woodpecker
+Yellow-eared Woodpecker
+Dryobates sp.
+Maroon Woodpecker
+Bay Woodpecker
+Orange-backed Woodpecker
+Greater Flameback
+Greater Flameback (Malabar)
+Greater Flameback (Greater)
+Javan Flameback
+Luzon Flameback
+Yellow-faced Flameback
+Buff-spotted Flameback
+Red-headed Flameback
+Crimson-backed Flameback
+White-naped Woodpecker
+Powerful Woodpecker
+Crimson-bellied Woodpecker
+Crimson-bellied Woodpecker (Splendid)
+Crimson-bellied Woodpecker (Crimson-bellied)
+Red-necked Woodpecker
+Robust Woodpecker
+Crimson-crested Woodpecker
+Pale-billed Woodpecker
+Guayaquil Woodpecker
+Cream-backed Woodpecker
+Crimson-crested x Cream-backed Woodpecker (hybrid)
+Magellanic Woodpecker
+Ivory-billed Woodpecker
+Ivory-billed Woodpecker (Northern)
+Ivory-billed Woodpecker (Cuban)
+Imperial Woodpecker
+Campephilus sp.
+Rufous Woodpecker
+Buff-necked Woodpecker
+Buff-rumped Woodpecker
+Buff-rumped Woodpecker (Buff-rumped)
+Buff-rumped Woodpecker (White-rumped)
+Black-and-buff Woodpecker
+Pale-headed Woodpecker
+Bamboo Woodpecker
+Pale-headed x Bamboo Woodpecker (hybrid)
+Olive-backed Woodpecker
+Himalayan Flameback
+Common Flameback
+Greater/Common Flameback
+Himalayan/Common Flameback
+Spot-throated Flameback
+Black-rumped Flameback
+Red-backed Flameback
+Black-rumped x Red-backed Flameback (hybrid)
+Black-rumped/Red-backed Flameback
+flameback sp.
+Lesser Yellownape
+Crimson-winged Woodpecker
+Streak-throated Woodpecker
+Scaly-bellied Woodpecker
+Red-collared Woodpecker
+Streak-breasted Woodpecker
+Laced Woodpecker
+Streak-breasted/Laced Woodpecker
+Japanese Woodpecker
+Gray-headed Woodpecker
+Gray-headed Woodpecker (Gray-headed)
+Gray-headed Woodpecker (Black-naped)
+Gray-headed Woodpecker (Sumatran)
+Black-headed Woodpecker
+Levaillant's Woodpecker
+Eurasian Green Woodpecker
+Eurasian Green Woodpecker (Eurasian)
+Eurasian Green Woodpecker (Mesopotamian)
+Gray-headed x Eurasian Green Woodpecker (hybrid)
+Iberian Green Woodpecker
+Eurasian x Iberian Green Woodpecker (hybrid)
+Eurasian/Iberian Green Woodpecker
+Picus sp.
+Banded Woodpecker
+Greater Yellownape
+Lesser/Greater Yellownape
+Checker-throated Woodpecker
+Checker-throated Woodpecker (Checker-throated)
+Checker-throated Woodpecker (Javan)
+Ground Woodpecker
+Brown-eared Woodpecker
+Brown-eared Woodpecker (Western)
+Brown-eared Woodpecker (Carol's)
+Buff-spotted Woodpecker
+Tullberg's Woodpecker
+Tullberg's Woodpecker (Tullberg's)
+Tullberg's Woodpecker (Fine-banded)
+Little Green Woodpecker
+Green-backed Woodpecker
+Green-backed Woodpecker (Plain-backed)
+Green-backed Woodpecker (Spot-backed)
+Nubian Woodpecker
+Fine-spotted Woodpecker
+Bennett's Woodpecker
+Bennett's Woodpecker (Bennett's)
+Bennett's Woodpecker (Light-spotted)
+Reichenow's Woodpecker
+Knysna Woodpecker
+Golden-tailed Woodpecker
+Golden-tailed Woodpecker (Streak-backed)
+Golden-tailed Woodpecker (Golden-tailed)
+Mombasa Woodpecker
+Ashy Woodpecker
+Northern Sooty-Woodpecker
+Southern Sooty-Woodpecker
+Great Slaty Woodpecker
+Lineated Woodpecker
+Lineated Woodpecker (Lineated)
+Lineated Woodpecker (Dusky-winged)
+Campephilus sp./Lineated Woodpecker
+Pileated Woodpecker
+Black-bodied Woodpecker
+Lineated x Black-bodied Woodpecker (hybrid)
+White-bellied Woodpecker
+Andaman Woodpecker
+Black Woodpecker
+Dryocopus sp.
+Cinnamon Woodpecker
+Ringed Woodpecker
+Ringed Woodpecker (Ringed)
+Ringed Woodpecker (Amazonian Black-breasted)
+Ringed Woodpecker (Atlantic Black-breasted)
+Helmeted Woodpecker
+Chestnut-colored Woodpecker
+Scale-breasted Woodpecker
+Waved Woodpecker
+Cream-colored Woodpecker
+Rufous-headed Woodpecker
+Kaempfer's Woodpecker
+Ochre-backed Woodpecker
+Chestnut Woodpecker
+Pale-crested Woodpecker
+Blond-crested Woodpecker
+Ochre-backed/Blond-crested Woodpecker
+Celeus sp.
+Rufous-winged Woodpecker
+Stripe-cheeked Woodpecker
+White-throated Woodpecker
+Lita Woodpecker
+Yellow-throated Woodpecker
+Golden-green Woodpecker
+Golden-green Woodpecker (Gold-throated)
+Golden-green Woodpecker (Bar-throated)
+Golden-green Woodpecker (Belem)
+Golden-green Woodpecker (Spot-throated)
+Golden-green Woodpecker (Golden-green)
+Golden-green Woodpecker (Atlantic)
+White-browed Woodpecker
+Piculus sp.
+Golden-olive Woodpecker
+Golden-olive Woodpecker (Bronze-winged)
+Golden-olive Woodpecker (Golden-olive)
+Golden-olive Woodpecker (rubripileus)
+Gray-crowned Woodpecker
+Crimson-mantled Woodpecker
+Crimson-mantled Woodpecker (Crimson-mantled)
+Crimson-mantled Woodpecker (Black-crowned)
+Black-necked Woodpecker
+Spot-breasted Woodpecker
+Green-barred Woodpecker
+Green-barred Woodpecker (Green-barred)
+Green-barred Woodpecker (Golden-breasted)
+Northern Flicker
+Northern Flicker (Cuban)
+Northern Flicker (Grand Cayman I.)
+Northern Flicker (Yellow-shafted)
+Northern Flicker (Red-shafted)
+Northern Flicker (Yellow-shafted x Red-shafted)
+Northern Flicker (Guatemalan)
+Gilded Flicker
+Northern x Gilded Flicker (hybrid)
+Northern/Gilded Flicker
+Bermuda Flicker
+Fernandina's Flicker
+Chilean Flicker
+Andean Flicker
+Andean Flicker (Northern)
+Andean Flicker (Southern)
+Campo Flicker
+Campo Flicker (Campo)
+Campo Flicker (Field)
+Campo Flicker (Campo x Field)
+woodpecker sp.

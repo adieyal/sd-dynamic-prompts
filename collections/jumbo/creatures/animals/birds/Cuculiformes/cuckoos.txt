@@ -1,0 +1,217 @@
+# Originally sourced from Clements Checklist v2022
+Guira Cuckoo
+Greater Ani
+Smooth-billed Ani
+Groove-billed Ani
+Smooth-billed/Groove-billed Ani
+Striped Cuckoo
+Pheasant Cuckoo
+Pavonine Cuckoo
+Lesser Ground-Cuckoo
+Lesser Roadrunner
+Greater Roadrunner
+Lesser/Greater Roadrunner
+Rufous-vented Ground-Cuckoo
+Scaled Ground-Cuckoo
+Banded Ground-Cuckoo
+Rufous-winged Ground-Cuckoo
+Red-billed Ground-Cuckoo
+Sumatran Ground-Cuckoo
+Bornean Ground-Cuckoo
+Coral-billed Ground-Cuckoo
+Crested Coua
+Crested Coua (Crested)
+Crested Coua (Chestnut-vented)
+Verreaux's Coua
+Blue Coua
+Red-capped Coua
+Red-capped Coua (Red-capped)
+Red-capped Coua (Green-capped)
+Red-fronted Coua
+Coquerel's Coua
+Running Coua
+Giant Coua
+Snail-eating Coua
+Red-breasted Coua
+coua sp.
+Buff-headed Coucal
+Pied Coucal
+Biak Coucal
+Greater Black Coucal
+Rufous Coucal
+Green-billed Coucal
+Black-faced Coucal
+Short-toed Coucal
+Black-hooded Coucal
+Bay Coucal
+Gabon Coucal
+Black-throated Coucal
+Senegal Coucal
+Blue-headed Coucal
+Coppery-tailed Coucal
+White-browed Coucal
+White-browed Coucal (White-browed)
+White-browed Coucal (Burchell's)
+Sunda Coucal
+Andaman Coucal
+Greater Coucal
+Greater Coucal (Greater)
+Greater Coucal (Southern)
+Goliath Coucal
+Malagasy Coucal
+Black Coucal
+Philippine Coucal
+Lesser Coucal
+Greater/Lesser Coucal
+Violaceous Coucal
+Lesser Black Coucal
+Pheasant Coucal
+Pheasant Coucal (Timor)
+Pheasant Coucal (Kai)
+Pheasant Coucal (Pheasant)
+coucal sp.
+Raffles's Malkoha
+Blue Malkoha
+Green Malkoha
+Sirkeer Malkoha
+Red-billed Malkoha
+Chestnut-breasted Malkoha
+Chestnut-breasted Malkoha (Mentawai)
+Chestnut-breasted Malkoha (Chestnut-breasted)
+Chestnut-bellied Malkoha
+Red-faced Malkoha
+Blue-faced Malkoha
+Black-bellied Malkoha
+Green-billed Malkoha
+Yellow-billed Malkoha
+Red-crested Malkoha
+Scale-feathered Malkoha
+malkoha sp.
+Chestnut-winged Cuckoo
+Great Spotted Cuckoo
+Levaillant's Cuckoo
+Pied Cuckoo
+Little Cuckoo
+Dwarf Cuckoo
+Ash-colored Cuckoo
+Squirrel Cuckoo
+Squirrel Cuckoo (West Mexico)
+Squirrel Cuckoo (Middle America)
+Squirrel Cuckoo (nigricrissa)
+Squirrel Cuckoo (Amazonian)
+Black-bellied Cuckoo
+Squirrel/Black-bellied Cuckoo
+Dark-billed Cuckoo
+Yellow-billed Cuckoo
+Pearly-breasted Cuckoo
+Yellow-billed/Pearly-breasted Cuckoo
+Mangrove Cuckoo
+Cocos Cuckoo
+Black-billed Cuckoo
+Yellow-billed/Black-billed Cuckoo
+Gray-capped Cuckoo
+Chestnut-bellied Cuckoo
+Bay-breasted Cuckoo
+Jamaican Lizard-Cuckoo
+Puerto Rican Lizard-Cuckoo
+Great Lizard-Cuckoo
+Great Lizard-Cuckoo (Bahamas)
+Great Lizard-Cuckoo (Cuban)
+Hispaniolan Lizard-Cuckoo
+Coccyzus sp.
+St. Helena Cuckoo
+Thick-billed Cuckoo
+Thick-billed Cuckoo (African)
+Thick-billed Cuckoo (Madagascar)
+Dwarf Koel
+Asian Koel
+Black-billed Koel
+Pacific Koel
+Pacific Koel (Oriental)
+Pacific Koel (Australian)
+Long-tailed Koel
+Channel-billed Cuckoo
+Asian Emerald Cuckoo
+Violet Cuckoo
+Asian Emerald/Violet Cuckoo
+Dideric Cuckoo
+Klaas's Cuckoo
+Dideric/Klaas's Cuckoo
+Yellow-throated Cuckoo
+African Emerald Cuckoo
+African Emerald Cuckoo (African)
+African Emerald Cuckoo (Bioko)
+African Emerald Cuckoo (Insular)
+Long-billed Cuckoo
+Horsfield's Bronze-Cuckoo
+Black-eared Cuckoo
+Rufous-throated Bronze-Cuckoo
+Shining Bronze-Cuckoo
+Shining Bronze-Cuckoo (Solomon Is.)
+Shining Bronze-Cuckoo (New Caledonian)
+Shining Bronze-Cuckoo (Shining)
+Shining Bronze-Cuckoo (Golden)
+White-eared Bronze-Cuckoo
+Little Bronze-Cuckoo
+Little Bronze-Cuckoo (Little)
+Little Bronze-Cuckoo (Gould's)
+Little Bronze-Cuckoo (Banda)
+Little Bronze-Cuckoo (Pied)
+Shining/Little Bronze-Cuckoo
+bronze-cuckoo sp.
+Chrysococcyx sp.
+Pallid Cuckoo
+White-crowned Koel
+Chestnut-breasted Cuckoo
+Fan-tailed Cuckoo
+Banded Bay Cuckoo
+Plaintive Cuckoo
+Gray-bellied Cuckoo
+Plaintive/Gray-bellied Cuckoo
+Moluccan Cuckoo
+Brush Cuckoo
+Brush Cuckoo (Rusty-breasted)
+Brush Cuckoo (Brush)
+Cacomantis sp.
+Dusky Long-tailed Cuckoo
+Olive Long-tailed Cuckoo
+Barred Long-tailed Cuckoo
+Barred Long-tailed Cuckoo (Njobo's)
+Barred Long-tailed Cuckoo (Eastern)
+Cercococcyx sp.
+Fork-tailed Drongo-Cuckoo
+Philippine Drongo-Cuckoo
+Square-tailed Drongo-Cuckoo
+Fork-tailed/Square-tailed Drongo-Cuckoo
+Moluccan Drongo-Cuckoo
+Moustached Hawk-Cuckoo
+Large Hawk-Cuckoo
+Dark Hawk-Cuckoo
+Large/Dark Hawk-Cuckoo
+Common Hawk-Cuckoo
+Large/Common Hawk-Cuckoo
+Northern Hawk-Cuckoo
+Philippine Hawk-Cuckoo
+Hodgson's Hawk-Cuckoo
+Malaysian Hawk-Cuckoo
+hawk-cuckoo sp.
+Black Cuckoo
+Black Cuckoo (Rufous-throated)
+Black Cuckoo (Black)
+Red-chested Cuckoo
+Lesser Cuckoo
+Sulawesi Cuckoo
+Indian Cuckoo
+Lesser/Indian Cuckoo
+African Cuckoo
+Madagascar Cuckoo
+Himalayan Cuckoo
+Sunda Cuckoo
+Common Cuckoo
+African/Common Cuckoo
+Oriental Cuckoo
+Lesser/Oriental Cuckoo
+Himalayan/Oriental Cuckoo
+Common/Oriental Cuckoo
+Cuculus sp.
+cuckoo sp. (Cuculidae sp.)

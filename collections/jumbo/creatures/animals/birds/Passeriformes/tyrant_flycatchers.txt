@@ -1,0 +1,659 @@
+# Originally sourced from Clements Checklist v2022
+Wing-barred Piprites
+Gray-headed Piprites
+Black-capped Piprites
+Cinnamon Manakin-Tyrant
+Kinglet Calyptura
+Cinnamon-crested Spadebill
+Stub-tailed Spadebill
+White-throated Spadebill
+White-throated Spadebill (Western)
+White-throated Spadebill (Eastern)
+Golden-crowned Spadebill
+Yellow-throated Spadebill
+White-crested Spadebill
+Russet-winged Spadebill
+spadebill sp.
+Many-colored Rush Tyrant
+Streak-necked Flycatcher
+Olive-streaked Flycatcher
+Olive-striped Flycatcher
+Streak-necked/Olive-striped Flycatcher
+Ochre-bellied Flycatcher
+McConnell's Flycatcher
+McConnell's Flycatcher (Guianan)
+McConnell's Flycatcher (Inambari)
+Ochre-bellied/McConnell's Flycatcher
+Sierra de Lema Flycatcher
+McConnell's/Sierra de Lema Flycatcher
+Gray-hooded Flycatcher
+Mionectes sp.
+Sepia-capped Flycatcher
+Slaty-capped Flycatcher
+Slaty-capped Flycatcher (transandinus)
+Slaty-capped Flycatcher (superciliaris)
+Slaty-capped Flycatcher (albidiventer)
+Rufous-breasted Flycatcher
+Inca Flycatcher
+Serra do Mar Tyrannulet
+Southern Bristle-Tyrant
+Marble-faced Bristle-Tyrant
+Antioquia Bristle-Tyrant
+Sao Paulo Tyrannulet
+Variegated Bristle-Tyrant
+Venezuelan Bristle-Tyrant
+Spectacled Bristle-Tyrant
+Chapman's Bristle-Tyrant
+Oustalet's Tyrannulet
+Yellow-green Tyrannulet
+Olive-green Tyrannulet
+Mottle-cheeked Tyrannulet
+Bahia Tyrannulet
+Restinga Tyrannulet
+Bay-ringed Tyrannulet
+Alagoas Tyrannulet
+Minas Gerais Tyrannulet
+Rufous-browed Tyrannulet
+Black-fronted Tyrannulet
+Rufous-lored Tyrannulet
+Ecuadorian Tyrannulet
+Cinnamon-faced Tyrannulet
+Phylloscartes sp.
+Bronze-olive Pygmy-Tyrant
+Bronze-olive Pygmy-Tyrant (annectens/berlepschi)
+Bronze-olive Pygmy-Tyrant (pelzelni/peruvianus)
+Hazel-fronted Pygmy-Tyrant
+Rufous-headed Pygmy-Tyrant
+Ringed Antpipit
+Southern Antpipit
+Eared Pygmy-Tyrant
+Maranhao-Piaui Pygmy-Tyrant (undescribed form)
+White-bellied Pygmy-Tyrant
+Black-capped Pygmy-Tyrant
+Short-tailed Pygmy-Tyrant
+Scale-crested Pygmy-Tyrant
+Double-banded Pygmy-Tyrant
+Long-crested Pygmy-Tyrant
+Helmeted Pygmy-Tyrant
+Lophotriccus sp.
+Pale-eyed Pygmy-Tyrant
+Northern Bentbill
+Southern Bentbill
+Snethlage's Tody-Tyrant
+Snethlage's Tody-Tyrant (Igapo)
+Snethlage's Tody-Tyrant (Snethlage's)
+Yungas Tody-Tyrant
+Acre Tody-Tyrant
+Flammulated Pygmy-Tyrant
+Drab-breasted Pygmy-Tyrant
+Brown-breasted Pygmy-Tyrant
+Boat-billed Tody-Tyrant
+White-eyed Tody-Tyrant
+White-bellied Tody-Tyrant
+Eye-ringed Tody-Tyrant
+Johannes's Tody-Tyrant
+Stripe-necked Tody-Tyrant
+Hangnest Tody-Tyrant
+Pearly-vented Tody-Tyrant
+Pelzeln's Tody-Tyrant
+Zimmer's Tody-Tyrant
+Black-throated Tody-Tyrant
+Cinnamon-breasted Tody-Tyrant
+Buff-breasted Tody-Tyrant
+Kaempfer's Tody-Tyrant
+Buff-throated Tody-Tyrant
+Fork-tailed Pygmy-Tyrant
+Hemitriccus sp.
+Rufous-crowned Tody-Flycatcher
+Johnson's Tody-Flycatcher
+White-cheeked Tody-Flycatcher
+Black-and-white Tody-Flycatcher
+Buff-cheeked Tody-Flycatcher
+Ruddy Tody-Flycatcher
+Ochre-faced Tody-Flycatcher
+Smoky-fronted Tody-Flycatcher
+Rusty-fronted Tody-Flycatcher
+Slate-headed Tody-Flycatcher
+Golden-winged Tody-Flycatcher
+Black-backed Tody-Flycatcher
+Poecilotriccus sp.
+Black-chested Tyrant
+Spotted Tody-Flycatcher
+Gray-headed Tody-Flycatcher
+Common Tody-Flycatcher
+Common Tody-Flycatcher (cinereum Group)
+Common Tody-Flycatcher (sclateri)
+Maracaibo Tody-Flycatcher
+Black-headed Tody-Flycatcher
+Painted Tody-Flycatcher
+Yellow-browed Tody-Flycatcher
+Todirostrum sp.
+Brownish Twistwing
+Rufous Twistwing
+Eye-ringed Flatbill
+Olivaceous Flatbill
+Olivaceous Flatbill (Western)
+Olivaceous Flatbill (Eastern)
+Pacific Flatbill
+Fulvous-breasted Flatbill
+flatbill sp.
+Yellow-olive Flycatcher
+Yellow-olive Flycatcher (Gray-headed)
+Yellow-olive Flycatcher (Yellow-olive)
+Yellow-olive Flycatcher (asemus)
+Yellow-olive Flycatcher (confusus)
+Yellow-olive Flycatcher (exortivus)
+Yellow-olive Flycatcher (Trinidad)
+Yellow-olive Flycatcher (Guianan)
+Yellow-olive Flycatcher (Equatorial)
+Yellow-olive Flycatcher (Andes)
+Yellow-olive Flycatcher (Riverine)
+Yellow-olive Flycatcher (Para)
+Yellow-olive Flycatcher (inornatus)
+Yellow-olive Flycatcher (Mato Grosso)
+Yellow-olive Flycatcher (grisescens)
+Yellow-olive Flycatcher (Sooretama)
+Orange-eyed Flycatcher
+Yellow-winged Flycatcher
+Yellow-margined Flycatcher
+Yellow-margined Flycatcher (neglectus)
+Yellow-margined Flycatcher (examinatus)
+Yellow-margined Flycatcher (obscuriceps)
+Yellow-margined Flycatcher (assimilis Group)
+Yellow-margined Flycatcher (Sucunduri)
+Yellow-margined Flycatcher (paraensis)
+Gray-crowned Flycatcher
+Olive-faced Flycatcher
+Ochre-lored Flycatcher
+Olive-faced/Ochre-lored Flycatcher
+Tolmomyias sp.
+Cinnamon Flycatcher
+Cinnamon Flycatcher (Santa Marta)
+Cinnamon Flycatcher (Venezuelan)
+Cinnamon Flycatcher (Andean)
+Cliff Flycatcher
+Cliff Flycatcher (Cliff)
+Cliff Flycatcher (Swallow)
+Ornate Flycatcher
+Ornate Flycatcher (Western)
+Ornate Flycatcher (Eastern)
+Handsome Flycatcher
+Orange-banded Flycatcher
+Ochraceous-breasted Flycatcher
+Yellow-bellied Tyrannulet
+Brown-capped Tyrannulet
+White-lored Tyrannulet
+Northern Beardless-Tyrannulet
+Southern Beardless-Tyrannulet
+Southern Beardless-Tyrannulet (Northern)
+Southern Beardless-Tyrannulet (Southern)
+Suiriri Flycatcher
+White-tailed Tyrannulet
+Buff-banded Tyrannulet
+White-banded Tyrannulet
+White-throated Tyrannulet
+Rufous-winged Tyrannulet
+Sulphur-bellied Tyrannulet
+Black-crested Tit-Tyrant
+Pied-crested Tit-Tyrant
+Ash-breasted Tit-Tyrant
+Yellow-billed Tit-Tyrant
+Tufted Tit-Tyrant
+Juan Fernandez Tit-Tyrant
+Anairetes sp.
+Agile Tit-Tyrant
+Unstreaked Tit-Tyrant
+Tumbes Tyrannulet
+Marañon Tyrannulet
+Tumbes/Marañon Tyrannulet
+Northern Mouse-colored Tyrannulet
+Cocos Tyrannulet
+Southern Mouse-colored Tyrannulet
+Northern/Southern Mouse-colored Tyrannulet
+Nesotriccus sp.
+Yellow Tyrannulet
+Bearded Tachuri
+Gray-backed Tachuri
+Sharp-tailed Tyrant
+Crested Doradito
+Subtropical Doradito
+Dinelli's Doradito
+Warbling Doradito
+Ticking Doradito
+Warbling/Ticking Doradito
+doradito sp.
+Yellow-crowned Tyrannulet
+Forest Elaenia
+Choco Elaenia
+Amazonian Elaenia
+Foothill Elaenia
+Foothill Elaenia (Antioquia)
+Foothill Elaenia (Perija)
+Foothill Elaenia (Foothill)
+Gray-headed Elaenia
+Pacific Elaenia
+Yellow-crowned Elaenia
+Jamaican Elaenia
+Greenish Elaenia
+Greenish Elaenia (West Mexico)
+Greenish Elaenia (Greenish)
+elaenia sp. (genus Myiopagis)
+Plain-crested Elaenia
+Rufous-crowned Elaenia
+Slaty Elaenia
+Mottle-backed Elaenia
+Small-headed Elaenia
+Great Elaenia
+Highland Elaenia
+Yellow-bellied Elaenia
+Small-billed Elaenia
+Brownish Elaenia
+Large Elaenia
+Noronha Elaenia
+Olivaceous Elaenia
+Lesser Elaenia
+Coopmans's Elaenia
+White-crested Elaenia
+White-crested Elaenia (White-crested)
+White-crested Elaenia (Chilean)
+White-crested Elaenia (Peruvian)
+Small-billed/White-crested Elaenia
+Sierran Elaenia
+Mountain Elaenia
+Tepui Elaenia
+Caribbean Elaenia
+Caribbean Elaenia (Caribbean)
+Caribbean Elaenia (Chinchorro)
+Greater Antillean Elaenia
+Greater Antillean Elaenia (Jamaican)
+Greater Antillean Elaenia (Hispaniolan)
+elaenia sp. (genus Elaenia)
+Torrent Tyrannulet
+River Tyrannulet
+Sooty Tyrannulet
+White-crested Tyrannulet
+White-crested Tyrannulet (Sulphur-bellied)
+White-crested Tyrannulet (White-bellied)
+Straneck's Tyrannulet
+White-crested/Straneck's Tyrannulet
+Serpophaga sp.
+White-fronted Tyrannulet
+White-fronted Tyrannulet (Zeledon's)
+White-fronted Tyrannulet (White-fronted)
+Rough-legged Tyrannulet
+Greenish Tyrannulet
+Reiser's Tyrannulet
+Urich's Tyrannulet
+Sclater's Tyrannulet
+Planalto Tyrannulet
+Yungas Tyrannulet
+Sooty-headed Tyrannulet
+Sooty-headed Tyrannulet (griseiceps)
+Sooty-headed Tyrannulet (cristatus)
+Sooty-headed Tyrannulet (caucae)
+Sooty-headed Tyrannulet (pallidiceps)
+Black-capped Tyrannulet
+Ashy-headed Tyrannulet
+Tawny-rumped Tyrannulet
+Plumbeous-crowned Tyrannulet
+Gray-capped Tyrannulet
+Phyllomyias sp.
+Red-billed Tyrannulet
+Mishana Tyrannulet
+Chico's Tyrannulet
+Guianan Tyrannulet
+Guatemalan Tyrannulet
+Mistletoe Tyrannulet
+Guatemalan/Mistletoe Tyrannulet
+Choco Tyrannulet
+Spectacled Tyrannulet
+Golden-faced Tyrannulet
+Golden-faced Tyrannulet (Coopmans's)
+Golden-faced Tyrannulet (Golden-faced)
+Peruvian Tyrannulet
+Peruvian Tyrannulet (Loja)
+Peruvian Tyrannulet (Peruvian)
+Peruvian Tyrannulet (Amazonas)
+Bolivian Tyrannulet
+Venezuelan Tyrannulet
+Slender-footed Tyrannulet
+Zimmerius sp.
+Fulvous-faced Scrub-Tyrant
+Fulvous-crowned Scrub-Tyrant
+Rufous-sided Scrub-Tyrant
+Gray-and-white Tyrannulet
+Lesser Wagtail-Tyrant
+Bahia Wagtail-Tyrant
+Orinoco Wagtail-Tyrant (undescribed form)
+Greater Wagtail-Tyrant
+Greater Wagtail-Tyrant (Greater)
+Greater Wagtail-Tyrant (Caatinga)
+Slender-billed Tyrannulet
+Plain Tyrannulet
+Amazonian Tyrannulet
+Pale-tipped Tyrannulet
+Flavescent Flycatcher
+Orange-crested Flycatcher
+Unadorned Flycatcher
+Roraiman Flycatcher
+Olive-chested Flycatcher
+Bran-colored Flycatcher
+Mouse-gray Flycatcher
+Bran-colored/Mouse-gray Flycatcher
+Rufescent Flycatcher
+Mouse-gray/Rufescent Flycatcher
+Myiophobus sp.
+Euler's Flycatcher
+Euler's Flycatcher (Lawrence's)
+Euler's Flycatcher (Euler's)
+Gray-breasted Flycatcher
+Tawny-chested Flycatcher
+Black-billed Flycatcher
+Belted Flycatcher
+Pileated Flycatcher
+Tufted Flycatcher
+Tufted Flycatcher (Mexican)
+Tufted Flycatcher (Costa Rican)
+Tufted Flycatcher (South American)
+Olive Flycatcher
+Olive-sided Flycatcher
+Ochraceous Pewee
+Greater Pewee
+Greater Pewee (Mexican)
+Greater Pewee (Central American)
+Dark Pewee
+Smoke-colored Pewee
+Jamaican Pewee
+Tumbes Pewee
+White-throated Pewee
+Blackish Pewee
+Southern Tropical Pewee
+Western Wood-Pewee
+Northern Tropical Pewee
+tropical pewee sp.
+Eastern Wood-Pewee
+Western x Eastern Wood-Pewee (hybrid)
+Western/Eastern Wood-Pewee
+Cuban Pewee
+Hispaniolan Pewee
+Lesser Antillean Pewee
+Lesser Antillean Pewee (Lesser Antilles)
+Lesser Antillean Pewee (Puerto Rico)
+Lesser Antillean Pewee (St. Lucia)
+pewee sp. (Contopus sp.)
+Fuscous Flycatcher
+Fuscous Flycatcher (Campina)
+Fuscous Flycatcher (Fuscous)
+Yellow-bellied Flycatcher
+Acadian Flycatcher
+Alder Flycatcher
+Willow Flycatcher
+Willow Flycatcher (Eastern)
+Willow Flycatcher (Northwestern)
+Willow Flycatcher (Southwestern)
+Alder/Willow Flycatcher (Traill's Flycatcher)
+White-throated Flycatcher
+Least Flycatcher
+Hammond's Flycatcher
+Gray Flycatcher
+Dusky Flycatcher
+Hammond's/Dusky Flycatcher
+Gray/Dusky Flycatcher
+Pine Flycatcher
+Pacific-slope Flycatcher
+Cordilleran Flycatcher
+Pacific-slope x Cordilleran Flycatcher (hybrid)
+Pacific-slope/Cordilleran Flycatcher (Western Flycatcher)
+Yellowish Flycatcher
+Buff-breasted Flycatcher
+Black-capped Flycatcher
+Empidonax sp.
+Black Phoebe
+Black Phoebe (Northern)
+Black Phoebe (White-winged)
+Eastern Phoebe
+Black x Eastern Phoebe (hybrid)
+Say's Phoebe
+Black x Say's Phoebe (hybrid)
+phoebe sp.
+Chapada Flycatcher
+Suiriri/Chapada Flycatcher
+Northern Scrub-Flycatcher
+Amazonian Scrub-Flycatcher
+Southern Scrub-Flycatcher
+scrub-flycatcher sp.
+Vermilion Flycatcher
+Vermilion Flycatcher (Northern)
+Vermilion Flycatcher (saturatus)
+Vermilion Flycatcher (obscurus Group)
+Vermilion Flycatcher (Austral)
+Brujo Flycatcher
+Brujo Flycatcher (Galapagos)
+Brujo Flycatcher (San Cristobal)
+Austral Negrito
+Andean Negrito
+Austral/Andean Negrito
+Riverside Tyrant
+Riverside Tyrant (Riverside)
+Riverside Tyrant (Sclater's)
+Rufous-tailed Tyrant
+Amazonian Black-Tyrant
+Caatinga Black-Tyrant
+Crested Black-Tyrant
+Velvety Black-Tyrant
+Jelski's Black-Tyrant
+Plumbeous Black-Tyrant
+Jelski's/Plumbeous Black-Tyrant
+Blue-billed Black-Tyrant
+Cinereous Tyrant
+White-winged Black-Tyrant
+White-winged Black-Tyrant (White-rumped)
+White-winged Black-Tyrant (White-winged)
+Hudson's Black-Tyrant
+White-winged/Hudson's Black-Tyrant
+black-tyrant sp.
+Spectacled Tyrant
+Drab Water Tyrant
+Yellow-browed Tyrant
+Little Ground-Tyrant
+Spot-billed Ground-Tyrant
+Taczanowski's Ground-Tyrant
+Puna Ground-Tyrant
+Cinereous Ground-Tyrant
+White-fronted Ground-Tyrant
+Ochre-naped Ground-Tyrant
+Rufous-naped Ground-Tyrant
+Rufous-naped Ground-Tyrant (Chestnut-naped)
+Rufous-naped Ground-Tyrant (pallidiceps)
+Rufous-naped Ground-Tyrant (Rufous-naped)
+Dark-faced Ground-Tyrant
+Dark-faced Ground-Tyrant (mentalis)
+Dark-faced Ground-Tyrant (maclovianus)
+White-browed Ground-Tyrant
+Plain-capped Ground-Tyrant
+Cinnamon-bellied Ground-Tyrant
+Black-fronted Ground-Tyrant
+ground-tyrant sp.
+Red-rumped Bush-Tyrant
+Rufous-webbed Bush-Tyrant
+Fire-eyed Diucon
+White-rumped Monjita
+White Monjita
+Gray Monjita
+Black-crowned Monjita
+Salinas Monjita
+Rusty-backed Monjita
+Chocolate-vented Tyrant
+Black-billed Shrike-Tyrant
+White-tailed Shrike-Tyrant
+Great Shrike-Tyrant
+Gray-bellied Shrike-Tyrant
+Gray-bellied Shrike-Tyrant (andecola)
+Gray-bellied Shrike-Tyrant (micropterus)
+Lesser Shrike-Tyrant
+shrike-tyrant sp.
+Streak-throated Bush-Tyrant
+Santa Marta Bush-Tyrant
+Smoky Bush-Tyrant
+Rufous-bellied Bush-Tyrant
+Myiotheretes sp.
+White-headed Marsh Tyrant
+Pied Water-Tyrant
+Black-backed Water-Tyrant
+Masked Water-Tyrant
+Shear-tailed Gray Tyrant
+Streamer-tailed Tyrant
+Black-and-white Monjita
+Cock-tailed Tyrant
+Strange-tailed Tyrant
+Crowned Chat-Tyrant
+Crowned Chat-Tyrant (Crowned)
+Crowned Chat-Tyrant (Kalinowski's)
+Jelski's Chat-Tyrant
+Golden-browed Chat-Tyrant
+Yellow-bellied Chat-Tyrant
+Patagonian Tyrant
+Tumbes Chat-Tyrant
+Chestnut-bellied Chat-Tyrant
+Blackish Chat-Tyrant
+Maroon-belted Chat-Tyrant
+Rufous-breasted Chat-Tyrant
+Brown-backed Chat-Tyrant
+Rufous-browed Chat-Tyrant
+d'Orbigny's Chat-Tyrant
+Piura Chat-Tyrant
+White-browed Chat-Tyrant
+chat-tyrant sp.
+Long-tailed Tyrant
+Short-tailed Field Tyrant
+Large-headed Flatbill
+Rufous-tailed Flatbill
+Flammulated Flycatcher
+Dusky-tailed Flatbill
+Ramphotrigon sp.
+Rufous-tailed Attila
+Cinnamon Attila
+Ochraceous Attila
+Citron-bellied Attila
+Dull-capped Attila
+Gray-hooded Attila
+Bright-rumped Attila
+Bright-rumped Attila (Northern)
+Bright-rumped Attila (Southern)
+attila sp.
+Choco Sirystes
+White-rumped Sirystes
+Todd's Sirystes
+Sibilant Sirystes
+sirystes sp.
+Rufous Casiornis
+Ash-throated Casiornis
+Rufous Mourner
+Grayish Mourner
+Pale-bellied Mourner
+Rufous Flycatcher
+Yucatan Flycatcher
+Sad Flycatcher
+Dusky-capped Flycatcher
+Dusky-capped Flycatcher (olivascens)
+Dusky-capped Flycatcher (lawrenceii Group)
+Dusky-capped Flycatcher (tuberculifer/pallidus)
+Dusky-capped Flycatcher (nigriceps/atriceps)
+Swainson's Flycatcher
+Swainson's Flycatcher (phaeonotus)
+Swainson's Flycatcher (swainsoni Group)
+Venezuelan Flycatcher
+Panama Flycatcher
+Venezuelan/Panama Flycatcher
+Short-crested Flycatcher
+Apical Flycatcher
+Sooty-crowned Flycatcher
+Sooty-crowned Flycatcher (phaeocephalus)
+Sooty-crowned Flycatcher (interior)
+Pale-edged Flycatcher
+Ash-throated Flycatcher
+Nutting's Flycatcher
+Nutting's Flycatcher (Nutting's)
+Nutting's Flycatcher (flavidior)
+Ash-throated/Nutting's Flycatcher
+Great Crested Flycatcher
+Brown-crested Flycatcher
+Brown-crested Flycatcher (Arizona)
+Brown-crested Flycatcher (Cooper's)
+Brown-crested Flycatcher (Ometepe)
+Brown-crested Flycatcher (South American)
+Galapagos Flycatcher
+Grenada Flycatcher
+Rufous-tailed Flycatcher
+La Sagra's Flycatcher
+Stolid Flycatcher
+Puerto Rican Flycatcher
+Lesser Antillean Flycatcher
+Myiarchus sp.
+Cattle Tyrant
+Lesser Kiskadee
+Great Kiskadee
+Boat-billed Flycatcher
+Boat-billed Flycatcher (Northern)
+Boat-billed Flycatcher (South American)
+Boat-billed Flycatcher (Tumbes)
+Rusty-margined Flycatcher
+Social Flycatcher
+Social Flycatcher (Vermilion-crowned)
+Social Flycatcher (Social)
+Social Flycatcher (Tumbes)
+Rusty-margined/Social Flycatcher
+Gray-capped Flycatcher
+Dusky-chested Flycatcher
+Gray-capped/Dusky-chested Flycatcher
+White-bearded Flycatcher
+White-ringed Flycatcher
+Yellow-throated Flycatcher
+Three-striped Flycatcher
+Yellow-throated/Three-striped Flycatcher
+Lemon-browed Flycatcher
+Golden-bellied Flycatcher
+Golden-crowned Flycatcher
+Baird's Flycatcher
+Streaked Flycatcher
+Streaked Flycatcher (Northern)
+Streaked Flycatcher (Southern)
+Sulphur-bellied Flycatcher
+Streaked/Sulphur-bellied Flycatcher
+Piratic Flycatcher
+Variegated Flycatcher
+Crowned Slaty Flycatcher
+Sulphury Flycatcher
+Snowy-throated Kingbird
+White-throated Kingbird
+Tropical Kingbird
+White-throated/Tropical Kingbird
+Couch's Kingbird
+Tropical/Couch's Kingbird
+Cassin's Kingbird
+Thick-billed Kingbird
+Western Kingbird
+Couch's x Western Kingbird (hybrid)
+Cassin's/Western Kingbird
+yellow-bellied kingbird sp.
+Eastern Kingbird
+Western x Eastern Kingbird (hybrid)
+Gray Kingbird
+Tropical x Gray Kingbird (hybrid)
+Loggerhead Kingbird
+Loggerhead Kingbird (Loggerhead)
+Loggerhead Kingbird (Puerto Rico)
+Loggerhead Kingbird (Hispaniolan)
+Giant Kingbird
+Scissor-tailed Flycatcher
+Tropical Kingbird x Scissor-tailed Flycatcher (hybrid)
+Couch's Kingbird x Scissor-tailed Flycatcher (hybrid)
+Western Kingbird x Scissor-tailed Flycatcher (hybrid)
+Fork-tailed Flycatcher
+Fork-tailed Flycatcher (savana)
+Fork-tailed Flycatcher (monachus)
+Fork-tailed Flycatcher (sanctaemartae)
+Fork-tailed Flycatcher (circumdatus)
+Tropical Kingbird x Fork-tailed Flycatcher (hybrid)
+Tyrannus sp.
+new world flycatcher sp.

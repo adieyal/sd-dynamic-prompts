@@ -1,0 +1,466 @@
+# Originally sourced from Clements Checklist v2022
+Rock Pigeon
+Rock Pigeon (Wild type)
+Rock Pigeon (Feral Pigeon)
+Hill Pigeon
+Rock/Hill Pigeon
+Snow Pigeon
+Speckled Pigeon
+White-collared Pigeon
+Stock Dove
+Yellow-eyed Pigeon
+Somali Pigeon
+Common Wood-Pigeon
+Common Wood-Pigeon (White-necked)
+Common Wood-Pigeon (Cinnamon-necked)
+Trocaz Pigeon
+Bolle's Pigeon
+Afep Pigeon
+Laurel Pigeon
+Rameron Pigeon
+Cameroon Pigeon
+Maroon Pigeon
+Delegorgue's Pigeon
+Bronze-naped Pigeon
+Sao Tome Pigeon
+Mauritius Wood-Pigeon
+Comoro Pigeon
+Speckled Wood-Pigeon
+White-naped Pigeon
+Ashy Wood-Pigeon
+Nilgiri Wood-Pigeon
+Sri Lanka Wood-Pigeon
+Pale-capped Pigeon
+Silvery Wood-Pigeon
+Andaman Wood-Pigeon
+Japanese Wood-Pigeon
+Ryukyu Pigeon
+Bonin Pigeon
+Metallic Pigeon
+Metallic Pigeon (Metallic)
+Metallic Pigeon (Samoan)
+White-headed Pigeon
+Yellow-legged Pigeon
+Columba sp.
+Lemon Dove
+Lemon Dove (Western)
+Lemon Dove (Principe)
+Lemon Dove (Sao Tome)
+Lemon Dove (Lemon)
+Pale-vented Pigeon
+Scaled Pigeon
+Scaly-naped Pigeon
+Picazuro Pigeon
+Bare-eyed Pigeon
+Spot-winged Pigeon
+Spot-winged Pigeon (albipennis)
+Spot-winged Pigeon (maculosa)
+White-crowned Pigeon
+Red-billed Pigeon
+Plain Pigeon
+Band-tailed Pigeon
+Band-tailed Pigeon (Northern)
+Band-tailed Pigeon (Viosca's)
+Band-tailed Pigeon (White-necked)
+Rock/Band-tailed Pigeon
+Chilean Pigeon
+Ring-tailed Pigeon
+Peruvian Pigeon
+Plumbeous Pigeon
+Ruddy Pigeon
+Ruddy Pigeon (Berlepsch's)
+Ruddy Pigeon (Ruddy)
+Plumbeous/Ruddy Pigeon
+Short-billed Pigeon
+Ruddy/Short-billed Pigeon
+Dusky Pigeon
+Patagioenas sp.
+Passenger Pigeon
+Malagasy Turtle-Dove
+Pink Pigeon
+Mauritius Turtle-Dove
+Rodrigues Turtle-Dove
+European Turtle-Dove
+Dusky Turtle-Dove
+Adamawa Turtle-Dove
+Oriental Turtle-Dove
+Sunda Collared-Dove
+Philippine Collared-Dove
+Eurasian Collared-Dove
+Burmese Collared-Dove
+Eurasian/Burmese Collared-Dove
+European Turtle-Dove x Eurasian Collared-Dove (hybrid)
+African Collared-Dove
+African Collared-Dove (Domestic type or Ringed Turtle-Dove)
+Eurasian x African Collared-Dove (hybrid)
+Eurasian/African Collared-Dove
+White-winged Collared-Dove
+Mourning Collared-Dove
+Red-eyed Dove
+Ring-necked Dove
+Vinaceous Dove
+Red Collared-Dove
+Eurasian/Red Collared-Dove
+Streptopelia sp.
+Spotted Dove
+Spotted Dove (Western)
+Spotted Dove (Eastern)
+Laughing Dove
+Barred Cuckoo-Dove
+Brown Cuckoo-Dove
+Flores Sea Cuckoo-Dove
+Timor Cuckoo-Dove
+Tanimbar Cuckoo-Dove
+Amboyna Cuckoo-Dove
+Sultan's Cuckoo-Dove
+Sultan's Cuckoo-Dove (Sulawesi)
+Sultan's Cuckoo-Dove (Sultan's)
+Amboyna/Sultan's Cuckoo-Dove
+Andaman Cuckoo-Dove
+Philippine Cuckoo-Dove
+Palawan Cuckoo-Dove (undescribed form)
+Ruddy Cuckoo-Dove
+Enggano Cuckoo-Dove
+Barusan Cuckoo-Dove
+Black-billed Cuckoo-Dove
+Mackinlay's Cuckoo-Dove
+Little Cuckoo-Dove
+Macropygia sp.
+Great Cuckoo-Dove
+Pied Cuckoo-Dove
+Crested Cuckoo-Dove
+White-faced Cuckoo-Dove
+Sula Cuckoo-Dove
+Slaty Cuckoo-Dove
+Emerald-spotted Wood-Dove
+Black-billed Wood-Dove
+Blue-spotted Wood-Dove
+Tambourine Dove
+Blue-headed Wood-Dove
+Turtur sp.
+Namaqua Dove
+Asian Emerald Dove
+Pacific Emerald Dove
+Asian x Pacific Emerald Dove (hybrid)
+Asian/Pacific Emerald Dove
+Stephan's Dove
+New Guinea Bronzewing
+New Britain Bronzewing
+Wetar Ground Dove
+Shy Ground Dove
+Santa Cruz Ground Dove
+Thick-billed Ground Dove
+Tanna Ground Dove
+Bronze Ground Dove
+Bronze Ground Dove (Western)
+Bronze Ground Dove (Eastern)
+Palau Ground Dove
+White-bibbed Ground Dove
+Marquesas Ground Dove
+Caroline Islands Ground Dove
+Polynesian Ground Dove
+White-throated Ground Dove
+Norfolk Ground Dove
+Common Bronzewing
+Brush Bronzewing
+Flock Bronzewing
+Crested Pigeon
+Spinifex Pigeon
+Spinifex Pigeon (Rufous-bellied)
+Spinifex Pigeon (White-bellied)
+Squatter Pigeon
+Partridge Pigeon
+Chestnut-quilled Rock-Pigeon
+White-quilled Rock-Pigeon
+Wonga Pigeon
+Diamond Dove
+Zebra Dove
+Peaceful Dove
+Barred Dove
+Bar-shouldered Dove
+Inca Dove
+Common Ground Dove
+Plain-breasted Ground Dove
+Ruddy Ground Dove
+Common/Ruddy Ground Dove
+Ecuadorian Ground Dove
+Scaled Dove
+Picui Ground Dove
+Croaking Ground Dove
+Blue-eyed Ground Dove
+ground dove/Inca Dove
+Blue Ground Dove
+Maroon-chested Ground Dove
+Purple-winged Ground Dove
+Bare-faced Ground Dove
+Bare-eyed Ground Dove
+Black-winged Ground Dove
+Golden-spotted Ground Dove
+Long-tailed Ground Dove
+Blue-headed Quail-Dove
+Purple Quail-Dove
+Sapphire Quail-Dove
+Crested Quail-Dove
+Ruddy Quail-Dove
+Ruddy Quail-Dove (Ruddy)
+Ruddy Quail-Dove (Martinique)
+Violaceous Quail-Dove
+Gray-fronted Quail-Dove
+White-fronted Quail-Dove
+Key West Quail-Dove
+Bridled Quail-Dove
+Olive-backed Quail-Dove
+White-tipped Dove
+White-tipped Dove (White-tipped)
+White-tipped Dove (decolor)
+White-tipped Dove (brasiliensis Group)
+Caribbean Dove
+Gray-chested Dove
+Gray-chested Dove (cerviniventris)
+Gray-chested Dove (rufinucha)
+Gray-chested Dove (cassinii)
+Tolima Dove
+Ochre-bellied Dove
+Gray-headed Dove
+Gray-headed Dove (Gray-headed)
+Gray-headed Dove (Brown-backed)
+Gray-fronted Dove
+Grenada Dove
+Pallid Dove
+Large-tailed Dove
+Leptotila sp.
+Tuxtla Quail-Dove
+Buff-fronted Quail-Dove
+Purplish-backed Quail-Dove
+White-faced Quail-Dove
+White-throated Quail-Dove
+Lined Quail-Dove
+Lined Quail-Dove (linearis)
+Lined Quail-Dove (trinitatis)
+Chiriqui Quail-Dove
+Russet-crowned Quail-Dove
+quail-dove sp.
+West Peruvian Dove
+White-winged Dove
+Zenaida Dove
+Galapagos Dove
+Eared Dove
+Mourning Dove
+Eurasian Collared-Dove x Mourning Dove (hybrid)
+Mourning/Zenaida Dove
+Socorro Dove
+Nicobar Pigeon
+Spotted Green Pigeon
+Dodo
+Rodrigues Solitaire
+Sulawesi Ground Dove
+Cinnamon Ground Dove
+Mindoro Bleeding-heart
+Negros Bleeding-heart
+Sulu Bleeding-heart
+Luzon Bleeding-heart
+Mindanao Bleeding-heart
+Choiseul Pigeon
+Thick-billed Ground-Pigeon
+Pheasant Pigeon
+Pheasant Pigeon (Green-naped)
+Pheasant Pigeon (White-naped)
+Pheasant Pigeon (Gray-naped)
+Pheasant Pigeon (Black-naped)
+Western Crowned-Pigeon
+Sclater's Crowned-Pigeon
+Scheepmaker's Crowned-Pigeon
+Victoria Crowned-Pigeon
+crowned-pigeon sp.
+Tooth-billed Pigeon
+White-eared Brown-Dove
+White-eared Brown-Dove (White-eared)
+White-eared Brown-Dove (Buff-eared)
+White-eared Brown-Dove (Short-billed)
+Amethyst Brown-Dove
+Amethyst Brown-Dove (Amethyst)
+Amethyst Brown-Dove (Gray-breasted)
+Amethyst Brown-Dove (Cebu)
+Mindanao Brown-Dove
+Tawitawi Brown-Dove
+brown-dove sp.
+Little Green-Pigeon
+Pink-necked Green-Pigeon
+Cinnamon-headed Green-Pigeon
+Orange-breasted Green-Pigeon
+Sri Lanka Green-Pigeon
+Gray-fronted Green-Pigeon
+Andaman Green-Pigeon
+Ashy-headed Green-Pigeon
+Philippine Green-Pigeon
+Buru Green-Pigeon
+Thick-billed Green-Pigeon
+Thick-billed Green-Pigeon (Thick-billed)
+Thick-billed Green-Pigeon (Barusan)
+Gray-cheeked Green-Pigeon
+Sumba Green-Pigeon
+Flores Green-Pigeon
+Timor Green-Pigeon
+Large Green-Pigeon
+Yellow-footed Green-Pigeon
+Bruce's Green-Pigeon
+Comoros Green-Pigeon
+Madagascar Green-Pigeon
+Pemba Green-Pigeon
+Sao Tome Green-Pigeon
+Yellow-vented Green-Pigeon
+Pin-tailed Green-Pigeon
+African Green-Pigeon
+African Green-Pigeon (African)
+African Green-Pigeon (Gray-breasted)
+Sumatran Green-Pigeon
+Wedge-tailed Green-Pigeon
+White-bellied Green-Pigeon
+Whistling Green-Pigeon
+Whistling Green-Pigeon (Ryukyu)
+Whistling Green-Pigeon (Taiwan)
+green-pigeon sp.
+Black-backed Fruit-Dove
+Black-banded Fruit-Dove
+Red-naped Fruit-Dove
+Pink-headed Fruit-Dove
+Yellow-breasted Fruit-Dove
+Flame-breasted Fruit-Dove
+Cream-breasted Fruit-Dove
+Red-eared Fruit-Dove
+Red-eared Fruit-Dove (Red-eared)
+Red-eared Fruit-Dove (Lompobattang)
+Jambu Fruit-Dove
+Maroon-chinned Fruit-Dove
+Banggai Fruit-Dove
+Sula Fruit-Dove
+Black-chinned Fruit-Dove
+Scarlet-breasted Fruit-Dove
+Wompoo Fruit-Dove
+Pink-spotted Fruit-Dove
+Ornate Fruit-Dove
+Ornate Fruit-Dove (Western)
+Ornate Fruit-Dove (Eastern)
+Tanna Fruit-Dove
+Orange-fronted Fruit-Dove
+Wallace's Fruit-Dove
+Superb Fruit-Dove
+Superb Fruit-Dove (Western)
+Superb Fruit-Dove (Eastern)
+Many-colored Fruit-Dove
+Purple-capped Fruit-Dove
+Kosrae Fruit-Dove
+Crimson-crowned Fruit-Dove
+Crimson-crowned Fruit-Dove (Tongan)
+Crimson-crowned Fruit-Dove (Samoan)
+Palau Fruit-Dove
+Cook Islands Fruit-Dove
+Mariana Fruit-Dove
+Rose-crowned Fruit-Dove
+Silver-capped Fruit-Dove
+Raiatea Fruit-Dove
+Gray-green Fruit-Dove
+Makatea Fruit-Dove
+Atoll Fruit-Dove
+Red-bellied Fruit-Dove
+Rapa Fruit-Dove
+White-capped Fruit-Dove
+Red-moustached Fruit-Dove
+Henderson Island Fruit-Dove
+Coroneted Fruit-Dove
+Beautiful Fruit-Dove
+Blue-capped Fruit-Dove
+White-breasted Fruit-Dove
+White-breasted Fruit-Dove (Moluccan)
+White-breasted Fruit-Dove (Mountain)
+White-breasted Fruit-Dove (White-bibbed)
+Geelvink Fruit-Dove
+Yellow-bibbed Fruit-Dove
+Claret-breasted Fruit-Dove
+White-headed Fruit-Dove
+Orange-bellied Fruit-Dove
+Knob-billed Fruit-Dove
+Gray-headed Fruit-Dove
+Carunculated Fruit-Dove
+Black-naped Fruit-Dove
+Dwarf Fruit-Dove
+Negros Fruit-Dove
+Orange Dove
+Golden Dove
+Velvet Dove
+Manui Fruit-Dove (undescribed form)
+fruit-dove sp.
+Cloven-feathered Dove
+Mauritius Blue-Pigeon
+Rodrigues Blue-Pigeon
+Madagascar Blue-Pigeon
+Comoro Blue-Pigeon
+Seychelles Blue-Pigeon
+Pink-bellied Imperial-Pigeon
+White-bellied Imperial-Pigeon
+Mindoro Imperial-Pigeon
+Gray-headed Imperial-Pigeon
+Spotted Imperial-Pigeon
+Green Imperial-Pigeon
+Green Imperial-Pigeon (Green)
+Green Imperial-Pigeon (Maroon-naped)
+Green Imperial-Pigeon (Rufous-naped)
+Enggano Imperial-Pigeon
+Nicobar Imperial-Pigeon
+Spectacled Imperial-Pigeon
+Seram Imperial-Pigeon
+Elegant Imperial-Pigeon
+Pacific Imperial-Pigeon
+Red-knobbed Imperial-Pigeon
+Red-knobbed Imperial-Pigeon (Pink-necked)
+Red-knobbed Imperial-Pigeon (Gray-necked)
+Micronesian Imperial-Pigeon
+Polynesian Imperial-Pigeon
+Marquesas Imperial-Pigeon
+Spice Imperial-Pigeon
+Geelvink Imperial-Pigeon
+Purple-tailed Imperial-Pigeon
+Cinnamon-bellied Imperial-Pigeon
+Cinnamon-bellied Imperial-Pigeon (Gray-naped)
+Cinnamon-bellied Imperial-Pigeon (Golden-naped)
+Finsch's Imperial-Pigeon
+Rufescent Imperial-Pigeon
+Rufescent Imperial-Pigeon (Purple-rumped)
+Rufescent Imperial-Pigeon (Green-rumped)
+Island Imperial-Pigeon
+Pink-headed Imperial-Pigeon
+Christmas Island Imperial-Pigeon
+Gray Imperial-Pigeon
+Peale's Imperial-Pigeon
+Chestnut-bellied Imperial-Pigeon
+Baker's Imperial-Pigeon
+New Caledonian Imperial-Pigeon
+Pinon's Imperial-Pigeon
+Pinon's Imperial-Pigeon (Gray-headed)
+Pinon's Imperial-Pigeon (Pink-headed)
+Bismarck Imperial-Pigeon
+Collared Imperial-Pigeon
+Zoe's Imperial-Pigeon
+Malabar Imperial-Pigeon
+Mountain Imperial-Pigeon
+Dark-backed Imperial-Pigeon
+Dark-backed Imperial-Pigeon (Gray-headed)
+Dark-backed Imperial-Pigeon (Pink-headed)
+Dark-backed Imperial-Pigeon (Gray-crowned)
+Timor Imperial-Pigeon
+Pied Imperial-Pigeon
+Yellowish Imperial-Pigeon
+Torresian Imperial-Pigeon
+Silver-tipped Imperial-Pigeon
+imperial-pigeon sp.
+Topknot Pigeon
+New Zealand Pigeon
+New Zealand Pigeon (Norfolk)
+New Zealand Pigeon (New Zealand)
+Chatham Island Pigeon
+Sombre Pigeon
+Papuan Mountain-Pigeon
+Buru Mountain-Pigeon
+Seram Mountain-Pigeon
+Pale Mountain-Pigeon
+pigeon/dove sp.

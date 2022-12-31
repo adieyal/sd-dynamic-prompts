@@ -1,0 +1,162 @@
+# Originally sourced from Clements Checklist v2022
+Black Swift
+Black Swift (borealis)
+Black Swift (costaricensis)
+Black Swift (niger)
+White-chested Swift
+Rothschild's Swift
+Sooty Swift
+White-fronted Swift
+White-chinned Swift
+Spot-fronted Swift
+Great Dusky Swift
+Cypseloides sp.
+Chestnut-collared Swift
+Tepui Swift
+White-collared Swift
+White-naped Swift
+Biscutate Swift
+Streptoprocne sp.
+Philippine Spinetailed Swift
+Papuan Spinetailed Swift
+Madagascar Spinetail
+Sao Tome Spinetail
+White-rumped Needletail
+Mottled Spinetail
+Black Spinetail
+Silver-rumped Needletail
+Sabine's Spinetail
+Cassin's Spinetail
+Bat-like Spinetail
+Gray-rumped Swift
+Gray-rumped Swift (phaeopygos)
+Gray-rumped Swift (occidentalis)
+Gray-rumped Swift (Ash-rumped)
+Gray-rumped Swift (Gray-rumped)
+Band-rumped Swift
+Band-rumped Swift (aetherodroma)
+Band-rumped Swift (spinicaudus)
+Band-rumped Swift (aethalea)
+Costa Rican Swift
+Lesser Antillean Swift
+Pale-rumped Swift
+Chimney Swift
+Vaux's Swift
+Vaux's Swift (Vaux's)
+Vaux's Swift (Yucatan)
+Vaux's Swift (Richmond's)
+Vaux's Swift (aphanes)
+Chimney/Vaux's Swift
+Chapman's Swift
+Ashy-tailed Swift
+Sick's Swift
+Short-tailed Swift
+Short-tailed Swift (Short-tailed)
+Short-tailed Swift (Tumbes)
+Chaetura sp.
+White-throated Needletail
+Silver-backed Needletail
+Brown-backed Needletail
+Purple Needletail
+Hirundapus sp.
+Waterfall Swift
+Pygmy Swiftlet
+Bornean Swiftlet
+Christmas Island Swiftlet
+Cave Swiftlet
+Plume-toed Swiftlet
+Gray-rumped Swiftlet
+Ridgetop Swiftlet
+Gray-rumped/Ridgetop Swiftlet
+Tenggara Swiftlet
+Drab Swiftlet
+Glossy Swiftlet
+Drab/Glossy Swiftlet
+Satin Swiftlet
+white-bellied swiftlet sp.
+Seychelles Swiftlet
+Mascarene Swiftlet
+Indian Swiftlet
+Sulawesi Swiftlet
+Halmahera Swiftlet
+Seram Swiftlet
+Philippine Swiftlet
+Mountain Swiftlet
+White-rumped Swiftlet
+Australian Swiftlet
+Himalayan Swiftlet
+Himalayan Swiftlet (Himalayan)
+Himalayan Swiftlet (Indochinese)
+Volcano Swiftlet
+Whitehead's Swiftlet
+Bare-legged Swiftlet
+Mayr's Swiftlet
+Ameline Swiftlet
+Uniform Swiftlet
+Mossy-nest Swiftlet
+Palau Swiftlet
+Mariana Swiftlet
+Caroline Islands Swiftlet
+Atiu Swiftlet
+Polynesian Swiftlet
+Marquesan Swiftlet
+Black-nest Swiftlet
+White-nest Swiftlet
+Germain's Swiftlet
+White-nest/Germain's Swiftlet (Edible-nest Swiftlet)
+Three-toed Swiftlet
+dark swiftlet sp.
+swiftlet sp.
+Scarce Swift
+Alpine Swift
+Mottled Swift
+Alexander's Swift
+Common Swift
+Plain Swift
+Nyanza Swift
+Pallid Swift
+Common/Pallid Swift
+Plain/Pallid Swift
+African Swift
+African Swift (Bioko)
+African Swift (African)
+Common/African Swift
+Forbes-Watson's Swift
+Bradfield's Swift
+Malagasy Swift
+Pacific Swift
+Salim Ali's Swift
+Blyth's Swift
+Cook's Swift
+Pacific/Cook's Swift
+fork-tailed swift sp.
+Dark-rumped Swift
+Little Swift
+Little Swift (Little)
+Little Swift (Bannerman's)
+Little Swift (Indian)
+House Swift
+Little/House Swift
+Horus Swift
+Horus Swift (Horus)
+Horus Swift (Brown-rumped)
+White-rumped Swift
+Bates's Swift
+Apus sp.
+White-throated Swift
+White-tipped Swift
+Andean Swift
+White-tipped/Andean Swift
+Lesser Swallow-tailed Swift
+Great Swallow-tailed Swift
+Asian Palm Swift
+African Palm Swift
+Malagasy Palm Swift
+Malagasy Palm Swift (Comoro)
+Malagasy Palm Swift (Madagascar)
+Antillean Palm Swift
+Pygmy Palm Swift
+Fork-tailed Palm Swift
+large swift sp.
+small swift sp.
+swift sp.

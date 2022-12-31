@@ -1,0 +1,414 @@
+# Originally sourced from Clements Checklist v2022
+Pearl Kite
+Black-winged Kite
+Black-winged Kite (African)
+Black-winged Kite (Asian)
+Black-shouldered Kite
+White-tailed Kite
+Letter-winged Kite
+Scissor-tailed Kite
+African Harrier-Hawk
+Madagascar Harrier-Hawk
+Palm-nut Vulture
+Madagascar Serpent-Eagle
+Bearded Vulture
+Bearded Vulture (Eurasian)
+Bearded Vulture (African)
+Egyptian Vulture
+Hook-billed Kite
+Hook-billed Kite (Hook-billed)
+Hook-billed Kite (Grenada)
+Cuban Kite
+Gray-headed Kite
+White-collared Kite
+European Honey-buzzard
+Sulawesi Honey-buzzard
+Philippine Honey-buzzard
+Oriental Honey-buzzard
+Oriental Honey-buzzard (Northern)
+Oriental Honey-buzzard (Indomalayan)
+European x Oriental Honey-buzzard (hybrid)
+European/Oriental Honey-buzzard
+Swallow-tailed Kite
+Black-breasted Kite
+Long-tailed Honey-buzzard
+Black Honey-buzzard
+Square-tailed Kite
+African Cuckoo-Hawk
+Madagascar Cuckoo-Hawk
+Jerdon's Baza
+Pacific Baza
+Black Baza
+Red-headed Vulture
+White-headed Vulture
+Cinereous Vulture
+Lappet-faced Vulture
+Hooded Vulture
+White-backed Vulture
+White-rumped Vulture
+Indian Vulture
+Slender-billed Vulture
+Rüppell's Griffon
+White-backed Vulture/Rüppell's Griffon
+Himalayan Griffon
+Eurasian Griffon
+Rüppell's/Eurasian Griffon
+Himalayan/Eurasian Griffon
+Cape Griffon
+White-backed Vulture/Cape Griffon
+Gyps sp.
+old world vulture sp.
+Nicobar Serpent-Eagle
+Sulawesi Serpent-Eagle
+Mountain Serpent-Eagle
+Crested Serpent-Eagle
+Crested Serpent-Eagle (Crested)
+Crested Serpent-Eagle (Andaman)
+Crested Serpent-Eagle (Central Nicobar)
+Crested Serpent-Eagle (Ryukyu)
+Crested Serpent-Eagle (Natuna)
+Crested Serpent-Eagle (Simeulue)
+Crested Serpent-Eagle (Nias)
+Crested Serpent-Eagle (Mentawai)
+Crested Serpent-Eagle (Bawean)
+Philippine Serpent-Eagle
+Andaman Serpent-Eagle
+Philippine Eagle
+Congo Serpent-Eagle
+Bateleur
+Short-toed Snake-Eagle
+Beaudouin's Snake-Eagle
+Black-chested Snake-Eagle
+Brown Snake-Eagle
+Fasciated Snake-Eagle
+Banded Snake-Eagle
+snake-eagle sp.
+Bat Hawk
+New Guinea Eagle
+Crested Eagle
+Harpy Eagle
+Crowned Eagle
+Legge's Hawk-Eagle
+Wallace's Hawk-Eagle
+Mountain Hawk-Eagle
+Mountain Hawk-Eagle (nipalensis)
+Mountain Hawk-Eagle (orientalis)
+Blyth's Hawk-Eagle
+Javan Hawk-Eagle
+Pinsker's Hawk-Eagle
+Sulawesi Hawk-Eagle
+Philippine Hawk-Eagle
+Changeable Hawk-Eagle
+Changeable Hawk-Eagle (Crested)
+Changeable Hawk-Eagle (Changeable)
+Flores Hawk-Eagle
+Nisaetus sp.
+Martial Eagle
+Rufous-bellied Eagle
+Black Hawk-Eagle
+Ornate Hawk-Eagle
+Black-and-white Hawk-Eagle
+Black-and-chestnut Eagle
+Spizaetus sp.
+Long-crested Eagle
+Black Eagle
+Lesser Spotted Eagle
+Indian Spotted Eagle
+Greater Spotted Eagle
+Lesser x Greater Spotted Eagle (hybrid)
+Lesser/Greater Spotted Eagle
+Indian/Greater Spotted Eagle
+Wahlberg's Eagle
+Booted Eagle
+Pygmy Eagle
+Little Eagle
+Ayres's Hawk-Eagle
+Tawny Eagle
+Steppe Eagle
+Tawny/Steppe Eagle
+Spanish Eagle
+Imperial Eagle
+Gurney's Eagle
+Golden Eagle
+Wedge-tailed Eagle
+Cassin's Hawk-Eagle
+Verreaux's Eagle
+Bonelli's Eagle
+African Hawk-Eagle
+Aquila sp.
+Clanga/Aquila sp.
+Lizard Buzzard
+Tiny Hawk
+Semicollared Hawk
+Dark Chanting-Goshawk
+Eastern Chanting-Goshawk
+Pale Chanting-Goshawk
+Gabar Goshawk
+Black-collared Hawk
+Snail Kite
+Slender-billed Kite
+Double-toothed Kite
+Rufous-thighed Kite
+Mississippi Kite
+Plumbeous Kite
+Mississippi/Plumbeous Kite
+Grasshopper Buzzard
+White-eyed Buzzard
+Rufous-winged Buzzard
+Gray-faced Buzzard
+Eurasian Marsh-Harrier
+African Marsh-Harrier
+Eastern Marsh-Harrier
+Eurasian/Eastern Marsh-Harrier
+Papuan Marsh-Harrier
+Eastern/Papuan Marsh-Harrier
+Swamp Harrier
+Reunion Harrier
+Malagasy Harrier
+Long-winged Harrier
+Spotted Harrier
+Black Harrier
+Cinereous Harrier
+Hen Harrier
+Northern Harrier
+Hen/Northern Harrier
+Pallid Harrier
+Hen x Pallid Harrier (hybrid)
+Pied Harrier
+Montagu's Harrier
+Hen/Montagu's Harrier
+Pallid/Montagu's Harrier
+harrier sp.
+Gray-bellied Hawk
+Crested Goshawk
+Sulawesi Goshawk
+African Goshawk
+African Goshawk (Banded)
+African Goshawk (Red-chested)
+African Goshawk (Bioko)
+African Goshawk (Ethiopian)
+African Goshawk (Eastern)
+African Goshawk (Pemba)
+African Goshawk (Southern)
+Chestnut-flanked Sparrowhawk
+Shikra
+Shikra (African)
+Shikra (Asian)
+Nicobar Sparrowhawk
+Levant Sparrowhawk
+Chinese Sparrowhawk
+Frances's Sparrowhawk
+Spot-tailed Goshawk
+Variable Goshawk
+Variable Goshawk (Lesser Sundas)
+Variable Goshawk (Variable)
+Gray Goshawk
+Brown Goshawk
+Variable/Brown Goshawk
+Black-mantled Goshawk
+Pied Goshawk
+New Caledonia Goshawk
+Fiji Goshawk
+Moluccan Goshawk
+Slaty-mantled Goshawk
+Imitator Sparrowhawk
+Gray-headed Goshawk
+New Britain Goshawk
+Red-thighed Sparrowhawk
+Little Sparrowhawk
+Japanese Sparrowhawk
+Small Sparrowhawk
+Besra
+Japanese Sparrowhawk/Besra
+Crested Goshawk/Besra
+Rufous-necked Sparrowhawk
+Collared Sparrowhawk
+Brown Goshawk/Collared Sparrowhawk
+New Britain Sparrowhawk
+Vinous-breasted Sparrowhawk
+Madagascar Sparrowhawk
+Ovambo Sparrowhawk
+Eurasian Sparrowhawk
+Levant/Eurasian Sparrowhawk
+Rufous-breasted Sparrowhawk
+Rufous-breasted Sparrowhawk (Ethiopian)
+Rufous-breasted Sparrowhawk (Rufous-breasted)
+Sharp-shinned Hawk
+Sharp-shinned Hawk (Caribbean)
+Sharp-shinned Hawk (Northern)
+Sharp-shinned Hawk (Madrean)
+Sharp-shinned Hawk (White-breasted)
+Sharp-shinned Hawk (Plain-breasted)
+Sharp-shinned Hawk (Rufous-thighed)
+Cooper's Hawk
+Sharp-shinned/Cooper's Hawk
+Gundlach's Hawk
+Bicolored Hawk
+Bicolored Hawk (Bicolored)
+Bicolored Hawk (Spotted)
+Chilean Hawk
+Bicolored/Chilean Hawk
+Black Goshawk
+Henst's Goshawk
+Northern Goshawk
+Northern Goshawk (Eurasian)
+Northern Goshawk (American)
+Cooper's Hawk x Northern Goshawk (hybrid)
+Eurasian Sparrowhawk/Northern Goshawk
+Cooper's Hawk/Northern Goshawk
+Meyer's Goshawk
+Accipiter sp.
+Chestnut-shouldered Goshawk
+Red Goshawk
+Doria's Goshawk
+Long-tailed Hawk
+Red Kite
+Red Kite (Red)
+Red Kite (Cape Verde)
+Black Kite
+Black Kite (Black)
+Black Kite (Black-eared)
+Black Kite (Yellow-billed)
+Red/Black Kite
+Whistling Kite
+Brahminy Kite
+Black/Brahminy Kite
+Bald Eagle
+Golden/Bald Eagle
+White-tailed Eagle
+Pallas's Fish-Eagle
+Steller's Sea-Eagle
+Bald Eagle x Steller's Sea-Eagle (hybrid)
+White-bellied Sea-Eagle
+Sanford's Sea-Eagle
+African Fish-Eagle
+Madagascar Fish-Eagle
+Lesser Fish-Eagle
+Gray-headed Fish-Eagle
+Lesser/Gray-headed Fish-Eagle
+Haliaeetus sp.
+Crane Hawk
+Crane Hawk (Blackish)
+Crane Hawk (Gray)
+Crane Hawk (Banded)
+Plumbeous Hawk
+Slate-colored Hawk
+Common Black Hawk
+Common Black Hawk (Common)
+Common Black Hawk (Mangrove)
+Cuban Black Hawk
+Rufous Crab Hawk
+Savanna Hawk
+White-necked Hawk
+Great Black Hawk
+Great Black Hawk (Northern)
+Great Black Hawk (Southern)
+Common/Great Black Hawk
+Solitary Eagle
+Chaco Eagle
+Buteogallus sp.
+Barred Hawk
+Roadside Hawk
+Roadside Hawk (Cozumel I.)
+Roadside Hawk (Northern)
+Roadside Hawk (Southern)
+Harris's Hawk
+Harris's Hawk (Harris's)
+Harris's Hawk (Bay-winged)
+White-rumped Hawk
+White-tailed Hawk
+Variable Hawk
+Variable Hawk (Puna)
+Variable Hawk (Red-backed)
+Variable Hawk (Variable)
+Variable Hawk (Juan Fernandez)
+Black-chested Buzzard-Eagle
+Geranoaetus sp.
+Mantled Hawk
+White Hawk
+White Hawk (Snowy)
+White Hawk (White-shouldered)
+White Hawk (Black-winged)
+White Hawk (Black-tailed)
+Gray-backed Hawk
+Semiplumbeous Hawk
+Black-faced Hawk
+White-browed Hawk
+Bermuda Hawk
+Gray Hawk
+Gray-lined Hawk
+Gray/Gray-lined Hawk
+Red-shouldered Hawk
+Red-shouldered Hawk (lineatus Group)
+Red-shouldered Hawk (extimus)
+Red-shouldered Hawk (elegans)
+Common Black x Red-shouldered Hawk (hybrid)
+Ridgway's Hawk
+Broad-winged Hawk
+Broad-winged Hawk (Northern)
+Broad-winged Hawk (Caribbean)
+Red-shouldered x Broad-winged Hawk (hybrid)
+Red-shouldered/Broad-winged Hawk
+Hawaiian Hawk
+Short-tailed Hawk
+White-throated Hawk
+Swainson's Hawk
+Galapagos Hawk
+Zone-tailed Hawk
+Rufous-tailed Hawk
+Red-tailed Hawk
+Red-tailed Hawk (calurus/alascensis)
+Red-tailed Hawk (borealis)
+Red-tailed Hawk (abieticola)
+Red-tailed Hawk (calurus/abieticola)
+Red-tailed Hawk (Harlan's)
+Red-tailed Hawk (Krider's)
+Red-tailed Hawk (fuertesi)
+Red-tailed Hawk (kemsiesi/hadropus)
+Red-tailed Hawk (costaricensis)
+Red-tailed Hawk (fumosus)
+Red-tailed Hawk (socorroensis)
+Red-tailed Hawk (umbrinus)
+Red-tailed Hawk (jamaicensis)
+Red-tailed Hawk (solitudinis)
+Red-shouldered x Red-tailed Hawk (hybrid)
+Rough-legged Hawk
+Swainson's x Rough-legged Hawk (hybrid)
+Red-tailed x Rough-legged Hawk (hybrid)
+Ferruginous Hawk
+Red-tailed x Ferruginous Hawk (hybrid)
+Common Buzzard
+Common Buzzard (Western)
+Common Buzzard (Corsican)
+Common Buzzard (Azores)
+Common Buzzard (Canary Is.)
+Common Buzzard (Cape Verde)
+Common Buzzard (Steppe)
+Himalayan Buzzard
+Common/Himalayan Buzzard
+Eastern Buzzard
+Common/Himalayan/Eastern Buzzard
+Himalayan/Eastern Buzzard
+Mountain Buzzard
+Forest Buzzard
+Elgin Buzzard (undescribed form)
+Madagascar Buzzard
+Socotra Buzzard
+Long-legged Buzzard
+Long-legged Buzzard (Northern)
+Long-legged Buzzard (Atlas)
+Common x Long-legged Buzzard (hybrid)
+Common/Long-legged Buzzard
+Upland Buzzard
+Long-legged x Upland Buzzard (hybrid)
+Long-legged/Upland Buzzard
+Red-necked Buzzard
+Augur Buzzard
+Augur Buzzard (Augur)
+Augur Buzzard (Archer's)
+Jackal Buzzard
+Buteo sp.
+Geranoaetus/Buteo sp.
+Buteo/eagle sp.
+hawk sp.
+eagle sp.

@@ -1,0 +1,433 @@
+# Originally sourced from Clements Checklist v2022
+Spotted Whistling-Duck
+Plumed Whistling-Duck
+White-faced Whistling-Duck
+Spotted x White-faced Whistling-Duck (hybrid)
+Black-bellied Whistling-Duck
+Black-bellied Whistling-Duck (fulgens)
+Black-bellied Whistling-Duck (autumnalis)
+West Indian Whistling-Duck
+Black-bellied x West Indian Whistling-Duck (hybrid)
+Fulvous Whistling-Duck
+White-faced x Fulvous Whistling-Duck (hybrid)
+Black-bellied x Fulvous Whistling-Duck (hybrid)
+Wandering Whistling-Duck
+Plumed x Wandering Whistling-Duck (hybrid)
+Lesser Whistling-Duck
+Fulvous/Lesser Whistling-Duck
+Wandering x Lesser Whistling-Duck (hybrid)
+whistling-duck sp.
+White-backed Duck
+Bar-headed Goose
+Emperor Goose
+Snow Goose
+Bar-headed x Snow Goose (hybrid)
+Ross's Goose
+Snow x Ross's Goose (hybrid)
+Snow/Ross's Goose
+Graylag Goose
+Graylag Goose (European)
+Graylag Goose (Siberian)
+Graylag Goose (Domestic type)
+Bar-headed x Graylag Goose (hybrid)
+Swan Goose
+Swan Goose (Domestic type)
+Graylag x Swan Goose (hybrid)
+Greater White-fronted Goose
+Greater White-fronted Goose (Greenland)
+Greater White-fronted Goose (Eurasian)
+Greater White-fronted Goose (Western)
+Greater White-fronted Goose (Tule)
+Bar-headed x Greater White-fronted Goose (hybrid)
+Emperor x Greater White-fronted Goose (hybrid)
+Snow x Greater White-fronted Goose (hybrid)
+Ross's x Greater White-fronted Goose (hybrid)
+Lesser White-fronted Goose
+Greater/Lesser White-fronted Goose
+Taiga Bean-Goose
+Tundra Bean-Goose
+Taiga/Tundra Bean-Goose
+Pink-footed Goose
+Domestic goose sp. (Domestic type)
+Anser sp.
+Brant
+Brant (Dark-bellied)
+Brant (Atlantic)
+Brant (Black)
+Brant (Gray-bellied)
+Brant (Dark-bellied x Black)
+Brant (Atlantic x Black)
+Snow Goose x Brant (hybrid)
+Barnacle Goose
+Bar-headed x Barnacle Goose (hybrid)
+Emperor x Barnacle Goose (hybrid)
+Snow x Barnacle Goose (hybrid)
+Ross's x Barnacle Goose (hybrid)
+Graylag x Barnacle Goose (hybrid)
+Greater White-fronted x Barnacle Goose (hybrid)
+Lesser White-fronted x Barnacle Goose (hybrid)
+Pink-footed x Barnacle Goose (hybrid)
+Cackling Goose
+Cackling Goose (Aleutian)
+Cackling Goose (Richardson's)
+Cackling Goose (minima)
+Cackling Goose (Taverner's)
+Emperor x Cackling Goose (hybrid)
+Snow x Cackling Goose (hybrid)
+Ross's x Cackling Goose (hybrid)
+Brant x Cackling Goose (hybrid)
+Greater White-fronted x Cackling Goose (hybrid)
+Barnacle x Cackling Goose (hybrid)
+Canada Goose
+Canada Goose (moffitti/maxima)
+Canada Goose (occidentalis/fulva)
+Canada Goose (canadensis Group)
+Bar-headed x Canada Goose (hybrid)
+Swan Goose x Canada Goose (hybrid)
+Pink-footed x Canada Goose (hybrid)
+Greater White-fronted x Canada Goose (hybrid)
+Graylag x Canada Goose (hybrid)
+Domestic goose sp. x Canada Goose (hybrid)
+Snow x Canada Goose (hybrid)
+Ross's x Canada Goose (hybrid)
+Barnacle x Canada Goose (hybrid)
+Cackling/Canada Goose
+Snow/Ross's x Cackling/Canada Goose (hybrid)
+Hawaiian Goose
+Red-breasted Goose
+Greater White-fronted x Red-breasted Goose (hybrid)
+Brant x Red-breasted Goose (hybrid)
+Barnacle x Red-breasted Goose (hybrid)
+Branta sp.
+goose sp.
+Cape Barren Goose
+Freckled Duck
+Blue-winged Goose
+Mute Swan
+Graylag Goose x Mute Swan (hybrid)
+Black Swan
+Mute x Black Swan (hybrid)
+Black-necked Swan
+Trumpeter Swan
+Mute x Trumpeter Swan (hybrid)
+Tundra Swan
+Tundra Swan (Whistling)
+Tundra Swan (Bewick's)
+Tundra Swan (Whistling x Bewick's)
+Trumpeter x Tundra Swan (hybrid)
+Trumpeter/Tundra Swan
+Whooper Swan
+Mute x Whooper Swan (hybrid)
+Trumpeter x Whooper Swan (hybrid)
+Tundra/Whooper Swan
+swan sp.
+Coscoroba Swan
+Knob-billed Duck
+Comb Duck
+Hartlaub's Duck
+Orinoco Goose
+Andean Goose
+Upland Goose
+Upland Goose (White-breasted)
+Upland Goose (Bar-breasted)
+Kelp Goose
+Ashy-headed Goose
+Ruddy-headed Goose
+Chloephaga sp.
+Radjah Shelduck
+Egyptian Goose
+Mauritius Shelduck
+Reunion Shelduck
+Ruddy Shelduck
+Egyptian Goose x Ruddy Shelduck (hybrid)
+South African Shelduck
+Australian Shelduck
+Paradise Shelduck
+Common Shelduck
+Ruddy x Common Shelduck (hybrid)
+Crested Shelduck
+Spur-winged Goose
+Spur-winged Goose (Northern)
+Spur-winged Goose (Southern)
+Flying Steamer-Duck
+Flightless Steamer-Duck
+Flightless Steamer-Duck (Chiloe form)
+Falkland Steamer-Duck
+White-headed Steamer-Duck
+steamer-duck sp.
+Crested Duck
+Spectacled Duck
+Muscovy Duck
+Muscovy Duck (Domestic type)
+Green Pygmy-Goose
+Cotton Pygmy-Goose
+African Pygmy-Goose
+Ringed Teal
+Wood Duck
+Common Shelduck x Wood Duck (hybrid)
+Mandarin Duck
+Wood x Mandarin Duck (hybrid)
+Maned Duck
+Finsch's Duck
+Brazilian Teal
+Blue Duck
+Torrent Duck
+Salvadori's Teal
+Baikal Teal
+Garganey
+Blue-billed Teal
+Silver Teal
+Puna Teal
+Blue-winged Teal
+Cinnamon Teal
+Blue-winged x Cinnamon Teal (hybrid)
+Blue-winged/Cinnamon Teal
+Red Shoveler
+Cape Shoveler
+Australasian Shoveler
+Northern Shoveler
+Garganey x Northern Shoveler (hybrid)
+Blue-winged Teal x Northern Shoveler (hybrid)
+Cinnamon Teal x Northern Shoveler (hybrid)
+Gadwall
+Gadwall (Common)
+Gadwall (Coues's)
+Northern Shoveler x Gadwall (hybrid)
+Falcated Duck
+Baikal Teal x Falcated Duck (hybrid)
+Gadwall x Falcated Duck (hybrid)
+Eurasian Wigeon
+Gadwall x Eurasian Wigeon (hybrid)
+American Wigeon
+Wood Duck x American Wigeon (hybrid)
+Blue-winged Teal x American Wigeon (hybrid)
+Northern Shoveler x American Wigeon (hybrid)
+Gadwall x American Wigeon (hybrid)
+Eurasian x American Wigeon (hybrid)
+Eurasian/American Wigeon
+Chiloe Wigeon
+Eurasian x Chiloe Wigeon (hybrid)
+Amsterdam Duck
+African Black Duck
+Yellow-billed Duck
+Meller's Duck
+Pacific Black Duck
+Laysan Duck
+Hawaiian Duck
+Philippine Duck
+Indian Spot-billed Duck
+Eastern Spot-billed Duck
+Indian/Eastern Spot-billed Duck
+Mallard
+Mallard (Domestic type)
+Muscovy Duck x Mallard (hybrid)
+Wood Duck x Mallard (hybrid)
+Northern Shoveler x Mallard (hybrid)
+Gadwall x Mallard (hybrid)
+Eurasian Wigeon x Mallard (hybrid)
+American Wigeon x Mallard (hybrid)
+Yellow-billed Duck x Mallard (hybrid)
+Mallard x Pacific Black Duck (hybrid)
+Mallard x Hawaiian Duck (hybrid)
+Mallard x Indian Spot-billed Duck (hybrid)
+Mallard x Eastern Spot-billed Duck (hybrid)
+Mallard/Pacific Black Duck
+Mallard/Hawaiian Duck
+Mallard/Indian Spot-billed Duck
+Mallard/Eastern Spot-billed Duck
+Mexican Duck
+Mallard x Mexican Duck (hybrid)
+Mallard/Mexican Duck
+American Black Duck
+American Wigeon x American Black Duck (hybrid)
+Mallard x American Black Duck (hybrid)
+Mallard/American Black Duck
+Mottled Duck
+Mottled Duck (Florida)
+Mottled Duck (Gulf Coast)
+Mallard x Mottled Duck (hybrid)
+Mallard/Mottled Duck
+Mallard x Mexican/Mottled Duck (hybrid)
+Mexican x Mottled Duck (hybrid)
+Mexican/Mottled Duck
+American Black/Mottled Duck
+Cape Teal
+White-cheeked Pintail
+White-cheeked Pintail (White-cheeked)
+White-cheeked Pintail (Galapagos)
+Mallard x White-cheeked Pintail (hybrid)
+Red-billed Duck
+Northern Pintail
+Baikal Teal x Northern Pintail (hybrid)
+Gadwall x Northern Pintail (hybrid)
+Eurasian Wigeon x Northern Pintail (hybrid)
+American Wigeon x Northern Pintail (hybrid)
+Mallard x Northern Pintail (hybrid)
+American Black Duck x Northern Pintail (hybrid)
+Eaton's Pintail
+Yellow-billed Pintail
+Yellow-billed Pintail (South Georgia)
+Yellow-billed Pintail (South American)
+Green-winged Teal
+Green-winged Teal (Eurasian)
+Green-winged Teal (American)
+Green-winged Teal (Eurasian x American)
+Baikal x Green-winged Teal (hybrid)
+Garganey x Green-winged Teal (hybrid)
+Garganey/Green-winged Teal
+Blue-winged x Green-winged Teal (hybrid)
+Cinnamon x Green-winged Teal (hybrid)
+Gadwall x Green-winged Teal (hybrid)
+Eurasian Wigeon x Green-winged Teal (hybrid)
+American Wigeon x Green-winged Teal (hybrid)
+Mallard x Green-winged Teal (hybrid)
+Northern Pintail x Green-winged Teal (hybrid)
+Andean Teal
+Andean Teal (Merida)
+Andean Teal (Andean)
+Yellow-billed Teal
+Yellow-billed Teal (flavirostris)
+Yellow-billed Teal (oxyptera)
+Yellow-billed Pintail/Yellow-billed Teal
+Andean/Yellow-billed Teal
+Mauritius Duck
+Andaman Teal
+Sunda Teal
+Gray Teal
+Pacific Black Duck x Gray Teal (hybrid)
+Chestnut Teal
+Pacific Black Duck x Chestnut Teal (hybrid)
+Gray x Chestnut Teal (hybrid)
+Gray/Chestnut Teal
+Bernier's Teal
+Auckland Islands Teal
+Campbell Islands Teal
+Brown Teal
+Mallard x Brown Teal (hybrid)
+Anas sp.
+teal sp.
+dabbling duck sp.
+Pink-eared Duck
+Marbled Teal
+Pink-headed Duck
+White-winged Duck
+Red-crested Pochard
+Mallard x Red-crested Pochard (hybrid)
+Southern Pochard
+Rosy-billed Pochard
+Canvasback
+Redhead
+Mallard x Redhead (hybrid)
+Canvasback x Redhead (hybrid)
+Common Pochard
+Mallard x Common Pochard (hybrid)
+Red-crested x Common Pochard (hybrid)
+Ring-necked Duck
+Mallard x Ring-necked Duck (hybrid)
+Canvasback x Ring-necked Duck (hybrid)
+Redhead x Ring-necked Duck (hybrid)
+Ferruginous Duck
+Red-crested Pochard x Ferruginous Duck (hybrid)
+Common Pochard x Ferruginous Duck (hybrid)
+Madagascar Pochard
+Baer's Pochard
+Ferruginous Duck x Baer's Pochard (hybrid)
+Ferruginous Duck/Baer's Pochard
+Hardhead
+Gray Teal x Hardhead (hybrid)
+Tufted Duck
+Mallard x Tufted Duck (hybrid)
+Red-crested Pochard x Tufted Duck (hybrid)
+Common Pochard x Tufted Duck (hybrid)
+Ring-necked x Tufted Duck (hybrid)
+Ferruginous x Tufted Duck (hybrid)
+New Zealand Scaup
+Greater Scaup
+Redhead x Greater Scaup (hybrid)
+Ring-necked Duck x Greater Scaup (hybrid)
+Tufted Duck x Greater Scaup (hybrid)
+Lesser Scaup
+Redhead x Lesser Scaup (hybrid)
+Ring-necked Duck x Lesser Scaup (hybrid)
+Tufted Duck x Lesser Scaup (hybrid)
+Greater/Lesser Scaup
+Canvasback x scaup sp. (hybrid)
+Redhead x scaup sp. (hybrid)
+Ring-necked Duck x scaup sp. (hybrid)
+Tufted Duck x scaup sp. (hybrid)
+Aythya sp.
+Steller's Eider
+Labrador Duck
+Spectacled Eider
+King Eider
+Spectacled x King Eider (hybrid)
+Common Eider
+Common Eider (Eurasian)
+Common Eider (Faeroe Is.)
+Common Eider (Pacific)
+Common Eider (Dresser's)
+Common Eider (Northern)
+Common Eider (Hudson Bay)
+Mallard x Common Eider (hybrid)
+King x Common Eider (hybrid)
+King/Common Eider
+eider sp.
+Harlequin Duck
+Surf Scoter
+Velvet Scoter
+White-winged Scoter
+Stejneger's Scoter
+Surf x White-winged Scoter (hybrid)
+Velvet/White-winged/Stejneger's Scoter
+White-winged/Stejneger's Scoter
+Common Scoter
+Black Scoter
+Surf/Black Scoter
+Common/Black Scoter
+scoter sp.
+Long-tailed Duck
+Bufflehead
+Common Goldeneye
+Bufflehead x Common Goldeneye (hybrid)
+Bufflehead x goldeneye sp. (hybrid)
+Barrow's Goldeneye
+Common x Barrow's Goldeneye (hybrid)
+Common/Barrow's Goldeneye
+Smew
+Common Goldeneye x Smew (hybrid)
+Hooded Merganser
+Wood Duck x Hooded Merganser (hybrid)
+Bufflehead x Hooded Merganser (hybrid)
+Common Goldeneye x Hooded Merganser (hybrid)
+Barrow's Goldeneye x Hooded Merganser (hybrid)
+goldeneye sp. x Hooded Merganser (hybrid)
+Smew x Hooded Merganser (hybrid)
+Auckland Islands Merganser
+Common Merganser
+Common Merganser (Eurasian)
+Common Merganser (North American)
+Common Eider x Common Merganser (hybrid)
+Hooded x Common Merganser (hybrid)
+Brazilian Merganser
+Red-breasted Merganser
+Ring-necked Duck x Red-breasted Merganser (hybrid)
+Common x Red-breasted Merganser (hybrid)
+Common/Red-breasted Merganser
+Scaly-sided Merganser
+merganser sp.
+Black-headed Duck
+Masked Duck
+Ruddy Duck
+Andean Duck
+Andean Duck (andina)
+Andean Duck (ferruginea)
+Masked/Ruddy Duck
+White-headed Duck
+Ruddy x White-headed Duck (hybrid)
+Maccoa Duck
+Lake Duck
+Andean/Lake Duck
+Blue-billed Duck
+Musk Duck
+duck sp.
+waterfowl sp.

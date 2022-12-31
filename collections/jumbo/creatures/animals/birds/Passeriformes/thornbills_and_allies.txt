@@ -1,0 +1,78 @@
+# Originally sourced from Clements Checklist v2022
+Goldenface
+Pilotbird
+Rockwarbler
+Fernwren
+Rusty Mouse-Warbler
+Bicolored Mouse-Warbler
+Mountain Mouse-Warbler
+mouse-warbler sp.
+Yellow-throated Scrubwren
+Spotted Scrubwren
+White-browed Scrubwren
+White-browed Scrubwren (Buff-breasted)
+White-browed Scrubwren (White-browed)
+Spotted/White-browed Scrubwren
+Tasmanian Scrubwren
+Atherton Scrubwren
+Tropical Scrubwren
+Large Scrubwren
+Large-billed Scrubwren
+Vogelkop Scrubwren
+Buff-faced Scrubwren
+Papuan Scrubwren
+Gray-green Scrubwren
+Pale-billed Scrubwren
+scrubwren sp.
+Scrubtit
+Redthroat
+Speckled Warbler
+Rufous Fieldwren
+Western Fieldwren
+Rufous/Western Fieldwren
+Striated Fieldwren
+Chestnut-rumped Heathwren
+Shy Heathwren
+Papuan Thornbill
+Buff-rumped Thornbill
+Western Thornbill
+Slender-billed Thornbill
+Mountain Thornbill
+Brown Thornbill
+Tasmanian Thornbill
+Brown/Tasmanian Thornbill
+Inland Thornbill
+Yellow-rumped Thornbill
+Chestnut-rumped Thornbill
+Slaty-backed Thornbill
+Yellow Thornbill
+Gray Thornbill
+Striated Thornbill
+thornbill sp.
+Weebill
+Green-backed Gerygone
+Fairy Gerygone
+Fairy Gerygone (Black-throated)
+Fairy Gerygone (Fairy)
+Biak Gerygone
+White-throated Gerygone
+Yellow-bellied Gerygone
+Large-billed Gerygone
+Dusky Gerygone
+Brown Gerygone
+Golden-bellied Gerygone
+Plain Gerygone
+Rufous-sided Gerygone
+Brown-breasted Gerygone
+Western Gerygone
+Mangrove Gerygone
+Norfolk Island Gerygone
+Lord Howe Gerygone
+Gray Gerygone
+Chatham Island Gerygone
+Rennell Gerygone
+Fan-tailed Gerygone
+gerygone sp.
+Southern Whiteface
+Chestnut-breasted Whiteface
+Banded Whiteface

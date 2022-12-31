@@ -1,0 +1,234 @@
+# Originally sourced from Clements Checklist v2022
+Swallow-tailed Gull
+Black-legged Kittiwake
+Black-legged Kittiwake (tridactyla)
+Black-legged Kittiwake (pollicaris)
+Red-legged Kittiwake
+Black-legged/Red-legged Kittiwake
+Ivory Gull
+Sabine's Gull
+Saunders's Gull
+Slender-billed Gull
+Bonaparte's Gull
+Andean Gull
+Brown-hooded Gull
+Brown-hooded Gull (White-winged)
+Brown-hooded Gull (Dark-winged)
+Black-billed Gull
+Silver Gull
+Silver Gull (Silver)
+Silver Gull (Red-billed)
+Black-billed/Silver Gull
+Gray-hooded Gull
+Brown-hooded/Gray-hooded Gull
+Hartlaub's Gull
+Gray-hooded x Hartlaub's Gull (hybrid)
+Black-headed Gull
+Slender-billed/Black-headed Gull
+Slender-billed x Black-headed Gull (hybrid)
+Brown-headed Gull
+Slender-billed x Brown-headed Gull (hybrid)
+Black-headed/Brown-headed Gull
+Little Gull
+Ross's Gull
+Dolphin Gull
+Gray Gull
+Laughing Gull
+Gray-hooded x Laughing Gull (hybrid)
+Franklin's Gull
+Bonaparte's x Franklin's Gull (hybrid)
+Laughing/Franklin's Gull
+Lava Gull
+Mediterranean Gull
+Black-headed x Mediterranean Gull (hybrid)
+Black-headed/Mediterranean Gull
+Relict Gull
+White-eyed Gull
+Sooty Gull
+Pallas's Gull
+Audouin's Gull
+Belcher's Gull
+Olrog's Gull
+Black-tailed Gull
+Pacific Gull
+Heermann's Gull
+Common Gull
+Common Gull (European)
+Common Gull (Russian)
+Common Gull (Kamchatka)
+Black-headed x Common Gull (hybrid)
+Mediterranean x Common Gull (hybrid)
+Short-billed Gull
+Common/Short-billed Gull
+Ring-billed Gull
+Black-headed x Ring-billed Gull (hybrid)
+Laughing x Ring-billed Gull (hybrid)
+Franklin's x Ring-billed Gull (hybrid)
+Common x Ring-billed Gull (hybrid)
+Western Gull
+Yellow-footed Gull
+Western/Yellow-footed Gull
+California Gull
+California Gull (californicus)
+California Gull (albertaensis)
+Herring Gull
+Herring Gull (American)
+Herring Gull (Vega)
+Herring Gull (Mongolian)
+Herring Gull (European)
+Ring-billed x Herring Gull (hybrid)
+California x Herring Gull (hybrid)
+Yellow-legged Gull
+Yellow-legged Gull (atlantis)
+Yellow-legged Gull (michahellis)
+Herring/Yellow-legged Gull
+Caspian Gull
+Herring x Caspian Gull (hybrid)
+Yellow-legged x Caspian Gull (hybrid)
+Herring/Yellow-legged/Caspian Gull
+Yellow-legged/Caspian Gull
+Armenian Gull
+Yellow-legged/Caspian/Armenian Gull
+Iceland Gull
+Iceland Gull (Thayer's)
+Iceland Gull (kumlieni)
+Iceland Gull (thayeri/kumlieni)
+Iceland Gull (glaucoides)
+Iceland Gull (glaucoides/kumlieni)
+Iceland Gull (Thayer's x Iceland)
+Herring x Iceland Gull (hybrid)
+Herring/Iceland Gull
+Lesser Black-backed Gull
+Lesser Black-backed Gull (fuscus)
+Lesser Black-backed Gull (intermedius)
+Lesser Black-backed Gull (graellsii)
+Lesser Black-backed Gull (Heuglin's)
+Lesser Black-backed Gull (Steppe)
+Lesser Black-backed Gull (taimyrensis)
+Lesser Black-backed Gull (intermedius/graellsii)
+Ring-billed x Lesser Black-backed Gull (hybrid)
+Herring x Lesser Black-backed Gull (hybrid)
+Yellow-legged x Lesser Black-backed Gull (hybrid)
+Herring/Lesser Black-backed Gull
+Yellow-legged/Lesser Black-backed Gull
+Slaty-backed Gull
+Herring x Slaty-backed Gull (hybrid)
+Glaucous-winged Gull
+Western x Glaucous-winged Gull (hybrid)
+Herring x Glaucous-winged Gull (hybrid)
+Herring/Glaucous-winged Gull
+Slaty-backed x Glaucous-winged Gull (hybrid)
+Western/Glaucous-winged Gull
+Glaucous Gull
+Herring x Glaucous Gull (hybrid)
+Slaty-backed x Glaucous Gull (hybrid)
+Glaucous-winged x Glaucous Gull (hybrid)
+white-winged gull sp.
+Great Black-backed Gull
+Herring x Great Black-backed Gull (hybrid)
+Yellow-legged x Great Black-backed Gull (hybrid)
+Glaucous x Great Black-backed Gull (hybrid)
+Kelp Gull
+Kelp Gull (dominicanus)
+Kelp Gull (austrinus)
+Kelp Gull (judithae)
+Kelp Gull (vetula)
+Kelp Gull (melisandae)
+Herring x Kelp Gull (hybrid)
+Larus sp.
+gull sp.
+Brown Noddy
+Black Noddy
+Black Noddy (americanus)
+Black Noddy (melanogenys)
+Black Noddy (minutus Group)
+Brown/Black Noddy
+Lesser Noddy
+Black/Lesser Noddy
+Gray Noddy
+Blue-gray Noddy
+White Tern
+White Tern (Atlantic)
+White Tern (Pacific)
+White Tern (Little)
+Sooty Tern
+Gray-backed Tern
+Bridled Tern
+Sooty/Bridled Tern
+Aleutian Tern
+Little Tern
+Least Tern
+Little/Least Tern
+Yellow-billed Tern
+Australian Fairy Tern
+Little x Australian Fairy Tern (hybrid)
+Little/Australian Fairy Tern
+Peruvian Tern
+Saunders's Tern
+Little/Saunders's Tern
+Damara Tern
+Sternula sp.
+Large-billed Tern
+Gull-billed Tern
+Gull-billed Tern (Gull-billed)
+Gull-billed Tern (Australian)
+Caspian Tern
+Inca Tern
+Black Tern
+Black Tern (Eurasian)
+Black Tern (American)
+White-winged Tern
+Whiskered Tern
+Black-fronted Tern
+Chlidonias sp.
+Roseate Tern
+White-fronted Tern
+Black-naped Tern
+Common Tern
+Common Tern (hirundo/tibetana)
+Common Tern (hirundo/tibetana x longipennis)
+Common Tern (longipennis)
+Roseate x Common Tern (hybrid)
+Arctic Tern
+Common x Arctic Tern (hybrid)
+Common/Arctic Tern
+South American Tern
+Antarctic Tern
+Antarctic Tern (Antarctic)
+Antarctic Tern (South Georgia)
+Arctic/Antarctic Tern
+Forster's Tern
+Common/Forster's Tern
+Snowy-crowned Tern
+Black-bellied Tern
+River Tern
+Black-bellied/River Tern
+White-cheeked Tern
+Kerguelen Tern
+Sterna sp.
+Royal Tern
+Great Crested Tern
+Sandwich Tern
+Sandwich Tern (Eurasian)
+Sandwich Tern (Cabot's)
+Sandwich Tern (Cayenne)
+Sandwich Tern (Cabot's x Cayenne)
+Elegant Tern
+Sandwich x Elegant Tern (hybrid)
+Royal/Elegant Tern
+Lesser Crested Tern
+Great x Lesser Crested Tern (hybrid)
+West African Crested Tern
+Royal/West African Crested Tern
+Chinese Crested Tern
+Great x Chinese Crested Tern (hybrid)
+Thalasseus sp.
+large tern sp.
+tern sp.
+Black Skimmer
+Black Skimmer (niger)
+Black Skimmer (cinerascens)
+Black Skimmer (intercedens)
+African Skimmer
+Indian Skimmer
+gull/tern sp.

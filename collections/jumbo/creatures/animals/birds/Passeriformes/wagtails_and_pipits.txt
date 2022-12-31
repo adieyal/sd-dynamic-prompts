@@ -1,0 +1,145 @@
+# Originally sourced from Clements Checklist v2022
+Forest Wagtail
+Cape Wagtail
+Mountain Wagtail
+Sao Tome Short-tail
+Madagascar Wagtail
+Gray Wagtail
+Western Yellow Wagtail
+Western Yellow Wagtail (lutea/flavissima)
+Western Yellow Wagtail (flavissima)
+Western Yellow Wagtail (lutea)
+Western Yellow Wagtail (thunbergi)
+Western Yellow Wagtail (flava/beema)
+Western Yellow Wagtail (flava)
+Western Yellow Wagtail (beema)
+Western Yellow Wagtail (iberiae/cinereocapilla/pygmaea)
+Western Yellow Wagtail (iberiae)
+Western Yellow Wagtail (cinereocapilla)
+Western Yellow Wagtail (pygmaea)
+Western Yellow Wagtail (feldegg)
+Western Yellow Wagtail (leucocephala)
+Western Yellow Wagtail (Channel Wagtail intergrade)
+Western Yellow Wagtail (superciliaris-type intergrade)
+Western Yellow Wagtail (dombrowskii-type intergrade)
+Western Yellow Wagtail (xanthophrys-type intergrade)
+Eastern Yellow Wagtail
+Eastern Yellow Wagtail (Eastern)
+Eastern Yellow Wagtail (Green-headed)
+Eastern Yellow Wagtail (Manchurian)
+Western/Eastern Yellow Wagtail
+Citrine Wagtail
+Citrine Wagtail (Gray-backed)
+Citrine Wagtail (Black-backed)
+Western Yellow x Citrine Wagtail (hybrid)
+Eastern Yellow/Citrine Wagtail
+White-browed Wagtail
+Mekong Wagtail
+Japanese Wagtail
+African Pied Wagtail
+White Wagtail
+White Wagtail (White-faced)
+White Wagtail (British)
+White Wagtail (ocularis)
+White Wagtail (Moroccan)
+White Wagtail (Masked)
+White Wagtail (Transbaikalian)
+White Wagtail (White-faced/Transbaikalian)
+White Wagtail (Black-backed)
+White Wagtail (Chinese)
+White Wagtail (Hodgson's)
+White Wagtail (Chinese x Hodgson's)
+White-browed/White Wagtail
+wagtail sp.
+Australian Pipit
+New Zealand Pipit
+Richard's Pipit
+Paddyfield Pipit
+Richard's/Paddyfield Pipit
+African Pipit
+African Pipit (Cameroon)
+African Pipit (Yemen)
+African Pipit (African)
+African Pipit (Jackson's)
+African Pipit (Etosha)
+Mountain Pipit
+Woodland Pipit
+Long-billed Pipit
+Long-billed Pipit (West African)
+Long-billed Pipit (Middle Eastern)
+Long-billed Pipit (Arabian)
+Long-billed Pipit (Socotra)
+Long-billed Pipit (Nairobi)
+Long-billed Pipit (East African)
+Long-billed Pipit (Persian)
+Long-billed Pipit (Indian)
+Long-billed Pipit (Burmese)
+Nicholson's Pipit
+Blyth's Pipit
+Richard's/Blyth's Pipit
+Tawny Pipit
+Plain-backed Pipit
+Buffy Pipit
+Long-legged Pipit
+Nilgiri Pipit
+Upland Pipit
+Berthelot's Pipit
+Malindi Pipit
+Striped Pipit
+Yellow-tufted Pipit
+Madanga
+Alpine Pipit
+Meadow Pipit
+Rosy Pipit
+Tree Pipit
+Meadow/Tree Pipit
+Olive-backed Pipit
+Tree/Olive-backed Pipit
+Pechora Pipit
+Pechora Pipit (Pechora)
+Pechora Pipit (Menzbier's)
+Red-throated Pipit
+Water Pipit
+Water Pipit (Western)
+Water Pipit (Caucasian)
+Water Pipit (Blakiston's)
+Meadow/Water Pipit
+Rock Pipit
+Rock Pipit (Western)
+Rock Pipit (Eastern)
+Water/Rock Pipit
+American Pipit
+American Pipit (japonicus)
+American Pipit (rubescens Group)
+Water/American Pipit
+Sprague's Pipit
+Yellowish Pipit
+Peruvian Pipit
+Puna Pipit
+Short-billed Pipit
+Puna/Short-billed Pipit
+Pampas Pipit
+Correndera Pipit
+Correndera Pipit (Correndera)
+Correndera Pipit (Falklands)
+South Georgia Pipit
+Ochre-breasted Pipit
+Hellmayr's Pipit
+Paramo Pipit
+Paramo Pipit (meridae)
+Paramo Pipit (bogotensis Group)
+Short-tailed Pipit
+Bush Pipit
+Sokoke Pipit
+pipit sp.
+Golden Pipit
+Yellow-breasted Pipit
+Sharpe's Longclaw
+Orange-throated Longclaw
+Yellow-throated Longclaw
+Fülleborn's Longclaw
+Abyssinian Longclaw
+Pangani Longclaw
+Rosy-throated Longclaw
+Grimwood's Longclaw
+longclaw sp.

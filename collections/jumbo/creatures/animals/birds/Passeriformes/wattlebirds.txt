@@ -1,0 +1,6 @@
+# Originally sourced from Clements Checklist v2022
+North Island Kokako
+South Island Kokako
+North Island Saddleback
+South Island Saddleback
+Huia

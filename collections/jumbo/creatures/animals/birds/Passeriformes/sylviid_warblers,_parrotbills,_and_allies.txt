@@ -1,0 +1,116 @@
+# Originally sourced from Clements Checklist v2022
+Eurasian Blackcap
+Garden Warbler
+Dohrn's Thrush-Babbler
+Abyssinian Catbird
+Bush Blackcap
+African Hill Babbler
+African Hill Babbler (Mt. Cameroon)
+African Hill Babbler (Claude's)
+African Hill Babbler (Stierling's)
+African Hill Babbler (African)
+Rwenzori Hill Babbler
+Barred Warbler
+Layard's Warbler
+Banded Parisoma
+Chestnut-vented Warbler
+Lesser Whitethroat
+Lesser Whitethroat (curruca/blythi)
+Lesser Whitethroat (halimodendri)
+Lesser Whitethroat (Lesser)
+Lesser Whitethroat (Desert)
+Lesser Whitethroat (Lesser/Desert)
+Lesser Whitethroat (Gansu)
+Lesser Whitethroat (Desert/Gansu)
+Lesser Whitethroat (Hume's)
+Lesser Whitethroat (Lesser/Hume's)
+Lesser Whitethroat (Lesser/Desert/Hume's)
+Brown Parisoma
+Brown Parisoma (Gray-vented)
+Brown Parisoma (Brown)
+Yemen Warbler
+Arabian Warbler
+Western Orphean Warbler
+Eastern Orphean Warbler
+Western/Eastern Orphean Warbler
+African Desert Warbler
+Asian Desert Warbler
+Tristram's Warbler
+Menetries's Warbler
+Menetries's Warbler (mystacea)
+Menetries's Warbler (rubescens/turcmenica)
+Rüppell's Warbler
+Cyprus Warbler
+Sardinian Warbler
+Moltoni's Warbler
+Western Subalpine Warbler
+Eastern Subalpine Warbler
+Western/Eastern Subalpine Warbler
+Moltoni's/Western/Eastern Subalpine Warbler
+Greater Whitethroat
+Spectacled Warbler
+Marmora's Warbler
+Dartford Warbler
+Balearic Warbler
+Curruca sp.
+Sylvia/Curruca sp.
+old world warbler sp.
+Fire-tailed Myzornis
+Rufous-tailed Babbler
+Golden-breasted Fulvetta
+Yellow-eyed Babbler
+Jerdon's Babbler
+Jerdon's Babbler (Indus)
+Jerdon's Babbler (Himalayan)
+Jerdon's Babbler (Irrawaddy)
+Tarim Babbler
+Beijing Babbler
+Spectacled Fulvetta
+Indochinese Fulvetta
+Chinese Fulvetta
+Brown-throated Fulvetta
+White-browed Fulvetta
+White-browed Fulvetta (White-throated)
+White-browed Fulvetta (Bhutan)
+White-browed Fulvetta (Naga Hills)
+White-browed Fulvetta (Chin Hills)
+White-browed Fulvetta (Chinese)
+White-browed Fulvetta (Vietnam)
+Streak-throated Fulvetta
+Gray-hooded Fulvetta
+Taiwan Fulvetta
+fulvetta sp.
+Wrentit
+Reed Parrotbill
+Reed Parrotbill (Northern)
+Reed Parrotbill (Reed)
+Black-breasted Parrotbill
+Spot-breasted Parrotbill
+Great Parrotbill
+Brown Parrotbill
+Three-toed Parrotbill
+Gray-headed Parrotbill
+Black-headed Parrotbill
+Gray-headed x Black-headed Parrotbill (hybrid)
+White-breasted Parrotbill
+Rufous-headed Parrotbill
+Short-tailed Parrotbill
+Fulvous Parrotbill
+Black-throated Parrotbill
+Black-throated Parrotbill (Black-throated)
+Black-throated Parrotbill (Orange-eared)
+Black-throated Parrotbill (Gray-breasted)
+Black-throated Parrotbill (Buff-breasted)
+Black-throated Parrotbill (Black-eared)
+Golden Parrotbill
+Pale-billed Parrotbill
+Spectacled Parrotbill
+Gray-hooded Parrotbill
+Brown-winged Parrotbill
+Brown-winged Parrotbill (Yunnan)
+Brown-winged Parrotbill (Brown-winged)
+Vinous-throated Parrotbill
+Ashy-throated Parrotbill
+Vinous-throated x Ashy-throated Parrotbill (hybrid)
+Rusty-throated Parrotbill
+parrotbill sp.

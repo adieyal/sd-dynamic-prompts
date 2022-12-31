@@ -1,0 +1,546 @@
+# Originally sourced from Clements Checklist v2022
+Brown Tanager
+Red-crested Cardinal
+Red-cowled Cardinal
+Masked Cardinal
+Red-capped Cardinal
+Red-capped Cardinal (Red-capped)
+Red-capped Cardinal (Bolivian)
+Red-crested x Red-capped Cardinal (hybrid)
+Masked/Red-capped Cardinal
+Crimson-fronted Cardinal
+Crimson-fronted Cardinal (Araguaia)
+Crimson-fronted Cardinal (Xingu)
+Red-capped x Crimson-fronted Cardinal (hybrid)
+Red-capped/Crimson-fronted Cardinal
+Yellow-billed Cardinal
+Paroaria sp.
+Black-faced Tanager
+Cinnamon Tanager
+Magpie Tanager
+White-banded Tanager
+Black-and-white Tanager
+Cone-billed Tanager
+Scarlet-throated Tanager
+White-capped Tanager
+Hooded Tanager
+Cherry-throated Tanager
+Rufous-crested Tanager
+Slaty Tanager
+Black-capped Hemispingus
+Black-capped Hemispingus (Black-capped)
+Black-capped Hemispingus (White-browed)
+Orange-browed Hemispingus
+Parodi's Hemispingus
+Gray-capped Hemispingus
+Oleaginous Hemispingus
+Black-eared Hemispingus
+Black-eared Hemispingus (Black-eared)
+Black-eared Hemispingus (Western)
+Black-eared Hemispingus (Piura)
+Orange-headed Tanager
+Buff-bellied Tanager
+Fulvous-headed Tanager
+Chestnut-headed Tanager
+Rust-and-yellow Tanager
+Superciliaried Hemispingus
+Superciliaried Hemispingus (Yellow-browed)
+Superciliaried Hemispingus (Superciliaried)
+Superciliaried Hemispingus (White-bellied)
+Superciliaried Hemispingus (urubambae)
+Rufous-chested Tanager
+Brown-flanked Tanager
+Thlypopsis sp.
+Plain-tailed Warbling Finch
+Rusty-browed Warbling Finch
+Buff-throated Warbling Finch
+Gray-throated Warbling Finch
+Ringed Warbling Finch
+Ringed Warbling Finch (Ringed)
+Ringed Warbling Finch (Black-breasted)
+Black-capped Warbling Finch
+Cinereous Warbling Finch
+Three-striped Hemispingus
+Pardusco
+Black-goggled Tanager
+Gray-headed Tanager
+Gray-headed Tanager (Gray-crested)
+Gray-headed Tanager (Gray-headed)
+Inti Tanager
+Flame-crested Tanager
+Flame-crested Tanager (Flame-crested)
+Flame-crested Tanager (Natterer's)
+Yellow-crested Tanager
+White-shouldered Tanager
+Fulvous-crested Tanager
+Flame-crested/Fulvous-crested Tanager
+Tawny-crested Tanager
+Ruby-crowned Tanager
+White-lined Tanager
+Red-shouldered Tanager
+Tachyphonus sp.
+Fulvous Shrike-Tanager
+White-winged Shrike-Tanager
+Black-throated Shrike-Tanager
+White-throated Shrike-Tanager
+Crimson-collared Tanager
+Flame-rumped Tanager
+Flame-rumped Tanager (Flame-rumped)
+Flame-rumped Tanager (Lemon-rumped)
+Flame-rumped Tanager (Flame-rumped x Lemon-rumped)
+Scarlet-rumped Tanager
+Scarlet-rumped Tanager (Passerini's)
+Scarlet-rumped Tanager (Cherrie's)
+Flame-rumped x Scarlet-rumped Tanager (hybrid)
+Brazilian Tanager
+Black-bellied Tanager
+Silver-beaked Tanager
+Masked Crimson Tanager
+Crimson-backed Tanager
+Scarlet-rumped x Crimson-backed Tanager (hybrid)
+Ramphocelus sp.
+Vermilion Tanager
+Blue-backed Tanager
+Blue-and-gold Tanager
+Black-and-gold Tanager
+Golden-chested Tanager
+Moss-backed Tanager
+Gold-ringed Tanager
+Yellow-green Tanager
+Orange-throated Tanager
+Hooded Mountain Tanager
+Blue-capped Tanager
+Masked Mountain Tanager
+Grass-green Tanager
+Black-chested Mountain Tanager
+Golden-backed Mountain Tanager
+Black-cheeked Mountain Tanager
+Lacrimose Mountain Tanager
+Lacrimose Mountain Tanager (Perija)
+Lacrimose Mountain Tanager (melanops)
+Lacrimose Mountain Tanager (yariguierum)
+Lacrimose Mountain Tanager (intensus)
+Lacrimose Mountain Tanager (palpebrosus Group)
+Lacrimose Mountain Tanager (lacrymosus)
+Scarlet-bellied Mountain Tanager
+Scarlet-bellied Mountain Tanager (Scarlet-bellied)
+Scarlet-bellied Mountain Tanager (Fire-bellied)
+Blue-winged Mountain Tanager
+Blue-winged Mountain Tanager (Blue-winged)
+Blue-winged Mountain Tanager (Bolivian)
+Black-chinned Mountain Tanager
+Buff-breasted Mountain Tanager
+Buff-breasted Mountain Tanager (Carriker's)
+Buff-breasted Mountain Tanager (Buff-breasted)
+Buff-breasted Mountain Tanager (Cerulean-streaked)
+Chestnut-bellied Mountain Tanager
+Rufous-bellied Mountain Tanager
+Diademed Tanager
+Purplish-mantled Tanager
+Yellow-throated Tanager
+Golden-collared Tanager
+Golden-crowned Tanager
+Yellow-scarfed Tanager
+Fawn-breasted Tanager
+Blue-and-yellow Tanager
+Blue-and-yellow Tanager (Green-mantled)
+Blue-and-yellow Tanager (Blue-and-yellow)
+Glistening-green Tanager
+Orange-eared Tanager
+Orange-eared Tanager (Orange-eared)
+Orange-eared Tanager (Blue-throated)
+Multicolored Tanager
+Blue-gray Tanager
+Blue-gray Tanager (Blue-gray)
+Blue-gray Tanager (White-edged)
+Sayaca Tanager
+Glaucous Tanager
+Azure-shouldered Tanager
+Golden-chevroned Tanager
+Yellow-winged Tanager
+Palm Tanager
+Thraupis sp.
+Dotted Tanager
+Rufous-throated Tanager
+Speckled Tanager
+Yellow-bellied Tanager
+Spotted Tanager
+Ixothraupis sp. (speckled tanager sp.)
+Golden-naped Tanager
+Golden-naped Tanager (Golden-naped)
+Golden-naped Tanager (Rusty-naped)
+Azure-rumped Tanager
+Gray-and-gold Tanager
+Black-headed Tanager
+Black-headed Tanager (Black-headed)
+Black-headed Tanager (Black-hooded)
+Silvery Tanager
+Black-capped Tanager
+Green-throated Tanager
+Sira Tanager
+Black-backed Tanager
+Chestnut-backed Tanager
+Green-capped Tanager
+Burnished-buff Tanager
+Burnished-buff Tanager (Rufous-crowned)
+Burnished-buff Tanager (Stripe-bellied)
+Lesser Antillean Tanager
+Lesser Antillean Tanager (St. Vincent)
+Lesser Antillean Tanager (Grenada)
+Scrub Tanager
+Masked Tanager
+Golden-hooded Tanager
+Blue-necked Tanager
+Blue-and-black Tanager
+Blue-and-black Tanager (Blue-and-black)
+Blue-and-black Tanager (Spot-bellied)
+Beryl-spangled Tanager
+Spangle-cheeked Tanager
+Green-naped Tanager
+Metallic-green Tanager
+Blue-browed Tanager
+Plain-colored Tanager
+Turquoise Tanager
+Turquoise Tanager (Turquoise)
+Turquoise Tanager (White-bellied)
+Paradise Tanager
+Opal-rumped Tanager
+Opal-rumped Tanager (Opal-rumped)
+Opal-rumped Tanager (Silver-breasted)
+Opal-crowned Tanager
+Green-headed Tanager
+Seven-colored Tanager
+Red-necked Tanager
+Brassy-breasted Tanager
+Gilt-edged Tanager
+Rufous-winged Tanager
+Bay-headed Tanager
+Bay-headed Tanager (Bay-and-blue)
+Bay-headed Tanager (Bay-and-green)
+Bay-headed Tanager (Bay-headed)
+Rufous-cheeked Tanager
+Golden-eared Tanager
+Saffron-crowned Tanager
+Flame-faced Tanager
+Flame-faced Tanager (Flame-faced)
+Flame-faced Tanager (Yellow-faced)
+Green-and-gold Tanager
+Blue-whiskered Tanager
+Golden Tanager
+Golden Tanager (arthus)
+Golden Tanager (aurulenta Group)
+Golden Tanager (pulchra Group)
+Emerald Tanager
+Silver-throated Tanager
+Tangara/Stilpnia sp.
+small tanager sp. (former Tangara sp.)
+Swallow Tanager
+White-bellied Dacnis
+Black-faced Dacnis
+Black-faced Dacnis (Yellow-tufted)
+Black-faced Dacnis (Black-faced)
+Yellow-bellied Dacnis
+Turquoise Dacnis
+Black-legged Dacnis
+Scarlet-thighed Dacnis
+Blue Dacnis
+Viridian Dacnis
+Scarlet-breasted Dacnis
+dacnis sp.
+Short-billed Honeycreeper
+Shining Honeycreeper
+Purple Honeycreeper
+Red-legged Honeycreeper
+Shining/Red-legged Honeycreeper
+Green Honeycreeper
+Golden-collared Honeycreeper
+Sulphur-rumped Tanager
+Scarlet-browed Tanager
+Guira Tanager
+Rufous-headed Tanager
+Guira/Rufous-headed Tanager
+Yellow-backed Tanager
+Rufous-headed/Yellow-backed Tanager
+Black-and-yellow Tanager
+Scarlet-and-white Tanager
+tanager sp. (Thraupidae sp.)
+Bicolored Conebill
+Pearly-breasted Conebill
+Chestnut-vented Conebill
+White-eared Conebill
+Giant Conebill
+White-browed Conebill
+Blue-backed Conebill
+Capped Conebill
+Capped Conebill (White-capped)
+Capped Conebill (Blue-capped)
+Tamarugo Conebill
+Rufous-browed Conebill
+Cinereous Conebill
+Cinereous Conebill (Ochraceous)
+Cinereous Conebill (Cinereous)
+conebill sp.
+Chestnut-bellied Flowerpiercer
+Glossy Flowerpiercer
+Moustached Flowerpiercer
+Moustached Flowerpiercer (unicincta)
+Moustached Flowerpiercer (pectoralis)
+Moustached Flowerpiercer (albilinea)
+Moustached Flowerpiercer (mystacalis)
+Merida Flowerpiercer
+Black Flowerpiercer
+Black-throated Flowerpiercer
+Black-throated Flowerpiercer (vuilleumieri)
+Black-throated Flowerpiercer (Black-throated)
+Gray-bellied Flowerpiercer
+Black-throated x Gray-bellied Flowerpiercer (hybrid)
+Venezuelan Flowerpiercer
+White-sided Flowerpiercer
+Scaled Flowerpiercer
+Greater Flowerpiercer
+Indigo Flowerpiercer
+Cinnamon-bellied Flowerpiercer
+Slaty Flowerpiercer
+Rusty Flowerpiercer
+Deep-blue Flowerpiercer
+Bluish Flowerpiercer
+Masked Flowerpiercer
+Masked Flowerpiercer (cyanea Group)
+Masked Flowerpiercer (melanopis)
+flowerpiercer sp.
+Plushcap
+Black-backed Bush Tanager
+Black-hooded Sierra Finch
+Peruvian Sierra Finch
+Gray-hooded Sierra Finch
+Gray-hooded Sierra Finch (minor)
+Gray-hooded Sierra Finch (gayi/caniceps)
+Patagonian Sierra Finch
+Diuca Finch
+White-bridled Finch
+White-bridled Finch (Fuegian)
+White-bridled Finch (Falkland)
+Yellow-bridled Finch
+Yellow-bridled Finch (White-tailed)
+Yellow-bridled Finch (Yellow-tailed)
+Tit-like Dacnis
+Tit-like Dacnis (petersi/bella)
+Tit-like Dacnis (parina)
+Red-backed Sierra Finch
+White-throated Sierra Finch
+Glacier Finch
+Boulder Finch
+Plumbeous Sierra Finch
+Ash-breasted Sierra Finch
+Uniform Finch
+Slaty Finch
+Peg-billed Finch
+Black-crested Finch
+Gray-crested Finch
+Black-crested/Gray-crested Finch
+Gough Island Finch
+Inaccessible Island Finch
+Inaccessible Island Finch (Lowland)
+Inaccessible Island Finch (Upland)
+Inaccessible Island Finch (Dunn's)
+Nightingale Island Finch
+Wilkins's Finch
+Nightingale Island/Wilkins's Finch
+Cinereous Finch
+Slender-billed Finch
+Great Inca-Finch
+Rufous-backed Inca-Finch
+Gray-winged Inca-Finch
+Buff-bridled Inca-Finch
+Little Inca-Finch
+inca-finch sp.
+Mourning Sierra Finch
+Mourning Sierra Finch (Mourning)
+Mourning Sierra Finch (Blackish)
+Blue Finch
+Band-tailed Sierra Finch
+Carbonated Sierra Finch
+sierra finch sp.
+Black-headed Hemispingus
+Drab Hemispingus
+Gray-hooded Bush Tanager
+Gray-hooded Bush Tanager (rubrirostris)
+Gray-hooded Bush Tanager (chrysogaster)
+White-rumped Tanager
+Long-tailed Reed Finch
+Chestnut-breasted Mountain Finch
+Rufous-sided Warbling Finch
+Bay-chested Warbling Finch
+Slaty-backed Hemispingus
+Rufous-browed Hemispingus
+Bolivian Warbling Finch
+Cinnamon Warbling Finch
+Black-and-chestnut Warbling Finch
+Black-and-rufous Warbling Finch
+Black-and-chestnut/Black-and-rufous Warbling Finch
+Rufous-breasted Warbling Finch
+Collared Warbling Finch
+Cochabamba Mountain Finch
+Tucuman Mountain Finch
+warbling finch sp.
+Stripe-tailed Yellow-Finch
+Puna Yellow-Finch
+Bright-rumped Yellow-Finch
+Citron-headed Yellow-Finch
+Greater Yellow-Finch
+Greenish Yellow-Finch
+Monte Yellow-Finch
+Patagonian Yellow-Finch
+Orange-fronted Yellow-Finch
+Saffron Finch
+Saffron Finch (Saffron)
+Saffron Finch (Pelzeln's)
+Grassland Yellow-Finch
+Grassland Yellow-Finch (Northern)
+Grassland Yellow-Finch (Montane)
+Grassland Yellow-Finch (Grassland)
+Raimondi's Yellow-Finch
+Sulphur-throated Finch
+yellow-finch sp.
+Wedge-tailed Grass-Finch
+Duida Grass-Finch
+Lesser Grass-Finch
+Wedge-tailed/Lesser Grass-Finch
+Great Pampa-Finch
+Great Pampa-Finch (Western)
+Great Pampa-Finch (Eastern)
+Pale-throated Pampa-Finch
+Blue-black Grassquit
+Lesson's Seedeater
+Lined Seedeater
+Lesson's/Lined Seedeater
+White-bellied Seedeater
+White-bellied Seedeater (Bicolored)
+White-bellied Seedeater (Gray-backed)
+Parrot-billed Seedeater
+Chestnut-throated Seedeater
+Drab Seedeater
+Chestnut-bellied Seedeater
+Ruddy-breasted Seedeater
+Black-and-tawny Seedeater
+Copper Seedeater
+Pearly-bellied Seedeater
+Tawny-bellied Seedeater
+Dark-throated Seedeater
+Ibera Seedeater (undescribed form)
+Marsh Seedeater
+Rufous-rumped Seedeater
+Chestnut Seedeater
+Rufous-rumped/Chestnut Seedeater
+Black-bellied Seedeater
+Thick-billed Seed-Finch
+Chestnut-bellied Seed-Finch
+Nicaraguan Seed-Finch
+Great-billed Seed-Finch
+Large-billed Seed-Finch
+Black-billed Seed-Finch
+Variable Seedeater
+Variable Seedeater (Black)
+Variable Seedeater (Variable)
+Gray Seedeater
+Wing-barred Seedeater
+Caqueta Seedeater
+Morelet's Seedeater
+Cinnamon-rumped Seedeater
+Morelet's/Cinnamon-rumped Seedeater
+White-naped Seedeater
+Black-and-white Seedeater
+Yellow-bellied Seedeater
+Dubois's Seedeater
+Yellow-bellied/Dubois's Seedeater
+Double-collared Seedeater
+Slate-colored Seedeater
+Gray/Slate-colored Seedeater
+Temminck's Seedeater
+Buffy-fronted Seedeater
+Plumbeous Seedeater
+Tropeiro Seedeater
+Rusty-collared Seedeater
+White-throated Seedeater
+Sporophila sp.
+Band-tailed Seedeater
+Plain-colored Seedeater
+Paramo Seedeater
+Catamenia sp.
+Coal-crested Finch
+Black-masked Finch
+Pileated Finch
+Red-crested Finch
+Crimson-breasted Finch
+Yellow Cardinal
+Diuca Finch x Yellow Cardinal (hybrid)
+Bananaquit
+Bananaquit (Bahamas)
+Bananaquit (Cozumel I.)
+Bananaquit (Greater Antillean)
+Bananaquit (Puerto Rico)
+Bananaquit (Lesser Antillean)
+Bananaquit (St. Vincent)
+Bananaquit (Grenada)
+Bananaquit (Los Roques)
+Bananaquit (laurae/melanornis)
+Bananaquit (Continental)
+Yellow-faced Grassquit
+Orangequit
+Puerto Rican Bullfinch
+St. Kitts Bullfinch
+Cuban Bullfinch
+Cuban Bullfinch (Cuban)
+Cuban Bullfinch (Grand Cayman)
+Greater Antillean Bullfinch
+Yellow-shouldered Grassquit
+Cuban Grassquit
+Lesser Antillean Bullfinch
+Barbados Bullfinch
+St. Lucia Black Finch
+Black-faced Grassquit
+Dull-colored Grassquit
+Sooty Grassquit
+Cocos Finch
+Green Warbler-Finch
+Gray Warbler-Finch
+Vegetarian Finch
+Woodpecker Finch
+Woodpecker Finch (pallidus/productus)
+Woodpecker Finch (striatipecta)
+Large Tree-Finch
+Medium Tree-Finch
+Small Tree-Finch
+Mangrove Finch
+Small Ground-Finch
+Large Ground-Finch
+Vampire Ground-Finch
+Genovesa Ground-Finch
+Sharp-beaked Ground-Finch
+Common Cactus-Finch
+Medium Ground-Finch
+Española Ground-Finch
+Genovesa Cactus-Finch
+Geospiza sp.
+galapagos finch sp.
+Yellow-shouldered Grosbeak
+Many-colored Chaco Finch
+Black-throated Saltator
+Buff-throated Saltator
+Black-winged Saltator
+Black-headed Saltator
+Orinocan Saltator
+Olive-gray Saltator
+Cinnamon-bellied Saltator
+Bluish-gray Saltator
+Olive-gray/Bluish-gray Saltator
+Streaked Saltator
+Lesser Antillean Saltator
+Green-winged Saltator
+Black-cowled Saltator
+Thick-billed Saltator
+Golden-billed Saltator
+Masked Saltator
+Slate-colored Grosbeak
+Black-throated Grosbeak
+saltator sp.

@@ -1,0 +1,353 @@
+# Originally sourced from Clements Checklist v2022
+White-fronted Scops-Owl
+Andaman Scops-Owl
+Reddish Scops-Owl
+Serendib Scops-Owl
+Sandy Scops-Owl
+Sandy Scops-Owl (Sandy)
+Sandy Scops-Owl (Reddish)
+Sokoke Scops-Owl
+Flores Scops-Owl
+Mountain Scops-Owl
+Rajah Scops-Owl
+Rajah Scops-Owl (Sumatran)
+Rajah Scops-Owl (Bornean)
+Javan Scops-Owl
+Mentawai Scops-Owl
+Indian Scops-Owl
+Collared Scops-Owl
+Giant Scops-Owl
+Sunda Scops-Owl
+Collared/Sunda Scops-Owl
+Japanese Scops-Owl
+Wallace's Scops-Owl
+Palawan Scops-Owl
+Philippine Scops-Owl
+Everett's Scops-Owl
+Negros Scops-Owl
+Mindoro Scops-Owl
+Moluccan Scops-Owl
+Moluccan Scops-Owl (Moluccan)
+Moluccan Scops-Owl (Kalidupa)
+Wetar Scops-Owl
+Rinjani Scops-Owl
+Palau Scops-Owl
+Mantanani Scops-Owl
+Ryukyu Scops-Owl
+Sulawesi Scops-Owl
+Banggai Scops-Owl
+Sangihe Scops-Owl
+Siau Scops-Owl
+Sula Scops-Owl
+Biak Scops-Owl
+Simeulue Scops-Owl
+Enggano Scops-Owl
+Nicobar Scops-Owl
+Arabian Scops-Owl
+Eurasian Scops-Owl
+Cyprus Scops-Owl
+Eurasian/Cyprus Scops-Owl
+Pemba Scops-Owl
+Sao Tome Scops-Owl
+Principe Scops-Owl (undescribed form)
+African Scops-Owl
+African Scops-Owl (African)
+African Scops-Owl (Annobon)
+African Scops-Owl (Snowy)
+Pallid Scops-Owl
+Eurasian/Pallid Scops-Owl
+Mindanao Scops-Owl
+Luzon Scops-Owl
+Moheli Scops-Owl
+Comoro Scops-Owl
+Seychelles Scops-Owl
+Oriental Scops-Owl
+Oriental Scops-Owl (Oriental)
+Oriental Scops-Owl (Walden's)
+Socotra Scops-Owl
+Anjouan Scops-Owl
+Mayotte Scops-Owl
+Reunion Scops-Owl
+Rodrigues Scops-Owl
+Mauritius Scops-Owl
+Madagascar Scops-Owl
+Madagascar Scops-Owl (Rainforest)
+Madagascar Scops-Owl (Torotoroka)
+scops-owl sp.
+Flammulated Owl
+Puerto Rican Owl
+Bare-shanked Screech-Owl
+Whiskered Screech-Owl
+White-throated Screech-Owl
+Tropical Screech-Owl
+Koepcke's Screech-Owl
+Koepcke's Screech-Owl (Koepcke's)
+Koepcke's Screech-Owl (Apurimac)
+Rufescent Screech-Owl
+Rufescent Screech-Owl (Colombian)
+Rufescent Screech-Owl (Rufescent)
+Cinnamon Screech-Owl
+Cloud-forest Screech-Owl
+Montane Forest Screech-Owl
+Middle American Screech-Owl
+Middle American Screech-Owl (Middle American)
+Middle American Screech-Owl (Vermiculated)
+Choco Screech-Owl
+Foothill Screech-Owl
+Foothill Screech-Owl (Roraima)
+Foothill Screech-Owl (Foothill)
+Long-tufted Screech-Owl
+Bearded Screech-Owl
+Balsas Screech-Owl
+Pacific Screech-Owl
+Pacific Screech-Owl (lambi)
+Pacific Screech-Owl (cooperi)
+Western Screech-Owl
+Western Screech-Owl (Northern)
+Western Screech-Owl (Vinaceous)
+Western Screech-Owl (Sutton's)
+Eastern Screech-Owl
+Eastern Screech-Owl (Northern)
+Eastern Screech-Owl (McCall's)
+Western x Eastern Screech-Owl (hybrid)
+Santa Marta Screech-Owl
+Peruvian Screech-Owl
+Peruvian Screech-Owl (pacificus)
+Peruvian Screech-Owl (roboratus)
+Tawny-bellied Screech-Owl
+Tawny-bellied Screech-Owl (Tawny-bellied)
+Tawny-bellied Screech-Owl (Austral)
+Black-capped Screech-Owl
+screech-owl sp.
+Bare-legged Owl
+Northern White-faced Owl
+Southern White-faced Owl
+Crested Owl
+Maned Owl
+Spectacled Owl
+Tawny-browed Owl
+Band-bellied Owl
+Pulsatrix sp.
+Snowy Owl
+Great Horned Owl
+Lesser Horned Owl
+Great/Lesser Horned Owl
+Rock Eagle-Owl
+Grayish Eagle-Owl
+Spotted Eagle-Owl
+Arabian Eagle-Owl
+Cape Eagle-Owl
+Cape Eagle-Owl (Northern)
+Cape Eagle-Owl (Cape)
+Pharaoh Eagle-Owl
+Pharaoh Eagle-Owl (Pharaoh)
+Pharaoh Eagle-Owl (Desert)
+Eurasian Eagle-Owl
+Bubo sp.
+Fraser's Eagle-Owl
+Fraser's Eagle-Owl (Western)
+Fraser's Eagle-Owl (Usambara)
+Akun Eagle-Owl
+Verreaux's Eagle-Owl
+Shelley's Eagle-Owl
+Blakiston's Fish-Owl
+Blakiston's Fish-Owl (doerriesi)
+Blakiston's Fish-Owl (blakistoni)
+Buffy Fish-Owl
+Brown Fish-Owl
+Brown Fish-Owl (Turkish)
+Brown Fish-Owl (Eastern)
+Buffy x Brown Fish-Owl (hybrid)
+Tawny Fish-Owl
+Dusky Eagle-Owl
+Spot-bellied Eagle-Owl
+Barred Eagle-Owl
+Philippine Eagle-Owl
+Pel's Fishing-Owl
+Rufous Fishing-Owl
+Vermiculated Fishing-Owl
+Northern Hawk Owl
+Northern Hawk Owl (American)
+Northern Hawk Owl (Eurasian)
+Eurasian Pygmy-Owl
+Pearl-spotted Owlet
+Northern Pygmy-Owl
+Northern Pygmy-Owl (Mountain)
+Northern Pygmy-Owl (Pacific)
+Northern Pygmy-Owl (Rocky Mts.)
+Northern Pygmy-Owl (Guatemalan)
+Northern Pygmy-Owl (Cape)
+Costa Rican Pygmy-Owl
+Cloud-forest Pygmy-Owl
+Andean Pygmy-Owl
+Yungas Pygmy-Owl
+Subtropical Pygmy-Owl
+Central American Pygmy-Owl
+Tamaulipas Pygmy-Owl
+Colima Pygmy-Owl
+Amazonian Pygmy-Owl
+Pernambuco Pygmy-Owl
+Least Pygmy-Owl
+Ferruginous Pygmy-Owl
+Ferruginous Pygmy-Owl (Ferruginous)
+Ferruginous Pygmy-Owl (Tucuman)
+Austral Pygmy-Owl
+Ferruginous/Austral Pygmy-Owl
+Peruvian Pygmy-Owl
+Cuban Pygmy-Owl
+Red-chested Owlet
+Red-chested Owlet (Western)
+Red-chested Owlet (Pycraft's)
+Red-chested Owlet (Eastern)
+Sjöstedt's Owlet
+Asian Barred Owlet
+Javan Owlet
+Jungle Owlet
+Asian Barred/Jungle Owlet
+Chestnut-backed Owlet
+African Barred Owlet
+African Barred Owlet (Spot-fronted)
+African Barred Owlet (Bar-fronted)
+African Barred Owlet (Etchecopar's)
+African Barred Owlet (Chestnut)
+Albertine Owlet
+Glaucidium sp.
+Collared Owlet
+Sunda Owlet
+Elf Owl
+Long-whiskered Owlet
+Spotted Owlet
+Little Owl
+Little Owl (Little)
+Little Owl (Abyssinian)
+Little Owl (Lilith)
+Little Owl (Hutton's)
+Forest Owlet
+West Solomons Owl
+Guadalcanal Owl
+Malaita Owl
+Makira Owl
+White-browed Owl
+Burrowing Owl
+Burrowing Owl (Western)
+Burrowing Owl (Florida)
+Burrowing Owl (guadeloupensis Group)
+Burrowing Owl (Andean)
+Burrowing Owl (Littoral)
+Burrowing Owl (grallaria)
+Burrowing Owl (Southern)
+Mottled Owl
+Mottled Owl (Mottled)
+Mottled Owl (Amazonian)
+Mottled Owl (Atlantic Forest)
+Black-and-white Owl
+Black-banded Owl
+Black-banded Owl (San Isidro)
+Rufous-banded Owl
+neotropical Strix sp.
+Spotted Wood-Owl
+Mottled Wood-Owl
+Brown Wood-Owl
+Brown Wood-Owl (Brown)
+Brown Wood-Owl (Nias)
+Brown Wood-Owl (Bornean)
+Tawny Owl
+Maghreb Owl
+Himalayan Owl
+Desert Owl
+Omani Owl
+Spotted Owl
+Spotted Owl (Northern)
+Spotted Owl (California)
+Spotted Owl (Mexican)
+Barred Owl
+Spotted x Barred Owl (hybrid)
+Spotted/Barred Owl
+Cinereous Owl
+Fulvous Owl
+Rusty-barred Owl
+Rufous-legged Owl
+Chaco Owl
+Ural Owl
+Ural Owl (Ural)
+Ural Owl (Pere David's)
+Great Gray Owl
+Great Gray Owl (American)
+Great Gray Owl (Lapland)
+African Wood-Owl
+Strix sp.
+Jamaican Owl
+Long-eared Owl
+Long-eared Owl (American)
+Long-eared Owl (Eurasian)
+Abyssinian Owl
+Madagascar Owl
+Striped Owl
+Stygian Owl
+Short-eared Owl
+Short-eared Owl (Northern)
+Short-eared Owl (Pohnpei)
+Short-eared Owl (Hawaiian)
+Short-eared Owl (Antillean)
+Short-eared Owl (Galapagos)
+Short-eared Owl (South American)
+Long-eared/Short-eared Owl
+Marsh Owl
+Fearful Owl
+Asio sp.
+Boreal Owl
+Boreal Owl (Tengmalm's)
+Boreal Owl (Richardson's)
+Northern Saw-whet Owl
+Northern Saw-whet Owl (acadicus)
+Northern Saw-whet Owl (Haida Gwaii)
+Boreal/Northern Saw-whet Owl
+Bermuda Saw-whet Owl
+Unspotted Saw-whet Owl
+pygmy-owl/saw-whet owl sp.
+Buff-fronted Owl
+Rufous Owl
+Powerful Owl
+Barking Owl
+Sumba Boobook
+Andaman Boobook
+Southern Boobook
+Southern Boobook (Boobook)
+Southern Boobook (Red)
+Rote Boobook
+Timor Boobook
+Alor Boobook
+Tasmanian Boobook
+Southern/Tasmanian Boobook
+Morepork
+Laughing Owl
+Least Boobook
+Brown Boobook
+Hume's Boobook
+Northern Boobook
+Brown/Northern Boobook
+Chocolate Boobook
+Luzon Boobook
+Mindanao Boobook
+Mindoro Boobook
+Romblon Boobook
+Cebu Boobook
+Camiguin Boobook
+Sulu Boobook
+Ochre-bellied Boobook
+Togian Boobook
+Cinnabar Boobook
+White-spotted Boobook (undescribed form)
+Halmahera Boobook
+Tanimbar Boobook
+Seram Boobook
+Buru Boobook
+Christmas Island Boobook
+Papuan Boobook
+Manus Boobook
+Speckled Boobook
+Bismarck Boobook
+New Britain Boobook
+boobook sp.
+Papuan Owl
+owl sp.

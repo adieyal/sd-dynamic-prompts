@@ -1,0 +1,266 @@
+# Originally sourced from Clements Checklist v2022
+Pesquet's Parrot
+Greater Vasa Parrot
+Lesser Vasa Parrot
+Lesser Vasa Parrot (Comoro)
+Lesser Vasa Parrot (Black)
+Greater/Lesser Vasa Parrot
+Seychelles Parrot
+Yellow-capped Pygmy-Parrot
+Geelvink Pygmy-Parrot
+Buff-faced Pygmy-Parrot
+Red-breasted Pygmy-Parrot
+Meek's Pygmy-Parrot
+Finsch's Pygmy-Parrot
+pygmy-parrot sp.
+Superb Parrot
+Regent Parrot
+Princess Parrot
+Australian King-Parrot
+Moluccan King-Parrot
+Papuan King-Parrot
+Olive-shouldered Parrot
+Red-winged Parrot
+Australian King-Parrot x Red-winged Parrot (hybrid)
+Buru Racquet-tail
+Golden-mantled Racquet-tail
+Mindanao Racquet-tail
+Luzon Racquet-tail
+Blue-headed Racquet-tail
+Mindoro Racquet-tail
+Blue-winged Racquet-tail
+Yellow-breasted Racquet-tail
+Green Racquet-tail
+Blue-crowned Racquet-tail
+Blue-crowned Racquet-tail (Blue-crowned)
+Blue-crowned Racquet-tail (Blue-capped)
+racquet-tail sp.
+Eclectus Parrot
+Eclectus Parrot (Moluccan)
+Eclectus Parrot (Sumba)
+Eclectus Parrot (Tanimbar)
+Eclectus Parrot (Papuan)
+Oceanic Parrot
+Red-cheeked Parrot
+Blue-collared Parrot
+Singing Parrot
+Singing Parrot (Northern)
+Singing Parrot (Rennell)
+Blue-rumped Parrot
+Blue-rumped Parrot (Blue-rumped)
+Blue-rumped Parrot (Simeulue)
+Mascarene Parrot
+Alexandrine Parakeet
+Seychelles Parakeet
+Rose-ringed Parakeet
+Alexandrine/Rose-ringed Parakeet
+Echo Parakeet
+Slaty-headed Parakeet
+Gray-headed Parakeet
+Plum-headed Parakeet
+Rose-ringed x Plum-headed Parakeet (hybrid)
+Slaty-headed x Plum-headed Parakeet (hybrid)
+Blossom-headed Parakeet
+Malabar Parakeet
+Layard's Parakeet
+Derbyan Parakeet
+Red-breasted Parakeet
+Nicobar Parakeet
+Newton's Parakeet
+Long-tailed Parakeet
+Long-tailed Parakeet (Andaman)
+Long-tailed Parakeet (Nicobar)
+Long-tailed Parakeet (Long-tailed)
+Long-tailed Parakeet (Enggano)
+Psittacula sp.
+Mauritius Gray Parrot
+Broad-billed Parrot
+Rodrigues Parrot
+Painted Tiger-Parrot
+Painted Tiger-Parrot (Snow Mountains)
+Painted Tiger-Parrot (Eastern)
+Brehm's Tiger-Parrot
+Modest Tiger-Parrot
+Madarasz's Tiger-Parrot
+tiger-parrot sp.
+Black-lored Parrot
+Great-billed Parrot
+Blue-naped Parrot
+Azure-rumped Parrot
+Azure-rumped Parrot (Blue-backed)
+Azure-rumped Parrot (Azure-rumped)
+Ground Parrot
+Ground Parrot (Western)
+Ground Parrot (Eastern)
+Night Parrot
+Bourke's Parrot
+Blue-winged Parrot
+Elegant Parrot
+Rock Parrot
+Orange-bellied Parrot
+Turquoise Parrot
+Scarlet-chested Parrot
+Neophema sp.
+Swift Parrot
+Crimson Shining-Parrot
+Red Shining-Parrot
+Masked Shining-Parrot
+Horned Parakeet
+Ouvea Parakeet
+Raiatea Parakeet
+Black-fronted Parakeet
+Antipodes Parakeet
+Red-crowned Parakeet
+Reischek's Parakeet
+New Caledonian Parakeet
+Norfolk Island Parakeet
+Yellow-crowned Parakeet
+Chatham Islands Parakeet
+Malherbe's Parakeet
+Cyanoramphus sp.
+Australian Ringneck
+Australian Ringneck (Twenty-eight)
+Australian Ringneck (Port Lincoln)
+Australian Ringneck (Mallee)
+Australian Ringneck (Cloncurry)
+Australian Ringneck (Twenty-eight x Port Lincoln)
+Green Rosella
+Crimson Rosella
+Crimson Rosella (Crimson)
+Crimson Rosella (Yellow)
+Crimson Rosella (Crimson x Yellow)
+Crimson Rosella (Adelaide)
+Northern Rosella
+Eastern Rosella
+Green x Eastern Rosella (hybrid)
+Crimson x Eastern Rosella (hybrid)
+Pale-headed Rosella
+Eastern x Pale-headed Rosella (hybrid)
+Crimson x Pale-headed Rosella (hybrid)
+Western Rosella
+Greater Bluebonnet
+Greater Bluebonnet (Yellow-vented)
+Greater Bluebonnet (Red-vented)
+Naretha Bluebonnet
+Red-rumped Parrot
+Mulga Parrot
+Hooded Parrot
+Golden-shouldered Parrot
+Paradise Parrot
+Red-capped Parrot
+Orange-breasted Fig-Parrot
+Orange-breasted Fig-Parrot (Dusky-cheeked)
+Orange-breasted Fig-Parrot (Blue-fronted)
+Orange-breasted Fig-Parrot (Black-fronted)
+Orange-breasted Fig-Parrot (Creamy-breasted)
+Double-eyed Fig-Parrot
+Double-eyed Fig-Parrot (Double-eyed)
+Double-eyed Fig-Parrot (Coxen's)
+Large Fig-Parrot
+Large Fig-Parrot (Large)
+Large Fig-Parrot (Yellow-naped)
+Large Fig-Parrot (Red-faced)
+Edwards's Fig-Parrot
+Salvadori's Fig-Parrot
+Guaiabero
+Budgerigar
+Budgerigar (Domestic type)
+Plum-faced Lorikeet
+Pygmy Lorikeet
+Red-fronted Lorikeet
+Red-flanked Lorikeet
+Blue-fronted Lorikeet
+Fairy Lorikeet
+Striated Lorikeet
+Josephine's Lorikeet
+Papuan Lorikeet
+Papuan Lorikeet (Vogelkop)
+Papuan Lorikeet (Stella's)
+Duchess Lorikeet
+Meek's Lorikeet
+New Caledonian Lorikeet
+Red-chinned Lorikeet
+Palm Lorikeet
+Red-throated Lorikeet
+Collared Lory
+Blue-crowned Lorikeet
+Ultramarine Lorikeet
+Stephen's Lorikeet
+Kuhl's Lorikeet
+Blue Lorikeet
+Yellow-billed Lorikeet
+Orange-billed Lorikeet
+Yellow-billed/Orange-billed Lorikeet
+White-naped Lory
+Yellow-bibbed Lory
+Chattering Lory
+Purple-naped Lory
+Purple-bellied Lory
+Black-capped Lory
+Varied Lorikeet
+Little Lorikeet
+Purple-crowned Lorikeet
+Dusky Lory
+Cardinal Lory
+Brown Lory
+Black Lory
+Yellow-streaked Lory
+Goldie's Lorikeet
+Musk Lorikeet
+Mindanao Lorikeet
+Iris Lorikeet
+Ornate Lorikeet
+Yellow-cheeked Lorikeet
+Sula Lorikeet
+Blue-streaked Lory
+Blue-eared Lory
+Red Lory
+Black-winged Lory
+Red-and-blue Lory
+Violet-necked Lory
+Pohnpei Lorikeet
+Scaly-breasted Lorikeet
+Coconut Lorikeet
+Coconut Lorikeet (Biak)
+Coconut Lorikeet (Coconut)
+Rainbow Lorikeet
+Musk x Rainbow Lorikeet (hybrid)
+Scaly-breasted x Rainbow Lorikeet (hybrid)
+Scaly-breasted/Rainbow Lorikeet
+lorikeet sp. (Musk/Rainbow/Scaly-breasted Lorikeet hybrid)
+Red-collared Lorikeet
+Rainbow x Red-collared Lorikeet (hybrid)
+Rainbow/Red-collared Lorikeet
+rainbow lorikeet sp.
+Olive-headed Lorikeet
+Marigold Lorikeet
+Leaf Lorikeet
+Sunset Lorikeet
+lorikeet sp.
+Vernal Hanging-Parrot
+Sri Lanka Hanging-Parrot
+Philippine Hanging-Parrot
+Camiguin Hanging-Parrot
+Blue-crowned Hanging-Parrot
+Sulawesi Hanging-Parrot
+Sula Hanging-Parrot
+Moluccan Hanging-Parrot
+Sangihe Hanging-Parrot
+Papuan Hanging-Parrot
+Green-fronted Hanging-Parrot
+Pygmy Hanging-Parrot
+Yellow-throated Hanging-Parrot
+Wallace's Hanging-Parrot
+hanging-parrot sp.
+Black-collared Lovebird
+Gray-headed Lovebird
+Red-headed Lovebird
+Black-winged Lovebird
+Rosy-faced Lovebird
+Fischer's Lovebird
+Yellow-collared Lovebird
+Fischer's x Yellow-collared Lovebird (hybrid)
+Fischer's/Yellow-collared Lovebird
+Lilian's Lovebird
+Black-cheeked Lovebird
+lovebird sp.

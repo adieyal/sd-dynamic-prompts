@@ -1,0 +1,257 @@
+# Originally sourced from Clements Checklist v2022
+Udzungwa Partridge
+Udzungwa Partridge (Udzungwa)
+Udzungwa Partridge (Rubeho)
+Ferruginous Partridge
+Crested Partridge
+Black Partridge
+Hill Partridge
+Sichuan Partridge
+Chestnut-breasted Partridge
+White-necklaced Partridge
+Rufous-throated Partridge
+Red-billed Partridge
+Chestnut-headed Partridge
+Chestnut-headed Partridge (Siamese)
+Chestnut-headed Partridge (Chestnut-headed)
+Hainan Partridge
+Taiwan Partridge
+White-cheeked Partridge
+Bar-backed Partridge
+Orange-necked Partridge
+Red-breasted Partridge
+Malayan Partridge
+Roll's Partridge
+Sumatran Partridge
+Roll's/Sumatran Partridge
+Chestnut-bellied Partridge
+Gray-breasted Partridge
+Snow Partridge
+Blood Pheasant
+Western Tragopan
+Satyr Tragopan
+Blyth's Tragopan
+Temminck's Tragopan
+Cabot's Tragopan
+Verreaux's Partridge
+Szechenyi's Partridge
+Himalayan Monal
+Sclater's Monal
+Chinese Monal
+Koklass Pheasant
+Wild Turkey
+Wild Turkey (Domestic type)
+Ocellated Turkey
+Ruffed Grouse
+Hazel Grouse
+Severtzov's Grouse
+Greater Sage-Grouse
+Gunnison Sage-Grouse
+Greater/Gunnison Sage-Grouse
+Dusky Grouse
+Sooty Grouse
+Dusky/Sooty Grouse
+Sharp-tailed Grouse
+Greater Sage-Grouse x Sharp-tailed Grouse (hybrid)
+Dusky x Sharp-tailed Grouse (hybrid)
+Greater Prairie-Chicken
+Greater Prairie-Chicken (pinnatus)
+Greater Prairie-Chicken (Heath Hen)
+Greater Prairie-Chicken (Attwater's)
+Sharp-tailed Grouse x Greater Prairie-Chicken (hybrid)
+Lesser Prairie-Chicken
+Greater x Lesser Prairie-Chicken (hybrid)
+Greater/Lesser Prairie-Chicken
+White-tailed Ptarmigan
+Willow Ptarmigan
+Willow Ptarmigan (Red Grouse)
+Willow Ptarmigan (Willow)
+Rock Ptarmigan
+ptarmigan sp.
+Siberian Grouse
+Spruce Grouse
+Spruce Grouse (Spruce)
+Spruce Grouse (Franklin's)
+Spruce Grouse (Spruce x Franklin's)
+Ruffed/Spruce Grouse
+Black-billed Capercaillie
+Western Capercaillie
+Black Grouse
+Western Capercaillie x Black Grouse (hybrid)
+Caucasian Grouse
+grouse sp.
+Long-billed Partridge
+Dulit Partridge
+Tibetan Partridge
+Gray Partridge
+Daurian Partridge
+Copper Pheasant
+Reeves's Pheasant
+Mikado Pheasant
+Elliot's Pheasant
+Hume's Pheasant
+Golden Pheasant
+Lady Amherst's Pheasant
+Golden x Lady Amherst's Pheasant (hybrid)
+Ring-necked Pheasant
+Green Pheasant
+Ring-necked x Green Pheasant (hybrid)
+Ring-necked/Green Pheasant
+Cheer Pheasant
+Tibetan Eared-Pheasant
+White Eared-Pheasant
+Tibetan x White Eared-Pheasant (hybrid)
+Tibetan/White Eared-Pheasant
+Brown Eared-Pheasant
+Blue Eared-Pheasant
+Edwards's Pheasant
+Swinhoe's Pheasant
+Bulwer's Pheasant
+Kalij Pheasant
+Silver Pheasant
+Edwards's x Silver Pheasant (hybrid)
+Malayan Crestless Fireback
+Bornean Crestless Fireback
+Siamese Fireback
+Salvadori's Pheasant
+Salvadori's Pheasant (Hoogerwerf's)
+Salvadori's Pheasant (Salvadori's)
+Malayan Crested Fireback
+Bornean Crested Fireback
+Vietnamese Crested Argus
+Malayan Crested Argus
+Great Argus
+Congo Peacock
+Indian Peafowl
+Indian Peafowl (Domestic type)
+Green Peafowl
+Indian x Green Peafowl (hybrid)
+Scaly-breasted Partridge
+Scaly-breasted Partridge (Tonkin)
+Scaly-breasted Partridge (Green-legged)
+Chestnut-necklaced Partridge
+Sabah Partridge
+Arborophila/Tropicoperdix sp.
+Crimson-headed Partridge
+Red Spurfowl
+Painted Spurfowl
+Red/Painted Spurfowl
+Sri Lanka Spurfowl
+Palawan Peacock-Pheasant
+Bornean Peacock-Pheasant
+Malayan Peacock-Pheasant
+Germain's Peacock-Pheasant
+Hainan Peacock-Pheasant
+Gray Peacock-Pheasant
+Mountain Peacock-Pheasant
+Bronze-tailed Peacock-Pheasant
+pheasant sp.
+Mountain Bamboo-Partridge
+Chinese Bamboo-Partridge
+Taiwan Bamboo-Partridge
+Green Junglefowl
+Red Junglefowl
+Red Junglefowl (Domestic type)
+Gray Junglefowl
+Sri Lanka Junglefowl
+Latham's Francolin
+Crested Francolin
+Crested Francolin (Kirk's)
+Crested Francolin (Crested)
+Gray Francolin
+Swamp Francolin
+Chinese Francolin
+Black Francolin
+Black Francolin (Western)
+Black Francolin (Eastern)
+Painted Francolin
+Coqui Francolin
+Coqui Francolin (Plain-breasted)
+Coqui Francolin (Bar-breasted)
+White-throated Francolin
+White-throated Francolin (White-throated)
+White-throated Francolin (Chestnut-breasted)
+Schlegel's Francolin
+Ring-necked Francolin
+Red-winged Francolin
+Finsch's Francolin
+Moorland Francolin
+Elgon Francolin
+Gray-winged Francolin
+Orange River Francolin
+Orange River Francolin (Archer's)
+Orange River Francolin (Kunene)
+Orange River Francolin (Orange River)
+Shelley's Francolin
+Whyte's Francolin
+Shelley's/Whyte's Francolin
+Tibetan Snowcock
+Altai Snowcock
+Caucasian Snowcock
+Caspian Snowcock
+Himalayan Snowcock
+Tibetan/Himalayan Snowcock
+See-see Partridge
+Sand Partridge
+Brown Quail
+Snow Mountain Quail
+Blue-breasted Quail
+Blue Quail
+Madagascar Partridge
+Common Quail
+Japanese Quail
+Harlequin Quail
+Rain Quail
+Common/Rain Quail
+Stubble Quail
+New Zealand Quail
+old world quail sp.
+Barbary Partridge
+Arabian Partridge
+Red-legged Partridge
+Chukar
+Rock Partridge
+Rock Partridge (European)
+Rock Partridge (Sicilian)
+Red-legged x Rock Partridge (hybrid)
+Chukar x Rock Partridge (hybrid)
+Red-legged/Rock Partridge
+Philby's Partridge
+Przevalski's Partridge
+Alectoris sp.
+Jungle Bush-Quail
+Rock Bush-Quail
+Jungle/Rock Bush-Quail
+Painted Bush-Quail
+Manipur Bush-Quail
+Himalayan Quail
+Hartlaub's Spurfowl
+Mount Cameroon Spurfowl
+Handsome Spurfowl
+Chestnut-naped Spurfowl
+Chestnut-naped Spurfowl (Northern)
+Chestnut-naped Spurfowl (Black-fronted)
+Erckel's Spurfowl
+Djibouti Spurfowl
+Swierstra's Spurfowl
+Ahanta Spurfowl
+Gray-striped Spurfowl
+Jackson's Spurfowl
+Red-billed Spurfowl
+Cape Spurfowl
+Natal Spurfowl
+Hildebrandt's Spurfowl
+Double-spurred Spurfowl
+Scaly Spurfowl
+Heuglin's Spurfowl
+Clapperton's Spurfowl
+Harwood's Spurfowl
+Swainson's Spurfowl
+Yellow-necked Spurfowl
+Gray-breasted Spurfowl
+Red-necked Spurfowl
+Red-necked Spurfowl (Cranch's)
+Red-necked Spurfowl (Northern)
+Red-necked Spurfowl (Benguela)
+Red-necked Spurfowl (Southern)
+francolin/spurfowl sp.

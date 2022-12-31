@@ -1,0 +1,87 @@
+# Originally sourced from Clements Checklist v2022
+Aldabra Brush-Warbler
+Malagasy Brush-Warbler
+Malagasy Brush-Warbler (Anjouan)
+Malagasy Brush-Warbler (Malagasy)
+Subdesert Brush-Warbler
+Grand Comoro Brush-Warbler
+Moheli Brush-Warbler
+Papyrus Yellow-Warbler
+Papyrus Yellow-Warbler (Papyrus)
+Papyrus Yellow-Warbler (Zambian)
+Thick-billed Warbler
+Booted Warbler
+Sykes's Warbler
+Booted/Sykes's Warbler
+Eastern Olivaceous Warbler
+Western Olivaceous Warbler
+Eastern/Western Olivaceous Warbler
+African Yellow-Warbler
+Mountain Yellow-Warbler
+Iduna sp.
+Upcher's Warbler
+Olive-tree Warbler
+Melodious Warbler
+Icterine Warbler
+Melodious/Icterine Warbler
+Hippolais sp.
+Aquatic Warbler
+Black-browed Reed Warbler
+Streaked Reed Warbler
+Moustached Warbler
+Sedge Warbler
+Paddyfield Warbler
+Blunt-winged Warbler
+Manchurian Reed Warbler
+Black-browed/Manchurian Reed Warbler
+Blunt-winged/Manchurian Reed Warbler
+Blyth's Reed Warbler
+Paddyfield/Blyth's Reed Warbler
+Large-billed Reed Warbler
+Paddyfield/Blunt-winged/Blyth's/Large-billed Reed Warbler
+Marsh Warbler
+Common Reed Warbler
+Common Reed Warbler (Common)
+Common Reed Warbler (Caspian)
+Common Reed Warbler (Mangrove)
+Common Reed Warbler (Siwa)
+Common Reed Warbler (African)
+Marsh/Common Reed Warbler
+Basra Reed Warbler
+Lesser Swamp Warbler
+Greater Swamp Warbler
+Cape Verde Swamp Warbler
+Madagascar Swamp Warbler
+Rodrigues Warbler
+Seychelles Warbler
+Great Reed Warbler
+Common/Great Reed Warbler
+Oriental Reed Warbler
+Clamorous Reed Warbler
+Clamorous Reed Warbler (Clamorous)
+Clamorous Reed Warbler (Brown)
+Great/Oriental/Clamorous Reed Warbler
+Nightingale Reed Warbler
+Saipan Reed Warbler
+Australian Reed Warbler
+Caroline Reed Warbler
+Aguiguan Reed Warbler
+Kiritimati Reed Warbler
+Southern Marquesan Reed Warbler
+Pagan Reed Warbler
+Nauru Reed Warbler
+Millerbird
+Millerbird (Nihoa)
+Millerbird (Laysan)
+Pitcairn Reed Warbler
+Henderson Island Reed Warbler
+Cook Islands Reed Warbler
+Rimitara Reed Warbler
+Society Islands Reed Warbler
+Tahiti Reed Warbler
+Moorea Reed Warbler
+Northern Marquesan Reed Warbler
+Tuamotu Reed Warbler
+Mangareva Reed Warbler
+Acrocephalus sp.
+Iduna/Hippolais/Acrocephalus sp.

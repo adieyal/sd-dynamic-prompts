@@ -1,0 +1,536 @@
+# Originally sourced from Clements Checklist v2022
+Crimson Topaz
+Fiery Topaz
+Crimson/Fiery Topaz
+White-necked Jacobin
+Black Jacobin
+White-tipped Sicklebill
+Buff-tailed Sicklebill
+Saw-billed Hermit
+Hook-billed Hermit
+Bronzy Hermit
+Rufous-breasted Hermit
+Band-tailed Barbthroat
+Pale-tailed Barbthroat
+Sooty Barbthroat
+Broad-tipped Hermit
+White-bearded Hermit
+White-whiskered Hermit
+Green Hermit
+Tawny-bellied Hermit
+Koepcke's Hermit
+Needle-billed Hermit
+Straight-billed Hermit
+Straight-billed Hermit (bourcieri)
+Straight-billed Hermit (major)
+Long-billed Hermit
+Long-billed Hermit (Central American)
+Long-billed Hermit (Baron's)
+Mexican Hermit
+Mexican Hermit (Jalisco)
+Mexican Hermit (Mexican)
+Long-tailed Hermit
+Long-billed/Long-tailed Hermit
+Great-billed Hermit
+Great-billed Hermit (Great-billed)
+Great-billed Hermit (Amazonian)
+Great-billed Hermit (Margaretta's)
+Pale-bellied Hermit
+Dusky-throated Hermit
+Maranhao Hermit (unrecognized species)
+Streak-throated Hermit
+Little Hermit
+Tapajos Hermit
+Minute Hermit
+Cinnamon-throated Hermit
+Black-throated Hermit
+Stripe-throated Hermit
+Gray-chinned Hermit
+Gray-chinned Hermit (Porculla)
+Gray-chinned Hermit (Gray-chinned)
+Reddish Hermit
+White-browed Hermit
+Reddish/White-browed Hermit
+Buff-bellied Hermit
+Sooty-capped Hermit
+Planalto Hermit
+Scale-throated Hermit
+hermit sp.
+Green-fronted Lancebill
+Blue-fronted Lancebill
+White-throated Daggerbill
+Geoffroy's Daggerbill
+White-throated/Geoffroy's Daggerbill
+Hyacinth Visorbearer
+Hooded Visorbearer
+White-vented Violetear
+Sparkling Violetear
+Brown Violetear
+Mexican Violetear
+Lesser Violetear
+Lesser Violetear (Costa Rican)
+Lesser Violetear (Andean)
+Sparkling/Lesser Violetear
+violetear sp.
+Horned Sungem
+Tooth-billed Hummingbird
+Purple-crowned Fairy
+Black-eared Fairy
+White-tailed Goldenthroat
+Tepui Goldenthroat
+Green-tailed Goldenthroat
+Fiery-tailed Awlbill
+Ruby-topaz Hummingbird
+Jamaican Mango
+Black-throated Mango
+Black-throated Mango (Black-throated)
+Black-throated Mango (Ecuadorian)
+Green-throated Mango
+Green-breasted Mango
+Veraguan Mango
+Hispaniolan Mango
+Puerto Rican Mango
+Green Mango
+mango sp.
+Purple-throated Carib
+Green-throated Carib
+Purple-throated/Green-throated Carib
+Orange-throated Sunangel
+Longuemare's Sunangel
+Merida Sunangel
+Amethyst-throated Sunangel
+Gorgeted Sunangel
+Tourmaline Sunangel
+Little Sunangel
+Purple-throated Sunangel
+Purple-throated Sunangel (Purple-throated)
+Purple-throated Sunangel (Brilliant)
+Royal Sunangel
+Heliangelus sp.
+Green-backed Firecrown
+Juan Fernandez Firecrown
+Green-backed/Juan Fernandez Firecrown
+Wire-crested Thorntail
+Black-bellied Thorntail
+Coppery Thorntail
+Green Thorntail
+Racket-tipped Thorntail
+Tufted Coquette
+Dot-eared Coquette
+Frilled Coquette
+Short-crested Coquette
+Rufous-crested Coquette
+Spangled Coquette
+Butterfly Coquette
+Festive Coquette
+Peacock Coquette
+Black-crested Coquette
+White-crested Coquette
+thorntail/coquette sp.
+Ecuadorian Piedtail
+Peruvian Piedtail
+Speckled Hummingbird
+Speckled Hummingbird (melanogenys Group)
+Speckled Hummingbird (maculata)
+Speckled Hummingbird (inornata)
+Long-tailed Sylph
+Violet-tailed Sylph
+Venezuelan Sylph
+Red-tailed Comet
+Bronze-tailed Comet
+Gray-bellied Comet
+Ecuadorian Hillstar
+Blue-throated Hillstar
+Green-headed Hillstar
+Black-breasted Hillstar
+Green-headed/Black-breasted Hillstar
+Andean Hillstar
+White-sided Hillstar
+Wedge-tailed Hillstar
+Oreotrochilus sp.
+Mountain Avocetbill
+Black-tailed Trainbearer
+Green-tailed Trainbearer
+Black-tailed/Green-tailed Trainbearer
+Black-backed Thornbill
+Purple-backed Thornbill
+Rufous-capped Thornbill
+Olivaceous Thornbill
+Blue-mantled Thornbill
+Bronze-tailed Thornbill
+Rainbow-bearded Thornbill
+Buffy Helmetcrest
+Blue-bearded Helmetcrest
+White-bearded Helmetcrest
+Green-bearded Helmetcrest
+helmetcrest sp.
+Bearded Mountaineer
+Bearded Mountaineer (Western)
+Bearded Mountaineer (Eastern)
+Perija Metaltail
+Tyrian Metaltail
+Tyrian Metaltail (Santa Marta)
+Tyrian Metaltail (Costa)
+Tyrian Metaltail (Merida)
+Tyrian Metaltail (Tyrian)
+Tyrian Metaltail (septentrionalis)
+Tyrian Metaltail (smaragdinicollis)
+Long-tailed Sylph x Tyrian Metaltail (hybrid)
+Viridian Metaltail
+Viridian Metaltail (recisa)
+Viridian Metaltail (Viridian)
+Viridian Metaltail (Ecuadorian)
+Viridian Metaltail (Black-throated)
+Violet-throated Metaltail
+Neblina Metaltail
+Coppery Metaltail
+Fire-throated Metaltail
+Scaled Metaltail
+Black Metaltail
+metaltail sp.
+Greenish Puffleg
+Buff-thighed Puffleg
+Hoary Puffleg
+Black-breasted Puffleg
+Gorgeted Puffleg
+Glowing Puffleg
+Black-thighed Puffleg
+Turquoise-throated Puffleg
+Coppery-bellied Puffleg
+Sapphire-vented Puffleg
+Sapphire-vented Puffleg (Sapphire-vented)
+Sapphire-vented Puffleg (Coppery-naped)
+Golden-breasted Puffleg
+Blue-capped Puffleg
+Colorful Puffleg
+Emerald-bellied Puffleg
+Marvelous Spatuletail
+Shining Sunbeam
+White-tufted Sunbeam
+Shining x White-tufted Sunbeam (hybrid)
+Shining/White-tufted Sunbeam
+Purple-backed Sunbeam
+Black-hooded Sunbeam
+Bronzy Inca
+Brown Inca
+Black Inca
+Collared Inca
+Collared Inca (Collared)
+Collared Inca (Vilcabamba)
+Green Inca
+Gould's Inca
+Violet-throated Starfrontlet
+Violet-throated Starfrontlet (Huanuco)
+Violet-throated Starfrontlet (Apurimac)
+Violet-throated Starfrontlet (Cuzco)
+Violet-throated Starfrontlet (Bolivian)
+Rainbow Starfrontlet
+White-tailed Starfrontlet
+Dusky Starfrontlet
+Buff-winged Starfrontlet
+Perija Starfrontlet
+Golden-bellied Starfrontlet
+Merida Starfrontlet
+Blue-throated Starfrontlet
+Coeligena sp.
+Mountain Velvetbreast
+Sword-billed Hummingbird
+Great Sapphirewing
+Buff-tailed Coronet
+Chestnut-breasted Coronet
+Velvet-purple Coronet
+Buff-tailed x Velvet-purple Coronet (hybrid)
+White-booted Racket-tail
+Peruvian Racket-tail
+Rufous-booted Racket-tail
+Rufous-booted Racket-tail (Anna's)
+Rufous-booted Racket-tail (Adda's)
+Peruvian/Rufous-booted Racket-tail
+Rufous-gaped Hillstar
+Green-backed Hillstar
+Purple-bibbed Whitetip
+Rufous-vented Whitetip
+Velvet-browed Brilliant
+Pink-throated Brilliant
+Rufous-webbed Brilliant
+Black-throated Brilliant
+Black-throated Brilliant (Black-throated)
+Black-throated Brilliant (Black-breasted)
+Gould's Jewelfront
+Fawn-breasted Brilliant
+Green-crowned Brilliant
+Empress Brilliant
+Buff-tailed Coronet x Empress Brilliant (hybrid)
+Violet-fronted Brilliant
+Brazilian Ruby
+Giant Hummingbird
+Violet-chested Hummingbird
+Scissor-tailed Hummingbird
+Rivoli's Hummingbird
+Talamanca Hummingbird
+Long-billed Starthroat
+Plain-capped Starthroat
+Long-billed/Plain-capped Starthroat
+Stripe-breasted Starthroat
+Blue-tufted Starthroat
+Fiery-throated Hummingbird
+Green-throated Mountain-gem
+Green-breasted Mountain-gem
+Amethyst-throated Mountain-gem
+Amethyst-throated Mountain-gem (Amethyst-throated)
+Amethyst-throated Mountain-gem (Violet-throated)
+Blue-throated Mountain-gem
+White-bellied Mountain-gem
+Purple-throated Mountain-gem
+White-throated Mountain-gem
+White-throated Mountain-gem (Blue-tailed)
+White-throated Mountain-gem (Gray-tailed)
+Purple-throated x White-throated Mountain-gem (hybrid)
+Purple-throated/White-throated Mountain-gem
+Garnet-throated Hummingbird
+Sparkling-tailed Hummingbird
+Amethyst Woodstar
+Peruvian Sheartail
+Short-tailed Woodstar
+Purple-collared Woodstar
+Oasis Hummingbird
+Chilean Woodstar
+Peruvian Sheartail x Chilean Woodstar (hybrid)
+Slender-tailed Woodstar
+White-bellied Woodstar
+Little Woodstar
+Gorgeted Woodstar
+Santa Marta Woodstar
+Esmeraldas Woodstar
+Rufous-shafted Woodstar
+Chaetocercus sp.
+Magenta-throated Woodstar
+Purple-throated Woodstar
+woodstar sp.
+Slender Sheartail
+Mexican Sheartail
+Lucifer Hummingbird
+Beautiful Hummingbird
+Lucifer/Beautiful Hummingbird
+Ruby-throated Hummingbird
+Black-chinned Hummingbird
+Lucifer x Black-chinned Hummingbird (hybrid)
+Ruby-throated x Black-chinned Hummingbird (hybrid)
+Ruby-throated/Black-chinned Hummingbird
+Bahama Woodstar
+Inagua Woodstar
+Vervain Hummingbird
+Bee Hummingbird
+Anna's Hummingbird
+Lucifer x Anna's Hummingbird (hybrid)
+Black-chinned x Anna's Hummingbird (hybrid)
+Costa's Hummingbird
+Lucifer x Costa's Hummingbird (hybrid)
+Black-chinned x Costa's Hummingbird (hybrid)
+Anna's x Costa's Hummingbird (hybrid)
+Anna's/Costa's Hummingbird
+Calliope Hummingbird
+Black-chinned x Calliope Hummingbird (hybrid)
+Anna's x Calliope Hummingbird (hybrid)
+Rufous Hummingbird
+Black-chinned x Rufous Hummingbird (hybrid)
+Anna's x Rufous Hummingbird (hybrid)
+Calliope x Rufous Hummingbird (hybrid)
+Allen's Hummingbird
+Anna's x Allen's Hummingbird (hybrid)
+Rufous x Allen's Hummingbird (hybrid)
+Rufous/Allen's Hummingbird
+Broad-tailed Hummingbird
+Calliope x Broad-tailed Hummingbird (hybrid)
+Rufous x Broad-tailed Hummingbird (hybrid)
+Bumblebee Hummingbird
+Wine-throated Hummingbird
+Volcano Hummingbird
+Volcano Hummingbird (Purple-throated)
+Volcano Hummingbird (Heliotrope-throated)
+Volcano Hummingbird (Rose-throated)
+Scintillant Hummingbird
+Glow-throated Hummingbird
+Selasphorus sp.
+Anna's Hummingbird x Selasphorus sp. (hybrid)
+Dusky Hummingbird
+Cuban Emerald
+Brace's Emerald
+Elegant Emerald (unrecognized species)
+Hispaniolan Emerald
+Puerto Rican Emerald
+Blue-headed Hummingbird
+Broad-billed Hummingbird
+Black-chinned x Broad-billed Hummingbird (hybrid)
+Anna's x Broad-billed Hummingbird (hybrid)
+Tres Marias Hummingbird
+Broad-billed/Tres Marias Hummingbird
+Turquoise-crowned Hummingbird
+Broad-billed x Turquoise-crowned Hummingbird (hybrid)
+Dusky/Turquoise-crowned Hummingbird
+Broad-billed/Turquoise-crowned Hummingbird
+Golden-crowned Emerald
+Cozumel Emerald
+Canivet's Emerald
+Canivet's Emerald (Canivet's)
+Canivet's Emerald (Salvin's)
+Blue-tailed Emerald
+Chiribiquete Emerald
+Red-billed Emerald
+Glittering-bellied Emerald
+Short-tailed Emerald
+Narrow-tailed Emerald
+Green-tailed Emerald
+Coppery Emerald
+Garden Emerald
+Western Emerald
+Riccordia/Cynanthus/Chlorostilbon sp.
+White-eared Hummingbird
+Xantus's Hummingbird
+Wedge-tailed Sabrewing
+Wedge-tailed Sabrewing (Curve-winged)
+Wedge-tailed Sabrewing (Wedge-tailed)
+Wedge-tailed Sabrewing (Long-tailed)
+Rufous Sabrewing
+Violet-headed Hummingbird
+Emerald-chinned Hummingbird
+Antillean Crested Hummingbird
+Antillean Crested Hummingbird (Lesser Antilles)
+Antillean Crested Hummingbird (St. Vincent)
+Antillean Crested Hummingbird (Barbados)
+Antillean Crested Hummingbird (Grenadines and Grenada)
+Green-crowned Plovercrest
+Purple-crowned Plovercrest
+Santa Marta Blossomcrown
+Tolima Blossomcrown
+Gray-breasted Sabrewing
+Gray-breasted Sabrewing (largipennis)
+Gray-breasted Sabrewing (obscurus)
+Outcrop Sabrewing
+Diamantina Sabrewing
+Violet Sabrewing
+Rufous-breasted Sabrewing
+Buff-breasted Sabrewing
+Napo Sabrewing
+Lazuline Sabrewing
+Santa Marta Sabrewing
+White-tailed Sabrewing
+Bronze-tailed Plumeleteer
+White-vented Plumeleteer
+White-vented Plumeleteer (White-vented)
+White-vented Plumeleteer (Blue-bellied)
+White-vented Plumeleteer (Ecuadorian)
+Violet-capped Woodnymph
+Long-tailed Woodnymph
+Crowned Woodnymph
+Crowned Woodnymph (Northern/Colombian Violet-crowned)
+Crowned Woodnymph (Northern Violet-crowned)
+Crowned Woodnymph (Colombian Violet-crowned)
+Crowned Woodnymph (Green-crowned/Emerald-bellied)
+Crowned Woodnymph (Green-crowned)
+Crowned Woodnymph (Emerald-bellied)
+Fork-tailed Woodnymph
+Violet-capped/Fork-tailed Woodnymph
+Snowcap
+Coppery-headed Emerald
+White-tailed Emerald
+Violet-capped Hummingbird
+Pirre Hummingbird
+Mexican Woodnymph
+White-tailed Hummingbird
+Blue-capped Hummingbird
+Stripe-tailed Hummingbird
+Black-bellied Hummingbird
+Scaly-breasted Hummingbird
+Scaly-breasted Hummingbird (Robert's)
+Scaly-breasted Hummingbird (Cuvier's)
+Buffy Hummingbird
+Tumbes Hummingbird
+Spot-throated Hummingbird
+Many-spotted Hummingbird
+Swallow-tailed Hummingbird
+Sombre Hummingbird
+Olive-spotted Hummingbird
+Red-billed Streamertail
+Black-billed Streamertail
+Red-billed x Black-billed Streamertail (hybrid)
+Red-billed/Black-billed Streamertail
+Violet-crowned Hummingbird
+Broad-billed x Violet-crowned Hummingbird (hybrid)
+Green-fronted Hummingbird
+Green-fronted Hummingbird (Green-fronted)
+Green-fronted Hummingbird (Cinnamon-sided)
+Green-fronted Hummingbird (villadai)
+Azure-crowned Hummingbird
+Azure-crowned Hummingbird (Azure-crowned)
+Azure-crowned Hummingbird (Mosquitia)
+Blue-vented Hummingbird
+Berylline Hummingbird
+Berylline Hummingbird (Northern)
+Berylline Hummingbird (Sumichrast's)
+Rivoli's x Berylline Hummingbird (hybrid)
+Blue-tailed Hummingbird
+Snowy-bellied Hummingbird
+Steely-vented Hummingbird
+Guanacaste Hummingbird (unrecognized species)
+Indigo-capped Hummingbird
+Chestnut-bellied Hummingbird
+Green-bellied Hummingbird
+Copper-tailed Hummingbird
+Copper-rumped Hummingbird
+Saucerottia sp.
+Cinnamon Hummingbird
+Cinnamon Hummingbird (Tres Marias Is.)
+Cinnamon Hummingbird (Mainland)
+Buff-bellied Hummingbird
+Buff-bellied Hummingbird (Yucatan)
+Buff-bellied Hummingbird (Northern)
+Rufous-tailed Hummingbird
+Rufous-tailed Hummingbird (Rufous-tailed)
+Rufous-tailed Hummingbird (Escudo)
+Cinnamon x Rufous-tailed Hummingbird (hybrid)
+Buff-bellied/Rufous-tailed Hummingbird
+Honduran Emerald
+Azure-crowned Hummingbird x Honduran Emerald (hybrid)
+Rufous-tailed Hummingbird x Honduran Emerald (hybrid)
+Mangrove Hummingbird
+Amazilia Hummingbird
+Amazilia Hummingbird (White-throated)
+Amazilia Hummingbird (Green-throated)
+Amazilia Hummingbird (Blue-throated)
+Andean Emerald
+Versicolored Emerald
+Versicolored Emerald (Versicolored)
+Versicolored Emerald (Rondonia)
+Shining-green Hummingbird
+Golden-tailed Sapphire
+Sapphire-throated Hummingbird
+Sapphire-bellied Hummingbird
+Shining-green/Sapphire-throated/Sapphire-bellied Hummingbird
+Humboldt's Sapphire
+Blue-headed Sapphire
+White-chested Emerald
+Plain-bellied Emerald
+White-throated Hummingbird
+Glittering-throated Emerald
+Sapphire-spangled Emerald
+Sapphire-spangled Emerald (Sapphire-spangled)
+Sapphire-spangled Emerald (Spot-vented)
+Glittering-throated/Sapphire-spangled Emerald
+Rufous-throated Sapphire
+Gilded Hummingbird
+White-bellied Hummingbird
+White-bellied Hummingbird (chionogaster)
+White-bellied Hummingbird (hypoleuca)
+Green-and-white Hummingbird
+White-bellied/Green-and-white Hummingbird
+Purple-chested Hummingbird
+Blue-chested Hummingbird
+Charming Hummingbird
+White-bellied Emerald
+Blue-throated Goldentail
+White-chinned Sapphire
+Violet-bellied Hummingbird
+Blue-chinned Sapphire
+Bogota Sunangel (hybrid)
+hummingbird sp.

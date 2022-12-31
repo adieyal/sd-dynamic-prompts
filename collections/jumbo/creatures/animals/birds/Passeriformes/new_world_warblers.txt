@@ -1,0 +1,247 @@
+# Originally sourced from Clements Checklist v2022
+Ovenbird
+Worm-eating Warbler
+Louisiana Waterthrush
+Northern Waterthrush
+Louisiana/Northern Waterthrush
+Bachman's Warbler
+Golden-winged Warbler
+Blue-winged Warbler
+Golden-winged x Blue-winged Warbler (hybrid)
+Brewster's Warbler (hybrid)
+Lawrence's Warbler (hybrid)
+Golden-winged/Blue-winged Warbler
+Black-and-white Warbler
+Prothonotary Warbler
+Swainson's Warbler
+Crescent-chested Warbler
+Flame-throated Warbler
+Tennessee Warbler
+Orange-crowned Warbler
+Orange-crowned Warbler (Gray-headed)
+Orange-crowned Warbler (celata)
+Orange-crowned Warbler (orestera)
+Orange-crowned Warbler (lutescens)
+Orange-crowned Warbler (sordida)
+Colima Warbler
+Lucy's Warbler
+Nashville Warbler
+Nashville Warbler (ruficapilla)
+Nashville Warbler (ridgwayi)
+Tennessee x Nashville Warbler (hybrid)
+Orange-crowned x Nashville Warbler (hybrid)
+Virginia's Warbler
+Colima x Virginia's Warbler (hybrid)
+Leiothlypis sp.
+Semper's Warbler
+Connecticut Warbler
+Gray-crowned Yellowthroat
+Masked Yellowthroat
+Black-lored Yellowthroat
+Southern Yellowthroat
+masked yellowthroat sp.
+MacGillivray's Warbler
+Mourning Warbler
+Connecticut x Mourning Warbler (hybrid)
+MacGillivray's x Mourning Warbler (hybrid)
+Connecticut/MacGillivray's/Mourning Warbler
+MacGillivray's/Mourning Warbler
+Kentucky Warbler
+Mourning x Kentucky Warbler (hybrid)
+Olive-crowned Yellowthroat
+Olive-crowned Yellowthroat (Baird's)
+Olive-crowned Yellowthroat (Chiriqui)
+Olive-crowned Yellowthroat (Olive-crowned)
+Black-polled Yellowthroat
+Belding's Yellowthroat
+Bahama Yellowthroat
+Altamira Yellowthroat
+Common Yellowthroat
+Common Yellowthroat (arizela Group)
+Common Yellowthroat (melanops Group)
+Common Yellowthroat (trichas Group)
+Common Yellowthroat (insperata)
+Common Yellowthroat (chapalensis)
+Gray-crowned x Common Yellowthroat (hybrid)
+MacGillivray's Warbler x Common Yellowthroat (hybrid)
+Mourning Warbler x Common Yellowthroat (hybrid)
+Kentucky Warbler x Common Yellowthroat (hybrid)
+Hooded Yellowthroat
+yellowthroat sp.
+Whistling Warbler
+Plumbeous Warbler
+Elfin-woods Warbler
+Arrowhead Warbler
+Hooded Warbler
+American Redstart
+Kirtland's Warbler
+Cape May Warbler
+Cerulean Warbler
+Blue-winged x Cerulean Warbler (hybrid)
+Northern Parula
+American Redstart x Northern Parula (hybrid)
+Cerulean Warbler x Northern Parula (hybrid)
+Tropical Parula
+Tropical Parula (Northeast Mexico)
+Tropical Parula (West Mexico)
+Tropical Parula (Tres Marias Is.)
+Tropical Parula (Socorro I.)
+Tropical Parula (Middle American)
+Tropical Parula (Coiba I.)
+Tropical Parula (South American)
+Northern x Tropical Parula (hybrid)
+Northern/Tropical Parula
+Magnolia Warbler
+Nashville x Magnolia Warbler (hybrid)
+Bay-breasted Warbler
+Blackburnian Warbler
+Bay-breasted x Blackburnian Warbler (hybrid)
+Yellow Warbler
+Yellow Warbler (Northern)
+Yellow Warbler (Mangrove)
+Yellow Warbler (Galapagos)
+Yellow Warbler (Golden)
+Yellow Warbler (Mangrove x Golden)
+Common Yellowthroat x Yellow Warbler (hybrid)
+Hooded x Yellow Warbler (hybrid)
+American Redstart x Yellow Warbler (hybrid)
+Chestnut-sided Warbler
+Magnolia x Chestnut-sided Warbler (hybrid)
+Blackpoll Warbler
+Bay-breasted x Blackpoll Warbler (hybrid)
+Bay-breasted/Blackpoll Warbler
+Black-throated Blue Warbler
+Cerulean x Black-throated Blue Warbler (hybrid)
+Magnolia x Black-throated Blue Warbler (hybrid)
+Yellow x Black-throated Blue Warbler (hybrid)
+Chestnut-sided x Black-throated Blue Warbler (hybrid)
+Palm Warbler
+Palm Warbler (Western)
+Palm Warbler (Yellow)
+Magnolia x Palm Warbler (hybrid)
+Olive-capped Warbler
+Pine Warbler
+Yellow-rumped Warbler
+Yellow-rumped Warbler (Myrtle)
+Yellow-rumped Warbler (Audubon's)
+Yellow-rumped Warbler (Myrtle x Audubon's)
+Yellow-rumped Warbler (West Mexico)
+Yellow-rumped Warbler (Goldman's)
+Cape May x Yellow-rumped Warbler (hybrid)
+Magnolia x Yellow-rumped Warbler (hybrid)
+Palm x Yellow-rumped Warbler (hybrid)
+Yellow-throated Warbler
+Yellow-throated Warbler (albilora)
+Yellow-throated Warbler (dominica/stoddardi)
+Northern Parula x Yellow-throated Warbler (hybrid)
+Yellow-rumped x Yellow-throated Warbler (hybrid)
+Bahama Warbler
+Vitelline Warbler
+Prairie Warbler
+Blue-winged x Prairie Warbler (hybrid)
+Yellow x Prairie Warbler (hybrid)
+Adelaide's Warbler
+Barbuda Warbler
+St. Lucia Warbler
+Grace's Warbler
+Yellow-rumped x Grace's Warbler (hybrid)
+Black-throated Gray Warbler
+Yellow-rumped x Black-throated Gray Warbler (hybrid)
+Grace's x Black-throated Gray Warbler (hybrid)
+Townsend's Warbler
+Yellow-rumped x Townsend's Warbler (hybrid)
+Black-throated Gray x Townsend's Warbler (hybrid)
+Black-throated Gray/Townsend's Warbler
+Hermit Warbler
+Townsend's x Hermit Warbler (hybrid)
+Black-throated Gray x Hermit Warbler (hybrid)
+Black-throated Gray/Hermit Warbler
+Townsend's/Hermit Warbler
+Golden-cheeked Warbler
+Black-throated Green Warbler
+Yellow-rumped x Black-throated Green Warbler (hybrid)
+Townsend's x Black-throated Green Warbler (hybrid)
+Setophaga sp.
+Fan-tailed Warbler
+Rufous-capped Warbler
+Rufous-capped Warbler (rufifrons Group)
+Rufous-capped Warbler (salvini)
+Common Yellowthroat x Rufous-capped Warbler (hybrid)
+Chestnut-capped Warbler
+Rufous-capped/Chestnut-capped Warbler
+Black-cheeked Warbler
+Pirre Warbler
+Golden-browed Warbler
+Golden-crowned Warbler
+Golden-crowned Warbler (Stripe-crowned)
+Golden-crowned Warbler (Cabanis's)
+Golden-crowned Warbler (Golden-crowned)
+Golden-crowned Warbler (White-bellied)
+Costa Rican Warbler
+Tacarcuna Warbler
+Three-striped Warbler
+Three-striped Warbler (San Lucas)
+Three-striped Warbler (daedalus)
+Three-striped Warbler (auricularis)
+Three-striped Warbler (Venezuelan)
+Three-striped Warbler (Paria)
+Three-striped Warbler (Three-striped)
+Yungas Warbler
+Three-banded Warbler
+Basileuterus sp.
+Gray-headed Warbler
+Santa Marta Warbler
+Citrine Warbler
+Citrine Warbler (Northern)
+Citrine Warbler (Peruvian)
+Citrine Warbler (Bolivian)
+White-striped Warbler
+Flavescent Warbler
+Golden-crowned x Flavescent Warbler (hybrid)
+White-browed Warbler
+Pale-legged Warbler
+Black-crested Warbler
+Buff-rumped Warbler
+Riverbank Warbler
+Riverbank Warbler (Northern)
+Riverbank Warbler (Bolivian)
+Riverbank Warbler (Southern)
+Two-banded Warbler
+Two-banded Warbler (Roraiman)
+Two-banded Warbler (Two-banded)
+Cuzco Warbler
+Choco Warbler
+Gray-throated Warbler
+White-lored Warbler
+Gray-and-gold Warbler
+Russet-crowned Warbler
+Myiothlypis sp.
+Canada Warbler
+Wilson's Warbler
+Wilson's Warbler (pileolata)
+Wilson's Warbler (pusilla)
+Wilson's Warbler (chryseola)
+Red-faced Warbler
+Red Warbler
+Red Warbler (Gray-cheeked)
+Red Warbler (White-cheeked)
+Pink-headed Warbler
+Painted Redstart
+Slate-throated Redstart
+Painted x Slate-throated Redstart (hybrid)
+Brown-capped Redstart
+Tepui Redstart
+Paria Redstart
+Saffron-breasted Redstart
+White-faced Redstart
+Collared Redstart
+Yellow-crowned Redstart
+Golden-fronted Redstart
+Golden-fronted Redstart (Golden-fronted)
+Golden-fronted Redstart (Yellow-fronted)
+Spectacled Redstart
+Golden-fronted x Spectacled Redstart (hybrid)
+Golden-fronted/Spectacled Redstart
+White-fronted Redstart
+Myioborus sp.
+new world warbler sp.

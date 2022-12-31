@@ -1,0 +1,287 @@
+# Originally sourced from Clements Checklist v2022
+Tanager Finch
+Yellow-throated Chlorospingus
+Yellow-throated Chlorospingus (Drab-breasted)
+Yellow-throated Chlorospingus (Yellow-throated)
+Short-billed Chlorospingus
+Yellow-throated/Short-billed Chlorospingus
+Ashy-throated Chlorospingus
+Ashy-throated Chlorospingus (Olive-crowned)
+Ashy-throated Chlorospingus (Ashy-throated)
+Sooty-capped Chlorospingus
+Common Chlorospingus
+Common Chlorospingus (Northeast Mexico)
+Common Chlorospingus (Southwest Mexico)
+Common Chlorospingus (Middle America)
+Common Chlorospingus (Central Panama)
+Common Chlorospingus (Venezuela)
+Common Chlorospingus (Northern Andes)
+Common Chlorospingus (cinereocephalus)
+Common Chlorospingus (Southern Peru)
+Common Chlorospingus (Northern Bolivia)
+Common Chlorospingus (Southern Bolivia)
+Common Chlorospingus (Argentina)
+Tacarcuna Chlorospingus
+Pirre Chlorospingus
+Dusky Chlorospingus
+chlorospingus sp.
+Tumbes Sparrow
+Yungas Sparrow
+Chaco Sparrow
+Yungas/Chaco Sparrow
+Rufous-winged Sparrow
+Cinnamon-tailed Sparrow
+Stripe-headed Sparrow
+Black-chested Sparrow
+Bridled Sparrow
+Botteri's Sparrow
+Botteri's Sparrow (Botteri's)
+Botteri's Sparrow (Peten)
+Cassin's Sparrow
+Botteri's/Cassin's Sparrow
+Bachman's Sparrow
+Peucaea sp.
+Grasshopper Sparrow
+Grassland Sparrow
+Yellow-browed Sparrow
+Grassland/Yellow-browed Sparrow
+Olive Sparrow
+Olive Sparrow (Olive)
+Olive Sparrow (Pacific)
+Green-backed Sparrow
+Olive/Green-backed Sparrow
+Black-striped Sparrow
+Tocuyo Sparrow
+Chipping Sparrow
+Clay-colored Sparrow
+Chipping x Clay-colored Sparrow (hybrid)
+Black-chinned Sparrow
+Field Sparrow
+Chipping x Field Sparrow (hybrid)
+Clay-colored x Field Sparrow (hybrid)
+Brewer's Sparrow
+Brewer's Sparrow (breweri)
+Brewer's Sparrow (taverneri)
+Black-chinned x Brewer's Sparrow (hybrid)
+Clay-colored x Brewer's Sparrow (hybrid)
+Worthen's Sparrow
+Spizella sp.
+Five-striped Sparrow
+Black-throated Sparrow
+Lark Sparrow
+Lark Bunting
+Costa Rican Brushfinch
+Sierra Nevada Brushfinch
+Perija Brushfinch
+Black-headed Brushfinch
+Caracas Brushfinch
+Paria Brushfinch
+Gray-browed Brushfinch
+White-browed Brushfinch
+stripe-headed brushfinch sp.
+Orange-billed Sparrow
+Orange-billed Sparrow (aurantiirostris Group)
+Orange-billed Sparrow (erythrorhynchus)
+Orange-billed Sparrow (spectabilis)
+Black-capped Sparrow
+Black-capped Sparrow (Black-capped)
+Black-capped Sparrow (Marañon)
+Golden-winged Sparrow
+Pectoral Sparrow
+Pectoral Sparrow (Yellow-mandibled)
+Pectoral Sparrow (Pectoral)
+Sao Francisco Sparrow
+Half-collared Sparrow
+Moss-backed Sparrow
+Saffron-billed Sparrow
+Saffron-billed Sparrow (Gray-backed)
+Saffron-billed Sparrow (Saffron-billed)
+Green-striped Brushfinch
+Chestnut-capped Brushfinch
+Chestnut-capped Brushfinch (Plain-breasted)
+Chestnut-capped Brushfinch (Chestnut-capped)
+Sooty-faced Finch
+Olive Finch
+American Tree Sparrow
+Spizella sp./American Tree Sparrow
+Fox Sparrow
+Fox Sparrow (Sooty)
+Fox Sparrow (Thick-billed)
+Fox Sparrow (Slate-colored)
+Fox Sparrow (Red)
+Dark-eyed Junco
+Dark-eyed Junco (Slate-colored/cismontanus)
+Dark-eyed Junco (Slate-colored)
+Dark-eyed Junco (cismontanus)
+Dark-eyed Junco (Oregon)
+Dark-eyed Junco (Pink-sided)
+Dark-eyed Junco (Oregon x Pink-sided)
+Dark-eyed Junco (White-winged)
+Dark-eyed Junco (Pink-sided x White-winged)
+Dark-eyed Junco (Gray-headed)
+Dark-eyed Junco (Oregon x Gray-headed)
+Dark-eyed Junco (Pink-sided x Gray-headed)
+Dark-eyed Junco (Red-backed)
+Dark-eyed Junco (Gray-headed x Red-backed)
+Guadalupe Junco
+Yellow-eyed Junco
+Yellow-eyed Junco (Mexican)
+Yellow-eyed Junco (Chiapas)
+Yellow-eyed Junco (Guatemalan)
+Dark-eyed x Yellow-eyed Junco (hybrid)
+Dark-eyed/Yellow-eyed Junco
+Baird's Junco
+Volcano Junco
+Rufous-collared Sparrow
+Rufous-collared Sparrow (Rufous-collared)
+Rufous-collared Sparrow (Patagonian)
+White-crowned Sparrow
+White-crowned Sparrow (Dark-lored)
+White-crowned Sparrow (leucophrys)
+White-crowned Sparrow (oriantha)
+White-crowned Sparrow (Gambel's)
+White-crowned Sparrow (Yellow-billed)
+White-crowned Sparrow (nuttalli)
+White-crowned Sparrow (pugetensis)
+Dark-eyed Junco x White-crowned Sparrow (hybrid)
+Golden-crowned Sparrow
+White-crowned x Golden-crowned Sparrow (hybrid)
+Harris's Sparrow
+American Tree x Harris's Sparrow (hybrid)
+White-crowned x Harris's Sparrow (hybrid)
+White-throated Sparrow
+White-crowned x White-throated Sparrow (hybrid)
+White-crowned/White-throated Sparrow
+Golden-crowned x White-throated Sparrow (hybrid)
+Zonotrichia sp.
+Dark-eyed Junco x White-throated Sparrow (hybrid)
+Sagebrush Sparrow
+Bell's Sparrow
+Bell's Sparrow (belli)
+Bell's Sparrow (canescens)
+Bell's Sparrow (clementeae)
+Bell's Sparrow (cinerea)
+Sagebrush/Bell's Sparrow (Sage Sparrow)
+Striped Sparrow
+Vesper Sparrow
+LeConte's Sparrow
+Seaside Sparrow
+Seaside Sparrow (Atlantic)
+Seaside Sparrow (Dusky)
+Seaside Sparrow (Gulf of Mexico)
+Seaside Sparrow (Cape Sable)
+Nelson's Sparrow
+Nelson's Sparrow (Interior)
+Nelson's Sparrow (Atlantic Coast)
+LeConte's/Nelson's Sparrow
+Saltmarsh Sparrow
+Nelson's x Saltmarsh Sparrow (hybrid)
+Nelson's/Saltmarsh Sparrow (Sharp-tailed Sparrow)
+Ammospiza sp.
+Savannah Sparrow
+Savannah Sparrow (Savannah)
+Savannah Sparrow (Ipswich)
+Savannah Sparrow (Belding's)
+Savannah Sparrow (San Benito)
+Savannah Sparrow (Large-billed)
+Baird's Sparrow
+Henslow's Sparrow
+Grasshopper/Baird's Sparrow
+Grasshopper/Henslow's Sparrow
+Sierra Madre Sparrow
+Song Sparrow
+Song Sparrow (melodia/atlantica)
+Song Sparrow (sanaka/maxima)
+Song Sparrow (rufina Group)
+Song Sparrow (montana/merrilli)
+Song Sparrow (heermanni Group)
+Song Sparrow (samuelsis)
+Song Sparrow (pusillula)
+Song Sparrow (fallax Group)
+Song Sparrow (mexicana Group)
+Lincoln's Sparrow
+Song x Lincoln's Sparrow (hybrid)
+Swamp Sparrow
+Song x Swamp Sparrow (hybrid)
+Lincoln's/Swamp Sparrow
+Large-footed Finch
+Zapata Sparrow
+Rusty-crowned Ground-Sparrow
+Canyon Towhee
+White-throated Towhee
+Abert's Towhee
+Canyon x Abert's Towhee (hybrid)
+Canyon/Abert's Towhee
+California Towhee
+White-eared Ground-Sparrow
+White-eared Ground-Sparrow (Gray-crowned)
+White-eared Ground-Sparrow (White-eared)
+White-faced Ground-Sparrow
+Cabanis's Ground-Sparrow
+Rusty Sparrow
+Rufous-crowned Sparrow
+Oaxaca Sparrow
+Green-tailed Towhee
+Spotted Towhee
+Spotted Towhee (oregonus Group)
+Spotted Towhee (arcticus)
+Spotted Towhee (maculatus Group)
+Spotted Towhee (Olive-backed)
+Spotted Towhee (Socorro)
+Chestnut-capped Brushfinch x Spotted Towhee (hybrid)
+Canyon x Spotted Towhee (hybrid)
+Green-tailed x Spotted Towhee (hybrid)
+Eastern Towhee
+Eastern Towhee (Red-eyed)
+Eastern Towhee (White-eyed)
+Spotted x Eastern Towhee (hybrid)
+Spotted/Eastern Towhee (Rufous-sided Towhee)
+Bermuda Towhee
+Collared Towhee
+Spotted x Collared Towhee (hybrid)
+towhee sp.
+Rufous-capped Brushfinch
+White-naped Brushfinch
+White-naped Brushfinch (White-naped)
+White-naped Brushfinch (Yellow-throated)
+Yellow-thighed Brushfinch
+Yellow-green Brushfinch
+Moustached Brushfinch
+Moustached Brushfinch (Moustached)
+Moustached Brushfinch (Merida)
+Tepui Brushfinch
+Santa Marta Brushfinch
+Ochre-breasted Brushfinch
+Yellow-headed Brushfinch
+Dusky-headed Brushfinch
+White-rimmed Brushfinch
+White-headed Brushfinch
+Rufous-eared Brushfinch
+Tricolored Brushfinch
+Tricolored Brushfinch (Choco)
+Tricolored Brushfinch (Tricolored)
+Slaty Brushfinch
+Slaty Brushfinch (Slaty)
+Slaty Brushfinch (Taczanowski's)
+Pale-naped Brushfinch
+Antioquia Brushfinch
+Yellow-breasted Brushfinch
+Yellow-breasted Brushfinch (nigrifrons)
+Yellow-breasted Brushfinch (Yellow-breasted)
+White-winged Brushfinch
+White-winged Brushfinch (White-winged)
+White-winged Brushfinch (Paynter's)
+Pale-headed Brushfinch
+Bay-crowned Brushfinch
+Rusty-bellied Brushfinch
+Apurimac Brushfinch
+Black-spectacled Brushfinch
+Vilcabamba Brushfinch
+Cuzco Brushfinch
+Black-faced Brushfinch
+Bolivian Brushfinch
+Black-faced x Bolivian Brushfinch (hybrid)
+Fulvous-headed Brushfinch
+Yellow-striped Brushfinch
+Atlapetes sp.
+new world sparrow sp.

@@ -1,0 +1,241 @@
+# Originally sourced from Clements Checklist v2022
+Common Jery
+Green Jery
+Stripe-throated Jery
+Stripe-throated Jery (Stripe-throated)
+Stripe-throated Jery (Subdesert)
+jery sp.
+Leyte Plumed-Warbler
+Mindanao Plumed-Warbler
+Salvadori's Eremomela
+Yellow-vented Eremomela
+Yellow-bellied Eremomela
+Senegal Eremomela
+Green-backed Eremomela
+Greencap Eremomela
+Yellow-rumped Eremomela
+Rufous-crowned Eremomela
+Turner's Eremomela
+Black-necked Eremomela
+Burnt-neck Eremomela
+eremomela sp.
+Red-winged Gray Warbler
+Sierra Leone Prinia
+White-chinned Prinia
+Roberts's Warbler
+Namaqua Warbler
+Green Longtail
+Green Longtail (Green)
+Green Longtail (Bioko)
+Black-collared Apalis
+Rwenzori Apalis
+African Tailorbird
+Long-billed Tailorbird
+Long-billed Tailorbird (Long-billed)
+Long-billed Tailorbird (Njesi)
+White-tailed Warbler
+White-tailed Warbler (Highland)
+White-tailed Warbler (Alexander's)
+White-tailed Warbler (Bioko)
+Miombo Wren-Warbler
+Stierling's Wren-Warbler
+Miombo x Stierling's Wren-Warbler (hybrid)
+Miombo/Stierling's Wren-Warbler
+Gray Wren-Warbler
+Barred Wren-Warbler
+Green-backed Camaroptera
+Green-backed Camaroptera (Gray-backed)
+Green-backed Camaroptera (Green-backed)
+Hartert's Camaroptera
+Green-backed/Hartert's Camaroptera
+Yellow-browed Camaroptera
+Olive-green Camaroptera
+Olive-green Camaroptera (Olive-green)
+Olive-green Camaroptera (Tawny-breasted)
+camaroptera sp.
+Cricket Longtail
+Buff-bellied Warbler
+Bar-throated Apalis
+Taita Apalis
+Yellow-throated Apalis
+Namuli Apalis
+Black-capped Apalis
+Black-capped Apalis (Black-capped)
+Black-capped Apalis (White-tailed)
+Black-throated Apalis
+White-winged Apalis
+Masked Apalis
+Black-faced Apalis
+Yellow-breasted Apalis
+Yellow-breasted Apalis (Brown-tailed)
+Yellow-breasted Apalis (Yellow-breasted)
+Rudd's Apalis
+Sharpe's Apalis
+Buff-throated Apalis
+Buff-throated Apalis (Black-breasted)
+Buff-throated Apalis (Angola)
+Buff-throated Apalis (Buff-throated)
+Kungwe Apalis
+Bamenda Apalis
+Gosling's Apalis
+Kabobo Apalis
+Chestnut-throated Apalis
+Chapin's Apalis
+Black-headed Apalis
+Chirinda Apalis
+Gray Apalis
+Gray Apalis (Sclater's)
+Gray Apalis (Angola)
+Gray Apalis (Gray)
+Brown-headed Apalis
+Karamoja Apalis
+apalis sp.
+Common Tailorbird
+Rufous-fronted Tailorbird
+Dark-necked Tailorbird
+Common/Dark-necked Tailorbird
+Cambodian Tailorbird
+Ashy Tailorbird
+Dark-necked/Ashy Tailorbird
+Olive-backed Tailorbird
+Rufous-tailed Tailorbird
+Visayan Tailorbird
+Gray-backed Tailorbird
+Green-backed Tailorbird
+Yellow-breasted Tailorbird
+White-browed Tailorbird
+White-eared Tailorbird
+tailorbird sp.
+Himalayan Prinia
+Striped Prinia
+Burmese Prinia
+Annam Prinia
+Brown Prinia
+Burmese/Brown Prinia
+Black-throated Prinia
+Rufous-crowned Prinia
+Hill Prinia
+Gray-crowned Prinia
+Rufous-fronted Prinia
+Rufescent Prinia
+Gray-breasted Prinia
+Rufescent/Gray-breasted Prinia
+Bar-winged Prinia
+Graceful Prinia
+Delicate Prinia
+Graceful/Delicate Prinia
+Jungle Prinia
+Yellow-bellied Prinia
+Yellow-bellied Prinia (Yellow-bellied)
+Yellow-bellied Prinia (Chinese)
+Ashy Prinia
+Yellow-bellied/Ashy Prinia
+Tawny-flanked Prinia
+Plain Prinia
+Pale Prinia
+River Prinia
+Black-chested Prinia
+Karoo Prinia
+Drakensberg Prinia
+Sao Tome Prinia
+Banded Prinia
+Banded Prinia (Banded)
+Banded Prinia (Black-faced)
+Red-winged Prinia
+Red-fronted Prinia
+Red-fronted Prinia (Red-fronted)
+Red-fronted Prinia (Rufous-backed)
+prinia sp.
+Kopje Warbler
+Mrs. Moreau's Warbler
+Mrs. Moreau's Warbler (Mrs. Moreau's)
+Mrs. Moreau's Warbler (Rubeho)
+Socotra Warbler
+Rufous-eared Warbler
+Black-capped Rufous-Warbler
+Black-faced Rufous-Warbler
+Oriole Warbler
+Gray-capped Warbler
+Red-faced Cisticola
+Red-faced Cisticola (Red-faced)
+Red-faced Cisticola (Lepe)
+Singing Cisticola
+Whistling Cisticola
+Chattering Cisticola
+Trilling Cisticola
+Bubbling Cisticola
+Chubb's Cisticola
+Chubb's Cisticola (Discolored)
+Chubb's Cisticola (Chubb's)
+Hunter's Cisticola
+Black-lored Cisticola
+Kilombero Cisticola
+Rock-loving Cisticola
+Rock-loving Cisticola (Rock-loving)
+Rock-loving Cisticola (Huambo)
+Rock-loving Cisticola (Lazy)
+Boran Cisticola
+Rattling Cisticola
+Ashy Cisticola
+Red-pate Cisticola
+Dorst's Cisticola
+Tinkling Cisticola
+Red-headed Cisticola
+Red-headed Cisticola (Namib)
+Red-headed Cisticola (Red-headed)
+Red-headed Cisticola (Plain-breasted)
+Wailing Cisticola
+Wailing Cisticola (Lynes's)
+Wailing Cisticola (Wailing)
+Tana River Cisticola
+Churring Cisticola
+Coastal Cisticola
+White-tailed Cisticola
+Luapula Cisticola
+Chirping Cisticola
+Ethiopian Cisticola
+Winding Cisticola
+Winding/Coastal/Luapula Cisticola
+Rufous-winged Cisticola
+Carruthers's Cisticola
+Levaillant's Cisticola
+Stout Cisticola
+Stout Cisticola (Western)
+Stout Cisticola (Stout)
+Stout Cisticola (Omo)
+Stout Cisticola (Rufous-crowned)
+Stout Cisticola (Angola)
+Croaking Cisticola
+Piping Cisticola
+Aberdare Cisticola
+Tabora Cisticola
+Slender-tailed Cisticola
+Siffling Cisticola
+Rufous Cisticola
+Foxy Cisticola
+Tiny Cisticola
+Zitting Cisticola
+Zitting Cisticola (Western)
+Zitting Cisticola (African)
+Zitting Cisticola (Double Zitting)
+Zitting Cisticola (Far Eastern)
+Socotra Cisticola
+Madagascar Cisticola
+Desert Cisticola
+Cloud Cisticola
+Cloud Cisticola (Cloud)
+Cloud Cisticola (Cape)
+Black-backed Cisticola
+Black-backed Cisticola (winneba)
+Black-backed Cisticola (Black-backed)
+Cloud-scraping Cisticola
+Pectoral-patch Cisticola
+Pectoral-patch Cisticola (Lynes's)
+Pectoral-patch Cisticola (Pectoral-patch)
+Pale-crowned Cisticola
+Wing-snapping Cisticola
+Wing-snapping Cisticola (Gabon)
+Wing-snapping Cisticola (Wing-snapping)
+Golden-headed Cisticola
+Zitting/Golden-headed Cisticola
+cisticola sp.

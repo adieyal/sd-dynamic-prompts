@@ -1,0 +1,205 @@
+# Originally sourced from Clements Checklist v2022
+Ruby-cheeked Sunbird
+Fraser's Sunbird
+Gray-headed Sunbird
+Plain-backed Sunbird
+Anchieta's Sunbird
+Plain Sunbird
+Brown-throated Sunbird
+Gray-throated Sunbird
+Brown-throated/Gray-throated Sunbird
+Red-throated Sunbird
+Mouse-brown Sunbird
+Western Violet-backed Sunbird
+Western Violet-backed Sunbird (Northern)
+Western Violet-backed Sunbird (Southern)
+Eastern Violet-backed Sunbird
+Uluguru Violet-backed Sunbird
+Violet-tailed Sunbird
+Little Green Sunbird
+Green Sunbird
+Green Sunbird (Yellow-throated)
+Green Sunbird (Gray-throated)
+Banded Sunbird
+Collared Sunbird
+Pygmy Sunbird
+Nile Valley Sunbird
+Amani Sunbird
+Reichenbach's Sunbird
+Principe Sunbird
+Newton's Sunbird
+Sao Tome Sunbird
+Orange-breasted Sunbird
+Green-headed Sunbird
+Green-headed Sunbird (Green-headed)
+Green-headed Sunbird (Blue-headed)
+Bannerman's Sunbird
+Blue-throated Brown Sunbird
+Cameroon Sunbird
+Cameroon Sunbird (Green-headed)
+Cameroon Sunbird (Bioko)
+Cameroon Sunbird (Blue-headed)
+Blue-headed Sunbird
+Olive Sunbird
+Mouse-colored Sunbird
+Buff-throated Sunbird
+Carmelite Sunbird
+Green-throated Sunbird
+Amethyst Sunbird
+Scarlet-chested Sunbird
+Hunter's Sunbird
+Socotra Sunbird
+Purple-rumped Sunbird
+Crimson-backed Sunbird
+Van Hasselt's Sunbird
+Purple-throated Sunbird
+Purple-throated Sunbird (Purple-throated)
+Purple-throated Sunbird (Orange-lined)
+Black Sunbird
+Copper-throated Sunbird
+Bocage's Sunbird
+Purple-breasted Sunbird
+Tacazze Sunbird
+Bronze Sunbird
+Malachite Sunbird
+Red-tufted Sunbird
+Golden-winged Sunbird
+Olive-bellied Sunbird
+Tiny Sunbird
+Western Miombo Sunbird
+Eastern Miombo Sunbird
+Western/Eastern Miombo Sunbird
+Southern Double-collared Sunbird
+Neergaard's Sunbird
+Stuhlmann's Sunbird
+Prigogine's Sunbird
+Montane Double-collared Sunbird
+Montane Double-collared Sunbird (Western)
+Montane Double-collared Sunbird (Eastern)
+Northern Double-collared Sunbird
+Northern Double-collared Sunbird (Western)
+Northern Double-collared Sunbird (Eastern)
+Greater Double-collared Sunbird
+Regal Sunbird
+Rockefeller's Sunbird
+Eastern Double-collared Sunbird
+Usambara Double-collared Sunbird
+Forest Double-collared Sunbird
+Moreau's Sunbird
+Loveridge's Sunbird
+Beautiful Sunbird
+Beautiful Sunbird (Beautiful)
+Beautiful Sunbird (Gorgeous)
+Mariqua Sunbird
+Shelley's Sunbird
+Shelley's Sunbird (Shelley's)
+Shelley's Sunbird (Hofmann's)
+Congo Sunbird
+Red-chested Sunbird
+Black-bellied Sunbird
+Purple-banded Sunbird
+Tsavo Sunbird
+Violet-breasted Sunbird
+Pemba Sunbird
+Orange-tufted Sunbird
+Palestine Sunbird
+Palestine Sunbird (Decorse's)
+Palestine Sunbird (Palestine)
+Shining Sunbird
+Shining Sunbird (Shining)
+Shining Sunbird (Arabian)
+Splendid Sunbird
+Johanna's Sunbird
+Superb Sunbird
+Rufous-winged Sunbird
+Oustalet's Sunbird
+Oustalet's Sunbird (Angola)
+Oustalet's Sunbird (Eastern)
+White-breasted Sunbird
+Variable Sunbird
+Variable Sunbird (Yellow-bellied)
+Variable Sunbird (Orange-chested)
+Variable Sunbird (White-bellied)
+Dusky Sunbird
+Ursula's Sunbird
+Bates's Sunbird
+Copper Sunbird
+Purple Sunbird
+Olive-backed Sunbird
+Olive-backed Sunbird (Olive-backed)
+Olive-backed Sunbird (Cream-bellied)
+Olive-backed Sunbird (Yellow-faced)
+Olive-backed Sunbird (Orange-breasted)
+Olive-backed Sunbird (Black-breasted)
+Olive-backed Sunbird (Rand's)
+Olive-backed Sunbird (Black-bellied)
+Apricot-breasted Sunbird
+Flame-breasted Sunbird
+Souimanga Sunbird
+Souimanga Sunbird (Sooty-bellied)
+Souimanga Sunbird (Yellow-bellied)
+Souimanga Sunbird (White-bellied)
+Souimanga Sunbird (Abbott's)
+Malagasy Sunbird
+Malagasy Sunbird (Grand Comoro)
+Malagasy Sunbird (Moheli)
+Malagasy Sunbird (Long-billed)
+Seychelles Sunbird
+Humblot's Sunbird
+Anjouan Sunbird
+Mayotte Sunbird
+Loten's Sunbird
+Cinnyris sp.
+Elegant Sunbird
+Fire-tailed Sunbird
+Black-throated Sunbird
+Black-throated Sunbird (Black-throated)
+Black-throated Sunbird (Dalat)
+Mrs. Gould's Sunbird
+Mrs. Gould's Sunbird (Yellow-breasted)
+Mrs. Gould's Sunbird (Scarlet-breasted)
+Mrs. Gould's Sunbird (Purple-rumped)
+Green-tailed Sunbird
+Green-tailed Sunbird (Green-tailed)
+Green-tailed Sunbird (Doi Inthanon)
+Lovely Sunbird
+Temminck's Sunbird
+Javan Sunbird
+Vigors's Sunbird
+Crimson Sunbird
+Crimson Sunbird (Goulpourah)
+Crimson Sunbird (Crimson)
+Crimson Sunbird (Sulawesi)
+Temminck's/Crimson Sunbird
+Magnificent Sunbird
+Fork-tailed Sunbird
+Fork-tailed Sunbird (Fork-tailed)
+Fork-tailed Sunbird (Hainan)
+Handsome Sunbird
+White-flanked Sunbird
+Flaming Sunbird
+Maroon-naped Sunbird
+Metallic-winged Sunbird
+Mountain Sunbird
+Bohol Sunbird
+Lina's Sunbird
+Gray-hooded Sunbird
+Apo Sunbird
+Tboli Sunbird
+Aethopyga sp.
+sunbird sp.
+Purple-naped Spiderhunter
+Thick-billed Spiderhunter
+Long-billed Spiderhunter
+Orange-tufted Spiderhunter
+Pale Spiderhunter
+Little Spiderhunter
+Whitehead's Spiderhunter
+Naked-faced Spiderhunter
+Yellow-eared Spiderhunter
+Spectacled Spiderhunter
+Streaked Spiderhunter
+Streaky-breasted Spiderhunter
+Gray-breasted Spiderhunter
+Bornean Spiderhunter
+spiderhunter sp.

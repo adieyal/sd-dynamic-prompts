@@ -1,0 +1,230 @@
+# Originally sourced from Clements Checklist v2022
+Dark-eared Myza
+White-eared Myza
+Dark-eared/White-eared Myza
+Eastern Spinebill
+Western Spinebill
+Pied Honeyeater
+Plain Honeyeater
+Marbled Honeyeater
+Streak-headed Honeyeater
+Tui
+New Zealand Bellbird
+Tui/New Zealand Bellbird
+Chatham Island Bellbird
+Puff-backed Honeyeater
+Yellow-spotted Honeyeater
+Lewin's Honeyeater
+Streak-breasted Honeyeater
+Kimberley Honeyeater
+White-lined Honeyeater
+Orange-cheeked Honeyeater
+Forest Honeyeater
+Mottled Honeyeater
+Yellow-gaped Honeyeater
+Mountain Honeyeater
+Scrub Honeyeater
+Mimic Honeyeater
+Tagula Honeyeater
+Graceful Honeyeater
+Cryptic Honeyeater
+Elegant Honeyeater
+Graceful/Elegant Honeyeater
+Meliphaga/Territornis/Microptilotis sp.
+Yellow Honeyeater
+White-gaped Honeyeater
+White-fronted Honeyeater
+Yellow-faced Honeyeater
+Black-throated Honeyeater
+Obscure Honeyeater
+Yellow-tufted Honeyeater
+Yellow-tufted Honeyeater (Yellow-tufted)
+Yellow-tufted Honeyeater (Helmeted)
+Purple-gaped Honeyeater
+Bell Miner
+Noisy Miner
+Yellow-throated Miner
+Black-eared Miner
+Yellow-throated x Black-eared Miner (hybrid)
+miner sp. (Manorina sp.)
+Sooty Melidectes
+Short-bearded Melidectes
+Long-bearded Melidectes
+Ornate Melidectes
+Cinnamon-browed Melidectes
+Vogelkop Melidectes
+Huon Melidectes
+Belford's Melidectes
+Yellow-browed Melidectes
+Belford's x Yellow-browed Melidectes (hybrid)
+Belford's/Yellow-browed Melidectes
+melidectes sp.
+Bridled Honeyeater
+Eungella Honeyeater
+Spiny-cheeked Honeyeater
+Little Wattlebird
+Western Wattlebird
+Regent Honeyeater
+Red Wattlebird
+Yellow Wattlebird
+wattlebird sp.
+Varied Honeyeater
+Mangrove Honeyeater
+Singing Honeyeater
+Gavicalis sp.
+Yellow-plumed Honeyeater
+White-plumed Honeyeater
+Yellow-tinted Honeyeater
+Fuscous Honeyeater
+Gray-headed Honeyeater
+Gray-fronted Honeyeater
+Bougainville Honeyeater
+Brown-backed Honeyeater
+Bar-breasted Honeyeater
+Rufous-banded Honeyeater
+Rufous-throated Honeyeater
+Gray Honeyeater
+Gibber Chat
+Yellow Chat
+Crimson Chat
+Orange Chat
+White-fronted Chat
+Arfak Honeyeater
+Smoky Honeyeater
+Foja Honeyeater
+Spangled Honeyeater
+Melipotes sp.
+Macgregor's Honeyeater
+Long-billed Honeyeater
+Olive Straightbill
+Tawny Straightbill
+Black Honeyeater
+Bismarck Honeyeater
+Seram Myzomela
+White-chinned Myzomela
+Ruby-throated Myzomela
+Ashy Myzomela
+Dusky Myzomela
+Dusky Myzomela (Moluccan)
+Dusky Myzomela (Obi)
+Dusky Myzomela (Red-brown)
+Dusky Myzomela (Dusky)
+Red Myzomela
+Red Myzomela (Red)
+Red Myzomela (Reddish)
+Papuan Black Myzomela
+New Ireland Myzomela
+Alor Myzomela
+Crimson-hooded Myzomela
+Red-headed Myzomela
+Sumba Myzomela
+Rote Myzomela
+Elfin Myzomela
+Sulawesi Myzomela
+Sulawesi Myzomela (Sulawesi)
+Sulawesi Myzomela (Bacan)
+Taliabu Myzomela
+Wakolo Myzomela
+Wakolo Myzomela (Seram)
+Wakolo Myzomela (Buru)
+Banda Myzomela
+New Caledonian Myzomela
+Scarlet Myzomela
+Micronesian Myzomela
+Cardinal Myzomela
+Cardinal Myzomela (Loyalty)
+Cardinal Myzomela (Cardinal)
+Samoan Myzomela
+Rotuma Myzomela
+Sclater's Myzomela
+Bismarck Black Myzomela
+Scarlet-naped Myzomela
+Yellow-vented Myzomela
+Red-bellied Myzomela
+Black-headed Myzomela
+Sooty Myzomela
+Orange-breasted Myzomela
+Black-bellied Myzomela
+Black-breasted Myzomela
+Red-collared Myzomela
+Red-collared Myzomela (Red-collared)
+Red-collared Myzomela (Long-billed)
+myzomela sp.
+Barred Honeyeater
+Tawny-crowned Honeyeater
+Vanuatu Honeyeater
+Green-backed Honeyeater
+Leaden Honeyeater
+Yellow-streaked Honeyeater
+Rufous-sided Honeyeater
+Mayr's Honeyeater
+Rufous-backed Honeyeater
+Gray-streaked Honeyeater
+Banded Honeyeater
+Sunda Honeyeater
+Olive Honeyeater
+Brown Honeyeater
+Dark-brown Honeyeater
+White-tufted Honeyeater
+Silver-eared Honeyeater
+Buru Honeyeater
+Seram Honeyeater
+Yellow-eared Honeyeater
+Black-chested Honeyeater
+Crescent Honeyeater
+New Holland Honeyeater
+White-cheeked Honeyeater
+New Holland x White-cheeked Honeyeater (hybrid)
+White-streaked Honeyeater
+White-eared Honeyeater
+Yellow-throated Honeyeater
+Blue-faced Honeyeater
+Blue-faced Honeyeater (White-quilled)
+Blue-faced Honeyeater (Blue-faced)
+White-throated Honeyeater
+Gilbert's Honeyeater
+White-naped Honeyeater
+Black-headed Honeyeater
+Brown-headed Honeyeater
+Black-chinned Honeyeater
+Black-chinned Honeyeater (Golden-backed)
+Black-chinned Honeyeater (Black-chinned)
+Strong-billed Honeyeater
+Melithreptus sp.
+Makira Honeyeater
+Guadalcanal Honeyeater
+Kadavu Honeyeater
+Chattering Giant-Honeyeater
+Duetting Giant-Honeyeater
+Mao
+Crow Honeyeater
+Western Wattled-Honeyeater
+Eastern Wattled-Honeyeater
+Northern Wattled-Honeyeater
+Tawny-breasted Honeyeater
+Spotted Honeyeater
+Macleay's Honeyeater
+Striped Honeyeater
+Painted Honeyeater
+White-streaked Friarbird
+Little Friarbird
+Meyer's Friarbird
+Timor Friarbird
+Gray Friarbird
+Brass's Friarbird
+Morotai Friarbird
+Buru Friarbird
+Tanimbar Friarbird
+Seram Friarbird
+New Ireland Friarbird
+Helmeted Friarbird
+Helmeted Friarbird (New Guinea)
+Helmeted Friarbird (Hornbill)
+Helmeted Friarbird (Helmeted)
+White-naped Friarbird
+New Britain Friarbird
+Silver-crowned Friarbird
+Noisy Friarbird
+New Caledonian Friarbird
+friarbird sp.
+Meliphagidae sp.

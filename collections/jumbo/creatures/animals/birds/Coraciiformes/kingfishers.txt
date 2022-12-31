@@ -1,0 +1,177 @@
+# Originally sourced from Clements Checklist v2022
+Blyth's Kingfisher
+Common Kingfisher
+Common Kingfisher (Common)
+Common Kingfisher (Cobalt-eared)
+Half-collared Kingfisher
+Shining-blue Kingfisher
+Blue-eared Kingfisher
+Common/Blue-eared Kingfisher
+Malaysian Blue-banded Kingfisher
+Javan Blue-banded Kingfisher
+Small Blue Kingfisher
+Azure Kingfisher
+Bismarck Kingfisher
+Indigo-banded Kingfisher
+Indigo-banded Kingfisher (Northern)
+Indigo-banded Kingfisher (Southern)
+Northern Silvery-Kingfisher
+Southern Silvery-Kingfisher
+Little Kingfisher
+Black-backed Dwarf-Kingfisher
+Rufous-backed Dwarf-Kingfisher
+Black-backed/Rufous-backed Dwarf-Kingfisher
+Philippine Dwarf-Kingfisher
+Philippine Dwarf-Kingfisher (Luzon)
+Philippine Dwarf-Kingfisher (Samar)
+Philippine Dwarf-Kingfisher (Mindanao)
+Sangihe Dwarf-Kingfisher
+Sulawesi Dwarf-Kingfisher
+Dimorphic Dwarf-Kingfisher
+Sula Dwarf-Kingfisher
+Moluccan Dwarf-Kingfisher
+Moluccan Dwarf-Kingfisher (North Moluccan)
+Moluccan Dwarf-Kingfisher (Seram)
+Buru Dwarf-Kingfisher
+Papuan Dwarf-Kingfisher
+Manus Dwarf-Kingfisher
+New Ireland Dwarf-Kingfisher
+New Britain Dwarf-Kingfisher
+New Georgia Dwarf-Kingfisher
+North Solomons Dwarf-Kingfisher
+North Solomons Dwarf-Kingfisher (Bougainville)
+North Solomons Dwarf-Kingfisher (North Solomons)
+Guadalcanal Dwarf-Kingfisher
+Guadalcanal Dwarf-Kingfisher (Malaita)
+Guadalcanal Dwarf-Kingfisher (Guadalcanal)
+Makira Dwarf-Kingfisher
+Malachite Kingfisher
+Malachite Kingfisher (Mainland)
+Malachite Kingfisher (Sao Tome)
+Malachite Kingfisher (Principe)
+Malagasy Kingfisher
+White-bellied Kingfisher
+Madagascar Pygmy Kingfisher
+African Pygmy Kingfisher
+African Dwarf Kingfisher
+Banded Kingfisher
+Banded Kingfisher (Banded)
+Banded Kingfisher (Black-faced)
+Laughing Kookaburra
+Blue-winged Kookaburra
+Spangled Kookaburra
+Rufous-bellied Kookaburra
+Shovel-billed Kookaburra
+Sangihe Lilac Kingfisher
+Sulawesi Lilac Kingfisher
+Brown-winged Kingfisher
+Stork-billed Kingfisher
+Great-billed Kingfisher
+Ruddy Kingfisher
+Chocolate-backed Kingfisher
+White-throated Kingfisher
+Brown-breasted Kingfisher
+Gray-headed Kingfisher
+Black-capped Kingfisher
+Javan Kingfisher
+Woodland Kingfisher
+Mangrove Kingfisher
+Blue-breasted Kingfisher
+Brown-hooded Kingfisher
+Striped Kingfisher
+Blue-black Kingfisher
+Rufous-lored Kingfisher
+Blue-and-white Kingfisher
+Lazuli Kingfisher
+Red-backed Kingfisher
+Forest Kingfisher
+New Britain Kingfisher
+Ultramarine Kingfisher
+Vanuatu Kingfisher
+Marquesas Kingfisher
+Mewing Kingfisher
+Society Kingfisher
+Society Kingfisher (Moorea)
+Society Kingfisher (Tahiti)
+Tuamotu Kingfisher
+Tuamotu Kingfisher (Niau)
+Tuamotu Kingfisher (Mangareva)
+Chattering Kingfisher
+Pacific Kingfisher
+Pacific Kingfisher (Vanuatu)
+Pacific Kingfisher (South Pacific)
+Pacific Kingfisher (Solomon Is.)
+Pacific Kingfisher (Fiji)
+Pacific Kingfisher (Lau)
+Palau Kingfisher
+Guam Kingfisher
+Pohnpei Kingfisher
+Flat-billed Kingfisher
+Colonist Kingfisher
+Torresian Kingfisher
+Sacred Kingfisher
+Sacred Kingfisher (Australasian)
+Sacred Kingfisher (New Caledonian)
+Sacred Kingfisher (Loyalty Is.)
+Sacred Kingfisher (New Zealand)
+Collared Kingfisher
+Collared Kingfisher (Red Sea)
+Collared Kingfisher (Arabian)
+Collared Kingfisher (Oriental)
+Collared Kingfisher (Nicobar Is.)
+Collared Kingfisher (Collared)
+Beach Kingfisher
+Beach Kingfisher (Beach)
+Beach Kingfisher (Admiralty Is.)
+Mariana Kingfisher
+Melanesian Kingfisher
+Melanesian Kingfisher (St. Matthias Is.)
+Melanesian Kingfisher (Dampier Straits)
+Melanesian Kingfisher (New Ireland)
+Melanesian Kingfisher (New Britain)
+Melanesian Kingfisher (Bougainville-Guadalcanal)
+Sombre Kingfisher
+Talaud Kingfisher
+Cinnamon-banded Kingfisher
+Todiramphus sp.
+White-rumped Kingfisher
+Hook-billed Kingfisher
+Moustached Kingfisher
+Moustached Kingfisher (Bougainville)
+Moustached Kingfisher (Guadalcanal)
+Rufous-collared Kingfisher
+Spotted Kingfisher
+Blue-capped Kingfisher
+Green-backed Kingfisher
+Green-backed Kingfisher (Blue-headed)
+Green-backed Kingfisher (Black-headed)
+Scaly-breasted Kingfisher
+Scaly-breasted Kingfisher (Scaly-breasted)
+Scaly-breasted Kingfisher (Plain-backed)
+Yellow-billed Kingfisher
+Mountain Kingfisher
+Yellow-billed/Mountain Kingfisher
+Little Paradise-Kingfisher
+Common Paradise-Kingfisher
+Common Paradise-Kingfisher (Common)
+Common Paradise-Kingfisher (Rossel)
+Kofiau Paradise-Kingfisher
+Biak Paradise-Kingfisher
+Numfor Paradise-Kingfisher
+Red-breasted Paradise-Kingfisher
+Brown-headed Paradise-Kingfisher
+Buff-breasted Paradise-Kingfisher
+Black-capped Paradise-Kingfisher
+Giant Kingfisher
+Crested Kingfisher
+Ringed Kingfisher
+Ringed Kingfisher (Northern)
+Ringed Kingfisher (Patagonian)
+Belted Kingfisher
+Pied Kingfisher
+Amazon Kingfisher
+American Pygmy Kingfisher
+Green Kingfisher
+Green-and-rufous Kingfisher
+Chloroceryle sp.
+kingfisher sp.

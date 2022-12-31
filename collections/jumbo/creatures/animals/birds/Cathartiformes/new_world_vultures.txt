@@ -1,0 +1,13 @@
+# Originally sourced from Clements Checklist v2022
+California Condor
+Andean Condor
+King Vulture
+Black Vulture
+Turkey Vulture
+Turkey Vulture (Northern)
+Turkey Vulture (Tropical)
+Turkey Vulture (South Temperate)
+Lesser Yellow-headed Vulture
+Greater Yellow-headed Vulture
+Cathartes sp.
+new world vulture sp.

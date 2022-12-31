@@ -1,0 +1,229 @@
+# Originally sourced from Clements Checklist v2022
+Ridgway's Rail
+Ridgway's Rail (San Francisco Bay)
+Ridgway's Rail (Light-footed)
+Ridgway's Rail (South Baja)
+Ridgway's Rail (Yuma)
+Aztec Rail
+Mangrove Rail
+Mangrove Rail (Fonseca)
+Mangrove Rail (Ecuadorian)
+Mangrove Rail (Atlantic)
+King Rail
+King Rail (Northern)
+King Rail (Cuban)
+Aztec/King Rail
+Clapper Rail
+Clapper Rail (Atlantic Coast)
+Clapper Rail (Gulf Coast)
+Clapper Rail (Caribbean)
+Clapper Rail (Yucatan)
+King x Clapper Rail (hybrid)
+King/Clapper Rail
+Ridgway's/Mangrove/Clapper Rail
+large rail sp.
+Plain-flanked Rail
+Virginia Rail
+Virginia Rail (Virginia)
+Virginia Rail (South American)
+King/Virginia Rail
+Bogota Rail
+Austral Rail
+Water Rail
+Brown-cheeked Rail
+Water/Brown-cheeked Rail
+African Rail
+Madagascar Rail
+Rallus sp.
+White-throated Rail
+Reunion Rail
+Red Rail
+Rodrigues Rail
+Corn Crake
+African Crake
+Rouget's Rail
+Inaccessible Island Rail
+St. Helena Crake
+Ascension Crake
+Snoring Rail
+Slaty-breasted Rail
+Luzon Rail
+Lewin's Rail
+Auckland Islands Rail
+Blue-faced Rail
+Bare-eyed Rail
+Talaud Rail
+Hawkins's Rail
+Calayan Rail
+Invisible Rail
+Chestnut Rail
+Weka
+New Caledonian Rail
+Lord Howe Rail
+Okinawa Rail
+Tahiti Rail
+Buff-banded Rail
+Chatham Islands Rail
+Dieffenbach's Rail
+New Britain Rail
+Woodford's Rail
+Woodford's Rail (Bougainville)
+Woodford's Rail (Santa Isabel)
+Woodford's Rail (Guadalcanal)
+Bar-winged Rail
+Guam Rail
+Wake Island Rail
+Barred Rail
+Roviana Rail
+Gray-throated Rail
+Ash-throated Crake
+Colombian Crake
+Paint-billed Crake
+Zapata Rail
+Spotted Rail
+Blackish Rail
+Plumbeous Rail
+Uniform Crake
+Giant Wood-Rail
+Brown Wood-Rail
+Little Wood-Rail
+Rufous-necked Wood-Rail
+Russet-naped Wood-Rail
+Gray-cowled Wood-Rail
+Gray-cowled Wood-Rail (Gray-cowled)
+Gray-cowled Wood-Rail (Gray-backed)
+Russet-naped/Gray-cowled Wood-Rail
+Red-winged Wood-Rail
+Slaty-breasted Wood-Rail
+wood-rail sp.
+Black-tailed Nativehen
+Hodgen's Waterhen
+Tasmanian Nativehen
+Spot-flanked Gallinule
+Sora
+Spotted Crake
+Australian Crake
+Dot-winged Crake
+Lesser Moorhen
+Makira Moorhen
+Tristan Moorhen
+Gough Moorhen
+Eurasian Moorhen
+Common Gallinule
+Common Gallinule (American)
+Common Gallinule (Altiplano)
+Common Gallinule (Hawaiian)
+Eurasian Moorhen/Common Gallinule
+Dusky Moorhen
+Samoan Moorhen
+Red-fronted Coot
+Horned Coot
+Giant Coot
+Red-gartered Coot
+Eurasian Coot
+Eurasian Moorhen x Eurasian Coot (hybrid)
+Mascarene Coot
+Red-knobbed Coot
+Eurasian/Red-knobbed Coot
+Eurasian x Red-knobbed Coot (hybrid)
+Hawaiian Coot
+Hawaiian Coot (Red-shielded)
+Hawaiian Coot (White-shielded)
+American Coot
+American Coot (Red-shielded)
+American Coot (White-shielded)
+Common Gallinule x American Coot (hybrid)
+Slate-colored Coot
+Slate-colored Coot (White-billed)
+Slate-colored Coot (Yellow-billed)
+Red-gartered x Slate-colored Coot (hybrid)
+White-winged Coot
+coot sp.
+Allen's Gallinule
+Purple Gallinule
+Azure Gallinule
+Marquesan Swamphen
+New Caledonian Gallinule
+Reunion Gallinule
+Western Swamphen
+Black-backed Swamphen
+African Swamphen
+South Island Takahe
+North Island Takahe
+Australasian Swamphen
+Philippine Swamphen
+Lord Howe Swamphen
+Gray-headed Swamphen
+Black-backed x Gray-headed Swamphen (hybrid)
+Black-backed/Gray-headed Swamphen
+swamphen sp.
+moorhen/coot/gallinule sp.
+Nkulengu Rail
+White-browed Crake
+New Guinea Flightless Rail
+Watercock
+Isabelline Bush-hen
+Plain Bush-hen
+White-breasted Waterhen
+Talaud Bush-hen
+Pale-vented Bush-hen
+Striped Crake
+Chestnut Forest-Rail
+White-striped Forest-Rail
+Forbes's Rail
+Mayr's Rail
+Red-necked Crake
+Andaman Crake
+Great Nicobar Crake (undescribed form)
+Red-legged Crake
+Slaty-legged Crake
+Rallina sp.
+Ruddy-breasted Crake
+Band-bellied Crake
+Brown Crake
+Black Crake
+Little Crake
+Baillon's Crake
+Baillon's Crake (Western)
+Baillon's Crake (Eastern)
+Baillon's Crake (Australasian)
+Little/Baillon's Crake
+Spotted/Little/Baillon's Crake
+St. Helena Rail
+Laysan Rail
+Sakalava Rail
+Black-tailed Crake
+Hawaiian Rail
+Miller's Rail
+Henderson Island Crake
+Spotless Crake
+Kosrae Crake
+Zapornia sp.
+Ocellated Crake
+Chestnut-headed Crake
+Russet-crowned Crake
+Black-banded Crake
+Swinhoe's Rail
+Yellow Rail
+Yellow Rail (Northern)
+Yellow Rail (Goldman's)
+Speckled Rail
+Yellow-breasted Crake
+Porzana/Zapornia/Hapalocrex sp.
+Rusty-flanked Crake
+Rufous-sided Crake
+Ruddy Crake
+White-throated Crake
+White-throated Crake (Rufous-faced)
+White-throated Crake (Gray-faced)
+Ruddy/White-throated Crake
+Gray-breasted Crake
+Galapagos Rail
+Black Rail
+Black Rail (Northern)
+Black Rail (Southern South America)
+Black Rail (Junin)
+Red-and-white Crake
+Rufous-sided/Red-and-white Crake
+Rufous-faced Crake
+rail/crake sp.

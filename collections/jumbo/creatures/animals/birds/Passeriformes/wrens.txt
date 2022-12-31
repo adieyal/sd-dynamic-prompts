@@ -1,0 +1,182 @@
+# Originally sourced from Clements Checklist v2022
+Rock Wren
+Rock Wren (Northern)
+Rock Wren (Central American)
+Nightingale Wren
+Scaly-breasted Wren
+Scaly-breasted Wren (Whistling)
+Scaly-breasted Wren (Scaly)
+Scaly-breasted Wren (Southern)
+Flutist Wren
+Wing-banded Wren
+Gray-mantled Wren
+Tooth-billed Wren
+Canyon Wren
+Sumichrast's Wren
+Nava's Wren
+Zapata Wren
+House Wren
+House Wren (Northern)
+House Wren (Dominica)
+House Wren (Martinique)
+House Wren (St. Lucia)
+House Wren (Guadeloupe)
+House Wren (St. Vincent)
+House Wren (Grenada)
+House Wren (Cozumel I.)
+House Wren (Brown-throated)
+House Wren (Southern)
+Cobb's Wren
+Socorro Wren
+Clarion Wren
+Rufous-browed Wren
+Ochraceous Wren
+Mountain Wren
+Santa Marta Wren
+Tepui Wren
+Eurasian Wren
+Eurasian Wren (Iceland)
+Eurasian Wren (Faeroe)
+Eurasian Wren (Shetland)
+Eurasian Wren (Hebridean)
+Eurasian Wren (Fair Isle)
+Eurasian Wren (St. Kilda)
+Eurasian Wren (British)
+Eurasian Wren (Eurasian)
+Pacific Wren
+Pacific Wren (alascensis Group)
+Pacific Wren (pacificus Group)
+Winter Wren
+Pacific/Winter Wren
+Timberline Wren
+Sedge Wren
+Grass Wren
+Grass Wren (Northern)
+Grass Wren (Venezuelan)
+Grass Wren (Paramo)
+Grass Wren (Junin)
+Grass Wren (Puna)
+Grass Wren (Tucuman)
+Grass Wren (Pampas)
+Grass Wren (Austral)
+Merida Wren
+Apolinar's Wren
+Marsh Wren
+Marsh Wren (paludicola Group)
+Marsh Wren (plesius Group)
+Marsh Wren (palustris Group)
+Marsh Wren (griseus)
+Marsh Wren (tolucensis)
+Sedge/Marsh Wren
+Carolina Wren
+Carolina Wren (Northern)
+Carolina Wren (Northeast Mexico/South Texas)
+Carolina Wren (White-browed)
+Bewick's Wren
+Bewick's Wren (bewickii)
+Bewick's Wren (mexicanus Group)
+Bewick's Wren (spilurus Group)
+White-headed Wren
+Band-backed Wren
+White-headed x Band-backed Wren (hybrid)
+Gray-barred Wren
+Giant Wren
+Rufous-naped Wren
+Rufous-naped Wren (Sclater's)
+Rufous-naped Wren (Veracruz)
+Rufous-naped Wren (Rufous-backed)
+Spotted Wren
+Boucard's Wren
+Yucatan Wren
+Cactus Wren
+Cactus Wren (brunneicapillus Group)
+Cactus Wren (affinis Group)
+Stripe-backed Wren
+Fasciated Wren
+Bicolored Wren
+Thrush-like Wren
+Thrush-like Wren (Spot-breasted)
+Thrush-like Wren (Unspotted)
+Sooty-headed Wren
+Black-bellied Wren
+Plain-tailed Wren
+Plain-tailed Wren (Plain-tailed)
+Plain-tailed Wren (Gray-browed)
+Mantaro Wren (undescribed form)
+Inca Wren
+Whiskered Wren
+Moustached Wren
+Coraya Wren
+Moustached x Coraya Wren (hybrid)
+Moustached/Coraya Wren
+Rufous-breasted Wren
+Spot-breasted Wren
+Speckle-breasted Wren
+Speckle-breasted Wren (Colombian)
+Speckle-breasted Wren (Speckle-breasted)
+Speckle-breasted Wren (Marañon)
+Happy Wren
+Happy Wren (Mainland)
+Happy Wren (Tres Marias Is.)
+Black-throated Wren
+Pheugopedius sp.
+Sinaloa Wren
+Banded Wren
+Rufous-and-white Wren
+Antioquia Wren
+Niceforo's Wren
+Stripe-breasted Wren
+Stripe-throated Wren
+Cabanis's Wren
+Canebrake Wren
+Cabanis's/Canebrake Wren
+Isthmian Wren
+Cabanis's/Isthmian Wren
+Riverside Wren
+Bay Wren
+Bay Wren (Central American)
+Bay Wren (South American)
+Superciliated Wren
+Buff-breasted Wren
+Long-billed Wren
+Fawn-breasted Wren
+Gray Wren
+Cantorchilus sp.
+Rufous Wren
+Sharpe's Wren
+Peruvian Wren
+Fulvous Wren
+Cinnycerthia sp.
+White-bellied Wren
+White-bellied Wren (Middle America)
+White-bellied Wren (West Mexico)
+White-breasted Wood-Wren
+White-breasted Wood-Wren (Sclater's)
+White-breasted Wood-Wren (Cherrie's)
+White-breasted Wood-Wren (Choco)
+White-breasted Wood-Wren (Black-capped)
+Bar-winged Wood-Wren
+Gray-breasted Wood-Wren
+Gray-breasted Wood-Wren (Central American)
+Gray-breasted Wood-Wren (Choco)
+Gray-breasted Wood-Wren (bangsi)
+Gray-breasted Wood-Wren (Perija)
+Gray-breasted Wood-Wren (meridana)
+Gray-breasted Wood-Wren (venezuelensis)
+Gray-breasted Wood-Wren (hilaris)
+Gray-breasted Wood-Wren (Andean)
+Hermit Wood-Wren
+Munchique Wood-Wren
+wood-wren sp.
+Chestnut-breasted Wren
+Chestnut-breasted Wren (Northern)
+Chestnut-breasted Wren (Southern)
+Song Wren
+Musician Wren
+Musician Wren (Imeri)
+Musician Wren (Gray-eared)
+Musician Wren (Musician)
+Musician Wren (Gray-flanked)
+Musician Wren (Rondonia)
+Musician Wren (Ferruginous)
+wren sp.

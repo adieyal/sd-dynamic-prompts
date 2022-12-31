@@ -1,0 +1,168 @@
+# Originally sourced from Clements Checklist v2022
+Upland Sandpiper
+Bristle-thighed Curlew
+Whimbrel
+Whimbrel (Hudsonian)
+Whimbrel (White-rumped)
+Whimbrel (European)
+Whimbrel (Steppe)
+Whimbrel (Siberian)
+Little Curlew
+Eskimo Curlew
+Long-billed Curlew
+Far Eastern Curlew
+Slender-billed Curlew
+Eurasian Curlew
+Whimbrel/Eurasian Curlew
+Far Eastern/Eurasian Curlew
+curlew sp.
+Bar-tailed Godwit
+Bar-tailed Godwit (European)
+Bar-tailed Godwit (Siberian)
+Black-tailed Godwit
+Black-tailed Godwit (islandica)
+Black-tailed Godwit (limosa)
+Black-tailed Godwit (melanuroides)
+Black-tailed Godwit (bohaii)
+Bar-tailed/Black-tailed Godwit
+Hudsonian Godwit
+Bar-tailed x Hudsonian Godwit (hybrid)
+Black-tailed x Hudsonian Godwit (hybrid)
+Marbled Godwit
+Hudsonian/Marbled Godwit
+godwit sp.
+Ruddy Turnstone
+Black Turnstone
+Kiritimati Sandpiper
+White-winged Sandpiper
+Moorea Sandpiper
+Tuamotu Sandpiper
+Great Knot
+Red Knot
+Great/Red Knot
+Surfbird
+Great Knot x Surfbird (hybrid)
+Red Knot x Surfbird (hybrid)
+Ruff
+Broad-billed Sandpiper
+Sharp-tailed Sandpiper
+Stilt Sandpiper
+Curlew Sandpiper
+Temminck's Stint
+Long-toed Stint
+Spoon-billed Sandpiper
+Red-necked Stint
+Sanderling
+Dunlin
+Dunlin (pacifica/arcticola)
+Dunlin (hudsonia)
+Dunlin (arctica)
+Dunlin (schinzii)
+Dunlin (alpina)
+Dunlin (sakhalina Group)
+Curlew Sandpiper/Dunlin
+Rock Sandpiper
+Rock Sandpiper (ptilocnemis)
+Rock Sandpiper (quarta/tschuktschorum/couesi)
+Rock Sandpiper (quarta)
+Rock Sandpiper (tschuktschorum)
+Rock Sandpiper (couesi)
+Purple Sandpiper
+Dunlin x Purple Sandpiper (hybrid)
+Rock/Purple Sandpiper
+Baird's Sandpiper
+Little Stint
+Red-necked/Little Stint
+Least Sandpiper
+White-rumped Sandpiper
+Dunlin x White-rumped Sandpiper (hybrid)
+Buff-breasted Sandpiper
+White-rumped x Buff-breasted Sandpiper (hybrid)
+Pectoral Sandpiper
+Sharp-tailed/Pectoral Sandpiper
+Curlew x Pectoral Sandpiper (hybrid)
+Semipalmated Sandpiper
+White-rumped x Semipalmated Sandpiper (hybrid)
+Western Sandpiper
+Semipalmated/Western Sandpiper
+peep sp.
+Calidris sp.
+Asian Dowitcher
+Short-billed Dowitcher
+Short-billed Dowitcher (griseus)
+Short-billed Dowitcher (hendersoni)
+Short-billed Dowitcher (caurinus)
+Long-billed Dowitcher
+Short-billed/Long-billed Dowitcher
+Jack Snipe
+Eurasian Woodcock
+Amami Woodcock
+Bukidnon Woodcock
+Javan Woodcock
+New Guinea Woodcock
+Sulawesi Woodcock
+Moluccan Woodcock
+American Woodcock
+North Island Snipe
+South Island Snipe
+Chatham Islands Snipe
+Snares Island Snipe
+Subantarctic Snipe
+Imperial Snipe
+Jameson's Snipe
+Fuegian Snipe
+Solitary Snipe
+Latham's Snipe
+Wood Snipe
+Great Snipe
+Common Snipe
+Great x Common Snipe (hybrid)
+Wilson's Snipe
+Common/Wilson's Snipe
+Pantanal Snipe
+Wilson's/Pantanal Snipe
+Magellanic Snipe
+Pantanal/Magellanic Snipe
+Puna Snipe
+Noble Snipe
+Pin-tailed Snipe
+Common/Pin-tailed Snipe
+Swinhoe's Snipe
+Pin-tailed/Swinhoe's Snipe
+African Snipe
+Madagascar Snipe
+Giant Snipe
+snipe sp.
+Terek Sandpiper
+Wilson's Phalarope
+Red-necked Phalarope
+Red Phalarope
+Red-necked/Red Phalarope
+phalarope sp.
+Common Sandpiper
+Spotted Sandpiper
+Common/Spotted Sandpiper
+Green Sandpiper
+Solitary Sandpiper
+Solitary Sandpiper (solitaria)
+Solitary Sandpiper (cinnamomea)
+Gray-tailed Tattler
+Wandering Tattler
+Gray-tailed/Wandering Tattler
+Spotted Redshank
+Greater Yellowlegs
+Common Greenshank
+Nordmann's Greenshank
+Common/Nordmann's Greenshank
+Willet
+Willet (Eastern)
+Willet (Western)
+Lesser Yellowlegs
+Greater/Lesser Yellowlegs
+Marsh Sandpiper
+Wood Sandpiper
+Common Redshank
+Spotted/Common Redshank
+Tringa sp.
+Scolopacidae sp.
+large shorebird sp.

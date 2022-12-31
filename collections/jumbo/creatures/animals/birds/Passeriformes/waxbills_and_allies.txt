@@ -1,0 +1,194 @@
+# Originally sourced from Clements Checklist v2022
+Pictorella Munia
+Mountain Firetail
+Diamond Firetail
+Red-eared Firetail
+Beautiful Firetail
+Crimson Finch
+Crimson Finch (White-bellied)
+Crimson Finch (Black-bellied)
+Red-browed Firetail
+Painted Firetail
+Star Finch
+Plum-headed Finch
+Double-barred Finch
+Zebra Finch
+Zebra Finch (Lesser Sundas)
+Zebra Finch (Australian)
+Zebra Finch (Domestic type)
+Double-barred x Zebra Finch (hybrid)
+Masked Finch
+Masked Finch (Masked)
+Masked Finch (White-eared)
+Long-tailed Finch
+Black-throated Finch
+Black-throated Finch (Black-rumped)
+Black-throated Finch (White-rumped)
+Gray-headed Silverbill
+Bronze Mannikin
+Magpie Mannikin
+Black-and-white Mannikin
+Black-and-white Mannikin (Black-and-white)
+Black-and-white Mannikin (Red-backed)
+Madagascar Munia
+African Silverbill
+Indian Silverbill
+Java Sparrow
+Timor Sparrow
+Streak-headed Munia
+White-spotted Munia
+Streak-headed x White-spotted Munia (hybrid)
+Streak-headed/White-spotted Munia
+Scaly-breasted Munia
+Scaly-breasted Munia (Checkered)
+Scaly-breasted Munia (Scaled)
+Black-throated Munia
+Black-faced Munia
+White-rumped Munia
+Dusky Munia
+White-bellied Munia
+Javan Munia
+Tricolored Munia
+Tricolored Munia (Pale-flanked)
+Tricolored Munia (Cinnamon-flanked)
+Chestnut Munia
+Chestnut Munia (Chestnut)
+Chestnut Munia (formosana)
+Tricolored x Chestnut Munia (hybrid)
+Tricolored/Chestnut Munia
+White-capped Munia
+White-headed Munia
+Pale-headed Munia
+Grand Munia
+Black-breasted Munia
+Snow Mountain Munia
+Alpine Munia
+Gray-banded Munia
+Gray-crowned Munia
+Gray-headed Munia
+Hooded Munia
+New Ireland Munia
+Mottled Munia
+New Hanover Munia
+Yellow-rumped Munia
+Five-colored Munia
+Chestnut-breasted Munia
+Yellow-rumped x Chestnut-breasted Munia (hybrid)
+Black Munia
+Bismarck Munia
+Lonchura sp.
+Gouldian Finch
+Pin-tailed Parrotfinch
+Green-faced Parrotfinch
+Tawny-breasted Parrotfinch
+Red-throated Parrotfinch
+Fiji Parrotfinch
+Royal Parrotfinch
+Royal Parrotfinch (Vanuatu)
+Royal Parrotfinch (Samoan)
+Pink-billed Parrotfinch
+Tricolored Parrotfinch
+Red-eared Parrotfinch
+Papuan Parrotfinch
+Blue-faced Parrotfinch
+Papuan/Blue-faced Parrotfinch
+Mount Mutis Parrotfinch (undescribed form)
+parrotfinch sp.
+Shelley's Oliveback
+White-collared Oliveback
+Yellow-bellied Waxbill
+Angola Waxbill
+Swee Waxbill
+Green-backed Twinspot
+Green-backed Twinspot (Orange-breasted)
+Green-backed Twinspot (Green-breasted)
+Shelley's Crimsonwing
+Dusky Crimsonwing
+Abyssinian Crimsonwing
+Red-faced Crimsonwing
+Red-faced Crimsonwing (Western)
+Red-faced Crimsonwing (Eastern)
+Red-fronted Antpecker
+Woodhouse's Antpecker
+Jameson's Antpecker
+White-breasted Nigrita
+Chestnut-breasted Nigrita
+Gray-headed Nigrita
+Pale-fronted Nigrita
+nigrita sp.
+Gray-headed Oliveback
+Black-faced Waxbill
+Black-cheeked Waxbill
+Lavender Waxbill
+Black-tailed Waxbill
+Cinderella Waxbill
+Black-crowned Waxbill
+Black-headed Waxbill
+Kandt's Waxbill
+Orange-cheeked Waxbill
+Anambra Waxbill
+Fawn-breasted Waxbill
+Fawn-breasted Waxbill (Abyssinian)
+Fawn-breasted Waxbill (Fawn-breasted)
+Fawn-breasted Waxbill (benguellensis)
+Common Waxbill
+Black-lored Waxbill
+Black-rumped Waxbill
+Crimson-rumped Waxbill
+Arabian Waxbill
+waxbill sp.
+Quailfinch
+Quailfinch (Black-faced)
+Quailfinch (Spectacled)
+Quailfinch (Black-chinned)
+Locustfinch
+Cut-throat
+Red-headed Finch
+Green Avadavat
+Zebra Waxbill
+Red Avadavat
+Red Avadavat (Red-bellied)
+Red Avadavat (Yellow-bellied)
+Purple Grenadier
+Violet-eared Waxbill
+Southern Cordonbleu
+Red-cheeked Cordonbleu
+Blue-capped Cordonbleu
+cordonbleu sp.
+Grant's Bluebill
+Western Bluebill
+Western Bluebill (Western)
+Western Bluebill (Red-rumped)
+Red-headed Bluebill
+Lesser Seedcracker
+Crimson Seedcracker
+Black-bellied Seedcracker
+Crimson/Black-bellied Seedcracker
+Green-winged Pytilia
+Orange-winged Pytilia
+Red-winged Pytilia
+Red-billed Pytilia
+Red-faced Pytilia
+pytilia sp.
+Dybowski's Twinspot
+Dusky Twinspot
+Dusky Twinspot (Angola)
+Dusky Twinspot (Grauer's)
+Peters's Twinspot
+Pink-throated Twinspot
+Brown Twinspot
+Red-billed Firefinch
+African Firefinch
+Jameson's Firefinch
+Mali Firefinch
+Rock Firefinch
+Reichenow's Firefinch
+Black-bellied Firefinch
+Bar-breasted Firefinch
+Brown Firefinch
+Black-faced Firefinch
+Black-faced Firefinch (Vinaceous)
+Black-faced Firefinch (Gray)
+Black-faced Firefinch (Reddish)
+firefinch sp.
+estrildid finch sp.

@@ -1,0 +1,183 @@
+# Originally sourced from Clements Checklist v2022
+Brown-cheeked Fulvetta
+Black-browed Fulvetta
+Brown Fulvetta
+Javan Fulvetta
+Nepal Fulvetta
+David's Fulvetta
+Huet's Fulvetta
+Morrison's Fulvetta
+Yunnan Fulvetta
+Mountain Fulvetta
+Black-browed/Mountain Fulvetta
+Alcippe sp.
+Striated Laughingthrush
+Himalayan Cutia
+Vietnamese Cutia
+Gray-crowned Crocias
+Spotted Crocias
+Scaly Laughingthrush
+Brown-capped Laughingthrush
+Blue-winged Laughingthrush
+Streaked Laughingthrush
+Bhutan Laughingthrush
+Striped Laughingthrush
+Variegated Laughingthrush
+Black-faced Laughingthrush
+White-whiskered Laughingthrush
+Prince Henry's Laughingthrush
+Elliot's Laughingthrush
+Red-tailed Laughingthrush
+Collared Laughingthrush
+Chestnut-crowned Laughingthrush
+Assam Laughingthrush
+Red-winged Laughingthrush
+Silver-eared Laughingthrush
+Golden-winged Laughingthrush
+Malayan Laughingthrush
+Trochalopteron sp.
+Banasura Laughingthrush
+Nilgiri Laughingthrush
+Palani Laughingthrush
+Ashambu Laughingthrush
+Long-tailed Sibia
+White-eared Sibia
+Rufous Sibia
+Beautiful Sibia
+Beautiful Sibia (Black-eared)
+Beautiful Sibia (Gray-eared)
+Gray Sibia
+Black-backed Sibia
+Black-headed Sibia
+Black-headed Sibia (Black-headed)
+Black-headed Sibia (engelbachi/kingi)
+Black-headed Sibia (Lang Bian)
+Hoary-throated Barwing
+Taiwan Barwing
+Streak-throated Barwing
+Streak-throated Barwing (Gray-chested)
+Streak-throated Barwing (Rufous-chested)
+Hoary-throated/Streak-throated Barwing
+Streaked Barwing
+Blue-winged Minla
+Chestnut-tailed Minla
+Rusty-fronted Barwing
+Spectacled Barwing
+Spectacled Barwing (Eastern)
+Spectacled Barwing (Western)
+Black-crowned Barwing
+Red-billed Leiothrix
+Silver-eared Mesia
+Silver-eared Mesia (Silver-eared)
+Silver-eared Mesia (Sumatran)
+Red-tailed Minla
+Rufous-backed Sibia
+Rufous-backed Sibia (Rufous-backed)
+Rufous-backed Sibia (Dalat)
+Bugun Liocichla
+Gray-faced Liocichla
+Steere's Liocichla
+Red-faced Liocichla
+Scarlet-faced Liocichla
+Large Gray Babbler
+Ashy-headed Laughingthrush
+Slender-billed Babbler
+Rufous Babbler
+Orange-billed Babbler
+Jungle Babbler
+Jungle Babbler (Jungle)
+Jungle Babbler (Black-winged)
+Yellow-billed Babbler
+Jungle/Yellow-billed Babbler
+Rufous Chatterer
+Scaly Chatterer
+Iraq Babbler
+Afghan Babbler
+Common Babbler
+Fulvous Chatterer
+Arabian Babbler
+Striated Babbler
+Common/Striated Babbler
+White-throated Babbler
+Spiny Babbler
+Capuchin Babbler
+Capuchin Babbler (Gray-hooded)
+Capuchin Babbler (Black-crowned)
+Capuchin Babbler (Brown-throated)
+White-throated Mountain-Babbler
+Chapin's Mountain-Babbler
+Red-collared Mountain-Babbler
+Brown Babbler
+White-rumped Babbler
+Hinde's Pied-Babbler
+Scaly Babbler
+Arrow-marked Babbler
+Bare-cheeked Babbler
+Cretzschmar's Babbler
+Blackcap Babbler
+Blackcap Babbler (Blackcap)
+Blackcap Babbler (Dusky-throated)
+Dusky Babbler
+Southern Pied-Babbler
+Hartlaub's Babbler
+Black-lored Babbler
+Black-lored Babbler (Sharpe's)
+Black-lored Babbler (Nanyuki)
+Black-faced Babbler
+Northern Pied-Babbler
+Argya/Turdoides sp.
+Spot-breasted Laughingthrush
+Orange-breasted Laughingthrush
+Chinese Hwamei
+Taiwan Hwamei
+Chinese x Taiwan Hwamei (hybrid)
+Chinese/Taiwan Hwamei
+Lesser Necklaced Laughingthrush
+Rufous-fronted Laughingthrush
+Sunda Laughingthrush
+White-crested Laughingthrush
+Sumatran Laughingthrush
+Black-hooded Laughingthrush
+White-necked Laughingthrush
+Cambodian Laughingthrush
+Gray Laughingthrush
+Rufous-cheeked Laughingthrush
+Garrulax sp.
+Snowy-cheeked Laughingthrush
+Rufous-chinned Laughingthrush
+Chestnut-eared Laughingthrush
+Moustached Laughingthrush
+Moustached Laughingthrush (Western)
+Moustached Laughingthrush (Eastern)
+Spotted Laughingthrush
+Giant Laughingthrush
+Biet's Laughingthrush
+Barred Laughingthrush
+Wayanad Laughingthrush
+Rufous-vented Laughingthrush
+White-cheeked Laughingthrush
+Yellow-throated Laughingthrush
+Blue-crowned Laughingthrush
+Chestnut-capped Laughingthrush
+Chestnut-hooded Laughingthrush
+Rufous-necked Laughingthrush
+Chestnut-backed Laughingthrush
+Black-throated Laughingthrush
+Black-throated Laughingthrush (Black-throated)
+Black-throated Laughingthrush (Hainan)
+White-browed Laughingthrush
+Masked Laughingthrush
+Greater Necklaced Laughingthrush
+Lesser/Greater Necklaced Laughingthrush
+Pere David's Laughingthrush
+Mount Victoria Babax
+Chinese Babax
+Giant Babax
+Tibetan Babax
+White-throated Laughingthrush
+Rufous-crowned Laughingthrush
+Gray-sided Laughingthrush
+Buffy Laughingthrush
+Rusty Laughingthrush
+Ianthocincla/Pterorhinus sp.
+laughingthrush sp.

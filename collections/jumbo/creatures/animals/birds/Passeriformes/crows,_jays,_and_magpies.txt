@@ -1,0 +1,208 @@
+# Originally sourced from Clements Checklist v2022
+Black Magpie
+Black Magpie (Malayan)
+Black Magpie (Bornean)
+Siberian Jay
+Sichuan Jay
+Canada Jay
+Canada Jay (Boreal)
+Canada Jay (Rocky Mts.)
+Canada Jay (Pacific)
+White-throated Jay
+Dwarf Jay
+Black-throated Jay
+Silvery-throated Jay
+Azure-hooded Jay
+Beautiful Jay
+Black-collared Jay
+Black-collared Jay (Black-collared)
+Black-collared Jay (Quindio)
+Turquoise Jay
+White-collared Jay
+Black-throated Magpie-Jay
+White-throated Magpie-Jay
+Black-throated x White-throated Magpie-Jay (hybrid)
+Black-throated/White-throated Magpie-Jay
+Brown Jay
+Tufted Jay
+Black-chested Jay
+Green Jay
+Green Jay (Green)
+Green Jay (Inca)
+Bushy-crested Jay
+San Blas Jay
+Yucatan Jay
+Purplish-backed Jay
+Purplish Jay
+Azure Jay
+Violaceous Jay
+Curl-crested Jay
+White-tailed Jay
+Cayenne Jay
+Azure-naped Jay
+Azure-naped Jay (Azure-naped)
+Azure-naped Jay (Campina)
+Plush-crested Jay
+White-naped Jay
+Cyanocorax sp.
+Pinyon Jay
+Steller's Jay
+Steller's Jay (Coastal)
+Steller's Jay (Interior)
+Steller's Jay (Central American)
+Blue Jay
+Green x Blue Jay (hybrid)
+Steller's x Blue Jay (hybrid)
+Florida Scrub-Jay
+Island Scrub-Jay
+California Scrub-Jay
+Steller's Jay x California Scrub-Jay (hybrid)
+Woodhouse's Scrub-Jay
+Woodhouse's Scrub-Jay (Woodhouse's)
+Woodhouse's Scrub-Jay (Sumichrast's)
+Steller's Jay x Woodhouse's Scrub-Jay (hybrid)
+California/Woodhouse's Scrub-Jay
+Mexican Jay
+Mexican Jay (Arizona)
+Mexican Jay (Couch's)
+Mexican Jay (San Luis Potosi)
+Transvolcanic Jay
+Mexican/Transvolcanic Jay
+Unicolored Jay
+Aphelocoma sp.
+Eurasian Jay
+Eurasian Jay (Eurasian)
+Eurasian Jay (Black-capped)
+Eurasian Jay (Black-crowned)
+Eurasian Jay (Iranian)
+Eurasian Jay (Brandt's)
+Eurasian Jay (Himalayan)
+Eurasian Jay (White-faced)
+Eurasian Jay (Japanese)
+Black-headed Jay
+Lidth's Jay
+jay sp.
+Iberian Magpie
+Azure-winged Magpie
+Azure-winged Magpie (Azure-winged)
+Azure-winged Magpie (Japanese)
+Sri Lanka Blue-Magpie
+Taiwan Blue-Magpie
+Yellow-billed Blue-Magpie
+Red-billed Blue-Magpie
+Yellow-billed/Red-billed Blue-Magpie
+White-winged Magpie
+White-winged Magpie (Black-tailed)
+White-winged Magpie (Gray-tailed)
+Common Green-Magpie
+Common Green-Magpie (Common)
+Common Green-Magpie (Yellow-crowned)
+Indochinese Green-Magpie
+Javan Green-Magpie
+Bornean Green-Magpie
+green-magpie sp.
+Rufous Treepie
+Gray Treepie
+Rufous/Gray Treepie
+Sumatran Treepie
+Bornean Treepie
+White-bellied Treepie
+Collared Treepie
+Andaman Treepie
+Racket-tailed Treepie
+Hooded Treepie
+Ratchet-tailed Treepie
+treepie sp.
+Maghreb Magpie
+Asir Magpie
+Black-rumped Magpie
+Oriental Magpie
+Eurasian Magpie
+Eurasian Magpie (Iberian)
+Eurasian Magpie (Eurasian)
+Eurasian Magpie (Kamchatkan)
+Oriental/Eurasian Magpie
+Black-billed Magpie
+Yellow-billed Magpie
+Pica sp.
+Stresemann's Bush-Crow
+Mongolian Ground-Jay
+Xinjiang Ground-Jay
+Turkestan Ground-Jay
+Iranian Ground-Jay
+Clark's Nutcracker
+Eurasian Nutcracker
+Eurasian Nutcracker (Northern)
+Eurasian Nutcracker (Southern)
+Kashmir Nutcracker
+Red-billed Chough
+Red-billed Chough (Red-billed)
+Red-billed Chough (Ethiopian)
+Yellow-billed Chough
+Red-billed/Yellow-billed Chough
+Piapiac
+Eurasian Jackdaw
+Daurian Jackdaw
+Eurasian/Daurian Jackdaw
+House Crow
+New Caledonian Crow
+Banggai Crow
+Slender-billed Crow
+Slender-billed Crow (Sierra Madre)
+Slender-billed Crow (Slender-billed)
+Violet Crow
+Piping Crow
+Flores Crow
+Mariana Crow
+Long-billed Crow
+Guadalcanal Crow
+Bougainville Crow
+Brown-headed Crow
+Gray Crow
+Cape Crow
+Rook
+American Crow
+Palm Crow
+Palm Crow (Cuban)
+Palm Crow (Hispaniolan)
+Cuban Crow
+White-necked Crow
+Jamaican Crow
+Tamaulipas Crow
+Sinaloa Crow
+Fish Crow
+House x Fish Crow (hybrid)
+American/Fish Crow
+Hawaiian Crow
+Chihuahuan Raven
+Carrion Crow
+Carrion Crow (Western)
+Carrion Crow (Eastern)
+Hooded Crow
+Hooded Crow (Hooded)
+Hooded Crow (Mesopotamian)
+Carrion x Hooded Crow (hybrid)
+Carrion/Hooded Crow
+Large-billed Crow
+Large-billed Crow (Large-billed)
+Large-billed Crow (Indian Jungle)
+Large-billed Crow (Eastern)
+Torresian Crow
+Bismarck Crow
+Little Crow
+crow sp.
+Australian Raven
+Little Raven
+Forest Raven
+Collared Crow
+Pied Crow
+Brown-necked Raven
+Somali Crow
+Pied x Somali Crow (hybrid)
+Fan-tailed Raven
+White-necked Raven
+Thick-billed Raven
+Common Raven
+raven sp.
+crow/raven sp.
+corvid sp.

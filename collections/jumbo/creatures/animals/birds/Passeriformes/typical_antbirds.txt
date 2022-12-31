@@ -1,0 +1,328 @@
+# Originally sourced from Clements Checklist v2022
+Rufous-rumped Antwren
+Chestnut-shouldered Antwren
+Yellow-rumped Antwren
+Ash-winged Antwren
+Euchrepomis sp.
+Fasciated Antshrike
+Bamboo Antshrike
+Spot-backed Antshrike
+Giant Antshrike
+Large-tailed Antshrike
+Tufted Antshrike
+Black-throated Antshrike
+Undulated Antshrike
+Fulvous Antshrike
+Undulated/Fulvous Antshrike
+Great Antshrike
+Black-crested Antshrike
+Black-crested Antshrike (Streak-fronted)
+Black-crested Antshrike (Black-crested)
+Glossy Antshrike
+Silvery-cheeked Antshrike
+Caatinga Antwren
+White-bearded Antshrike
+Barred Antshrike
+Barred Antshrike (Barred)
+Barred Antshrike (Caatinga)
+Rufous-capped Antshrike
+Rufous-capped Antshrike (Northern)
+Rufous-capped Antshrike (Southern)
+Rufous-winged Antshrike
+Chapman's Antshrike
+Bar-crested Antshrike
+Lined Antshrike
+Chestnut-backed Antshrike
+Inirida Antshrike (undescribed form)
+Collared Antshrike
+Collared Antshrike (Collared)
+Collared Antshrike (shumbae)
+Black-crowned Antshrike
+Black-hooded Antshrike
+Plain-winged Antshrike
+Mouse-colored Antshrike
+Plain-winged/Mouse-colored Antshrike
+Black Antshrike
+Cocha Antshrike
+Castelnau's Antshrike
+Blackish-gray Antshrike
+Northern Slaty-Antshrike
+Northern Slaty-Antshrike (Guianan)
+Northern Slaty-Antshrike (Peruvian)
+Natterer's Slaty-Antshrike
+Bolivian Slaty-Antshrike
+Planalto Slaty-Antshrike
+Sooretama Slaty-Antshrike
+Variable Antshrike
+Uniform Antshrike
+White-shouldered Antshrike
+Upland Antshrike
+Black-backed Antshrike
+Band-tailed Antshrike
+Amazonian Antshrike
+Streak-backed Antshrike
+Acre Antshrike
+Thamnophilus sp.
+Star-throated Antwren
+Pearly Antshrike
+Black Bushbird
+Recurve-billed Bushbird
+Rondonia Bushbird
+Russet Antshrike
+Russet Antshrike (Tawny)
+Russet Antshrike (Andean)
+Rufescent Antshrike
+Russet/Rufescent Antshrike
+antshrike sp.
+Spot-breasted Antvireo
+Plain Antvireo
+Streak-crowned Antvireo
+Spot-crowned Antvireo
+Rufous-backed Antvireo
+Bicolored Antvireo
+Plumbeous Antvireo
+White-streaked Antvireo
+White-streaked Antvireo (White-streaked)
+White-streaked Antvireo (Venezuelan)
+antvireo sp.
+Dusky-throated Antshrike
+Saturnine Antshrike
+Dusky-throated/Saturnine Antshrike
+Cinereous Antshrike
+Bluish-slate Antshrike
+Cinereous/Bluish-slate Antshrike
+Spiny-faced Antshrike
+Plain-throated Antwren
+Rufous-bellied Antwren
+Spot-winged Antshrike
+Checker-throated Stipplethroat
+Brown-bellied Stipplethroat
+White-eyed Stipplethroat
+Rufous-backed Stipplethroat
+Rufous-backed Stipplethroat (Rio Negro)
+Rufous-backed Stipplethroat (Yasuni)
+Rufous-backed Stipplethroat (Rufous-backed)
+Rufous-backed Stipplethroat (Yasuni x Rufous-backed)
+Rio Madeira Stipplethroat
+Rio Madeira Stipplethroat (Madeira)
+Rio Madeira Stipplethroat (Roosevelt)
+Rufous-backed/Rio Madeira Stipplethroat
+Foothill Stipplethroat
+Ornate Stipplethroat
+Ornate Stipplethroat (Western)
+Ornate Stipplethroat (Eastern)
+Rufous-tailed Stipplethroat
+stipplethroat sp.
+Pygmy Antwren
+Moustached Antwren
+Moustached Antwren (Moustached)
+Moustached Antwren (Short-billed)
+Yellow-throated Antwren
+Sclater's Antwren
+Guianan Streaked-Antwren
+Amazonian Streaked-Antwren
+Pacific Antwren
+Cherrie's Antwren
+Klages's Antwren
+Stripe-chested Antwren
+White-flanked Antwren
+White-flanked Antwren (White-flanked)
+White-flanked Antwren (Silvery-flanked)
+Slaty Antwren
+Rio Suno Antwren
+Salvadori's Antwren
+Long-winged Antwren
+Band-tailed Antwren
+Ihering's Antwren
+Ihering's Antwren (Purus)
+Ihering's Antwren (Ihering's)
+Ihering's Antwren (Bamboo)
+Rio de Janeiro Antwren
+Ashy Antwren
+Unicolored Antwren
+Alagoas Antwren
+Plain-winged Antwren
+Gray Antwren
+Leaden Antwren
+Myrmotherula sp.
+Banded Antbird
+Stripe-backed Antbird
+Bahia Antwren
+Black-capped Antwren
+Predicted Antwren
+Aripuana Antwren
+Creamy-bellied Antwren
+Ash-throated Antwren
+Inambari-Tambopata Antwren (undescribed form)
+Loreto Antwren (undescribed form)
+Spot-tailed Antwren
+Dugand's Antwren
+Todd's Antwren
+Ancient Antwren
+Spot-backed Antwren
+Roraiman Antwren
+Pectoral Antwren
+Large-billed Antwren
+Yellow-breasted Antwren
+Rusty-winged Antwren
+Rufous-margined Antwren
+Herpsilochmus sp.
+Dot-winged Antwren
+Dot-winged Antwren (Boucard's)
+Dot-winged Antwren (microstictus)
+Dot-winged Antwren (quixensis)
+Dot-winged Antwren (nigriventris)
+Dot-winged Antwren (White-tailed)
+Dot-winged Antwren (bicolor)
+Dot-winged Antwren (emiliae)
+Narrow-billed Antwren
+Black-hooded Antwren
+White-fringed Antwren
+White-fringed Antwren (Northern)
+White-fringed Antwren (Southern)
+Serra Antwren
+Restinga Antwren
+Black-bellied Antwren
+Rusty-backed Antwren
+Sincora Antwren
+Marsh Antwren
+Marsh Antwren (Parana)
+Marsh Antwren (Sao Paulo)
+antwren sp.
+Ferruginous Antbird
+Bertoni's Antbird
+Rufous-tailed Antbird
+Ochre-rumped Antbird
+Dusky-tailed Antbird
+Scaled Antbird
+Striated Antbird
+East Andean Antbird
+Klages's Antbird
+Santa Marta Antbird
+Streak-headed Antbird
+Drymophila sp.
+Guianan Warbling-Antbird
+Imeri Warbling-Antbird
+Peruvian Warbling-Antbird
+Yellow-breasted Warbling-Antbird
+Rondonia Warbling-Antbird
+Spix's Warbling-Antbird
+Rondonia x Spix's Warbling-Antbird (hybrid)
+Manicore Warbling-Antbird
+warbling-antbird sp.
+Yellow-browed Antbird
+Orange-bellied Antwren
+Streak-capped Antwren
+Willis's Antbird
+Parker's Antbird
+Dusky Antbird
+Dusky Antbird (tyrannina/crepera)
+Dusky Antbird (saturatior/vicina)
+Black Antbird
+Blackish Antbird
+Riparian Antbird
+Blackish/Riparian Antbird
+Cercomacroides sp.
+Manu Antbird
+Gray Antbird
+Rio de Janeiro Antbird
+Mato Grosso Antbird
+Bananal Antbird
+Jet Antbird
+Rio Branco Antbird
+Western Fire-eye
+Western Fire-eye (Pacific)
+Western Fire-eye (Black-bellied)
+Western Fire-eye (Black-headed)
+Western Fire-eye (maura Group)
+Tapajos Fire-eye
+East Amazonian Fire-eye
+Fringe-backed Fire-eye
+White-shouldered Fire-eye
+Slender Antbird
+White-browed Antbird
+Ash-breasted Antbird
+Black-faced Antbird
+Black-tailed Antbird
+White-lined Antbird
+Black-chinned Antbird
+Band-tailed Antbird
+Black-and-white Antbird
+Bare-crowned Antbird
+Silvered Antbird
+Black-headed Antbird
+Black-headed Antbird (Amazonas)
+Black-headed Antbird (Hellmayr's)
+Allpahuayo Antbird
+Slate-colored Antbird
+Roraiman Antbird
+Plumbeous Antbird
+Spot-winged Antbird
+Humaita Antbird
+Brownish-headed Antbird
+Rufous-faced Antbird
+Caura Antbird
+Myrmelastes sp.
+White-bellied Antbird
+Chestnut-backed Antbird
+Chestnut-backed Antbird (Chestnut-backed)
+Chestnut-backed Antbird (Short-tailed)
+Gray-headed Antbird
+Dull-mantled Antbird
+Magdalena Antbird
+Esmeraldas Antbird
+Stub-tailed Antbird
+Chestnut-tailed Antbird
+Chestnut-tailed Antbird (hemimelaena)
+Chestnut-tailed Antbird (pallens)
+Aripuana Antbird (undescribed form)
+Zimmer's Antbird
+Chestnut-tailed/Zimmer's Antbird
+Ferruginous-backed Antbird
+Cordillera Azul Antbird
+Scalloped Antbird
+White-bibbed Antbird
+Squamate Antbird
+White-shouldered Antbird
+Goeldi's Antbird
+Sooty Antbird
+Zeledon's Antbird
+Zeledon's Antbird (Zeledon's)
+Zeledon's Antbird (Choco)
+Blue-lored Antbird
+Blue-lored Antbird (Andean)
+Blue-lored Antbird (Concepcion)
+Yapacana Antbird
+Black-throated Antbird
+Gray-bellied Antbird
+Wing-banded Antbird
+Wing-banded Antbird (Buff-banded)
+Wing-banded Antbird (Wing-banded)
+White-plumed Antbird
+White-masked Antbird
+Bicolored Antbird
+White-cheeked Antbird
+Rufous-throated Antbird
+White-throated Antbird
+Lunulated Antbird
+Bare-eyed Antbird
+Harlequin Antbird
+White-breasted Antbird
+Chestnut-crested Antbird
+Hairy-crested Antbird
+Spotted Antbird
+Spot-backed Antbird
+Dot-backed Antbird
+Common Scale-backed Antbird
+Common Scale-backed Antbird (Common Scale-backed)
+Common Scale-backed Antbird (Buff-breasted)
+Common Scale-backed Antbird (Black-bibbed)
+Common Scale-backed Antbird (Gray-breasted)
+Xingu Scale-backed Antbird
+Xingu Scale-backed Antbird (Tapajos)
+Xingu Scale-backed Antbird (Xingu)
+antbird sp.
+Black-spotted Bare-eye
+Reddish-winged Bare-eye
+Pale-faced Bare-eye
+Ocellated Antbird

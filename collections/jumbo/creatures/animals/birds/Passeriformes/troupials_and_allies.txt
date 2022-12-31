@@ -1,0 +1,181 @@
+# Originally sourced from Clements Checklist v2022
+Yellow-headed Blackbird
+Bobolink
+Western Meadowlark
+Eastern Meadowlark
+Eastern Meadowlark (Cuban)
+Eastern Meadowlark (Eastern)
+Western x Eastern Meadowlark (hybrid)
+Western/Eastern Meadowlark
+Chihuahuan Meadowlark
+Western/Chihuahuan Meadowlark
+Eastern/Chihuahuan Meadowlark
+Sturnella meadowlark sp.
+Red-breasted Meadowlark
+White-browed Meadowlark
+Peruvian Meadowlark
+Pampas Meadowlark
+Long-tailed Meadowlark
+Yellow-billed Cacique
+Yellow-billed Cacique (Prevost's)
+Yellow-billed Cacique (Chapman's)
+Yellow-winged Cacique
+Russet-backed Oropendola
+Russet-backed Oropendola (Russet-backed)
+Russet-backed Oropendola (Green-billed)
+Dusky-green Oropendola
+Green Oropendola
+Crested Oropendola
+Chestnut-headed Oropendola
+Montezuma Oropendola
+Black Oropendola
+Baudo Oropendola
+Olive Oropendola
+Olive Oropendola (Amazonian)
+Olive Oropendola (Para)
+oropendola sp.
+Solitary Black Cacique
+Golden-winged Cacique
+Ecuadorian Cacique
+Selva Cacique
+Scarlet-rumped Cacique
+Scarlet-rumped Cacique (Scarlet-rumped)
+Scarlet-rumped Cacique (Pacific)
+Scarlet-rumped Cacique (Subtropical)
+Yellow-rumped Cacique
+Yellow-rumped Cacique (Western)
+Yellow-rumped Cacique (Amazonian)
+Mountain Cacique
+Mountain Cacique (Golden-shouldered)
+Mountain Cacique (Bolivian)
+Band-tailed Cacique
+Red-rumped Cacique
+Casqued Cacique
+cacique sp.
+Hispaniolan Oriole
+Cuban Oriole
+Bahama Oriole
+Puerto Rican Oriole
+St. Lucia Oriole
+Montserrat Oriole
+Martinique Oriole
+Black-vented Oriole
+Bar-winged Oriole
+Black-cowled Oriole
+Orchard Oriole
+Orchard Oriole (Orchard)
+Orchard Oriole (Fuertes's)
+Hooded Oriole
+Hooded Oriole (cucullatus/sennetti)
+Hooded Oriole (nelsoni Group)
+Hooded Oriole (igneus)
+Orchard/Hooded Oriole
+Yellow-backed Oriole
+Orange-crowned Oriole
+White-edged Oriole
+Yellow-tailed Oriole
+White-edged/Yellow-tailed Oriole
+Epaulet Oriole
+Epaulet Oriole (Moriche)
+Epaulet Oriole (Epaulet)
+Variable Oriole
+Variable Oriole (Yellow-shouldered)
+Variable Oriole (Chestnut-shouldered)
+Venezuelan Troupial
+Campo Troupial
+Orange-backed Troupial
+troupial sp.
+Streak-backed Oriole
+Streak-backed Oriole (West Mexican)
+Streak-backed Oriole (Streak-backed)
+Streak-backed Oriole (Tres Marias Is.)
+Black-vented x Streak-backed Oriole (hybrid)
+Bullock's Oriole
+Orange Oriole
+Jamaican Oriole
+Yellow Oriole
+Spot-breasted Oriole
+Altamira Oriole
+Audubon's Oriole
+Audubon's Oriole (Audubon's)
+Audubon's Oriole (Dickey's)
+Altamira x Audubon's Oriole (hybrid)
+Baltimore Oriole
+Bullock's x Baltimore Oriole (hybrid)
+Bullock's/Baltimore Oriole
+Black-backed Oriole
+Bullock's x Black-backed Oriole (hybrid)
+Bullock's/Black-backed Oriole
+Scott's Oriole
+new world oriole sp.
+Jamaican Blackbird
+Red-winged Blackbird
+Red-winged Blackbird (Red-winged)
+Red-winged Blackbird (California Bicolored)
+Red-winged Blackbird (Mexican Bicolored)
+Red-shouldered Blackbird
+Tricolored Blackbird
+Red-winged/Tricolored Blackbird
+Tawny-shouldered Blackbird
+Red-shouldered/Tawny-shouldered Blackbird
+Yellow-shouldered Blackbird
+Screaming Cowbird
+Shiny Cowbird
+Screaming/Shiny Cowbird
+Bronzed Cowbird
+Bronzed Cowbird (Bronzed)
+Bronzed Cowbird (Bronze-brown)
+Shiny/Bronzed Cowbird
+Brown-headed Cowbird
+Shiny/Brown-headed Cowbird
+Bronzed/Brown-headed Cowbird
+Giant Cowbird
+Melodious Blackbird
+Scrub Blackbird
+Cuban Blackbird
+Rusty Blackbird
+Brewer's Blackbird
+Rusty/Brewer's Blackbird
+Common Grackle
+Common Grackle (Purple)
+Common Grackle (Bronzed)
+Boat-tailed Grackle
+Boat-tailed Grackle (major)
+Boat-tailed Grackle (torreyi/alabamensis)
+Boat-tailed Grackle (westoni)
+Great-tailed Grackle
+Great-tailed Grackle (Western)
+Great-tailed Grackle (Great-tailed)
+Brewer's Blackbird x Great-tailed Grackle (hybrid)
+Common x Great-tailed Grackle (hybrid)
+Boat-tailed x Great-tailed Grackle (hybrid)
+Boat-tailed/Great-tailed Grackle
+Slender-billed Grackle
+Nicaraguan Grackle
+Greater Antillean Grackle
+Carib Grackle
+grackle sp.
+Red-bellied Grackle
+Velvet-fronted Grackle
+Oriole Blackbird
+Mountain Grackle
+Golden-tufted Grackle
+Austral Blackbird
+Scarlet-headed Blackbird
+Forbes's Blackbird
+Chopi Blackbird
+Bolivian Blackbird
+Grayish Baywing
+Pale Baywing
+Grayish/Pale Baywing
+Pale-eyed Blackbird
+Unicolored Blackbird
+Unicolored Blackbird (Azara's)
+Unicolored Blackbird (Yellow-breasted)
+Yellow-winged Blackbird
+Chestnut-capped Blackbird
+Yellow-hooded Blackbird
+Saffron-cowled Blackbird
+Yellow-rumped Marshbird
+Brown-and-yellow Marshbird
+blackbird sp.

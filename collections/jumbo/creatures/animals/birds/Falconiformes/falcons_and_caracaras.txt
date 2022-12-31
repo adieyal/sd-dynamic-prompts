@@ -1,0 +1,111 @@
+# Originally sourced from Clements Checklist v2022
+Laughing Falcon
+Buckley's Forest-Falcon
+Collared Forest-Falcon
+Slaty-backed Forest-Falcon
+Barred Forest-Falcon
+Cryptic Forest-Falcon
+Plumbeous Forest-Falcon
+Barred/Plumbeous Forest-Falcon
+Lined Forest-Falcon
+Barred/Lined Forest-Falcon
+forest-falcon sp.
+Spot-winged Falconet
+Guadalupe Caracara
+Crested Caracara
+Crested Caracara (Northern)
+Crested Caracara (Southern)
+Red-throated Caracara
+Yellow-headed Caracara
+Black Caracara
+Chimango Caracara
+Carunculated Caracara
+Mountain Caracara
+White-throated Caracara
+Striated Caracara
+Pygmy Falcon
+Philippine Falconet
+Pied Falconet
+Collared Falconet
+Black-thighed Falconet
+White-fronted Falconet
+White-rumped Falcon
+Lesser Kestrel
+Eurasian Kestrel
+Eurasian Kestrel (Eurasian)
+Eurasian Kestrel (Canary Is.)
+Eurasian Kestrel (Cape Verde)
+Eurasian Kestrel (Rufescent)
+Lesser/Eurasian Kestrel
+Rock Kestrel
+Eurasian/Rock Kestrel
+Malagasy Kestrel
+Mauritius Kestrel
+Seychelles Kestrel
+Reunion Kestrel
+Spotted Kestrel
+Nankeen Kestrel
+Greater Kestrel
+American Kestrel
+American Kestrel (Northern)
+American Kestrel (Southeastern)
+American Kestrel (Eastern Caribbean)
+American Kestrel (Hispaniolan)
+American Kestrel (Cuban)
+American Kestrel (South American)
+American Kestrel (Juan Fernandez)
+Fox Kestrel
+Gray Kestrel
+Dickinson's Kestrel
+Banded Kestrel
+Red-necked Falcon
+Red-necked Falcon (Asian)
+Red-necked Falcon (African)
+Red-footed Falcon
+Amur Falcon
+Red-footed/Amur Falcon
+Eleonora's Falcon
+Sooty Falcon
+Merlin
+Merlin (Eurasian)
+Merlin (Pallid)
+Merlin (Taiga)
+Merlin (Prairie)
+Merlin (Black)
+Eurasian Hobby
+Amur Falcon/Eurasian Hobby
+African Hobby
+Oriental Hobby
+Australian Hobby
+New Zealand Falcon
+Brown Falcon
+Gray Falcon
+Black Falcon
+Aplomado Falcon
+Bat Falcon
+Orange-breasted Falcon
+Lanner Falcon
+Laggar Falcon
+Saker Falcon
+Gyrfalcon
+Peregrine Falcon
+Peregrine Falcon (North American)
+Peregrine Falcon (Tundra)
+Peregrine Falcon (Peale's)
+Peregrine Falcon (South American)
+Peregrine Falcon (Eurasian)
+Peregrine Falcon (Mediterranean)
+Peregrine Falcon (Barbary)
+Peregrine Falcon (Cape Verde)
+Peregrine Falcon (Red-capped)
+Peregrine Falcon (African)
+Peregrine Falcon (Malagasy)
+Peregrine Falcon (Shaheen)
+Peregrine Falcon (Indo-Pacific)
+Peregrine Falcon (Australian)
+Prairie Falcon
+Peregrine x Prairie Falcon (hybrid)
+Taita Falcon
+large falcon sp.
+small falcon sp.
+falcon sp.

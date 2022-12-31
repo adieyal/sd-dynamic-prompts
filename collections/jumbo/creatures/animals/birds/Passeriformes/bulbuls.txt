@@ -1,0 +1,234 @@
+# Originally sourced from Clements Checklist v2022
+Sombre Greenbul
+Slender-billed Greenbul
+Golden Greenbul
+Black-collared Bulbul
+Red-tailed Bristlebill
+Green-tailed Bristlebill
+Lesser Bristlebill
+Lesser Bristlebill (Brown-eyed)
+Lesser Bristlebill (Yellow-eyed)
+Gray-headed Bristlebill
+bristlebill sp.
+Cameroon Mountain Greenbul
+Shelley's Greenbul
+Shelley's Greenbul (Kakamega)
+Shelley's Greenbul (Shelley's)
+Western Mountain Greenbul
+Eastern Mountain Greenbul
+Eastern Mountain Greenbul (Olive-breasted)
+Eastern Mountain Greenbul (Mountain)
+Uluguru Mountain Greenbul
+Yellow-throated Mountain Greenbul
+Black-browed Mountain Greenbul
+Stripe-cheeked Greenbul
+Stripe-cheeked Greenbul (Stripe-faced)
+Stripe-cheeked Greenbul (Olive-headed)
+Stripe-cheeked Greenbul (Stripe-cheeked)
+Arizelocichla sp.
+Simple Greenbul
+Yellow-necked Greenbul
+Yellow-bellied Greenbul
+Joyful Greenbul
+Prigogine's Greenbul
+Honeyguide Greenbul
+Sjöstedt's Greenbul
+Yellow-throated Greenbul
+Yellow-throated Greenbul (flavicollis)
+Yellow-throated Greenbul (soror)
+Yellow-throated Greenbul (flavigula)
+Spotted Greenbul
+Swamp Greenbul
+Red-tailed Greenbul
+Western Bearded-Greenbul
+Eastern Bearded-Greenbul
+Yellow-bearded Greenbul
+White-bearded Greenbul
+Red-tailed/White-bearded Greenbul
+Criniger sp.
+Gray Greenbul
+Ansorge's Greenbul
+Plain Greenbul
+Plain Greenbul (leonina)
+Plain Greenbul (curvirostris)
+Yellow-whiskered Greenbul
+Little Greenbul
+Eurillas sp.
+Leaf-love
+Terrestrial Brownbul
+Northern Brownbul
+Pale-olive Greenbul
+Gray-olive Greenbul
+Baumann's Greenbul
+Toro Olive-Greenbul
+Fischer's Greenbul
+Cabanis's Greenbul
+Cabanis's Greenbul (Placid)
+Cabanis's Greenbul (Cabanis's)
+Cameroon Olive-Greenbul
+Icterine Greenbul
+Sassi's Greenbul
+Xavier's Greenbul
+Icterine/Xavier's Greenbul
+White-throated Greenbul
+White-throated Greenbul (White-throated)
+White-throated Greenbul (Green-crowned)
+Yellow-streaked Greenbul
+Yellow-streaked Greenbul (Sharpe's)
+Yellow-streaked Greenbul (Yellow-streaked)
+Gray-headed Greenbul
+Tiny Greenbul
+Usambara Greenbul
+Phyllastrephus sp.
+greenbul sp.
+Black-and-white Bulbul
+Puff-backed Bulbul
+Yellow-wattled Bulbul
+Gray-headed Bulbul
+Black-headed Bulbul
+Andaman Bulbul
+Spectacled Bulbul
+Gray-bellied Bulbul
+Scaly-breasted Bulbul
+Black-crested Bulbul
+Flame-throated Bulbul
+Black-capped Bulbul
+Ruby-throated Bulbul
+Bornean Bulbul
+Bare-faced Bulbul
+Crested Finchbill
+Collared Finchbill
+Straw-headed Bulbul
+Striated Bulbul
+Cream-striped Bulbul
+Spot-necked Bulbul
+Styan's Bulbul
+Red-vented Bulbul
+Red-whiskered Bulbul
+Red-vented x Red-whiskered Bulbul (hybrid)
+Red-vented/Red-whiskered Bulbul
+Brown-breasted Bulbul
+Light-vented Bulbul
+Light-vented Bulbul (sinensis)
+Light-vented Bulbul (hainanus)
+Light-vented Bulbul (formosae/orii)
+Styan's x Light-vented Bulbul (hybrid)
+Styan's/Light-vented Bulbul
+Common Bulbul
+Common Bulbul (Common)
+Common Bulbul (Somali)
+Common Bulbul (Dodson's)
+Common Bulbul (Dark-capped)
+Black-fronted Bulbul
+Cape Bulbul
+White-spectacled Bulbul
+White-eared Bulbul
+Red-vented x White-eared Bulbul (hybrid)
+Himalayan Bulbul
+Sooty-headed Bulbul
+Red-vented x Sooty-headed Bulbul (hybrid)
+Blue-wattled Bulbul
+Aceh Bulbul
+Orange-spotted Bulbul
+Aceh/Orange-spotted Bulbul
+Stripe-throated Bulbul
+Stripe-throated Bulbul (Pale-eyed)
+Stripe-throated Bulbul (Stripe-throated)
+Yellow-throated Bulbul
+Yellow-eared Bulbul
+Flavescent Bulbul
+Flavescent Bulbul (Flavescent)
+Flavescent Bulbul (Pale-faced)
+White-browed Bulbul
+Yellow-vented Bulbul
+Olive-winged Bulbul
+Stripe-throated/Olive-winged Bulbul
+Ashy-fronted Bulbul
+Cream-eyed Bulbul
+Ayeyarwady Bulbul
+Streak-eared Bulbul
+Cream-vented Bulbul
+Cream-vented Bulbul (White-eyed)
+Cream-vented Bulbul (Red-eyed)
+Cream-eyed/Cream-vented Bulbul
+Red-eyed Bulbul
+Pycnonotus sp.
+Brachypodius/Rubigula/Pycnonotus sp.
+Hairy-backed Bulbul
+Hook-billed Bulbul
+Finsch's Bulbul
+Yellow-bellied Bulbul
+Gray-throated Bulbul
+Gray-cheeked Bulbul
+Penan Bulbul
+Brown-cheeked Bulbul
+White-throated Bulbul
+Ochraceous Bulbul
+Puff-throated Bulbul
+Puff-throated Bulbul (Gray-crowned)
+Puff-throated Bulbul (Puff-throated)
+Sulphur-bellied Bulbul
+Buff-vented Bulbul
+Charlotte's Bulbul
+Gray-eyed Bulbul
+Gray-eyed Bulbul (Gray-eyed)
+Gray-eyed Bulbul (innectens)
+Cachar Bulbul
+Olive Bulbul
+Olive Bulbul (Olive)
+Olive Bulbul (Baker's)
+Buff-vented/Olive Bulbul
+Yellow-browed Bulbul
+Iole sp.
+Malagasy Bulbul
+Seychelles Bulbul
+Grand Comoro Bulbul
+Moheli Bulbul
+Reunion Bulbul
+Mauritius Bulbul
+Black Bulbul
+Black Bulbul (psaroides Group)
+Black Bulbul (Black)
+Black Bulbul (leucocephalus Group)
+Black Bulbul (perniger)
+Black Bulbul (Gray-winged)
+Square-tailed Bulbul
+Square-tailed Bulbul (Indian)
+Square-tailed Bulbul (Sri Lanka)
+Nicobar Bulbul
+White-headed Bulbul
+Brown-eared Bulbul
+Sangihe Golden-Bulbul
+Togian Golden-Bulbul
+Sula Golden-Bulbul
+Sula Golden-Bulbul (Banggai)
+Sula Golden-Bulbul (Sula)
+Halmahera Golden-Bulbul
+Obi Golden-Bulbul
+Buru Golden-Bulbul
+Seram Golden-Bulbul
+Visayan Bulbul
+Zamboanga Bulbul
+Yellowish Bulbul
+Yellowish Bulbul (Yellowish)
+Yellowish Bulbul (Sulu)
+Yellowish Bulbul (Camiguin)
+Mindoro Bulbul
+Streak-breasted Bulbul
+Streak-breasted Bulbul (Tablas)
+Streak-breasted Bulbul (Cebu)
+Streak-breasted Bulbul (Siquijor)
+Philippine Bulbul
+Ashy Bulbul
+Ashy Bulbul (Ashy)
+Ashy Bulbul (Brown-backed)
+Cinereous Bulbul
+Cinereous Bulbul (Cinereous)
+Cinereous Bulbul (Green-winged)
+Chestnut Bulbul
+Mountain Bulbul
+Sunda Bulbul
+Sunda Bulbul (Sumatran)
+Sunda Bulbul (Javan)
+Streaked Bulbul
+Pycnonotidae sp.

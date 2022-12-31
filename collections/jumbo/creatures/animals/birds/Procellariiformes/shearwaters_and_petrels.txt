@@ -1,0 +1,150 @@
+# Originally sourced from Clements Checklist v2022
+Southern Giant-Petrel
+Northern Giant-Petrel
+Southern/Northern Giant-Petrel
+Northern Fulmar
+Northern Fulmar (Atlantic)
+Northern Fulmar (Pacific)
+Southern Fulmar
+Antarctic Petrel
+Cape Petrel
+Cape Petrel (Antarctic)
+Cape Petrel (Snares)
+Snow Petrel
+Kerguelen Petrel
+Large St. Helena Petrel
+Great-winged Petrel
+Gray-faced Petrel
+Great-winged/Gray-faced Petrel
+Kermadec Petrel
+Magenta Petrel
+Trindade Petrel
+Herald Petrel
+Trindade/Herald Petrel
+Murphy's Petrel
+Providence Petrel
+Henderson Petrel
+Zino's Petrel
+Fea's Petrel
+Fea's Petrel (Fea's)
+Fea's Petrel (Desertas)
+Zino's/Fea's Petrel
+Soft-plumaged Petrel
+Barau's Petrel
+White-headed Petrel
+Mottled Petrel
+Bermuda Petrel
+Black-capped Petrel
+Black-capped Petrel (hasitata)
+Black-capped Petrel (Jamaican)
+Black-capped Petrel (White-faced)
+Black-capped Petrel (Dark-faced)
+Bermuda/Black-capped Petrel
+Juan Fernandez Petrel
+Atlantic Petrel
+Galapagos Petrel
+Hawaiian Petrel
+Galapagos/Hawaiian Petrel (Dark-rumped Petrel)
+White-necked Petrel
+Juan Fernandez/White-necked Petrel
+Bonin Petrel
+Black-winged Petrel
+Chatham Petrel
+Cook's Petrel
+Masatierra Petrel
+Gould's Petrel
+Gould's Petrel (Gould's)
+Gould's Petrel (New Caledonia)
+Collared Petrel
+Collared Petrel (Collared)
+Collared Petrel (Magnificent)
+Stejneger's Petrel
+Pycroft's Petrel
+Cookilaria petrel sp.
+Phoenix Petrel
+Vanuatu Petrel
+Pterodroma sp.
+Blue Petrel
+Fairy Prion
+Broad-billed Prion
+Salvin's Prion
+MacGillivray's Prion
+Salvin's/MacGillivray's Prion
+Antarctic Prion
+Slender-billed Prion
+Fulmar Prion
+prion sp.
+Bulwer's Petrel
+Jouanin's Petrel
+Small St. Helena Petrel
+Fiji Petrel
+Mascarene Petrel
+Tahiti Petrel
+Beck's Petrel
+Lava Petrel (undescribed form)
+Pseudobulweria sp.
+Gray Petrel
+White-chinned Petrel
+Spectacled Petrel
+Parkinson's Petrel
+Westland Petrel
+Procellaria sp.
+Streaked Shearwater
+Cory's Shearwater
+Cory's Shearwater (Scopoli's)
+Cory's Shearwater (borealis)
+Cape Verde Shearwater
+Cory's/Cape Verde Shearwater
+Pink-footed Shearwater
+Flesh-footed Shearwater
+Great Shearwater
+Cory's/Great Shearwater
+Wedge-tailed Shearwater
+Buller's Shearwater
+Sooty Shearwater
+Short-tailed Shearwater
+Sooty/Short-tailed Shearwater
+Christmas Shearwater
+Galapagos Shearwater
+Galapagos Shearwater (Dark-winged)
+Galapagos Shearwater (Light-winged)
+Manx Shearwater
+Yelkouan Shearwater
+Balearic Shearwater
+Yelkouan/Balearic Shearwater
+Hutton's Shearwater
+Bannerman's Shearwater
+Townsend's Shearwater
+Newell's Shearwater
+Townsend's/Newell's Shearwater
+Rapa Shearwater
+Newell's/Rapa Shearwater
+Bryan's Shearwater
+Black-vented Shearwater
+Fluttering Shearwater
+Hutton's/Fluttering Shearwater
+Little Shearwater
+Little Shearwater (Tasman)
+Little Shearwater (Hauraki)
+Little Shearwater (Kermadec)
+Little Shearwater (West Australian)
+Subantarctic Shearwater
+Little/Subantarctic Shearwater
+Barolo Shearwater
+Boyd's Shearwater
+Barolo/Boyd's Shearwater (Macaronesian Shearwater)
+Audubon's Shearwater
+Tropical Shearwater
+Tropical Shearwater (Mascarene)
+Tropical Shearwater (Indopacific)
+Bannerman's/Tropical Shearwater
+Persian Shearwater
+Heinroth's Shearwater
+black-and-white shearwater sp.
+shearwater sp.
+Peruvian Diving-Petrel
+Common Diving-Petrel
+South Georgia Diving-Petrel
+Magellanic Diving-Petrel
+diving-petrel sp.
+Procellariid sp.

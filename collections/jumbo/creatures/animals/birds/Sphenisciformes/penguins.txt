@@ -1,0 +1,23 @@
+# Originally sourced from Clements Checklist v2022
+King Penguin
+Emperor Penguin
+Adelie Penguin
+Gentoo Penguin
+Chinstrap Penguin
+Yellow-eyed Penguin
+Little Penguin
+African Penguin
+Humboldt Penguin
+Galapagos Penguin
+Magellanic Penguin
+Fiordland Penguin
+Erect-crested Penguin
+Macaroni Penguin
+Royal Penguin
+Southern Rockhopper Penguin
+Southern Rockhopper Penguin (Western)
+Southern Rockhopper Penguin (Eastern)
+Macaroni x Southern Rockhopper Penguin (hybrid)
+Moseley's Rockhopper Penguin
+Snares Penguin
+penguin sp.

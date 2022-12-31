@@ -1,0 +1,17 @@
+# Originally sourced from Clements Checklist v2022
+Great Skua
+Chilean Skua
+South Polar Skua
+Brown Skua
+Brown Skua (Subantarctic)
+Brown Skua (Falkland)
+Brown Skua (Tristan)
+skua sp.
+Pomarine Jaeger
+Parasitic Jaeger
+Pomarine/Parasitic Jaeger
+Long-tailed Jaeger
+Pomarine/Long-tailed Jaeger
+Parasitic/Long-tailed Jaeger
+jaeger sp.
+jaeger/skua sp.

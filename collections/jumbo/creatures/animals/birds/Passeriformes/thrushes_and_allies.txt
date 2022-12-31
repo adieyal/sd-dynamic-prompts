@@ -1,0 +1,323 @@
+# Originally sourced from Clements Checklist v2022
+Grandala
+Eastern Bluebird
+Eastern Bluebird (Eastern)
+Eastern Bluebird (Mexican)
+Western Bluebird
+Eastern x Western Bluebird (hybrid)
+Mountain Bluebird
+Eastern x Mountain Bluebird (hybrid)
+Western x Mountain Bluebird (hybrid)
+bluebird sp.
+Rufous Flycatcher-Thrush
+Finsch's Flycatcher-Thrush
+Red-tailed Ant-Thrush
+Red-tailed Ant-Thrush (Red-tailed)
+Red-tailed Ant-Thrush (Coastal)
+White-tailed Ant-Thrush
+Townsend's Solitaire
+Brown-backed Solitaire
+Cuban Solitaire
+Rufous-throated Solitaire
+Rufous-throated Solitaire (Rufous-throated)
+Rufous-throated Solitaire (St. Vincent)
+Black-faced Solitaire
+Varied Solitaire
+Slate-colored Solitaire
+Andean Solitaire
+Andean Solitaire (plumbeiceps)
+Andean Solitaire (venezuelensis/candelae)
+Andean Solitaire (ralloides)
+Kamao
+Amaui
+Olomao
+Omao
+Puaiohi
+Long-tailed Thrush
+Alpine Thrush
+Himalayan Thrush
+Alpine/Himalayan Thrush
+Sichuan Thrush
+Alpine/Sichuan Thrush
+Alpine/Himalayan/Sichuan Thrush
+Geomalia
+Dark-sided Thrush
+Long-billed Thrush
+Everett's Thrush
+Sunda Thrush
+White's Thrush
+Scaly Thrush
+Scaly Thrush (Scaly)
+Scaly Thrush (Horsfield's)
+Scaly Thrush (Iriomotejima)
+White's/Scaly Thrush
+Amami Thrush
+Nilgiri Thrush
+Sri Lanka Thrush
+Bonin Thrush
+Makira Thrush
+Guadalcanal Thrush
+Bassian Thrush
+New Britain Thrush
+Bougainville Thrush
+Russet-tailed Thrush
+Russet-tailed Thrush (Russet-tailed)
+Russet-tailed Thrush (Mussau)
+Bassian/Russet-tailed Thrush
+Fawn-breasted Thrush
+Zoothera sp.
+Sulawesi Thrush
+Fruit-hunter
+Purple Cochoa
+Green Cochoa
+Purple/Green Cochoa
+Sumatran Cochoa
+Javan Cochoa
+Varied Thrush
+Black-billed Nightingale-Thrush
+Orange-billed Nightingale-Thrush
+Orange-billed Nightingale-Thrush (Brown-headed)
+Orange-billed Nightingale-Thrush (Gray-headed)
+Orange-billed Nightingale-Thrush (Orange-billed)
+Slaty-backed Nightingale-Thrush
+Slaty-backed Nightingale-Thrush (Black-backed)
+Slaty-backed Nightingale-Thrush (Slaty-backed)
+Russet Nightingale-Thrush
+Ruddy-capped Nightingale-Thrush
+Russet/Ruddy-capped Nightingale-Thrush
+Black-headed Nightingale-Thrush
+Yellow-throated Nightingale-Thrush
+Speckled Nightingale-Thrush
+Veery
+Gray-cheeked Thrush
+Bicknell's Thrush
+Veery x Bicknell's Thrush (hybrid)
+Gray-cheeked/Bicknell's Thrush
+Swainson's Thrush
+Swainson's Thrush (Russet-backed)
+Swainson's Thrush (Olive-backed)
+Hermit Thrush
+Hermit Thrush (guttatus Group)
+Hermit Thrush (auduboni Group)
+Hermit Thrush (faxoni/crymophilus)
+Catharus sp.
+Wood Thrush
+Black Solitaire
+White-eared Solitaire
+Rufous-brown Solitaire
+Rufous-brown Solitaire (Chestnut-throated)
+Rufous-brown Solitaire (Peruvian)
+Rufous-brown Solitaire (Guianan)
+Rufous-brown Solitaire (Rufous-brown)
+Aztec Thrush
+Siberian Thrush
+Pied Thrush
+Spotted Ground-Thrush
+Spotted Ground-Thrush (Lotti)
+Spotted Ground-Thrush (Upemba)
+Spotted Ground-Thrush (Spotted)
+Black-eared Ground-Thrush
+Black-eared Ground-Thrush (Cameroon)
+Black-eared Ground-Thrush (Grauer's)
+Gray Ground-Thrush
+Gray Ground-Thrush (Prince's)
+Gray Ground-Thrush (Bates's)
+Crossley's Ground-Thrush
+Crossley's Ground-Thrush (Crossley's)
+Crossley's Ground-Thrush (Itombwe)
+Oberländer's Ground-Thrush
+Abyssinian Ground-Thrush
+Abyssinian Ground-Thrush (Abyssinian)
+Abyssinian Ground-Thrush (Kivu)
+Orange Ground-Thrush
+Spot-winged Thrush
+Ashy Thrush
+Buru Thrush
+Seram Thrush
+Chestnut-capped Thrush
+Enggano Thrush
+Chestnut-backed Thrush
+Orange-banded Thrush
+Slaty-backed Thrush
+Rusty-backed Thrush
+Red-and-black Thrush
+Orange-headed Thrush
+Orange-headed Thrush (Orange-headed)
+Orange-headed Thrush (White-throated)
+Orange-headed Thrush (Plain-winged)
+Orange-headed Thrush (Buff-throated)
+Geokichla sp.
+Chinese Thrush
+Ethiopian Thrush
+Groundscraper Thrush
+Mistle Thrush
+Song Thrush
+Abyssinian Thrush
+Abyssinian Thrush (Ngorongoro)
+Abyssinian Thrush (Abyssinian)
+Taita Thrush
+Usambara Thrush
+Redwing
+Redwing (Icelandic)
+Redwing (Eurasian)
+Mountain Thrush
+Eurasian Blackbird
+Pale-breasted Thrush
+Cocoa Thrush
+Cocoa Thrush (Lesser Antillean)
+Cocoa Thrush (Cocoa)
+Hauxwell's Thrush
+Yellow-legged Thrush
+Pale-vented Thrush
+White-throated Thrush
+White-throated Thrush (White-throated)
+White-throated Thrush (Dagua)
+White-necked Thrush
+White-necked Thrush (Gray-flanked)
+White-necked Thrush (Rufous-flanked)
+Rufous-bellied Thrush
+Clay-colored Thrush
+Spectacled Thrush
+Ecuadorian Thrush
+Varzea Thrush
+Hauxwell's/Varzea Thrush
+Unicolored Thrush
+Somali Thrush
+Chinese Blackbird
+African Bare-eyed Thrush
+Kurrichane Thrush
+Comoro Thrush
+Yemen Thrush
+Olive Thrush
+Karoo Thrush
+Olive x Karoo Thrush (hybrid)
+Olive/Karoo Thrush
+Forest Thrush
+Pale-eyed Thrush
+White-eyed Thrush
+La Selle Thrush
+Black Thrush
+Sooty Thrush
+American Robin
+American Robin (nigrideus)
+American Robin (migratorius Group)
+American Robin (San Lucas)
+Varied Thrush/American Robin
+Rufous-backed Robin
+Rufous-backed Robin (Rufous-backed)
+Rufous-backed Robin (Grayson's)
+Rufous-collared Robin
+Austral Thrush
+Austral Thrush (Magellan)
+Austral Thrush (Falkland)
+Plumbeous-backed Thrush
+Blacksmith Thrush
+Lawrence's Thrush
+Pantepui Thrush
+Tristan Thrush
+Creamy-bellied Thrush
+Black-billed Thrush
+Black-billed Thrush (Drab)
+Black-billed Thrush (Amazonian)
+Campina Thrush
+Pantepui/Campina Thrush
+Black-billed/Campina Thrush
+Marañon Thrush
+Chestnut-bellied Thrush
+Black-hooded Thrush
+Great Thrush
+Chiguanco Thrush
+Chiguanco Thrush (chiguanco/conradi)
+Chiguanco Thrush (anthracinus)
+Andean Slaty Thrush
+Glossy-black Thrush
+Principe Thrush
+Sao Tome Thrush
+White-chinned Thrush
+Grand Cayman Thrush
+Red-legged Thrush
+Red-legged Thrush (Bahamas)
+Red-legged Thrush (Cuban)
+Red-legged Thrush (Antillean)
+African Thrush
+African Thrush (African)
+African Thrush (Black-lored)
+African Thrush (Orange-bellied)
+Taiwan Thrush
+Gray-winged Blackbird
+Indian Blackbird
+Indian Blackbird (Indian)
+Indian Blackbird (Black-capped)
+Indian Blackbird (Sri Lanka)
+Japanese Thrush
+Gray-backed Thrush
+Tickell's Thrush
+Black-breasted Thrush
+Japanese x Black-breasted Thrush (hybrid)
+Gray-sided Thrush
+Eyebrowed Thrush
+Gray-sided/Eyebrowed Thrush
+Brown-headed Thrush
+Izu Thrush
+Pale Thrush
+Island Thrush
+Island Thrush (Christmas)
+Island Thrush (Loeser's)
+Island Thrush (Sumatran)
+Island Thrush (Javan)
+Island Thrush (Sooty)
+Island Thrush (Stresemann's)
+Island Thrush (Bornean)
+Island Thrush (Luzon)
+Island Thrush (Mindoro)
+Island Thrush (Negros)
+Island Thrush (Malindang)
+Island Thrush (Katanglad)
+Island Thrush (Apo)
+Island Thrush (Latimojong)
+Island Thrush (Lompobattang)
+Island Thrush (Taliabu)
+Island Thrush (Schlegel's)
+Island Thrush (Sterling's)
+Island Thrush (Seram)
+Island Thrush (Jayawijaya)
+Island Thrush (Ashy)
+Island Thrush (Papuan)
+Island Thrush (Goodenough)
+Island Thrush (North Melanesian)
+Island Thrush (Kolombangara)
+Island Thrush (Vanuatu)
+Island Thrush (Ureparapara)
+Island Thrush (Efate)
+Island Thrush (White-headed)
+Island Thrush (New Caledonia)
+Island Thrush (Mare)
+Island Thrush (Norfolk I.)
+Island Thrush (Lord Howe I.)
+Island Thrush (Viti Levu)
+Island Thrush (Kadavu)
+Island Thrush (Vanua Levu)
+Island Thrush (Satanic)
+Island Thrush (Taveuni)
+Island Thrush (Samoan)
+White-backed Thrush
+Tibetan Blackbird
+Fieldfare
+White-collared Blackbird
+Chestnut Thrush
+Chestnut Thrush (Silver-headed)
+Chestnut Thrush (Gray-headed)
+Ring Ouzel
+Ring Ouzel (Northern)
+Ring Ouzel (Alpine)
+Ring Ouzel (Caucasian)
+Black-throated Thrush
+Red-throated Thrush
+Black-throated x Red-throated Thrush (hybrid)
+Black-throated/Red-throated Thrush
+Dusky Thrush
+Naumann's Thrush
+Dusky x Naumann's Thrush (hybrid)
+Dusky/Naumann's Thrush
+Turdus sp.
+thrush sp.

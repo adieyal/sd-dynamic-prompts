@@ -1,0 +1,173 @@
+# Originally sourced from Clements Checklist v2022
+Stripe-sided Rhabdornis
+Long-billed Rhabdornis
+Stripe-breasted Rhabdornis
+Visayan Rhabdornis
+Fiery-browed Myna
+Finch-billed Myna
+Metallic Starling
+Metallic Starling (Violet-hooded)
+Metallic Starling (Metallic)
+Yellow-eyed Starling
+Tanimbar Starling
+Atoll Starling
+Rennell Starling
+Long-tailed Starling
+White-eyed Starling
+Brown-winged Starling
+Makira Starling
+Rusty-winged Starling
+Striated Starling
+Pohnpei Starling
+Singing Starling
+Mountain Starling
+Asian Glossy Starling
+Moluccan Starling
+Short-tailed Starling
+Micronesian Starling
+Polynesian Starling
+Polynesian Starling (Polynesian)
+Polynesian Starling (Manua)
+Samoan Starling
+Kosrae Starling
+Rarotonga Starling
+Mysterious Starling
+Norfolk Starling
+Raiatea Starling
+Aplonis sp.
+Sulawesi Myna
+Helmeted Myna
+Long-crested Myna
+Apo Myna
+Coleto
+White-necked Myna
+White-necked Myna (Northern)
+White-necked Myna (Southern)
+Bare-eyed Myna
+Yellow-faced Myna
+Golden Myna
+Long-tailed Myna
+Golden-crested Myna
+Sri Lanka Myna
+Common Hill Myna
+Common Hill Myna (Common)
+Common Hill Myna (Simeulue)
+Common Hill Myna (Nias)
+Common Hill Myna (Enggano)
+Tenggara Hill Myna
+Southern Hill Myna
+European Starling
+Spotless Starling
+European/Spotless Starling
+Wattled Starling
+Rosy Starling
+Daurian Starling
+Chestnut-cheeked Starling
+Daurian/Chestnut-cheeked Starling
+Black-collared Starling
+Indian Pied Starling
+Siamese Pied Starling
+Javan Pied Starling
+pied starling sp.
+White-faced Starling
+Bali Myna
+Rodrigues Starling
+Reunion Starling
+White-shouldered Starling
+Brahminy Starling
+Chestnut-tailed Starling
+Chestnut-tailed Starling (Western)
+Chestnut-tailed Starling (Eastern)
+Indian Pied Starling x Chestnut-tailed Starling (hybrid)
+Malabar Starling
+Chestnut-tailed/Malabar Starling
+White-headed Starling
+Red-billed Starling
+White-cheeked Starling
+Common Myna
+Bank Myna
+Burmese Myna
+Vinous-breasted Myna
+Burmese/Vinous-breasted Myna
+Black-winged Myna
+Black-winged Myna (Black-winged)
+Black-winged Myna (Gray-backed)
+Black-winged Myna (Gray-rumped)
+Jungle Myna
+Common/Jungle Myna
+Javan Myna
+Jungle x Javan Myna (hybrid)
+Pale-bellied Myna
+Collared Myna
+Great Myna
+Black-collared Starling x Great Myna (hybrid)
+Common x Great Myna (hybrid)
+Jungle x Great Myna (hybrid)
+Javan x Great Myna (hybrid)
+Crested Myna
+Common x Crested Myna (hybrid)
+Collared x Crested Myna (hybrid)
+Jungle/Crested Myna
+black myna sp.
+Acridotheres sp.
+Madagascar Starling
+Violet-backed Starling
+Slender-billed Starling
+Pale-winged Starling
+Neumann's Starling
+Red-winged Starling
+Chestnut-winged Starling
+Chestnut-winged Starling (Chestnut-winged)
+Chestnut-winged Starling (Hartlaub's)
+Waller's Starling
+Waller's Starling (Preuss's)
+Waller's Starling (Albertine)
+Waller's Starling (Waller's)
+Tristram's Starling
+White-billed Starling
+Bristle-crowned Starling
+Somali Starling
+Socotra Starling
+Spot-winged Starling
+Babbling Starling
+Babbling Starling (Western)
+Babbling Starling (Eastern)
+White-collared Starling
+Magpie Starling
+Sharpe's Starling
+Abbott's Starling
+Narrow-tailed Starling
+Stuhlmann's Starling
+Kenrick's Starling
+Black-bellied Starling
+Purple-headed Starling
+Copper-tailed Starling
+Hildebrandt's Starling
+Shelley's Starling
+Burchell's Starling
+Rüppell's Starling
+Long-tailed Glossy Starling
+Meves's Starling
+Meves's Starling (Meves's)
+Meves's Starling (Cunene)
+Meves's Starling (Benguela)
+Ashy Starling
+Splendid Starling
+Principe Starling
+Golden-breasted Starling
+Superb Starling
+Chestnut-bellied Starling
+African Pied Starling
+White-crowned Starling
+Fischer's Starling
+Lesser Blue-eared Starling
+Lesser Blue-eared Starling (Lesser)
+Lesser Blue-eared Starling (Miombo)
+Sharp-tailed Starling
+Greater Blue-eared Starling
+Emerald Starling
+Purple Starling
+Cape Starling
+Bronze-tailed Starling
+Lamprotornis sp.
+myna/starling sp.

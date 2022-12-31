@@ -1,0 +1,365 @@
+# Originally sourced from Clements Checklist v2022
+Common Chaffinch
+Common Chaffinch (Common)
+Common Chaffinch (Azores/Madeira)
+Common Chaffinch (Canary Is.)
+Common Chaffinch (La Palma)
+Common Chaffinch (African)
+Common Chaffinch (Tunisian)
+Tenerife Blue Chaffinch
+Gran Canaria Blue Chaffinch
+Brambling
+Common Chaffinch/Brambling
+Elegant Euphonia
+Antillean Euphonia
+Antillean Euphonia (Hispaniolan)
+Antillean Euphonia (Puerto Rico)
+Antillean Euphonia (Lesser)
+Golden-rumped Euphonia
+Blue-naped Chlorophonia
+Chestnut-breasted Chlorophonia
+Yellow-collared Chlorophonia
+Blue-crowned Chlorophonia
+Golden-browed Chlorophonia
+Jamaican Euphonia
+Orange-crowned Euphonia
+Plumbeous Euphonia
+Purple-throated Euphonia
+Finsch's Euphonia
+Velvet-fronted Euphonia
+Trinidad Euphonia
+Trinidad/Velvet-fronted Euphonia
+West Mexican Euphonia
+Scrub Euphonia
+Yellow-crowned Euphonia
+Golden-bellied Euphonia
+White-vented Euphonia
+Green-throated Euphonia
+Violaceous Euphonia
+Yellow-throated Euphonia
+Thick-billed Euphonia
+Thick-billed Euphonia (Black-tailed)
+Thick-billed Euphonia (Thick-billed)
+Spot-crowned Euphonia
+Olive-backed Euphonia
+Fulvous-vented Euphonia
+Tawny-capped Euphonia
+Orange-bellied Euphonia
+Bronze-green Euphonia
+Golden-sided Euphonia
+Rufous-bellied Euphonia
+Chestnut-bellied Euphonia
+euphonia sp.
+Black-and-yellow Grosbeak
+Collared Grosbeak
+Black-and-yellow/Collared Grosbeak
+Spot-winged Grosbeak
+White-winged Grosbeak
+Mycerobas sp.
+Hooded Grosbeak
+Evening Grosbeak
+Evening Grosbeak (type 1)
+Evening Grosbeak (type 2)
+Evening Grosbeak (type 3)
+Evening Grosbeak (type 4)
+Evening Grosbeak (Mexican or type 5)
+Hawfinch
+Yellow-billed Grosbeak
+Japanese Grosbeak
+Poo-uli
+Akikiki
+Oahu Alauahio
+Kakawahie
+Maui Alauahio
+Palila
+Laysan Finch
+Nihoa Finch
+Kona Grosbeak
+Lesser Koa-Finch
+Greater Koa-Finch
+Ula-ai-hawane
+Akohekohe
+Laysan Honeycreeper
+Apapane
+Iiwi
+Apapane x Iiwi (hybrid)
+Hawaii Mamo
+Black Mamo
+Ou
+Lanai Hookbill
+Maui Parrotbill
+Kauai Nukupuu
+Oahu Nukupuu
+Maui Nukupuu
+Akiapolaau
+Lesser Akialoa
+Oahu Akialoa
+Kauai Akialoa
+Maui-nui Akialoa
+Anianiau
+Hawaii Amakihi
+Hawaii Amakihi (Maui)
+Hawaii Amakihi (Hawaii)
+Oahu Amakihi
+Kauai Amakihi
+Greater Amakihi
+Hawaii Creeper
+Akekee
+Hawaii Akepa
+Oahu Akepa
+Maui Akepa
+hawaiian honeycreeper sp.
+Common Rosefinch
+Scarlet Finch
+Bonin Grosbeak
+Red-mantled Rosefinch
+Blyth's Rosefinch
+Red-mantled/Blyth's Rosefinch
+Himalayan Beautiful Rosefinch
+Chinese Beautiful Rosefinch
+Pink-rumped Rosefinch
+Dark-rumped Rosefinch
+Pink-browed Rosefinch
+Spot-winged Rosefinch
+Dark-rumped/Spot-winged Rosefinch
+Sharpe's Rosefinch
+Vinaceous Rosefinch
+Taiwan Rosefinch
+Sinai Rosefinch
+Pale Rosefinch
+Tibetan Rosefinch
+Sillem's Rosefinch
+Streaked Rosefinch
+Great Rosefinch
+Great Rosefinch (Great)
+Great Rosefinch (Spotted)
+Streaked/Great Rosefinch
+Long-tailed Rosefinch
+Red-fronted Rosefinch
+Crimson-browed Finch
+Pallas's Rosefinch
+Three-banded Rosefinch
+Himalayan White-browed Rosefinch
+Pink-browed/Himalayan White-browed Rosefinch
+Chinese White-browed Rosefinch
+rosefinch sp.
+Pine Grosbeak
+Pine Grosbeak (Eurasian)
+Pine Grosbeak (Pacific Northwest)
+Pine Grosbeak (Haida Gwaii)
+Pine Grosbeak (Rocky Mts.)
+Pine Grosbeak (California)
+Pine Grosbeak (Taiga)
+Brown Bullfinch
+Brown Bullfinch (Brown)
+Brown Bullfinch (Malayan)
+White-cheeked Bullfinch
+Orange Bullfinch
+Red-headed Bullfinch
+Gray-headed Bullfinch
+Taiwan Bullfinch
+Brown/Gray-headed Bullfinch
+Taiwan/Gray-headed Bullfinch
+Azores Bullfinch
+Eurasian Bullfinch
+Eurasian Bullfinch (Eurasian)
+Eurasian Bullfinch (Baikal)
+Crimson-winged Finch
+Crimson-winged Finch (African)
+Crimson-winged Finch (Eurasian)
+Trumpeter Finch
+Mongolian Finch
+Blanford's Rosefinch
+Gold-naped Finch
+Spectacled Finch
+Dark-breasted Rosefinch
+Plain Mountain Finch
+Black-headed Mountain Finch
+Asian Rosy-Finch
+Gray-crowned Rosy-Finch
+Gray-crowned Rosy-Finch (Pribilof Is.)
+Gray-crowned Rosy-Finch (Aleutian and Kodiak Is.)
+Gray-crowned Rosy-Finch (Hepburn's)
+Gray-crowned Rosy-Finch (Gray-crowned)
+Gray-crowned Rosy-Finch (Hepburn's x Gray-crowned)
+Black Rosy-Finch
+Gray-crowned x Black Rosy-Finch (hybrid)
+Brown-capped Rosy-Finch
+rosy-finch sp.
+House Finch
+House Finch (Common)
+House Finch (McGregor's)
+Purple Finch
+Purple Finch (Eastern)
+Purple Finch (Western)
+House x Purple Finch (hybrid)
+House/Purple Finch
+Cassin's Finch
+Purple/Cassin's Finch
+Haemorhous sp.
+Desert Finch
+Arabian Grosbeak
+Socotra Grosbeak
+Somali Grosbeak
+European Greenfinch
+Oriental Greenfinch
+Oriental Greenfinch (Oriental)
+Oriental Greenfinch (Bonin)
+Yellow-breasted Greenfinch
+Vietnamese Greenfinch
+Black-headed Greenfinch
+Oriole Finch
+White-rumped Seedeater
+Yellow-fronted Canary
+African Citril
+Western Citril
+Southern Citril
+Black-faced Canary
+Papyrus Canary
+Forest Canary
+Olive-rumped Serin
+Black-throated Canary
+Reichenow's Seedeater
+Yellow-rumped Serin
+Lemon-breasted Seedeater
+White-bellied Canary
+Yellow-throated Serin
+Salvadori's Serin
+Northern Grosbeak-Canary
+Southern Grosbeak-Canary
+Brimstone Canary
+Yellow Canary
+White-throated Canary
+Streaky Seedeater
+Yellow-browed Seedeater
+Thick-billed Seedeater
+Tanzania Seedeater
+Principe Seedeater
+Sao Tome Grosbeak
+Protea Canary
+Black-eared Seedeater
+West African Seedeater
+Streaky-headed Seedeater
+Reichard's Seedeater
+Reichard's Seedeater (Stripe-breasted)
+Reichard's Seedeater (Reichard's)
+Brown-rumped Seedeater
+Yemen Serin
+Ankober Serin
+Cape Siskin
+Drakensberg Siskin
+African seedeater sp.
+Twite
+Eurasian Linnet
+Twite/Eurasian Linnet
+Yemen Linnet
+Warsangli Linnet
+Common Redpoll
+Common Redpoll (flammea)
+Common Redpoll (rostrata/islandica)
+Lesser Redpoll
+Common/Lesser Redpoll
+Hoary Redpoll
+Hoary Redpoll (exilipes)
+Hoary Redpoll (hornemanni)
+Common x Hoary Redpoll (hybrid)
+Common/Hoary Redpoll
+redpoll sp.
+Parrot Crossbill
+Scottish Crossbill
+Red Crossbill
+Red Crossbill (Corsican)
+Red Crossbill (Balearic)
+Red Crossbill (North African)
+Red Crossbill (Cyprus)
+Red Crossbill (Crimean)
+Red Crossbill (Altai)
+Red Crossbill (Tien Shan)
+Red Crossbill (Himalayan)
+Red Crossbill (Dalat)
+Red Crossbill (Japanese)
+Red Crossbill (Luzon)
+Red Crossbill (Wandering or type A)
+Red Crossbill (Bohemian or type B)
+Red Crossbill (Glip or type C)
+Red Crossbill (Phantom or type D)
+Red Crossbill (Parakeet or type E)
+Red Crossbill (Scarce or type F)
+Red Crossbill (Parakeet or type X)
+Red Crossbill (Appalachian or type 1)
+Red Crossbill (Ponderosa Pine or type 2)
+Red Crossbill (Western Hemlock or type 3)
+Red Crossbill (Douglas-fir or type 4)
+Red Crossbill (Lodgepole Pine or type 5)
+Red Crossbill (Sierra Madre or type 6)
+Red Crossbill (Enigmatic or type 7)
+Red Crossbill (Newfoundland or type 8)
+Red Crossbill (Sitka Spruce or type 10)
+Red Crossbill (Central American or type 11)
+Red Crossbill (Northeastern or type 12)
+Parrot/Red Crossbill
+Cassia Crossbill
+Red/Cassia Crossbill
+Hispaniolan Crossbill
+White-winged Crossbill
+White-winged Crossbill (bifasciata)
+White-winged Crossbill (leucoptera)
+crossbill sp.
+Mountain Serin
+Mountain Serin (Mountain)
+Mountain Serin (Mindanao)
+European Goldfinch
+European Goldfinch (European)
+European Goldfinch (Eastern)
+Citril Finch
+Corsican Finch
+European Serin
+Citril Finch/European Serin
+Island Canary
+Island Canary (Domestic type)
+European Goldfinch x Island Canary (hybrid)
+Fire-fronted Serin
+Syrian Serin
+European/Fire-fronted/Syrian Serin
+Yellow-crowned Canary
+Cape Canary
+Ethiopian Siskin
+Black-headed Canary
+Black-headed Canary (Black-headed)
+Black-headed Canary (Damara)
+Serinus sp.
+Tibetan Serin
+Eurasian Siskin
+Pine Siskin
+Pine Siskin (Northern)
+Pine Siskin (Chiapas)
+Pine Siskin (green morph)
+Red Crossbill x Pine Siskin (hybrid)
+Black-capped Siskin
+Pine x Black-capped Siskin (hybrid)
+Black-headed Siskin
+Antillean Siskin
+Lesser Goldfinch
+European x Lesser Goldfinch (hybrid)
+Lawrence's Goldfinch
+American Goldfinch
+European x American Goldfinch (hybrid)
+Pine Siskin x American Goldfinch (hybrid)
+Lesser x American Goldfinch (hybrid)
+new world goldfinch sp.
+Andean Siskin
+Yellow-faced Siskin
+Yellow-bellied Siskin
+Red Siskin
+Thick-billed Siskin
+Hooded Siskin
+Saffron Siskin
+Olivaceous Siskin
+Hooded/Olivaceous Siskin
+Black Siskin
+Yellow-rumped Siskin
+Hooded x Yellow-rumped Siskin (hybrid)
+Black-chinned Siskin
+Spinus sp.
+Acanthis/Spinus sp.
+finch sp.

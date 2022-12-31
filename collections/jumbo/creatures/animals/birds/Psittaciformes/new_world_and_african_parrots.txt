@@ -1,0 +1,274 @@
+# Originally sourced from Clements Checklist v2022
+Gray Parrot
+Gray Parrot (Timneh)
+Gray Parrot (Gray)
+Brown-necked Parrot
+Brown-necked Parrot (Brown-necked)
+Brown-necked Parrot (Gray-headed)
+Cape Parrot
+Red-fronted Parrot
+Red-fronted Parrot (Guinean)
+Red-fronted Parrot (Red-fronted)
+Meyer's Parrot
+Rüppell's Parrot
+Brown-headed Parrot
+Niam-Niam Parrot
+Red-bellied Parrot
+Senegal Parrot
+Yellow-fronted Parrot
+Poicephalus sp.
+Lilac-tailed Parrotlet
+Scarlet-shouldered Parrotlet
+Red-fronted Parrotlet
+Blue-fronted Parrotlet
+Sapphire-rumped Parrotlet
+Brown-backed Parrotlet
+Golden-tailed Parrotlet
+Spot-winged Parrotlet
+Touit sp.
+Gray-hooded Parakeet
+Mountain Parakeet
+Barred Parakeet
+Rufous-fronted Parakeet
+Andean Parakeet
+Barred/Andean Parakeet
+Tepui Parrotlet
+Amazonian Parrotlet
+Monk Parakeet
+Monk Parakeet (Monk)
+Monk Parakeet (Cliff)
+Tui Parakeet
+Plain Parakeet
+White-winged Parakeet
+Yellow-chevroned Parakeet
+White-winged x Yellow-chevroned Parakeet (hybrid)
+White-winged/Yellow-chevroned Parakeet
+Gray-cheeked Parakeet
+Orange-chinned Parakeet
+Cobalt-winged Parakeet
+Golden-winged Parakeet
+Brotogeris sp.
+Pileated Parrot
+Blue-bellied Parrot
+Rusty-faced Parrot
+Indigo-winged Parrot
+Red-faced Parrot
+Black-winged Parrot
+Brown-hooded Parrot
+Rose-faced Parrot
+Saffron-headed Parrot
+Orange-cheeked Parrot
+Caica Parrot
+Bald Parrot
+Vulturine Parrot
+Pyrilia sp.
+Dusky Parrot
+Red-billed Parrot
+Scaly-headed Parrot
+Speckle-faced Parrot
+Speckle-faced Parrot (White-capped)
+Speckle-faced Parrot (Plum-crowned)
+Blue-headed Parrot
+Blue-headed Parrot (Blue-headed)
+Blue-headed Parrot (Reichenow's)
+White-crowned Parrot
+Bronze-winged Parrot
+Pionus sp.
+Short-tailed Parrot
+Yellow-faced Parrot
+Festive Parrot
+Festive Parrot (Northern)
+Festive Parrot (Southern)
+Vinaceous-breasted Parrot
+Tucuman Parrot
+Red-spectacled Parrot
+Red-crowned Parrot
+Lilac-crowned Parrot
+Red-crowned x Lilac-crowned Parrot (hybrid)
+Red-lored Parrot
+Red-lored Parrot (Red-lored)
+Red-lored Parrot (Lilacine)
+Red-lored Parrot (Diademed)
+Red-crowned x Red-lored Parrot (hybrid)
+Blue-cheeked Parrot
+Red-browed Parrot
+Red-necked Parrot
+Martinique Parrot
+St. Lucia Parrot
+Yellow-naped Parrot
+Yellow-headed Parrot
+Yellow-headed Parrot (Tres Marias Is.)
+Yellow-headed Parrot (Mainland)
+Yellow-naped x Yellow-headed Parrot (hybrid)
+Yellow-naped/Yellow-headed Parrot
+Yellow-crowned Parrot
+Yellow-shouldered Parrot
+Turquoise-fronted Parrot
+Black-billed Parrot
+White-fronted Parrot
+Yellow-lored Parrot
+Yellow-billed Parrot
+Black-billed/Yellow-billed Parrot
+Cuban Parrot
+Cuban Parrot (Cuban)
+Cuban Parrot (Bahamas)
+Cuban Parrot (Cayman Is.)
+Hispaniolan Parrot
+Puerto Rican Parrot
+Mealy Parrot
+Mealy Parrot (Northern)
+Mealy Parrot (Southern)
+Kawall's Parrot
+Imperial Parrot
+Guadeloupe Parrot
+Red-tailed Parrot
+St. Vincent Parrot
+Orange-winged Parrot
+Scaly-naped Parrot
+Amazona sp.
+Dusky-billed Parrotlet
+Dusky-billed Parrotlet (Schomburgk's)
+Dusky-billed Parrotlet (Dusky-billed)
+Mexican Parrotlet
+Mexican Parrotlet (Mexican)
+Mexican Parrotlet (Tres Marias Is.)
+Turquoise-winged Parrotlet
+Riparian Parrotlet
+Cobalt-rumped Parrotlet
+Green-rumped Parrotlet
+Spectacled Parrotlet
+Pacific Parrotlet
+Yellow-faced Parrotlet
+Forpus sp.
+Black-headed Parrot
+White-bellied Parrot
+White-bellied Parrot (Black-legged)
+White-bellied Parrot (Yellow-tailed)
+White-bellied Parrot (Green-thighed)
+Red-fan Parrot
+Ochre-marked Parakeet
+Blaze-winged Parakeet
+Maroon-bellied Parakeet
+Maroon-bellied Parakeet (Maroon-tailed)
+Maroon-bellied Parakeet (Green-tailed)
+Pearly Parakeet
+Pearly Parakeet (lepida)
+Pearly Parakeet (anerythra)
+Pearly Parakeet (coerulescens)
+Crimson-bellied Parakeet
+Green-cheeked Parakeet
+Pfrimer's Parakeet
+Gray-breasted Parakeet
+Maroon-faced Parakeet
+Gray-breasted/Maroon-faced Parakeet
+Painted Parakeet
+Painted Parakeet (Azuero)
+Painted Parakeet (Sinu)
+Painted Parakeet (Todd's)
+Painted Parakeet (Venezuelan)
+Painted Parakeet (Painted)
+Santarem Parakeet
+Santarem Parakeet (Santarem)
+Santarem Parakeet (Madeira)
+Santarem Parakeet (Cristalino)
+Bonaparte's Parakeet
+Rose-fronted Parakeet
+Rose-fronted Parakeet (Wavy-breasted)
+Rose-fronted Parakeet (Garlepp's)
+Rose-fronted Parakeet (Rose-fronted)
+Santa Marta Parakeet
+Fiery-shouldered Parakeet
+Maroon-tailed Parakeet
+Maroon-tailed Parakeet (Choco)
+Maroon-tailed Parakeet (Huila)
+Maroon-tailed Parakeet (Maroon-tailed)
+El Oro Parakeet
+Black-capped Parakeet
+White-necked Parakeet
+Brown-breasted Parakeet
+Red-eared Parakeet
+Rose-headed Parakeet
+Sulphur-winged Parakeet
+Pyrrhura sp.
+Austral Parakeet
+Slender-billed Parakeet
+Austral/Slender-billed Parakeet
+Burrowing Parakeet
+Burrowing Parakeet (Olive)
+Burrowing Parakeet (Burrowing)
+Burrowing Parakeet (Chilean)
+Hyacinth Macaw
+Glaucous Macaw
+Indigo Macaw
+Thick-billed Parrot
+Maroon-fronted Parrot
+Olive-throated Parakeet
+Olive-throated Parakeet (Aztec)
+Olive-throated Parakeet (Jamaican)
+Orange-fronted Parakeet
+Peach-fronted Parakeet
+Brown-throated Parakeet
+Brown-throated Parakeet (Veraguas)
+Brown-throated Parakeet (Brown-throated)
+Cactus Parakeet
+Carolina Parakeet
+Dusky-headed Parakeet
+Nanday Parakeet
+Sun Parakeet
+Sulphur-breasted Parakeet
+Jandaya Parakeet
+Golden-capped Parakeet
+Spix's Macaw
+Red-bellied Macaw
+Blue-winged Macaw
+Blue-headed Macaw
+Yellow-collared Macaw
+Blue-and-yellow Macaw
+Blue-throated Macaw
+Chestnut-fronted Macaw
+Cuban Macaw
+Red-fronted Macaw
+Military Macaw
+Great Green Macaw
+Scarlet Macaw
+Blue-and-yellow x Scarlet Macaw (hybrid)
+Great Green x Scarlet Macaw (hybrid)
+Red-and-green Macaw
+Blue-and-yellow x Red-and-green Macaw (hybrid)
+Scarlet/Red-and-green Macaw
+large macaw sp.
+Golden-plumed Parakeet
+Yellow-eared Parrot
+Golden Parakeet
+Blue-crowned Parakeet
+Blue-crowned Parakeet (Blue-crowned)
+Blue-crowned Parakeet (Blue-headed)
+Red-shouldered Macaw
+Red-shouldered Macaw (Northern)
+Red-shouldered Macaw (Southern)
+small macaw sp.
+Green Parakeet
+Green Parakeet (Green)
+Green Parakeet (Red-throated)
+Socorro Parakeet
+Pacific Parakeet
+Green x Pacific Parakeet (hybrid)
+Green/Pacific Parakeet
+Crimson-fronted Parakeet
+Green x Crimson-fronted Parakeet (hybrid)
+Scarlet-fronted Parakeet
+Scarlet-fronted Parakeet (Scarlet-fronted)
+Scarlet-fronted Parakeet (Cordilleran)
+Mitred Parakeet
+Mitred Parakeet (Mitred)
+Mitred Parakeet (Chapman's)
+Scarlet-fronted/Mitred Parakeet
+Red-masked Parakeet
+Mitred/Red-masked Parakeet
+White-eyed Parakeet
+Cuban Parakeet
+Hispaniolan Parakeet
+Puerto Rican Parakeet
+Guadeloupe Parakeet
+Psittacara sp.
+large parakeet sp. (former Aratinga sp.)

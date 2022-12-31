@@ -1,0 +1,497 @@
+# Originally sourced from Clements Checklist v2022
+Middle American Leaftosser
+Middle American Leaftosser (Mexican)
+Middle American Leaftosser (Costa Rican)
+South American Leaftosser
+South American Leaftosser (Andean)
+South American Leaftosser (Dusky)
+South American Leaftosser (Amazonian)
+South American Leaftosser (Guianan)
+South American Leaftosser (Atlantic)
+Middle American/South American Leaftosser
+Short-billed Leaftosser
+Scaly-throated Leaftosser
+Black-tailed Leaftosser
+Gray-throated Leaftosser
+Rufous-breasted Leaftosser
+Rufous-breasted Leaftosser (Ceara)
+Rufous-breasted Leaftosser (Rufous-breasted)
+leaftosser sp.
+Coastal Miner
+Slender-billed Miner
+Common Miner
+Common Miner (Altiplano)
+Common Miner (georgei)
+Common Miner (Coastal Desert)
+Common Miner (Central Chile)
+Common Miner (Patagonian)
+Puna Miner
+Common/Puna Miner
+Campo Miner
+Thick-billed Miner
+Rufous-banded Miner
+Grayish Miner
+Short-billed Miner
+Dark-winged Miner
+Creamy-rumped Miner
+miner sp. (Geositta sp.)
+Spot-throated Woodcreeper
+Olivaceous Woodcreeper
+Olivaceous Woodcreeper (Grayish)
+Olivaceous Woodcreeper (Pacific)
+Olivaceous Woodcreeper (Amazonian)
+Olivaceous Woodcreeper (Reiser's)
+Olivaceous Woodcreeper (Olivaceous)
+Long-tailed Woodcreeper
+Long-tailed Woodcreeper (Little)
+Long-tailed Woodcreeper (Northern)
+Long-tailed Woodcreeper (Southern)
+Yungas Woodcreeper (undescribed form)
+Tyrannine Woodcreeper
+White-chinned Woodcreeper
+Ruddy Woodcreeper
+Tawny-winged Woodcreeper
+Plain-brown Woodcreeper
+Plain-brown Woodcreeper (Plain-brown)
+Plain-brown Woodcreeper (Line-throated)
+Plain-brown Woodcreeper (atrirostris/trumaii)
+Plain-winged Woodcreeper
+Plain-winged Woodcreeper (Pernambuco)
+Plain-winged Woodcreeper (Plain-winged)
+Dendrocincla sp.
+Wedge-billed Woodcreeper
+Wedge-billed Woodcreeper (pectoralis Group)
+Wedge-billed Woodcreeper (spirurus Group)
+Wedge-billed Woodcreeper (albigularis)
+Wedge-billed Woodcreeper (cuneatus Group)
+Cinnamon-throated Woodcreeper
+Cinnamon-throated Woodcreeper (devillei)
+Cinnamon-throated Woodcreeper (rufigula)
+Cinnamon-throated Woodcreeper (paraensis/moniliger)
+Long-billed Woodcreeper
+Northern Barred-Woodcreeper
+Northern Barred-Woodcreeper (Western)
+Northern Barred-Woodcreeper (Eastern)
+Amazonian Barred-Woodcreeper
+Amazonian Barred-Woodcreeper (Napo)
+Amazonian Barred-Woodcreeper (Amazonian)
+Amazonian Barred-Woodcreeper (Jurua)
+Amazonian Barred-Woodcreeper (Plain-colored)
+Amazonian Barred-Woodcreeper (Ridgway's)
+Amazonian Barred-Woodcreeper (Xingu)
+Amazonian Barred-Woodcreeper (Todd's)
+Black-banded Woodcreeper
+Black-banded Woodcreeper (Spot-throated)
+Black-banded Woodcreeper (Black-banded)
+Black-banded Woodcreeper (Pale-billed)
+Hoffmanns's Woodcreeper
+Planalto Woodcreeper
+Dendrocolaptes sp.
+Bar-bellied Woodcreeper
+Red-billed Woodcreeper
+Uniform Woodcreeper
+Uniform Woodcreeper (Uniform)
+Uniform Woodcreeper (Brigida's)
+Strong-billed Woodcreeper
+Strong-billed Woodcreeper (Central American)
+Strong-billed Woodcreeper (Andean/Northern)
+Strong-billed Woodcreeper (Amazonian)
+Strong-billed Woodcreeper (Carajas)
+Moustached Woodcreeper
+White-throated Woodcreeper
+Great Rufous Woodcreeper
+Striped Woodcreeper
+Ceara Woodcreeper
+Lesser Woodcreeper
+Chestnut-rumped Woodcreeper
+Ocellated Woodcreeper
+Ocellated Woodcreeper (Tschudi's)
+Ocellated Woodcreeper (Line-crowned)
+Ocellated Woodcreeper (Ocellated)
+Elegant Woodcreeper
+Spix's Woodcreeper
+Cocoa Woodcreeper
+Cocoa Woodcreeper (Lawrence's)
+Cocoa Woodcreeper (Cocoa)
+Buff-throated Woodcreeper
+Buff-throated Woodcreeper (Buff-throated)
+Buff-throated Woodcreeper (Lafresnaye's)
+Buff-throated Woodcreeper (Dusky-billed)
+Ivory-billed Woodcreeper
+Black-striped Woodcreeper
+Spotted Woodcreeper
+Spotted Woodcreeper (Spotted)
+Spotted Woodcreeper (Berlepsch's)
+Olive-backed Woodcreeper
+Xiphorhynchus sp.
+Straight-billed Woodcreeper
+Zimmer's Woodcreeper
+Straight-billed/Zimmer's Woodcreeper
+Red-billed Scythebill
+Black-billed Scythebill
+Curve-billed Scythebill
+Curve-billed Scythebill (Zimmer's)
+Curve-billed Scythebill (Curve-billed)
+Curve-billed Scythebill (Tupana)
+Curve-billed Scythebill (Rondonia)
+Curve-billed Scythebill (Tapajos)
+Curve-billed Scythebill (Snethlage's)
+Brown-billed Scythebill
+scythebill sp.
+Greater Scythebill
+Scimitar-billed Woodcreeper
+Streak-headed Woodcreeper
+Narrow-billed Woodcreeper
+White-striped Woodcreeper
+Spot-crowned Woodcreeper
+Spot-crowned Woodcreeper (Northern)
+Spot-crowned Woodcreeper (Southern)
+Montane Woodcreeper
+Scaled Woodcreeper
+Scaled Woodcreeper (Wagler's)
+Scaled Woodcreeper (Scaled)
+Scalloped Woodcreeper
+Duida Woodcreeper
+Guianan Woodcreeper
+Inambari Woodcreeper
+Duida/Inambari Woodcreeper
+Dusky-capped Woodcreeper
+Dusky-capped Woodcreeper (Rondonia)
+Dusky-capped Woodcreeper (Layard's)
+Lepidocolaptes sp.
+woodcreeper sp.
+Slender-billed Xenops
+Plain Xenops
+Plain Xenops (mexicanus Group)
+Plain Xenops (genibarbis Group)
+Plain Xenops (White-throated)
+Streaked Xenops
+Slender-billed/Streaked Xenops
+xenops sp.
+Point-tailed Palmcreeper
+Rufous-tailed Xenops
+White-throated Treerunner
+Rock Earthcreeper
+Straight-billed Earthcreeper
+Band-tailed Earthcreeper
+Crag Chilia
+Buffy Tuftedcheek
+Pacific Tuftedcheek
+Streaked Tuftedcheek
+Rusty-winged Barbtail
+Bolivian Earthcreeper
+Chaco Earthcreeper
+Wing-banded Hornero
+Pale-legged Hornero
+Pale-legged Hornero (Pacific)
+Pale-legged Hornero (Caribbean)
+Pale-legged Hornero (Pale-legged)
+Pale-billed Hornero
+Lesser Hornero
+Rufous Hornero
+Crested Hornero
+hornero sp.
+Sharp-tailed Streamcreeper
+Wren-like Rushbird
+Curve-billed Reedhaunter
+Striated Earthcreeper
+Patagonian Forest Earthcreeper
+Scale-throated Earthcreeper
+White-throated Earthcreeper
+Buff-breasted Earthcreeper
+Buff-breasted Earthcreeper (Plain-breasted)
+Buff-breasted Earthcreeper (Buff-breasted)
+Upucerthia sp.
+Long-tailed Cinclodes
+Long-tailed Cinclodes (Cipo)
+Long-tailed Cinclodes (Long-tailed)
+Buff-winged Cinclodes
+Blackish Cinclodes
+Blackish Cinclodes (Black)
+Blackish Cinclodes (Blackish)
+Cordoba Cinclodes
+Chestnut-winged Cinclodes
+Olrog's Cinclodes
+Cream-winged Cinclodes
+bar-winged cinclodes sp.
+Gray-flanked Cinclodes
+Stout-billed Cinclodes
+Royal Cinclodes
+White-bellied Cinclodes
+White-winged Cinclodes
+Dark-bellied Cinclodes
+Surf Cinclodes
+Seaside Cinclodes
+cinclodes sp.
+Dusky-cheeked Foliage-gleaner
+White-collared Foliage-gleaner
+Great Xenops
+Pale-browed Treehunter
+Pale-browed Treehunter (Pale-tailed)
+Pale-browed Treehunter (Rufous-tailed)
+Cryptic Treehunter
+Sharp-billed Treehunter
+Bahia Treehunter (undescribed form)
+Slaty-winged Foliage-gleaner
+Slaty-winged Foliage-gleaner (Dusky-winged)
+Slaty-winged Foliage-gleaner (Rufous-backed)
+Rufous-rumped Foliage-gleaner
+Alagoas Foliage-gleaner
+Cryptic Treehunter/Alagoas Foliage-Gleaner
+Black-capped Foliage-gleaner
+Cinnamon-rumped Foliage-gleaner
+Philydor sp.
+Scaly-throated Foliage-gleaner
+Scaly-throated Foliage-gleaner (Scaly-throated)
+Scaly-throated Foliage-gleaner (Spot-breasted)
+Montane Foliage-gleaner
+Rufous-tailed Foliage-gleaner
+White-browed Foliage-gleaner
+Ochre-breasted Foliage-gleaner
+Anabacerthia sp.
+Guttulate Foliage-gleaner
+Lineated Foliage-gleaner
+Buff-browed Foliage-gleaner
+Rufous-necked Foliage-gleaner
+Russet-mantled Foliage-gleaner
+White-throated Foliage-gleaner
+Peruvian Recurvebill
+Bolivian Recurvebill
+Syndactyla sp.
+Chestnut-winged Hookbill
+Buff-fronted Foliage-gleaner
+Chestnut-winged Foliage-gleaner
+Chestnut-capped Foliage-gleaner
+Canebrake Groundcreeper
+Henna-hooded Foliage-gleaner
+Ruddy Foliage-gleaner
+Ruddy Foliage-gleaner (Rusty)
+Ruddy Foliage-gleaner (Black-tailed)
+Ruddy Foliage-gleaner (Cinnamon-throated)
+Ruddy Foliage-gleaner (Dusky)
+Ruddy Foliage-gleaner (Watkins's)
+Santa Marta Foliage-gleaner
+Uniform Treehunter
+Flammulated Treehunter
+Rufous-backed Treehunter
+Striped Treehunter
+Streak-capped Treehunter
+Streak-breasted Treehunter
+Black-billed Treehunter
+Chestnut-crowned Foliage-gleaner
+Brown-rumped Foliage-gleaner
+Buff-throated Foliage-gleaner
+Buff-throated Foliage-gleaner (Mexican)
+Buff-throated Foliage-gleaner (amusos)
+Buff-throated Foliage-gleaner (hypophaeus)
+Buff-throated Foliage-gleaner (pallidigularis)
+Buff-throated Foliage-gleaner (turdinus)
+Buff-throated Foliage-gleaner (ochrolaemus)
+Buff-throated Foliage-gleaner (auricularis)
+Chiriqui Foliage-gleaner
+Striped Woodhaunter
+Striped Woodhaunter (Central American)
+Striped Woodhaunter (Eastern South America)
+Olive-backed Foliage-gleaner
+Olive-backed Foliage-gleaner (Olive-backed)
+Olive-backed Foliage-gleaner (Olive-capped)
+Para Foliage-gleaner
+Pernambuco Foliage-gleaner
+White-eyed Foliage-gleaner
+Automolus sp.
+foliage-gleaner sp.
+Spotted Barbtail
+White-throated Barbtail
+White-throated Barbtail (White-throated)
+White-throated Barbtail (Paria)
+Beautiful Treerunner
+Ruddy Treerunner
+Fulvous-dotted Treerunner
+Pearled Treerunner
+Thorn-tailed Rayadito
+Masafuera Rayadito
+Des Murs's Wiretail
+Tawny Tit-Spinetail
+Brown-capped Tit-Spinetail
+Tufted Tit-Spinetail
+Plain-mantled Tit-Spinetail
+Plain-mantled Tit-Spinetail (grisescens)
+Plain-mantled Tit-Spinetail (berlepschi)
+Plain-mantled Tit-Spinetail (aegithaloides)
+Plain-mantled Tit-Spinetail (pallida)
+Striolated Tit-Spinetail
+Rusty-crowned Tit-Spinetail
+White-browed Tit-Spinetail
+Streaked Tit-Spinetail
+Andean Tit-Spinetail
+Araucaria Tit-Spinetail
+tit-spinetail sp.
+Rufous-fronted Thornbird
+Rufous-fronted Thornbird (Plain)
+Rufous-fronted Thornbird (Rufous-fronted)
+Rufous-fronted Thornbird (Rufous-winged)
+Mantaro Thornbird (undescribed form)
+Streak-fronted Thornbird
+Little Thornbird
+Chestnut-backed Thornbird
+Spot-breasted Thornbird
+Freckle-breasted Thornbird
+Greater Thornbird
+Orange-eyed Thornbird
+Orange-breasted Thornbird
+Orange-eyed/Orange-breasted Thornbird
+thornbird sp.
+White-browed Spinetail
+White-browed Spinetail (gularis)
+White-browed Spinetail (brunneidorsalis)
+White-browed Spinetail (cinereiventris)
+White-browed Spinetail (rufiventris)
+Firewood-gatherer
+Lark-like Brushrunner
+Creamy-breasted Canastero
+Creamy-breasted Canastero (Rusty-vented)
+Creamy-breasted Canastero (Dark-winged)
+Creamy-breasted Canastero (Pale-tailed)
+Creamy-breasted Canastero (Huancavelica)
+Berlepsch's Canastero
+Short-billed Canastero
+Cipo Canastero
+Hudson's Canastero
+Austral Canastero
+Line-fronted Canastero
+Many-striped Canastero
+Junin Canastero
+Scribble-tailed Canastero
+Streak-backed Canastero
+Puna Canastero
+Streak-throated Canastero
+Cordilleran Canastero
+Itatiaia Spinetail
+Sharp-billed Canastero
+Black-throated Thistletail
+Puna Thistletail
+Ayacucho Thistletail
+Vilcabamba Thistletail
+Canyon Canastero
+Rusty-fronted Canastero
+Maquis Canastero
+Eye-ringed Thistletail
+Ochre-browed Thistletail
+Perija Thistletail
+White-chinned Thistletail
+White-chinned Thistletail (fumigata)
+White-chinned Thistletail (fuliginosa)
+White-chinned Thistletail (peruviana/plengei)
+Mouse-colored Thistletail
+canastero sp.
+Pink-legged Graveteiro
+Orange-fronted Plushcrown
+Double-banded Graytail
+Equatorial Graytail
+Spectacled Prickletail
+Roraiman Barbtail
+Striated Softtail
+Orinoco Softtail
+Delta Amacuro Softtail
+Plain Softtail
+Plain Softtail (dimorpha)
+Plain Softtail (obidensis)
+Plain Softtail (fusciceps)
+Russet-mantled Softtail
+softtail sp.
+Straight-billed Reedhaunter
+Curve-billed/Straight-billed Reedhaunter
+Sulphur-bearded Reedhaunter
+Marcapata Spinetail
+Marcapata Spinetail (Pale-crowned)
+Marcapata Spinetail (Rufous-crowned)
+Light-crowned Spinetail
+Light-crowned Spinetail (White-crowned)
+Light-crowned Spinetail (Buffy-crowned)
+Rusty-backed Spinetail
+Coiba Spinetail
+Parker's Spinetail
+Crested Spinetail
+Stripe-crowned Spinetail
+Bolivian Spinetail
+Olive Spinetail
+Stripe-crowned x Olive Spinetail (hybrid)
+Pallid Spinetail
+Gray-headed Spinetail
+Creamy-crested Spinetail
+Red-faced Spinetail
+Tepui Spinetail
+Streak-capped Spinetail
+Ash-browed Spinetail
+Line-cheeked Spinetail
+Line-cheeked Spinetail (Line-cheeked)
+Line-cheeked Spinetail (Baron's)
+Speckled Spinetail
+Scaled Spinetail
+Cranioleuca sp.
+Dusky-tailed Canastero
+Patagonian Canastero
+Steinbach's Canastero
+Cactus Canastero
+Bay-capped Wren-Spinetail
+Caatinga Cacholote
+Rufous Cacholote
+Brown Cacholote
+White-throated Cacholote
+Yellow-chinned Spinetail
+Red-and-white Spinetail
+Yellow-chinned/Red-and-white Spinetail
+Araguaia River Spinetail (undescribed form)
+White-bellied Spinetail
+Chotoy Spinetail
+Ochre-cheeked Spinetail
+Gray-bellied Spinetail
+Plain-crowned Spinetail
+White-lored Spinetail
+White-lored Spinetail (White-lored)
+White-lored Spinetail (Araguaia)
+Marañon Spinetail
+Great Spinetail
+Necklaced Spinetail
+Necklaced Spinetail (La Libertad)
+Chinchipe Spinetail
+Russet-bellied Spinetail
+Slaty Spinetail
+Silvery-throated Spinetail
+Red-shouldered Spinetail
+Rufous-capped Spinetail
+Bahia Spinetail
+Pinto's Spinetail
+Amazonian Spinetail (undescribed form)
+Dusky Spinetail
+McConnell's Spinetail
+Cabanis's Spinetail
+Cinereous-breasted Spinetail
+Spix's Spinetail
+Dark-breasted Spinetail
+Rio Orinoco Spinetail
+Pale-breasted Spinetail
+Sooty-fronted Spinetail
+Azara's Spinetail
+Mantaro Spinetail (undescribed form)
+Apurimac Spinetail
+Azara's/Apurimac Spinetail
+Hoary-throated Spinetail
+Rufous-breasted Spinetail
+White-whiskered Spinetail
+Blackish-headed Spinetail
+Rusty-headed Spinetail
+Rufous Spinetail
+Rufous Spinetail (unirufa)
+Rufous Spinetail (munoztebari)
+Rufous Spinetail (meridana)
+Rufous Spinetail (ochrogaster)
+Black-throated Spinetail
+Stripe-breasted Spinetail
+Ruddy Spinetail
+Ruddy Spinetail (Ruddy)
+Ruddy Spinetail (Sooty)
+Chestnut-throated Spinetail
+Synallaxis sp.
+spinetail sp.
+Furnariid sp.

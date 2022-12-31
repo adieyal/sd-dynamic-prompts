@@ -1,0 +1,36 @@
+# Originally sourced from Clements Checklist v2022
+Sooty Owl
+Sooty Owl (Greater)
+Sooty Owl (Lesser)
+Australian Masked-Owl
+Golden Masked-Owl
+Seram Masked-Owl
+Lesser Masked-Owl
+Lesser Masked-Owl (Buru)
+Lesser Masked-Owl (Tanimbar)
+Manus Masked-Owl
+Taliabu Masked-Owl
+Minahasa Masked-Owl
+Sulawesi Masked-Owl
+Itombwe Owl
+Australasian Grass-Owl
+African Grass-Owl
+Barn Owl
+Barn Owl (Eurasian)
+Barn Owl (Madeiran)
+Barn Owl (Canary Is.)
+Barn Owl (African)
+Barn Owl (Cape Verde)
+Barn Owl (Sao Tome)
+Barn Owl (Boang)
+Barn Owl (Eastern)
+Barn Owl (American)
+Barn Owl (White-winged)
+Barn Owl (Curacao)
+Barn Owl (Lesser Antilles)
+Barn Owl (Galapagos)
+Andaman Masked-Owl
+Ashy-faced Owl
+Red Owl
+Oriental Bay-Owl
+Sri Lanka Bay-Owl
