@@ -1,14 +1,14 @@
 from __future__ import annotations
 
 import random
-from typing import Iterator, cast, Iterable
+from typing import cast, Iterable
 
 from .parse import Parser, ActionBuilder
 from .commands import SequenceCommand, Command, LiteralCommand, VariantCommand, WildcardCommand
 
 
 class RandomSequenceCommand(SequenceCommand):
-    def prompts(self) -> Iterator[str]:
+    def prompts(self) -> Iterable[str]:
         if len(self.tokens) == 0:
             return []
         else:
@@ -22,12 +22,14 @@ class RandomWildcardCommand(Command):
         self._wildcard_manager = wildcard_manager
         self._wildcard = token[0]
 
-    def prompts(self) -> Iterator[str]:
+    def prompts(self) -> Iterable[str]:
+        generator = RandomGenerator(self._wildcard_manager)
         values = self._wildcard_manager.get_all_values(self._wildcard)
         val = random.choice(values)
+        prompts = generator.generate_prompts(val, 1)
 
-        return [val]
-
+        return prompts
+    
     def __repr__(self):
         return f"{self.__class__.__name__}({self._wildcard!r})"
 
@@ -55,7 +57,7 @@ class RandomVariantCommand(Command):
                     else:
                         yield [p]
 
-    def prompts(self) -> Iterator[str]:
+    def prompts(self) -> Iterable[str]:
         if len(self._values) == 0:
             return []
 
@@ -96,7 +98,7 @@ class RandomGenerator:
 
         return parser.prompt
 
-    def generate_prompts(self, prompt: str, num_prompts: int):
+    def generate_prompts(self, prompt: str, num_prompts: int) -> list[str]:
         if len(prompt) == 0:
             return []
 
