@@ -143,13 +143,25 @@ if the 3rd row is chosen, then either Autumn or Fall will be selected. You could
 	{Autumn|Fall}
 	Spring
 
-## Comments
+### Comments
 Python and c-style comments are supported:
 
     Test string
     # This  a comment until the end of the line
     // this is also a comment until the end of the line
     {A|/* this is an inline comment */B}
+
+### Whitespace
+In most cases, whitespace is ignored which allows you to create more expressive and readable prompts, e.g.
+
+	wisdom {
+    	woman, __colours__ eyes, braided hair
+    	|man using a __war/weapons/swords/european__, red turban
+    	|dwarf weilding a warhammer, __colours__ beard
+	}, 
+	knows the meaning of life, warrior, hyper-realistic, peaceful, dark fantasy, unreal engine, 8k
+
+
 
 ### Fuzzy Glob/recursive wildcard file/directory matching
 In addition to standard wildcard tokens such as `__times__` -> `times.txt`, you can also use globbing to match against multiple files at once.
