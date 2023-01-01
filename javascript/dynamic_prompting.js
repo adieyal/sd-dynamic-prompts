@@ -4,7 +4,7 @@ sddp_ui = null
 
 onUiUpdate(function () {
   if (!sddp_loaded) {
-    gradioApp().getElementById("dynamic-prompts-enabled").append("Complete documentation is available at https://github.com/adieyal/sd-dynamic-prompts. ")
+    gradioApp().getElementById("dynamic-prompts-enabled").append("Complete documentation is available at https://github.com/adieyal/sd-dynamic-prompts. Please report any issues on GitHub.")
     gradioApp().getElementById("is-combinatorial").append("Generate all possible prompts up to a maximum of Batch count * Batch size)")
     gradioApp().getElementById("is-magicprompt").append("Automatically update your prompt with interesting modifiers. (Runs slowly the first time)")
     gradioApp().getElementById("is-feelinglucky").append("Generate random prompts from lexica.art (your prompt is used as a search query).")
@@ -14,7 +14,6 @@ onUiUpdate(function () {
     gradioApp().getElementById("disable-negative-prompt").append("Useful for I'm feeling lucky and Magic Prompt. If this is set, then negative prompts are not generated.")
     gradioApp().getElementById("no-image-generation").append("Disable image generation. Useful if you only want to generate text prompts.")
     gradioApp().getElementById("is-attention-grabber").append("Add emphasis to a randomly selected keyword in the prompt.")
-    gradioApp().getElementById("enable-comments").append("Enable the use of C-style comments in the prompt (// and /* ... */).")
 
     sddp_ui = new SDDPUI()
     sddp_loaded = true;

@@ -41,7 +41,6 @@ E.g. in ./outputs/txt2img-images/.`.trim(),
 "Enable Jinja2 templates": "Jinja2 templates are an expressive alternative to the standard syntax. See the Help section below for instructions.",
 "Unlink seed from prompt": "Check this if you want to generate random prompts, even if your seed is fixed",
 "Disable negative prompt": "Ignore the negative prompt. Magic Prompt and I'm feeling lucky generate negative prompts by default, check this to disable that functionality.",
-"Enable comments": "Enable the use of C-style comments (//, /* */). Text within comments is stripped out before any processing occurs.",
 
 "Fixed seed": `
 Select this if you want to use the same seed for every generated image.

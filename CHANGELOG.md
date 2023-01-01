@@ -1,3 +1,4 @@
+- 1.5.12 Removed comments checkbox as comments are now enabled by default
 - 1.5.11 Added a list of occupations to the jumbo collection
 - 1.5.10 Parser now correctly ignores `[low emphasis]` square brackets
 - 1.5.9 Fixed attention grabber sliders

@@ -49,7 +49,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "1.5.11"
+VERSION = "1.5.12"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -108,22 +108,6 @@ def new_generation(prompt, p) -> PromptGenerator:
 
     generator = JinjaGenerator(prompt, wildcard_manager, context)
     return generator
-
-
-# https://stackoverflow.com/a/241506
-def strip_comments(text):
-    def replacer(match):
-        s = match.group(0)
-        if s.startswith('/'):
-            return " " # note: a space and not an empty string
-        else:
-            return s
-    pattern = re.compile(
-        r'//.*?$|/\*.*?\*/|\'(?:\\.|[^\\\'])*\'|"(?:\\.|[^\\"])*"',
-        re.DOTALL | re.MULTILINE
-    )
-    return re.sub(pattern, replacer, text)
-
 
 class Script(scripts.Script):
     def _create_generator(
@@ -289,12 +273,6 @@ class Script(scripts.Script):
                     elem_id="no-image-generation",
                 )
 
-                enable_comments = gr.Checkbox(
-                    label="Enable comments",
-                    value=False,
-                    elem_id="enable-comments",
-                )
-
                 with gr.Accordion("Help", open=False):
                     info = gr.HTML(html)
 
@@ -345,7 +323,6 @@ class Script(scripts.Script):
             disable_negative_prompt,
             enable_jinja_templates,
             no_image_generation,
-            enable_comments,
         ]
 
     def process(
@@ -368,7 +345,6 @@ class Script(scripts.Script):
         disable_negative_prompt,
         enable_jinja_templates,
         no_image_generation,
-        enable_comments,
     ):
 
         if not is_enabled:
@@ -396,10 +372,6 @@ class Script(scripts.Script):
         except (ValueError, TypeError):
             combinatorial_batches = 1
 
-        if enable_comments:
-            original_prompt = strip_comments(original_prompt)
-            original_negative_prompt = strip_comments(original_negative_prompt)
-        
         try:
             logger.debug("Creating positive generator")
             generator = self._create_generator(
