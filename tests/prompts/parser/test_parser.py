@@ -56,6 +56,17 @@ class TestParser:
         assert len(sequence) == 1
         assert sequence[0] == "Test änderō"
 
+    def test_literal_with_square_brackets(self, parser: Parser):
+        sequence = parser.parse("Test [low emphasis]")
+        assert len(sequence) == 1
+        assert sequence[0] == "Test [low emphasis]"
+
+    def test_literal_with_round_brackets(self, parser: Parser):
+        sequence = parser.parse("Test (high emphasis)")
+        assert len(sequence) == 1
+        assert sequence[0] == "Test (low emphasis])"
+        
+
     def test_wildcard(self, parser: Parser):
         sequence = parser.parse("__colours__")
         assert len(sequence) == 1

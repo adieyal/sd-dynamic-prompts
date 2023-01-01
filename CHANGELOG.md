@@ -1,3 +1,4 @@
+- 1.5.10 Parser now correctly ignores `[low emphasis]` square brackets
 - 1.5.9 Fixed attention grabber sliders
 - 1.5.8 Both prompt editing (`[a:b:when]`) and prompt alternating (`[a|b]`) can now nest arbitrary prompts, e.g. `A [__colours__:{pink|yellow}] rose`
 - 1.5.7 Added passthru support for prompt editing (i.e. `[a:b:when]` remains unchanged). A future release will enable variable components, e.g. `[__colours__:__colours:4]`

@@ -137,9 +137,19 @@ class Parser:
         wildcard_enclosure = pp.Suppress("__")
 
         literal = pp.Regex(rf"[^{non_literal_chars}\s]+")("literal")
-        literal_sequence = (pp.OneOrMore(~wildcard_enclosure + literal))("literal_sequence")
+        literal_sequence = pp.Forward()
+
+        literal_sequence1 = pp.OneOrMore(~wildcard_enclosure + literal)
+        literal_sequence2 = pp.Word("[") + literal_sequence1 + pp.Word("]")
+
+        def join_literal_sequence(s, l, t):
+            return " ".join(t).replace("[ ", "[").replace(" ]", "]")
+
+        literal_sequence2 = literal_sequence2.set_parse_action(join_literal_sequence)
         
-        return  literal_sequence
+        literal_sequence = pp.OneOrMore(literal_sequence1 | literal_sequence2)("literal_sequence")
+        
+        return  literal_sequence("literal_sequence")
 
     def _configure_extra(self, prompt):
         prompt_alternating = self._configure_prompt_alternating_words(prompt)

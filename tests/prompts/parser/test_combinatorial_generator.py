@@ -287,6 +287,11 @@ class TestCombinatorialGenerator:
         prompts = generator.generate_prompts("A literal sentence", 5)
         assert len(prompts) == 1
 
+    def test_literal_with_square_brackets(self, generator: CombinatorialGenerator):
+        prompts = generator.generate_prompts("Test [low emphasis]", 1)
+        assert len(prompts) == 1
+        assert prompts[0] == "Test [low emphasis]"
+
     def test_variants(self, generator: CombinatorialGenerator):
         prompts = generator.generate_prompts("A red {square|circle}", 5)
         assert len(prompts) == 2

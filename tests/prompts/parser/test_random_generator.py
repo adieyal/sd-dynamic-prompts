@@ -242,6 +242,11 @@ class TestRandomGenerator:
         for p in prompts:
             assert p == "A literal sentence"
 
+    def test_literal_with_square_brackets(self, generator: RandomGenerator):
+        prompts = generator.generate_prompts("Test [low emphasis]", 1)
+        assert len(prompts) == 1
+        assert prompts[0] == "Test [low emphasis]"
+
     def test_variants(self, generator: RandomGenerator):
         with mock.patch("prompts.parser.random_generator.random.choices") as mock_random:
             random_choices = [
