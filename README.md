@@ -2,8 +2,8 @@
 A custom extension for [AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) that implements an expressive template language for random or combinatorial prompt generation along with features to support deep wildcard directory structures.
 
 <p align="center">                                                                                         
-    <a href="SYNTAX.md"><img src="images/icon-syntax.png" valign="middle" style="height:40px"/></a>
-    <a href="CHANGELOG.md"><img src="images/icon-changelog.png" valign="middle" style="height:40px"/></a>
+    <a href="docs/SYNTAX.md"><img src="images/icon-syntax.png" valign="middle" style="height:40px"/></a>
+    <a href="docs/CHANGELOG.md"><img src="images/icon-changelog.png" valign="middle" style="height:40px"/></a>
 </p>
 
 
@@ -39,7 +39,7 @@ You can also use the same wildcard twice
 - I love Winter better than Summer
 - I love Spring better than Spring
 
-More complete documentation can be found [here](SYNTAX.md).
+More complete documentation can be found [here](docs/SYNTAX.md).
 
 ## Installation
 
@@ -57,7 +57,7 @@ Dynamic Prompts works particularly well with the following scripts:
 
 
 ## Template syntax
-Documentation can be found [here](SYNTAX.md)
+Documentation can be found [here](docs/SYNTAX.md)
 
 ### Fuzzy Glob/recursive wildcard file/directory matching
 In addition to standard wildcard tokens such as `__times__` -> `times.txt`, you can also use globbing to match against multiple files at once.
