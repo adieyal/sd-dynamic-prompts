@@ -116,9 +116,11 @@ class RandomGenerator:
         tokens = parser.parse_string(prompt)
         tokens = cast(list[Command], tokens)
 
+        squash_whitespace = lambda s: " ".join(s.split())
+
         generated_prompts = []
         for i in range(num_prompts):
             prompts = list(tokens[0].prompts())
-            generated_prompts.append(prompts[0])
+            generated_prompts.append(squash_whitespace(prompts[0]))
 
         return generated_prompts
