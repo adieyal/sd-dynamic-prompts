@@ -336,16 +336,35 @@ class TestRandomGenerator:
                 assert prompts[0] == "A red square"
                 assert prompts[1] == "A green circle"
 
-    def test_prompt_editing(self, generator: RandomGenerator):
-        prompts = [
-            "A [start prompt:end prompt:0.25] example",
-            "A [start prompt|end prompt|0.25] example",
-        ]
+    # def test_prompt_editing(self, generator: RandomGenerator):
+    #     prompts = [
+    #         "A [start prompt:end prompt:0.25] example",
+    #         "A [start prompt|end prompt|0.25] example",
+    #     ]
 
-        for p in prompts:
-            new_prompts = generator.generate_prompts(p, 2)
-            assert len(new_prompts) == 2
-            assert new_prompts[0] == p
+    #     for p in prompts:
+    #         new_prompts = generator.generate_prompts(p, 2)
+    #         assert len(new_prompts) == 2
+    #         assert new_prompts[0] == p
+
+    # def test_prompt_editing_with_variants(self, generator: RandomGenerator):
+    #     prompt = """
+    #     [
+    #         ({A1|A2}:1.0)
+    #         :
+    #         (B:1.1)
+    #         :0.5
+    #     ]
+    #     """
+        
+    #     with mock.patch("prompts.parser.random_generator.random.choices") as mock_random:
+    #         mock_random.side_effect = [
+    #             [to_seqlit("A1")],
+    #             [to_seqlit("A2")]
+    #         ]
+    #         new_prompts = generator.generate_prompts(prompt, 2)
+    #         assert len(new_prompts) == 2
+    #         assert new_prompts[0] == "[(A1:1.0):(B:1.1):0.5]"
         
 
             

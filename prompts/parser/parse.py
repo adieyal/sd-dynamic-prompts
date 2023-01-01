@@ -137,7 +137,7 @@ class Parser:
         return wildcard
 
     def _configure_literal_sequence(self):
-        non_literal_chars = r"{}()|:$\[\]"
+        non_literal_chars = r"{}|$"
         wildcard_enclosure = pp.Suppress("__")
 
         literal = pp.Regex(rf"[^{non_literal_chars}\s]+")("literal")
@@ -161,7 +161,8 @@ class Parser:
         literal_sequence_round = literal_sequence_round.set_parse_action(join_literal_sequence)
         literal_sequence_round2 = literal_sequence_round2.set_parse_action(join_literal_sequence)
         
-        literal_sequence = pp.OneOrMore(literal_sequence1 | literal_sequence_square | literal_sequence_round | literal_sequence_round2)
+        # literal_sequence = pp.OneOrMore(literal_sequence1 | literal_sequence_square | literal_sequence_round | literal_sequence_round2)
+        literal_sequence = literal_sequence1
         
         return  literal_sequence("literal_sequence")
 

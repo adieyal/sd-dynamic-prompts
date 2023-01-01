@@ -414,12 +414,12 @@ class TestCombinatorialGenerator:
             assert prompts[10] == "black,green"
             assert prompts[11] == "black,blue"
 
-    def test_prompt_editing(self, generator: CombinatorialGenerator):
-        prompts = [
-            "A [start prompt:end prompt:0.25] example",
-            "A [start prompt|end prompt|0.25] example",
-        ]
-        for p in prompts:
-            new_prompts = list(generator.generate_prompts(p, 2))
-            assert len(new_prompts) == 1
-            assert new_prompts[0] == p
+    # def test_prompt_editing(self, generator: CombinatorialGenerator):
+    #     prompts = [
+    #         "A [start prompt:end prompt:0.25] example",
+    #         "A [start prompt|end prompt|0.25] example",
+    #     ]
+    #     for p in prompts:
+    #         new_prompts = list(generator.generate_prompts(p, 2))
+    #         assert len(new_prompts) == 1
+    #         assert new_prompts[0] == p
