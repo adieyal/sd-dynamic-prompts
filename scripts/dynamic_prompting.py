@@ -49,7 +49,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "1.5.8"
+VERSION = "1.5.9"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -133,8 +133,8 @@ class Script(scripts.Script):
         is_dummy=False,
         is_feeling_lucky=False,
         is_attention_grabber=False,
-        min_attention=0.1,
-        max_attention=0.5,
+        min_attention=1.1,
+        max_attention=1.5,
         enable_jinja_templates=False,
         is_combinatorial=False,
         is_magic_prompt=False,
@@ -407,6 +407,8 @@ class Script(scripts.Script):
                 original_seed,
                 is_feeling_lucky=is_feeling_lucky,
                 is_attention_grabber=is_attention_grabber,
+                min_attention=min_attention,
+                max_attention=max_attention,
                 enable_jinja_templates=enable_jinja_templates,
                 is_combinatorial=is_combinatorial,
                 is_magic_prompt=is_magic_prompt,
@@ -423,6 +425,8 @@ class Script(scripts.Script):
                 original_seed,
                 is_feeling_lucky=is_feeling_lucky,
                 is_attention_grabber=is_attention_grabber,
+                min_attention=min_attention,
+                max_attention=max_attention,
                 enable_jinja_templates=enable_jinja_templates,
                 is_combinatorial=is_combinatorial,
                 is_magic_prompt=is_magic_prompt,
