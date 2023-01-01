@@ -60,12 +60,15 @@ class TestParser:
         sequence = parser.parse("Test [low emphasis]")
         assert len(sequence) == 1
         assert sequence[0] == "Test [low emphasis]"
-
+        
     def test_literal_with_round_brackets(self, parser: Parser):
         sequence = parser.parse("Test (high emphasis)")
         assert len(sequence) == 1
-        assert sequence[0] == "Test (low emphasis])"
-        
+        assert sequence[0] == "Test (high emphasis)"
+
+        sequence = parser.parse("Test (high emphasis:0.4)")
+        assert len(sequence) == 1
+        assert sequence[0] == "Test (high emphasis:0.4)"
 
     def test_wildcard(self, parser: Parser):
         sequence = parser.parse("__colours__")
@@ -124,6 +127,15 @@ class TestParser:
         assert variant[0][0] == "new york"
         assert variant[1][0] == "washing-ton!"
         assert variant[2][0] == "änder"
+
+    def test_variant_with_blank(self, parser: Parser):
+        sequence = parser.parse("{|red|blue}")
+        variant = cast(VariantCommand, sequence[0])
+        assert len(variant) == 3
+        assert len(variant[0]) == 0
+
+        assert variant[1][0] == "red"
+        assert variant[2][0] == "blue"
 
     def test_variant_breaks_without_closing_bracket(self, parser: Parser):
         with pytest.raises(ParseException):

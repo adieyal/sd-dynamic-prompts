@@ -1,3 +1,4 @@
+- 1.5.14 Fixed parsing of emphasis with weights, e.g. `(high emphasis:1.5)`
 - 1.5.13 Fixed variants with empty value, e.g. A {|red|blue} rose
 - 1.5.12 Removed comments checkbox as comments are now enabled by default
 - 1.5.11 Added a list of occupations to the jumbo collection
