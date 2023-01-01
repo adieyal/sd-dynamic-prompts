@@ -66,9 +66,14 @@ will choose between 2 and 4 options from adjective.txt, join them together with 
 
 
 ## Nesting
-You can nest inside combinations. This means that you can create more advanced templates. For example:
+
+Many constructed can nest sub-prompts. This means that you can create more advanced templates. Here are some examples:
+
+### Combinations
+You can nest inside combinations.
 
     {__seasons__|__timeofday__}
+
 
 This will then either choose a season from seasons.txt or a time of day from timeofday.txt.
 
@@ -76,9 +81,40 @@ Combinations can also be nested inside other combinations, e.g.
 
     {{a|b|c}|d}
 
+You can even nest complete prompts in combinations:
 
-## Recursion
-Prompts are processed recursively. If a wildcard file contains a row with dynamic syntax, then that will be resolved as well. For example if seasons.txt contains the following rows:
+	{A {small|large} __monster__|A {scary|friendly} ghost}
+
+This produce one of:1
+1. A small dragon (assuming dragon is contained in the monster.txt file)
+2. A large dragon
+3. A scary ghost
+4. A fiendly ghost
+
+If you find that your prompts are becoming too complicated to read, consider using [whitespace](SYNTAX.md#whitespace)
+
+### Prompt Editing
+You can embed prompts in Automatic1111's [prompt editing feature](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#prompt-editing)
+
+Instead of:
+
+	[red:green:0.25]
+
+you can write:
+
+	[__colours__:__colours__:0.25]
+
+Of course your prompts can be arbitrarily complex.
+
+### Alternating words
+Similar to prompt editing, you can embed prompts in [Alternating words](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#alternating-words)
+
+e.g.
+
+	[__colours__|__colours__]
+
+### Wildcard files
+Wildcard files are processed recursively. If a wildcard file contains a row with dynamic syntax, then that will be resolved as well. For example if seasons.txt contains the following rows:
 
 	Summer
 	Winter

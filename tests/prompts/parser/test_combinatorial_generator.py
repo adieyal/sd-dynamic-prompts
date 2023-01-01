@@ -259,6 +259,24 @@ class TestWildcardsCommand:
             assert prompts[3] == "green"
             assert prompts[4] == "blue"
 
+class TestCombinatorialSequenceCommand:
+    def test_prompts(self):
+        command1 = LiteralCommand("A")
+        command2 = LiteralCommand("sentence")
+        sequence = CombinatorialSequenceCommand([command1, command2])
+
+        prompts = list(sequence.prompts())
+        assert len(prompts) == 1
+        assert prompts[0] == "A sentence"
+
+    def test_custom_separator(self):
+        command1 = LiteralCommand("A")
+        command2 = LiteralCommand("sentence")
+        sequence = CombinatorialSequenceCommand([command1, command2], separator="")
+
+        prompts = list(sequence.prompts())
+        assert len(prompts) == 1
+        assert prompts[0] == "Asentence"
 
 class TestCombinatorialGenerator:
     def test_empty(self, generator: CombinatorialGenerator):
@@ -389,7 +407,6 @@ class TestCombinatorialGenerator:
             "A [start prompt:end prompt:0.25] example",
             "A [start prompt|end prompt|0.25] example",
         ]
-
         for p in prompts:
             new_prompts = list(generator.generate_prompts(p, 2))
             assert len(new_prompts) == 1

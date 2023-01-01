@@ -8,12 +8,16 @@ from .commands import SequenceCommand, Command, LiteralCommand, VariantCommand, 
 
 
 class RandomSequenceCommand(SequenceCommand):
+    def __init__(self, tokens: list[Command] | None = None, separator=" "):
+        self._sep = separator
+        super().__init__(tokens)
+        
     def prompts(self) -> Iterable[str]:
         if len(self.tokens) == 0:
             return []
         else:
             partials = [p.get_prompt() for p in self.tokens]
-            return [" ".join(partials)]
+            return [self._sep.join(partials)]
 
 
 class RandomWildcardCommand(Command):
@@ -83,6 +87,12 @@ class RandomActionBuilder(ActionBuilder):
 
     def get_sequence_class(self):
         return RandomSequenceCommand
+
+    def get_prompt_alternating_class(self):
+        return lambda tokens : RandomSequenceCommand(tokens, separator="")
+
+    def get_prompt_editing_class(self):
+        return lambda tokens : RandomSequenceCommand(tokens, separator="")
 
 
 class RandomGenerator:
