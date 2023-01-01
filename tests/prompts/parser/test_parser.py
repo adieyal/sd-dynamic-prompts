@@ -239,11 +239,11 @@ class TestParser:
         assert variant.max_bound == 2
         assert variant.sep == " and "
 
-    def test_prompt_editing(self, parser: Parser):
-        prompt_editing = parser._configure_prompt_editing()
-        assert prompt_editing.parse_string("[start prompt|end prompt]")[0] == "[start prompt|end prompt]"
+    def test_prompt_alternating_words(self, parser: Parser):
+        prompt_alternating_words = parser._configure_prompt_alternating_words()
+        assert prompt_alternating_words.parse_string("[start prompt|end prompt]")[0] == "[start prompt|end prompt]"
         with pytest.raises(ParseException):
-            prompt_editing.parse_string("[start prompt|end prompt")
+            prompt_alternating_words.parse_string("[start prompt|end prompt")
 
         sequence = parser.parse("[start prompt|end prompt]")
         assert len(sequence) == 1
@@ -262,6 +262,39 @@ class TestParser:
 
         assert type(variant[1][0] == LiteralCommand)
         assert variant[1][0] == "[start prompt|end prompt]"
+
+    def test_prompt_editing(self, parser: Parser):
+        prompt_editing = parser._configure_prompt_editing()
+        prompt = "[start:end:0.25]"
+        assert prompt_editing.parse_string(prompt)[0] == prompt 
+
+        prompt = "[start:end:2]"
+        assert prompt_editing.parse_string(prompt)[0] == prompt 
+
+        prompt = "[start:end:2.]"
+        assert prompt_editing.parse_string(prompt)[0] == prompt 
+
+        prompt = "[start:end:.2]"
+        assert prompt_editing.parse_string(prompt)[0] == prompt 
+
+        sequence = parser.parse("[start prompt:end prompt:0.25]")
+        assert len(sequence) == 1
+
+        prompt = "[start prompt:end prompt:0.25]"
+        assert type(sequence[0]) == LiteralCommand
+        assert sequence[0] == prompt
+
+        sequence = parser.parse(f"{{option1|{prompt}}}")
+        assert len(sequence) == 1
+        assert type(sequence[0]) == VariantCommand
+        variant = cast(VariantCommand, sequence[0])
+
+        assert len(variant) == 2
+        assert type(variant[0][0]) == LiteralCommand
+        assert variant[0][0] == "option1"
+
+        assert type(variant[1][0] == LiteralCommand)
+        assert variant[1][0] == prompt
 
         
     def test_comments(self, parser: Parser):

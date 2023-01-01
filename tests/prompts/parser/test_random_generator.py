@@ -316,3 +316,17 @@ class TestRandomGenerator:
                 assert len(prompts) == 2
                 assert prompts[0] == "A red square"
                 assert prompts[1] == "A green circle"
+
+    def test_prompt_editing(self, generator: RandomGenerator):
+        prompts = [
+            "A [start prompt:end prompt:0.25] example",
+            "A [start prompt|end prompt|0.25] example",
+        ]
+
+        for p in prompts:
+            new_prompts = generator.generate_prompts(p, 2)
+            assert len(new_prompts) == 2
+            assert new_prompts[0] == p
+        
+
+            

@@ -180,12 +180,15 @@ class TestWildcardsCommand:
         with mock.patch.object(
             wildcard_manager, "get_all_values", return_value=["red", "green", "blue"]
         ):
-            command = CombinatorialWildcardCommand(wildcard_manager, "colours")
+            command = CombinatorialWildcardCommand(wildcard_manager, ["colours"])
             prompts = list(command.prompts())
             assert len(prompts) == 3
             assert prompts[0] == "red"
             assert prompts[1] == "green"
             assert prompts[2] == "blue"
+
+            wildcard_manager.get_all_values.assert_called_once_with("colours")
+
             
 
     def test_wildcard_with_literal(self, wildcard_manager):
@@ -380,3 +383,14 @@ class TestCombinatorialGenerator:
             assert prompts[9] == "black,red"
             assert prompts[10] == "black,green"
             assert prompts[11] == "black,blue"
+
+    def test_prompt_editing(self, generator: CombinatorialGenerator):
+        prompts = [
+            "A [start prompt:end prompt:0.25] example",
+            "A [start prompt|end prompt|0.25] example",
+        ]
+
+        for p in prompts:
+            new_prompts = list(generator.generate_prompts(p, 2))
+            assert len(new_prompts) == 1
+            assert new_prompts[0] == p

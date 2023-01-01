@@ -85,19 +85,36 @@ class Parser:
         non_literal_chars = r"{}|$\[\]"
         wildcard_enclosure = pp.Suppress("__")
 
+        prompt_alternating = self._configure_prompt_alternating_words()
         prompt_editing = self._configure_prompt_editing()
+
         literal = pp.Regex(rf"[^{non_literal_chars}\s]+")("literal")
         literal_sequence = (pp.OneOrMore(~wildcard_enclosure + literal))("literal_sequence")
 
-        return prompt_editing | literal_sequence
+        return prompt_alternating | prompt_editing | literal_sequence
 
-    def _configure_prompt_editing(self):
+    def _configure_prompt_alternating_words(self):
         left_bracket, right_bracket = map(pp.Word, "[]")
         pipe = pp.Word("|")
         chars = pp.Regex(r"[^\]|]*")
 
-        prompt_editing = left_bracket + chars + pp.OneOrMore(pipe + chars) + right_bracket
-        return prompt_editing.set_parse_action(lambda s, loc, token: "".join(token))
+        prompt_alternating = left_bracket + chars + pp.OneOrMore(pipe + chars) + right_bracket
+        return prompt_alternating.set_parse_action(lambda s, loc, token: "".join(token))
+
+    def _configure_prompt_editing(self):
+        left_bracket, right_bracket = map(pp.Word, "[]")
+        colon = pp.Word(":")
+        chars = pp.Regex(r"[^\]:]*")
+        num1 = pp.Word(pp.nums) + "." + pp.Word(pp.nums)
+        num2 = pp.Word(pp.nums) + pp.Optional(".")
+        num3 = pp.Optional(".") + pp.Word(pp.nums)
+
+        num = num1 | num2 | num3
+
+        prompt_editing = left_bracket + chars + colon + chars + colon + num + right_bracket
+        pe = prompt_editing.set_parse_action(lambda s, loc, token: "".join(token))
+        
+        return pe
 
 
     def _configure_weight(self):

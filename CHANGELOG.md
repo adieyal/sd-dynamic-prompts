@@ -1,3 +1,4 @@
+- 1.5.7 Added passthru support for prompt editing (i.e. `[a:b:when]` remains unchanged). A future release will enable variable components, e.g. `[__colours__:__colours:4]`
 - 1.5.6 Added various materials to the jumbo collection
 - 1.5.5 Fixed resolving nested prompts in wildcard files in random generator
 - 1.5.4 Fixed parsing bug with non ascii characters
