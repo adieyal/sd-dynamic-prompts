@@ -17,6 +17,8 @@ class Command:
 
     def get_prompt(self) -> str:
         prompts = list(self.prompts())
+        if len(prompts) == 0:
+            return ""
         return prompts[0]
 
 class SequenceCommand(Command):

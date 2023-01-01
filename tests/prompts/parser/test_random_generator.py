@@ -263,6 +263,20 @@ class TestRandomGenerator:
             for prompt, choice in zip(prompts, random_choices):
                 assert prompt == f"A red {choice[0][0]}"
 
+    def test_variant_with_blank(self, generator: RandomGenerator):
+        with mock.patch("prompts.parser.random_generator.random") as mock_random:
+            mock_random.choices.side_effect = [
+                [RandomSequenceCommand([])],
+                [to_seqlit("red")],
+                [to_seqlit("blue")]
+            ]
+            prompts = generator.generate_prompts("A {|red|blue} rose", 3)
+        
+            assert len(prompts) == 3
+            assert prompts[0] == "A rose"
+            assert prompts[1] == "A red rose"
+            assert prompts[2] == "A blue rose"
+
     def test_variants_with_bounds(self, generator: RandomGenerator):
         shapes = [to_seqlit("square"), to_seqlit("circle")]
         with mock.patch("prompts.parser.random_generator.random") as mock_random:

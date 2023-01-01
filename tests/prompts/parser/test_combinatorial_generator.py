@@ -297,6 +297,13 @@ class TestCombinatorialGenerator:
         assert len(prompts) == 2
         assert prompts[0] == "A red square"
         assert prompts[1] == "A red circle"
+
+    def test_variant_with_blank(self, generator: CombinatorialGenerator):
+        prompts = generator.generate_prompts("A {|red|blue} rose", 3)
+        assert len(prompts) == 3
+        assert prompts[0] == "A rose"
+        assert prompts[1] == "A red rose"
+        assert prompts[2] == "A blue rose"
         
 
     def test_two_variants(self, generator: CombinatorialGenerator):
