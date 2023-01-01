@@ -1,3 +1,4 @@
+- 1.5.11 Added a list of occupations to the jumbo collection
 - 1.5.10 Parser now correctly ignores `[low emphasis]` square brackets
 - 1.5.9 Fixed attention grabber sliders
 - 1.5.8 Both prompt editing (`[a:b:when]`) and prompt alternating (`[a|b]`) can now nest arbitrary prompts, e.g. `A [__colours__:{pink|yellow}] rose`
