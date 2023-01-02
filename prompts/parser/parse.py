@@ -14,6 +14,8 @@ real_num3 = pp.Combine("." + pp.Word(pp.nums))
 real_num4 = pp.Word(pp.nums)
 
 real_num = real_num1 | real_num2 | real_num3 | real_num4
+double_underscore = "__"
+wildcard_enclosure = pp.Suppress(double_underscore)
 
 def parse_bound_expr(expr, max_options):
     lbound = 1
@@ -131,72 +133,75 @@ class Parser:
         return bound_expr
 
     def _configure_wildcard(self):
-        wildcard_enclosure = pp.Suppress("__")
-        wildcard = (wildcard_enclosure + ... + wildcard_enclosure)("wildcard")
+        wildcard = (wildcard_enclosure + ... + wildcard_enclosure)
 
-        return wildcard
+        return wildcard("wildcard")
+
 
     def _configure_literal_sequence(self):
         non_literal_chars = r"{}|$"
-        wildcard_enclosure = pp.Suppress("__")
+        
+        # using pyparsing match all characters but stopping if a double underscore is reached
+         
 
-        literal = pp.Regex(rf"[^{non_literal_chars}\s]+")("literal")
+        literal = pp.Regex(rf"((?!{double_underscore})[^{non_literal_chars}\s])+")("literal")
         # literal_sequence = pp.Forward()
 
-        literal_sequence1 = pp.OneOrMore(~wildcard_enclosure + literal)
-        literal_sequence_square = pp.Word("[") + literal_sequence1 + pp.Word("]")
-        literal_sequence_round = pp.Word("(") + literal_sequence1 + pp.Word(")")
-        literal_sequence_round2 = pp.Word("(") + literal_sequence1 + pp.Word(":") + real_num + pp.Word(")")
+        literal_sequence1 = pp.OneOrMore(literal) 
+        # literal_sequence1 = pp.OneOrMore(~wildcard_enclosure + literal) 
+        # literal_sequence_square = pp.Word("[") + literal_sequence1 + pp.Word("]")
+        # literal_sequence_round = pp.Word("(") + literal_sequence1 + pp.Word(")")
+        # literal_sequence_round2 = pp.Word("(") + literal_sequence1 + pp.Word(":") + real_num + pp.Word(")")
 
-        def join_literal_sequence(s, l, tokens):
-            chars = "[]():"
-            s = " ".join([str(t) for t in tokens])
-            for c in chars:
-                s = s.replace(f" {c}", c)
-                s = s.replace(f"{c} ", c)
+        # def join_literal_sequence(s, l, tokens):
+        #     chars = "[]():"
+        #     s = " ".join([str(t) for t in tokens])
+        #     for c in chars:
+        #         s = s.replace(f" {c}", c)
+        #         s = s.replace(f"{c} ", c)
 
-            return s
+        #     return s
 
-        literal_sequence_square = literal_sequence_square.set_parse_action(join_literal_sequence)
-        literal_sequence_round = literal_sequence_round.set_parse_action(join_literal_sequence)
-        literal_sequence_round2 = literal_sequence_round2.set_parse_action(join_literal_sequence)
+        # literal_sequence_square = literal_sequence_square.set_parse_action(join_literal_sequence)
+        # literal_sequence_round = literal_sequence_round.set_parse_action(join_literal_sequence)
+        # literal_sequence_round2 = literal_sequence_round2.set_parse_action(join_literal_sequence)
         
         # literal_sequence = pp.OneOrMore(literal_sequence1 | literal_sequence_square | literal_sequence_round | literal_sequence_round2)
         literal_sequence = literal_sequence1
         
         return  literal_sequence("literal_sequence")
 
-    def _configure_extra(self, prompt):
-        prompt_alternating = self._configure_prompt_alternating_words(prompt)
-        prompt_editing = self._configure_prompt_editing(prompt)
-        return  prompt_editing | prompt_alternating
+    # def _configure_extra(self, prompt):
+    #     prompt_alternating = self._configure_prompt_alternating_words(prompt)
+    #     prompt_editing = self._configure_prompt_editing(prompt)
+    #     return  prompt_editing | prompt_alternating
 
-    def _configure_prompt_alternating_words(self, prompt):
-        left_bracket, right_bracket = map(pp.Word, "[]")
-        pipe = pp.Word("|")
-        chars = pp.Regex(r"[^\]|]*")
+    # def _configure_prompt_alternating_words(self, prompt):
+    #     left_bracket, right_bracket = map(pp.Word, "[]")
+    #     pipe = pp.Word("|")
+    #     chars = pp.Regex(r"[^\]|]*")
 
-        literals = [left_bracket, right_bracket, pipe]
-        for l in literals:
-            l.set_parse_action(self._builder.get_literal_action)
+    #     literals = [left_bracket, right_bracket, pipe]
+    #     for l in literals:
+    #         l.set_parse_action(self._builder.get_literal_action)
 
-        prompt_alternating = left_bracket + prompt + pp.OneOrMore(pipe + prompt) + right_bracket
-        pa =  prompt_alternating.set_parse_action(self._builder.get_prompt_alternating_action())
+    #     prompt_alternating = left_bracket + prompt + pp.OneOrMore(pipe + prompt) + right_bracket
+    #     pa =  prompt_alternating.set_parse_action(self._builder.get_prompt_alternating_action())
 
-        return pa
+    #     return pa
 
-    def _configure_prompt_editing(self, prompt):
-        left_bracket, right_bracket = map(pp.Word, "[]")
-        colon = pp.Word(":")
+    # def _configure_prompt_editing(self, prompt):
+    #     left_bracket, right_bracket = map(pp.Word, "[]")
+    #     colon = pp.Word(":")
 
-        literals = [left_bracket, right_bracket, colon, real_num]
-        for l in literals:
-            l.set_parse_action(self._builder.get_literal_action)
+    #     literals = [left_bracket, right_bracket, colon, real_num]
+    #     for l in literals:
+    #         l.set_parse_action(self._builder.get_literal_action)
 
-        prompt_editing = left_bracket + prompt + colon + prompt + colon + real_num + right_bracket
-        pe = prompt_editing.set_parse_action(self._builder.get_prompt_editing_action())
+    #     prompt_editing = left_bracket + prompt + colon + prompt + colon + real_num + right_bracket
+    #     pe = prompt_editing.set_parse_action(self._builder.get_prompt_editing_action())
         
-        return pe
+    #     return pe
 
 
     def _configure_weight(self):
@@ -231,14 +236,13 @@ class Parser:
         wildcard = self._configure_wildcard()
         literal_sequence = self._configure_literal_sequence()
         variants = self._configure_variants(literal_sequence, bound_expr, prompt)
-        extras = self._configure_extra(prompt)
+        #extras = self._configure_extra(prompt)
         
-        chunk = (extras | variants | wildcard | literal_sequence)
+        chunk = (variants | wildcard | literal_sequence)
+        # chunk = (extras | variants | wildcard | literal_sequence)
 
         prompt <<= pp.ZeroOrMore(chunk)("prompt")
-        
         self._enable_comments(prompt)
-
         wildcard.set_parse_action(builder.get_wildcard_action)
         variants.set_parse_action(builder.get_variant_action)
         literal_sequence.set_parse_action(builder.get_literal_action)

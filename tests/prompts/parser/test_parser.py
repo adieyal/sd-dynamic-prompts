@@ -93,6 +93,20 @@ class TestParser:
         wildcard_command = cast(WildcardCommand, sequence[0])
         assert wildcard_command.wildcard == "änder"
 
+    def test_wildcard_adjactent_to_literal(self, parser: Parser):
+        sequence = parser.parse(",__colours__")
+        
+        assert len(sequence) == 2
+        assert sequence[0] == ","
+        wildcard_command = cast(WildcardCommand, sequence[1])
+        assert wildcard_command.wildcard == "colours"
+
+        sequence = parser.parse("__colours__ world")
+        assert len(sequence) == 2
+        wildcard_command = cast(WildcardCommand, sequence[0])
+        assert wildcard_command.wildcard == "colours"
+        assert sequence[1] == "world"
+
     def test_weight(self, parser: Parser):
         weight = parser._configure_weight()
         with pytest.raises(ParseException):
