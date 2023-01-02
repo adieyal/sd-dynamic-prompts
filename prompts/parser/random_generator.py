@@ -114,7 +114,7 @@ class RandomGenerator:
 
         parser = self.configure_parser()
         tokens = parser.parse_string(prompt)
-        tokens = cast(list[Command], tokens)
+        # tokens = cast(list[Command], tokens)
 
         squash_whitespace = lambda s: " ".join(s.split())
 
