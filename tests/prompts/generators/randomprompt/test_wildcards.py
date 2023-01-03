@@ -54,3 +54,9 @@ class TestWildcards:
                     prompt = generator.generate_prompt(generator._template)
                     assert prompt == "I love blue circle"
 
+    def test_missing_wildcard(self, generator: RandomPromptGenerator):
+        generator._template = "An __invalid__ wildcard"
+        prompts = generator.generate(10)
+        assert len(prompts) == 10
+        assert prompts[0] == "An __invalid__ wildcard"
+

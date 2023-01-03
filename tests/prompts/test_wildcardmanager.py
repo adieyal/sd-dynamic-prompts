@@ -24,3 +24,12 @@ class TestWildcardManager:
 
             wm = WildcardManager(Path("test_data/wildcards"))
             assert wm.get_all_values("test") == ["blue", "green", "red"]
+
+    def test_match_files_with_missing_wildcard(self):
+        wm = WildcardManager(Path("test_data/wildcards"))
+        assert wm.match_files("__invalid_wildcard__") == []
+
+    def test_get_all_values_with_missing_wildcard(self):
+        wm = WildcardManager(Path("test_data/wildcards"))
+        assert wm.get_all_values("__invalid_wildcard__") == []
+    

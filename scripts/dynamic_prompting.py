@@ -49,7 +49,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "1.5.16"
+VERSION = "1.5.17"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)

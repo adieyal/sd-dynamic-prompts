@@ -1,11 +1,13 @@
 from __future__ import annotations
 
 import random
+import logging
 from typing import cast, Iterable
 
 from .parse import Parser, ActionBuilder
 from .commands import SequenceCommand, Command, LiteralCommand, VariantCommand, WildcardCommand
 
+logger = logging.getLogger(__name__)
 
 class RandomSequenceCommand(SequenceCommand):
     def __init__(self, tokens: list[Command] | None = None, separator=" "):
@@ -29,6 +31,9 @@ class RandomWildcardCommand(Command):
     def prompts(self) -> Iterable[str]:
         generator = RandomGenerator(self._wildcard_manager)
         values = self._wildcard_manager.get_all_values(self._wildcard)
+        if len(values) == 0:
+            logger.warning(f"No values for wildcard {self._wildcard}")
+            return [f"__{self._wildcard}__"]
         val = random.choice(values)
         prompts = generator.generate_prompts(val, 1)
 
