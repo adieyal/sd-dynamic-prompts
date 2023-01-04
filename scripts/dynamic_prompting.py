@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 import logging
 from string import Template
 from pathlib import Path
@@ -51,7 +52,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "2.0.0"
+VERSION = "2.0.1"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)

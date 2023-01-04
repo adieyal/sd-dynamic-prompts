@@ -13,7 +13,8 @@ import launch
 
 
 def ensure_version(package, version):
-    if isinstalled := launch.is_installed(package):
+    isinstalled = launch.is_installed(package)
+    if isinstalled:
         installed_version = importlib_metadata.version(package)
 
         if installed_version == version:

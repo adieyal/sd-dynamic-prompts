@@ -1,12 +1,12 @@
 from __future__ import annotations
-from typing import Any
+from typing import Any, Dict, List
 from dynamicprompts.wildcardmanager import WildcardManager
 
 class UiCreation:
     def __init__(self, wildcard_manager: WildcardManager):
         self._wildcard_manager = wildcard_manager
 
-    def write(self, wildcards: list[str], hierarchy: dict[str, Any]) -> str:
+    def write(self, wildcards: List[str], hierarchy: Dict[str, Any]) -> str:
         html = ""
         for wildcard in wildcards:
             html += f"""<p class="wildcard">{wildcard}</p>"""

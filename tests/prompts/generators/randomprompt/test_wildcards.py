@@ -1,5 +1,5 @@
 from __future__ import annotations
-
+from typing import List
 from unittest import mock
 
 import pytest
@@ -7,17 +7,17 @@ import pytest
 from prompts.generators.randomprompt import RandomPromptGenerator
 
 @pytest.fixture
-def colours() -> list[str]:
+def colours() -> List[str]:
     return ["red", "green", "blue"]
 
 @pytest.fixture
-def shapes() -> list[str]:
+def shapes() -> List[str]:
     return ["square", "circle", "triangle"]
 
 @pytest.fixture
-def mock_get_all_values(generator: RandomPromptGenerator, colours: list[str], shapes: list[str]):
+def mock_get_all_values(generator: RandomPromptGenerator, colours: List[str], shapes: List[str]):
     def _ctx():
-        def get_all_values(wildcard: str) -> list[str]:
+        def get_all_values(wildcard: str) -> List[str]:
             wildcard = wildcard.strip("_")
             if wildcard == "colours":
                 return colours

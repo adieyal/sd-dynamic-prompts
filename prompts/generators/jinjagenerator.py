@@ -1,4 +1,6 @@
 from __future__ import annotations
+from typing import List
+
 import logging
 import random
 from itertools import permutations
@@ -107,7 +109,7 @@ class JinjaGenerator(PromptGenerator):
             self._context = {}
 
 
-    def generate(self, num_prompts=1) -> list[str]:
+    def generate(self, num_prompts=1) -> List[str]:
         try:
             env = Environment(
                 extensions=[RandomExtension, PromptExtension, WildcardExtension, PermutationExtension]

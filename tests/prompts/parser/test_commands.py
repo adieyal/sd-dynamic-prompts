@@ -1,4 +1,5 @@
 from unittest import mock
+from typing import List
 from prompts.parser.commands import SequenceCommand, LiteralCommand, VariantCommand, Command, WildcardCommand
 import pytest
 
@@ -6,21 +7,21 @@ def gen_variant(vals):
     return [{"weight": [1], "val": LiteralCommand(v)} for v in vals]
 
 @pytest.fixture
-def literals() -> list[LiteralCommand]:
+def literals() -> List[LiteralCommand]:
     return [LiteralCommand("hello"), LiteralCommand("world")]
 
 
 class TestSequence:
-    def test_length(self, literals: list[Command]):
+    def test_length(self, literals: List[Command]):
         sequence = SequenceCommand(literals)
         assert len(sequence) == 2
 
-    def test_getitem(self, literals: list[Command]):
+    def test_getitem(self, literals: List[Command]):
         sequence = SequenceCommand(literals)
         assert sequence[0] == literals[0]
         assert sequence[1] == literals[1]
 
-    def test_equality(self, literals: list[Command]):
+    def test_equality(self, literals: List[Command]):
         sequence = SequenceCommand(literals)
         assert sequence == literals
 
@@ -28,7 +29,7 @@ class TestSequence:
 class TestLiteral:
     def test_prompts(self):
         command = LiteralCommand("test")
-        prompts = list(command.prompts())
+        prompts = List(command.prompts())
         assert len(prompts) == 1
         assert prompts[0] == "test"
 
@@ -51,11 +52,11 @@ class TestLiteral:
 
 
 class TestVariant:
-    def test_length(self, literals: list[LiteralCommand]):
+    def test_length(self, literals: List[LiteralCommand]):
         variant_command = VariantCommand(literals)
         assert len(variant_command) == 2
 
-    def test_getitem(self, literals: list[LiteralCommand]):
+    def test_getitem(self, literals: List[LiteralCommand]):
         variant_command = VariantCommand(literals)
         assert variant_command[0] == literals[0]
         assert variant_command[1] == literals[1]
