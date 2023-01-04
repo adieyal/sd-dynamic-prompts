@@ -1,3 +1,4 @@
+- 2.0.0 Migrated to using the dynamicprompts library
 - 1.5.17 Better handling of missing `__wildcard__` files
 - 1.5.16 Fixed issue cause by literals adjacent to wildcards, e.g. ,`__colours__` or `(__colours__)`
 - 1.5.15 Reverted prompt-editing and alternate words parsing as it was causing way too many other issues. 
