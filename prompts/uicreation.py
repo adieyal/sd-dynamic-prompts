@@ -1,6 +1,6 @@
 from __future__ import annotations
 from typing import Any
-from .wildcardmanager import WildcardManager
+from dynamicprompts.wildcardmanager import WildcardManager
 
 class UiCreation:
     def __init__(self, wildcard_manager: WildcardManager):

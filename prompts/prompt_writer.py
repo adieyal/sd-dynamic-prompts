@@ -2,7 +2,7 @@ from __future__ import annotations
 from pathlib import Path
 import csv
 
-from prompts import constants
+from dynamicprompts import constants
 
 
 def write_prompts(

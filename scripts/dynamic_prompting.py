@@ -10,13 +10,13 @@ import gradio as gr
 import modules.scripts as scripts
 from modules.processing import process_images, fix_seed, Processed
 from modules.shared import opts
+from modules.devices import get_optimal_device
 
-from prompts.wildcardmanager import WildcardManager
+from dynamicprompts.wildcardmanager import WildcardManager
 from prompts.uicreation import UiCreation
-from prompts.generators import (
+from dynamicprompts.generators import (
     RandomPromptGenerator,
     CombinatorialPromptGenerator,
-    MagicPromptGenerator,
     BatchedCombinatorialPromptGenerator,
     PromptGenerator,
     FeelingLuckyGenerator,
@@ -24,9 +24,11 @@ from prompts.generators import (
     AttentionGenerator,
 )
 
+from dynamicprompts.generators.magicprompt import MagicPromptGenerator
+
 from prompts.generators.jinjagenerator import JinjaGenerator
-from prompts.generators.promptgenerator import GeneratorException
-from prompts import constants
+from dynamicprompts.generators.promptgenerator import GeneratorException
+from dynamicprompts import constants
 from prompts.utils import slugify, get_unique_path
 from prompts import prompt_writer
 from ui import wildcards_tab
@@ -54,25 +56,23 @@ VERSION = "1.5.17"
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
 wildcards_tab.initialize(wildcard_manager)
+device = 0 if get_optimal_device() == "cuda" else -1
 
 
 def old_generation(
-    original_prompt: str,
     is_combinatorial: bool,
     combinatorial_batches: int,
     original_seed: int,
     unlink_seed_from_prompt: bool = False,
 ) -> PromptGenerator:
     if is_combinatorial:
-        prompt_generator = CombinatorialPromptGenerator(
-            wildcard_manager, original_prompt
-        )
+        prompt_generator = CombinatorialPromptGenerator(wildcard_manager)
         prompt_generator = BatchedCombinatorialPromptGenerator(
             prompt_generator, combinatorial_batches
         )
     else:
         prompt_generator = RandomPromptGenerator(
-            wildcard_manager, original_prompt, original_seed, unlink_seed_from_prompt
+            wildcard_manager, original_seed, unlink_seed_from_prompt
         )
 
     return prompt_generator
@@ -83,7 +83,7 @@ def new_generation(prompt, p) -> PromptGenerator:
         "model": {
             "filename": p.sd_model.sd_checkpoint_info.filename,
             "title": p.sd_model.sd_checkpoint_info.title,
-            "hash": p.sd_model.sd_checkpoint_info.hash,  
+            "hash": p.sd_model.sd_checkpoint_info.hash,
             "model_name": p.sd_model.sd_checkpoint_info.model_name,
         },
         "image": {
@@ -103,11 +103,12 @@ def new_generation(prompt, p) -> PromptGenerator:
         "prompt": {
             "prompt": prompt,
             "negative_prompt": p.negative_prompt,
-        }
+        },
     }
 
     generator = JinjaGenerator(prompt, wildcard_manager, context)
     return generator
+
 
 class Script(scripts.Script):
     def _create_generator(
@@ -149,14 +150,13 @@ class Script(scripts.Script):
         )
 
         if is_dummy:
-            return DummyGenerator(original_prompt)
+            return DummyGenerator()
         elif is_feeling_lucky:
-            generator = FeelingLuckyGenerator(original_prompt)
+            generator = FeelingLuckyGenerator()
         elif enable_jinja_templates:
             generator = new_generation(original_prompt, self._p)
         else:
             generator = old_generation(
-                original_prompt,
                 is_combinatorial,
                 combinatorial_batches,
                 original_seed,
@@ -165,11 +165,17 @@ class Script(scripts.Script):
 
         if is_magic_prompt:
             generator = MagicPromptGenerator(
-                generator, magic_prompt_length, magic_temp_value, seed=original_seed
+                generator,
+                device,
+                magic_prompt_length,
+                magic_temp_value,
+                seed=original_seed,
             )
 
         if is_attention_grabber:
-            generator = AttentionGenerator(generator, min_attention=min_attention, max_attention=max_attention)
+            generator = AttentionGenerator(
+                generator, min_attention=min_attention, max_attention=max_attention
+            )
         return generator
 
     def title(self):
@@ -240,7 +246,6 @@ class Script(scripts.Script):
                         elem_id="is-feelinglucky",
                     )
 
-                with gr.Group():
                     is_attention_grabber = gr.Checkbox(
                         label="Attention grabber",
                         value=False,
@@ -350,7 +355,7 @@ class Script(scripts.Script):
         if not is_enabled:
             logger.debug("Dynamic prompts disabled - exiting")
             return p
-        
+
         self._p = p
 
         fix_seed(p)
@@ -409,8 +414,10 @@ class Script(scripts.Script):
                 unlink_seed_from_prompt=unlink_seed_from_prompt,
             )
 
-            all_prompts = generator.generate(num_images)
-            all_negative_prompts = negative_prompt_generator.generate(num_images)
+            all_prompts = generator.generate(original_prompt, num_images)
+            all_negative_prompts = negative_prompt_generator.generate(
+                original_negative_prompt, num_images
+            )
             total_prompts = len(all_prompts)
 
             if len(all_negative_prompts) < total_prompts:
@@ -441,12 +448,18 @@ class Script(scripts.Script):
         )
 
         try:
-            
+
             if write_prompts:
                 prompt_filename = get_unique_path(
                     Path(p.outpath_samples), slugify(original_prompt), suffix="csv"
                 )
-                prompt_writer.write_prompts(prompt_filename, original_prompt, original_negative_prompt, all_prompts, all_negative_prompts)
+                prompt_writer.write_prompts(
+                    prompt_filename,
+                    original_prompt,
+                    original_negative_prompt,
+                    all_prompts,
+                    all_negative_prompts,
+                )
         except Exception as e:
             logger.error(f"Failed to write prompts to file: {e}")
 
