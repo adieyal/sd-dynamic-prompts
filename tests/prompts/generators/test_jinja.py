@@ -1,9 +1,10 @@
 import pytest
+
 from unittest.mock import patch
 from pathlib import Path
 from prompts.generators.jinjagenerator import JinjaGenerator
-from prompts.wildcardmanager import WildcardManager
-from prompts.generators.promptgenerator import GeneratorException
+from dynamicprompts.wildcardmanager import WildcardManager
+from dynamicprompts.generators.promptgenerator import GeneratorException
 
 @pytest.fixture
 def wildcard_manager():
@@ -93,7 +94,7 @@ class TestJinjaGenerator:
         {% endfor %}
         """
 
-        with patch('prompts.wildcardmanager.WildcardManager.get_all_values') as mock_values:
+        with patch('dynamicprompts.wildcardmanager.WildcardManager.get_all_values') as mock_values:
             mock_values.return_value = ["pink", "yellow", "black", "purple"]
             generator = JinjaGenerator(template, wildcard_manager)
             prompts = generator.generate()
@@ -111,7 +112,7 @@ class TestJinjaGenerator:
         {% endfor %}
         """
 
-        with patch('prompts.wildcardmanager.WildcardManager.get_all_values') as mock_values:
+        with patch('dynamicprompts.wildcardmanager.WildcardManager.get_all_values') as mock_values:
             mock_values.side_effect = (
                 ["pink", "yellow", "__blacks__", "purple"],
                 ["black", "grey"]
@@ -134,7 +135,7 @@ class TestJinjaGenerator:
         {% endfor %}
         """
 
-        with patch('prompts.wildcardmanager.WildcardManager.get_all_values') as mock_values:
+        with patch('dynamicprompts.wildcardmanager.WildcardManager.get_all_values') as mock_values:
             mock_values.side_effect = (
                 ["pink", "yellow", "__blacks__", "purple"],
                 ["black", "__greys__"],
@@ -160,7 +161,7 @@ class TestJinjaGenerator:
         {% endfor %}
         """
 
-        with patch('prompts.wildcardmanager.WildcardManager.get_all_values') as mock_values:
+        with patch('dynamicprompts.wildcardmanager.WildcardManager.get_all_values') as mock_values:
             mock_values.side_effect = (
                 ["pink", "yellow", "{white|black}", "purple"],
             )
@@ -182,7 +183,7 @@ class TestJinjaGenerator:
         {% prompt %}My favourite colour is {{ choice(wildcard("__colours__")) }}{% endprompt %}
         """
 
-        with patch('prompts.wildcardmanager.WildcardManager.get_all_values') as mock_values:
+        with patch('dynamicprompts.wildcardmanager.WildcardManager.get_all_values') as mock_values:
             mock_values.return_value = ["pink", "yellow", "black", "purple"]
 
             with patch('random.choice') as mock_choice:
