@@ -1,6 +1,6 @@
-import os
 import sys
 import logging
+from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
@@ -11,12 +11,15 @@ else:
 
 import launch
 
+def ensure_installed(package):
+    isinstalled = launch.is_installed(package)
+    if not isinstalled:
+        launch.run_pip(f"install {package}", desc=f"{package}")
 
 def ensure_version(package, version):
     isinstalled = launch.is_installed(package)
     if isinstalled:
         installed_version = importlib_metadata.version(package)
-
         if installed_version == version:
             return
 
@@ -24,17 +27,21 @@ def ensure_version(package, version):
 
 
 def check_versions():
-    req_file = os.path.join(
-        os.path.dirname(os.path.realpath(__file__)), "requirements.txt"
-    )
+    
+    req_file = Path(__file__).parent / "requirements.txt"
     for row in open(req_file):
         splits = row.split("==")
         try:
-            if len(splits) == 2:
+            if "dynamicprompts" in row:
+                launch.run_pip(f"install -U {row}", desc=row)
+            elif len(splits) == 2:
                 package = splits[0].strip()
                 version = splits[1].strip()
 
                 ensure_version(package, version)
+            else:
+                package = row.strip()
+                ensure_installed(package)
         except Exception as e:
             logger.exception(e)
 

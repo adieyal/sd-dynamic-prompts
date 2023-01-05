@@ -22,10 +22,10 @@ from dynamicprompts.generators import (
     PromptGenerator,
     FeelingLuckyGenerator,
     DummyGenerator,
-    AttentionGenerator,
 )
 
 from dynamicprompts.generators.magicprompt import MagicPromptGenerator
+from dynamicprompts.generators.attentiongenerator import AttentionGenerator
 
 from prompts.generators.jinjagenerator import JinjaGenerator
 from dynamicprompts.generators.promptgenerator import GeneratorException
@@ -52,7 +52,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "2.0.2"
+VERSION = "2.0.3"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
