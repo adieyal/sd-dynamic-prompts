@@ -1,3 +1,4 @@
+- 2.0.3 Changed dependencies, now automatically upgrades the dynamicprompts version if available. Also fixed a bug where AttentionGenerator was being imported from dynamicprompts.generators instead of dynamicprompts.generators.attentiongenerator. The new version 0.1.18 of dynamicprompts removes an explicit dependency on pytorch and relies on the version that is installed with the webui. This avoids an unpleasant 1.8GB download.
 - 2.0.2 Bumped dynamicprompts version to 0.1.17. This fixes alternative word syntax, i.e. `[cat|dog]`. The `|` character is now only reserved inside variants `{a|b|c}`
 - 2.0.1 Using classes from the typing package for python 3.7 support
 - 2.0.0 Migrated to using the dynamicprompts library
