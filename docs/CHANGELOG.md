@@ -1,3 +1,4 @@
+- 2.0.2 Bumped dynamicprompts version to 0.1.17. This fixes alternative word syntax, i.e. `[cat|dog]`. The `|` character is now only reserved inside variants `{a|b|c}`
 - 2.0.1 Using classes from the typing package for python 3.7 support
 - 2.0.0 Migrated to using the dynamicprompts library
 - 1.5.17 Better handling of missing `__wildcard__` files
