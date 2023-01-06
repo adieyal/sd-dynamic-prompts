@@ -27,7 +27,7 @@ from dynamicprompts.generators import (
 from dynamicprompts.generators.magicprompt import MagicPromptGenerator
 from dynamicprompts.generators.attentiongenerator import AttentionGenerator
 
-from prompts.generators.jinjagenerator import JinjaGenerator
+from dynamicprompts.generators.jinjagenerator import JinjaGenerator
 from dynamicprompts.generators.promptgenerator import GeneratorException
 from dynamicprompts import constants
 from prompts.utils import slugify, get_unique_path
@@ -107,7 +107,7 @@ def new_generation(prompt, p) -> PromptGenerator:
         },
     }
 
-    generator = JinjaGenerator(prompt, wildcard_manager, context)
+    generator = JinjaGenerator(wildcard_manager, context)
     return generator
 
 is_warning_printed = False
