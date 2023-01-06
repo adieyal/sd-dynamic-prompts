@@ -1,0 +1,5 @@
+requests
+spacy==3.4.4
+Send2Trash==1.8.0
+pyparsing==3.0.9
+dynamicprompts[attentiongrabber,magicprompt]>=0.1.18

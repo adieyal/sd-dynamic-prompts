@@ -1,16 +1,17 @@
 from __future__ import annotations
+from typing import List
 from pathlib import Path
 import csv
 
-from prompts import constants
+from dynamicprompts import constants
 
 
 def write_prompts(
     path: Path | str,
     positive_prompt: str,
     negative_prompt: str,
-    positive_prompts: list[str],
-    negative_prompts: list[str],
+    positive_prompts: List[str],
+    negative_prompts: List[str],
 ) -> Path:
     path = Path(path)
     with path.open("w", encoding=constants.DEFAULT_ENCODING, errors="ignore") as f:

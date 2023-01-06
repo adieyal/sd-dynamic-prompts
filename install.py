@@ -1,13 +1,49 @@
+import sys
+import logging
+from pathlib import Path
+
+logger = logging.getLogger(__name__)
+
+if sys.version_info < (3, 8):
+    import importlib_metadata
+else:
+    import importlib.metadata as importlib_metadata
+
 import launch
 
-if not launch.is_installed("jinja2"):
-    launch.run_pip("install Jinja2==3.1.2", desc='Jinja2==3.1.2')
-if not launch.is_installed("requests"):
-    launch.run_pip("install requests==2.28.1", desc='requests==2.28.1')
-if not launch.is_installed("spacy"):
-    launch.run_pip("install spacy==3.0.8", desc='spacy==3.0.8')
-    launch.run_pip("install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.4.1/en_core_web_sm-3.4.1.tar.gz", desc='Installing en_core_web_sm==3.4.1')
-if not launch.is_installed("send2trash"):
-    launch.run_pip("install Send2Trash==1.8.0", desc='Send2Trash==1.8.0')
-if not launch.is_installed("pyparsing"):
-    launch.run_pip("install pyparsing==3.0.9", desc='pyparsing==3.0.0')
+def ensure_installed(package):
+    isinstalled = launch.is_installed(package)
+    if not isinstalled:
+        launch.run_pip(f"install {package}", desc=f"{package}")
+
+def ensure_version(package, version):
+    isinstalled = launch.is_installed(package)
+    if isinstalled:
+        installed_version = importlib_metadata.version(package)
+        if installed_version == version:
+            return
+
+    launch.run_pip(f"install {package}=={version}", desc=f"{package}=={version}")
+
+
+def check_versions():
+    
+    req_file = Path(__file__).parent / "requirements.txt"
+    for row in open(req_file):
+        splits = row.split("==")
+        try:
+            if "dynamicprompts" in row:
+                launch.run_pip(f"install -U {row}", desc=row)
+            elif len(splits) == 2:
+                package = splits[0].strip()
+                version = splits[1].strip()
+
+                ensure_version(package, version)
+            else:
+                package = row.strip()
+                ensure_installed(package)
+        except Exception as e:
+            logger.exception(e)
+
+
+check_versions()

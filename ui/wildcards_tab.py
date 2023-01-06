@@ -12,7 +12,7 @@ from glob import glob
 
 from send2trash import send2trash
 
-from prompts.wildcardmanager import WildcardManager
+from dynamicprompts.wildcardmanager import WildcardManager
 
 logger = logging.getLogger(__name__)
 

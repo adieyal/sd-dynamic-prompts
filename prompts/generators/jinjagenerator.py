@@ -1,17 +1,22 @@
 from __future__ import annotations
+from typing import List
+
 import logging
 import random
 from itertools import permutations
+import re
 
 import jinja2.nodes
 from jinja2 import Environment
 from jinja2.exceptions import TemplateSyntaxError
 from jinja2.ext import Extension
 
-from prompts.generators import re_combinations, re_wildcard
-from prompts.generators.promptgenerator import GeneratorException, PromptGenerator
+from dynamicprompts.generators.promptgenerator import GeneratorException, PromptGenerator
 
 logger = logging.getLogger(__name__)
+
+re_wildcard = re.compile(r"__(.*?)__")
+re_combinations = re.compile(r"\{([^{}]*)}")
 
 
 class RandomExtension(Extension):
@@ -104,7 +109,7 @@ class JinjaGenerator(PromptGenerator):
             self._context = {}
 
 
-    def generate(self, num_prompts=1) -> list[str]:
+    def generate(self, num_prompts=1) -> List[str]:
         try:
             env = Environment(
                 extensions=[RandomExtension, PromptExtension, WildcardExtension, PermutationExtension]
