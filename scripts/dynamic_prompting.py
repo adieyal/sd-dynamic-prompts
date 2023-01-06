@@ -110,8 +110,18 @@ def new_generation(prompt, p) -> PromptGenerator:
     generator = JinjaGenerator(prompt, wildcard_manager, context)
     return generator
 
+is_warning_printed = False
 
 class Script(scripts.Script):
+    def __init__(self):
+        global is_warning_printed
+
+        if not is_warning_printed:
+            logger.warning("Dynamic Prompts has been updated to version %s", VERSION)
+            logger.warning("In case of issues, you please report them at https://github.com/adieyal/sd-dynamic-prompts/issues/")
+            logger.warning("If you would like to revert to the previous version, please use the following command: git checkout v1.5.17")
+            is_warning_printed = True
+
     def _create_generator(
         self,
         original_prompt,
