@@ -16,10 +16,6 @@ from modules.devices import get_optimal_device
 from dynamicprompts.wildcardmanager import WildcardManager
 from prompts.uicreation import UiCreation
 from dynamicprompts.generators import (
-    RandomPromptGenerator,
-    CombinatorialPromptGenerator,
-    BatchedCombinatorialPromptGenerator,
-    PromptGenerator,
     FeelingLuckyGenerator,
     DummyGenerator,
 )
@@ -27,11 +23,12 @@ from dynamicprompts.generators import (
 from dynamicprompts.generators.magicprompt import MagicPromptGenerator
 from dynamicprompts.generators.attentiongenerator import AttentionGenerator
 
-from dynamicprompts.generators.jinjagenerator import JinjaGenerator
 from dynamicprompts.generators.promptgenerator import GeneratorException
 from dynamicprompts import constants
 from prompts.utils import slugify, get_unique_path
 from prompts import prompt_writer
+from prompts.generator_builder import GeneratorBuilder
+
 from ui import wildcards_tab
 
 
@@ -59,58 +56,11 @@ wildcard_manager = WildcardManager(WILDCARD_DIR)
 wildcards_tab.initialize(wildcard_manager)
 device = 0 if get_optimal_device() == "cuda" else -1
 
+generator_builder = GeneratorBuilder(wildcard_manager)
 
-def old_generation(
-    is_combinatorial: bool,
-    combinatorial_batches: int,
-    original_seed: int,
-    unlink_seed_from_prompt: bool = False,
-) -> PromptGenerator:
-    if is_combinatorial:
-        prompt_generator = CombinatorialPromptGenerator(wildcard_manager)
-        prompt_generator = BatchedCombinatorialPromptGenerator(
-            prompt_generator, combinatorial_batches
-        )
-    else:
-        prompt_generator = RandomPromptGenerator(
-            wildcard_manager, original_seed, unlink_seed_from_prompt
-        )
-
-    return prompt_generator
-
-
-def new_generation(prompt, p) -> PromptGenerator:
-    context = {
-        "model": {
-            "filename": p.sd_model.sd_checkpoint_info.filename,
-            "title": p.sd_model.sd_checkpoint_info.title,
-            "hash": p.sd_model.sd_checkpoint_info.hash,
-            "model_name": p.sd_model.sd_checkpoint_info.model_name,
-        },
-        "image": {
-            "width": p.width,
-            "height": p.height,
-        },
-        "parameters": {
-            "steps": p.steps,
-            "batch_size": p.batch_size,
-            "num_batches": p.n_iter,
-            "width": p.width,
-            "height": p.height,
-            "cfg_scale": p.cfg_scale,
-            "sampler_name": p.sampler_name,
-            "seed": p.seed,
-        },
-        "prompt": {
-            "prompt": prompt,
-            "negative_prompt": p.negative_prompt,
-        },
-    }
-
-    generator = JinjaGenerator(wildcard_manager, context)
-    return generator
 
 is_warning_printed = False
+
 
 class Script(scripts.Script):
     def __init__(self):
@@ -118,76 +68,14 @@ class Script(scripts.Script):
 
         if not is_warning_printed:
             logger.warning("Dynamic Prompts has been updated to version %s", VERSION)
-            logger.warning("In case of issues, you please report them at https://github.com/adieyal/sd-dynamic-prompts/issues/")
-            logger.warning("If you would like to revert to the previous version, please use the following command: git checkout v1.5.17")
+            logger.warning(
+                "In case of issues, you please report them at https://github.com/adieyal/sd-dynamic-prompts/issues/"
+            )
+            logger.warning(
+                "If you would like to revert to the previous version, please use the following command: git checkout v1.5.17"
+            )
             is_warning_printed = True
 
-    def _create_generator(
-        self,
-        original_prompt,
-        original_seed,
-        is_dummy=False,
-        is_feeling_lucky=False,
-        is_attention_grabber=False,
-        min_attention=1.1,
-        max_attention=1.5,
-        enable_jinja_templates=False,
-        is_combinatorial=False,
-        is_magic_prompt=False,
-        combinatorial_batches=1,
-        magic_prompt_length=100,
-        magic_temp_value=0.7,
-        unlink_seed_from_prompt=constants.UNLINK_SEED_FROM_PROMPT,
-    ):
-        logger.debug(
-            f"""
-        Creating generator:
-            original_prompt: {original_prompt}
-            original_seed: {original_seed}
-            is_dummy: {is_dummy}
-            is_feeling_lucky: {is_feeling_lucky}
-            enable_jinja_templates: {enable_jinja_templates}
-            is_combinatorial: {is_combinatorial}
-            is_magic_prompt: {is_magic_prompt}
-            combinatorial_batches: {combinatorial_batches}
-            magic_prompt_length: {magic_prompt_length}
-            magic_temp_value: {magic_temp_value}
-            unlink_seed_from_prompt: {unlink_seed_from_prompt}
-            is_attention_grabber: {is_attention_grabber}
-            min_attention: {min_attention}
-            max_attention: {max_attention}
-
-        """
-        )
-
-        if is_dummy:
-            return DummyGenerator()
-        elif is_feeling_lucky:
-            generator = FeelingLuckyGenerator()
-        elif enable_jinja_templates:
-            generator = new_generation(original_prompt, self._p)
-        else:
-            generator = old_generation(
-                is_combinatorial,
-                combinatorial_batches,
-                original_seed,
-                unlink_seed_from_prompt,
-            )
-
-        if is_magic_prompt:
-            generator = MagicPromptGenerator(
-                generator,
-                device,
-                magic_prompt_length,
-                magic_temp_value,
-                seed=original_seed,
-            )
-
-        if is_attention_grabber:
-            generator = AttentionGenerator(
-                generator, min_attention=min_attention, max_attention=max_attention
-            )
-        return generator
 
     def title(self):
         return f"Dynamic Prompts v{VERSION}"
@@ -368,6 +256,7 @@ class Script(scripts.Script):
             return p
 
         self._p = p
+        context = p
 
         fix_seed(p)
 
@@ -388,45 +277,24 @@ class Script(scripts.Script):
         except (ValueError, TypeError):
             combinatorial_batches = 1
 
+        
         try:
-            logger.debug("Creating positive generator")
-            generator = self._create_generator(
-                original_prompt,
-                original_seed,
-                is_feeling_lucky=is_feeling_lucky,
-                is_attention_grabber=is_attention_grabber,
-                min_attention=min_attention,
-                max_attention=max_attention,
-                enable_jinja_templates=enable_jinja_templates,
-                is_combinatorial=is_combinatorial,
-                is_magic_prompt=is_magic_prompt,
-                combinatorial_batches=combinatorial_batches,
-                magic_prompt_length=magic_prompt_length,
-                magic_temp_value=magic_temp_value,
-                is_dummy=False,
-                unlink_seed_from_prompt=unlink_seed_from_prompt,
+            logger.debug("Creating generator")
+            generator_builder = (
+                GeneratorBuilder(wildcard_manager)
+                    .set_is_feeling_lucky(is_feeling_lucky)
+                    .set_is_attention_grabber(is_attention_grabber, min_attention, max_attention)
+                    .set_is_jinja_template(enable_jinja_templates)
+                    .set_is_combinatorial(is_combinatorial, combinatorial_batches)
+                    .set_is_magic_prompt(is_magic_prompt, magic_prompt_length, magic_temp_value)
+                    .set_is_dummy(False)
             )
 
-            logger.debug("Creating negative generator")
-            negative_prompt_generator = self._create_generator(
-                original_negative_prompt,
-                original_seed,
-                is_feeling_lucky=is_feeling_lucky,
-                is_attention_grabber=is_attention_grabber,
-                min_attention=min_attention,
-                max_attention=max_attention,
-                enable_jinja_templates=enable_jinja_templates,
-                is_combinatorial=is_combinatorial,
-                is_magic_prompt=is_magic_prompt,
-                combinatorial_batches=combinatorial_batches,
-                magic_prompt_length=magic_prompt_length,
-                magic_temp_value=magic_temp_value,
-                is_dummy=disable_negative_prompt,
-                unlink_seed_from_prompt=unlink_seed_from_prompt,
-            )
+            generator = generator_builder.create_generator(original_seed, context, unlink_seed_from_prompt)
 
+           
             all_prompts = generator.generate(original_prompt, num_images)
-            all_negative_prompts = negative_prompt_generator.generate(
+            all_negative_prompts = generator.generate(
                 original_negative_prompt, num_images
             )
             total_prompts = len(all_prompts)
