@@ -1,3 +1,4 @@
+- 2.1.0 Upgraded to dynamicprompts 0.2.0 which honours whitespace in prompts by default (this can be switched off in advanced settings)
 - 2.0.4 Migrated to using Jinja2Generator from Dynamic Prompts. Removed all references to the old Jinja2 generator
 - 2.0.3 Changed dependencies, now automatically upgrades the dynamicprompts version if available. Also fixed a bug where AttentionGenerator was being imported from dynamicprompts.generators instead of dynamicprompts.generators.attentiongenerator. The new version 0.1.18 of dynamicprompts removes an explicit dependency on pytorch and relies on the version that is installed with the webui. This avoids an unpleasant 1.8GB download.
 - 2.0.2 Bumped dynamicprompts version to 0.1.17. This fixes alternative word syntax, i.e. `[cat|dog]`. The `|` character is now only reserved inside variants `{a|b|c}`

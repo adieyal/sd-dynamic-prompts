@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 
 
 class GeneratorBuilder:
-    def __init__(self, wildcard_manager):
+    def __init__(self, wildcard_manager, ignore_whitespace=False):
         self._wildcard_manager = wildcard_manager
 
         self._is_dummy = False
@@ -35,6 +35,7 @@ class GeneratorBuilder:
         self._min_attention = 1.1
         self._max_attention = 1.5
         self._device = 0
+        self._ignore_whitespace = ignore_whitespace
 
     def log_configuration(self):
         logger.debug(
@@ -134,13 +135,13 @@ class GeneratorBuilder:
         unlink_seed_from_prompt: bool = False,
     ) -> PromptGenerator:
         if self._is_combinatorial:
-            prompt_generator = CombinatorialPromptGenerator(self._wildcard_manager)
+            prompt_generator = CombinatorialPromptGenerator(self._wildcard_manager, ignore_whitespace=self._ignore_whitespace)
             prompt_generator = BatchedCombinatorialPromptGenerator(
                 prompt_generator, self._combinatorial_batches
             )
         else:
             prompt_generator = RandomPromptGenerator(
-                self._wildcard_manager, original_seed, unlink_seed_from_prompt
+                self._wildcard_manager, original_seed, unlink_seed_from_prompt, ignore_whitespace=self._ignore_whitespace
             )
 
         return prompt_generator

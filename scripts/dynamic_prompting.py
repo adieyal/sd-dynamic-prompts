@@ -4,7 +4,6 @@ import logging
 from string import Template
 from pathlib import Path
 import math
-import re
 
 import gradio as gr
 
@@ -15,13 +14,7 @@ from modules.devices import get_optimal_device
 
 from dynamicprompts.wildcardmanager import WildcardManager
 from prompts.uicreation import UiCreation
-from dynamicprompts.generators import (
-    FeelingLuckyGenerator,
-    DummyGenerator,
-)
 
-from dynamicprompts.generators.magicprompt import MagicPromptGenerator
-from dynamicprompts.generators.attentiongenerator import AttentionGenerator
 
 from dynamicprompts.generators.promptgenerator import GeneratorException
 from dynamicprompts import constants
@@ -36,6 +29,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 is_debug = getattr(opts, "is_debug", False)
+
 if is_debug:
     logger.setLevel(logging.DEBUG)
 
@@ -49,7 +43,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "2.0.4"
+VERSION = "2.1.0"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -75,7 +69,6 @@ class Script(scripts.Script):
                 "If you would like to revert to the previous version, please use the following command: git checkout v1.5.17"
             )
             is_warning_printed = True
-
 
     def title(self):
         return f"Dynamic Prompts v{VERSION}"
@@ -209,6 +202,12 @@ class Script(scripts.Script):
                             label="Fixed seed", value=False, elem_id="is-fixed-seed"
                         )
 
+                        ignore_whitespace = gr.Checkbox(
+                            label="Ignore whitespace",
+                            value=False,
+                            elem_id="ignore_whitespace",
+                        )
+
         return [
             info,
             is_enabled,
@@ -227,6 +226,7 @@ class Script(scripts.Script):
             disable_negative_prompt,
             enable_jinja_templates,
             no_image_generation,
+            ignore_whitespace,
         ]
 
     def process(
@@ -249,6 +249,7 @@ class Script(scripts.Script):
         disable_negative_prompt,
         enable_jinja_templates,
         no_image_generation,
+        ignore_whitespace,
     ):
 
         if not is_enabled:
@@ -277,22 +278,26 @@ class Script(scripts.Script):
         except (ValueError, TypeError):
             combinatorial_batches = 1
 
-        
         try:
             logger.debug("Creating generator")
             generator_builder = (
-                GeneratorBuilder(wildcard_manager)
-                    .set_is_feeling_lucky(is_feeling_lucky)
-                    .set_is_attention_grabber(is_attention_grabber, min_attention, max_attention)
-                    .set_is_jinja_template(enable_jinja_templates)
-                    .set_is_combinatorial(is_combinatorial, combinatorial_batches)
-                    .set_is_magic_prompt(is_magic_prompt, magic_prompt_length, magic_temp_value)
-                    .set_is_dummy(False)
+                GeneratorBuilder(wildcard_manager, ignore_whitespace=ignore_whitespace)
+                .set_is_feeling_lucky(is_feeling_lucky)
+                .set_is_attention_grabber(
+                    is_attention_grabber, min_attention, max_attention
+                )
+                .set_is_jinja_template(enable_jinja_templates)
+                .set_is_combinatorial(is_combinatorial, combinatorial_batches)
+                .set_is_magic_prompt(
+                    is_magic_prompt, magic_prompt_length, magic_temp_value
+                )
+                .set_is_dummy(False)
             )
 
-            generator = generator_builder.create_generator(original_seed, context, unlink_seed_from_prompt)
+            generator = generator_builder.create_generator(
+                original_seed, context, unlink_seed_from_prompt
+            )
 
-           
             all_prompts = generator.generate(original_prompt, num_images)
             all_negative_prompts = generator.generate(
                 original_negative_prompt, num_images
