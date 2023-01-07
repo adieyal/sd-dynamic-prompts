@@ -52,7 +52,7 @@ You can also install it manually by running the following command from within th
 	
 ### Troubleshooting
 
-In the LastBen colab (and perhaps others), you might see an error relating to dynamicprompts not being found. There seems to be an issue causing extensions that rely on install.py from being installed properly. A workaround is to run this command before you start the webui:
+In the LastBen colab (and perhaps others), you might see an error similar to this: `ModuleNotFoundError: No module named 'dynamicprompts'`. There seems to be an issue causing extensions that rely on install.py from being installed properly. A workaround is to run this command before you start the webui:
 
 `!python -m pip install dynamicprompts`
 
