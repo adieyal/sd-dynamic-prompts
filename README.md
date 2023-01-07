@@ -49,6 +49,12 @@ The extension can be installed directly from within the **Extensions** tab withi
 You can also install it manually by running the following command from within the webui directory:
 
 	git clone https://github.com/adieyal/sd-dynamic-prompting/ extensions/dynamic-prompts
+	
+### Troubleshooting
+
+In the LastBen colab (and perhaps others), you might see an error relating to dynamicprompts not being found. There seems to be an issue causing extensions that rely on install.py from being installed properly. A workaround is to run this command before you start the webui:
+
+`!python -m pip install dynamicprompts`
 
 ## Compatible Scripts
 Dynamic Prompts works particularly well with the following scripts:
