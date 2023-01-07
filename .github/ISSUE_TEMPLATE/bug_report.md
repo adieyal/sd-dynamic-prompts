@@ -19,6 +19,10 @@ Steps to reproduce the behaviour, include the prompt you used if applicable:
 
 Also mention which checkboxes have been set.
 
+**Are you using a local install or a colab?**
+
+If a colab, which one?
+
 **Expected behaviour**
 A clear and concise description of what you expected to happen.
 
