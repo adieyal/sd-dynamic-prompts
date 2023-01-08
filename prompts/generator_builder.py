@@ -1,7 +1,6 @@
 from __future__ import annotations
 import logging
 
-from dynamicprompts import constants
 from dynamicprompts.generators import (
     DummyGenerator,
     FeelingLuckyGenerator,
@@ -95,7 +94,7 @@ class GeneratorBuilder:
         self,
         original_seed,
         context,
-        unlink_seed_from_prompt=constants.UNLINK_SEED_FROM_PROMPT,
+        unlink_seed_from_prompt=False,
     ):
 
         if self._is_dummy:
