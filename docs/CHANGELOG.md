@@ -1,3 +1,4 @@
+- 2.2.4 Fixed decimal weights - see [#165](https://github.com/adieyal/sd-dynamic-prompts/issues/165)
 - 2.2.3 Fixed disable negative prompts - see [#167](https://github.com/adieyal/sd-dynamic-prompts/issues/167)
 - 2.2.2 Fixed missing whitespace between wildcards
 - 2.2.1 Fixed unlink seed from prompt bug - see [#150](https://github.com/adieyal/sd-dynamic-prompts/issues/150#issuecomment-1374847700)
