@@ -1,7 +1,6 @@
 __artists/Photography/by_country/albania__
 __artists/Photography/by_country/albania__
 __artists/Photography/by_country/algeria__
-__artists/Photography/by_country/all_photographers__
 __artists/Photography/by_country/argentina__
 __artists/Photography/by_country/armenia__
 __artists/Photography/by_country/australia__
