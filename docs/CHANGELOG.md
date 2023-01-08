@@ -1,3 +1,4 @@
+- 2.3.0 Moved some advanced options into the settings tab. These are now saved when the application closes.
 - 2.2.4 Fixed decimal weights - see [#165](https://github.com/adieyal/sd-dynamic-prompts/issues/165)
 - 2.2.3 Fixed disable negative prompts - see [#167](https://github.com/adieyal/sd-dynamic-prompts/issues/167)
 - 2.2.2 Fixed missing whitespace between wildcards

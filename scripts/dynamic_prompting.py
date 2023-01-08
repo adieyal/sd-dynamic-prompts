@@ -12,6 +12,8 @@ from modules.processing import process_images, fix_seed, Processed
 from modules.shared import opts, OptionInfo
 from modules.devices import get_optimal_device
 
+from ui import settings
+
 from dynamicprompts.wildcardmanager import WildcardManager
 from prompts.uicreation import UiCreation
 
@@ -43,12 +45,13 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "2.2.4"
+VERSION = "2.3.0"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
 wildcards_tab.initialize(wildcard_manager)
 save_params.initialize()
+settings.initialize()
 
 device = 0 if get_optimal_device() == "cuda" else -1
 
@@ -92,8 +95,8 @@ class Script(scripts.Script):
                     )
                     combinatorial_batches = gr.Slider(
                         label="Combinatorial batches",
-                        min=1,
-                        max=10,
+                        minimum=1,
+                        maximum=10,
                         step=1,
                         value=1,
                         elem_id="combinatorial-times",
@@ -148,13 +151,8 @@ class Script(scripts.Script):
                     )
 
                 write_prompts = gr.Checkbox(
-                    label="Write prompts to file", value=False, elem_id="write-prompts"
-                )
-
-                no_image_generation = gr.Checkbox(
-                    label="Don't generate images",
-                    value=False,
-                    elem_id="no-image-generation",
+                    label="Write prompts to file", value=False, elem_id="write-prompts",
+                    visible=False  # For some reason, removing this line causes Auto1111 to hang
                 )
 
                 with gr.Accordion("Help", open=False):
@@ -173,6 +171,8 @@ class Script(scripts.Script):
 
                 with gr.Group():
                     with gr.Accordion("Advanced options", open=False):
+                        settings_info = gr.HTML("Some settings have been moved to the settings tab. Find them in the Dynamic Prompts section.")
+
                         unlink_seed_from_prompt = gr.Checkbox(
                             label="Unlink seed from prompt",
                             value=False,
@@ -189,20 +189,21 @@ class Script(scripts.Script):
                             label="Fixed seed", value=False, elem_id="is-fixed-seed"
                         )
 
-                        ignore_whitespace = gr.Checkbox(
-                            label="Ignore whitespace",
-                            value=False,
-                            elem_id="ignore_whitespace",
-                        )
-
                         write_raw_template = gr.Checkbox(
                             label="Write raw prompt to image",
                             value=False,
+                            visible=False, # For some reason, removing this line causes Auto1111 to hang
                             elem_id="write-raw-template",
                         )
 
+                        no_image_generation = gr.Checkbox(
+                            label="Don't generate images",
+                            value=False,
+                            elem_id="no-image-generation",
+                        )
+
+
         return [
-            info,
             is_enabled,
             is_combinatorial,
             combinatorial_batches,
@@ -214,19 +215,15 @@ class Script(scripts.Script):
             magic_prompt_length,
             magic_temp_value,
             use_fixed_seed,
-            write_prompts,
             unlink_seed_from_prompt,
             disable_negative_prompt,
             enable_jinja_templates,
             no_image_generation,
-            ignore_whitespace,
-            write_raw_template
         ]
 
     def process(
         self,
         p,
-        info,
         is_enabled,
         is_combinatorial,
         combinatorial_batches,
@@ -238,13 +235,10 @@ class Script(scripts.Script):
         magic_prompt_length,
         magic_temp_value,
         use_fixed_seed,
-        write_prompts,
         unlink_seed_from_prompt,
         disable_negative_prompt,
         enable_jinja_templates,
         no_image_generation,
-        ignore_whitespace,
-        write_raw_template
     ):
 
         if not is_enabled:
@@ -254,8 +248,8 @@ class Script(scripts.Script):
         self._p = p
         context = p
 
-        option = OptionInfo(write_raw_template, "Write raw template to image")
-        opts.add_option(constants.OPTION_WRITE_RAW_TEMPLATE, option)
+        ignore_whitespace = opts.dp_ignore_whitespace
+        write_prompts = opts.dp_write_prompts_to_file
 
         fix_seed(p)
 
