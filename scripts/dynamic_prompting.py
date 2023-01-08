@@ -43,7 +43,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "2.2.2"
+VERSION = "2.2.3"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -297,10 +297,14 @@ class Script(scripts.Script):
             )
 
             all_prompts = generator.generate(original_prompt, num_images)
-            all_negative_prompts = generator.generate(
-                original_negative_prompt, num_images
-            )
             total_prompts = len(all_prompts)
+
+            if disable_negative_prompt:
+                all_negative_prompts = [""]
+            else:
+                all_negative_prompts = generator.generate(
+                    original_negative_prompt, num_images
+                )
 
             if len(all_negative_prompts) < total_prompts:
                 all_negative_prompts = all_negative_prompts * (
