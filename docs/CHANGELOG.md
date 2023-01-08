@@ -1,3 +1,4 @@
+- 2.2.1 Fixed unlink seed from prompt bug - see [#150](https://github.com/adieyal/sd-dynamic-prompts/issues/150#issuecomment-1374847700)
 - 2.2.0 Added option in advanced settings to save the raw prompt in the png metadata
 - 2.1.1 Fixes a bug that caused the CombinatorialPromptGenerator to run slowly
 - 2.1.0 Upgraded to dynamicprompts 0.2.0 which honours whitespace in prompts by default (this can be switched off in advanced settings)
