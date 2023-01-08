@@ -9,7 +9,7 @@ import gradio as gr
 
 import modules.scripts as scripts
 from modules.processing import process_images, fix_seed, Processed
-from modules.shared import opts
+from modules.shared import opts, OptionInfo
 from modules.devices import get_optimal_device
 
 from dynamicprompts.wildcardmanager import WildcardManager
@@ -17,12 +17,12 @@ from prompts.uicreation import UiCreation
 
 
 from dynamicprompts.generators.promptgenerator import GeneratorException
-from dynamicprompts import constants
+from ui import constants
 from prompts.utils import slugify, get_unique_path
 from prompts import prompt_writer
 from prompts.generator_builder import GeneratorBuilder
 
-from ui import wildcards_tab
+from ui import wildcards_tab, save_params
 
 
 logger = logging.getLogger(__name__)
@@ -43,11 +43,13 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "2.1.1"
+VERSION = "2.2"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
 wildcards_tab.initialize(wildcard_manager)
+save_params.initialize()
+
 device = 0 if get_optimal_device() == "cuda" else -1
 
 generator_builder = GeneratorBuilder(wildcard_manager)
@@ -208,6 +210,12 @@ class Script(scripts.Script):
                             elem_id="ignore_whitespace",
                         )
 
+                        write_raw_template = gr.Checkbox(
+                            label="Write raw prompt to image",
+                            value=False,
+                            elem_id="write-raw-template",
+                        )
+
         return [
             info,
             is_enabled,
@@ -227,6 +235,7 @@ class Script(scripts.Script):
             enable_jinja_templates,
             no_image_generation,
             ignore_whitespace,
+            write_raw_template
         ]
 
     def process(
@@ -250,6 +259,7 @@ class Script(scripts.Script):
         enable_jinja_templates,
         no_image_generation,
         ignore_whitespace,
+        write_raw_template
     ):
 
         if not is_enabled:
@@ -258,6 +268,9 @@ class Script(scripts.Script):
 
         self._p = p
         context = p
+
+        option = OptionInfo(write_raw_template, "Write raw template to image")
+        opts.add_option(constants.OPTION_WRITE_RAW_TEMPLATE, option)
 
         fix_seed(p)
 

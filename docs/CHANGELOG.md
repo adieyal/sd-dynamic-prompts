@@ -1,3 +1,4 @@
+- 2.2.0 Added option in advanced settings to save the raw prompt in the png metadata
 - 2.1.1 Fixes a bug that caused the CombinatorialPromptGenerator to run slowly
 - 2.1.0 Upgraded to dynamicprompts 0.2.0 which honours whitespace in prompts by default (this can be switched off in advanced settings)
 - 2.0.4 Migrated to using Jinja2Generator from Dynamic Prompts. Removed all references to the old Jinja2 generator

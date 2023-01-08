@@ -47,6 +47,7 @@ Select this if you want to use the same seed for every generated image.
 This is useful if you want to test prompt variations while using the same seed.
 If there are no wildcards then all the images will be identical.
 `.trim(),
+"Write raw prompt to image": "Write the prompt template into the image metadata"
 };
 
 // Combine two dictionaries: the original (titles) and our new (dynamic_prompting_titles) into one
