@@ -3,6 +3,7 @@ A custom extension for [AUTOMATIC1111/stable-diffusion-webui](https://github.com
 
 <p align="center">                                                                                         
     <a href="docs/SYNTAX.md"><img src="images/icon-syntax.png" valign="middle" style="height:40px"/></a>
+	<a href="docs/tutorial.md"><img src="images/icon-tutorial.png" valign="middle" style="height:40px"/></a>
     <a href="docs/CHANGELOG.md"><img src="images/icon-changelog.png" valign="middle" style="height:40px"/></a>
 </p>
 
