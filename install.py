@@ -2,6 +2,7 @@ import sys
 import logging
 from pathlib import Path
 
+
 logger = logging.getLogger(__name__)
 
 if sys.version_info < (3, 8):
@@ -10,6 +11,19 @@ else:
     import importlib.metadata as importlib_metadata
 
 import launch
+
+def clean_package_name(s):
+    s = s.split("==")[0].strip()
+    s = s.split(">=")[0].strip()
+    s = s.split("<=")[0].strip()
+    s = s.split(">")[0].strip()
+    s = s.split("<")[0].strip()
+    s = s.split("~=")[0].strip()
+    s = s.split("!=")[0].strip()
+    s = s.split(" ")[0].strip()
+    s = s.split("[")[0].strip()
+
+    return s
 
 def ensure_installed(package):
     isinstalled = launch.is_installed(package)
@@ -32,13 +46,11 @@ def check_versions():
     for row in open(req_file):
         splits = row.split("==")
         try:
-            if "dynamicprompts" in row:
-                launch.run_pip(f"install -U {row}", desc=row)
-            elif len(splits) == 2:
+            if len(splits) == 2:
                 package = splits[0].strip()
                 version = splits[1].strip()
 
-                ensure_version(package, version)
+                ensure_version(clean_package_name(package), version)
             else:
                 package = row.strip()
                 ensure_installed(package)
