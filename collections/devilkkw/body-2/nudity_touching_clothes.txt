@@ -1,0 +1,11 @@
+adjusting clothes
+clothes grab
+apron grab
+collar grab
+necktie grab
+skirt grab
+collar tug
+dress tug
+shirt tug
+skirt tug
+wringing clothes

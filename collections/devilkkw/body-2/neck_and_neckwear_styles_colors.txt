@@ -1,0 +1,12 @@
+aqua neckwear
+black neckwear
+blue neckwear
+brown neckwear
+green neckwear
+grey neckwear
+orange neckwear
+pink neckwear
+purple neckwear
+red neckwear
+white neckwear
+yellow neckwear

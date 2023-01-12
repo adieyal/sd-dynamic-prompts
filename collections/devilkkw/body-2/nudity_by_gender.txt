@@ -1,0 +1,4 @@
+CFNF
+CFNM
+CMNF
+CMNM

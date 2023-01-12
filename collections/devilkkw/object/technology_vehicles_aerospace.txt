@@ -1,0 +1,12 @@
+Airplane
+Bomber
+Helicopter
+Jet
+Fighter jet
+Spacecraft
+Rocket ship
+Space Shuttle
+Tie Fighter
+Tie Interceptor
+UFO
+Flying saucer

@@ -1,0 +1,179 @@
+Albatross
+Southern Royal Albatross
+Barred Buttonquail
+Blue Jay
+Bluebird
+Blue-footed Booby
+Cassowary
+Southern Cassowary
+Chick
+Chicken
+Rooster
+Cockatiel
+Cockatoo
+Blue-eyed Cockatoo
+Major Mitchell's Cockatoo
+Palm Cockatoo
+Sulphur-crested Cockatoo
+Yellowtip Cockatoo
+Condor
+Andean Condor
+Cormorant
+Crane (animal)
+Black Crowned Crane
+Grey Crowned Crane
+Red-crowned Crane
+Siberian Crane
+Crow
+Carrion Crow
+Cuckoo
+Dodo (bird)
+Duck
+Duckling
+Mallard
+Dusky Thrush
+Eagle
+Bald Eagle
+Haast's Eagle
+Little Egret
+Emu
+Falcon
+Peregrine Falcon
+Finch
+Eurasian Bullfinch
+Japanese Grosbeak
+Double-barred Finch
+Gouldian Finch
+Java Sparrow
+Zebra Finch
+Flamingo
+Frogmouth
+Blue-and-white Flycatcher
+Hill Blue Flycatcher
+Narcissus Flycatcher
+Verditer Flycatcher
+Yellow-rumped Flycatcher
+Goose
+Greater White-Fronted Goose
+Canada goose
+Hawk
+Goshawk
+Japanese Sparrowhawk
+Harris's Hawk
+Heron
+Chinese Pond Heron
+Great Blue Heron
+Grey Heron
+Hummingbird
+Japanese Bush Warbler
+Japanese Robin
+Japanese White-eye
+Common Kingfisher
+Crested Kingfisher
+Kookaburra
+Kiwi
+Southern Brown Kiwi
+Kori Bustard
+Lilac-breasted Roller
+Long-tailed Widowbird
+Magpie
+Azure-winged Magpie
+Black-throated Magpie-Jay
+Taiwan Blue Magpie
+Meadow Bunting
+Moa (animal)
+South Island Giant Moa
+Nightingale (bird)
+Northern Cardinal
+Northern Lapwing
+Nuthatch
+Oriental Dollarbird
+Black-headed Oriole
+Black-naped Oriole
+Osprey
+Ostrich
+Owl
+Snowy Owl
+Southern Boobook
+Parakeet
+Golden Parakeet
+Jandaya Parakeet
+Rose-ringed Parakeet
+Parrot
+African Grey Parrot
+Black-headed Parrot
+Eclectus Parrot
+Kakapo
+Kea (animal)
+Lovebird
+Macaw
+Blue-and-yellow Macaw
+Hyacinth Macaw
+Red-and-green Macaw
+Scarlet Macaw
+Pacific Parrotlet
+Yellow-headed Amazon
+Peacock
+Pelican
+Penguin
+Adelie Penguin
+African Penguin
+Emperor Penguin
+Fiordland Penguin
+Galapagos Penguin
+Humboldt Penguin
+Little Penguin
+Rockhopper Penguin
+Yellow-eyed Penguin
+Anthropornis
+Pheasant
+Copper Pheasant
+Ijima Copper Pheasant
+Golden Pheasant
+Green Pheasant
+Lady Amherst's Pheasant
+Pheasant-tailed Jacana
+Pigeon
+Dove
+Fantail Pigeon
+Passenger Pigeon
+White-bellied Green Pigeon
+Plover (animal)
+Puffin
+Quail
+Japanese Quail
+Raggiana Bird-of-paradise
+Red-flanked Bluetail
+Blue-fronted Redstart
+Daurian Redstart
+Resplendent Quetzal
+Roadrunner (animal)
+Ryukyu Minivet
+Seagull
+Secretarybird
+Shoebill
+Siberian Rubythroat
+Sparrow
+Eurasian Tree Sparrow
+House Sparrow
+Stork
+Oriental Stork
+Swallow
+Tree Swallow
+Swan
+Black Swan (bird)
+Takahe
+Great Tit
+Japanese Tit
+Long-tailed Tit
+Toucan
+Vulture
+Black-backed Wagtail
+Grey Wagtail
+White Wagtail
+Japanese Wagtail
+White-bellied Go-away-bird
+White-cheeked Starling
+Woodpecker
+Great Spotted Woodpecker
+Yellow Bittern

@@ -1,0 +1,32 @@
+bottle
+soda bottle
+can
+cup
+mug
+sakazuki
+yunomi
+drinking glass
+champagne coupe
+champagne flute
+cocktail glass
+hurricane glass
+shot glass
+snifter
+wine glass
+coffee cup
+coffee mug
+coffee pot
+coffee press
+gourd
+jar
+jug
+juice box
+beer mug
+canned tea
+saucer
+teacup
+teapot
+long spout teapot
+side handle teapot
+tea set
+thermos

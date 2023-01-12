@@ -1,0 +1,64 @@
+apron
+armor
+armored dress
+bikini armor
+band uniform
+cape
+capelet
+hood
+shoulder cape
+cassock
+cheerleader
+costume
+ghost costume
+gym uniform
+buruma
+habit
+harem outfit
+loincloth
+hazmat suit
+hev suit
+kigurumi
+animal costume
+bear costume
+boar costume
+cat costume
+cow costume
+dog costume
+monkey costume
+mouse costume
+panda costume
+penguin costume
+pig costume
+rabbit costume
+reindeer costume
+seal costume
+sheep costume
+tiger costume
+maid
+miko
+nontraditional miko
+military uniform
+overalls
+pajamas
+pilot suit
+plugsuit
+sailor
+santa costume
+school uniform
+serafuku
+sailor dress
+gakuran
+meiji schoolgirl uniform
+shosei
+suit
+business suit
+pant suit
+skirt suit
+tuxedo
+track suit
+sweatpants
+sweatshirt
+tutu
+waitress
+cowboy western

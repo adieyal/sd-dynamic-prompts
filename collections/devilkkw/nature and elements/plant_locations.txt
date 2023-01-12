@@ -1,0 +1,6 @@
+farm
+field
+garden
+greenhouse
+nature
+outdoors

@@ -1,0 +1,4 @@
+crown
+hat
+helmet
+Colors

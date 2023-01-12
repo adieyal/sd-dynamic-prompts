@@ -1,0 +1,10 @@
+blue sclera
+black sclera
+blank eyes
+bloodshot eyes
+green sclera
+mismatched sclera
+no sclera
+orange sclera
+red sclera
+yellow sclera

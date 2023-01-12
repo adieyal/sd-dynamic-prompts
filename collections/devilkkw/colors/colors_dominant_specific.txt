@@ -1,0 +1,12 @@
+aqua theme
+black theme
+blue theme
+brown theme
+green theme
+grey theme
+orange theme
+pink theme
+purple theme
+red theme
+white theme
+yellow theme

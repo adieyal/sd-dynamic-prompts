@@ -1,0 +1,53 @@
+Artifacts
+gif artifacts
+jpeg artifacts
+aliasing
+scan artifacts
+bleed through
+crease
+vhs artifacts
+bad aspect ratio
+blurry
+censored
+uncensored
+decensored
+derivative work
+photo-referenced
+reference photo
+reference work
+screencap redraw
+duplicate
+pixel-perfect duplicate
+error
+bad reflection
+extra digits
+typo
+lossless-lossy
+lossy-lossless
+image macro
+md5 mismatch
+moire
+third-party edit
+detexted
+hard translated
+nude filter
+poorly drawn
+anatomical nonsense
+bad anatomy
+bad feet
+bad hands
+bad proportions
+quality
+ranguage
+resized
+downscaled
+image sample
+upscaled
+waifu2x
+reversed
+solid color thumbnail
+unmoving pattern
+watermark
+third-party watermark
+web address
+extraction

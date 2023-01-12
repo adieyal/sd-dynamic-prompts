@@ -1,0 +1,11 @@
+black headwear
+blue headwear
+brown headwear
+green headwear
+grey headwear
+orange headwear
+pink headwear
+purple headwear
+red headwear
+white headwear
+yellow headwear

@@ -1,0 +1,57 @@
+alcohol
+beer
+non-alcoholic beer
+guinness (beer)
+champagne
+cocktail
+caesar (drink)
+cocktail umbrella
+margarita
+martini
+liquor
+sake
+tequila
+vodka
+whiskey
+wine
+coffee
+cafe au lait
+canned coffee
+coffee beans
+dandelion coffee
+georgia max coffee
+latte art
+starbucks
+juice
+amazake
+lemonade
+orange juice
+milk
+soda
+7up
+calpis
+coca-cola
+dr pepper
+fanta
+melon soda
+mountain dew
+pepsi
+pepsi ice cucumber
+ramune
+root beer
+soda can
+tea
+barley tea
+black tea
+bubble tea
+darjeeling tea
+earl grey tea
+green tea
+herbal tea
+iced tea
+milk tea
+rose hip tea
+spear mint tea
+tropical drink
+blue hawaii
+water

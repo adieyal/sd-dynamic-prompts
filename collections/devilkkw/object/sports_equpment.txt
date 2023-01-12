@@ -1,0 +1,34 @@
+Ball
+Beachball
+Bowling ball
+Billiard ball
+American football
+Golf ball
+Marble
+Rugby ball
+Soccer ball
+Tennis ball
+Jersey
+Uniform
+Sportswear
+Baseball cap
+baseball jersey
+baseball uniform
+basketball uniform
+hockey sweater
+Tennis uniform
+Baseball bat
+Bowling glove
+Bowling pin
+Cue stick
+Golf club
+Hoop
+Juggling club
+Pool table
+Racket
+Badminton racket
+Table tennis paddle
+Tennis racket
+Ribbon
+Ribbon baton
+Rope

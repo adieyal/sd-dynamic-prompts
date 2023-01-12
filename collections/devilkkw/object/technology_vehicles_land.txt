@@ -1,0 +1,23 @@
+Ambulance
+Bus
+Car
+Police car
+Taxi
+Jeep
+Tank
+Trailer
+Train
+Streetcar
+Aerial tram
+Truck
+Concrete mixer truck
+Dump truck
+Haul truck
+Flatbed truck
+Fire truck
+Garbage truck
+Monster truck
+Pickup truck
+Semi truck
+Tank truck
+Van

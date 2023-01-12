@@ -1,0 +1,12 @@
+Alpaca
+Bear
+Bull
+Cow
+Deer
+Elephant
+Giraffe
+Gorilla
+Horse
+Kangaroo
+Mammoth
+Panda

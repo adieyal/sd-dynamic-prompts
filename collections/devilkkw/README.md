@@ -1,8 +1,15 @@
-# This is a placeholder for another great collection of wildcards which you can find here: https://github.com/devilkkw/StableDiffusion/tree/main/wildcards
+# StableDiffusion
+A repo for stable diffusion.
 
-You can install it with these commands from within the main auto1111 directory (on Linux - on windows you might need to change `mv` to `move`)
+## Wildcards
+##### A big collection of wilcards for [Automatic1111 Wildcards extension](https://github.com/AUTOMATIC1111/stable-diffusion-webui-wildcards "Wildcards Homepage")
+---
+## My wheightpoints
 
-```
-git clone https://github.com/devilkkw/StableDiffusion/ extensions/sd-dynamic-prompting/wildcards/devikkw/
-mv extensions/sd-dynamic-prompts/wildcards/devikkw/wildcards/* extensions/sd-dynamic-prompts/wildcards/devikkw 
-```
+#### HuggingFace
+###### [KKW FANTAREAL V1.0](https://huggingface.co/devilkkw/KKW_FANTAREAL_V1.0 "kkw models")
+
+#### Civitai
+###### [KKW FANTAREAL V1.0](https://civitai.com/models/3782/kkw-fantareal-v10 "kkw models")
+
+![KKW FATAREAL V1.0 SAMPLE IMAGE](https://s3.amazonaws.com/moonup/production/uploads/1672798387706-63076d1ecd148dbc5e4ccf57.jpeg "KKW FANTAREAL V1.0")

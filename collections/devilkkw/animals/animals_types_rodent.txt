@@ -1,0 +1,10 @@
+Beaver
+Capybara
+Chipmunk
+Ferret
+Guinea pig
+Hamster
+Mouse
+Naked mole rat
+Squirrel
+Weasel

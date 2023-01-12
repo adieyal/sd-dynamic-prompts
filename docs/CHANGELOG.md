@@ -1,3 +1,4 @@
+- 2.3.3 Added the extension devilkkw wildcards collection - check it out [here](https://github.com/adieyal/sd-dynamic-prompts/tree/main/collections/devilkkw)
 - 2.3.2 Added an accordion to hide the prompt helpers section by default
 - 2.3.1 Fixed annoying unnecessary reinstallation of requirements. Also bumped dynamicprompts to v0.2.6 which includes wildcard caching
 - 2.3.0 Moved some advanced options into the settings tab. These are now saved when the application closes.
