@@ -73,7 +73,9 @@ class Script(scripts.Script):
         html_path = base_dir / "helptext.html"
         html = html_path.open().read()
         html = Template(html).substitute(
-            wildcard_html=wildcard_html, WILDCARD_DIR=WILDCARD_DIR
+            wildcard_html=wildcard_html,
+            WILDCARD_DIR=WILDCARD_DIR,
+            VERSION=VERSION,
         )
 
         jinja_html_path = base_dir / "jinja_help.html"
