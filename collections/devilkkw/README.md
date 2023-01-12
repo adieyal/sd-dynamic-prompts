@@ -1,10 +1,6 @@
-# StableDiffusion
-A repo for stable diffusion.
+A large wildcards library kindly contributed by [@devilkkw](https://github.com/devilkkw).
 
-## Wildcards
-##### A big collection of wilcards for [Automatic1111 Wildcards extension](https://github.com/AUTOMATIC1111/stable-diffusion-webui-wildcards "Wildcards Homepage")
----
-## My wheightpoints
+Find their other work below:
 
 #### HuggingFace
 ###### [KKW FANTAREAL V1.0](https://huggingface.co/devilkkw/KKW_FANTAREAL_V1.0 "kkw models")
