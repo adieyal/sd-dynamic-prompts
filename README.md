@@ -3,7 +3,7 @@ A custom extension for [AUTOMATIC1111/stable-diffusion-webui](https://github.com
 
 <p align="center">                                                                                         
     <a href="docs/SYNTAX.md"><img src="images/icon-syntax.png" valign="middle" style="height:60px;margin-right:10px"/></a>
-	<a href="docs/tutorial.md"><img src="images/icon-tutorial.png" valign="middle" style="height:60px;margin-right:10px"/></a>
+    <a href="docs/tutorial.md"><img src="images/icon-tutorial.png" valign="middle" style="height:60px;margin-right:10px"/></a>
     <a href="docs/CHANGELOG.md"><img src="images/icon-changelog.png" valign="middle" style="height:60px"/></a>
 </p>
 
@@ -40,7 +40,9 @@ You can also use the same wildcard twice
 - I love Winter better than Summer
 - I love Spring better than Spring
 
-More complete documentation can be found [here](docs/SYNTAX.md).
+More complete documentation can be found [here](docs/SYNTAX.md).<br/>
+Prefer a tutorial? <a href="docs/tutorial.md">Click here</a><br/>
+Need a wildcard library? We've got you [covered](https://github.com/adieyal/sd-dynamic-prompts#collections).<br/>
 
 ## Installation
 
@@ -193,15 +195,17 @@ You can read about them in more detail <a href="jinja2.md">here</a>
 The extension looks for wildcard files in WILDCARD_DIR. The default location is /path/to/stable-diffusion-webui/extensions/sd-dynamic-prompts/wildcards. It can also be manually defined in the main webui config.json under wildcard_dir. When in doubt, the help text for the extension in the webui lists the full path to WILDCARD_DIR
 
 ## Collections
-The collections directory contains modifier libraries that you can use as is or to bootstrap your own. Copy the collection that you want to use into the wildcards directory. Note, in previous versions, the collections were stored in the wildcards directory. This has now changed so that your own collections don't get clobbered every time you want to update the extension.
-There are currently two collections:
+The collections directory contains modifier libraries that you can use as is or to bootstrap your own. To get started, either use the Wildcard Manager tab to copy a one or more collections to your wildcards folder, or you can manually copy the files across. There are currently three collections:
 
-- jumbo
-- parrotzone
+- [jumbo](https://github.com/adieyal/sd-dynamic-prompts/tree/main/collections/jumbo)
+- [parrotzone](https://github.com/adieyal/sd-dynamic-prompts/tree/main/collections/parrotzone)
+- [devilkkw](https://github.com/adieyal/sd-dynamic-prompts/tree/main/collections/devilkkw)
 
 Jumbo is a very large collection of wildcards across many categories including aesthetics, appearance, artists, medium, style, and time. It is a work in progress, but aims to provide good coverage of various modifier categories. 
 
 Parrotzone is a far smaller and more manageable collection sourced from https://proximacentaurib.notion.site/e28a4f8d97724f14a784a538b8589e7d?v=42948fd8f45c4d47a0edfc4b78937474.
+
+Devilkkw focuses more on character building, clothes, gestures, food, etc
 
 If you're using a Unix/Linux O/S, you can easily create a symlink to the relevant collection rather than copying it across if you don't plan to alter it. E.g.
 
