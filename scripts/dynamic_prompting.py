@@ -104,7 +104,7 @@ class Script(scripts.Script):
                         elem_id="combinatorial-times",
                     )
 
-                with gr.Box():
+                with gr.Accordion("Prompt Magic", open=False):
                     with gr.Group():
                         is_magic_prompt = gr.Checkbox(
                             label="Magic prompt", value=False, elem_id="is-magicprompt"
@@ -152,14 +152,10 @@ class Script(scripts.Script):
                         step=0.1,
                     )
 
-                write_prompts = gr.Checkbox(
-                    label="Write prompts to file", value=False, elem_id="write-prompts",
-                    visible=False  # For some reason, removing this line causes Auto1111 to hang
-                )
-
-                with gr.Accordion("Help", open=False):
+                with gr.Accordion("Need help?", open=False):
                     info = gr.HTML(html)
 
+                enable_jinja_templates = False
                 with gr.Group():
                     with gr.Accordion("Jinja2 templates", open=False):
                         enable_jinja_templates = gr.Checkbox(
@@ -203,6 +199,12 @@ class Script(scripts.Script):
                             value=False,
                             elem_id="no-image-generation",
                         )
+
+                write_prompts = gr.Checkbox(
+                    label="Write prompts to file", value=False, elem_id="write-prompts",
+                    visible=False  # For some reason, removing this line causes Auto1111 to hang
+                )
+
 
 
         return [
