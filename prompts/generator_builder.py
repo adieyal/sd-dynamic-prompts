@@ -105,6 +105,13 @@ class GeneratorBuilder:
         self._context = context
         return self
 
+    def disable_prompt_magic(self):
+        self.set_is_attention_grabber(False)
+        self.set_is_magic_prompt(False)
+        self.set_is_feeling_lucky(False)
+
+        return self
+
     def create_generator(self):
 
         if self._is_dummy:

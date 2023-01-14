@@ -19,7 +19,6 @@ from prompts.uicreation import UiCreation
 
 
 from dynamicprompts.generators.promptgenerator import GeneratorException
-from ui import constants
 from prompts.utils import slugify, get_unique_path
 from prompts import prompt_writer
 from prompts.generator_builder import GeneratorBuilder
@@ -38,6 +37,7 @@ if is_debug:
 
 base_dir = Path(scripts.basedir())
 
+
 def get_wildcard_manager():
     wildcard_dir = getattr(opts, "wildcard_dir", None)
     if wildcard_dir is None:
@@ -50,6 +50,28 @@ def get_wildcard_manager():
 
     return wildcard_manager
 
+
+def get_prompts(p):
+    original_prompt = p.all_prompts[0] if len(p.all_prompts) > 0 else p.prompt
+    original_negative_prompt = (
+        p.all_negative_prompts[0]
+        if len(p.all_negative_prompts) > 0
+        else p.negative_prompt
+    )
+
+    return original_prompt, original_negative_prompt
+
+def get_seeds(p, num_seeds, use_fixed_seed):
+    if use_fixed_seed:
+        all_seeds = [p.seed] * num_seeds
+    else:
+        all_seeds = [
+            int(p.seed) + (x if p.subseed_strength == 0 else 0)
+            for x in range(num_seeds)
+        ]
+
+    return all_seeds
+
 wildcard_manager = get_wildcard_manager()
 wildcards_tab.initialize(wildcard_manager)
 save_params.initialize()
@@ -57,11 +79,16 @@ settings.initialize()
 
 device = 0 if get_optimal_device() == "cuda" else -1
 
-def generate_prompts(prompt_generator, negative_prompt_generator, prompt, negative_prompt, num_prompts):
+
+def generate_prompts(
+    prompt_generator, negative_prompt_generator, prompt, negative_prompt, num_prompts
+):
     all_prompts = prompt_generator.generate(prompt, num_prompts)
     total_prompts = len(all_prompts)
 
-    all_negative_prompts = negative_prompt_generator.generate(negative_prompt, num_prompts)
+    all_negative_prompts = negative_prompt_generator.generate(
+        negative_prompt, num_prompts
+    )
 
     if len(all_negative_prompts) < total_prompts:
         all_negative_prompts = all_negative_prompts * (
@@ -72,8 +99,8 @@ def generate_prompts(prompt_generator, negative_prompt_generator, prompt, negati
 
     return all_prompts, all_negative_prompts
 
-class Script(scripts.Script):
 
+class Script(scripts.Script):
     def title(self):
         return f"Dynamic Prompts v{VERSION}"
 
@@ -172,7 +199,6 @@ class Script(scripts.Script):
                         value=True,
                         elem_id="disable-negative-prompt",
                     )
-                    
 
                 with gr.Accordion("Need help?", open=False):
                     info = gr.HTML(html)
@@ -191,15 +217,15 @@ class Script(scripts.Script):
 
                 with gr.Group():
                     with gr.Accordion("Advanced options", open=False):
-                        settings_info = gr.HTML("Some settings have been moved to the settings tab. Find them in the Dynamic Prompts section.")
+                        settings_info = gr.HTML(
+                            "Some settings have been moved to the settings tab. Find them in the Dynamic Prompts section."
+                        )
 
                         unlink_seed_from_prompt = gr.Checkbox(
                             label="Unlink seed from prompt",
                             value=False,
                             elem_id="unlink-seed-from-prompt",
                         )
-
-                        
 
                         use_fixed_seed = gr.Checkbox(
                             label="Fixed seed", value=False, elem_id="is-fixed-seed"
@@ -208,7 +234,7 @@ class Script(scripts.Script):
                         write_raw_template = gr.Checkbox(
                             label="Write raw prompt to image",
                             value=False,
-                            visible=False, # For some reason, removing this line causes Auto1111 to hang
+                            visible=False,  # For some reason, removing this line causes Auto1111 to hang
                             elem_id="write-raw-template",
                         )
 
@@ -219,11 +245,11 @@ class Script(scripts.Script):
                         )
 
                 write_prompts = gr.Checkbox(
-                    label="Write prompts to file", value=False, elem_id="write-prompts",
-                    visible=False  # For some reason, removing this line causes Auto1111 to hang
+                    label="Write prompts to file",
+                    value=False,
+                    elem_id="write-prompts",
+                    visible=False,  # For some reason, removing this line causes Auto1111 to hang
                 )
-
-
 
         return [
             is_enabled,
@@ -268,20 +294,13 @@ class Script(scripts.Script):
             return p
 
         self._p = p
-        context = p
 
         ignore_whitespace = opts.dp_ignore_whitespace
         write_prompts = opts.dp_write_prompts_to_file
 
         fix_seed(p)
 
-        original_prompt = p.all_prompts[0] if len(p.all_prompts) > 0 else p.prompt
-        original_negative_prompt = (
-            p.all_negative_prompts[0]
-            if len(p.all_negative_prompts) > 0
-            else p.negative_prompt
-        )
-
+        original_prompt, original_negative_prompt = get_prompts(p)
         original_seed = p.seed
         num_images = p.n_iter * p.batch_size
         combinatorial_batches = int(combinatorial_batches)
@@ -308,18 +327,18 @@ class Script(scripts.Script):
             generator = generator_builder.create_generator()
 
             if disable_negative_prompt:
-                generator_builder = (
-                    generator_builder
-                        .set_is_feeling_lucky(False)
-                        .set_is_magic_prompt(False)
-                        .set_is_attention_grabber(False)
-                )
-
+                generator_builder.disable_prompt_magic()
                 negative_generator = generator_builder.create_generator()
             else:
                 negative_generator = generator
 
-            all_prompts, all_negative_prompts = generate_prompts(generator, negative_generator, original_prompt, original_negative_prompt, num_images)
+            all_prompts, all_negative_prompts = generate_prompts(
+                generator,
+                negative_generator,
+                original_prompt,
+                original_negative_prompt,
+                num_images,
+            )
 
         except GeneratorException as e:
             logger.exception(e)
@@ -329,13 +348,7 @@ class Script(scripts.Script):
         updated_count = len(all_prompts)
         p.n_iter = math.ceil(updated_count / p.batch_size)
 
-        if use_fixed_seed:
-            all_seeds = [original_seed] * updated_count
-        else:
-            all_seeds = [
-                int(p.seed) + (x if p.subseed_strength == 0 else 0)
-                for x in range(updated_count)
-            ]
+        all_seeds = get_seeds(p, updated_count, use_fixed_seed)
 
         logger.info(
             f"Prompt matrix will create {updated_count} images in a total of {p.n_iter} batches."
@@ -371,6 +384,3 @@ class Script(scripts.Script):
 
         p.prompt = original_prompt
         p.seed = original_seed
-
-
-
