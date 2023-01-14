@@ -26,6 +26,7 @@ from prompts.generator_builder import GeneratorBuilder
 
 from ui import wildcards_tab, save_params
 
+VERSION = "2.3.4"
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -37,25 +38,24 @@ if is_debug:
 
 base_dir = Path(scripts.basedir())
 
-wildcard_dir = getattr(opts, "wildcard_dir", None)
+def get_wildcard_manager():
+    wildcard_dir = getattr(opts, "wildcard_dir", None)
+    if wildcard_dir is None:
+        wildcard_dir = base_dir / "wildcards"
+    else:
+        wildcard_dir = Path(wildcard_dir)
 
+    wildcard_manager = WildcardManager(wildcard_dir)
+    wildcard_manager.ensure_directory()
 
-if wildcard_dir is None:
-    WILDCARD_DIR = base_dir / "wildcards"
-else:
-    WILDCARD_DIR = Path(wildcard_dir)
+    return wildcard_manager
 
-VERSION = "2.3.4"
-
-
-wildcard_manager = WildcardManager(WILDCARD_DIR)
+wildcard_manager = get_wildcard_manager()
 wildcards_tab.initialize(wildcard_manager)
 save_params.initialize()
 settings.initialize()
 
 device = 0 if get_optimal_device() == "cuda" else -1
-
-generator_builder = GeneratorBuilder(wildcard_manager)
 
 def generate_prompts(prompt_generator, negative_prompt_generator, prompt, negative_prompt, num_prompts):
     all_prompts = prompt_generator.generate(prompt, num_prompts)
@@ -88,7 +88,7 @@ class Script(scripts.Script):
         html = html_path.open().read()
         html = Template(html).substitute(
             wildcard_html=wildcard_html,
-            WILDCARD_DIR=WILDCARD_DIR,
+            WILDCARD_DIR=wildcard_manager._path,
             VERSION=VERSION,
         )
 
@@ -373,4 +373,4 @@ class Script(scripts.Script):
         p.seed = original_seed
 
 
-wildcard_manager.ensure_directory()
+
