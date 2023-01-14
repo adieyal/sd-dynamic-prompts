@@ -35,6 +35,9 @@ class GeneratorBuilder:
         self._max_attention = 1.5
         self._device = 0
         self._ignore_whitespace = ignore_whitespace
+        self._unlink_seed_from_prompt = False
+        self._seed = -1
+        self._context = None
 
     def log_configuration(self):
         logger.debug(
@@ -90,12 +93,19 @@ class GeneratorBuilder:
 
         return self
 
-    def create_generator(
-        self,
-        original_seed,
-        context,
-        unlink_seed_from_prompt=False,
-    ):
+    def set_unlink_seed_from_prompt(self, unlink_seed_from_prompt=True):
+        self._unlink_seed_from_prompt = unlink_seed_from_prompt
+        return self
+
+    def set_seed(self, seed):
+        self._seed = seed
+        return self
+
+    def set_context(self, context):
+        self._context = context
+        return self
+
+    def create_generator(self):
 
         if self._is_dummy:
             return DummyGenerator()
@@ -104,12 +114,9 @@ class GeneratorBuilder:
             generator = FeelingLuckyGenerator()
 
         elif self._is_jinja_template:
-            generator = self.create_jinja_generator(context)
+            generator = self.create_jinja_generator(self._context)
         else:
-            generator = self.create_basic_generator(
-                original_seed,
-                unlink_seed_from_prompt,
-            )
+            generator = self.create_basic_generator()
 
         if self._is_magic_prompt:
             generator = MagicPromptGenerator(
@@ -117,7 +124,7 @@ class GeneratorBuilder:
                 self._device,
                 self._magic_prompt_length,
                 self._magic_temp_value,
-                seed=original_seed,
+                seed=self._seed,
             )
 
         if self._is_attention_grabber:
@@ -130,8 +137,6 @@ class GeneratorBuilder:
 
     def create_basic_generator(
         self,
-        original_seed: int,
-        unlink_seed_from_prompt: bool = False,
     ) -> PromptGenerator:
         if self._is_combinatorial:
             prompt_generator = CombinatorialPromptGenerator(self._wildcard_manager, ignore_whitespace=self._ignore_whitespace)
@@ -140,7 +145,7 @@ class GeneratorBuilder:
             )
         else:
             prompt_generator = RandomPromptGenerator(
-                self._wildcard_manager, original_seed, unlink_seed_from_prompt, ignore_whitespace=self._ignore_whitespace
+                self._wildcard_manager, self._seed, self._unlink_seed_from_prompt, ignore_whitespace=self._ignore_whitespace
             )
 
         return prompt_generator

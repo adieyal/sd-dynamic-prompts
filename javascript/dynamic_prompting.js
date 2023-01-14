@@ -11,7 +11,7 @@ onUiUpdate(function () {
     gradioApp().getElementById("is-fixed-seed").append("Use the same seed for all prompts in this batch")
     gradioApp().getElementById("write-prompts").append("Write all generated prompts to a file")
     gradioApp().getElementById("unlink-seed-from-prompt").append("If this is set, then random prompts are generated, even if the seed is the same.")
-    gradioApp().getElementById("disable-negative-prompt").append("Useful for I'm feeling lucky and Magic Prompt. If this is set, then negative prompts are not generated.")
+    gradioApp().getElementById("disable-negative-prompt").append("Don't use prompt magic on negative prompts.")
     gradioApp().getElementById("no-image-generation").append("Disable image generation. Useful if you only want to generate text prompts.")
     gradioApp().getElementById("is-attention-grabber").append("Add emphasis to a randomly selected keyword in the prompt.")
     gradioApp().getElementById("write-raw-template").append("Write template into image metadata.")

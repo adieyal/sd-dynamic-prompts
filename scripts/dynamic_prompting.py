@@ -45,7 +45,7 @@ if wildcard_dir is None:
 else:
     WILDCARD_DIR = Path(wildcard_dir)
 
-VERSION = "2.3.3"
+VERSION = "2.3.4"
 
 
 wildcard_manager = WildcardManager(WILDCARD_DIR)
@@ -57,6 +57,20 @@ device = 0 if get_optimal_device() == "cuda" else -1
 
 generator_builder = GeneratorBuilder(wildcard_manager)
 
+def generate_prompts(prompt_generator, negative_prompt_generator, prompt, negative_prompt, num_prompts):
+    all_prompts = prompt_generator.generate(prompt, num_prompts)
+    total_prompts = len(all_prompts)
+
+    all_negative_prompts = negative_prompt_generator.generate(negative_prompt, num_prompts)
+
+    if len(all_negative_prompts) < total_prompts:
+        all_negative_prompts = all_negative_prompts * (
+            total_prompts // len(all_negative_prompts) + 1
+        )
+
+    all_negative_prompts = all_negative_prompts[:total_prompts]
+
+    return all_prompts, all_negative_prompts
 
 class Script(scripts.Script):
 
@@ -130,27 +144,35 @@ class Script(scripts.Script):
                         elem_id="is-feelinglucky",
                     )
 
-                    is_attention_grabber = gr.Checkbox(
-                        label="Attention grabber",
-                        value=False,
-                        elem_id="is-attention-grabber",
-                    )
+                    with gr.Group():
+                        is_attention_grabber = gr.Checkbox(
+                            label="Attention grabber",
+                            value=False,
+                            elem_id="is-attention-grabber",
+                        )
 
-                    min_attention = gr.Slider(
-                        label="Minimum attention",
-                        value=1.1,
-                        minimum=-1,
-                        maximum=2,
-                        step=0.1,
-                    )
+                        min_attention = gr.Slider(
+                            label="Minimum attention",
+                            value=1.1,
+                            minimum=-1,
+                            maximum=2,
+                            step=0.1,
+                        )
 
-                    max_attention = gr.Slider(
-                        label="Maximum attention",
-                        value=1.5,
-                        minimum=-1,
-                        maximum=2,
-                        step=0.1,
+                        max_attention = gr.Slider(
+                            label="Maximum attention",
+                            value=1.5,
+                            minimum=-1,
+                            maximum=2,
+                            step=0.1,
+                        )
+
+                    disable_negative_prompt = gr.Checkbox(
+                        label="Don't apply to negative prompts",
+                        value=True,
+                        elem_id="disable-negative-prompt",
                     )
+                    
 
                 with gr.Accordion("Need help?", open=False):
                     info = gr.HTML(html)
@@ -177,11 +199,7 @@ class Script(scripts.Script):
                             elem_id="unlink-seed-from-prompt",
                         )
 
-                        disable_negative_prompt = gr.Checkbox(
-                            label="Disable negative prompt",
-                            value=False,
-                            elem_id="disable-negative-prompt",
-                        )
+                        
 
                         use_fixed_seed = gr.Checkbox(
                             label="Fixed seed", value=False, elem_id="is-fixed-seed"
@@ -266,13 +284,7 @@ class Script(scripts.Script):
 
         original_seed = p.seed
         num_images = p.n_iter * p.batch_size
-
-        try:
-            combinatorial_batches = int(combinatorial_batches)
-            if combinatorial_batches < 1:
-                combinatorial_batches = 1
-        except (ValueError, TypeError):
-            combinatorial_batches = 1
+        combinatorial_batches = int(combinatorial_batches)
 
         try:
             logger.debug("Creating generator")
@@ -288,28 +300,26 @@ class Script(scripts.Script):
                     is_magic_prompt, magic_prompt_length, magic_temp_value
                 )
                 .set_is_dummy(False)
+                .set_unlink_seed_from_prompt(unlink_seed_from_prompt)
+                .set_seed(original_seed)
+                .set_context(p)
             )
 
-            generator = generator_builder.create_generator(
-                original_seed, context, unlink_seed_from_prompt
-            )
-
-            all_prompts = generator.generate(original_prompt, num_images)
-            total_prompts = len(all_prompts)
+            generator = generator_builder.create_generator()
 
             if disable_negative_prompt:
-                all_negative_prompts = [""]
+                generator_builder = (
+                    generator_builder
+                        .set_is_feeling_lucky(False)
+                        .set_is_magic_prompt(False)
+                        .set_is_attention_grabber(False)
+                )
+
+                negative_generator = generator_builder.create_generator()
             else:
-                all_negative_prompts = generator.generate(
-                    original_negative_prompt, num_images
-                )
+                negative_generator = generator
 
-            if len(all_negative_prompts) < total_prompts:
-                all_negative_prompts = all_negative_prompts * (
-                    total_prompts // len(all_negative_prompts) + 1
-                )
-
-            all_negative_prompts = all_negative_prompts[:total_prompts]
+            all_prompts, all_negative_prompts = generate_prompts(generator, negative_generator, original_prompt, original_negative_prompt, num_images)
 
         except GeneratorException as e:
             logger.exception(e)

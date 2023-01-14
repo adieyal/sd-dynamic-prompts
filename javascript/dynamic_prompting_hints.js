@@ -40,7 +40,7 @@ E.g. in ./outputs/txt2img-images/.`.trim(),
 "Don't generate images": "Be sure to check the 'Write prompts to file' checkbox if you don't want to lose the generated prompts. Note, one image is still generated.",
 "Enable Jinja2 templates": "Jinja2 templates are an expressive alternative to the standard syntax. See the Help section below for instructions.",
 "Unlink seed from prompt": "Check this if you want to generate random prompts, even if your seed is fixed",
-"Disable negative prompt": "Ignore the negative prompt. Magic Prompt and I'm feeling lucky generate negative prompts by default, check this to disable that functionality.",
+"Don't apply to negative prompts": "Don't use prompt magic on negative prompts.",
 
 "Fixed seed": `
 Select this if you want to use the same seed for every generated image.
