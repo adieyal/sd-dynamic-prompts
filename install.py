@@ -30,27 +30,27 @@ def ensure_installed(package):
     if not isinstalled:
         launch.run_pip(f"install {package}", desc=f"{package}")
 
-def ensure_version(package, version):
+def ensure_version(dependency, version):
+    package = clean_package_name(dependency)
     isinstalled = launch.is_installed(package)
     if isinstalled:
         installed_version = importlib_metadata.version(package)
         if installed_version == version:
             return
 
-    launch.run_pip(f"install {package}=={version}", desc=f"{package}=={version}")
+    launch.run_pip(f"install {dependency}=={version}", desc=f"{dependency}=={version}")
 
 
 def check_versions():
-    
     req_file = Path(__file__).parent / "requirements.txt"
     for row in open(req_file):
         splits = row.split("==")
         try:
             if len(splits) == 2:
-                package = splits[0].strip()
+                dependency = splits[0].strip()
                 version = splits[1].strip()
 
-                ensure_version(clean_package_name(package), version)
+                ensure_version(dependency, version)
             else:
                 package = row.strip()
                 ensure_installed(package)
