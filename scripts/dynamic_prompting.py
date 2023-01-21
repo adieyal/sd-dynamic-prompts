@@ -25,7 +25,7 @@ from prompts.generator_builder import GeneratorBuilder
 
 from ui import wildcards_tab, save_params
 
-VERSION = "2.3.7"
+VERSION = "2.3.8"
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -315,10 +315,13 @@ class Script(scripts.Script):
         original_prompt, original_negative_prompt = get_prompts(p)
         original_seed = p.seed
         num_images = p.n_iter * p.batch_size
-        if max_generations == 0 and is_combinatorial:
-            num_images = None
-        else:
-            num_images = max_generations
+
+        if is_combinatorial:
+            if max_generations == 0:
+                num_images = None
+            else:
+                num_images = max_generations
+                
         combinatorial_batches = int(combinatorial_batches)
 
         try:
