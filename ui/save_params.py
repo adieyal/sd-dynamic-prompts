@@ -1,11 +1,11 @@
 from __future__ import annotations
 import logging
+from typing import Dict, Any
 
 from modules import script_callbacks
 from modules.script_callbacks import ImageSaveParams
 from modules.shared import opts
-
-from ui import constants
+from modules.generation_parameters_copypaste import parse_generation_parameters
 
 logger = logging.getLogger(__name__)
 
@@ -21,5 +21,12 @@ def on_before_image_saved(image_save_params: ImageSaveParams):
     except Exception as e:
         logger.exception("Error save metadata to image")
 
+def remove_template_from_infotext(infotext: str, parameters: Dict[str, Any]):
+    prompt = parameters["Prompt"].split("Template:")[0].strip()
+    new_parameters = parse_generation_parameters(prompt)
+
+    parameters.update(new_parameters)
+
 def initialize():
     script_callbacks.on_before_image_saved(on_before_image_saved)
+    script_callbacks.on_infotext_pasted(remove_template_from_infotext)
