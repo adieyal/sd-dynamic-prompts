@@ -1,6 +1,5 @@
 from __future__ import annotations
 import sys
-print(sys.executable)
 import logging
 from string import Template
 from pathlib import Path
@@ -26,7 +25,7 @@ from prompts.generator_builder import GeneratorBuilder
 
 from ui import wildcards_tab, save_params
 
-VERSION = "2.3.5"
+VERSION = "2.3.6"
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)

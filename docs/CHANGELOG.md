@@ -1,3 +1,4 @@
+- 2.3.6 Using a Dummy Generator for attention grabber if spacy is not available
 - 2.3.5 Fixed extras requirement from dynamicprompts
 - 2.3.4 Changed the don't apply to negative prompts checkbox to apply to prompt magic only.
 - 2.3.3 Added the extension devilkkw wildcards collection - check it out [here](https://github.com/adieyal/sd-dynamic-prompts/tree/main/collections/devilkkw)
