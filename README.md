@@ -141,7 +141,9 @@ That way you can isolate the effect of each film type on a particular scene. Her
 <img src="images/filmtypes.jpg"/>
 
 ## Magic Prompt
-Using [Gustavosta](https://huggingface.co/Gustavosta/MagicPrompt-Stable-Diffusion)'s MagicPrompt model, automatically generate new prompts from the input. Trained on 80,000 prompts from [Lexica.art](lexica.art), it can help give you interesting new prompts on a given subject. Here are some automatically generated variations for "dogs playing football":
+Use one of a number of prompt generation models to spice up your prompt.
+
+Using [Gustavosta](https://huggingface.co/Gustavosta/MagicPrompt-Stable-Diffusion)'s MagicPrompt model, Trained on 80,000 prompts from [Lexica.art](lexica.art), it can help give you interesting new prompts on a given subject. Here are some automatically generated variations for "dogs playing football":
 
 > dogs playing football, in the streets of a japanese town at night, with people watching in wonder, in the style of studio ghibli and makoto shinkai, highly detailed digital art, trending on artstation
 
@@ -151,7 +153,22 @@ Using [Gustavosta](https://huggingface.co/Gustavosta/MagicPrompt-Stable-Diffusio
 
 This is compatible with the wildcard syntax described above.
 
-The first time you use it, the model is downloaded. It is approximately 500mb and so will take some time depending on how fast your connection is. It will also take a few seconds on first activation as the model is loaded into memory. Note, if you're low in VRAM, you might get a Cuda error. My GPU uses less than 8GB by YMMV.
+### Other models
+* [daspartho/prompt-extend (~500mb)](https://huggingface.co/daspartho/prompt-extend)
+* [succinctly/text2image-prompt-generator (~600mb)](https://huggingface.co/succinctly/text2image-prompt-generator) - Trained on Midjourney prompts
+* [microsoft/Promptist (~500mb)](https://huggingface.co/microsoft/Promptist) - Read the paper [here](https://arxiv.org/abs/2212.09611)
+* [AUTOMATIC/promptgen-lexart (~300mb)](https://huggingface.co/AUTOMATIC/promptgen-lexart) - Finetuned using 134,819 prompts from lexica.art
+* [AUTOMATIC/promptgen-majinai-safe (~300mb)](https://huggingface.co/AUTOMATIC/promptgen-majinai-safe) - 1,654 prompts from majinai.art
+* [AUTOMATIC/promptgen-majinai-unsafe (~300mb)](https://huggingface.co/AUTOMATIC/promptgen-majinai-unsafe) - 825 prompts from majinai.art (NSFW)
+* [Gustavosta/MagicPrompt-Dalle](https://huggingface.co/Gustavosta/MagicPrompt-Dalle)
+* [kmewhort/stable-diffusion-prompt-bolster (~500mb)](https://huggingface.co/kmewhort/stable-diffusion-prompt-bolster),
+* [Ar4ikov/gpt2-650k-stable-diffusion-prompt-generator (~500mb)](Ar4ikov/gpt2-650k-stable-diffusion-prompt-generator),
+* [Ar4ikov/gpt2-medium-650k-stable-diffusion-prompt-generator (~1.4gb)](https://huggingface.co/Ar4ikov/gpt2-medium-650k-stable-diffusion-prompt-generator),
+* [crumb/bloom-560m-RLHF-SD2-prompter-aesthetic (~1.1gb)](https://huggingface.co/crumb/bloom-560m-RLHF-SD2-prompter-aesthetic),
+* [Meli/GPT2-Prompt (~500mb)](https://huggingface.co/Meli/GPT2-Prompt),
+* [DrishtiSharma/StableDiffusion-Prompt-Generator-GPT-Neo-125M (~550mb)](https://huggingface.co/DrishtiSharma/StableDiffusion-Prompt-Generator-GPT-Neo-125M)
+
+The first time you use a model, it is downloaded. It is approximately 500mb and so will take some time depending on how fast your connection is. It will also take a few seconds on first activation as the model is loaded into memory. Note, if you're low in VRAM, you might get a Cuda error. My GPU uses less than 8GB by YMMV.
 
 <img src="images/magic_prompt.png"/>
 You can control the maximum prompt length with the **Max magic prompt length** slider. **Magic prompt creativity** can adjust the generated prompt but you will need to experiment with this setting.

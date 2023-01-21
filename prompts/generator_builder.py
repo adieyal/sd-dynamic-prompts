@@ -26,11 +26,12 @@ from dynamicprompts.generators.magicprompt import MagicPromptGenerator
 
 try:
     from dynamicprompts.generators.attentiongenerator import AttentionGenerator
-    raise NameError()
 except NameError:
     AttentionGenerator = DummyAttentionGenerator
 
 logger = logging.getLogger(__name__)
+
+DEFAULT_MAGIC_MODEL = "Gustavosta/MagicPrompt-Stable-Diffusion"
 
 
 class GeneratorBuilder:
@@ -100,8 +101,9 @@ class GeneratorBuilder:
         return self
 
     def set_is_magic_prompt(
-        self, is_magic_prompt=True, magic_prompt_length=100, magic_temp_value=0.7, device=0
+        self, is_magic_prompt=True, magic_model=DEFAULT_MAGIC_MODEL, magic_prompt_length=100, magic_temp_value=0.7, device=0
     ):
+        self._magic_model = magic_model
         self._magic_prompt_length = magic_prompt_length
         self._magic_temp_value = magic_temp_value
         self._is_magic_prompt = is_magic_prompt
@@ -144,9 +146,10 @@ class GeneratorBuilder:
         if self._is_magic_prompt:
             generator = MagicPromptGenerator(
                 generator,
-                self._device,
-                self._magic_prompt_length,
-                self._magic_temp_value,
+                model_name=self._magic_model,
+                device=self._device,
+                max_prompt_length=self._magic_prompt_length,
+                temperature=self._magic_temp_value,
                 seed=self._seed,
             )
 

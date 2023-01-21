@@ -15,6 +15,7 @@ onUiUpdate(function () {
     gradioApp().getElementById("no-image-generation").append("Disable image generation. Useful if you only want to generate text prompts. (1 image will still be generated to keep Auto1111 happy.).")
     gradioApp().getElementById("is-attention-grabber").append("Add emphasis to a randomly selected keyword in the prompt.")
     gradioApp().getElementById("write-raw-template").append("Write template into image metadata.")
+    gradioApp().getElementById("magic-prompt-model").append("Note: Each model will download between 300mb and 1.4gb of data on first use.")
 
     sddp_ui = new SDDPUI()
     sddp_loaded = true;
