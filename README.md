@@ -60,9 +60,7 @@ In the LastBen colab (and perhaps others), you might see an error similar to thi
 `!python -m pip install dynamicprompts`
 
 ## Compatible Scripts
-Dynamic Prompts works particularly well with the following scripts:
-- [randomize](https://github.com/stysmmaker/stable-diffusion-webui-randomize) if you want to randomise non-prompt parameters like steps, width/height, sample, CFG scale, etc. Both scripts can work concurrently.
-- X/Y Plot - setting Dynamic Prompts to <a href="#combinatorial-generation">combinatorial mode</a> while using X/Y Plot, lets you exhaustively test prompt and paramter variations simultaneously.
+Dynamic Prompts works particularly well with X/Y Plot - setting Dynamic Prompts to <a href="#combinatorial-generation">combinatorial mode</a> while using X/Y Plot, lets you exhaustively test prompt and paramter variations simultaneously.
 
 
 ## Template syntax
