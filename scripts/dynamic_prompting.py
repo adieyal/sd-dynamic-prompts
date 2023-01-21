@@ -25,7 +25,7 @@ from prompts.generator_builder import GeneratorBuilder
 
 from ui import wildcards_tab, save_params
 
-VERSION = "2.3.6"
+VERSION = "2.3.7"
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -136,6 +136,16 @@ class Script(scripts.Script):
                         value=False,
                         elem_id="is-combinatorial",
                     )
+
+                    max_generations = gr.Slider(
+                        label="Max generations (0 = all combinations - the batch count value is ignored)",
+                        minimum=0,
+                        maximum=1000,
+                        step=1,
+                        value=0,
+                        elem_id="max-generations",
+                    )
+
                     combinatorial_batches = gr.Slider(
                         label="Combinatorial batches",
                         minimum=1,
@@ -267,6 +277,7 @@ class Script(scripts.Script):
             disable_negative_prompt,
             enable_jinja_templates,
             no_image_generation,
+            max_generations,
         ]
 
     def process(
@@ -287,6 +298,7 @@ class Script(scripts.Script):
         disable_negative_prompt,
         enable_jinja_templates,
         no_image_generation,
+        max_generations,
     ):
 
         if not is_enabled:
@@ -303,6 +315,10 @@ class Script(scripts.Script):
         original_prompt, original_negative_prompt = get_prompts(p)
         original_seed = p.seed
         num_images = p.n_iter * p.batch_size
+        if max_generations == 0 and is_combinatorial:
+            num_images = None
+        else:
+            num_images = max_generations
         combinatorial_batches = int(combinatorial_batches)
 
         try:
