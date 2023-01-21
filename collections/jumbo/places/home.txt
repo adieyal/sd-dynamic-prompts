@@ -1,0 +1,29 @@
+bathroom
+bedroom
+dining room
+family room
+kitchen
+living room
+lounge
+study
+veranda
+balcony
+conservatory
+courtyard
+garden
+patio
+terrace
+garage
+gym
+laundry
+scullery
+toilet
+shed
+hallway
+landing
+staircase
+basement
+cellar
+loft
+attic
+granny flat
