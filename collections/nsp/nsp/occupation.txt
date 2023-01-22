@@ -1,0 +1,133 @@
+Activist
+Air Force Intelligence
+Air Force Security Forces
+Air Force Weather
+Air Traffic Controllers
+Aircraft Maintenance Technicians
+Aircrew
+Airman,annalist
+Anarchist
+Artillery
+Artilleryman
+Calvary
+Cashier
+Cavalryman
+Communications
+Communications Specialist
+Communist
+Customer Service Representative
+Democrat
+Department Manager
+Diplomat
+Engineer
+Infantry
+Infantryman
+Intelligence
+Intelligence Analyst
+Judge
+Lawyer
+Liaison Officer
+Libertarian
+Lobbyist
+Logisticics
+Maintenance
+Marine
+Medic
+Merchandiser
+Ordnance
+Pararescuemen
+Pilot
+Progressive
+Protester
+Psychic
+Recon
+Reconnaissance Specialist
+Republican
+Retail Associate
+Retail Clerk
+Retail Sales Associate
+Retail Stocker
+Retail Supervisor
+Sailor
+Sniper
+Socialist
+Soldier
+SpecOps
+Spy
+Store Manager
+Supply
+Tank Crewman
+Tanker
+Terrorist
+Traditionalist
+Uber driver
+Wingman
+able-bodied seaman
+artist
+athlete
+barber
+bicyclist
+bus driver
+businessmen
+carpenter
+cashier
+chef
+client
+colonel
+commander
+commuter
+consumer
+corporal
+doctor
+driver
+electrician
+employer
+firefighter
+garbage collector
+general
+gunner's mate
+housekeeper
+janitor
+landscaper
+lawyer
+lawyers
+leader
+lieutenant
+listener
+mail carrier
+mechanic
+musician
+nanny
+navigator
+officer
+passenger
+patient
+pedestrian
+pilot
+plitician
+plumber
+police officer
+private
+quartermaster
+radarman
+registered nurse
+seaman
+sergeant
+shopper
+software engineer
+sonarman
+speaker
+specialist
+storekeeper
+strategist
+student
+tactician
+taxi driver
+teacher
+trooper
+waiter
+waitress
+web developer
+worker
+writer
+yeoman
