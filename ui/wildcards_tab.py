@@ -223,6 +223,9 @@ def save_file_callback(js):
             with path.open("w") as f:
                 contents = contents.splitlines()
                 for c in contents:
-                    f.write(c.strip() + os.linesep)
+                    l = c.strip()
+                    if len(l) == 0:
+                        continue
+                    f.write(l + os.linesep)
     except Exception as e:
         logger.exception(e)
