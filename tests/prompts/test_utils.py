@@ -1,5 +1,6 @@
 from prompts.utils import slugify
 
+
 class TestSlugify:
     def test_identity(self):
         assert slugify("foo") == "foo"

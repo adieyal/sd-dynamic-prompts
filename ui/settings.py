@@ -1,5 +1,4 @@
-from modules import script_callbacks
-from modules import shared
+from modules import script_callbacks, shared
 
 
 def on_ui_settings():

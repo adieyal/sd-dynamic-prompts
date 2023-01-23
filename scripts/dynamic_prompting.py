@@ -1,29 +1,23 @@
 from __future__ import annotations
-import sys
+
 import logging
-from string import Template
-from pathlib import Path
 import math
+from pathlib import Path
+from string import Template
 
 import gradio as gr
-
 import modules.scripts as scripts
-from modules.processing import process_images, fix_seed, Processed
-from modules.shared import opts, OptionInfo
-from modules.devices import get_optimal_device
-
-from ui import settings
-
-from dynamicprompts.wildcardmanager import WildcardManager
-from prompts.uicreation import UiCreation
-
-
 from dynamicprompts.generators.promptgenerator import GeneratorException
-from prompts.utils import slugify, get_unique_path
+from dynamicprompts.wildcardmanager import WildcardManager
+from modules.devices import get_optimal_device
+from modules.processing import fix_seed
+from modules.shared import opts
+
 from prompts import prompt_writer
 from prompts.generator_builder import GeneratorBuilder
-
-from ui import wildcards_tab, save_params
+from prompts.uicreation import UiCreation
+from prompts.utils import get_unique_path, slugify
+from ui import save_params, settings, wildcards_tab
 
 VERSION = "2.4.1"
 
@@ -238,7 +232,7 @@ class Script(scripts.Script):
                     )
 
                 with gr.Accordion("Need help?", open=False):
-                    info = gr.HTML(html)
+                    gr.HTML(html)
 
                 enable_jinja_templates = False
                 with gr.Group():
@@ -250,11 +244,11 @@ class Script(scripts.Script):
                         )
 
                         with gr.Accordion("Help for Jinja2 templates", open=False):
-                            jinja_info = gr.HTML(jinja_help)
+                            gr.HTML(jinja_help)
 
                 with gr.Group():
                     with gr.Accordion("Advanced options", open=False):
-                        settings_info = gr.HTML(
+                        gr.HTML(
                             "Some settings have been moved to the settings tab. Find them in the Dynamic Prompts section."
                         )
 
@@ -268,7 +262,7 @@ class Script(scripts.Script):
                             label="Fixed seed", value=False, elem_id="is-fixed-seed"
                         )
 
-                        write_raw_template = gr.Checkbox(
+                        gr.Checkbox(
                             label="Write raw prompt to image",
                             value=False,
                             visible=False,  # For some reason, removing this line causes Auto1111 to hang
@@ -281,7 +275,7 @@ class Script(scripts.Script):
                             elem_id="no-image-generation",
                         )
 
-                write_prompts = gr.Checkbox(
+                gr.Checkbox(
                     label="Write prompts to file",
                     value=False,
                     elem_id="write-prompts",
