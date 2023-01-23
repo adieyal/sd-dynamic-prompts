@@ -1,5 +1,5 @@
 from glob import glob
-import os
+
 misc = []
 
 with open("misc.txt", "w") as outfile:

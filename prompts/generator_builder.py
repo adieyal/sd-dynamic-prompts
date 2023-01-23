@@ -1,19 +1,16 @@
 from __future__ import annotations
-from typing import List
+
 import logging
 
 from dynamicprompts.generators import (
+    BatchedCombinatorialPromptGenerator,
+    CombinatorialPromptGenerator,
     DummyGenerator,
     FeelingLuckyGenerator,
-    RandomPromptGenerator,
-    CombinatorialPromptGenerator,
-    BatchedCombinatorialPromptGenerator,
+    JinjaGenerator,
     PromptGenerator,
-    JinjaGenerator
+    RandomPromptGenerator,
 )
-
-logger = logging.getLogger(__name__)
-
 from dynamicprompts.generators.magicprompt import MagicPromptGenerator
 
 try:
@@ -22,6 +19,8 @@ except NameError:
     from prompts.dummy_attention_generator import (
         DummyAttentionGenerator as AttentionGenerator,
     )
+
+logger = logging.getLogger(__name__)
 
 DEFAULT_MAGIC_MODEL = "Gustavosta/MagicPrompt-Stable-Diffusion"
 

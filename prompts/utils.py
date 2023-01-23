@@ -1,8 +1,9 @@
-import unicodedata
-import re
 import math
 import random
+import re
+import unicodedata
 from pathlib import Path
+
 
 def slugify(value, allow_unicode=False, max_length=50):
     """
