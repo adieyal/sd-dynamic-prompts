@@ -1,11 +1,10 @@
 from __future__ import annotations
+
 import logging
 
 from modules import script_callbacks
 from modules.script_callbacks import ImageSaveParams
 from modules.shared import opts
-
-from ui import constants
 
 logger = logging.getLogger(__name__)
 
@@ -18,7 +17,7 @@ def on_before_image_saved(image_save_params: ImageSaveParams):
 
             if image_save_params.p.negative_prompt != "":
                 image_save_params.pnginfo["parameters"] += "\nNegative Template:" + image_save_params.p.negative_prompt
-    except Exception as e:
+    except Exception:
         logger.exception("Error save metadata to image")
 
 def initialize():

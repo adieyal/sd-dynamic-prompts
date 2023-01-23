@@ -1,19 +1,16 @@
 from __future__ import annotations
-from typing import List
+
 import logging
 
 from dynamicprompts.generators import (
+    BatchedCombinatorialPromptGenerator,
+    CombinatorialPromptGenerator,
     DummyGenerator,
     FeelingLuckyGenerator,
-    RandomPromptGenerator,
-    CombinatorialPromptGenerator,
-    BatchedCombinatorialPromptGenerator,
+    JinjaGenerator,
     PromptGenerator,
-    JinjaGenerator
+    RandomPromptGenerator,
 )
-
-logger = logging.getLogger(__name__)
-
 from dynamicprompts.generators.magicprompt import MagicPromptGenerator
 
 try:
@@ -22,6 +19,8 @@ except NameError:
     from prompts.dummy_attention_generator import (
         DummyAttentionGenerator as AttentionGenerator,
     )
+
+logger = logging.getLogger(__name__)
 
 DEFAULT_MAGIC_MODEL = "Gustavosta/MagicPrompt-Stable-Diffusion"
 
@@ -38,6 +37,7 @@ class GeneratorBuilder:
         self._is_attention_grabber = False
 
         self._combinatorial_batches = 1
+        self._magic_model = None
         self._magic_prompt_length = 100
         self._magic_temp_value = 0.7
         self._min_attention = 1.1
@@ -93,7 +93,12 @@ class GeneratorBuilder:
         return self
 
     def set_is_magic_prompt(
-        self, is_magic_prompt=True, magic_model=DEFAULT_MAGIC_MODEL, magic_prompt_length=100, magic_temp_value=0.7, device=0
+        self,
+        is_magic_prompt=True,
+        magic_model=DEFAULT_MAGIC_MODEL,
+        magic_prompt_length=100,
+        magic_temp_value=0.7,
+        device=0,
     ):
         self._magic_model = magic_model
         self._magic_prompt_length = magic_prompt_length
@@ -157,13 +162,20 @@ class GeneratorBuilder:
         self,
     ) -> PromptGenerator:
         if self._is_combinatorial:
-            prompt_generator = CombinatorialPromptGenerator(self._wildcard_manager, ignore_whitespace=self._ignore_whitespace)
+            prompt_generator = CombinatorialPromptGenerator(
+                self._wildcard_manager,
+                ignore_whitespace=self._ignore_whitespace,
+            )
             prompt_generator = BatchedCombinatorialPromptGenerator(
-                prompt_generator, self._combinatorial_batches
+                prompt_generator,
+                batches=self._combinatorial_batches,
             )
         else:
             prompt_generator = RandomPromptGenerator(
-                self._wildcard_manager, self._seed, self._unlink_seed_from_prompt, ignore_whitespace=self._ignore_whitespace
+                self._wildcard_manager,
+                seed=self._seed,
+                unlink_seed_from_prompt=self._unlink_seed_from_prompt,
+                ignore_whitespace=self._ignore_whitespace,
             )
 
         return prompt_generator

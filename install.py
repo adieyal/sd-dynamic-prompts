@@ -1,7 +1,8 @@
-import sys
 import logging
+import sys
 from pathlib import Path
 
+import launch
 
 logger = logging.getLogger(__name__)
 
@@ -10,7 +11,6 @@ if sys.version_info < (3, 8):
 else:
     import importlib.metadata as importlib_metadata
 
-import launch
 
 def clean_package_name(s):
     s = s.split("==")[0].strip()
@@ -25,10 +25,12 @@ def clean_package_name(s):
 
     return s
 
+
 def ensure_installed(package):
     isinstalled = launch.is_installed(package)
     if not isinstalled:
         launch.run_pip(f"install {package}", desc=f"{package}")
+
 
 def ensure_version(dependency, version):
     package = clean_package_name(dependency)

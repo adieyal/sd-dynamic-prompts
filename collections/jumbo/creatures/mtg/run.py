@@ -1,6 +1,6 @@
 import shutil
-from glob import glob
 from pathlib import Path
+
 
 def clean(s):
     return s.replace(" ", "_").replace("'", "").replace('"', "").lower()
