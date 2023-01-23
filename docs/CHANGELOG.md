@@ -1,3 +1,4 @@
+- 2.4.3 Added a script to import noodle prompts - thanks to @akx
 - 2.4.2 Code cleanup by @akx
 - 2.4.1 Fixed an annoying bug when copying collections into the wildcard directory. Wildcards were copied directly into the wildcards root directory, instead of the root of their collections. This fix may affect previously saved prompts that expect wildcard files to be in the root.
 - 2.4.0 Upgraded dynamicprompts to v0.3.0 and provided alternative models to Magic Prompt
