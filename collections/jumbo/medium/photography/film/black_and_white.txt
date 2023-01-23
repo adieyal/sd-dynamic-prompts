@@ -1,0 +1,75 @@
+# Black and white film
+# Sourced from https://www.bhphotovideo.com/explora/photography/hands-review/black-and-white-film-roundup
+
+# Kodak
+Tri-X 320       # Lower contrast profile than Tri-X 400. Smoother grain structure.
+Tri-X 400       # Classic. Grainy
+T-Max 100       # Similar to T-Max 100
+T-Max 400       # Contemporary. Fine grain, Smooth
+T-Max 3200      # Low-light. salt and pepper look of high speed film
+
+# Ilford
+
+Pan F Plus      # 50 Iso, very slow, no grain, broad tonal range
+FP4 Plus	# Medium speed, fine grain, normal constrast, wide exposure latitude
+HP5 Plus	# Classic, versitile
+Delta 100	# Fine grain
+Delta 400	# Fine grain
+Delta 3200	# Fine grain, low light also daytime
+SFX 200         # Extended red sensitivity - infrared effects with red filter
+XP2 Super       # Chromogenic film
+Ortho Plus      # Orthochromatic film. Sensitive to blue and green light.
+
+# Rollei
+Infrared 400    # Infrared film
+Retro 80S       # Extended red sensitivity, reduce haze or fog. Smooth blemishes.
+Retro 400S      # Extended red sensitivity, reduce haze or fog. Smooth blemishes.
+RPX 25	        # Solid
+RPX 100	        # Solid
+RPX 400	        # Solid
+Superpan 200	# Extended red sensitivity, technical film appearance, high contrast and moderate grain
+Ortho 25	# Blue and green sensitive. Slow film, fine grain, high sharpness.
+Copex Rapid	# Extremely high sharpness and resolution. High contrast and full-range tones.
+
+# Lomography
+Earl Grey 100	# Smooth grain, broad tonal ranges. Simple
+Earl Grey 400	# Smooth grain, broad tonal ranges. Simple
+Potsdam Kino 100 # Classic, historic look.
+Berlin Kino 400 # Similar to Potsdam Kino 100
+
+# Adox
+Silvermax 100	# Wide tonal range
+Scala 160	# Meant for black and white transparencies. Deep tonal range.
+HR-50		# Extended red sensitivity, unique infrared effects. High sharpness, little grain.
+CMS 20 II	# High sharpness, fine resolution, little grain.
+
+# Foma
+100 Classic	# Finely grained
+200 Creative	# Finely grained
+400 Action	# Finely grained
+Fomapan R100	# intended for slides
+Retropan 320 soft # Low contrast, high grain structure
+
+# Agfa
+APX 100
+APX 400
+
+# Arista
+EDU Ultra 100
+EDU Ultra 200
+EDU Ultra 400
+
+Bergger Pancro 400 # Fine grain and high resolution, medium contrast
+
+# CatLABS
+X Film 800	 
+X Film 320
+
+# Cinestill
+BwXX Double-X 500T # Subtle tonality, fine grain, high sharpness
+
+# Japan Camera Hunter
+StreetPan 400
+
+# Shanghai Film
+GP3 100
