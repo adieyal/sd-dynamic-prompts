@@ -1,3 +1,6 @@
+- 2.4.1 Fixed an annoying bug when copying collections into the wildcard directory. Wildcards were copied directly into the wildcards root directory, instead of the root of their collections. This fix may affect previously saved prompts that expect wildcard files to be in the root.
+- 2.4.0 Upgraded dynamicprompts to v0.3.0 and provided alternative models to Magic Prompt
+- 2.3.8 Fixed a bug introduced in 2.3.8 that breaks random generation
 - 2.3.7 Added a maximum generation slider to combinatorial mode - this replaces the batch_count * batch size calculation used previously.
 - 2.3.6 Using a Dummy Generator for attention grabber if spacy is not available
 - 2.3.5 Fixed extras requirement from dynamicprompts

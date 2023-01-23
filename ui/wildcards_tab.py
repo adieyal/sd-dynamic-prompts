@@ -174,7 +174,7 @@ def copy_collection_callback(overwrite_checkbox, collection):
         collection_path = collection_paths[collection]
         for file in collection_path.glob("**/*"):
             if file.is_file():
-                target_path = wildcard_manager._path / file.relative_to(collection_path)
+                target_path = wildcard_manager._path / collection / file.relative_to(collection_path)
                 if not target_path.exists() or overwrite_checkbox:
                     target_path.parent.mkdir(parents=True, exist_ok=True)
                     shutil.copy(file, target_path)
