@@ -1,18 +1,16 @@
 from __future__ import annotations
-import logging
-import shutil
-import random
-import os
-from modules import script_callbacks
-import modules.scripts as scripts
-import gradio as gr
+
 import json
-from pathlib import Path
-from glob import glob
+import logging
+import os
+import random
+import shutil
 
-from send2trash import send2trash
-
+import gradio as gr
+import modules.scripts as scripts
 from dynamicprompts.wildcardmanager import WildcardManager
+from modules import script_callbacks
+from send2trash import send2trash
 
 logger = logging.getLogger(__name__)
 
@@ -71,7 +69,7 @@ def on_ui_tabs():
             with gr.Row():
                 with gr.Column():
                     gr.HTML(header_html)
-                    html = gr.HTML("", elem_id="html_id")
+                    gr.HTML("", elem_id="html_id")
                     collection_dropdown = gr.Dropdown(
                         choices=available_collections,
                         type="value",
@@ -97,7 +95,7 @@ def on_ui_tabs():
                             "Delete all wildcards", elem_id="delete_tree_button"
                         )
                 with gr.Column():
-                    file_name = gr.Textbox(
+                    gr.Textbox(
                         "",
                         elem_id="file_name_id",
                         interactive=False,
@@ -112,7 +110,7 @@ def on_ui_tabs():
                     )
                     save_button = gr.Button("Save wildcards", full_width=True)
 
-        hidden_hierarchy = gr.Textbox(
+        gr.Textbox(
             json.dumps(tree_json), elem_id="tree_textbox", visible=False
         )
         hidden_textbox = gr.Textbox("", elem_id="scratch_textbox", visible=False)

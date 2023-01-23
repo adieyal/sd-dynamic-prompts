@@ -1,6 +1,7 @@
 from __future__ import annotations
+
 import logging
-from typing import Dict, Any
+from typing import Any
 
 from modules import script_callbacks
 from modules.script_callbacks import ImageSaveParams
@@ -18,10 +19,10 @@ def on_before_image_saved(image_save_params: ImageSaveParams):
 
             if image_save_params.p.negative_prompt != "":
                 image_save_params.pnginfo["parameters"] += "\nNegative Template:" + image_save_params.p.negative_prompt
-    except Exception as e:
+    except Exception:
         logger.exception("Error save metadata to image")
 
-def remove_template_from_infotext(infotext: str, parameters: Dict[str, Any]):
+def remove_template_from_infotext(infotext: str, parameters: dict[str, Any]):
     new_parameters = {}
 
     if "Prompt" in parameters and "Template:" in parameters["Prompt"]:
