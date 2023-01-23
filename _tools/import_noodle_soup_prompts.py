@@ -8,9 +8,10 @@ duplicate entries.
 You would then import these via the WebUI to your wildcards collection.
 """
 import collections
-import requests
-from pathlib import Path
 import logging
+from pathlib import Path
+
+import requests
 
 logger = logging.getLogger(__name__)
 
