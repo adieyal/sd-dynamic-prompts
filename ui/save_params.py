@@ -22,7 +22,6 @@ def on_before_image_saved(image_save_params: ImageSaveParams):
         logger.exception("Error save metadata to image")
 
 def remove_template_from_infotext(infotext: str, parameters: Dict[str, Any]):
-    # import pdb; pdb.set_trace()
     new_parameters = {}
 
     if "Prompt" in parameters and "Template:" in parameters["Prompt"]:
