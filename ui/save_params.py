@@ -22,8 +22,17 @@ def on_before_image_saved(image_save_params: ImageSaveParams):
         logger.exception("Error save metadata to image")
 
 def remove_template_from_infotext(infotext: str, parameters: Dict[str, Any]):
-    prompt = parameters["Prompt"].split("Template:")[0].strip()
-    new_parameters = parse_generation_parameters(prompt)
+    # import pdb; pdb.set_trace()
+    new_parameters = {}
+
+    if "Prompt" in parameters and "Template:" in parameters["Prompt"]:
+        prompt = parameters["Prompt"].split("Template:")[0].strip()
+        new_parameters = parse_generation_parameters(prompt)
+    elif "Negative prompt" in parameters and "Template:" in parameters["Negative prompt"]:
+        prompt = parameters["Negative prompt"].split("Template:")[0].strip()
+        new_parameters = parse_generation_parameters(prompt)
+        new_parameters["Negative prompt"] = new_parameters["Prompt"]
+        new_parameters["Prompt"] = parameters["Prompt"]
 
     parameters.update(new_parameters)
 
