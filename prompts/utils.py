@@ -1,4 +1,3 @@
-import math
 import random
 import re
 import unicodedata
@@ -33,6 +32,6 @@ def get_unique_path(directory: Path, original_filename, suffix="txt") -> Path:
         path = (directory / filename).with_suffix("." + suffix)
         if not path.exists():
             return path
-        filename = f"{slugify(original_filename)}-{math.floor(random.random() * 1000)}"
+        filename = f"{slugify(original_filename)}-{random.randint(0, 1000)}"
 
     raise Exception("Failed to find unique path")
