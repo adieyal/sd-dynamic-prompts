@@ -4,7 +4,12 @@ Jinja2 templates is an experimental feature that enables you to write prompts wi
 To enable the feature, open the advanced accordion and select __Enable Jinja2 templates__.
 <img src="images/jinja_templates.png">
 
+Update: In addition to the guide below, make sure to read this [excellent tutorial](https://www.reddit.com/r/StableDiffusion/comments/10jgmtk/dynamic_prompts_and_jinja2_templates_in_automatic/) by @cbterry on Reddit.
+
+## Quick Start
+
 Here are some examples of what you can do with Jinja2 templates
+
 ### Literals
 Literal strings work as expected:
 
