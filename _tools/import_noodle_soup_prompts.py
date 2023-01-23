@@ -57,7 +57,7 @@ def main():
                     else:
                         can_overwrite = False
                     
-                if can_overwrite is None or can_overwrite == True:
+                if can_overwrite is None or can_overwrite is True:
                     count_files += 1
                     with filename.open("w", encoding="utf-8") as f:
                         for entry in sorted(entries):
