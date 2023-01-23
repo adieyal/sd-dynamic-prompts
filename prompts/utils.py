@@ -29,7 +29,7 @@ def slugify(value, allow_unicode=False, max_length=50):
 
 def get_unique_path(directory: Path, original_filename, suffix="txt") -> Path:
     filename = original_filename
-    for i in range(1000):
+    for _ in range(1000):
         path = (directory / filename).with_suffix("." + suffix)
         if not path.exists():
             return path
