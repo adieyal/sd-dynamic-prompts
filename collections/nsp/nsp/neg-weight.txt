@@ -1,0 +1,32 @@
+Artifacts
+Banding
+Blocked
+Blurry
+Copyright
+DOF
+Distorted
+Grainy
+Image compression
+Noisy
+Out of Focus
+Out of Frame
+Pixelated
+Poor quality
+Poorly lit
+Text
+Truncated
+Unclear
+Watermark
+asymmetry
+disjointed
+disorganized
+incoherent
+jpeg artifact
+jumbled
+low quality
+low resolution
+shaky
+tacky
+tasteless
+too bright
+too dark

@@ -1,0 +1,42 @@
+12-bit color palette
+16-bit color palette
+18-bit color palette
+24-bit color palette
+3-bit color palette
+30-bit color palette
+32-bit color palette
+4-bit color palette
+6-bit color palette
+8-bit color palette
+9-bit color palette
+Amstrad CPC  color palette
+Apple II palette
+Apple IIgs color palette
+Atari 2600 color palette
+Atari ST color palette
+CGA for IBM-PC palette
+Commodore 64 palette
+Commodore Amiga OCS color palette
+Commodore Plus/4 color palette
+Commodore VIC-20 palette
+EGA for IBM PC/AT color palette
+Famicom/NES color palette
+Fujitsu FM-77 AV 40 color palette
+MSX systems color palette
+MSX2 systems color palette
+Mattel Aquarius palette
+Monochrome color palette
+NEC PC-Engine color palette
+Nintendo Game Boy Advance color palette
+Nintendo Game Boy Color palette
+Nintendo Game Boy color palette
+Sega Game Gear color palette
+Sega Genesis color palette
+Sega Master System color palette
+Sega Mega Drive color palette
+Sharp X68000 color palette
+Super Famicom/SNES color palette
+Teletext palette
+Thomson MO5 color palette
+TurboGrafx-16 color palette
+ZX Spectrum palette

@@ -1,0 +1,26 @@
+Sapphire
+amber
+amethyst
+aquamarine
+black
+blue
+brown
+coral
+dark brown
+gold
+green
+grey
+grey-blue
+hazel
+ice blue
+jade
+light blue
+peach
+pink
+purple
+red
+ruby
+silver
+teal
+turquoise
+yellow
