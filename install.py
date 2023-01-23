@@ -2,7 +2,7 @@ import logging
 import sys
 from pathlib import Path
 
-import launch
+import launch  # from AUTOMATIC1111
 
 logger = logging.getLogger(__name__)
 

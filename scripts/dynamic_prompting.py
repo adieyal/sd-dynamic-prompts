@@ -19,7 +19,7 @@ from prompts.uicreation import UiCreation
 from prompts.utils import get_unique_path, slugify
 from ui import save_params, settings, wildcards_tab
 
-VERSION = "2.4.1"
+VERSION = "2.4.2"
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)

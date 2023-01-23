@@ -19,3 +19,6 @@ ignore = [
     "E501", # Line length
     "B905",
 ]
+unfixable = [
+    "B007", # Loop control variable not used within the loop body
+]
