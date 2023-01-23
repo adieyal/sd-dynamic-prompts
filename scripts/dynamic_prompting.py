@@ -25,7 +25,7 @@ from prompts.generator_builder import GeneratorBuilder
 
 from ui import wildcards_tab, save_params
 
-VERSION = "2.4.0"
+VERSION = "2.4.1"
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
