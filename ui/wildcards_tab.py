@@ -8,6 +8,7 @@ import shutil
 
 import gradio as gr
 import modules.scripts as scripts
+from dynamicprompts.constants import DEFAULT_ENCODING
 from dynamicprompts.wildcardmanager import WildcardManager
 from modules import script_callbacks
 from send2trash import send2trash
@@ -202,7 +203,7 @@ def delete_tree_callback(confirm_delete):
 def receive_tree_event(s):
     js = json.loads(s)
     path = wildcard_manager.wildcard_to_path(js["name"])
-    return path.read_text()
+    return path.read_text(encoding=DEFAULT_ENCODING)
 
 
 def save_file_callback(js):
