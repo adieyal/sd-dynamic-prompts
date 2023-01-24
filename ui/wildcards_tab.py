@@ -60,7 +60,7 @@ def on_ui_tabs():
         <li>1. Create your wildcard library by copying a collection using the dropdown below.</li>
         <li>2. Click on any of the files that appear in the tree to edit them.</li>
         <li>3. Use the wildcard in your script by typing the name of the file or copying the text from the Wildcards file text box</li>
-        <li>4. Optional - add your own wildcards files to the {wildcard_manager._path} folder</li>
+        <li>4. Optional - add your own wildcards files to the {wildcard_manager.path} folder</li>
     </ol>
     """
 
@@ -173,7 +173,7 @@ def copy_collection_callback(overwrite_checkbox, collection):
         collection_path = collection_paths[collection]
         for file in collection_path.glob("**/*"):
             if file.is_file():
-                target_path = wildcard_manager._path / collection / file.relative_to(collection_path)
+                target_path = wildcard_manager.path / collection / file.relative_to(collection_path)
                 if not target_path.exists() or overwrite_checkbox:
                     target_path.parent.mkdir(parents=True, exist_ok=True)
                     shutil.copy(file, target_path)
@@ -191,8 +191,8 @@ def load_tree_callback():
 
 def delete_tree_callback(confirm_delete):
     if confirm_delete == "True":
-        send2trash(wildcard_manager._path)
-        wildcard_manager._path.mkdir(parents=True, exist_ok=True)
+        send2trash(wildcard_manager.path)
+        wildcard_manager.path.mkdir(parents=True, exist_ok=True)
         hierarchy = load_hierarchy()
 
         return create_payload("load tree", "success", json.dumps(hierarchy))

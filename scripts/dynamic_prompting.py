@@ -126,7 +126,7 @@ class Script(scripts.Script):
         html = html_path.open().read()
         html = Template(html).substitute(
             wildcard_html=wildcard_html,
-            WILDCARD_DIR=wildcard_manager._path,
+            WILDCARD_DIR=wildcard_manager.path,
             VERSION=VERSION,
         )
 
