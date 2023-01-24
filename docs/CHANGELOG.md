@@ -1,3 +1,4 @@
+- 2.4.4 Upgraded dynamicprompts to v0.3.2 which includes a security fix for wildcards preventing search outside of the extension's directory. thnkas to @akx
 - 2.4.3 Added a script to import noodle prompts - thanks to @akx
 - 2.4.2 Code cleanup by @akx
 - 2.4.1 Fixed an annoying bug when copying collections into the wildcard directory. Wildcards were copied directly into the wildcards root directory, instead of the root of their collections. This fix may affect previously saved prompts that expect wildcard files to be in the root.
