@@ -201,10 +201,8 @@ def delete_tree_callback(confirm_delete):
 
 def receive_tree_event(s):
     js = json.loads(s)
-    values = wildcard_manager.get_all_values(js["name"])
     path = wildcard_manager.wildcard_to_path(js["name"])
-    values = path.read_text()
-    return values
+    return path.read_text()
 
 
 def save_file_callback(js):

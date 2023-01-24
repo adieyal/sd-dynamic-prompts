@@ -234,7 +234,6 @@ class Script(scripts.Script):
                 with gr.Accordion("Need help?", open=False):
                     gr.HTML(html)
 
-                enable_jinja_templates = False
                 with gr.Group():
                     with gr.Accordion("Jinja2 templates", open=False):
                         enable_jinja_templates = gr.Checkbox(
