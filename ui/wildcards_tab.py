@@ -15,6 +15,7 @@ from send2trash import send2trash
 logger = logging.getLogger(__name__)
 
 wildcard_manager: WildcardManager
+tree_json: list = []
 
 BASE_DIR = scripts.basedir()
 
@@ -30,8 +31,7 @@ def initialize(manager: WildcardManager):
 
 def load_hierarchy():
     hierarchy = wildcard_manager.get_wildcard_hierarchy()
-    tree_json = format_json(hierarchy)
-    return tree_json
+    return format_json(hierarchy)
 
 
 def format_json(js):
