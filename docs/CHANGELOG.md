@@ -1,3 +1,4 @@
+- 2.5.0 Upgraded to dynamicprompts v0.4.0. Magic Prompts now has a regex block to remove unwanted wildcards - thanks to @akx.
 - 2.4.4 Upgraded dynamicprompts to v0.3.2 which includes a security fix for wildcards preventing search outside of the extension's directory. thnkas to @akx
 - 2.4.3 Added a script to import noodle prompts - thanks to @akx
 - 2.4.2 Code cleanup by @akx
