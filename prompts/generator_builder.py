@@ -11,14 +11,8 @@ from dynamicprompts.generators import (
     PromptGenerator,
     RandomPromptGenerator,
 )
+from dynamicprompts.generators.attentiongenerator import AttentionGenerator
 from dynamicprompts.generators.magicprompt import MagicPromptGenerator
-
-try:
-    from dynamicprompts.generators.attentiongenerator import AttentionGenerator
-except NameError:
-    from prompts.dummy_attention_generator import (
-        DummyAttentionGenerator as AttentionGenerator,
-    )
 
 logger = logging.getLogger(__name__)
 
@@ -151,11 +145,14 @@ class GeneratorBuilder:
             )
 
         if self._is_attention_grabber:
-            generator = AttentionGenerator(
-                generator,
-                min_attention=self._min_attention,
-                max_attention=self._max_attention,
-            )
+            try:
+                generator = AttentionGenerator(
+                    generator,
+                    min_attention=self._min_attention,
+                    max_attention=self._max_attention,
+                )
+            except ImportError as ie:
+                logger.error(f"Not using AttentionGenerator: {ie}")
         return generator
 
     def create_basic_generator(
