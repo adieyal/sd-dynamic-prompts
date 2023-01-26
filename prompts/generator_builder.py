@@ -14,9 +14,9 @@ from dynamicprompts.generators import (
 from dynamicprompts.generators.attentiongenerator import AttentionGenerator
 from dynamicprompts.generators.magicprompt import MagicPromptGenerator
 
-logger = logging.getLogger(__name__)
+from prompts.consts import DEFAULT_MAGIC_MODEL
 
-DEFAULT_MAGIC_MODEL = "Gustavosta/MagicPrompt-Stable-Diffusion"
+logger = logging.getLogger(__name__)
 
 
 class GeneratorBuilder:
@@ -34,6 +34,7 @@ class GeneratorBuilder:
         self._magic_model = None
         self._magic_prompt_length = 100
         self._magic_temp_value = 0.7
+        self._magic_blocklist_regex = None
         self._min_attention = 1.1
         self._max_attention = 1.5
         self._device = 0
@@ -54,6 +55,7 @@ class GeneratorBuilder:
             combinatorial_batches: {self._combinatorial_batches}
             magic_prompt_length: {self._magic_prompt_length}
             magic_temp_value: {self._magic_temp_value}
+            magic_blocklist_regex: {self._magic_blocklist_regex}
             is_attention_grabber: {self._is_attention_grabber}
             min_attention: {self._min_attention}
             max_attention: {self._max_attention}
@@ -93,10 +95,12 @@ class GeneratorBuilder:
         magic_prompt_length=100,
         magic_temp_value=0.7,
         device=0,
+        magic_blocklist_regex: str | None = None,
     ):
         self._magic_model = magic_model
         self._magic_prompt_length = magic_prompt_length
         self._magic_temp_value = magic_temp_value
+        self._magic_blocklist_regex = magic_blocklist_regex
         self._is_magic_prompt = is_magic_prompt
         self._device = device
 
@@ -142,6 +146,7 @@ class GeneratorBuilder:
                 max_prompt_length=self._magic_prompt_length,
                 temperature=self._magic_temp_value,
                 seed=self._seed,
+                blocklist_regex=self._magic_blocklist_regex,
             )
 
         if self._is_attention_grabber:

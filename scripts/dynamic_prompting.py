@@ -14,6 +14,7 @@ from modules.processing import fix_seed
 from modules.shared import opts
 
 from prompts import prompt_writer
+from prompts.consts import MAGIC_PROMPT_MODELS
 from prompts.generator_builder import GeneratorBuilder
 from prompts.uicreation import UiCreation
 from prompts.utils import get_unique_path, slugify
@@ -72,23 +73,6 @@ save_params.initialize()
 settings.initialize()
 
 device = 0 if get_optimal_device() == "cuda" else -1
-
-MAGIC_PROMPT_MODELS = [
-    "Gustavosta/MagicPrompt-Stable-Diffusion",
-    "daspartho/prompt-extend",
-    "succinctly/text2image-prompt-generator",
-    "microsoft/Promptist",
-    "AUTOMATIC/promptgen-lexart", 
-    "AUTOMATIC/promptgen-majinai-safe", 
-    "AUTOMATIC/promptgen-majinai-unsafe",
-    "kmewhort/stable-diffusion-prompt-bolster",
-    "Gustavosta/MagicPrompt-Dalle",
-    "Ar4ikov/gpt2-650k-stable-diffusion-prompt-generator",
-    "Ar4ikov/gpt2-medium-650k-stable-diffusion-prompt-generator",
-    "crumb/bloom-560m-RLHF-SD2-prompter-aesthetic",
-    "Meli/GPT2-Prompt",
-    "DrishtiSharma/StableDiffusion-Prompt-Generator-GPT-Neo-125M"
-]
 
 
 def generate_prompts(
@@ -196,6 +180,16 @@ class Script(scripts.Script):
                             elem_id="magic-prompt-model",
                         )
 
+                        magic_blocklist_regex = gr.Textbox(
+                            label="Magic prompt blocklist regex",
+                            value="",
+                            elem_id="magic-prompt-blocklist-regex",
+                            placeholder=(
+                                "Regular expression pattern for blocking terms out of the generated prompt. Applied case-insensitively. "
+                                'For instance, to block both "purple" and "interdimensional", you could use the pattern "purple|interdimensional".'
+                            ),
+                        )
+
                     is_feeling_lucky = gr.Checkbox(
                         label="I'm feeling lucky",
                         value=False,
@@ -299,6 +293,7 @@ class Script(scripts.Script):
             no_image_generation,
             max_generations,
             magic_model,
+            magic_blocklist_regex,
         ]
 
     def process(
@@ -320,7 +315,8 @@ class Script(scripts.Script):
         enable_jinja_templates,
         no_image_generation,
         max_generations,
-        magic_model
+        magic_model,
+        magic_blocklist_regex: str | None,
     ):
 
         if not is_enabled:
@@ -357,7 +353,11 @@ class Script(scripts.Script):
                 .set_is_jinja_template(enable_jinja_templates)
                 .set_is_combinatorial(is_combinatorial, combinatorial_batches)
                 .set_is_magic_prompt(
-                    is_magic_prompt, magic_model, magic_prompt_length, magic_temp_value
+                    is_magic_prompt,
+                    magic_model=magic_model,
+                    magic_prompt_length=magic_prompt_length,
+                    magic_temp_value=magic_temp_value,
+                    magic_blocklist_regex=magic_blocklist_regex,
                 )
                 .set_is_dummy(False)
                 .set_unlink_seed_from_prompt(unlink_seed_from_prompt)
