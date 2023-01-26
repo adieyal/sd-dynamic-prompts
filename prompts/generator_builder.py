@@ -14,9 +14,9 @@ from dynamicprompts.generators import (
 from dynamicprompts.generators.attentiongenerator import AttentionGenerator
 from dynamicprompts.generators.magicprompt import MagicPromptGenerator
 
-logger = logging.getLogger(__name__)
+from prompts.consts import DEFAULT_MAGIC_MODEL
 
-DEFAULT_MAGIC_MODEL = "Gustavosta/MagicPrompt-Stable-Diffusion"
+logger = logging.getLogger(__name__)
 
 
 class GeneratorBuilder:

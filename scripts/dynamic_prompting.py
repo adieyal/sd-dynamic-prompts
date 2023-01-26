@@ -14,6 +14,7 @@ from modules.processing import fix_seed
 from modules.shared import opts
 
 from prompts import prompt_writer
+from prompts.consts import MAGIC_PROMPT_MODELS
 from prompts.generator_builder import GeneratorBuilder
 from prompts.uicreation import UiCreation
 from prompts.utils import get_unique_path, slugify
@@ -72,23 +73,6 @@ save_params.initialize()
 settings.initialize()
 
 device = 0 if get_optimal_device() == "cuda" else -1
-
-MAGIC_PROMPT_MODELS = [
-    "Gustavosta/MagicPrompt-Stable-Diffusion",
-    "daspartho/prompt-extend",
-    "succinctly/text2image-prompt-generator",
-    "microsoft/Promptist",
-    "AUTOMATIC/promptgen-lexart", 
-    "AUTOMATIC/promptgen-majinai-safe", 
-    "AUTOMATIC/promptgen-majinai-unsafe",
-    "kmewhort/stable-diffusion-prompt-bolster",
-    "Gustavosta/MagicPrompt-Dalle",
-    "Ar4ikov/gpt2-650k-stable-diffusion-prompt-generator",
-    "Ar4ikov/gpt2-medium-650k-stable-diffusion-prompt-generator",
-    "crumb/bloom-560m-RLHF-SD2-prompter-aesthetic",
-    "Meli/GPT2-Prompt",
-    "DrishtiSharma/StableDiffusion-Prompt-Generator-GPT-Neo-125M"
-]
 
 
 def generate_prompts(
