@@ -19,7 +19,7 @@ Literal strings work as expected:
 Similar to the standard `{A|B|C}` syntax
 
     I love {{ choice('red', 'blue', 'green') }} roses
-    
+
 This will create one prompt and randomly choose one of the three colors.
 
 ### [Iterations](https://jinja.palletsprojects.com/en/3.1.x/templates/#for)

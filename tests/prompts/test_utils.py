@@ -26,6 +26,3 @@ class TestSlugify:
     def test_max_length(self):
         assert len(slugify("foo" * 100)) == 50
         assert len(slugify("foo" * 100, max_length=25)) == 25
-
-
-

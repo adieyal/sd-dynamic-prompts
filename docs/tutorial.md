@@ -65,7 +65,7 @@ Nesting variants can quickly make your prompt template hard to read. Luckily, Dy
 
 Of course, we're not limited to only one variant, we can add a little more variation like this:
 
-    A {diamond|ruby|emerald} ring set on a {classic|thin|thick} 
+    A {diamond|ruby|emerald} ring set on a {classic|thin|thick}
     {
         {rose|yellow|white} gold
         | platinum
@@ -81,7 +81,7 @@ This template could produce any of these prompts:
 
 That second prompt isn't grammatically correct, it doesn't really matter to Stable Diffusion, but if you prefer correct grammar, you can write something like:
 
-    {A diamond|A ruby|An emerald} ring set on a {classic|thin|thick} 
+    {A diamond|A ruby|An emerald} ring set on a {classic|thin|thick}
     {
         {rose|yellow|white} gold
         | platinum
@@ -120,14 +120,14 @@ We place this file inside the extension's wildcard folder. This can be found in 
 
 Now our prompt changes to:
 
-    A __gems__ ring set on a {classic|thin|thick} 
+    A __gems__ ring set on a {classic|thin|thick}
     {
         {rose|yellow|white} gold
         | platinum
     }
     band
 
-`__gems__` is a wildcard and will act as a variant the uses every gem in gems.txt. Note, the name of the wildcard is the same as the name of the file, i.e. gems.txt without the .txt at the end. We then add a double underscore `__` to the beginning and end of the wildcard. 
+`__gems__` is a wildcard and will act as a variant the uses every gem in gems.txt. Note, the name of the wildcard is the same as the name of the file, i.e. gems.txt without the .txt at the end. We then add a double underscore `__` to the beginning and end of the wildcard.
 
 Neat!
 
@@ -154,11 +154,11 @@ By default Dynamic Prompts generates random prompts from our template. For each 
 
     The total number of potential prompts is  10 * 3 * 5 = 150 different prompts.
 
-What if we wanted to generate all of them? In that case we change to combinatorial mode. 
+What if we wanted to generate all of them? In that case we change to combinatorial mode.
 
 <img src="../images/tutorial/combinatorial.png">
 
-In combinatorial mode, `batch count` is interpreted differently. In random mode, `batch count` represented the total number of prompts to generate, in combinatorial mode, it means _AT MOST_ 10 prompts. 
+In combinatorial mode, `batch count` is interpreted differently. In random mode, `batch count` represented the total number of prompts to generate, in combinatorial mode, it means _AT MOST_ 10 prompts.
 
 If our template was simply `A diamond ring set on a {gold|platinum} band`, then regardless of what we set batch count to, Dynamic Prompts will only generate two prompts. On the other hand if your `gems.txt` and `precious_metals.txt` files were very long, say 50 gems and 20 metals, you could then generate 1000 different prompts. The reason for setting the upper bound is to prevent accidentally generating far more prompts than you expect.
 
@@ -221,7 +221,7 @@ Here dynamic prompts will choose 2, 3, or 4 artists.
 
 ## Magic Prompts
 
-When you look at prompts that people post online, you will often notice a number of modifiers related to lighting, resolution, camera type etc. When you're starting out, you might feel overwhelmed by these modifiers. The magic prompt functionality is a fun way to automatically add modifiers to your prompt. You can experiment, but a good way to start is to use a very simple prompt, e.g. 
+When you look at prompts that people post online, you will often notice a number of modifiers related to lighting, resolution, camera type etc. When you're starting out, you might feel overwhelmed by these modifiers. The magic prompt functionality is a fun way to automatically add modifiers to your prompt. You can experiment, but a good way to start is to use a very simple prompt, e.g.
 
     A mech-warrior in a post-apocalyptic setting.
 
@@ -269,7 +269,7 @@ Secondly, if you were to look for this prompt on the Lexica.art website, you wou
 
 ## Attention grabber
 
-Another way of adding a touch of variation to your images to by changing emphasis of various terms in the prompt. Attention grabber randomly assigns emphasis to an existing prompt. 
+Another way of adding a touch of variation to your images to by changing emphasis of various terms in the prompt. Attention grabber randomly assigns emphasis to an existing prompt.
 
 Starting with a previous I'm feeling lucky prompt:
 
@@ -277,7 +277,7 @@ Starting with a previous I'm feeling lucky prompt:
 
 <img src="../images/tutorial/attention-grabber.png">
 
-We add randomly add emphasis. For these images, I kept the seed constant so that you can see the impact of changing emphasis without changing any other settings. 
+We add randomly add emphasis. For these images, I kept the seed constant so that you can see the impact of changing emphasis without changing any other settings.
 
     a detailed manga illustration character full body portrait of a dark haired cyborg anime man who has a red mechanical eye, trending on artstation, digital art, 4 k resolution, detailed, high quality, sharp focus, hq artwork, insane detail, concept art, character concept, character illustration, (full body illustration:1.58), cinematic, dramatic lighting
 

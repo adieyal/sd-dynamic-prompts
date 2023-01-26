@@ -28,5 +28,3 @@ class UiCreation:
     def probe(self) -> str:
         wildcards, hierarchy = self._wildcard_manager.get_wildcard_hierarchy()
         return self.write(wildcards, hierarchy)
-
-

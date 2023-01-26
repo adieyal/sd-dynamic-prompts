@@ -74,7 +74,6 @@ settings.initialize()
 
 device = 0 if get_optimal_device() == "cuda" else -1
 
-
 def generate_prompts(
     prompt_generator, negative_prompt_generator, prompt, negative_prompt, num_prompts
 ):
@@ -174,7 +173,7 @@ class Script(scripts.Script):
 
                         magic_model = gr.Dropdown(
                             MAGIC_PROMPT_MODELS,
-                            value=MAGIC_PROMPT_MODELS[0], 
+                            value=MAGIC_PROMPT_MODELS[0],
                             multiselect=False,
                             label="Magic prompt model",
                             elem_id="magic-prompt-model",
@@ -339,7 +338,7 @@ class Script(scripts.Script):
                 num_images = None
             else:
                 num_images = max_generations
-                
+
         combinatorial_batches = int(combinatorial_batches)
 
         try:
