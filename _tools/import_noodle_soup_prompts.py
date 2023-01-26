@@ -43,16 +43,22 @@ def main():
     collections_dir = current_path / "collections"
 
     if not collections_dir.exists():
-        print("Could not find the collections directory. You should run this from the root of the repository")
+        print(
+            "Could not find the collections directory. You should run this from the root of the repository",
+        )
     else:
         for tag_group_name, tags_in_group in sorted(grouped_tags.items()):
-            tag_group_name = "nsp" if len(tags_in_group) == 1 else f"nsp-{tag_group_name}"
+            tag_group_name = (
+                "nsp" if len(tags_in_group) == 1 else f"nsp-{tag_group_name}"
+            )
             for tag, entries in sorted(tags_in_group):
                 filename = collections_dir / f"./nsp/{tag_group_name}/{tag}.txt"
                 filename.parent.mkdir(parents=True, exist_ok=True)
 
                 if can_overwrite is None and filename.exists():
-                    answer = input(f"Skipping {filename} as it already exists. Should we overwrite existing files? (y/n)")
+                    answer = input(
+                        f"Skipping {filename} as it already exists. Should we overwrite existing files? (y/n)",
+                    )
                     if answer.strip().lower() == "y":
                         can_overwrite = True
                     else:
@@ -72,7 +78,9 @@ def main():
         print("")
         print(f"{count_files} files copied to {collections_dir}")
         if count_files > 0:
-            print("You should now import these via the WebUI to your wildcards collection using the Wildcards Manager tab.")
+            print(
+                "You should now import these via the WebUI to your wildcards collection using the Wildcards Manager tab.",
+            )
 
 
 if __name__ == "__main__":

@@ -56,6 +56,7 @@ def get_prompts(p):
 
     return original_prompt, original_negative_prompt
 
+
 def get_seeds(p, num_seeds, use_fixed_seed):
     if use_fixed_seed:
         all_seeds = [p.seed] * num_seeds
@@ -67,6 +68,7 @@ def get_seeds(p, num_seeds, use_fixed_seed):
 
     return all_seeds
 
+
 wildcard_manager = get_wildcard_manager()
 wildcards_tab.initialize(wildcard_manager)
 save_params.initialize()
@@ -74,14 +76,20 @@ settings.initialize()
 
 device = 0 if get_optimal_device() == "cuda" else -1
 
+
 def generate_prompts(
-    prompt_generator, negative_prompt_generator, prompt, negative_prompt, num_prompts
+    prompt_generator,
+    negative_prompt_generator,
+    prompt,
+    negative_prompt,
+    num_prompts,
 ):
     all_prompts = prompt_generator.generate(prompt, num_prompts)
     total_prompts = len(all_prompts)
 
     all_negative_prompts = negative_prompt_generator.generate(
-        negative_prompt, num_prompts
+        negative_prompt,
+        num_prompts,
     )
 
     if len(all_negative_prompts) < total_prompts:
@@ -152,7 +160,9 @@ class Script(scripts.Script):
                 with gr.Accordion("Prompt Magic", open=False):
                     with gr.Group():
                         is_magic_prompt = gr.Checkbox(
-                            label="Magic prompt", value=False, elem_id="is-magicprompt"
+                            label="Magic prompt",
+                            value=False,
+                            elem_id="is-magicprompt",
                         )
 
                         magic_prompt_length = gr.Slider(
@@ -241,7 +251,7 @@ class Script(scripts.Script):
                 with gr.Group():
                     with gr.Accordion("Advanced options", open=False):
                         gr.HTML(
-                            "Some settings have been moved to the settings tab. Find them in the Dynamic Prompts section."
+                            "Some settings have been moved to the settings tab. Find them in the Dynamic Prompts section.",
                         )
 
                         unlink_seed_from_prompt = gr.Checkbox(
@@ -251,7 +261,9 @@ class Script(scripts.Script):
                         )
 
                         use_fixed_seed = gr.Checkbox(
-                            label="Fixed seed", value=False, elem_id="is-fixed-seed"
+                            label="Fixed seed",
+                            value=False,
+                            elem_id="is-fixed-seed",
                         )
 
                         gr.Checkbox(
@@ -347,7 +359,9 @@ class Script(scripts.Script):
                 GeneratorBuilder(wildcard_manager, ignore_whitespace=ignore_whitespace)
                 .set_is_feeling_lucky(is_feeling_lucky)
                 .set_is_attention_grabber(
-                    is_attention_grabber, min_attention, max_attention
+                    is_attention_grabber,
+                    min_attention,
+                    max_attention,
                 )
                 .set_is_jinja_template(enable_jinja_templates)
                 .set_is_combinatorial(is_combinatorial, combinatorial_batches)
@@ -391,14 +405,16 @@ class Script(scripts.Script):
         all_seeds = get_seeds(p, updated_count, use_fixed_seed)
 
         logger.info(
-            f"Prompt matrix will create {updated_count} images in a total of {p.n_iter} batches."
+            f"Prompt matrix will create {updated_count} images in a total of {p.n_iter} batches.",
         )
 
         try:
 
             if write_prompts:
                 prompt_filename = get_unique_path(
-                    Path(p.outpath_samples), slugify(original_prompt), suffix="csv"
+                    Path(p.outpath_samples),
+                    slugify(original_prompt),
+                    suffix="csv",
                 )
                 prompt_writer.write_prompts(
                     prompt_filename,

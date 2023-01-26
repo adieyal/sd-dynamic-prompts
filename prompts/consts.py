@@ -14,6 +14,6 @@ MAGIC_PROMPT_MODELS = [
     "Ar4ikov/gpt2-medium-650k-stable-diffusion-prompt-generator",
     "crumb/bloom-560m-RLHF-SD2-prompter-aesthetic",
     "Meli/GPT2-Prompt",
-    "DrishtiSharma/StableDiffusion-Prompt-Generator-GPT-Neo-125M"
+    "DrishtiSharma/StableDiffusion-Prompt-Generator-GPT-Neo-125M",
 ]
 DEFAULT_MAGIC_MODEL = MAGIC_PROMPT_MODELS[0]
