@@ -3,9 +3,7 @@ minversion = "7.0"
 pythonpath = [
     ".",
 ]
-collect_ignore = [
-    "collections",
-]
+addopts = "--ignore=collections"
 
 [tool.ruff]
 target-version = "py310"
