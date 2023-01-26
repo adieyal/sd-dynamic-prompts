@@ -12,6 +12,7 @@ target-version = "py310"
 select = [
     "B",
     "C",
+    "COM",
     "E",
     "F",
     "I",

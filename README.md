@@ -1,7 +1,7 @@
-# Stable Diffusion Dynamic Prompts extension 
+# Stable Diffusion Dynamic Prompts extension
 A custom extension for [AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) that implements an expressive template language for random or combinatorial prompt generation along with features to support deep wildcard directory structures.
 
-<p align="center">                                                                                         
+<p align="center">
     <a href="docs/SYNTAX.md"><img src="images/icon-syntax.png" valign="middle" style="height:60px;margin-right:10px"/></a>
     <a href="docs/tutorial.md"><img src="images/icon-tutorial.png" valign="middle" style="height:60px;margin-right:10px"/></a>
     <a href="docs/CHANGELOG.md"><img src="images/icon-changelog.png" valign="middle" style="height:60px"/></a>
@@ -52,7 +52,7 @@ The extension can be installed directly from within the **Extensions** tab withi
 You can also install it manually by running the following command from within the webui directory:
 
 	git clone https://github.com/adieyal/sd-dynamic-prompting/ extensions/dynamic-prompts
-	
+
 ### Troubleshooting
 
 In the LastBen colab (and perhaps others), you might see an error similar to this: `ModuleNotFoundError: No module named 'dynamicprompts'`. There seems to be an issue causing extensions that rely on install.py from being installed properly. A workaround is to run this command before you start the webui:
@@ -216,7 +216,7 @@ The collections directory contains modifier libraries that you can use as is or 
 - [parrotzone](https://github.com/adieyal/sd-dynamic-prompts/tree/main/collections/parrotzone)
 - [devilkkw](https://github.com/adieyal/sd-dynamic-prompts/tree/main/collections/devilkkw)
 
-Jumbo is a very large collection of wildcards across many categories including aesthetics, appearance, artists, medium, style, and time. It is a work in progress, but aims to provide good coverage of various modifier categories. 
+Jumbo is a very large collection of wildcards across many categories including aesthetics, appearance, artists, medium, style, and time. It is a work in progress, but aims to provide good coverage of various modifier categories.
 
 Parrotzone is a far smaller and more manageable collection sourced from https://proximacentaurib.notion.site/e28a4f8d97724f14a784a538b8589e7d?v=42948fd8f45c4d47a0edfc4b78937474.
 
@@ -230,7 +230,7 @@ If you're using a Unix/Linux O/S, you can easily create a symlink to the relevan
 ## Contributing
 If you're interested in contributing to the development of this extension, here are some features I would like to implement:
 
-1. **Saved templates** - [publicprompts.art](https://publicprompts.art/) produces great prompt templates. e.g. 
+1. **Saved templates** - [publicprompts.art](https://publicprompts.art/) produces great prompt templates. e.g.
 
 > Funky pop Yoda figurine, made of plastic, product studio shot, on a white background, diffused lighting, centered
 

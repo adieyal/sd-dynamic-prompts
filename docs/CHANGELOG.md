@@ -27,7 +27,7 @@
 - 2.0.0 Migrated to using the dynamicprompts library
 - 1.5.17 Better handling of missing `__wildcard__` files
 - 1.5.16 Fixed issue cause by literals adjacent to wildcards, e.g. ,`__colours__` or `(__colours__)`
-- 1.5.15 Reverted prompt-editing and alternate words parsing as it was causing way too many other issues. 
+- 1.5.15 Reverted prompt-editing and alternate words parsing as it was causing way too many other issues.
 - 1.5.14 Fixed parsing of emphasis with weights, e.g. `(high emphasis:1.5)`
 - 1.5.13 Fixed variants with empty value, e.g. A {|red|blue} rose
 - 1.5.12 Removed comments checkbox as comments are now enabled by default
@@ -67,7 +67,7 @@
 - 0.29.12 Fixes broken styles = https://github.com/adieyal/sd-dynamic-prompts/issues/73
 - 0.29.11 Wildcards are sorted alphabetically before use - https://github.com/adieyal/sd-dynamic-prompts/issues/85
 - 0.29.10 Fixed a bug the occurred when more positive prompts are created than negative prompts.
-- 0.29.9 Now using all_negative_prompts. Each image now uses its own negative prompt. Thanks to @lilly1987 
+- 0.29.9 Now using all_negative_prompts. Each image now uses its own negative prompt. Thanks to @lilly1987
 - 0.29.8 Fixed unlink seed from prompt - see https://github.com/adieyal/sd-dynamic-prompts/issues/80
 - 0.29.7 Removed python type aliases for backwards compatibility
 - 0.29.6 Maximum filesize for prompts is 50 to prevent issues on windows
@@ -108,11 +108,11 @@
 - 0.15.2 Handle situation where no prompts are generated.
 - 0.15.1 Fixed an error caused when setting wildcard_dir in config.json, also other minor bug fixes
 - 0.15.0 Improvements to Magic Prompt by @SineSwiper - added a slider to adjust the prompt length and another to tune creativity.
-- 0.14.0 Added the ability to change the combinations joiner from the default "," to anything you like, e.g. {1$$and$$red|blue} gives you red and blue - contributed by @cobryan05 
+- 0.14.0 Added the ability to change the combinations joiner from the default "," to anything you like, e.g. {1$$and$$red|blue} gives you red and blue - contributed by @cobryan05
 - 0.13.9 Added implicit lower and upper ranges to combinations - thanks to @galvanized
 - 0.13.8 Allow sampling with replacement for variants, i.e. {2$$X|Y} can return X,X Y,Y X,Y and Y,X. Useful in combination with wildcards. {2$$__artists__} now also chooses two options from the artists.txt file.
 - 0.13.7 Python 3.8 compatibility
-- 0.13.6 Moved wildcards into the collections directory and added the parrot zone collection with thanks to @jmpaz 
+- 0.13.6 Moved wildcards into the collections directory and added the parrot zone collection with thanks to @jmpaz
 - 0.13.5 Updated stylesheet from @Yaiol to fix light and dark theme
 - 0.13.4 Fixed 0.13.3, but thiss time for real
 - 0.13.3 Added an option to revert 0.9.1. There isn't a ui for it yet, but you can edit constants.py. Change to UNLINK_SEED_FROM_PROMPT = True
@@ -125,10 +125,10 @@
 - 0.9.2 Added additional artists and refactored code.
 - 0.9.1 Added local Random instance to ensure repeatability without changing the global random number generator
 - 0.9.0 Started a modifer library. Turns out it's much better than the long unsorted lists of artists you find elsewhere.
-- 0.8.0 Combinatorial generation 
+- 0.8.0 Combinatorial generation
 - 0.7.0 Updated wildcard ui by @TheAwesomeGoat.7.0 Updated wildcard ui by @TheAwesomeGoat
 - 0.6.0 Added path globbing for wildcards. Thanks for @evanjs for the idea and original implementation
-- 0.5.0 The script can now handle nested wildcard directories in order to make it easier to organise large wildcard collections. Comments and empty lines are now ignored. Both features thanks to @evanjs 
+- 0.5.0 The script can now handle nested wildcard directories in order to make it easier to organise large wildcard collections. Comments and empty lines are now ignored. Both features thanks to @evanjs
 - 0.4.5 Enabled generation of grids
 - 0.4.4 Fixed bug where num_batches was being interpreted as num_images
 - 0.4.3 Printing prompts at logger level INFO

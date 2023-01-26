@@ -90,10 +90,12 @@ def on_ui_tabs():
                         )
                     with gr.Row():
                         load_tree = gr.Button(
-                            "Refresh wildcards", elem_id="load_tree_button"
+                            "Refresh wildcards",
+                            elem_id="load_tree_button",
                         )
                         delete_tree = gr.Button(
-                            "Delete all wildcards", elem_id="delete_tree_button"
+                            "Delete all wildcards",
+                            elem_id="delete_tree_button",
                         )
                 with gr.Column():
                     gr.Textbox(
@@ -111,13 +113,13 @@ def on_ui_tabs():
                     )
                     save_button = gr.Button("Save wildcards", full_width=True)
 
-        gr.Textbox(
-            json.dumps(tree_json), elem_id="tree_textbox", visible=False
-        )
+        gr.Textbox(json.dumps(tree_json), elem_id="tree_textbox", visible=False)
         hidden_textbox = gr.Textbox("", elem_id="scratch_textbox", visible=False)
 
         hidden_action_button = gr.Button(
-            "Action", elem_id="action_button", visible=False
+            "Action",
+            elem_id="action_button",
+            visible=False,
         )
 
         load_tree.click(
@@ -163,7 +165,7 @@ def create_payload(action, result, payload):
             "result": result,
             "payload": payload,
             "id": random.randint(0, 1000000),
-        }
+        },
     )
 
 
@@ -173,7 +175,11 @@ def copy_collection_callback(overwrite_checkbox, collection):
         collection_path = collection_paths[collection]
         for file in collection_path.glob("**/*"):
             if file.is_file():
-                target_path = wildcard_manager.path / collection / file.relative_to(collection_path)
+                target_path = (
+                    wildcard_manager.path
+                    / collection
+                    / file.relative_to(collection_path)
+                )
                 if not target_path.exists() or overwrite_checkbox:
                     target_path.parent.mkdir(parents=True, exist_ok=True)
                     shutil.copy(file, target_path)

@@ -60,7 +60,7 @@ class GeneratorBuilder:
             min_attention: {self._min_attention}
             max_attention: {self._max_attention}
 
-        """
+        """,
         )
 
     def set_is_dummy(self, is_dummy=True):
@@ -72,7 +72,10 @@ class GeneratorBuilder:
         return self
 
     def set_is_attention_grabber(
-        self, is_attention_grabber=True, min_attention=1.1, max_attention=1.5
+        self,
+        is_attention_grabber=True,
+        min_attention=1.1,
+        max_attention=1.5,
     ):
         self._is_attention_grabber = is_attention_grabber
         self._min_attention = min_attention

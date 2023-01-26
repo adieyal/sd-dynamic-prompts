@@ -8,7 +8,7 @@ var dynamic_prompting_titles = {
 Instead of generating random prompts from a template, combinatorial generation produces every possible prompt from the given string.
 The prompt 'I {love|hate} {New York|Chicago} in {June|July|August}' will produce 12 variants in total.
 Don't forget to increase the 'Batch count'/'Batch size' value accordingly.
-	
+
 The value of the 'Seed' field is only used for the first image. To change this, look for 'Fixed seed' in the 'Advanced options' section.`.trim(),
 
 "Combinatorial batches": `
