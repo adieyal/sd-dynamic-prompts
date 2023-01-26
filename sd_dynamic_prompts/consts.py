@@ -17,3 +17,4 @@ MAGIC_PROMPT_MODELS = [
     "DrishtiSharma/StableDiffusion-Prompt-Generator-GPT-Neo-125M",
 ]
 DEFAULT_MAGIC_MODEL = MAGIC_PROMPT_MODELS[0]
+OPTION_WRITE_RAW_TEMPLATE = "pp_write_raw_template"

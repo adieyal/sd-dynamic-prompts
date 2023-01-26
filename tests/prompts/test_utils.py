@@ -1,4 +1,4 @@
-from prompts.utils import slugify
+from sd_dynamic_prompts.utils import slugify
 
 
 class TestSlugify:

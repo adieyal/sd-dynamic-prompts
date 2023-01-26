@@ -14,7 +14,7 @@ from dynamicprompts.generators import (
 from dynamicprompts.generators.attentiongenerator import AttentionGenerator
 from dynamicprompts.generators.magicprompt import MagicPromptGenerator
 
-from prompts.consts import DEFAULT_MAGIC_MODEL
+from sd_dynamic_prompts.consts import DEFAULT_MAGIC_MODEL
 
 logger = logging.getLogger(__name__)
 

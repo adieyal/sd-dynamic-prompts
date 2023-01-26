@@ -3,7 +3,7 @@ from unittest.mock import patch
 from dynamicprompts.generators.magicprompt import MagicPromptGenerator
 from dynamicprompts.wildcardmanager import WildcardManager
 
-from prompts.generator_builder import GeneratorBuilder
+from sd_dynamic_prompts.generator_builder import GeneratorBuilder
 
 
 def test_magic_blocklist_regexp(tmp_path):
