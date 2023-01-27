@@ -1,9 +1,11 @@
 import logging
 from pathlib import Path
 
-from dynamicprompts.utils import is_empty_line
-
 logger = logging.getLogger(__name__)
+
+
+def is_empty_line(line):
+    return line is None or line.strip() == "" or line.strip().startswith("#")
 
 
 def check_versions() -> None:
