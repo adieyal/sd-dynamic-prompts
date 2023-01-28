@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 def on_before_image_saved(image_save_params: ImageSaveParams):
     try:
         save_metadata = opts.dp_write_raw_template
-        if save_metadata:
+        if save_metadata and image_save_params.p:
             if image_save_params.p.prompt != "":
                 image_save_params.pnginfo["parameters"] += (
                     "\nTemplate:" + image_save_params.p.prompt
