@@ -7,14 +7,16 @@ var dynamic_prompting_titles = {
 "Combinatorial generation": `
 Instead of generating random prompts from a template, combinatorial generation produces every possible prompt from the given string.
 The prompt 'I {love|hate} {New York|Chicago} in {June|July|August}' will produce 12 variants in total.
-Don't forget to increase the 'Batch count'/'Batch size' value accordingly.
 
 The value of the 'Seed' field is only used for the first image. To change this, look for 'Fixed seed' in the 'Advanced options' section.`.trim(),
 
+"Max generations (0 = all combinations - the batch count value is ignored)": `
+Limit the maximum number of prompts generated. 0 (default) will generate all images. Useful to prevent an unexpected combinatorial explosion.
+`.trim(),
+
 "Combinatorial batches": `
 Re-run your combinatorial batch this many times with a different seed each time.
-The maximum number of outputs = Combinatorial batches * Batch size * Batch count.
-To specify the maximum number of prompt combinations use 'Batch count'/'Batch size' options.`.trim(),
+`.trim(),
 
 "Magic prompt": `
 Magic Prompt adds interesting modifiers to your prompt for a little bit of extra spice.

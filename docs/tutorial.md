@@ -158,10 +158,6 @@ What if we wanted to generate all of them? In that case we change to combinatori
 
 <img src="../images/tutorial/combinatorial.png">
 
-In combinatorial mode, `batch count` is interpreted differently. In random mode, `batch count` represented the total number of prompts to generate, in combinatorial mode, it means _AT MOST_ 10 prompts.
-
-If our template was simply `A diamond ring set on a {gold|platinum} band`, then regardless of what we set batch count to, Dynamic Prompts will only generate two prompts. On the other hand if your `gems.txt` and `precious_metals.txt` files were very long, say 50 gems and 20 metals, you could then generate 1000 different prompts. The reason for setting the upper bound is to prevent accidentally generating far more prompts than you expect.
-
 ## Wildcard Collection
 A well-designed wildcard collection can be used as building blocks for creating great prompts, without having to reinvent the wheel everytime. Dynamic Prompts provides a large library of wildcards that you can either use wholesale, or pick and choose files that you're interested in. You can see these collections in the Wildcards Manager tab. Of course, you can create your own wildcard files and place them in the wildcards directory.
 

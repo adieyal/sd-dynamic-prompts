@@ -116,9 +116,7 @@ will produce:
 
 You also arbitrarily nest combinations inside wildcards and wildcards in combinations.
 
-Combinatorial generation can be useful if you want to create an image for every artist in a file. It can be enabled by checking the __Combinatorial generation__ checkbox in the ui. Note, __num batches__ changes meaning. With random generation, exactly __num_batches__ * __batch_size__ images are created. With combinatorial generation, at *most* __num_batches__ * __batch_size__ images are created. This upper limit ensures that you don't accidentially create a template that unexpectedly  produces thousands of images.
-
-Combinations are not yet supported, i.e. `{2$$a|b|c}` will treat `2$$a` as one of the options instead of selecting two of a, b and c.
+Combinatorial generation can be useful if you want to create an image for every artist in a file. It can be enabled by checking the __Combinatorial generation__ checkbox in the ui. In order to prevent accidentially producing thousands of images, you can limit the total number of prompts generated using the **Max Generations** slider. A value of 0 (the default) will not set any limit.
 
 ### Combinatorial Batches
 The combinatorial batches slider lets you repeat the same set of prompts a number of times with different seeds. The default number of batches is 1.
