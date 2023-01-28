@@ -1,3 +1,4 @@
+- 2.5.2 Upgraded to dynamicprompts v0.4.1 which allows for all printables to be used as variant separators, e.g. {2$$|$$A|B|C}. This addresses [#211](https://github.com/adieyal/sd-dynamic-prompts/issues/211). Also fixed [#222](https://github.com/adieyal/sd-dynamic-prompts/pull/222).
 - 2.5.1 Fixed a circular dependency in install.py
 - 2.5.0 Upgraded to dynamicprompts v0.4.0. Magic Prompts now has a regex block to remove unwanted wildcards - thanks to @akx.
 - 2.4.4 Upgraded dynamicprompts to v0.3.2 which includes a security fix for wildcards preventing search outside of the extension's directory. thnkas to @akx
