@@ -9,17 +9,17 @@ def test_update_pnginfo() -> None:
 
     assert (
         updated_parameters
-        == f"Parameters\nTemplate:{image_prompts.prompt}\nNegative Template:{image_prompts.negative_prompt}"
+        == f"Parameters\nTemplate: {image_prompts.prompt}\nNegative Template: {image_prompts.negative_prompt}"
     )
 
     image_prompts.prompt = ""
     updated_parameters = png_info_saver.update_pnginfo(parameters, image_prompts)
     assert (
         updated_parameters
-        == f"Parameters\nNegative Template:{image_prompts.negative_prompt}"
+        == f"Parameters\nNegative Template: {image_prompts.negative_prompt}"
     )
 
     image_prompts.prompt = "Positive Template"
     image_prompts.negative_prompt = ""
     updated_parameters = png_info_saver.update_pnginfo(parameters, image_prompts)
-    assert updated_parameters == f"Parameters\nTemplate:{image_prompts.prompt}"
+    assert updated_parameters == f"Parameters\nTemplate: {image_prompts.prompt}"

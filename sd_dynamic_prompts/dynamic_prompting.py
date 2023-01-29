@@ -108,13 +108,14 @@ already_loaded = False
 class Script(scripts.Script):
     def __init__(self):
         global already_loaded
+        # Prevents the script from being loaded multiple times. Need to investigate why it is happening.
         if not already_loaded:
             already_loaded = True
             self._pnginfo_saver = PngInfoSaver()
-            self._promptwriter = PromptWriter()
+            self._prompt_writer = PromptWriter()
 
             callbacks.register_pnginfo_saver(self._pnginfo_saver)
-            callbacks.register_prompt_writer(self._promptwriter)
+            callbacks.register_prompt_writer(self._prompt_writer)
 
     def title(self):
         return f"Dynamic Prompts v{VERSION}"
@@ -349,9 +350,8 @@ class Script(scripts.Script):
 
         ignore_whitespace = opts.dp_ignore_whitespace
 
-        self._pnginfo_saver.set_enabled(opts.dp_write_raw_template)
-        self._promptwriter.reset()
-        self._promptwriter.set_enabled(opts.dp_write_prompts_to_file)
+        self._pnginfo_saver.enabled = opts.dp_write_raw_template
+        self._prompt_writer.enabled = opts.dp_write_prompts_to_file
 
         fix_seed(p)
 
@@ -422,11 +422,11 @@ class Script(scripts.Script):
             f"Prompt matrix will create {updated_count} images in a total of {p.n_iter} batches.",
         )
 
-        self._promptwriter.set_data(
-            original_prompt,
-            original_negative_prompt,
-            all_prompts,
-            all_negative_prompts,
+        self._prompt_writer.set_data(
+            positive_template=original_prompt,
+            negative_template=original_negative_prompt,
+            positive_prompts=all_prompts,
+            negative_prompts=all_negative_prompts,
         )
 
         p.all_prompts = all_prompts

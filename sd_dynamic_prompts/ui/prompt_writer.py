@@ -13,8 +13,8 @@ class PromptWriter:
 
     def reset(self):
         self._already_saved = False
-        self._positive_prompt = ""
-        self._negative_prompt = ""
+        self._positive_template = ""
+        self._negative_template = ""
         self._positive_prompts = []
         self._negative_prompts = []
 
@@ -22,18 +22,22 @@ class PromptWriter:
     def enabled(self) -> bool:
         return self._enabled
 
-    def set_enabled(self, value: bool) -> None:
+    @enabled.setter
+    def enabled(self, value: bool) -> None:
         self._enabled = value
 
     def set_data(
         self,
-        positive_prompt: str,
-        negative_prompt: str,
+        *,
+        positive_template: str,
+        negative_template: str,
         positive_prompts: list[str],
         negative_prompts: list[str],
     ) -> None:
-        self._positive_prompt = positive_prompt
-        self._negative_prompt = negative_prompt
+        self.reset()
+
+        self._positive_template = positive_template
+        self._negative_template = negative_template
         self._positive_prompts = positive_prompts
         self._negative_prompts = negative_prompts
 
@@ -47,7 +51,7 @@ class PromptWriter:
         with path.open("w", encoding=constants.DEFAULT_ENCODING, errors="ignore") as f:
             writer = csv.writer(f)
             writer.writerow(["positive_prompt", "negative_prompt"])
-            writer.writerow([self._positive_prompt, self._negative_prompt])
+            writer.writerow([self._positive_template, self._negative_template])
             for positive_prompt, negative_prompt in zip(
                 self._positive_prompts,
                 self._negative_prompts,
