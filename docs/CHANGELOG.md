@@ -1,3 +1,4 @@
+- 2.5.5 Prompts csv filname is now set to the name of the first image saved.
 - 2.5.4 Bumped dynamicprompts to v0.4.3 - enables zero repititions in sequence commands, e.g. `{0-3$$A|B|C}`
 - 2.5.3 Re-factored code into a single package
 - 2.5.2 Upgraded to dynamicprompts v0.4.1 which allows for all printables to be used as variant separators, e.g. {2$$|$$A|B|C}. This addresses [#211](https://github.com/adieyal/sd-dynamic-prompts/issues/211). Also fixed [#222](https://github.com/adieyal/sd-dynamic-prompts/pull/222).
