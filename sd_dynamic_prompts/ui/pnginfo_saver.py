@@ -7,9 +7,9 @@ logger = logging.getLogger(__name__)
 
 
 @dataclass
-class ImagePrompts:
-    prompt: str
-    negative_prompt: str
+class PromptTemplates:
+    positive_template: str
+    negative_template: str
 
 
 class PngInfoSaver:
@@ -24,14 +24,14 @@ class PngInfoSaver:
     def enabled(self, enabled: bool) -> None:
         self._enabled = enabled
 
-    def update_pnginfo(self, parameters: str, image_prompts: ImagePrompts) -> str:
+    def update_pnginfo(self, parameters: str, prompt_templates: PromptTemplates) -> str:
         if not self._enabled:
             return parameters
 
-        if image_prompts.prompt:
-            parameters += f"\nTemplate: {image_prompts.prompt}"
+        if prompt_templates.positive_template:
+            parameters += f"\nTemplate: {prompt_templates.positive_template}"
 
-        if image_prompts.negative_prompt:
-            parameters += f"\nNegative Template: {image_prompts.negative_prompt}"
+        if prompt_templates.negative_template:
+            parameters += f"\nNegative Template: {prompt_templates.negative_template}"
 
         return parameters
