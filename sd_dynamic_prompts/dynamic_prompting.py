@@ -20,7 +20,7 @@ from sd_dynamic_prompts.ui import save_params, settings, wildcards_tab
 from sd_dynamic_prompts.ui.uicreation import UiCreation
 from sd_dynamic_prompts.utils import get_unique_path, slugify
 
-VERSION = "2.5.3"
+VERSION = "2.5.4"
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
