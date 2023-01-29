@@ -14,9 +14,11 @@ from modules.processing import fix_seed
 from modules.shared import opts
 
 from sd_dynamic_prompts import prompt_writer
+from sd_dynamic_prompts.callbacks import register_pnginfo_saver
 from sd_dynamic_prompts.consts import MAGIC_PROMPT_MODELS
 from sd_dynamic_prompts.generator_builder import GeneratorBuilder
-from sd_dynamic_prompts.ui import save_params, settings, wildcards_tab
+from sd_dynamic_prompts.ui import settings, wildcards_tab
+from sd_dynamic_prompts.ui.pnginfo_saver import PngInfoSaver
 from sd_dynamic_prompts.ui.uicreation import UiCreation
 from sd_dynamic_prompts.utils import get_unique_path, slugify
 
@@ -71,7 +73,6 @@ def get_seeds(p, num_seeds, use_fixed_seed):
 
 wildcard_manager = get_wildcard_manager()
 wildcards_tab.initialize(wildcard_manager)
-save_params.initialize()
 settings.initialize()
 
 device = 0 if get_optimal_device() == "cuda" else -1
@@ -102,7 +103,17 @@ def generate_prompts(
     return all_prompts, all_negative_prompts
 
 
+already_loaded = False
+
+
 class Script(scripts.Script):
+    def __init__(self):
+        global already_loaded
+        if not already_loaded:
+            already_loaded = True
+            self._prompt_file_save = PngInfoSaver()
+            register_pnginfo_saver(self._prompt_file_save)
+
     def title(self):
         return f"Dynamic Prompts v{VERSION}"
 
