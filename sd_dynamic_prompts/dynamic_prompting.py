@@ -13,14 +13,13 @@ from modules.devices import get_optimal_device
 from modules.processing import fix_seed
 from modules.shared import opts
 
-from sd_dynamic_prompts import prompt_writer
-from sd_dynamic_prompts.callbacks import register_pnginfo_saver
+from sd_dynamic_prompts import callbacks
 from sd_dynamic_prompts.consts import MAGIC_PROMPT_MODELS
 from sd_dynamic_prompts.generator_builder import GeneratorBuilder
 from sd_dynamic_prompts.ui import settings, wildcards_tab
 from sd_dynamic_prompts.ui.pnginfo_saver import PngInfoSaver
+from sd_dynamic_prompts.ui.prompt_writer import PromptWriter
 from sd_dynamic_prompts.ui.uicreation import UiCreation
-from sd_dynamic_prompts.utils import get_unique_path, slugify
 
 VERSION = "2.5.3"
 
@@ -111,8 +110,11 @@ class Script(scripts.Script):
         global already_loaded
         if not already_loaded:
             already_loaded = True
-            self._prompt_file_save = PngInfoSaver()
-            register_pnginfo_saver(self._prompt_file_save)
+            self._pnginfo_saver = PngInfoSaver()
+            self._promptwriter = PromptWriter()
+
+            callbacks.register_pnginfo_saver(self._pnginfo_saver)
+            callbacks.register_prompt_writer(self._promptwriter)
 
     def title(self):
         return f"Dynamic Prompts v{VERSION}"
@@ -348,7 +350,10 @@ class Script(scripts.Script):
         self._p = p
 
         ignore_whitespace = opts.dp_ignore_whitespace
-        write_prompts = opts.dp_write_prompts_to_file
+
+        self._pnginfo_saver.set_enabled(opts.dp_write_raw_template)
+        self._promptwriter.reset()
+        self._promptwriter.set_enabled(opts.dp_write_prompts_to_file)
 
         fix_seed(p)
 
@@ -419,23 +424,12 @@ class Script(scripts.Script):
             f"Prompt matrix will create {updated_count} images in a total of {p.n_iter} batches.",
         )
 
-        try:
-
-            if write_prompts:
-                prompt_filename = get_unique_path(
-                    Path(p.outpath_samples),
-                    slugify(original_prompt),
-                    suffix="csv",
-                )
-                prompt_writer.write_prompts(
-                    prompt_filename,
-                    original_prompt,
-                    original_negative_prompt,
-                    all_prompts,
-                    all_negative_prompts,
-                )
-        except Exception as e:
-            logger.error(f"Failed to write prompts to file: {e}")
+        self._promptwriter.set_data(
+            original_prompt,
+            original_negative_prompt,
+            all_prompts,
+            all_negative_prompts,
+        )
 
         p.all_prompts = all_prompts
         p.all_negative_prompts = all_negative_prompts

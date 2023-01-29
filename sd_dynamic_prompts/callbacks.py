@@ -1,15 +1,16 @@
 import logging
+from pathlib import Path
 
 from modules import script_callbacks
 from modules.script_callbacks import ImageSaveParams
-from modules.shared import opts
 
 from sd_dynamic_prompts.ui.pnginfo_saver import ImagePrompts, PngInfoSaver
+from sd_dynamic_prompts.ui.prompt_writer import PromptWriter
 
 logger = logging.getLogger(__name__)
 
 
-def register_pnginfo_saver(prompt_file_saver: PngInfoSaver):
+def register_pnginfo_saver(pnginfo_saver: PngInfoSaver):
     def on_save(image_save_params: ImageSaveParams):
         try:
             if image_save_params.p:
@@ -19,7 +20,7 @@ def register_pnginfo_saver(prompt_file_saver: PngInfoSaver):
                     image_save_params.p.negative_prompt,
                 )
 
-                updated_png_info = prompt_file_saver.update_pnginfo(
+                updated_png_info = pnginfo_saver.update_pnginfo(
                     png_info,
                     image_prompts,
                 )
@@ -27,6 +28,13 @@ def register_pnginfo_saver(prompt_file_saver: PngInfoSaver):
         except Exception:
             logger.exception("Error save prompt file")
 
-    save_metadata = opts.dp_write_raw_template
-    if save_metadata:
-        script_callbacks.on_before_image_saved(on_save)
+    script_callbacks.on_before_image_saved(on_save)
+
+
+def register_prompt_writer(prompt_writer: PromptWriter):
+    def on_save(image_save_params: ImageSaveParams):
+        image_name = Path(image_save_params.filename)
+        prompt_filename = image_name.with_suffix(".csv")
+        prompt_writer.write_prompts(prompt_filename)
+
+    script_callbacks.on_before_image_saved(on_save)

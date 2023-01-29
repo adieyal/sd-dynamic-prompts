@@ -13,7 +13,16 @@ class ImagePrompts:
 
 
 class PngInfoSaver:
+    def __init__(self):
+        self._enabled = True
+
+    def set_enabled(self, enabled: bool):
+        self._enabled = enabled
+
     def update_pnginfo(self, parameters: str, image_prompts: ImagePrompts):
+        if not self._enabled:
+            return parameters
+
         if image_prompts.prompt != "":
             parameters += "\nTemplate:" + image_prompts.prompt
 
