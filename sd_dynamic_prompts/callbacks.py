@@ -10,8 +10,8 @@ from sd_dynamic_prompts.ui.prompt_writer import PromptWriter
 logger = logging.getLogger(__name__)
 
 
-def register_pnginfo_saver(pnginfo_saver: PngInfoSaver):
-    def on_save(image_save_params: ImageSaveParams):
+def register_pnginfo_saver(pnginfo_saver: PngInfoSaver) -> None:
+    def on_save(image_save_params: ImageSaveParams) -> None:
         try:
             if image_save_params.p:
                 png_info = image_save_params.pnginfo["parameters"]
@@ -31,8 +31,8 @@ def register_pnginfo_saver(pnginfo_saver: PngInfoSaver):
     script_callbacks.on_before_image_saved(on_save)
 
 
-def register_prompt_writer(prompt_writer: PromptWriter):
-    def on_save(image_save_params: ImageSaveParams):
+def register_prompt_writer(prompt_writer: PromptWriter) -> None:
+    def on_save(image_save_params: ImageSaveParams) -> None:
         image_name = Path(image_save_params.filename)
         prompt_filename = image_name.with_suffix(".csv")
         prompt_writer.write_prompts(prompt_filename)

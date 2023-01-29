@@ -16,10 +16,10 @@ class PngInfoSaver:
     def __init__(self):
         self._enabled = True
 
-    def set_enabled(self, enabled: bool):
+    def set_enabled(self, enabled: bool) -> None:
         self._enabled = enabled
 
-    def update_pnginfo(self, parameters: str, image_prompts: ImagePrompts):
+    def update_pnginfo(self, parameters: str, image_prompts: ImagePrompts) -> str:
         if not self._enabled:
             return parameters
 

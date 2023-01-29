@@ -1,7 +1,7 @@
 from sd_dynamic_prompts.ui.pnginfo_saver import ImagePrompts, PngInfoSaver
 
 
-def test_update_pnginfo():
+def test_update_pnginfo() -> None:
     png_info_saver = PngInfoSaver()
     image_prompts = ImagePrompts("Template", "Negative Template")
     parameters = "Parameters"
