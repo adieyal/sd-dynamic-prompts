@@ -347,8 +347,6 @@ class Script(scripts.Script):
             logger.debug("Dynamic prompts disabled - exiting")
             return p
 
-        self._p = p
-
         ignore_whitespace = opts.dp_ignore_whitespace
 
         self._pnginfo_saver.set_enabled(opts.dp_write_raw_template)
