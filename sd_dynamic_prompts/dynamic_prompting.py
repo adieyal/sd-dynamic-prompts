@@ -21,7 +21,7 @@ from sd_dynamic_prompts.ui.pnginfo_saver import PngInfoSaver
 from sd_dynamic_prompts.ui.prompt_writer import PromptWriter
 from sd_dynamic_prompts.ui.uicreation import UiCreation
 
-VERSION = "2.5.5"
+VERSION = "2.5.6"
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -108,11 +108,13 @@ already_loaded = False
 class Script(scripts.Script):
     def __init__(self):
         global already_loaded
+
+        self._pnginfo_saver = PngInfoSaver()
+        self._prompt_writer = PromptWriter()
+
         # Prevents the script from being loaded multiple times. Need to investigate why it is happening.
         if not already_loaded:
             already_loaded = True
-            self._pnginfo_saver = PngInfoSaver()
-            self._prompt_writer = PromptWriter()
 
             callbacks.register_pnginfo_saver(self._pnginfo_saver)
             callbacks.register_prompt_writer(self._prompt_writer)
