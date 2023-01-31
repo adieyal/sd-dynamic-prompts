@@ -1,0 +1,3 @@
+[submodule "collections/nsp-flat"]
+	path = collections/nsp-flat
+	url = https://github.com/Lopyter/stable-soup-prompts/
