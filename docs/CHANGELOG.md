@@ -1,3 +1,4 @@
+- 2.6.0 Upgraded to dynamicprompts v0.6.0 which includes support for symlinks for wildcards and a major revamp of the parsing machinery
 - 2.5.6 Addresses [#227](https://github.com/adieyal/sd-dynamic-prompts/issues/227)
 - 2.5.5 Prompts csv filname is now set to the name of the first image saved.
 - 2.5.4 Bumped dynamicprompts to v0.4.3 - enables zero repititions in sequence commands, e.g. `{0-3$$A|B|C}`
