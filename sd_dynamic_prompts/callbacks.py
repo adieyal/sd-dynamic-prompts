@@ -44,6 +44,7 @@ def register_prompt_writer(prompt_writer: PromptWriter) -> None:
 
 def register_on_infotext_pasted(pnginfo_saver: PngInfoSaver) -> None:
     def on_infotext_pasted(infotext: str, parameters: dict[str, Any]) -> None:
+        new_parameters = {}
         if "Prompt" in parameters and "Template:" in parameters["Prompt"]:
             parameters = pnginfo_saver.strip_template_info(parameters)
             new_parameters = parse_generation_parameters(parameters["Prompt"])
@@ -55,5 +56,6 @@ def register_on_infotext_pasted(pnginfo_saver: PngInfoSaver) -> None:
             new_parameters = parse_generation_parameters(parameters["Negative prompt"])
             new_parameters["Negative prompt"] = new_parameters["Prompt"]
             new_parameters["Prompt"] = parameters["Prompt"]
+        parameters.update(new_parameters)
 
     script_callbacks.on_infotext_pasted(on_infotext_pasted)
