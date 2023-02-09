@@ -39,7 +39,7 @@ class SDDPUI {
   }
 
   _onTick() {
-    let msg = this._scratch.value
+    let msg = this._scratch?.value || ""
     if (msg != "") {
       msg = JSON.parse(msg)
       if (msg.id != this._last_message) {
