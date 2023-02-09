@@ -1,0 +1,18 @@
+1
+10
+100
+1000
+2
+3
+300
+4
+5
+500
+6
+7
+8
+9
+Hundreds
+Millions
+Thousands
+Way too much

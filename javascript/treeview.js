@@ -1,6 +1,6 @@
 (function (define) {
     'use strict';
-  
+
     (function (root, factory) {
       if (typeof define === 'function' && define.amd) {
         define(factory);
@@ -11,7 +11,7 @@
       }
     }(window, function () {
       return (function () {
-  
+
         /** List of events supported by the tree view */
         var events = [
           'expand',
@@ -20,7 +20,7 @@
           'collapseAll',
           'select'
         ];
-  
+
         /**
          * A utilite function to check to see if something is a DOM object
          * @param {object} Object to test
@@ -35,7 +35,7 @@
               return typeof obj === 'object' && obj.nodeType === 1 && typeof obj.style === 'object' && typeof obj.ownerDocument === 'object';
           }
         }
-  
+
         /**
          * A forEach that will work with a NodeList and generic Arrays
          * @param {array|NodeList} arr The array to iterate over
@@ -48,7 +48,7 @@
             callback.call(scope, arr[i], i);
           }
         }
-  
+
         /**
          * Emit an event from the tree view
          * @param {string} name The name of the event to emit
@@ -67,7 +67,7 @@
             throw new Error(name + ' event cannot be found on TreeView.');
           }
         }
-  
+
         /**
          * Renders the tree view in the DOM
          */
@@ -79,7 +79,7 @@
             var content = document.createElement('div');
             var text = document.createElement('div');
             var expando = document.createElement('div');
-  
+
             leaf.setAttribute('class', 'tree-leaf');
             content.setAttribute('class', 'tree-leaf-content');
             content.setAttribute('data-item', JSON.stringify(item));
@@ -106,14 +106,14 @@
             }
             return leaf;
           };
-  
+
           forEach(self.data, function (item) {
             leaves.push(renderLeaf.call(self, item));
           });
           container.innerHTML = leaves.map(function (leaf) {
             return leaf.outerHTML;
           }).join('');
-  
+
           click = function (e) {
             var parent = (e.target || e.currentTarget).parentNode;
             var data = JSON.parse(parent.getAttribute('data-item'));
@@ -131,7 +131,7 @@
               });
             }
           };
-  
+
           forEach(container.querySelectorAll('.tree-leaf-text'), function (node) {
             node.onclick = click;
           });
@@ -139,7 +139,7 @@
             node.onclick = click;
           });
         }
-  
+
         /**
          * @constructor
          * @property {object} handlers The attached event handlers
@@ -156,7 +156,7 @@
         TreeView.prototype.render = function () {
           render(this);
         };
-  
+
         /**
          * Expands a leaflet by the expando or the leaf text
          * @param {DOMElement} node The parent node that contains the leaves
@@ -172,7 +172,7 @@
             leaves: leaves
           });
         };
-  
+
         TreeView.prototype.expandAll = function () {
           var self = this;
           var nodes = document.getElementById(self.node).querySelectorAll('.tree-expando');
@@ -185,7 +185,7 @@
           });
           emit(this, 'expandAll', {});
         };
-  
+
         /**
          * Collapses a leaflet by the expando or the leaf text
          * @param {DOMElement} node The parent node that contains the leaves
@@ -201,7 +201,7 @@
             leaves: leaves
           });
         };
-  
+
         /**
          */
         TreeView.prototype.collapseAll = function () {
@@ -216,7 +216,7 @@
           });
           emit(this, 'collapseAll', {});
         };
-  
+
         /**
          * Attach an event handler to the tree view
          * @param {string} name Name of the event to attach
@@ -236,7 +236,7 @@
             throw new Error(name + ' is not supported by TreeView.');
           }
         };
-  
+
         /**
          * Deattach an event handler from the tree view
          * @param {string} name Name of the event to deattach
@@ -256,7 +256,7 @@
             }
           }
         };
-  
+
         return TreeView;
       }());
     }));

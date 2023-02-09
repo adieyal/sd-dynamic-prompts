@@ -1,0 +1,17 @@
+baby
+boy
+girl
+man
+middle-aged man
+middle-aged woman
+old man
+old woman
+older man
+older woman
+teenage boy
+teenage girl
+woman
+young boy
+young girl
+young man
+young woman

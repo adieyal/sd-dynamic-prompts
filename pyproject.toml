@@ -1,14 +1,16 @@
 [tool.pytest.ini_options]
 minversion = "7.0"
 pythonpath = [
-    "."
+    ".",
 ]
+addopts = "--ignore=collections"
 
 [tool.ruff]
 target-version = "py310"
 select = [
     "B",
     "C",
+    "COM",
     "E",
     "F",
     "I",
@@ -21,4 +23,18 @@ ignore = [
 ]
 unfixable = [
     "B007", # Loop control variable not used within the loop body
+]
+
+[tool.coverage.run]
+branch = true
+omit = [
+    "install.py"
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "raise NotImplementedError",
+    "if TYPE_CHECKING:",
+    "if __name__ == .__main__.:",
 ]

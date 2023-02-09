@@ -1,5 +1,6 @@
 *.pyc
-\.*.sw*
+.coverage
 .env
-wildcards
 .vscode
+\.*.sw*
+wildcards

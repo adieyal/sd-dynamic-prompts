@@ -1,0 +1,10 @@
+man
+middle-aged man
+middle-aged woman
+old man
+old woman
+older man
+older woman
+woman
+young man
+young woman

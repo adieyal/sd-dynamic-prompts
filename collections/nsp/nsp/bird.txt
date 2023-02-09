@@ -1,0 +1,237 @@
+(Northern Bobwhite)
+(Ring-necked Pheasant)
+Alder Flycatcher
+American Bittern
+American Black Duck
+American Coot
+American Crow
+American Goldfinch
+American Kestrel
+American Pipit
+American Redstart
+American Robin
+American Tree Sparrow
+American Wigeon
+American Woodcock
+Baird’s Sandpiper
+Bald Eagle
+Baltimore Oriole
+Bank Swallow
+Barn Swallow
+Barred Owl
+Bay-breasted Warbler
+Belted Kingfisher
+Black Tern
+Black-and-white Warbler
+Black-backed Woodpecker
+Black-billed Cuckoo
+Black-capped Chickadee
+Black-crowned Night-Heron
+Black-throated Blue Warbler
+Black-throated Green Warbler
+Blackburnian Warbler
+Blackpoll Warbler
+Blue Jay
+Blue-gray Gnatcatcher
+Blue-headed Vireo
+Blue-winged Teal
+Blue-winged Warbler
+Bobolink
+Bonaparte’s Gull
+Brant
+Broad-winged Hawk
+Brown Creeper
+Brown Thrasher
+Brown-headed Cowbird
+Bufflehead
+Cackling Goose
+Canada Goose
+Canada Warbler
+Canvasback
+Cape May Warbler
+Carolina Wren
+Caspian Tern
+Cedar Waxwing
+Chestnut-sided Warbler
+Chimney Swift
+Chipping Sparrow
+Clay-coloured Sparrow
+Cliff Swallow
+Common Goldeneye
+Common Grackle
+Common Loon
+Common Merganser
+Common Nighthawk
+Common Raven
+Common Redpoll
+Common Tern
+Common Yellowthroat
+Connecticut Warbler
+Cooper’s Hawk
+Dark-eyed Junco
+Double-crested Cormorant
+Downy Woodpecker
+Dunlin
+Eastern Bluebird
+Eastern Kingbird
+Eastern Meadowlark
+Eastern Phoebe
+Eastern Screech-Owl
+Eastern Towhee
+Eastern Whip-poor-will
+Eastern Wood-Pewee
+European Starling
+Evening Grosbeak
+Field Sparrow
+Fox Sparrow
+Gadwall
+Glaucous Gull
+Golden Eagle
+Golden-crowned Kinglet
+Golden-winged Warbler
+Grasshopper Sparrow
+Gray Catbird
+Gray-cheeked Thrush
+Great Black-backed Gull
+Great Blue Heron
+Great Crested Flycatcher
+Great Egret
+Great Horned Owl
+Greater Scaup
+Greater White-fronted Goose
+Greater Yellowlegs
+Green Heron
+Green-winged Teal
+Hairy Woodpecker
+Hermit Thrush
+Herring Gull
+Hooded Merganser
+Hooded Warbler
+Horned Grebe
+Horned Lark
+House Finch
+House Sparrow
+House Wren
+Iceland Gull
+Indigo Bunting
+Killdeer
+Lapland Longspur
+Laughing Gull
+LeConte’s Sparrow
+Least Flycatcher
+Least Sandpiper
+Lesser Black-backed Gull
+Lesser Scaup
+Lesser Yellowlegs
+Lincoln’s Sparrow
+Little Blue Heron
+Long-eared Owl
+Long-tailed Duck
+Magnolia Warbler
+Mallard
+Marsh Wren
+Merlin
+Mourning Dove
+Mourning Warbler
+Mute Swan
+Nashville Warbler
+Nelson’s Sparrow
+Northern Cardinal
+Northern Flicker
+Northern Goshawk
+Northern Harrier
+Northern Mockingbird
+Northern Parula
+Northern Pintail
+Northern Rough-winged Swallow
+Northern Saw-whet Owl
+Northern Shoveler
+Northern Shrike
+Northern Waterthrush
+Olive-sided Flycatcher
+Orange-crowned Warbler
+Orchard Oriole
+Osprey
+Ovenbird
+Palm Warbler
+Pectoral Sandpiper
+Peregrine Falcon
+Philadelphia Vireo
+Pied-billed Grebe
+Pileated Woodpecker
+Pine Siskin
+Pine Warbler
+Prairie Warbler
+Purple Finch
+Purple Martin
+Red Crossbill
+Red-bellied Woodpecker
+Red-breasted Merganser
+Red-breasted Nuthatch
+Red-eyed Vireo
+Red-headed Woodpecker
+Red-neck Grebe
+Red-shouldered Hawk
+Red-tailed Hawk
+Red-winged Blackbird
+Redhead
+Ring-billed Gull
+Ring-necked Duck
+Rock Pigeon
+Rose-breasted Grosbeak
+Rough-legged Hawk
+Ruby-crowned Kinglet
+Ruby-throated Hummingbird
+Ruddy Duck
+Ruddy Turnstone
+Ruffed Grouse
+Rusty Blackbird
+Sandhill Crane
+Savannah Sparrow
+Scarlet Tanager
+Semipalmated Plover
+Semipalmated Sandpiper
+Sharp-shinned Hawk
+Short-billed Dowitcher
+Short-eared Owl
+Snow Bunting
+Snow Goose
+Solitary Sandpiper
+Song Sparrow
+Sora
+Spotted Sandpiper
+Spotted Towhee
+Swainson’s Thrush
+Swamp Sparrow
+Tennessee Warbler
+Thayer’s Gull
+Tree Swallow
+Trumpeter Swan
+Tundra Swan
+Turkey Vulture
+Upland Sandpiper
+Veery
+Vesper Sparrow
+Virginia Rail
+Warbling Vireo
+White-breasted Nuthatch
+White-crowned Sparrow
+White-eyed Vireo
+White-rumped Sandpiper
+White-throated Sparrow
+White-winged Crossbill
+Wild Turkey
+Willow Flycatcher
+Wilson’s Snipe
+Wilson’s Warbler
+Winter Wren
+Wood Duck
+Wood Thrush
+Yellow Warbler
+Yellow-bellied Flycatcher
+Yellow-bellied Sapsucker
+Yellow-billed Cuckoo
+Yellow-breasted Chat
+Yellow-headed Blackbird
+Yellow-rumped Warbler
+Yellow-throated Vireo

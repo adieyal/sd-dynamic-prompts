@@ -1,7 +1,7 @@
-# Stable Diffusion Dynamic Prompts extension 
+# Stable Diffusion Dynamic Prompts extension
 A custom extension for [AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) that implements an expressive template language for random or combinatorial prompt generation along with features to support deep wildcard directory structures.
 
-<p align="center">                                                                                         
+<p align="center">
     <a href="docs/SYNTAX.md"><img src="images/icon-syntax.png" valign="middle" style="height:60px;margin-right:10px"/></a>
     <a href="docs/tutorial.md"><img src="images/icon-tutorial.png" valign="middle" style="height:60px;margin-right:10px"/></a>
     <a href="docs/CHANGELOG.md"><img src="images/icon-changelog.png" valign="middle" style="height:60px"/></a>
@@ -52,12 +52,12 @@ The extension can be installed directly from within the **Extensions** tab withi
 You can also install it manually by running the following command from within the webui directory:
 
 	git clone https://github.com/adieyal/sd-dynamic-prompting/ extensions/dynamic-prompts
-	
+
 ### Troubleshooting
 
 In the LastBen colab (and perhaps others), you might see an error similar to this: `ModuleNotFoundError: No module named 'dynamicprompts'`. There seems to be an issue causing extensions that rely on install.py from being installed properly. A workaround is to run this command before you start the webui:
 
-`!python -m pip install dynamicprompts`
+`!python -m pip install -U dynamicprompts[attentiongrabber,magicprompt]`
 
 ## Compatible Scripts
 Dynamic Prompts works particularly well with X/Y Plot - setting Dynamic Prompts to <a href="#combinatorial-generation">combinatorial mode</a> while using X/Y Plot, lets you exhaustively test prompt and paramter variations simultaneously.
@@ -116,9 +116,7 @@ will produce:
 
 You also arbitrarily nest combinations inside wildcards and wildcards in combinations.
 
-Combinatorial generation can be useful if you want to create an image for every artist in a file. It can be enabled by checking the __Combinatorial generation__ checkbox in the ui. Note, __num batches__ changes meaning. With random generation, exactly __num_batches__ * __batch_size__ images are created. With combinatorial generation, at *most* __num_batches__ * __batch_size__ images are created. This upper limit ensures that you don't accidentially create a template that unexpectedly  produces thousands of images.
-
-Combinations are not yet supported, i.e. `{2$$a|b|c}` will treat `2$$a` as one of the options instead of selecting two of a, b and c.
+Combinatorial generation can be useful if you want to create an image for every artist in a file. It can be enabled by checking the __Combinatorial generation__ checkbox in the ui. In order to prevent accidentially producing thousands of images, you can limit the total number of prompts generated using the **Max Generations** slider. A value of 0 (the default) will not set any limit.
 
 ### Combinatorial Batches
 The combinatorial batches slider lets you repeat the same set of prompts a number of times with different seeds. The default number of batches is 1.
@@ -216,7 +214,7 @@ The collections directory contains modifier libraries that you can use as is or 
 - [parrotzone](https://github.com/adieyal/sd-dynamic-prompts/tree/main/collections/parrotzone)
 - [devilkkw](https://github.com/adieyal/sd-dynamic-prompts/tree/main/collections/devilkkw)
 
-Jumbo is a very large collection of wildcards across many categories including aesthetics, appearance, artists, medium, style, and time. It is a work in progress, but aims to provide good coverage of various modifier categories. 
+Jumbo is a very large collection of wildcards across many categories including aesthetics, appearance, artists, medium, style, and time. It is a work in progress, but aims to provide good coverage of various modifier categories.
 
 Parrotzone is a far smaller and more manageable collection sourced from https://proximacentaurib.notion.site/e28a4f8d97724f14a784a538b8589e7d?v=42948fd8f45c4d47a0edfc4b78937474.
 
@@ -230,7 +228,7 @@ If you're using a Unix/Linux O/S, you can easily create a symlink to the relevan
 ## Contributing
 If you're interested in contributing to the development of this extension, here are some features I would like to implement:
 
-1. **Saved templates** - [publicprompts.art](https://publicprompts.art/) produces great prompt templates. e.g. 
+1. **Saved templates** - [publicprompts.art](https://publicprompts.art/) produces great prompt templates. e.g.
 
 > Funky pop Yoda figurine, made of plastic, product studio shot, on a white background, diffused lighting, centered
 

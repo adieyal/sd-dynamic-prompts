@@ -1,0 +1,23 @@
+Cloud Forest
+Dry Conifer Forest
+Dry Savanna Forest
+Evergreen Forest
+Grass Forest
+Mediterranean Forest
+Montane Forest
+Mossy Broad-leaved Forest
+Mossy Coniferous Forest
+Mossy Mixed-leaved Forst
+Mossy Subtropical Forest
+Mossy Temperate Forest
+Rainy Savana Forest
+Savanna Tropical Forest
+Seasonal Forest
+Subtropical Broad-leaved Forest
+Subtropical Coniferous Forest
+Subtropical Mixed-leaved Forest
+Temperate Broad-leaved Forest
+Temperate Mixed-leaved Forest
+Temperate Needle Forest
+Tropical Forest
+Tropical Jungle
