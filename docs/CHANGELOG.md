@@ -1,3 +1,4 @@
+- 2.6.1 Fixed send to img2txt parsing mostly fixed. There may be some lingering issues
 - 2.6.0 Upgraded to dynamicprompts v0.6.0 which includes support for symlinks for wildcards and a major revamp of the parsing machinery
 - 2.5.6 Addresses [#227](https://github.com/adieyal/sd-dynamic-prompts/issues/227)
 - 2.5.5 Prompts csv filname is now set to the name of the first image saved.
