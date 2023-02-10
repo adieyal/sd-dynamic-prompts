@@ -8,6 +8,7 @@ from string import Template
 import gradio as gr
 import modules.scripts as scripts
 from dynamicprompts.generators.promptgenerator import GeneratorException
+from dynamicprompts.parser.parse import ParserConfig
 from dynamicprompts.wildcardmanager import WildcardManager
 from modules.devices import get_optimal_device
 from modules.processing import fix_seed
@@ -356,6 +357,11 @@ class Script(scripts.Script):
         self._pnginfo_saver.enabled = opts.dp_write_raw_template
         self._prompt_writer.enabled = opts.dp_write_prompts_to_file
 
+        parser_config = ParserConfig(
+            left_brace=opts.dp_parser_variant_left_bracket,
+            right_brace=opts.dp_parser_variant_right_bracket,
+        )
+
         fix_seed(p)
 
         original_prompt, original_negative_prompt = get_prompts(p)
@@ -373,7 +379,11 @@ class Script(scripts.Script):
         try:
             logger.debug("Creating generator")
             generator_builder = (
-                GeneratorBuilder(wildcard_manager, ignore_whitespace=ignore_whitespace)
+                GeneratorBuilder(
+                    wildcard_manager,
+                    ignore_whitespace=ignore_whitespace,
+                    parser_config=parser_config,
+                )
                 .set_is_feeling_lucky(is_feeling_lucky)
                 .set_is_attention_grabber(
                     is_attention_grabber,

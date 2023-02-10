@@ -13,6 +13,7 @@ from dynamicprompts.generators import (
 )
 from dynamicprompts.generators.attentiongenerator import AttentionGenerator
 from dynamicprompts.generators.magicprompt import MagicPromptGenerator
+from dynamicprompts.parser.parse import default_parser_config
 
 from sd_dynamic_prompts.consts import DEFAULT_MAGIC_MODEL
 
@@ -20,7 +21,12 @@ logger = logging.getLogger(__name__)
 
 
 class GeneratorBuilder:
-    def __init__(self, wildcard_manager, ignore_whitespace=False):
+    def __init__(
+        self,
+        wildcard_manager,
+        parser_config=default_parser_config,
+        ignore_whitespace=False,
+    ):
         self._wildcard_manager = wildcard_manager
 
         self._is_dummy = False
@@ -42,6 +48,7 @@ class GeneratorBuilder:
         self._unlink_seed_from_prompt = False
         self._seed = -1
         self._context = None
+        self._parser_config = parser_config
 
     def log_configuration(self):
         logger.debug(
@@ -169,6 +176,7 @@ class GeneratorBuilder:
         if self._is_combinatorial:
             prompt_generator = CombinatorialPromptGenerator(
                 self._wildcard_manager,
+                parser_config=self._parser_config,
                 ignore_whitespace=self._ignore_whitespace,
             )
             prompt_generator = BatchedCombinatorialPromptGenerator(
@@ -179,6 +187,7 @@ class GeneratorBuilder:
             prompt_generator = RandomPromptGenerator(
                 self._wildcard_manager,
                 seed=self._seed,
+                parser_config=self._parser_config,
                 unlink_seed_from_prompt=self._unlink_seed_from_prompt,
                 ignore_whitespace=self._ignore_whitespace,
             )
