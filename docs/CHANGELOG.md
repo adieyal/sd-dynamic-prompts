@@ -1,3 +1,4 @@
+- 2.6.3 Addresses [#250](https://github.com/adieyal/sd-dynamic-prompts/issues/250#issuecomment-1425037699)
 - 2.6.2 Minor bug fix relating to copypaste
 - 2.6.1 Fixed send to img2txt parsing mostly fixed. There may be some lingering issues
 - 2.6.0 Upgraded to dynamicprompts v0.6.0 which includes support for symlinks for wildcards and a major revamp of the parsing machinery
