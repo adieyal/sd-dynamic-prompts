@@ -22,7 +22,7 @@ from sd_dynamic_prompts.ui.pnginfo_saver import PngInfoSaver
 from sd_dynamic_prompts.ui.prompt_writer import PromptWriter
 from sd_dynamic_prompts.ui.uicreation import UiCreation
 
-VERSION = "2.6.3"
+VERSION = "2.7.0"
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -358,8 +358,8 @@ class Script(scripts.Script):
         self._prompt_writer.enabled = opts.dp_write_prompts_to_file
 
         parser_config = ParserConfig(
-            left_brace=opts.dp_parser_variant_left_bracket,
-            right_brace=opts.dp_parser_variant_right_bracket,
+            variant_start=opts.dp_parser_variant_start,
+            variant_end=opts.dp_parser_variant_end,
         )
 
         fix_seed(p)

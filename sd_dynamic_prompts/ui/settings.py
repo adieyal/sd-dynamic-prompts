@@ -28,7 +28,7 @@ def on_ui_settings():
         ),
     )
     shared.opts.add_option(
-        key="dp_parser_variant_left_bracket",
+        key="dp_parser_variant_start",
         info=shared.OptionInfo(
             "{",
             label="String to use as left bracket for parser variants, .e.g {variant1|variant2|variant3}",
@@ -36,7 +36,7 @@ def on_ui_settings():
         ),
     )
     shared.opts.add_option(
-        key="dp_parser_variant_right_bracket",
+        key="dp_parser_variant_end",
         info=shared.OptionInfo(
             "}",
             label="String to use as right bracket for parser variants, .e.g {variant1|variant2|variant3}",
