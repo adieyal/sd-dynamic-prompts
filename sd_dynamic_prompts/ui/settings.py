@@ -27,6 +27,22 @@ def on_ui_settings():
             section=section,
         ),
     )
+    shared.opts.add_option(
+        key="dp_parser_variant_start",
+        info=shared.OptionInfo(
+            "{",
+            label="String to use as left bracket for parser variants, .e.g {variant1|variant2|variant3}",
+            section=section,
+        ),
+    )
+    shared.opts.add_option(
+        key="dp_parser_variant_end",
+        info=shared.OptionInfo(
+            "}",
+            label="String to use as right bracket for parser variants, .e.g {variant1|variant2|variant3}",
+            section=section,
+        ),
+    )
 
 
 def initialize():
