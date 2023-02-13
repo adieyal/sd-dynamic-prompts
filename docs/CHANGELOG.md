@@ -1,3 +1,4 @@
+- 2.7.2 Fixes [#256 - "Reload UI" breaks the extension](https://github.com/adieyal/sd-dynamic-prompts/issues/256)
 - 2.7.1 Fixes a bug in CombinatorialPromptGenerator which was missing a parser_config argument
 - 2.7.0 Variant braces are now configurable, see [https://github.com/adieyal/sd-dynamic-prompts/#configuration](https://github.com/adieyal/sd-dynamic-prompts/#configuration) for details
 - 2.6.3 Addresses [#250](https://github.com/adieyal/sd-dynamic-prompts/issues/250#issuecomment-1425037699)
