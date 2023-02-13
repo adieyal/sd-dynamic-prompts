@@ -113,12 +113,12 @@ class Script(scripts.Script):
 
         # When the Reload UI button in the settings tab is pressed, the script is loaded twice again
         # Therefore we only register callbacks every second time the script is loaded
-        if loaded_count % 2 == 0:
-            return
-
         self._pnginfo_saver = PngInfoSaver()
         self._prompt_writer = PromptWriter()
         self._wildcard_manager = get_wildcard_manager()
+
+        if loaded_count % 2 == 0:
+            return
 
         callbacks.register_pnginfo_saver(self._pnginfo_saver)
         callbacks.register_prompt_writer(self._prompt_writer)
