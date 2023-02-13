@@ -17,7 +17,6 @@ from modules.shared import opts
 from sd_dynamic_prompts import callbacks
 from sd_dynamic_prompts.consts import MAGIC_PROMPT_MODELS
 from sd_dynamic_prompts.generator_builder import GeneratorBuilder
-from sd_dynamic_prompts.ui import settings, wildcards_tab
 from sd_dynamic_prompts.ui.pnginfo_saver import PngInfoSaver
 from sd_dynamic_prompts.ui.prompt_writer import PromptWriter
 from sd_dynamic_prompts.ui.uicreation import UiCreation
@@ -71,10 +70,6 @@ def get_seeds(p, num_seeds, use_fixed_seed):
     return all_seeds
 
 
-wildcard_manager = get_wildcard_manager()
-wildcards_tab.initialize(wildcard_manager)
-settings.initialize()
-
 device = 0 if get_optimal_device() == "cuda" else -1
 
 
@@ -103,23 +98,33 @@ def generate_prompts(
     return all_prompts, all_negative_prompts
 
 
-already_loaded = False
+loaded_count = 0
 
 
 class Script(scripts.Script):
     def __init__(self):
-        global already_loaded
+        global loaded_count
+
+        loaded_count += 1
+
+        # This is a hack to make sure that the script is only loaded once
+        # Auto1111 calls the script twice, once for the txt2img and once for img2img
+        # These callbacks should only be registered once.
+
+        # When the Reload UI button in the settings tab is pressed, the script is loaded twice again
+        # Therefore we only register callbacks every second time the script is loaded
+        if loaded_count % 2 == 0:
+            return
 
         self._pnginfo_saver = PngInfoSaver()
         self._prompt_writer = PromptWriter()
+        self._wildcard_manager = get_wildcard_manager()
 
-        # Prevents the script from being loaded multiple times. Need to investigate why it is happening.
-        if not already_loaded:
-            already_loaded = True
-
-            callbacks.register_pnginfo_saver(self._pnginfo_saver)
-            callbacks.register_prompt_writer(self._prompt_writer)
-            callbacks.register_on_infotext_pasted(self._pnginfo_saver)
+        callbacks.register_pnginfo_saver(self._pnginfo_saver)
+        callbacks.register_prompt_writer(self._prompt_writer)
+        callbacks.register_on_infotext_pasted(self._pnginfo_saver)
+        callbacks.register_settings()
+        callbacks.register_wildcards_tab(self._wildcard_manager)
 
     def title(self):
         return f"Dynamic Prompts v{VERSION}"
@@ -128,14 +133,14 @@ class Script(scripts.Script):
         return scripts.AlwaysVisible
 
     def ui(self, is_img2img):
-        ui_creation = UiCreation(wildcard_manager)
+        ui_creation = UiCreation(self._wildcard_manager)
         wildcard_html = ui_creation.probe()
 
         html_path = base_dir / "helptext.html"
         html = html_path.open().read()
         html = Template(html).substitute(
             wildcard_html=wildcard_html,
-            WILDCARD_DIR=wildcard_manager.path,
+            WILDCARD_DIR=self._wildcard_manager.path,
             VERSION=VERSION,
         )
 
@@ -380,7 +385,7 @@ class Script(scripts.Script):
             logger.debug("Creating generator")
             generator_builder = (
                 GeneratorBuilder(
-                    wildcard_manager,
+                    self._wildcard_manager,
                     ignore_whitespace=ignore_whitespace,
                     parser_config=parser_config,
                 )

@@ -1,4 +1,4 @@
-from modules import script_callbacks, shared
+from modules import shared
 
 
 def on_ui_settings():
@@ -43,7 +43,3 @@ def on_ui_settings():
             section=section,
         ),
     )
-
-
-def initialize():
-    script_callbacks.on_ui_settings(on_ui_settings)

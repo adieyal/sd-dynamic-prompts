@@ -4,12 +4,15 @@ import logging
 from pathlib import Path
 from typing import Any
 
+from dynamicprompts.wildcardmanager import WildcardManager
 from modules import script_callbacks
 from modules.generation_parameters_copypaste import parse_generation_parameters
 from modules.script_callbacks import ImageSaveParams
 
 from sd_dynamic_prompts.ui.pnginfo_saver import PngInfoSaver, PromptTemplates
 from sd_dynamic_prompts.ui.prompt_writer import PromptWriter
+from sd_dynamic_prompts.ui.settings import on_ui_settings
+from sd_dynamic_prompts.ui.wildcards_tab import initialize as initialize_wildcards_tab
 
 logger = logging.getLogger(__name__)
 
@@ -61,3 +64,11 @@ def register_on_infotext_pasted(pnginfo_saver: PngInfoSaver) -> None:
         parameters.update(new_parameters)
 
     script_callbacks.on_infotext_pasted(on_infotext_pasted)
+
+
+def register_settings():
+    script_callbacks.on_ui_settings(on_ui_settings)
+
+
+def register_wildcards_tab(wildcard_manager: WildcardManager):
+    initialize_wildcards_tab(wildcard_manager)
