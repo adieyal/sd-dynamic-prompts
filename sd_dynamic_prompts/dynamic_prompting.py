@@ -5,6 +5,7 @@ import math
 from pathlib import Path
 from string import Template
 
+import dynamicprompts
 import gradio as gr
 import modules.scripts as scripts
 from dynamicprompts.generators.promptgenerator import GeneratorException
@@ -142,6 +143,7 @@ class Script(scripts.Script):
             wildcard_html=wildcard_html,
             WILDCARD_DIR=self._wildcard_manager.path,
             VERSION=VERSION,
+            LIB_VERSION=dynamicprompts.__version__,
         )
 
         jinja_html_path = base_dir / "jinja_help.html"
