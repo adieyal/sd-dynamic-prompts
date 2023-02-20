@@ -43,3 +43,11 @@ def on_ui_settings():
             section=section,
         ),
     )
+    shared.opts.add_option(
+        key="dp_parser_wildcard_wrap",
+        info=shared.OptionInfo(
+            "__",
+            label="String to use as wrap for parser wildcard, .e.g __wildcard__",
+            section=section,
+        ),
+    )
