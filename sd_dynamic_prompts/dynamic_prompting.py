@@ -18,11 +18,12 @@ from modules.shared import opts
 from sd_dynamic_prompts import callbacks
 from sd_dynamic_prompts.consts import MAGIC_PROMPT_MODELS
 from sd_dynamic_prompts.generator_builder import GeneratorBuilder
+from sd_dynamic_prompts.helpers import get_seeds
 from sd_dynamic_prompts.ui.pnginfo_saver import PngInfoSaver
 from sd_dynamic_prompts.ui.prompt_writer import PromptWriter
 from sd_dynamic_prompts.ui.uicreation import UiCreation
 
-VERSION = "2.7.2"
+VERSION = "2.7.3"
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -57,18 +58,6 @@ def get_prompts(p):
     )
 
     return original_prompt, original_negative_prompt
-
-
-def get_seeds(p, num_seeds, use_fixed_seed):
-    if use_fixed_seed:
-        all_seeds = [p.seed] * num_seeds
-    else:
-        all_seeds = [
-            int(p.seed) + (x if p.subseed_strength == 0 else 0)
-            for x in range(num_seeds)
-        ]
-
-    return all_seeds
 
 
 device = 0 if get_optimal_device() == "cuda" else -1
@@ -436,7 +425,7 @@ class Script(scripts.Script):
         updated_count = len(all_prompts)
         p.n_iter = math.ceil(updated_count / p.batch_size)
 
-        all_seeds = get_seeds(p, updated_count, use_fixed_seed)
+        p.all_seeds, p.all_subseeds = get_seeds(p, updated_count, use_fixed_seed)
 
         logger.info(
             f"Prompt matrix will create {updated_count} images in a total of {p.n_iter} batches.",
@@ -457,9 +446,5 @@ class Script(scripts.Script):
             p.batch_size = 1
             p.all_prompts = all_prompts[0:1]
 
-        p.all_seeds = all_seeds
-
         p.prompt_for_display = original_prompt
-
         p.prompt = original_prompt
-        p.seed = original_seed
