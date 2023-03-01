@@ -171,6 +171,13 @@ class Script(scripts.Script):
                         elem_id="combinatorial-times",
                     )
 
+                with gr.Group():
+                    is_combirandom = gr.Checkbox(
+                        label="Combinatorial random generation",
+                        value=False,
+                        elem_id="is-combirandom",
+                    )
+
                 with gr.Accordion("Prompt Magic", open=False):
                     with gr.Group():
                         is_magic_prompt = gr.Checkbox(
@@ -304,6 +311,7 @@ class Script(scripts.Script):
             is_enabled,
             is_combinatorial,
             combinatorial_batches,
+            is_combirandom,
             is_magic_prompt,
             is_feeling_lucky,
             is_attention_grabber,
@@ -327,6 +335,7 @@ class Script(scripts.Script):
         is_enabled,
         is_combinatorial,
         combinatorial_batches,
+        is_combirandom,
         is_magic_prompt,
         is_feeling_lucky,
         is_attention_grabber,
@@ -388,6 +397,7 @@ class Script(scripts.Script):
                 )
                 .set_is_jinja_template(enable_jinja_templates)
                 .set_is_combinatorial(is_combinatorial, combinatorial_batches)
+                .set_is_combirandom(is_combirandom)
                 .set_is_magic_prompt(
                     is_magic_prompt,
                     magic_model=magic_model,

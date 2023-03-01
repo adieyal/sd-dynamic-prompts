@@ -10,6 +10,7 @@ from dynamicprompts.generators import (
     JinjaGenerator,
     PromptGenerator,
     RandomPromptGenerator,
+    CombiRandomPromptGenerator,
 )
 from dynamicprompts.generators.attentiongenerator import AttentionGenerator
 from dynamicprompts.generators.magicprompt import MagicPromptGenerator
@@ -33,6 +34,7 @@ class GeneratorBuilder:
         self._is_feeling_lucky = False
         self._is_jinja_template = False
         self._is_combinatorial = False
+        self._is_combirandom = False
         self._is_magic_prompt = False
         self._is_attention_grabber = False
 
@@ -58,6 +60,7 @@ class GeneratorBuilder:
             is_feeling_lucky: {self._is_feeling_lucky}
             enable_jinja_templates: {self._is_jinja_template}
             is_combinatorial: {self._is_combinatorial}
+            is_combirandom: {self._is_combirandom}
             is_magic_prompt: {self._is_magic_prompt}
             combinatorial_batches: {self._combinatorial_batches}
             magic_prompt_length: {self._magic_prompt_length}
@@ -96,6 +99,10 @@ class GeneratorBuilder:
     def set_is_combinatorial(self, is_combinatorial=True, combinatorial_batches=1):
         self._is_combinatorial = is_combinatorial
         self._combinatorial_batches = combinatorial_batches
+        return self
+  
+    def set_is_combirandom(self, is_combirandom=True):
+        self._is_combirandom = is_combirandom
         return self
 
     def set_is_magic_prompt(
@@ -182,6 +189,14 @@ class GeneratorBuilder:
             prompt_generator = BatchedCombinatorialPromptGenerator(
                 prompt_generator,
                 batches=self._combinatorial_batches,
+            )
+        elif self._is_combirandom:
+            prompt_generator = CombiRandomPromptGenerator(
+                self._wildcard_manager,
+                seed=self._seed,
+                parser_config=self._parser_config,
+                unlink_seed_from_prompt=self._unlink_seed_from_prompt,
+                ignore_whitespace=self._ignore_whitespace,
             )
         else:
             prompt_generator = RandomPromptGenerator(
