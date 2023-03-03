@@ -356,6 +356,7 @@ class Script(scripts.Script):
         parser_config = ParserConfig(
             variant_start=opts.dp_parser_variant_start,
             variant_end=opts.dp_parser_variant_end,
+            wildcard_wrap=opts.dp_parser_wildcard_wrap,
         )
 
         fix_seed(p)
