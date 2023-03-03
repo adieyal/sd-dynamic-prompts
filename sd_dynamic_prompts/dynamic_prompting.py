@@ -23,7 +23,7 @@ from sd_dynamic_prompts.ui.pnginfo_saver import PngInfoSaver
 from sd_dynamic_prompts.ui.prompt_writer import PromptWriter
 from sd_dynamic_prompts.ui.uicreation import UiCreation
 
-VERSION = "2.8.0"
+VERSION = "2.8.1"
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -70,13 +70,13 @@ def generate_prompts(
     negative_prompt,
     num_prompts,
 ):
-    all_prompts = prompt_generator.generate(prompt, num_prompts)
+    all_prompts = prompt_generator.generate(prompt, num_prompts) or [""]
     total_prompts = len(all_prompts)
 
     all_negative_prompts = negative_prompt_generator.generate(
         negative_prompt,
         num_prompts,
-    )
+    ) or [""]
 
     if len(all_negative_prompts) < total_prompts:
         all_negative_prompts = all_negative_prompts * (
