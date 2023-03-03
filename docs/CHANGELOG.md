@@ -1,3 +1,4 @@
+- 2.8.2 Added the ability to customise the wildcard wrap (prefix and suffix), see Settings -> Dynamic Prompts. Thanks to @aoirusann for implementing it.
 - 2.8.1 Fixed ZeroDivisionError error when not using negative prompts
 - 2.8.0 Upgraded to dynamic prompts v0.10.0 which enables combining random, combinatorial, cyclical prompts.
 - 2.7.3 Fixes [#271 - Fixed seed causes error](https://github.com/adieyal/sd-dynamic-prompts/issues/271)

@@ -71,6 +71,8 @@ In case of a syntax clash with another extension, Dynamic Prompts allows you to 
 
 <img src="images/config_brackets.png">
 
+By default, wildcards start with `__`(double underscore) and end with `__`. You can change this in the settings tab under wildcard wrap.
+
 ### Troubleshooting
 
 In the LastBen colab (and perhaps others), you might see an error similar to this: `ModuleNotFoundError: No module named 'dynamicprompts'`. There seems to be an issue causing extensions that rely on install.py from being installed properly. A workaround is to run this command before you start the webui:
