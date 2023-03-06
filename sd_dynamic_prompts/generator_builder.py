@@ -89,8 +89,9 @@ class GeneratorBuilder:
         self._max_attention = max_attention
         return self
 
-    def set_is_jinja_template(self, is_jinja_template=True):
+    def set_is_jinja_template(self, is_jinja_template=True, limit_prompts=False):
         self._is_jinja_template = is_jinja_template
+        self._limit_jinja_prompts = limit_prompts
         return self
 
     def set_is_combinatorial(self, is_combinatorial=True, combinatorial_batches=1):
@@ -228,5 +229,9 @@ class GeneratorBuilder:
             },
         }
 
-        generator = JinjaGenerator(self._wildcard_manager, context)
+        generator = JinjaGenerator(
+            self._wildcard_manager,
+            context,
+            limit_prompts=self._limit_jinja_prompts,
+        )
         return generator

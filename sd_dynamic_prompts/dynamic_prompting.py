@@ -23,7 +23,7 @@ from sd_dynamic_prompts.ui.pnginfo_saver import PngInfoSaver
 from sd_dynamic_prompts.ui.prompt_writer import PromptWriter
 from sd_dynamic_prompts.ui.uicreation import UiCreation
 
-VERSION = "2.8.2"
+VERSION = "2.8.3"
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -352,6 +352,7 @@ class Script(scripts.Script):
 
         self._pnginfo_saver.enabled = opts.dp_write_raw_template
         self._prompt_writer.enabled = opts.dp_write_prompts_to_file
+        self._limit_jinja_prompts = opts.dp_limit_jinja_prompts
 
         parser_config = ParserConfig(
             variant_start=opts.dp_parser_variant_start,
@@ -387,7 +388,10 @@ class Script(scripts.Script):
                     min_attention,
                     max_attention,
                 )
-                .set_is_jinja_template(enable_jinja_templates)
+                .set_is_jinja_template(
+                    enable_jinja_templates,
+                    limit_prompts=self._limit_jinja_prompts,
+                )
                 .set_is_combinatorial(is_combinatorial, combinatorial_batches)
                 .set_is_magic_prompt(
                     is_magic_prompt,
