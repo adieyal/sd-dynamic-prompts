@@ -233,5 +233,6 @@ class GeneratorBuilder:
             self._wildcard_manager,
             context,
             limit_prompts=self._limit_jinja_prompts,
+            ignore_whitespace=self._ignore_whitespace,
         )
         return generator
