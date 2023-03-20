@@ -4,6 +4,12 @@ sddp_ui = null
 
 onUiUpdate(function () {
   if (!sddp_loaded) {
+    if (!gradioApp().getElementById("dynamic-prompts-enabled")) {
+      return;
+    }
+
+    sddp_loaded = true;
+
     gradioApp().getElementById("dynamic-prompts-enabled").append("Complete documentation is available at https://github.com/adieyal/sd-dynamic-prompts. Please report any issues on GitHub.")
     gradioApp().getElementById("is-combinatorial").append("Generate all possible prompt combinations.")
     gradioApp().getElementById("is-magicprompt").append("Automatically update your prompt with interesting modifiers. (Runs slowly the first time)")
@@ -18,7 +24,6 @@ onUiUpdate(function () {
     gradioApp().getElementById("magic-prompt-model").append("Note: Each model will download between 300mb and 1.4gb of data on first use.")
 
     sddp_ui = new SDDPUI()
-    sddp_loaded = true;
   }
 })
 
