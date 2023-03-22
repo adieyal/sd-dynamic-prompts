@@ -94,7 +94,7 @@ def generate_prompts(
 
     if len(all_negative_prompts) < total_prompts:
         all_negative_prompts = all_negative_prompts * (
-            total_prompts // len(all_negative_prompts) + 1
+            total_prompts // max(len(all_negative_prompts), 1) + 1
         )
 
     all_negative_prompts = all_negative_prompts[:total_prompts]
