@@ -92,6 +92,7 @@ def generate_prompts(
         num_prompts,
     )
 
+    all_negative_prompts += [" "]
     if len(all_negative_prompts) < total_prompts:
         all_negative_prompts = all_negative_prompts * (
             total_prompts // max(len(all_negative_prompts), 1) + 1
