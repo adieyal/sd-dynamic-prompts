@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import json
 import logging
-import os
 import random
 import shutil
 
@@ -226,6 +225,6 @@ def save_file_callback(js):
             with path.open("w") as f:
                 contents = contents.splitlines()
                 for c in contents:
-                    f.write(c.strip() + os.linesep)
+                    print(c.strip(), file=f)
     except Exception as e:
         logger.exception(e)
