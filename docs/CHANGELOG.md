@@ -1,3 +1,6 @@
+- 2.8.9 Updated dynamicprompts to 0.10.5 which fixes #307
+- 2.8.8 Slight tweak to 2.8.7
+- 2.8.7 Fixed bug causing unwanted newlines in wildcard files on Windows. See #270
 - 2.8.6 Added configurable batch size for Magic Prompts. Increasing the batch size can significantly improve prompt generation speed at the expense of slightly increases VRAM usage.
 - 2.8.5 Fixed infinite recursion in Gradio 3.22.1 - see [#316](https://github.com/adieyal/sd-dynamic-prompts/pull/316)
 - 2.8.4 Fixes ignore_whitespace for Jinja templates
