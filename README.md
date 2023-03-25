@@ -186,10 +186,17 @@ This is compatible with the wildcard syntax described above.
 * [Meli/GPT2-Prompt (~500mb)](https://huggingface.co/Meli/GPT2-Prompt),
 * [DrishtiSharma/StableDiffusion-Prompt-Generator-GPT-Neo-125M (~550mb)](https://huggingface.co/DrishtiSharma/StableDiffusion-Prompt-Generator-GPT-Neo-125M)
 
-The first time you use a model, it is downloaded. It is approximately 500mb and so will take some time depending on how fast your connection is. It will also take a few seconds on first activation as the model is loaded into memory. Note, if you're low in VRAM, you might get a Cuda error. My GPU uses less than 8GB by YMMV.
+The first time you use a model, it is downloaded. It is approximately 500mb and so will take some time depending on how fast your connection is. It will also take a few seconds on first activation as the model is loaded into memory. Note, if you're low in VRAM, you might get a Cuda error. My GPU uses less than 8GB but YMMV.
 
 <img src="images/magic_prompt.png"/>
-You can control the maximum prompt length with the **Max magic prompt length** slider. **Magic prompt creativity** can adjust the generated prompt but you will need to experiment with this setting.
+
+
+You can control the maximum prompt length with the __Max magic prompt length__ slider. __Magic prompt creativity__ can adjust the generated prompt but you will need to experiment with this setting.
+
+Use the __Magic prompt blocklist regex__ to filter out keywords. For example, if you want to avoid prompts containing Greg Rutkowski, add his name to this field.
+
+If you are generating many prompts using Magic Prompt, then increasing the __Magic Prompt batch size__ can improve significantly improve prompt generation speed. This may only be noticeable if you are not generating images as well since image generation is much slower than prompt generation.
+
 
 ## I'm feeling lucky
 Use the [lexica.art](https://lexica.art) API to create random prompts. Useful if you're looking for inspiration, or are simply too lazy to think of your own prompts. When this option is selected, the prompt in the main prompt box is used as a search string. For example, prompt "Mech warrior" might return:

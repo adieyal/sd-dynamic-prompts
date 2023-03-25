@@ -107,12 +107,14 @@ class GeneratorBuilder:
         magic_temp_value=0.7,
         device=0,
         magic_blocklist_regex: str | None = None,
+        batch_size=1,
     ):
         self._magic_model = magic_model
         self._magic_prompt_length = magic_prompt_length
         self._magic_temp_value = magic_temp_value
         self._magic_blocklist_regex = magic_blocklist_regex
         self._is_magic_prompt = is_magic_prompt
+        self._magic_batch_size = batch_size
         self._device = device
 
         return self
@@ -158,6 +160,7 @@ class GeneratorBuilder:
                 temperature=self._magic_temp_value,
                 seed=self._seed,
                 blocklist_regex=self._magic_blocklist_regex,
+                batch_size=self._magic_batch_size,
             )
 
         if self._is_attention_grabber:

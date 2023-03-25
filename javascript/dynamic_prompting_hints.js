@@ -25,6 +25,7 @@ If you're running low on VRAM, you might get a CUDA error.`.trim(),
 
 "Max magic prompt length": "Controls the maximum length in tokens of the generated prompt.",
 "Magic prompt creativity": "Adjusts the generated prompt. You will need to experiment with this setting.",
+"Magic Prompt batch size": "The number of prompts to generate per batch. Increasing this can speed up prompt generation at the expense of slightly increased VRAM usage.",
 
 "I'm feeling lucky": `
 Uses the lexica.art API to create random prompts.

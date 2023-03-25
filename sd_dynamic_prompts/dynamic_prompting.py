@@ -213,6 +213,14 @@ class Script(scripts.Script):
                             ),
                         )
 
+                        magic_batch_size = gr.Slider(
+                            label="Magic Prompt batch size",
+                            value=1,
+                            minimum=1,
+                            maximum=64,
+                            step=1,
+                        )
+
                     is_feeling_lucky = gr.Checkbox(
                         label="I'm feeling lucky",
                         value=False,
@@ -319,6 +327,7 @@ class Script(scripts.Script):
             max_generations,
             magic_model,
             magic_blocklist_regex,
+            magic_batch_size,
         ]
 
     def process(
@@ -342,6 +351,7 @@ class Script(scripts.Script):
         max_generations,
         magic_model,
         magic_blocklist_regex: str | None,
+        magic_batch_size,
     ):
 
         if not is_enabled:
@@ -399,6 +409,7 @@ class Script(scripts.Script):
                     magic_prompt_length=magic_prompt_length,
                     magic_temp_value=magic_temp_value,
                     magic_blocklist_regex=magic_blocklist_regex,
+                    batch_size=magic_batch_size,
                 )
                 .set_is_dummy(False)
                 .set_unlink_seed_from_prompt(unlink_seed_from_prompt)
