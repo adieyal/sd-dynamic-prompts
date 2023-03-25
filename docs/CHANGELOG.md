@@ -1,3 +1,4 @@
+- 2.8.9 Updated dynamicprompts to 0.10.5 which fixes #307
 - 2.8.8 Slight tweak to 2.8.7
 - 2.8.7 Fixed bug causing unwanted newlines in wildcard files on Windows. See #270
 - 2.8.6 Added configurable batch size for Magic Prompts. Increasing the batch size can significantly improve prompt generation speed at the expense of slightly increases VRAM usage.
