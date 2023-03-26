@@ -11,8 +11,6 @@ from dynamicprompts.generators import (
     PromptGenerator,
     RandomPromptGenerator,
 )
-from dynamicprompts.generators.attentiongenerator import AttentionGenerator
-from dynamicprompts.generators.magicprompt import MagicPromptGenerator
 from dynamicprompts.parser.parse import default_parser_config
 
 from sd_dynamic_prompts.consts import DEFAULT_MAGIC_MODEL
@@ -151,6 +149,8 @@ class GeneratorBuilder:
             generator = self.create_basic_generator()
 
         if self._is_magic_prompt:
+            from dynamicprompts.generators.magicprompt import MagicPromptGenerator
+
             generator = MagicPromptGenerator(
                 generator,
                 model_name=self._magic_model,
@@ -164,7 +164,11 @@ class GeneratorBuilder:
 
         if self._is_attention_grabber:
             try:
-                generator = AttentionGenerator(
+                from sd_dynamic_prompts.attention_generator import (
+                    SpecialSyntaxAwareAttentionGenerator,
+                )
+
+                generator = SpecialSyntaxAwareAttentionGenerator(
                     generator,
                     min_attention=self._min_attention,
                     max_attention=self._max_attention,
