@@ -353,7 +353,6 @@ class Script(scripts.Script):
         magic_blocklist_regex: str | None,
         magic_batch_size,
     ):
-
         if not is_enabled:
             logger.debug("Dynamic prompts disabled - exiting")
             return p

@@ -139,7 +139,6 @@ class GeneratorBuilder:
         return self
 
     def create_generator(self):
-
         if self._is_dummy:
             return DummyGenerator()
 
