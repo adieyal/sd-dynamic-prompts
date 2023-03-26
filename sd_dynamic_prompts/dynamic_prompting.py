@@ -21,7 +21,6 @@ from sd_dynamic_prompts.generator_builder import GeneratorBuilder
 from sd_dynamic_prompts.helpers import get_seeds
 from sd_dynamic_prompts.ui.pnginfo_saver import PngInfoSaver
 from sd_dynamic_prompts.ui.prompt_writer import PromptWriter
-from sd_dynamic_prompts.ui.uicreation import UiCreation
 
 VERSION = "2.8.9"
 
@@ -123,8 +122,9 @@ class Script(scripts.Script):
         return scripts.AlwaysVisible
 
     def ui(self, is_img2img):
-        ui_creation = UiCreation(self._wildcard_manager)
-        wildcard_html = ui_creation.probe()
+        from sd_dynamic_prompts.ui.wildcards_tab import get_wildcard_hierarchy_html
+
+        wildcard_html = get_wildcard_hierarchy_html(self._wildcard_manager)
 
         html_path = base_dir / "helptext.html"
         html = html_path.open().read()

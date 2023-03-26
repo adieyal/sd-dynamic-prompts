@@ -4,6 +4,7 @@ import json
 import logging
 import random
 import shutil
+from typing import Any
 
 import gradio as gr
 import modules.scripts as scripts
@@ -228,3 +229,28 @@ def save_file_callback(js):
                     print(c.strip(), file=f)
     except Exception as e:
         logger.exception(e)
+
+
+def _get_wildcard_hierarchy_html_node(
+    wildcards: list[str],
+    hierarchy: dict[str, Any],
+) -> str:
+    html = ""
+    for wildcard in wildcards:
+        html += f"""<p class="wildcard">{wildcard}</p>"""
+
+    for directory, h in hierarchy.items():
+        contents = _get_wildcard_hierarchy_html_node(h[0], h[1])
+        html += f"""
+            <button type="button" class="collapsible">{directory} :</button>
+            <div class="content">
+                {contents}
+            </div>
+        """
+
+    return html
+
+
+def get_wildcard_hierarchy_html(wildcard_manager: WildcardManager) -> str:
+    wildcards, hierarchy = wildcard_manager.get_wildcard_hierarchy()
+    return _get_wildcard_hierarchy_html_node(wildcards, hierarchy)
