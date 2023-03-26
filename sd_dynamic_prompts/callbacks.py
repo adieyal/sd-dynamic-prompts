@@ -4,7 +4,7 @@ import logging
 from pathlib import Path
 from typing import Any
 
-from dynamicprompts.wildcardmanager import WildcardManager
+from dynamicprompts.wildcards import WildcardManager
 from modules import script_callbacks
 from modules.generation_parameters_copypaste import parse_generation_parameters
 from modules.script_callbacks import ImageSaveParams

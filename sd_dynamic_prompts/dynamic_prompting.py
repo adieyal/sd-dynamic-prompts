@@ -11,7 +11,7 @@ import modules.scripts as scripts
 import torch
 from dynamicprompts.generators.promptgenerator import GeneratorException
 from dynamicprompts.parser.parse import ParserConfig
-from dynamicprompts.wildcardmanager import WildcardManager
+from dynamicprompts.wildcards import WildcardManager
 from modules import devices
 from modules.processing import fix_seed
 from modules.shared import opts
@@ -36,17 +36,16 @@ if is_debug:
 base_dir = Path(scripts.basedir())
 
 
-def get_wildcard_manager():
+def get_wildcard_dir() -> Path:
     wildcard_dir = getattr(opts, "wildcard_dir", None)
     if wildcard_dir is None:
         wildcard_dir = base_dir / "wildcards"
-    else:
-        wildcard_dir = Path(wildcard_dir)
-
-    wildcard_manager = WildcardManager(wildcard_dir)
-    wildcard_manager.ensure_directory()
-
-    return wildcard_manager
+    wildcard_dir = Path(wildcard_dir)
+    try:
+        wildcard_dir.mkdir(parents=True, exist_ok=True)
+    except Exception:
+        logger.exception(f"Failed to create wildcard directory {wildcard_dir}")
+    return wildcard_dir
 
 
 def get_prompts(p):
@@ -108,7 +107,7 @@ class Script(scripts.Script):
         # Therefore we only register callbacks every second time the script is loaded
         self._pnginfo_saver = PngInfoSaver()
         self._prompt_writer = PromptWriter()
-        self._wildcard_manager = get_wildcard_manager()
+        self._wildcard_manager = WildcardManager(get_wildcard_dir())
 
         if loaded_count % 2 == 0:
             return
