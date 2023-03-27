@@ -8,10 +8,11 @@ from string import Template
 import dynamicprompts
 import gradio as gr
 import modules.scripts as scripts
+import torch
 from dynamicprompts.generators.promptgenerator import GeneratorException
 from dynamicprompts.parser.parse import ParserConfig
 from dynamicprompts.wildcardmanager import WildcardManager
-from modules.devices import get_optimal_device
+from modules import devices
 from modules.processing import fix_seed
 from modules.shared import opts
 
@@ -59,7 +60,10 @@ def get_prompts(p):
     return original_prompt, original_negative_prompt
 
 
-device = 0 if get_optimal_device() == "cuda" else -1
+device = devices.device
+# There might be a bug in auto1111 where the correct device is not inferred in some scenarios
+if device.type == "cuda" and not device.index:
+    device = torch.device("cuda:0")
 
 
 def generate_prompts(
@@ -404,6 +408,7 @@ class Script(scripts.Script):
                     magic_temp_value=magic_temp_value,
                     magic_blocklist_regex=magic_blocklist_regex,
                     batch_size=magic_batch_size,
+                    device=device,
                 )
                 .set_is_dummy(False)
                 .set_unlink_seed_from_prompt(unlink_seed_from_prompt)
