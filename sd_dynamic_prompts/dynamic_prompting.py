@@ -23,7 +23,7 @@ from sd_dynamic_prompts.helpers import get_seeds
 from sd_dynamic_prompts.ui.pnginfo_saver import PngInfoSaver
 from sd_dynamic_prompts.ui.prompt_writer import PromptWriter
 
-VERSION = "2.8.9"
+VERSION = "2.8.10"
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)

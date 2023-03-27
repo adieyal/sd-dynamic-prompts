@@ -1,3 +1,4 @@
+- 2.8.10 Magic Prompt now works on M1/M2 Mac - see [#329](https://github.com/adieyal/sd-dynamic-prompts/issues/329)
 - 2.8.9 Updated dynamicprompts to 0.10.5 which fixes #307
 - 2.8.8 Slight tweak to 2.8.7
 - 2.8.7 Fixed bug causing unwanted newlines in wildcard files on Windows. See #270
