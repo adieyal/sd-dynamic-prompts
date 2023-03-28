@@ -22,17 +22,29 @@ onUiUpdate(function () {
     gradioApp().getElementById("is-attention-grabber").append("Add emphasis to a randomly selected keyword in the prompt.")
     gradioApp().getElementById("write-raw-template").append("Write template into image metadata.")
     gradioApp().getElementById("magic-prompt-model").append("Note: Each model will download between 300mb and 1.4gb of data on first use.")
-
-    sddp_ui = new SDDPUI()
   }
 })
 
-onUiTabChange(function (x) {
-  if (!sddp_wildcards_loaded && uiCurrentTab.innerText =='Wildcards Manager') {
+document.addEventListener("DOMContentLoaded", function() {
+  var mutationObserver = new MutationObserver(function(m) {
+      const currentTabId = get_uiCurrentTabContent()?.id
+
+      if (currentTabId == "tab_wildcards_tab") {
+          onDPUiTabChange()
+      }
+  });
+  mutationObserver.observe( gradioApp(), { childList:true, subtree:true })
+});
+
+
+
+function onDPUiTabChange () {
+  if (!sddp_wildcards_loaded) {
+      sddp_ui = new SDDPUI()
       gradioApp().querySelector("#load_tree_button").click()
       sddp_wildcards_loaded = true;
   }
-})
+}
 
 class SDDPUI {
   constructor() {
