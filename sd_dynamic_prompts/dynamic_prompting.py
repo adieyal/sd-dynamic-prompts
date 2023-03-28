@@ -19,11 +19,11 @@ from modules.shared import opts
 from sd_dynamic_prompts import callbacks
 from sd_dynamic_prompts.consts import MAGIC_PROMPT_MODELS
 from sd_dynamic_prompts.generator_builder import GeneratorBuilder
-from sd_dynamic_prompts.helpers import get_seeds
+from sd_dynamic_prompts.helpers import get_seeds, should_freeze_prompt
 from sd_dynamic_prompts.ui.pnginfo_saver import PngInfoSaver
 from sd_dynamic_prompts.ui.prompt_writer import PromptWriter
 
-VERSION = "2.8.11"
+VERSION = "2.8.12"
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -413,6 +413,7 @@ class Script(scripts.Script):
                 .set_unlink_seed_from_prompt(unlink_seed_from_prompt)
                 .set_seed(original_seed)
                 .set_context(p)
+                .set_freeze_prompt(should_freeze_prompt(p))
             )
 
             generator = generator_builder.create_generator()

@@ -18,3 +18,8 @@ def get_seeds(p, num_seeds, use_fixed_seed):
         all_subseeds = [subseed + i for i in range(num_seeds)]
 
     return all_seeds, all_subseeds
+
+
+def should_freeze_prompt(p):
+    # When using a variation seed, the prompt shouldn't change between generations
+    return p.subseed_strength > 0

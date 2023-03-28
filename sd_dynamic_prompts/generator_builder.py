@@ -14,6 +14,7 @@ from dynamicprompts.generators import (
 from dynamicprompts.parser.parse import default_parser_config
 
 from sd_dynamic_prompts.consts import DEFAULT_MAGIC_MODEL
+from sd_dynamic_prompts.frozenprompt_generator import FrozenPromptGenerator
 
 logger = logging.getLogger(__name__)
 
@@ -28,6 +29,7 @@ class GeneratorBuilder:
         self._wildcard_manager = wildcard_manager
 
         self._is_dummy = False
+        self._should_freeze_prompt = False
         self._is_feeling_lucky = False
         self._is_jinja_template = False
         self._is_combinatorial = False
@@ -125,6 +127,10 @@ class GeneratorBuilder:
         self._seed = seed
         return self
 
+    def set_freeze_prompt(self, should_freeze: bool):
+        self._should_freeze_prompt = should_freeze
+        return self
+
     def set_context(self, context):
         self._context = context
         return self
@@ -175,6 +181,9 @@ class GeneratorBuilder:
                 )
             except ImportError as ie:
                 logger.error(f"Not using AttentionGenerator: {ie}")
+
+        if self._should_freeze_prompt:
+            generator = FrozenPromptGenerator(generator)
         return generator
 
     def create_basic_generator(
