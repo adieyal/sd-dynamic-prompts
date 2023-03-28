@@ -4,52 +4,62 @@ import json
 import logging
 import random
 import shutil
+from pathlib import Path
+from typing import Any
 
 import gradio as gr
 import modules.scripts as scripts
-from dynamicprompts.constants import DEFAULT_ENCODING
-from dynamicprompts.wildcardmanager import WildcardManager
+from dynamicprompts.wildcards import WildcardManager
+from dynamicprompts.wildcards.collection import WildcardTextFile
+from dynamicprompts.wildcards.tree import WildcardTreeNode
 from modules import script_callbacks
 from send2trash import send2trash
 
 logger = logging.getLogger(__name__)
 
 wildcard_manager: WildcardManager
-tree_json: list = []
 
-BASE_DIR = scripts.basedir()
+collections_path = Path(scripts.basedir()) / "collections"
+
+
+def get_collection_dirs() -> dict[str, Path]:
+    """
+    Get a mapping of name -> subdirectory path for the extension's collections/ directory.
+    """
+    return {
+        str(pth.relative_to(collections_path)): pth
+        for pth in collections_path.iterdir()
+        if pth.is_dir()
+    }
 
 
 def initialize(manager: WildcardManager):
-    global tree_json
     global wildcard_manager
-
     wildcard_manager = manager
-    tree_json = load_hierarchy()
     script_callbacks.on_ui_tabs(on_ui_tabs)
 
 
-def load_hierarchy():
-    hierarchy = wildcard_manager.get_wildcard_hierarchy()
-    return format_json(hierarchy)
+def _format_node_for_json(
+    wildcard_manager: WildcardManager,
+    node: WildcardTreeNode,
+) -> list[dict]:
+    collections = [
+        {
+            "name": node.qualify_name(coll),
+            "wrappedName": wildcard_manager.to_wildcard(node.qualify_name(coll)),
+            "children": [],
+        }
+        for coll in sorted(node.collections)
+    ]
+    child_items = [
+        {"name": name, "children": _format_node_for_json(wildcard_manager, child_node)}
+        for name, child_node in sorted(node.child_nodes.items())
+    ]
+    return [*collections, *child_items]
 
 
-def format_json(js):
-    if js is None:
-        return []
-
-    tree = []
-
-    leaves, hierarchy = js
-
-    for leaf in leaves:
-        tree.append({"name": leaf, "children": []})
-
-    for key, val in hierarchy.items():
-        branch = {"name": key, "children": format_json(val)}
-        tree.append(branch)
-
-    return tree
+def get_wildcard_hierarchy_for_json():
+    return _format_node_for_json(wildcard_manager, wildcard_manager.tree.root)
 
 
 def on_ui_tabs():
@@ -63,7 +73,6 @@ def on_ui_tabs():
     </ol>
     """
 
-    available_collections = [str(c) for c in wildcard_manager.get_collections()]
     with gr.Blocks() as wildcards_tab:
         with gr.Group(elem_id="dynamic-prompting"):
             with gr.Row():
@@ -71,7 +80,7 @@ def on_ui_tabs():
                     gr.HTML(header_html)
                     gr.HTML("", elem_id="html_id")
                     collection_dropdown = gr.Dropdown(
-                        choices=available_collections,
+                        choices=sorted(get_collection_dirs()),
                         type="value",
                         label="Select a collection",
                         elem_id="collection_dropdown",
@@ -88,11 +97,11 @@ def on_ui_tabs():
                             value=False,
                         )
                     with gr.Row():
-                        load_tree = gr.Button(
+                        refresh_wildcards_button = gr.Button(
                             "Refresh wildcards",
                             elem_id="load_tree_button",
                         )
-                        delete_tree = gr.Button(
+                        delete_tree_button = gr.Button(
                             "Delete all wildcards",
                             elem_id="delete_tree_button",
                         )
@@ -112,7 +121,11 @@ def on_ui_tabs():
                     )
                     save_button = gr.Button("Save wildcards", full_width=True)
 
-        gr.Textbox(json.dumps(tree_json), elem_id="tree_textbox", visible=False)
+        gr.Textbox(
+            json.dumps(get_wildcard_hierarchy_for_json()),
+            elem_id="tree_textbox",
+            visible=False,
+        )
         hidden_textbox = gr.Textbox("", elem_id="scratch_textbox", visible=False)
 
         hidden_action_button = gr.Button(
@@ -121,13 +134,13 @@ def on_ui_tabs():
             visible=False,
         )
 
-        load_tree.click(
-            load_tree_callback,
+        refresh_wildcards_button.click(
+            refresh_wildcards_callback,
             inputs=[],
             outputs=[hidden_textbox],
         )
 
-        delete_tree.click(
+        delete_tree_button.click(
             delete_tree_callback,
             _js="deleteTree",
             inputs=[hidden_textbox],
@@ -157,7 +170,7 @@ def on_ui_tabs():
     return ((wildcards_tab, "Wildcards Manager", "wildcards_tab"),)
 
 
-def create_payload(action, result, payload):
+def create_payload(action: str, result: str, payload: Any = None):
     return json.dumps(
         {
             "action": action,
@@ -169,7 +182,7 @@ def create_payload(action, result, payload):
 
 
 def copy_collection_callback(overwrite_checkbox, collection):
-    collection_paths = wildcard_manager.get_collection_dirs()
+    collection_paths = get_collection_dirs()
     if collection in collection_paths:
         collection_path = collection_paths[collection]
         for file in collection_path.glob("**/*"):
@@ -183,48 +196,52 @@ def copy_collection_callback(overwrite_checkbox, collection):
                     target_path.parent.mkdir(parents=True, exist_ok=True)
                     shutil.copy(file, target_path)
 
-        return load_tree_callback()
+        return refresh_wildcards_callback()
 
-    return create_payload("copy collection", "failed", json.dumps([]))
+    return create_payload("copy collection", "failed")
 
 
-def load_tree_callback():
-    hierarchy = load_hierarchy()
-
-    return create_payload("load tree", "success", json.dumps(hierarchy))
+def refresh_wildcards_callback():
+    wildcard_manager.clear_cache()
+    return create_payload(
+        "load tree",
+        "success",
+        json.dumps(get_wildcard_hierarchy_for_json()),
+    )
 
 
 def delete_tree_callback(confirm_delete):
     if confirm_delete == "True":
         send2trash(wildcard_manager.path)
         wildcard_manager.path.mkdir(parents=True, exist_ok=True)
-        hierarchy = load_hierarchy()
-
-        return create_payload("load tree", "success", json.dumps(hierarchy))
-
-    return create_payload("delete tree", "failed", json.dumps([]))
+        return refresh_wildcards_callback()
+    return create_payload("delete tree", "failed")
 
 
-def receive_tree_event(s):
-    js = json.loads(s)
-    path = wildcard_manager.wildcard_to_path(js["name"])
-    return path.read_text(encoding=DEFAULT_ENCODING)
-
-
-def save_file_callback(js):
+def receive_tree_event(event_str: str):
     try:
-        wildcard_json = js
-        js = json.loads(wildcard_json)
+        event = json.loads(event_str)
+        wf = wildcard_manager.get_file(event["name"])
+        if isinstance(wf, WildcardTextFile):
+            # For text files, just return the raw text.
+            return wf.read_text()
+        # Otherwise, return a preview of the values,
+        # with a header to indicate that the file can't be edited.
+        values = "\n".join(wf.get_values())
+        return f"# File can't be edited\n{values}"
+    except Exception as e:
+        logger.exception(e)
+        return "# Failed to load file"
 
-        if "wildcard" in js and "name" in js["wildcard"]:
-            wildcard = js["wildcard"]["name"]
-            path = wildcard_manager.wildcard_to_path(wildcard)
 
-            contents = js["contents"]
-
-            with path.open("w") as f:
-                contents = contents.splitlines()
-                for c in contents:
-                    print(c.strip(), file=f)
+def save_file_callback(event_str: str):
+    try:
+        event = json.loads(event_str)
+        wf = wildcard_manager.get_file(event["wildcard"]["name"])
+        if isinstance(wf, WildcardTextFile):
+            wf.write_text(event["contents"].strip())
+        else:
+            raise Exception("Can't save non-text files")
+        return refresh_wildcards_callback()
     except Exception as e:
         logger.exception(e)

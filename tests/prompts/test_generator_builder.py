@@ -1,7 +1,7 @@
 from unittest.mock import patch
 
 from dynamicprompts.generators.magicprompt import MagicPromptGenerator
-from dynamicprompts.wildcardmanager import WildcardManager
+from dynamicprompts.wildcards import WildcardManager
 
 from sd_dynamic_prompts.generator_builder import GeneratorBuilder
 
