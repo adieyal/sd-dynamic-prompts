@@ -39,20 +39,27 @@ def initialize(manager: WildcardManager):
     script_callbacks.on_ui_tabs(on_ui_tabs)
 
 
-def _format_node_for_json(node: WildcardTreeNode) -> list[dict]:
+def _format_node_for_json(
+    wildcard_manager: WildcardManager,
+    node: WildcardTreeNode,
+) -> list[dict]:
     collections = [
-        {"name": node.qualify_name(coll), "children": []}
+        {
+            "name": node.qualify_name(coll),
+            "wrappedName": wildcard_manager.to_wildcard(node.qualify_name(coll)),
+            "children": [],
+        }
         for coll in sorted(node.collections)
     ]
     child_items = [
-        {"name": name, "children": _format_node_for_json(child_node)}
+        {"name": name, "children": _format_node_for_json(wildcard_manager, child_node)}
         for name, child_node in sorted(node.child_nodes.items())
     ]
     return [*collections, *child_items]
 
 
 def get_wildcard_hierarchy_for_json():
-    return _format_node_for_json(wildcard_manager.tree.root)
+    return _format_node_for_json(wildcard_manager, wildcard_manager.tree.root)
 
 
 def on_ui_tabs():
