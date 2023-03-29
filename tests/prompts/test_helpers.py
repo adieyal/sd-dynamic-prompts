@@ -34,7 +34,7 @@ def test_get_seeds_with_fixed_seed(processing):
 
 
 def test_get_seeds_with_fixed_seed_batched_combinatorial(processing):
-    num_seeds = 12
+    num_seeds = 10
     combinatorial_batches = 3
     seeds, subseeds = get_seeds(processing, num_seeds, use_fixed_seed=True, is_combinatorial=True, combinatorial_batches=combinatorial_batches)
     assert seeds == [processing.seed] * (num_seeds//3) + [processing.seed+1] * (num_seeds//3) + [processing.seed+2] * (num_seeds//3)
@@ -43,7 +43,7 @@ def test_get_seeds_with_fixed_seed_batched_combinatorial(processing):
     processing.subseed_strength = 0.5
 
     seeds, subseeds = get_seeds(processing, num_seeds, use_fixed_seed=True, is_combinatorial=True, combinatorial_batches=combinatorial_batches)
-    assert seeds == [processing.all_seeds[0]] * num_seeds
+    assert seeds == [processing.all_seeds[0]] * (num_seeds//3) + [processing.all_seeds[0]+1] * (num_seeds//3) + [processing.all_seeds[0]+2] * (num_seeds//3)
     assert subseeds == [processing.all_subseeds[0]] * num_seeds
 
 
