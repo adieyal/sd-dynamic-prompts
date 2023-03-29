@@ -13,7 +13,6 @@ from dynamicprompts.generators import (
 )
 from dynamicprompts.parser.parse import default_parser_config
 
-from sd_dynamic_prompts.consts import DEFAULT_MAGIC_MODEL
 from sd_dynamic_prompts.frozenprompt_generator import FrozenPromptGenerator
 
 logger = logging.getLogger(__name__)
@@ -102,13 +101,17 @@ class GeneratorBuilder:
     def set_is_magic_prompt(
         self,
         is_magic_prompt=True,
-        magic_model=DEFAULT_MAGIC_MODEL,
+        magic_model=None,
         magic_prompt_length=100,
         magic_temp_value=0.7,
         device=0,
         magic_blocklist_regex: str | None = None,
         batch_size=1,
     ):
+        if not magic_model:
+            self._is_magic_prompt = False
+            return self
+
         self._magic_model = magic_model
         self._magic_prompt_length = magic_prompt_length
         self._magic_temp_value = magic_temp_value

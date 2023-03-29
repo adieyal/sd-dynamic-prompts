@@ -1,8 +1,10 @@
+import os
+import tempfile
 from unittest import mock
 
 import pytest
 
-from sd_dynamic_prompts.helpers import get_seeds
+from sd_dynamic_prompts.helpers import get_seeds, load_magicprompt_models
 
 
 @pytest.fixture
@@ -45,3 +47,24 @@ def test_get_seeds_with_random_seed(processing):
     seeds, subseeds = get_seeds(processing, num_seeds=num_seeds, use_fixed_seed=False)
     assert seeds == [seed] * num_seeds
     assert subseeds == list(range(subseed, subseed + num_seeds))
+
+
+def test_load_magicprompt_models():
+    s = """# a comment
+model1 # another comment
+# empty lines below
+
+
+model 2
+
+
+    """
+
+    with tempfile.NamedTemporaryFile(mode="w", delete=False) as tmp_file:
+        tmp_file.write(s)
+        tmp_filename = tmp_file.name
+
+    try:
+        load_magicprompt_models(tmp_filename)
+    finally:
+        os.unlink(tmp_filename)

@@ -17,13 +17,17 @@ from modules.processing import fix_seed
 from modules.shared import opts
 
 from sd_dynamic_prompts import callbacks
-from sd_dynamic_prompts.consts import MAGIC_PROMPT_MODELS
 from sd_dynamic_prompts.generator_builder import GeneratorBuilder
-from sd_dynamic_prompts.helpers import get_seeds, should_freeze_prompt
+from sd_dynamic_prompts.helpers import (
+    get_magicmodels_path,
+    get_seeds,
+    load_magicprompt_models,
+    should_freeze_prompt,
+)
 from sd_dynamic_prompts.ui.pnginfo_saver import PngInfoSaver
 from sd_dynamic_prompts.ui.prompt_writer import PromptWriter
 
-VERSION = "2.8.12"
+VERSION = "2.9.0"
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -34,6 +38,7 @@ if is_debug:
     logger.setLevel(logging.DEBUG)
 
 base_dir = Path(scripts.basedir())
+magicprompt_models_path = get_magicmodels_path(base_dir)
 
 
 def get_wildcard_dir() -> Path:
@@ -171,10 +176,30 @@ class Script(scripts.Script):
 
                 with gr.Accordion("Prompt Magic", open=False):
                     with gr.Group():
+                        try:
+                            magicprompt_models = load_magicprompt_models(
+                                magicprompt_models_path,
+                            )
+                            default_magicprompt_model = (
+                                opts.dp_magicprompt_default_model
+                                if hasattr(opts, "dp_magicprompt_default_model")
+                                else magicprompt_models[0]
+                            )
+                            is_magic_model_available = True
+                        except IndexError:
+                            logger.warning(
+                                f"The magicprompts config file at {magicprompt_models_path} does not contain any models.",
+                            )
+
+                            magicprompt_models = []
+                            default_magicprompt_model = ""
+                            is_magic_model_available = False
+
                         is_magic_prompt = gr.Checkbox(
                             label="Magic prompt",
                             value=False,
                             elem_id="is-magicprompt",
+                            interactive=is_magic_model_available,
                         )
 
                         magic_prompt_length = gr.Slider(
@@ -183,6 +208,7 @@ class Script(scripts.Script):
                             minimum=30,
                             maximum=300,
                             step=10,
+                            interactive=is_magic_model_available,
                         )
 
                         magic_temp_value = gr.Slider(
@@ -191,14 +217,16 @@ class Script(scripts.Script):
                             minimum=0.1,
                             maximum=3.0,
                             step=0.10,
+                            interactive=is_magic_model_available,
                         )
 
                         magic_model = gr.Dropdown(
-                            MAGIC_PROMPT_MODELS,
-                            value=MAGIC_PROMPT_MODELS[0],
+                            magicprompt_models,
+                            value=default_magicprompt_model,
                             multiselect=False,
                             label="Magic prompt model",
                             elem_id="magic-prompt-model",
+                            interactive=is_magic_model_available,
                         )
 
                         magic_blocklist_regex = gr.Textbox(
@@ -209,14 +237,7 @@ class Script(scripts.Script):
                                 "Regular expression pattern for blocking terms out of the generated prompt. Applied case-insensitively. "
                                 'For instance, to block both "purple" and "interdimensional", you could use the pattern "purple|interdimensional".'
                             ),
-                        )
-
-                        magic_batch_size = gr.Slider(
-                            label="Magic Prompt batch size",
-                            value=1,
-                            minimum=1,
-                            maximum=64,
-                            step=1,
+                            interactive=is_magic_model_available,
                         )
 
                     is_feeling_lucky = gr.Checkbox(
@@ -325,7 +346,6 @@ class Script(scripts.Script):
             max_generations,
             magic_model,
             magic_blocklist_regex,
-            magic_batch_size,
         ]
 
     def process(
@@ -349,7 +369,6 @@ class Script(scripts.Script):
         max_generations,
         magic_model,
         magic_blocklist_regex: str | None,
-        magic_batch_size,
     ):
         if not is_enabled:
             logger.debug("Dynamic prompts disabled - exiting")
@@ -360,6 +379,7 @@ class Script(scripts.Script):
         self._pnginfo_saver.enabled = opts.dp_write_raw_template
         self._prompt_writer.enabled = opts.dp_write_prompts_to_file
         self._limit_jinja_prompts = opts.dp_limit_jinja_prompts
+        magicprompt_batch_size = opts.dp_magicprompt_batch_size
 
         parser_config = ParserConfig(
             variant_start=opts.dp_parser_variant_start,
@@ -383,6 +403,7 @@ class Script(scripts.Script):
 
         try:
             logger.debug("Creating generator")
+
             generator_builder = (
                 GeneratorBuilder(
                     self._wildcard_manager,
@@ -401,12 +422,12 @@ class Script(scripts.Script):
                 )
                 .set_is_combinatorial(is_combinatorial, combinatorial_batches)
                 .set_is_magic_prompt(
-                    is_magic_prompt,
+                    is_magic_prompt=is_magic_prompt,
                     magic_model=magic_model,
                     magic_prompt_length=magic_prompt_length,
                     magic_temp_value=magic_temp_value,
                     magic_blocklist_regex=magic_blocklist_regex,
-                    batch_size=magic_batch_size,
+                    batch_size=magicprompt_batch_size,
                     device=device,
                 )
                 .set_is_dummy(False)
