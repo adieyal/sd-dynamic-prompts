@@ -1,3 +1,4 @@
+- 2.9.1 Upgraded dynamicprompts to v0.20.2 which fixes [#354](https://github.com/adieyal/sd-dynamic-prompts/issues/354) - No values found for wildcards on Windows
 - 2.9.0 Magic Prompt models are now read from a text file enabling users to add their own. Default model and magicprompt batch size options have been added to the settings tab.
 - 2.8.12 Prompts are frozen if the variation strength is greater than 0. See [#310](https://github.com/adieyal/sd-dynamic-prompts/issues/310)
 - 2.8.11 Fixed the broken wildcards manager, see [#338](https://github.com/adieyal/sd-dynamic-prompts/issues/338)
