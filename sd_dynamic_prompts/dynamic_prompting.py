@@ -461,7 +461,7 @@ class Script(scripts.Script):
         updated_count = len(all_prompts)
         p.n_iter = math.ceil(updated_count / p.batch_size)
 
-        p.all_seeds, p.all_subseeds = get_seeds(p, updated_count, use_fixed_seed)
+        p.all_seeds, p.all_subseeds = get_seeds(p, updated_count, use_fixed_seed, is_combinatorial, combinatorial_batches)
 
         logger.info(
             f"Prompt matrix will create {updated_count} images in a total of {p.n_iter} batches.",
