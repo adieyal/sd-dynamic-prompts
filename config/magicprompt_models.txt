@@ -1,0 +1,15 @@
+Gustavosta/MagicPrompt-Stable-Diffusion
+daspartho/prompt-extend
+FredZhang7/anime-anything-promptgen-v2
+succinctly/text2image-prompt-generator
+microsoft/Promptist
+AUTOMATIC/promptgen-lexart
+AUTOMATIC/promptgen-majinai-safe
+AUTOMATIC/promptgen-majinai-unsafe
+kmewhort/stable-diffusion-prompt-bolster
+Gustavosta/MagicPrompt-Dalle
+Ar4ikov/gpt2-650k-stable-diffusion-prompt-generator
+Ar4ikov/gpt2-medium-650k-stable-diffusion-prompt-generator
+crumb/bloom-560m-RLHF-SD2-prompter-aesthetic
+Meli/GPT2-Prompt
+DrishtiSharma/StableDiffusion-Prompt-Generator-GPT-Neo-125M

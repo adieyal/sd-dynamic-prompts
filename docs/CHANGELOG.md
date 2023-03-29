@@ -1,3 +1,4 @@
+- 2.9.0 Magic Prompt models are now read from a text file enabling users to add their own. Default model and magicprompt batch size options have been added to the settings tab.
 - 2.8.12 Prompts are frozen if the variation strength is greater than 0. See [#310](https://github.com/adieyal/sd-dynamic-prompts/issues/310)
 - 2.8.11 Fixed the broken wildcards manager, see [#338](https://github.com/adieyal/sd-dynamic-prompts/issues/338)
 - 2.8.10 Magic Prompt now works on M1/M2 Mac - see [#329](https://github.com/adieyal/sd-dynamic-prompts/issues/329)
