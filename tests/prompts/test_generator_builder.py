@@ -3,6 +3,7 @@ from unittest.mock import patch
 from dynamicprompts.generators.magicprompt import MagicPromptGenerator
 from dynamicprompts.wildcards import WildcardManager
 
+from sd_dynamic_prompts.frozenprompt_generator import FrozenPromptGenerator
 from sd_dynamic_prompts.generator_builder import GeneratorBuilder
 
 
@@ -17,3 +18,11 @@ def test_magic_blocklist_regexp(tmp_path):
         gen = gb.create_generator()
         assert isinstance(gen, MagicPromptGenerator)
         assert gen._blocklist_regex.pattern == popular_artist
+
+
+def test_frozen_generator(tmp_path):
+    gb = GeneratorBuilder(wildcard_manager=WildcardManager(tmp_path)).set_freeze_prompt(
+        True,
+    )
+    gen = gb.create_generator()
+    assert type(gen) == FrozenPromptGenerator
