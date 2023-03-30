@@ -1,3 +1,4 @@
+- 2.10.1 Upgraded dynamicprompts to v0.21.1 which fixes [#358](https://github.com/adieyal/sd-dynamic-prompts/issues/358)
 - 2.10.0 Upgraded dynamicprompts to v0.21.0 which introduces variables and parameterised templates
 - 2.9.1 Upgraded dynamicprompts to v0.20.2 which fixes [#354](https://github.com/adieyal/sd-dynamic-prompts/issues/354) - No values found for wildcards on Windows
 - 2.9.0 Magic Prompt models are now read from a text file enabling users to add their own. Default model and magicprompt batch size options have been added to the settings tab.
