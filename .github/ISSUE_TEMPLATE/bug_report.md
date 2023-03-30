@@ -19,6 +19,10 @@ Steps to reproduce the behaviour, include the prompt you used if applicable:
 
 Also mention which checkboxes have been set.
 
+**What version of the extension and dynamicprompts library do you have installed?**
+
+These can be found under the Need Help? accordion.
+
 **Are you using a local install or a colab?**
 
 If a colab, which one?
