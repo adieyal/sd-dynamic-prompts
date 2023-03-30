@@ -1,4 +1,4 @@
-/* global gradioApp, TreeView, get_uiCurrentTabContent, onUiUpdate, onUiLoaded */
+/* global gradioApp, get_uiCurrentTabContent, onUiUpdate, onUiLoaded */
 // prettier-ignore
 const SDDP_HELP_TEXTS = {
   "sddp-disable-negative-prompt": "Don't use prompt magic on negative prompts.",
@@ -14,6 +14,121 @@ const SDDP_HELP_TEXTS = {
   "sddp-write-prompts": "Write all generated prompts to a file",
   "sddp-write-raw-template": "Write template into image metadata.",
 };
+
+class SDDPTreeView {
+  /**
+   * @constructor
+   * @property {object} handlers The attached event handlers
+   * @property {object} data The JSON object that represents the tree structure
+   * @property {Element} node The DOM element to render the tree in
+   */
+  constructor(data, node) {
+    this.handlers = {};
+    this.node = node;
+    this.data = data;
+    this.render();
+  }
+
+  /**
+   * Renders the tree view in the DOM
+   */
+  render = () => {
+    const container = this.node;
+    container.innerHTML = "";
+    this.data.forEach((item) => container.appendChild(this.renderNode(item)));
+    [...container.querySelectorAll(".tree-leaf-text,.tree-expando")].forEach(
+      (node) => node.addEventListener("click", this.handleClickEvent),
+    );
+  };
+
+  renderNode = (item) => {
+    const leaf = document.createElement("div");
+    const content = document.createElement("div");
+    const text = document.createElement("div");
+    const expando = document.createElement("div");
+    leaf.setAttribute("class", "tree-leaf");
+    content.setAttribute("class", "tree-leaf-content");
+    text.setAttribute("class", "tree-leaf-text");
+    const { children, name, expanded } = item;
+    text.textContent = name;
+    expando.setAttribute("class", `tree-expando ${expanded ? "expanded" : ""}`);
+    expando.textContent = expanded ? "-" : "+";
+    content.appendChild(expando);
+    content.appendChild(text);
+    leaf.appendChild(content);
+    if (children?.length > 0) {
+      const childrenDiv = document.createElement("div");
+      childrenDiv.setAttribute("class", "tree-child-leaves");
+      children.forEach((child) => {
+        childrenDiv.appendChild(this.renderNode(child));
+      });
+      if (!expanded) {
+        childrenDiv.classList.add("hidden");
+      }
+      leaf.appendChild(childrenDiv);
+    } else {
+      expando.classList.add("hidden");
+      content.setAttribute("data-item", JSON.stringify(item));
+    }
+    return leaf;
+  };
+
+  handleClickEvent = (event) => {
+    const parent = (event.target || event.currentTarget).parentNode;
+    const leaves = parent.parentNode.querySelector(".tree-child-leaves");
+    if (leaves) {
+      this.setSubtreeVisibility(
+        parent,
+        leaves,
+        leaves.classList.contains("hidden"),
+      );
+    } else {
+      this.emit("select", {
+        target: event,
+        data: JSON.parse(parent.getAttribute("data-item")),
+      });
+    }
+  };
+
+  /**
+   * Expands/collapses by the expando or the leaf text
+   * @param {Element} node The parent node that contains the leaves
+   * @param {Element} leaves The leaves wrapper element
+   * @param {boolean} visible Expand or collapse?
+   * @param {boolean} skipEmit Skip emitting the event?
+   */
+  setSubtreeVisibility(node, leaves, visible, skipEmit = false) {
+    leaves.classList.toggle("hidden", !visible);
+    node.querySelector(".tree-expando").textContent = visible ? "+" : "-";
+    if (skipEmit) {
+      return;
+    }
+    this.emit(visible ? "expand" : "collapse", {
+      target: node,
+      leaves,
+    });
+  }
+
+  on(name, callback, context = null) {
+    const handlers = this.handlers[name] || [];
+    handlers.push({ callback, context });
+    this.handlers[name] = handlers;
+  }
+
+  off(name, callback) {
+    this.handlers[name] = (this.handlers[name] || []).filter(
+      (handle) => handle.callback !== callback,
+    );
+  }
+
+  emit(name, ...args) {
+    (this.handlers[name] || []).forEach((handle) => {
+      window.setTimeout(() => {
+        handle.callback.apply(handle.context, args);
+      }, 0);
+    });
+  }
+}
 
 class SDDP_UI {
   constructor() {
@@ -86,7 +201,7 @@ class SDDP_UI {
     if (!this.treeView) {
       const treeDiv = gradioApp().querySelector("#sddp-wildcard-tree");
       if (treeDiv) {
-        treeView = new TreeView(content, treeDiv);
+        treeView = new SDDPTreeView(content, treeDiv);
         treeView.on("select", this.onSelectNode.bind(this), null);
         this.treeView = treeView;
       }

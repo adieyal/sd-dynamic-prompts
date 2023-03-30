@@ -7,9 +7,11 @@ module.exports = {
   plugins: ["prettier"],
   rules: {
     "class-methods-use-this": "off",
+    "max-classes-per-file": "off",
+    "no-console": "off",
+    "no-param-reassign": "off",
     "prettier/prettier": "error",
     curly: ["error", "all"],
-    "no-console": "off",
   },
   parserOptions: {
     ecmaVersion: "latest",
