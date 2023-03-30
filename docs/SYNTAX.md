@@ -29,6 +29,7 @@ This guide will walk you through the template language used to generate dynamic 
       * [Basic Syntax](#basic-syntax-3)
       * [Default values](#default-values)
    * [Whitespace and comments](#whitespace-and-comments)
+   * [Samplers](#samplers)
 
 
 ## Variants
