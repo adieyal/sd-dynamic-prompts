@@ -66,10 +66,10 @@ def on_ui_tabs():
     header_html = f"""
     <p>Manage wildcards for Dynamic Prompts</p>
     <ol>
-        <li>1. Create your wildcard library by copying a collection using the dropdown below.</li>
-        <li>2. Click on any of the files that appear in the tree to edit them.</li>
-        <li>3. Use the wildcard in your script by typing the name of the file or copying the text from the Wildcards file text box</li>
-        <li>4. Optional - add your own wildcards files to the {wildcard_manager.path} folder</li>
+        <li>Create your wildcard library by copying a collection using the dropdown below.</li>
+        <li>Click on the files that appear in the tree to edit them.</li>
+        <li>Use the wildcard in your script by typing the name of the file or copying the text from the Wildcards file text box</li>
+        <li>Optional - add your own wildcards files to the {wildcard_manager.path} folder</li>
     </ol>
     """
 
