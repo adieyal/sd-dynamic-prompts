@@ -35,8 +35,17 @@
 
     <br/><br/>
 
-    <small>You can add more wildcards by creating a text file with one term per line and name is mywildcards.txt. Place it in ${WILDCARD_DIR}. <code class="codeblock">__&#60;folder&#62;/mywildcards__</code> will then become available.</small><br><br>
+    You can add more wildcards by creating a text file with one term per line and name is mywildcards.txt. Place it in ${WILDCARD_DIR}. <code class="codeblock">__&#60;folder&#62;/mywildcards__</code> will then become available.<br><br>
 
+    <h3><strong>Variables</strong></h3>
+    Set a variable like so:
+    <code class="codeblock">$${season=!{summer|autumn|winter|spring}}</code>
+
+    Now use it like this:
+    <code class="codeblock">In $${season} I wear a $${season} shirt and $${season} trousers</code>
+
+    For more details, and functionality, see the documentation (coming soon)
+    <br><br>
     Find more settings on the <strong>Settings</strong> tab<br><br>
 
     You are using <strong>version ${VERSION} of the WebUI extension</strong>, and the underlying <strong>dynamicprompts library is version ${LIB_VERSION}</strong>.
