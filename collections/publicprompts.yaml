@@ -1,21 +1,26 @@
-# Prompts taken https://publicprompts.art/
+# Prompts taken from the excellent https://publicprompts.art/
+# They have been modified with parameters and re-usable chunks
 public-prompts:
-  cute-stuffed-animals:
-    - |
-      # Usage: __public-prompts/cuddly-toys(figure=elephant)__
-      # Homepage: https://publicprompts.art/cute-stuffed-animals/
-      # Suggested settings:
-      # CFG scale: 13
-      # Sampler DDIM
-      # Steps: 35
-          
-      cute kawaii Squishy ${figure} plush toy,
-      realistic texture, visible stitch line, 
-      soft smooth lighting, 
-      vibrant studio lighting, 
-      modular constructivism, 
-      physically based rendering, 
-      square image
+  styles:
+    3d-render:
+      - |
+        # Usage: <object>, __public-prompts/styles/3d-render(color_scheme=soft pastel)__
+        # Homepage: https://publicprompts.art/
+        
+        __public-prompts/lighting/soft-smooth__,
+        ${color_scheme:soft pastel} colors,
+        3d, blender render,
+        polycount, modular constructivism,
+        physically based rendering,
+        square image
+  lighting:
+    soft-smooth:
+      - soft smooth lighting
+    studio:
+      - vibrant studio lighting
+    diffused:
+      - diffused lighting
+  
   needle-felted:
     - |
       # Usage: __public-prompts/needle-felted(figure=frog)__
@@ -44,26 +49,7 @@ public-prompts:
       horizon silhouette 
       Landscape wallpaper by Alena Aenami, 
       firewatch game style, vector style background
-  3d-character:
-    - |
-      # Usage: __public-prompts/3d-character(figure=ninja)__
-      # Homepage: https://publicprompts.art/3d-character/
-      # Suggested settings:
-      # CFG scale: 13
-      # Sampler DDIM
-      # Steps: 25
-
-      tiny cute ${figure} toy,
-      standing character,
-      soft smooth lighting,
-      soft pastel colors, 
-      skottie young,
-      3d blender render,
-      polycount,
-      modular constructivism,
-      pop surrealism,
-      physically based rendering,
-      square image, 
+  
   comic-art:
     - |
       # Usage: __public-prompts/comic-art(figure=James Bond)__
@@ -114,16 +100,6 @@ public-prompts:
       # Steps: 50
 
       Closeup face portrait of a ${figure:girl wearing crown of flowers}, smooth soft skin, big dreamy eyes, beautiful intricate colored hair, symmetrical, anime wide eyes, soft lighting, detailed face, by makoto shinkai, stanley artgerm lau, wlop, rossdraws, concept art, digital painting, looking into camera
-  micro-worlds:
-    - |
-      # Usage: __public-prompts/micro-worlds(figure=volcano)__
-      # Homepage: https://publicprompts.art/surreal-micro-worlds/
-      # Suggested settings:
-      # CFG scale: 10-15
-      # Sampler k_euler-a
-      # Steps: 50
-
-      100mm photo of isometric floating island in the sky, surreal ${figure:volcano}, intricate, high detail, behance, microworlds smooth, macro sharp focus, centered
   gold-pendant:
     - |
       # Usage: __public-prompts/gold-pendant(symbol=dia de los muertos)__
@@ -144,74 +120,126 @@ public-prompts:
       # Steps: 50
 
       2d ${figure:ferocious lion head}, vector illustration, angry eyes, football team emblem logo, 2d flat, centered
-  funky-pop:
+  isometric:
+    rooms:
+        - |
+          # Usage: __public-prompts/isometric/rooms(room=bedroom, style=borderland game)__
+          # Homepage: https://publicprompts.art/isometric-rooms/
+          # Suggested settings:
+          # CFG scale: 10
+          # Sampler DDIM
+          # Steps: 50
+
+          Tiny cute isometric ${room:bedroom} in a cutaway box, ${style:borderlands game} style, 
+          __public-prompts/lighting/soft-smooth__,
+          soft colors, 100mm lens, 3d blender render
+    rendered-objects:
+      - | 
+        # Usage: __public-prompts/isometric/rendered-objects(object=porcelain cup of coffee, background=blue)__
+        # Homepage: https://publicprompts.art/rendered-objects/
+        # Suggested settings:
+        # CFG scale: 10-15
+        # Sampler k_euler_a
+        # Steps: 50
+
+        Tiny cute isometric ${object:porcelain cup of coffee},
+        100mm lens 
+        trending on polycount, 
+        ${background:blue} background,
+        pop surrealism,
+        __public-prompts/styles/3d-render__
+    block-structures:
+      - |
+        # Usage: __public-prompts/isometric/block-structures(structure=temple, background=blue)__
+        # Homepage: https://publicprompts.art/block-structures-prompt/
+        # Suggested settings:
+        # CFG scale: 10-15
+        # Sampler k_euler-a
+        # Steps: 50
+
+        Tiny cute isometric ${structure:temple},
+        100mm lens, trending on polycount, 
+        ${background:blue} blackground,
+        pop surrealism,
+        __public-prompts/styles/3d-render__
+    micro-worlds:
     - |
-      # Usage: __public-prompts/funky-pop(figure=Yoda, background=white)__
-      # Homepage: https://publicprompts.art/funky-pop/
+      # Usage: __public-prompts/isometric/micro-worlds(figure=volcano)__
+      # Homepage: https://publicprompts.art/surreal-micro-worlds/
       # Suggested settings:
       # CFG scale: 10-15
       # Sampler k_euler-a
       # Steps: 50
 
-      Funky pop ${figure:Yoda} figurine, made of plastic, product studio shot, on a ${background:white} background, diffused lighting, centered
-  block-structures:
-    - |
-      # Usage: __public-prompts/block-structures(structure=temple)__
-      # Homepage: https://publicprompts.art/block-structures-prompt/
-      # Suggested settings:
-      # CFG scale: 10-15
-      # Sampler k_euler-a
-      # Steps: 50
+      100mm photo of isometric floating island in the sky, surreal ${figure:volcano}, intricate, high detail, behance, microworlds smooth, macro sharp focus, centered
+  renders:
+    funky-pop:
+      - |
+        # Usage: __public-prompts/renders/funky-pop(figure=Yoda, background=white)__
+        # Homepage: https://publicprompts.art/funky-pop/
+        # Suggested settings:
+        # CFG scale: 10-15
+        # Sampler k_euler-a
+        # Steps: 50
 
-      Tiny cute isometric ${structure:temple},
-      soft smooth lighting, soft colors, soft colors, 
-      100mm lens, 3d blender render, trending on polycount, 
-      modular constructivism, blue blackground, physically based rendering, centered
-  low-poly-creatures:
-    - |
-      # Usage: __public-prompts/low-poly-creatures(figure=panda, background=white)__
-      # Homepage: https://publicprompts.art/low-poly-prompt/
-      # Suggested settings:
-      # CFG scale: 10-15
-      # Sampler k_euler-a
-      # Steps: 50
+        Funky pop ${figure:Yoda} figurine,
+        made of plastic,
+        product studio shot, on a ${background:white} background,
+        __public-prompts/lighting/soft-smooth__, 
+        centered
+    low-poly-creatures:
+      - |
+        # Usage: __public-prompts/renders/low-poly-creatures(figure=panda, background=white)__
+        # Homepage: https://publicprompts.art/low-poly-prompt/
+        # Suggested settings:
+        # CFG scale: 10-15
+        # Sampler k_euler-a
+        # Steps: 50
 
-      kawaii low poly ${figure:panda} character, 3d isometric render, ${background:white} background, ambient occlusion, unity engine
-  isometric-rooms:
+        kawaii low poly ${figure:panda} character, 3d isometric render, ${background:white} background, ambient occlusion, unity engine
+    
+    cute-creatures:
+      - |
+        # Usage: __public-prompts/renders/cute-creatures(figure=llama)__
+        # Homepage: https://publicprompts.art/cute-creatures/
+        # Suggested settings:
+        # CFG scale: 10
+        # Sampler k_euler_a
+        # Steps: 50
+
+        3d fluffy ${figure:llama}, closeup cute and adorable, 
+        cute big circular reflective eyes, long fuzzy fur, 
+        Pixar render, 
+        unreal engine cinematic smooth, intricate detail, cinematic
+    
+
+    cute-stuffed-animals:
     - |
-      # Usage: __public-prompts/isometric-rooms(room=bedroom, style=borderland game)__
-      # Homepage: https://publicprompts.art/isometric-rooms/
+      # Usage: __public-prompts/renders/cute-stuffed-animals(figure=elephant)__
+      # Homepage: https://publicprompts.art/cute-stuffed-animals/
       # Suggested settings:
-      # CFG scale: 10
+      # CFG scale: 13
       # Sampler DDIM
-      # Steps: 50
+      # Steps: 35
+          
+      cute kawaii Squishy ${figure} plush toy,
+      realistic texture, visible stitch line, 
+      __public-prompts/lighting/soft-smooth__
+      __public-prompts/lighting/studio__
+      modular constructivism, 
+      physically based rendering, 
+      square image
 
-      Tiny cute isometric ${room:bedroom} in a cutaway box, ${style:borderlands game} style, soft smooth lighting, soft colors, 100mm lens, 3d blender render
-  cute-creatures:
+    3d-character:
     - |
-      # Usage: __public-prompts/cute-creatures(figure=llama)__
-      # Homepage: https://publicprompts.art/cute-creatures/
+      # Usage: __public-prompts/renders/3d-character(figure=ninja)__
+      # Homepage: https://publicprompts.art/3d-character/
       # Suggested settings:
-      # CFG scale: 10
-      # Sampler k_euler_a
-      # Steps: 50
+      # CFG scale: 13
+      # Sampler DDIM
+      # Steps: 25
 
-      3d fluffy ${figure:llama}, closeup cute and adorable, 
-      cute big circular reflective eyes, long fuzzy fur, 
-      Pixar render, 
-      unreal engine cinematic smooth, intricate detail, cinematic
-  rendered-objects:
-    - | 
-      # Usage: __public-prompts/rendered-objects(object=porcelain cup of coffee, background=blue)__
-      # Homepage: https://publicprompts.art/rendered-objects/
-      # Suggested settings:
-      # CFG scale: 10-15
-      # Sampler k_euler_a
-      # Steps: 50
-
-      Tiny cute isometric ${object:porcelain cup of coffee},
-      soft smooth lighting, 
-      with soft colors, 
-      100mm lens, 3d blender render, 
-      trending on polycount, 
-      modular constructivism, ${background:blue} background, physically based rendering, centered.
+      tiny cute ${figure} toy,
+      standing character,
+      skottie2 young,
+      __public-prompts/styles/3d-render__
