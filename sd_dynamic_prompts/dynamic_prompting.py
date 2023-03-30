@@ -24,8 +24,8 @@ from sd_dynamic_prompts.helpers import (
     load_magicprompt_models,
     should_freeze_prompt,
 )
-from sd_dynamic_prompts.ui.pnginfo_saver import PngInfoSaver
-from sd_dynamic_prompts.ui.prompt_writer import PromptWriter
+from sd_dynamic_prompts.pnginfo_saver import PngInfoSaver
+from sd_dynamic_prompts.prompt_writer import PromptWriter
 
 VERSION = "2.10.2"
 

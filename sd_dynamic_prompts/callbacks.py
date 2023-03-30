@@ -9,10 +9,10 @@ from modules import script_callbacks
 from modules.generation_parameters_copypaste import parse_generation_parameters
 from modules.script_callbacks import ImageSaveParams
 
-from sd_dynamic_prompts.ui.pnginfo_saver import PngInfoSaver, PromptTemplates
-from sd_dynamic_prompts.ui.prompt_writer import PromptWriter
-from sd_dynamic_prompts.ui.settings import on_ui_settings
-from sd_dynamic_prompts.ui.wildcards_tab import initialize as initialize_wildcards_tab
+from sd_dynamic_prompts.pnginfo_saver import PngInfoSaver, PromptTemplates
+from sd_dynamic_prompts.prompt_writer import PromptWriter
+from sd_dynamic_prompts.settings import on_ui_settings
+from sd_dynamic_prompts.wildcards_tab import initialize as initialize_wildcards_tab
 
 logger = logging.getLogger(__name__)
 
