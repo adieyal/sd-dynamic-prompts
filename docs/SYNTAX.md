@@ -261,7 +261,7 @@ Possible outputs are:
 ### File formats
 
 #### Text files
-The basic wildcard file is a simple text file with a `.txt` extension. It has one value per line. You can comment out a line with a `#`, e.g. 
+The basic wildcard file is a simple text file with a `.txt` extension. It has one value per line. You can comment out a line with a `#`, e.g.
 ```
 # this is a comment
 summer
@@ -419,7 +419,7 @@ As your prompts become more complex, the become harder to read. To prevent creat
 	|winter
 	|spring
     }
-    
+
    In ${season:summer}, I wear ${season:summer} shirts and ${season:summer} trousers
 ```
 
@@ -437,15 +437,107 @@ public-prompts:
       # CFG scale: 13
       # Sampler DDIM
       # Steps: 35
-          
+
       cute kawaii Squishy ${figure} plush toy,
-      realistic texture, visible stitch line, 
-      soft smooth lighting, 
-      vibrant studio lighting, 
-      modular constructivism, 
-      physically based rendering, 
+      realistic texture, visible stitch line,
+      soft smooth lighting,
+      vibrant studio lighting,
+      modular constructivism,
+      physically based rendering,
       square image
 ```
 
 ## Samplers
-TBD
+Samplers are an advanced topic although understanding how they work will help you understand how the dynamic prompts engine works.
+Dynamic Prompts uses samplers to select values from variants and wildcards. So far, we have assumed a random sampler, which randomly selects one of the options. However, combinatorial and cycle samplers are also available, offering different sampling behaviours.
+
+Let's see how the different samplers behave using this prompt:
+
+```
+A {red|green|blue} {square|circle}
+```
+
+### Random Sampler
+The random sampler picks values randomly from both variants:
+
+```
+A green circle
+A blue square
+A blue circle
+...
+```
+
+### Combinatorial Sampler
+The combinatorial sampler produces all possible combinations:
+
+```
+A red square
+A red circle
+A green square
+A green circle
+A blue square
+A blue circle
+```
+
+### Cyclical Sampler
+The cyclical sampler cycles through values and produced this repeating pattern of prompts
+
+```
+A red square
+A green circle
+A blue square
+A red circle
+...
+```
+
+To use the combinatorial sampler, you need to use a [CombinatorialPromptGenerator](https://github.com/adieyal/dynamicprompts#combinatorial-generation) if you're using the [dynamicprompts](https://github.com/adieyal/dynamicprompts) library directly or the [combinatorial mode](https://github.com/adieyal/sd-dynamic-prompts#combinatorial-generation) if you are using the extension. You can also explicitly specify which sampler to use for certain parts of your prompt.
+
+The `~` is used for a random sampler and `@` for cyclical. The syntax for variants is `{~red|green|blue}` and `__~colours__` for wildcards. Similarly, `{@red|green|blue}` and `__@colours__` for cycle.
+
+If a sampler is not explicitly specified, the default sampler is used, the value of which depends on your generator.
+
+Example using a random sampler and explicitly setting the second variant to use a cyclical sampler:
+```
+{red|green|blue} {@square|circle}
+```
+
+The first variant is sampled randomly, but the second one uses the cyclical sampler, example outputs:
+```
+blue square
+red circle
+red square
+green circle
+...
+```
+
+If using the combinatorial sampler and explictly setting the second variant to use a random sampler:
+```
+{red|green|blue} {~square|circle}
+```
+
+The first variant is sampled using a combinatorial sampler, the second is randomly sampled. Example outputs:
+
+```
+red circle
+green circle
+blue square
+```
+
+Note that it only produces 3 outputs and then stops. That's because the combinatorial sampler is finite, and there are a finite number of combinations, in this case red, green, and blue.
+
+Random and cyclical samplers are non-finite, meaning you can continually ask them for more values, eventually leading to duplicates.
+
+Cyclical samplers are useful if you want to keep two values in sync, e.g., embeddings:
+
+```
+{@embedding1|embedding2} and {@embedding3|embedding4}
+```
+
+This will keep embedding1 and embedding3 together, and embedding2 and embedding4 together, i.e.:
+
+```
+embedding1 and embedding3
+embedding2 and embedding4
+embedding1 and embedding3
+...
+```
