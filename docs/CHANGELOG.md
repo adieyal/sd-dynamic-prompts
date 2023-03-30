@@ -1,3 +1,4 @@
+- 2.10.3 Minor fixes and refactoring of the Wildcard Manager tab to reduce conflicts with other extensions
 - 2.10.2 Upgraded dynamicprompts to v0.21.2 which adds a missing parser config
 - 2.10.1 Upgraded dynamicprompts to v0.21.1 which fixes [#358](https://github.com/adieyal/sd-dynamic-prompts/issues/358)
 - 2.10.0 Upgraded dynamicprompts to v0.21.0 which introduces variables and parameterised templates
