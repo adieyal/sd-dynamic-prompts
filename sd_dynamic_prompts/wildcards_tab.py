@@ -118,11 +118,6 @@ def on_ui_tabs():
                     )
                     save_button = gr.Button("Save wildcards", full_width=True)
 
-        gr.Textbox(
-            json.dumps(get_wildcard_hierarchy_for_json()),
-            elem_id="tree_textbox",
-            visible=False,
-        )
         hidden_textbox = gr.Textbox("", elem_id="scratch_textbox", visible=False)
 
         hidden_action_button = gr.Button(

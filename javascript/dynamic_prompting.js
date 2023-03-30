@@ -57,7 +57,6 @@ function onDPUiTabChange () {
 class SDDPUI {
   constructor() {
     this._scratch = gradioApp().querySelector("#scratch_textbox textarea")
-    this._tree_textbox = gradioApp().querySelector("#tree_textbox textarea")
     this._timeout = setInterval(this._onTick.bind(this), 500)
     this._last_message = null
     this._tree = null
