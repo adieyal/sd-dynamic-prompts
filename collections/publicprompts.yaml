@@ -1,0 +1,217 @@
+# Prompts taken https://publicprompts.art/
+public-prompts:
+  cute-stuffed-animals:
+    - |
+      # Usage: __public-prompts/cuddly-toys(figure=elephant)__
+      # Homepage: https://publicprompts.art/cute-stuffed-animals/
+      # Suggested settings:
+      # CFG scale: 13
+      # Sampler DDIM
+      # Steps: 35
+          
+      cute kawaii Squishy ${figure} plush toy,
+      realistic texture, visible stitch line, 
+      soft smooth lighting, 
+      vibrant studio lighting, 
+      modular constructivism, 
+      physically based rendering, 
+      square image
+  needle-felted:
+    - |
+      # Usage: __public-prompts/needle-felted(figure=frog)__
+      # Homepage: https://publicprompts.art/needle-felted-objects/
+      # Suggested settings:
+      # CFG scale: 13
+      # Sampler DDIM
+      # Steps: 25
+
+      Tiny cute 3D felt fiber toy ${figure:frog}, made from Felt fibers, a 3D render, trending on cgsociety, rendered in maya, rendered in cinema4d, made of yarn, square image
+  silhouetted-backgrounds:
+    - |
+      # Usage: __public-prompts/silhouetted-backgrounds(natural-feature=mountains,object=big rocket)__
+      # Homepage: https://publicprompts.art/silhouette-wallpapers/
+      # Suggested settings:
+      # CFG scale: 13
+      # Sampler DDIM
+      # Steps: 25
+      # Resolution: 704x384
+
+      Multiple layers of silhouette ${natural-feature:mountains}, 
+      with silhouette of ${object:big rocket} in sky, 
+      sharp edges, at sunset, 
+      with heavy fog in air, 
+      vector style, 
+      horizon silhouette 
+      Landscape wallpaper by Alena Aenami, 
+      firewatch game style, vector style background
+  3d-character:
+    - |
+      # Usage: __public-prompts/3d-character(figure=ninja)__
+      # Homepage: https://publicprompts.art/3d-character/
+      # Suggested settings:
+      # CFG scale: 13
+      # Sampler DDIM
+      # Steps: 25
+
+      tiny cute ${figure} toy,
+      standing character,
+      soft smooth lighting,
+      soft pastel colors, 
+      skottie young,
+      3d blender render,
+      polycount,
+      modular constructivism,
+      pop surrealism,
+      physically based rendering,
+      square image, 
+  comic-art:
+    - |
+      # Usage: __public-prompts/comic-art(figure=James Bond)__
+      # Homepage: https://publicprompts.art/comic-art/
+      # Suggested settings:
+      # CFG scale: 13
+      # Sampler DDIM
+      # Steps: 25
+
+      Retro comic style artwork, highly detailed ${figure:James Bond}, comic book cover, symmetrical, vibrant
+  psychedelic-pop-art:
+    - |
+      # Usage: __public-prompts/psychedelic-pop-art(figure=Halloween pumpkin)__
+      # Homepage: https://publicprompts.art/psychedelic-pop-art/
+      # Suggested settings:
+      # CFG scale: 13
+      # Sampler DDIM
+      # Steps: 25
+
+      Hypnotic illustration of a ${figure:Halloween pumpkin}, hypnotic psychedelic art by Dan Mumford, pop surrealism, dark glow neon paint, mystical, Behance
+  space-hologram:
+    - |
+      # Usage: __public-prompts/space-hologram(figure=wolf)__
+      # Homepage: https://publicprompts.art/space-holograms/
+      # Suggested settings:
+      # CFG scale: 13
+      # Sampler DDIM
+      # Steps: 25
+
+      Hologram of a ${figure:wolf} floating in space, a vibrant digital illustration, dribbble, quantum wavetracing, black background, behance hd
+  cute-stickers:
+    - |
+      # Usage: __public-prompts/cute-stickers(figure=kawaii flower character)__
+      # Homepage: https://publicprompts.art/cute-stickers/
+      # Suggested settings:
+      # CFG scale: 10-15
+      # Sampler k_euler-a
+      # Steps: 50
+
+      Die-cut sticker, Cute ${figure:kawaii flower character} sticker, white background, illustration minimalism, vector, pastel colors
+  anime-portraits:
+    - |
+      # Usage: __public-prompts/anime-portraits(figure=girl wearing a crown of flowers)__
+      # Homepage: https://publicprompts.art/hyper-realistic-anime-portraits/
+      # Suggested settings:
+      # CFG scale: 10-15
+      # Sampler k_euler-a
+      # Steps: 50
+
+      Closeup face portrait of a ${figure:girl wearing crown of flowers}, smooth soft skin, big dreamy eyes, beautiful intricate colored hair, symmetrical, anime wide eyes, soft lighting, detailed face, by makoto shinkai, stanley artgerm lau, wlop, rossdraws, concept art, digital painting, looking into camera
+  micro-worlds:
+    - |
+      # Usage: __public-prompts/micro-worlds(figure=volcano)__
+      # Homepage: https://publicprompts.art/surreal-micro-worlds/
+      # Suggested settings:
+      # CFG scale: 10-15
+      # Sampler k_euler-a
+      # Steps: 50
+
+      100mm photo of isometric floating island in the sky, surreal ${figure:volcano}, intricate, high detail, behance, microworlds smooth, macro sharp focus, centered
+  gold-pendant:
+    - |
+      # Usage: __public-prompts/gold-pendant(symbol=dia de los muertos)__
+      # Homepage: https://publicprompts.art/gold-pendant-prompt/
+      # Suggested settings:
+      # CFG scale: 10-15
+      # Sampler k_euler-a
+      # Steps: 50
+
+      gold ${symbol:dia de los muertos} pendant, intricate 2d vector geometric, cutout shape pendant, blueprint frame lines sharp edges, svg vector style, product studio shoot
+  sport-team-logo:
+    - |
+      # Usage: __public-prompts/sport-team-logo(figure=ferocious lion head)__
+      # Homepage: https://publicprompts.art/sport-team-logo-v1/
+      # Suggested settings:
+      # CFG scale: 10-15
+      # Sampler k_euler-a
+      # Steps: 50
+
+      2d ${figure:ferocious lion head}, vector illustration, angry eyes, football team emblem logo, 2d flat, centered
+  funky-pop:
+    - |
+      # Usage: __public-prompts/funky-pop(figure=Yoda, background=white)__
+      # Homepage: https://publicprompts.art/funky-pop/
+      # Suggested settings:
+      # CFG scale: 10-15
+      # Sampler k_euler-a
+      # Steps: 50
+
+      Funky pop ${figure:Yoda} figurine, made of plastic, product studio shot, on a ${background:white} background, diffused lighting, centered
+  block-structures:
+    - |
+      # Usage: __public-prompts/block-structures(structure=temple)__
+      # Homepage: https://publicprompts.art/block-structures-prompt/
+      # Suggested settings:
+      # CFG scale: 10-15
+      # Sampler k_euler-a
+      # Steps: 50
+
+      Tiny cute isometric ${structure:temple},
+      soft smooth lighting, soft colors, soft colors, 
+      100mm lens, 3d blender render, trending on polycount, 
+      modular constructivism, blue blackground, physically based rendering, centered
+  low-poly-creatures:
+    - |
+      # Usage: __public-prompts/low-poly-creatures(figure=panda, background=white)__
+      # Homepage: https://publicprompts.art/low-poly-prompt/
+      # Suggested settings:
+      # CFG scale: 10-15
+      # Sampler k_euler-a
+      # Steps: 50
+
+      kawaii low poly ${figure:panda} character, 3d isometric render, ${background:white} background, ambient occlusion, unity engine
+  isometric-rooms:
+    - |
+      # Usage: __public-prompts/isometric-rooms(room=bedroom, style=borderland game)__
+      # Homepage: https://publicprompts.art/isometric-rooms/
+      # Suggested settings:
+      # CFG scale: 10
+      # Sampler DDIM
+      # Steps: 50
+
+      Tiny cute isometric ${room:bedroom} in a cutaway box, ${style:borderlands game} style, soft smooth lighting, soft colors, 100mm lens, 3d blender render
+  cute-creatures:
+    - |
+      # Usage: __public-prompts/cute-creatures(figure=llama)__
+      # Homepage: https://publicprompts.art/cute-creatures/
+      # Suggested settings:
+      # CFG scale: 10
+      # Sampler k_euler_a
+      # Steps: 50
+
+      3d fluffy ${figure:llama}, closeup cute and adorable, 
+      cute big circular reflective eyes, long fuzzy fur, 
+      Pixar render, 
+      unreal engine cinematic smooth, intricate detail, cinematic
+  rendered-objects:
+    - | 
+      # Usage: __public-prompts/rendered-objects(object=porcelain cup of coffee, background=blue)__
+      # Homepage: https://publicprompts.art/rendered-objects/
+      # Suggested settings:
+      # CFG scale: 10-15
+      # Sampler k_euler_a
+      # Steps: 50
+
+      Tiny cute isometric ${object:porcelain cup of coffee},
+      soft smooth lighting, 
+      with soft colors, 
+      100mm lens, 3d blender render, 
+      trending on polycount, 
+      modular constructivism, ${background:blue} background, physically based rendering, centered.

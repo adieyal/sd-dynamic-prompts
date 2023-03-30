@@ -424,7 +424,7 @@ As your prompts become more complex, the become harder to read. To prevent creat
    In ${season:summer}, I wear ${season:summer} shirts and ${season:summer} trousers
 ```
 
-Note that regular wildcard .txt files use a newline to represent new wildcard and so whitespace is not permitted. In this case you should consider using the YAML wildcard format. Here is a real-world example from the [publicprompts]() wildcard file:
+Note that regular wildcard .txt files use a newline to represent new wildcard and so whitespace is not permitted. In this case you should consider using the YAML wildcard format. Here is a real-world example from the [publicprompts](https://github.com/adieyal/sd-dynamic-prompts/blob/main/collections/publicprompts.yaml) wildcard file:
 
 ```
 # publicprompts.yaml
