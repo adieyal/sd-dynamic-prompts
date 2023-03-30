@@ -2,7 +2,7 @@ from tempfile import NamedTemporaryFile
 
 import pytest
 
-from sd_dynamic_prompts.ui.prompt_writer import PromptWriter
+from sd_dynamic_prompts.prompt_writer import PromptWriter
 
 
 @pytest.fixture()

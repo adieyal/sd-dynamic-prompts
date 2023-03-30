@@ -2,7 +2,7 @@ from typing import Any
 
 import pytest
 
-from sd_dynamic_prompts.ui.pnginfo_saver import PngInfoSaver, PromptTemplates
+from sd_dynamic_prompts.pnginfo_saver import PngInfoSaver, PromptTemplates
 
 
 @pytest.fixture
