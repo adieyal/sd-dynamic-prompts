@@ -83,17 +83,14 @@ def on_ui_tabs():
                         choices=sorted(get_collection_dirs()),
                         type="value",
                         label="Select a collection",
-                        elem_id="collection_dropdown",
                     )
                     with gr.Row():
                         collection_copy_button = gr.Button(
                             "Copy collection",
                             full_width=True,
-                            elem_id="collection_copy_button",
                         )
                         overwrite_checkbox = gr.Checkbox(
                             label="Overwrite existing",
-                            elem_id="overwrite_checkbox",
                             value=False,
                         )
                     with gr.Row():
