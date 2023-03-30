@@ -13,7 +13,10 @@ def test_magic_blocklist_regexp(tmp_path):
     )
     gb.set_seed(42)  # TODO: not setting a seed makes the test fail
     popular_artist = "grug retkawsky"
-    gb.set_is_magic_prompt(magic_blocklist_regex=popular_artist)
+    gb.set_is_magic_prompt(
+        magic_blocklist_regex=popular_artist,
+        magic_model="some model",
+    )
     with patch("dynamicprompts.generators.magicprompt.MagicPromptGenerator.set_model"):
         gen = gb.create_generator()
         assert isinstance(gen, MagicPromptGenerator)
