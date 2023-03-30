@@ -1,3 +1,4 @@
+- 2.10.2 Upgraded dynamicprompts to v0.21.2 which adds a missing parser config
 - 2.10.1 Upgraded dynamicprompts to v0.21.1 which fixes [#358](https://github.com/adieyal/sd-dynamic-prompts/issues/358)
 - 2.10.0 Upgraded dynamicprompts to v0.21.0 which introduces variables and parameterised templates
 - 2.9.1 Upgraded dynamicprompts to v0.20.2 which fixes [#354](https://github.com/adieyal/sd-dynamic-prompts/issues/354) - No values found for wildcards on Windows

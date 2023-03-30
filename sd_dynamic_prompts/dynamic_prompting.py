@@ -27,7 +27,7 @@ from sd_dynamic_prompts.helpers import (
 from sd_dynamic_prompts.ui.pnginfo_saver import PngInfoSaver
 from sd_dynamic_prompts.ui.prompt_writer import PromptWriter
 
-VERSION = "2.10.1"
+VERSION = "2.10.2"
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
