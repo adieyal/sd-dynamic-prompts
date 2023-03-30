@@ -2,26 +2,34 @@ sddp_loaded = false
 sddp_wildcards_loaded = false
 sddp_ui = null
 
+var sddp_help_texts = {
+    "sddp-disable-negative-prompt": "Don't use prompt magic on negative prompts.",
+    "sddp-dynamic-prompts-enabled": "Complete documentation is available at https://github.com/adieyal/sd-dynamic-prompts. Please report any issues on GitHub.",
+    "sddp-is-attention-grabber": "Add emphasis to a randomly selected keyword in the prompt.",
+    "sddp-is-combinatorial": "Generate all possible prompt combinations.",
+    "sddp-is-feelinglucky": "Generate random prompts from lexica.art (your prompt is used as a search query).",
+    "sddp-is-fixed-seed": "Use the same seed for all prompts in this batch",
+    "sddp-is-magicprompt": "Automatically update your prompt with interesting modifiers. (Runs slowly the first time)",
+    "sddp-magic-prompt-model": "Note: Each model will download between 300mb and 1.4gb of data on first use.",
+    "sddp-no-image-generation": "Disable image generation. Useful if you only want to generate text prompts. (1 image will still be generated to keep Auto1111 happy.).",
+    "sddp-unlink-seed-from-prompt": "If this is set, then random prompts are generated, even if the seed is the same.",
+    "sddp-write-prompts": "Write all generated prompts to a file",
+    "sddp-write-raw-template": "Write template into image metadata.",
+}
+
 onUiUpdate(function () {
   if (!sddp_loaded) {
-    if (!gradioApp().getElementById("dynamic-prompts-enabled")) {
+    if (!gradioApp().getElementById("sddp-dynamic-prompts-enabled")) {
       return;
     }
 
     sddp_loaded = true;
-
-    gradioApp().getElementById("dynamic-prompts-enabled").append("Complete documentation is available at https://github.com/adieyal/sd-dynamic-prompts. Please report any issues on GitHub.")
-    gradioApp().getElementById("is-combinatorial").append("Generate all possible prompt combinations.")
-    gradioApp().getElementById("is-magicprompt").append("Automatically update your prompt with interesting modifiers. (Runs slowly the first time)")
-    gradioApp().getElementById("is-feelinglucky").append("Generate random prompts from lexica.art (your prompt is used as a search query).")
-    gradioApp().getElementById("is-fixed-seed").append("Use the same seed for all prompts in this batch")
-    gradioApp().getElementById("write-prompts").append("Write all generated prompts to a file")
-    gradioApp().getElementById("unlink-seed-from-prompt").append("If this is set, then random prompts are generated, even if the seed is the same.")
-    gradioApp().getElementById("disable-negative-prompt").append("Don't use prompt magic on negative prompts.")
-    gradioApp().getElementById("no-image-generation").append("Disable image generation. Useful if you only want to generate text prompts. (1 image will still be generated to keep Auto1111 happy.).")
-    gradioApp().getElementById("is-attention-grabber").append("Add emphasis to a randomly selected keyword in the prompt.")
-    gradioApp().getElementById("write-raw-template").append("Write template into image metadata.")
-    gradioApp().getElementById("magic-prompt-model").append("Note: Each model will download between 300mb and 1.4gb of data on first use.")
+    for(let elemId in sddp_help_texts) {
+      let elem = gradioApp().getElementById(elemId)
+      if (elem) {
+        elem.setAttribute("title", sddp_help_texts[elemId])
+      }
+    }
   }
 })
 
