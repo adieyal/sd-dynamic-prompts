@@ -13,6 +13,12 @@
     color: #50a080;
 }
 
+/* Fixes up the quite hard-to-see border on the collections dropdown */
+#tab_sddp-wildcard-manager ul.options {
+    border: var(--input-border-width) solid var(--border-color-primary);
+    border-radius: var(--input-radius);
+}
+
 .dark #dynamic-prompting .collapsible {
     background-color: rgb(31, 41, 55);
     border: 2px solid rgb(31, 41, 55);
