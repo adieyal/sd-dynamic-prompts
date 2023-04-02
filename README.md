@@ -73,11 +73,32 @@ In case of a syntax clash with another extension, Dynamic Prompts allows you to 
 
 By default, wildcards start with `__`(double underscore) and end with `__`. You can change this in the settings tab under wildcard wrap.
 
-### Troubleshooting
+## Troubleshooting
+If you encounter an issue with Dynamic Prompts, follow these steps to resolve the problem:
 
-In the LastBen colab (and perhaps others), you might see an error similar to this: `ModuleNotFoundError: No module named 'dynamicprompts'`. There seems to be an issue causing extensions that rely on install.py from being installed properly. A workaround is to run this command before you start the webui:
+1. Check that you have installed the latest version of both the Dynamic Prompts extension and library. To check the installed versions, open the **Need Help? accordion** in the Dynamic Prompts section of txt2image. You can find the latest version number of the extension [here](https://github.com/adieyal/sd-dynamic-prompts/blob/main/docs/CHANGELOG.md) and the library [here](https://github.com/adieyal/dynamicprompts/blob/main/CHANGELOG.md?plain=1).
 
-`!python -m pip install -U dynamicprompts[attentiongrabber,magicprompt]`
+2. If the versions do not match, update the extension in the extensions tab and restart the webui. The extension should automatically update the library.
+
+3. If the above step does not work, you might need to manually update the library using the following command:
+
+```shell
+python -m pip install -U dynamicprompts[attentiongrabber,magicprompt]
+```
+
+4. Restart the webui and check. If the webui uses a different python binary, find the correct path to the python binary and run:
+
+```shell
+/path/to/python/binary/python -m pip install -U dynamicprompts[attentiongrabber,magicprompt]
+```
+
+5. If the Wildcard UI does not show, it could be due to an outdated library version. Check for errors in the terminal and update the library as described in step 3.
+
+6. If you get an error message saying "No values found for wildcard some/wildcard", ensure that the file wildcard.txt is in extensions/sd-dynamic-prompts/wildcards/some/. The full path is required, as relative paths are not currently supported.
+
+7. If the issue persists, search for solutions in the [issues section](https://github.com/adieyal/sd-dynamic-prompts/issues?q=is%3Aissue) on Github and the [discussion forum](https://github.com/adieyal/sd-dynamic-prompts/discussions). If you cannot find a solution, create a new issue and give it a descriptive name, such as "Wildcard values are being ignored in prompt templates". Provide the necessary context, including the versions of the Dynamic Prompts extension and library, and mention the operating system or colab being used. If there is an error in the terminal, copy and paste the entire text or take a screenshot.
+
+8. Finally, it is essential to test and apply any fixes we release. Your feedback is valuable, as an issue that works in our environment may not work in yours.
 
 ## Compatible Scripts
 Dynamic Prompts works particularly well with X/Y Plot - setting Dynamic Prompts to <a href="#combinatorial-generation">combinatorial mode</a> while using X/Y Plot, lets you exhaustively test prompt and paramter variations simultaneously.
