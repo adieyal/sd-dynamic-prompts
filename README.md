@@ -7,9 +7,38 @@ A custom extension for [AUTOMATIC1111/stable-diffusion-webui](https://github.com
     <a href="docs/CHANGELOG.md"><img src="images/icon-changelog.png" valign="middle" style="height:60px"/></a>
 </p>
 
-
 <img src="images/extension.png"/>
 
+## Table of Contents
+
+   * [Basic Usage](#basic-usage)
+   * [Online resources](#online-resources)
+   * [Installation](#installation)
+   * [Configuration](#configuration)
+   * [Troubleshooting](#troubleshooting)
+   * [Compatible Scripts](#compatible-scripts)
+   * [Template syntax](#template-syntax)
+      * [Fuzzy Glob/recursive wildcard file/directory matching](#fuzzy-globrecursive-wildcard-filedirectory-matching)
+   * [Combinatorial Generation](#combinatorial-generation)
+      * [Combinatorial Batches](#combinatorial-batches)
+      * [Increasing the maximum number of generations](#increasing-the-maximum-number-of-generations)
+   * [Fixed seed](#fixed-seed)
+   * [Magic Prompt](#magic-prompt)
+      * [Other models](#other-models)
+   * [I'm feeling lucky](#im-feeling-lucky)
+   * [Attention grabber](#attention-grabber)
+   * [Write prompts to file](#write-prompts-to-file)
+   * [Jinja2 templates](#jinja2-templates)
+   * [WILDCARD_DIR](#wildcard_dir)
+   * [Collections](#collections)
+   * [Dynamic Prompts and Random Seeds](#dynamic-prompts-and-random-seeds)
+      * [Without Dynamic Prompts Enabled](#without-dynamic-prompts-enabled)
+      * [With Dynamic Prompts Enabled in Random/Standard Mode](#with-dynamic-prompts-enabled-in-randomstandard-mode)
+      * [Variation Seeds with Dynamic Prompts](#variation-seeds-with-dynamic-prompts)
+      * [Combinatorial Mode with Variation Strength &gt; 0](#combinatorial-mode-with-variation-strength--0)
+
+
+## Basic Usage
 Using this script, the prompt:
 
 	A {house|apartment|lodge|cottage} in {summer|winter|autumn|spring} by {2$$artist1|artist2|artist3}
@@ -45,7 +74,8 @@ Prefer a tutorial? <a href="docs/tutorial.md">Click here</a><br/>
 Need a wildcard library? We've got you [covered](https://github.com/adieyal/sd-dynamic-prompts#collections).<br/>
 
 ## Online resources
-
+* 📽️ [아무것도 생각 안 하고 그림 뽑는 방법 (stable diffusion Dynamic Prompts extension)](https://www.youtube.com/watch?v=5wH7zioje4w)
+* 📽️ [Dynamic Prompt Tutorial: How to Create Multiple Art Variations with just 1 Prompt Stable Diffusion](https://www.youtube.com/watch?v=5wH7zioje4w)
 * 📽️ [Experiment with Prompts FAST in Stable Diffusion](https://www.youtube.com/watch?v=5ZiL4iG0FJk)
 * [Having a blast with ControlNet + Dynamic Prompts (Wildcards)](https://www.reddit.com/r/StableDiffusion/comments/115t0pi/having_a_blast_with_controlnet_dynamic_prompts/)
 * [Infinite Random RPG Character Portraits with Dynamic Prompts](https://www.reddit.com/r/StableDiffusion/comments/10xqwjm/i_come_bearing_gifts_infinite_random_rpg/)
@@ -272,24 +302,24 @@ If you're using a Unix/Linux O/S, you can easily create a symlink to the relevan
 
 	ln -sr collections/parrotzone wildcards/
 
+## Dynamic Prompts and Random Seeds
+Random seeds play an important role in controlling the randomness of the generated outputs. Let's discuss how Dynamic Prompts works with random seeds in different scenarios.
 
-## Contributing
-If you're interested in contributing to the development of this extension, here are some features I would like to implement:
+### Without Dynamic Prompts Enabled
+!. Seed set to -1: A random seed is selected, the first image is generated using that seed, the next image is generated with that seed + 1, and so on.
+2. Seed set to a number > -1: The process is the same as above, but the seed used is the one chosen.
+3. Variation seed set but variation strength is set to zero: The situation is the same as the previous two scenarios.
+4. Variation seed set to a number > 0: All images are created using the same seed (either randomly chosen or set by the user). The variation seed is either chosen at random (if set to -1) or the value selected by the user. The first image is generated using the variation seed, the next with the variation seed + 1, and so on.
 
-1. **Saved templates** - [publicprompts.art](https://publicprompts.art/) produces great prompt templates. e.g.
+### With Dynamic Prompts Enabled in Random/Standard Mode
+1. Seed set to -1: The situation is the same as the first item above, but the prompt is chosen using the same seed (if using the random prompt generator).
+2. Seed set to a number > -1: The situation is the same as the second item above, except that a random prompt is generated using the given seed (if using the prompt generator).
+3. Fixed seed checkbox checked: Instead of incrementing the seed, the same seed is used for all images and prompts, i.e., you generate the same image (not very useful).
+4. Fixed seed and unlink seed from prompt checkboxes checked: A random seed is used for the prompt, and the same seed is used for images. This is useful if you want to test how different prompts affect the same image.
 
-> Funky pop Yoda figurine, made of plastic, product studio shot, on a white background, diffused lighting, centered
+### Variation Seeds with Dynamic Prompts
+1. Variation strength set to 0: Variations are ignored.
+2. Variation set to a number > 0: A variation seed is assigned to every image, incrementing by one each time. However, only 1 prompt is generated since you are looking for variations of the same image.
 
-You can swap out Yoda for anything to create a great character. If I create/discover a great prompt that can be turned into a template, it would be great to have a place to save it. The extension could provide some initial templates. Users could then create and save their own.
-
-2. **Tag-based modifers**. Creating a strict taxonomy of concepts for modifiers is always going to be flawed. Some modifiers fit in multiple categories. It would be better to introduce tags to make it easy to place modifiers in multiple places at once.
-
-3. **Improved modifier management**. The modifier library is a little clunky at the moment. You can find a nested hierarchy of all wildcard files, but it isn't possible to see what's in them or even edit them from within the interface. It might be best to implement this in a separate tab.
-
-4. **Improve the modifier library**. I'm currently creating the library from multiple sources but building taxonomies is hard, especially if you're not a domain expert. The photography section is a good example, there are wildcard files for lighting, filetypes, camera models, perspective, photo websites, etc. Someone with a better understanding of photography might have a better way to divide this. The artists section in particular needs some TLC.
-
-5. **Option tweaking**. There have been a few requests for option tweaking like XY Plot. I'm not sure that that is in scope for this extension, but it would be nice to see if we could find a solution that leverage's XY Plot.
-
-6. **Improved UI**. The current UI works, but a few javascript tweaks could improve the user experience tremendously.
-
-Let me know if there is anything you would be interested in looking into.
+### Combinatorial Mode with Variation Strength > 0
+In this case, it only generates the first image for you, which is probably not what you want. To get the desired results, you might need to adjust the settings or use a different mode.
