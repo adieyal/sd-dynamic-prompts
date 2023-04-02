@@ -1,13 +1,10 @@
----
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
 
----
+**Before opening a new issue**
+
+Make sure that you have had a look at the [troubleshooting section](https://github.com/adieyal/sd-dynamic-prompts#troubleshooting) of the project's README file.
 
 **Describe the bug**
+
 A clear and concise description of what the bug is.
 
 **To Reproduce**
