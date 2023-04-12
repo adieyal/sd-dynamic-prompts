@@ -1,2 +1,2 @@
 send2trash==1.8.0
-dynamicprompts[attentiongrabber,magicprompt]==0.22.0
+dynamicprompts[attentiongrabber,magicprompt]==0.23.0

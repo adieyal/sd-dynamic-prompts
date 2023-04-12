@@ -1,3 +1,4 @@
+- 2.11.0 Upgraded dynamicprompts to v0.23.0 which includes speed improvements to the prompt parser.
 - 2.10.5 Combinatorial batches now correctly uses a different seed per batch. Thanks to @dbitterlich. Fixes [#190](https://github.com/adieyal/sd-dynamic-prompts/issues/190). Also upgraded dynamicprompts to v0.22.0 which makes WildcardManager trees easily composable - [#74](https://github.com/adieyal/dynamicprompts/pull/74)
 - 2.10.4 Wildcard tab JS rework - see https://github.com/adieyal/sd-dynamic-prompts/pull/364
 - 2.10.3 Minor fixes and refactoring of the Wildcard Manager tab to reduce conflicts with other extensions
