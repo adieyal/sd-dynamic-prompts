@@ -6,7 +6,13 @@ from pathlib import Path
 logger = logging.getLogger(__name__)
 
 
-def get_seeds(p, num_seeds, use_fixed_seed, is_combinatorial=False, combinatorial_batches=1):
+def get_seeds(
+    p,
+    num_seeds,
+    use_fixed_seed,
+    is_combinatorial=False,
+    combinatorial_batches=1,
+):
     if p.subseed_strength != 0:
         seed = int(p.all_seeds[0])
         subseed = int(p.all_subseeds[0])
@@ -19,7 +25,7 @@ def get_seeds(p, num_seeds, use_fixed_seed, is_combinatorial=False, combinatoria
             all_seeds = []
             all_subseeds = [subseed] * num_seeds
             for i in range(combinatorial_batches):
-                all_seeds.extend([seed+i]*(num_seeds//combinatorial_batches))
+                all_seeds.extend([seed + i] * (num_seeds // combinatorial_batches))
         else:
             all_seeds = [seed] * num_seeds
             all_subseeds = [subseed] * num_seeds
