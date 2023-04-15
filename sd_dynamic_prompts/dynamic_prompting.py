@@ -380,6 +380,7 @@ class Script(scripts.Script):
         self._pnginfo_saver.enabled = opts.dp_write_raw_template
         self._prompt_writer.enabled = opts.dp_write_prompts_to_file
         self._limit_jinja_prompts = opts.dp_limit_jinja_prompts
+        self._auto_purge_cache = opts.dp_auto_purge_cache
         magicprompt_batch_size = opts.dp_magicprompt_batch_size
 
         parser_config = ParserConfig(
@@ -401,6 +402,8 @@ class Script(scripts.Script):
                 num_images = max_generations
 
         combinatorial_batches = int(combinatorial_batches)
+        if self._auto_purge_cache:
+            self._wildcard_manager.clear_cache()
 
         try:
             logger.debug("Creating generator")
