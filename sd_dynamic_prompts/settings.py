@@ -67,6 +67,15 @@ def on_ui_settings():
         ),
     )
 
+    shared.opts.add_option(
+        key="dp_auto_purge_cache",
+        info=shared.OptionInfo(
+            False,
+            label="Automatically purge wildcard cache on every generation.",
+            section=section,
+        ),
+    )
+
     magic_models = load_magicprompt_models(get_magicmodels_path(base_dir))
     shared.opts.add_option(
         key="dp_magicprompt_default_model",
