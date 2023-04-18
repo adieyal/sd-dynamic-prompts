@@ -280,6 +280,7 @@ def save_file_callback(event_str: str):
             wf.write_text(event["contents"].strip())
         else:
             raise Exception("Can't save non-text files")
+        wildcard_manager.clear_cache()
         return handle_load_wildcard({"name": event["wildcard"]["name"]})
     except Exception as e:
         logger.exception(e)
