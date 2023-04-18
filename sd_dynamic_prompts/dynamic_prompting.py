@@ -16,7 +16,7 @@ from modules import devices
 from modules.processing import fix_seed
 from modules.shared import opts
 
-from sd_dynamic_prompts import callbacks
+from sd_dynamic_prompts import __version__, callbacks
 from sd_dynamic_prompts.element_ids import make_element_id
 from sd_dynamic_prompts.generator_builder import GeneratorBuilder
 from sd_dynamic_prompts.helpers import (
@@ -28,7 +28,7 @@ from sd_dynamic_prompts.helpers import (
 from sd_dynamic_prompts.pnginfo_saver import PngInfoSaver
 from sd_dynamic_prompts.prompt_writer import PromptWriter
 
-VERSION = "2.11.0"
+VERSION = __version__
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)

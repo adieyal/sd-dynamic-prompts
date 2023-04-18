@@ -1,3 +1,4 @@
+- 2.11.1 Fixes [#382](https://github.com/adieyal/sd-dynamic-prompts/issues/382) (Save wildcards" only works once) and added an option to autopurge the cache.
 - 2.11.0 Upgraded dynamicprompts to v0.23.0 which includes speed improvements to the prompt parser.
 - 2.10.5 Combinatorial batches now correctly uses a different seed per batch. Thanks to @dbitterlich. Fixes [#190](https://github.com/adieyal/sd-dynamic-prompts/issues/190). Also upgraded dynamicprompts to v0.22.0 which makes WildcardManager trees easily composable - [#74](https://github.com/adieyal/dynamicprompts/pull/74)
 - 2.10.4 Wildcard tab JS rework - see https://github.com/adieyal/sd-dynamic-prompts/pull/364
