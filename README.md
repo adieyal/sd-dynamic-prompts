@@ -308,18 +308,21 @@ You can also download additional extensions by running `python _tools/download_c
 Random seeds play an important role in controlling the randomness of the generated outputs. Let's discuss how Dynamic Prompts works with random seeds in different scenarios.
 
 ### Without Dynamic Prompts Enabled
-!. Seed set to -1: A random seed is selected, the first image is generated using that seed, the next image is generated with that seed + 1, and so on.
+
+1. Seed set to -1: A random seed is selected, the first image is generated using that seed, the next image is generated with that seed + 1, and so on.
 2. Seed set to a number > -1: The process is the same as above, but the seed used is the one chosen.
 3. Variation seed set but variation strength is set to zero: The situation is the same as the previous two scenarios.
 4. Variation seed set to a number > 0: All images are created using the same seed (either randomly chosen or set by the user). The variation seed is either chosen at random (if set to -1) or the value selected by the user. The first image is generated using the variation seed, the next with the variation seed + 1, and so on.
 
 ### With Dynamic Prompts Enabled in Random/Standard Mode
+
 1. Seed set to -1: The situation is the same as the first item above, but the prompt is chosen using the same seed (if using the random prompt generator).
 2. Seed set to a number > -1: The situation is the same as the second item above, except that a random prompt is generated using the given seed (if using the prompt generator).
 3. Fixed seed checkbox checked: Instead of incrementing the seed, the same seed is used for all images and prompts, i.e., you generate the same image (not very useful).
 4. Fixed seed and unlink seed from prompt checkboxes checked: A random seed is used for the prompt, and the same seed is used for images. This is useful if you want to test how different prompts affect the same image.
 
 ### Variation Seeds with Dynamic Prompts
+
 1. Variation strength set to 0: Variations are ignored.
 2. Variation set to a number > 0: A variation seed is assigned to every image, incrementing by one each time. However, only 1 prompt is generated since you are looking for variations of the same image.
 
