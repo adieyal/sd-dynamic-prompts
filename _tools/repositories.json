@@ -10,5 +10,11 @@
     "url": "https://github.com/Mossbraker/mj_reference_wildcards/archive/refs/heads/main.zip",
     "subdirectory": "v4",
     "target_subdirectory": "mj_reference_wildcards"
+  },
+  {
+    "name": "DevilKKW's Wildcards",
+    "url": "https://github.com/devilkkw/StableDiffusion/archive/refs/heads/main.zip",
+    "subdirectory": "Wildcards",
+    "target_subdirectory": "devilkkw"
   }
 ]
