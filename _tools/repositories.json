@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Noodlesoup Prompts",
+    "url": "https://raw.githubusercontent.com/WASasquatch/noodle-soup-prompts/main/nsp_pantry.json",
+    "subdirectory": "",
+    "target_subdirectory": "noodle_soup_prompts"
+  },
+  {
+    "name": "MJ Reference Wildcards",
+    "url": "https://github.com/Mossbraker/mj_reference_wildcards/archive/refs/heads/main.zip",
+    "subdirectory": "v4",
+    "target_subdirectory": "mj_reference_wildcards"
+  }
+]
