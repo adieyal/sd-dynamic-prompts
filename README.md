@@ -286,7 +286,7 @@ You can read about them in more detail <a href="jinja2.md">here</a>
 The extension looks for wildcard files in WILDCARD_DIR. The default location is /path/to/stable-diffusion-webui/extensions/sd-dynamic-prompts/wildcards. It can also be manually defined in the main webui config.json under wildcard_dir. When in doubt, the help text for the extension in the webui lists the full path to WILDCARD_DIR
 
 ## Collections
-The collections directory contains modifier libraries that you can use as is or to bootstrap your own. To get started, either use the Wildcard Manager tab to copy a one or more collections to your wildcards folder, or you can manually copy the files across. There are currently three collections:
+The collections directory contains modifier libraries that you can use as is or to bootstrap your own. To get started, either use the Wildcard Manager tab to copy a one or more collections to your wildcards folder, or you can manually copy the files across. Three collections are bundled with the dynamic prompts extension.
 
 - [jumbo](https://github.com/adieyal/sd-dynamic-prompts/tree/main/collections/jumbo)
 - [parrotzone](https://github.com/adieyal/sd-dynamic-prompts/tree/main/collections/parrotzone)
@@ -301,6 +301,8 @@ Devilkkw focuses more on character building, clothes, gestures, food, etc
 If you're using a Unix/Linux O/S, you can easily create a symlink to the relevant collection rather than copying it across if you don't plan to alter it. E.g.
 
 	ln -sr collections/parrotzone wildcards/
+
+You can also download additional extensions by running `python _tools/download_collections.py` from within the extension's root directory, i.e. `extensions/sd-dynamic-prompts/`
 
 ## Dynamic Prompts and Random Seeds
 Random seeds play an important role in controlling the randomness of the generated outputs. Let's discuss how Dynamic Prompts works with random seeds in different scenarios.
