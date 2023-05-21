@@ -74,7 +74,7 @@ Prefer a tutorial? <a href="docs/tutorial.md">Click here</a><br/>
 Need a wildcard library? We've got you [covered](https://github.com/adieyal/sd-dynamic-prompts#collections).<br/>
 
 ## Online resources
-* 📽️ [아무것도 생각 안 하고 그림 뽑는 방법 (stable diffusion Dynamic Prompts extension)](https://www.youtube.com/watch?v=5wH7zioje4w)
+* 📽️ [아무것도 생각 안 하고 그림 뽑는 방법 (stable diffusion Dynamic Prompts extension)](https://www.youtube.com/watch?v=P6Tl5sMUJpk)
 * 📽️ [Dynamic Prompt Tutorial: How to Create Multiple Art Variations with just 1 Prompt Stable Diffusion](https://www.youtube.com/watch?v=5wH7zioje4w)
 * 📽️ [Experiment with Prompts FAST in Stable Diffusion](https://www.youtube.com/watch?v=5ZiL4iG0FJk)
 * [Having a blast with ControlNet + Dynamic Prompts (Wildcards)](https://www.reddit.com/r/StableDiffusion/comments/115t0pi/having_a_blast_with_controlnet_dynamic_prompts/)
