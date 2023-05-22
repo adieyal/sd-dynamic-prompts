@@ -20,6 +20,7 @@ from sd_dynamic_prompts import __version__, callbacks
 from sd_dynamic_prompts.element_ids import make_element_id
 from sd_dynamic_prompts.generator_builder import GeneratorBuilder
 from sd_dynamic_prompts.helpers import (
+    generate_prompts,
     get_magicmodels_path,
     get_seeds,
     load_magicprompt_models,
@@ -69,32 +70,6 @@ device = devices.device
 # There might be a bug in auto1111 where the correct device is not inferred in some scenarios
 if device.type == "cuda" and not device.index:
     device = torch.device("cuda:0")
-
-
-def generate_prompts(
-    prompt_generator,
-    negative_prompt_generator,
-    prompt,
-    negative_prompt,
-    num_prompts,
-):
-    all_prompts = prompt_generator.generate(prompt, num_prompts) or [""]
-    total_prompts = len(all_prompts)
-
-    all_negative_prompts = negative_prompt_generator.generate(
-        negative_prompt,
-        num_prompts,
-    ) or [""]
-
-    if len(all_negative_prompts) < total_prompts:
-        all_negative_prompts = all_negative_prompts * (
-            total_prompts // len(all_negative_prompts) + 1
-        )
-
-    all_negative_prompts = all_negative_prompts[:total_prompts]
-
-    return all_prompts, all_negative_prompts
-
 
 loaded_count = 0
 
@@ -449,12 +424,24 @@ class Script(scripts.Script):
             else:
                 negative_generator = generator
 
+            all_seeds = None
+            if num_images:
+                p.all_seeds, p.all_subseeds = get_seeds(
+                    p,
+                    num_images,
+                    use_fixed_seed,
+                    is_combinatorial,
+                    combinatorial_batches,
+                )
+                all_seeds = p.all_seeds
+
             all_prompts, all_negative_prompts = generate_prompts(
                 generator,
                 negative_generator,
                 original_prompt,
                 original_negative_prompt,
                 num_images,
+                all_seeds,
             )
 
         except GeneratorException as e:
@@ -465,13 +452,14 @@ class Script(scripts.Script):
         updated_count = len(all_prompts)
         p.n_iter = math.ceil(updated_count / p.batch_size)
 
-        p.all_seeds, p.all_subseeds = get_seeds(
-            p,
-            updated_count,
-            use_fixed_seed,
-            is_combinatorial,
-            combinatorial_batches,
-        )
+        if num_images != updated_count:
+            p.all_seeds, p.all_subseeds = get_seeds(
+                p,
+                updated_count,
+                use_fixed_seed,
+                is_combinatorial,
+                combinatorial_batches,
+            )
 
         logger.info(
             f"Prompt matrix will create {updated_count} images in a total of {p.n_iter} batches.",

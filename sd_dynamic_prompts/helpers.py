@@ -3,6 +3,8 @@ from __future__ import annotations
 import logging
 from pathlib import Path
 
+from dynamicprompts.generators.promptgenerator import PromptGenerator
+
 logger = logging.getLogger(__name__)
 
 
@@ -64,3 +66,43 @@ def get_magicmodels_path(base_dir: str) -> str:
     magicprompt_models_path = Path(base_dir / "config" / "magicprompt_models.txt")
 
     return magicprompt_models_path
+
+
+def generate_prompts(
+    prompt_generator: PromptGenerator,
+    negative_prompt_generator: PromptGenerator,
+    prompt: str,
+    negative_prompt: str | None,
+    num_prompts: int,
+    seeds: list[int],
+) -> tuple[list[str], list[str]]:
+    """
+    Generate positive and negative prompts.
+
+    Parameters:
+    - prompt_generator: Object that generates positive prompts.
+    - negative_prompt_generator: Object that generates negative prompts.
+    - prompt: Base text for positive prompts.
+    - negative_prompt: Base text for negative prompts.
+    - num_prompts: Number of prompts to generate.
+    - seeds: List of seeds for prompt generation.
+
+    Returns:
+    - Tuple containing list of positive and negative prompts.
+    """
+    all_prompts = prompt_generator.generate(prompt, num_prompts, seeds=seeds) or [""]
+
+    negative_seeds = seeds if negative_prompt else None
+
+    all_negative_prompts = negative_prompt_generator.generate(
+        negative_prompt,
+        num_prompts,
+        seeds=negative_seeds,
+    ) or [""]
+
+    if len(all_negative_prompts) < len(all_prompts):
+        factor = len(all_prompts) // len(all_negative_prompts) + 1
+        all_negative_prompts = all_negative_prompts * factor
+    all_negative_prompts = all_negative_prompts[: len(all_prompts)]
+
+    return all_prompts, all_negative_prompts
