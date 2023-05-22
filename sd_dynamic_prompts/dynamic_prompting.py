@@ -16,6 +16,7 @@ from modules import devices
 from modules.processing import fix_seed
 from modules.shared import opts
 
+from install import check_correct_dynamicprompts_installed
 from sd_dynamic_prompts import __version__, callbacks
 from sd_dynamic_prompts.element_ids import make_element_id
 from sd_dynamic_prompts.generator_builder import GeneratorBuilder
@@ -39,6 +40,7 @@ is_debug = getattr(opts, "is_debug", False)
 if is_debug:
     logger.setLevel(logging.DEBUG)
 
+check_correct_dynamicprompts_installed()
 base_dir = Path(scripts.basedir())
 magicprompt_models_path = get_magicmodels_path(base_dir)
 
