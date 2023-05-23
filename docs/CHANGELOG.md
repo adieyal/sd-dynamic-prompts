@@ -1,3 +1,4 @@
+- 2.11.4 Fixed type error in install.py for older versions of python
 - 2.11.3 Added check to ensure that the correct version of dynamicprompts is installed. If not it outputs instructions for manual installation.
 - 2.11.2 Added a download collectons script in _tools/ and included the Mossbraker collection - https://github.com/Mossbraker/mj_reference_wildcards/
 - 2.11.1 Fixes [#382](https://github.com/adieyal/sd-dynamic-prompts/issues/382) (Save wildcards" only works once) and added an option to autopurge the cache.
