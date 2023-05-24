@@ -52,7 +52,7 @@ class PromptWriter:
             writer = csv.writer(f)
             writer.writerow(["positive_prompt", "negative_prompt"])
             writer.writerow([self._positive_template, self._negative_template])
-            for positive_prompt, negative_prompt in zip(
+            for positive_prompt, negative_prompt in zip(  # noqa: B905
                 self._positive_prompts,
                 self._negative_prompts,
             ):
