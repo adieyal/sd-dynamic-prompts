@@ -1,3 +1,4 @@
+- 2.11.5 Added kwargs to FrozenPromptGenerator to fix one of the unexpected keyword argument 'seeds' errors
 - 2.11.4 Fixed type error in install.py for older versions of python
 - 2.11.3 Added check to ensure that the correct version of dynamicprompts is installed. If not it outputs instructions for manual installation.
 - 2.11.2 Added a download collectons script in _tools/ and included the Mossbraker collection - https://github.com/Mossbraker/mj_reference_wildcards/

@@ -15,6 +15,7 @@ class FrozenPromptGenerator(PromptGenerator):
         self,
         template: str,
         num_images: int | None = 1,
+        **kwargs,
     ) -> list[str]:
         prompts = self._generator.generate(template, 1)
         num_images = num_images or 1
