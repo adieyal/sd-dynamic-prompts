@@ -16,7 +16,7 @@ from modules import devices
 from modules.processing import fix_seed
 from modules.shared import opts
 
-from install import check_correct_dynamicprompts_installed
+from install import check_correct_dynamicprompts_installed, get_update_command
 from sd_dynamic_prompts import __version__, callbacks
 from sd_dynamic_prompts.element_ids import make_element_id
 from sd_dynamic_prompts.generator_builder import GeneratorBuilder
@@ -108,6 +108,9 @@ class Script(scripts.Script):
         return scripts.AlwaysVisible
 
     def ui(self, is_img2img):
+        correct_lib_version = check_correct_dynamicprompts_installed()
+        update_command = get_update_command()
+
         html_path = base_dir / "helptext.html"
         html = html_path.open().read()
         html = Template(html).substitute(
@@ -123,11 +126,17 @@ class Script(scripts.Script):
             with gr.Accordion("Dynamic Prompts", open=False):
                 is_enabled = gr.Checkbox(
                     label="Dynamic Prompts enabled",
-                    value=True,
+                    value=correct_lib_version,
+                    interactive=correct_lib_version,
                     elem_id=make_element_id("dynamic-prompts-enabled"),
                 )
 
-                with gr.Group():
+                if not correct_lib_version:
+                    gr.HTML(
+                        f"""<span class="warning sddp-warning">Dynamic Prompts is not installed correctly</span>. Please reinstall the dynamic prompts library by running the following command: <span class="sddp-info">{update_command}</span>""",
+                    )
+
+                with gr.Group(visible=correct_lib_version):
                     is_combinatorial = gr.Checkbox(
                         label="Combinatorial generation",
                         value=False,

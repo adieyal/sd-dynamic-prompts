@@ -62,20 +62,33 @@ def check_versions() -> None:
             launch.run_pip(f"install {requirement}", f"{requirement}")
 
 
-def check_correct_dynamicprompts_installed():
+def get_update_command() -> str:
+    requirements = get_requirements()
+    dynamicprompts_requirement = [
+        r for r in requirements if r.startswith("dynamicprompts")
+    ][0]
+    return f"{sys.executable} -m pip install '{dynamicprompts_requirement}'"
+
+
+def check_correct_dynamicprompts_installed() -> bool:
     try:
         import dynamicprompts
 
         dynamicprompts_requirement_version = get_dynamic_prompts_version()
         if dynamicprompts_requirement_version:
-            if dynamicprompts.__version__ != dynamicprompts_requirement_version:
+            if dynamicprompts.__version__ == dynamicprompts_requirement_version:
+                return True
+            else:
+                update_command = get_update_command()
                 print(
                     f"""*** WARNING: Something went wrong when updating to the latest dynamicprompts version. Please install it manually by running the following command:
-    {sys.executable} -m pip install dynamicprompts=={dynamicprompts_requirement_version}
+    {update_command}
 """,
                 )
     except Exception as e:
         logger.exception(e)
+
+    return False
 
 
 if __name__ == "__main__":
