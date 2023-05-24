@@ -1,3 +1,9 @@
+[project]
+dependencies = [
+    "send2trash~=1.8",
+    "dynamicprompts[attentiongrabber,magicprompt]~=0.25.2",
+]
+
 [tool.pytest.ini_options]
 minversion = "7.0"
 pythonpath = [
@@ -19,7 +25,6 @@ select = [
 ignore = [
     "C901", # Complexity
     "E501", # Line length
-    "B905",
 ]
 unfixable = [
     "B007", # Loop control variable not used within the loop body
