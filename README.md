@@ -309,17 +309,17 @@ Random seeds play an important role in controlling the randomness of the generat
 
 ### Without Dynamic Prompts Enabled
 
-1. Seed set to -1: A random seed is selected, the first image is generated using that seed, the next image is generated with that seed + 1, and so on.
-2. Seed set to a number > -1: The process is the same as above, but the seed used is the one chosen.
-3. Variation seed set but variation strength is set to zero: The situation is the same as the previous two scenarios.
-4. Variation seed set to a number > 0: All images are created using the same seed (either randomly chosen or set by the user). The variation seed is either chosen at random (if set to -1) or the value selected by the user. The first image is generated using the variation seed, the next with the variation seed + 1, and so on.
+1. If the seed is set to -1: A random seed is picked. This seed is used to generate the first image, then the next image is created using seed + 1, and this pattern continues for subsequent images.
+2. If the seed is set to a specific number greater than -1: The process is similar to the one above, but starts with the user-specified seed.
+3. If the variation seed is defined, but variation strength is zero: The process remains the same as in the previous two points.
+4. If the variation seed is set to a number greater than 0: Every image is generated using the same initial seed (randomly selected or set by the user). The variation seed is either random (if set to -1) or the value chosen by the user. The first image is generated with the variation seed, the next with variation seed + 1, and so on.
 
-### With Dynamic Prompts Enabled in Random/Standard Mode
+### Using With Dynamic Prompts Enabled in Random/Standard Mode:
 
-1. Seed set to -1: The situation is the same as the first item above, but the prompt is chosen using the same seed (if using the random prompt generator).
-2. Seed set to a number > -1: The situation is the same as the second item above, except that a random prompt is generated using the given seed (if using the prompt generator).
-3. Fixed seed checkbox checked: Instead of incrementing the seed, the same seed is used for all images and prompts, i.e., you generate the same image (not very useful).
-4. Fixed seed and unlink seed from prompt checkboxes checked: A random seed is used for the prompt, and the same seed is used for images. This is useful if you want to test how different prompts affect the same image.
+1. If the seed is set to -1: The process is similar to the first point in the previous section. However, the prompt is also selected using the same seed (if the random prompt generator is used).
+2. If the seed is set to a number greater than -1: The process is similar to the second point in the previous section. However, the difference is that a random prompt is also generated using the chosen seed (if the prompt generator is used).
+3. If the fixed seed checkbox is checked: The same seed is used for all images and prompts. This means the same image is generated repeatedly (this is useful for combinatorial generation).
+4. If both the fixed seed and unlink seed from prompt checkboxes are checked: A random seed is used for the prompt, but the same seed is used for all images. This setting can be useful if you want to see how different prompts affect the generation of the same image.
 
 ### Variation Seeds with Dynamic Prompts
 
