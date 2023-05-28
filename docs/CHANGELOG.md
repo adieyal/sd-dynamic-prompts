@@ -1,3 +1,4 @@
+- 2.11.8 Fixed unlink seed from prompt
 - 2.11.7 Improving dependency management by checking for the correct dependency version.
 - 2.11.6 Disabling the extension if the correct version of dynamicprompts is not installed
 - 2.11.5 Added kwargs to FrozenPromptGenerator to fix one of the unexpected keyword argument 'seeds' errors

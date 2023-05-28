@@ -436,7 +436,7 @@ class Script(scripts.Script):
                 negative_generator = generator
 
             all_seeds = None
-            if num_images:
+            if num_images and not unlink_seed_from_prompt:
                 p.all_seeds, p.all_subseeds = get_seeds(
                     p,
                     num_images,
