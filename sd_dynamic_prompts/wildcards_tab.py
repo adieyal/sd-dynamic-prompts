@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import json
-import logging
 import random
 import shutil
 import traceback
@@ -16,13 +15,15 @@ from modules import script_callbacks
 from send2trash import send2trash
 
 from sd_dynamic_prompts.element_ids import make_element_id
+from sd_dynamic_prompts.utils import get_logger
 
 COPY_COLLECTION_ACTION = "copy collection"
 LOAD_FILE_ACTION = "load file"
 LOAD_TREE_ACTION = "load tree"
 MESSAGE_PROCESSING_ACTION = "message processing"
 
-logger = logging.getLogger(__name__)
+
+logger = get_logger(__name__)
 
 wildcard_manager: WildcardManager
 

@@ -1,10 +1,11 @@
 from __future__ import annotations
 
-import logging
 from dataclasses import dataclass
 from typing import Any
 
-logger = logging.getLogger(__name__)
+from sd_dynamic_prompts.utils import get_logger
+
+logger = get_logger(__name__)
 
 TEMPLATE_LABEL = "Template"
 NEGATIVE_TEMPLATE_LABEL = "Negative Template"

@@ -1,11 +1,12 @@
 from __future__ import annotations
 
 import importlib
-import logging
 import sys
 from pathlib import Path
 
-logger = logging.getLogger(__name__)
+from sd_dynamic_prompts.utils import get_logger
+
+logger = get_logger(__name__)
 
 
 def is_empty_line(line):
