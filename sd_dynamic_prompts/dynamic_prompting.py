@@ -19,6 +19,7 @@ from install import check_correct_dynamicprompts_installed, get_update_command
 from sd_dynamic_prompts import __version__, callbacks
 from sd_dynamic_prompts.element_ids import make_element_id
 from sd_dynamic_prompts.generator_builder import GeneratorBuilder
+from sd_dynamic_prompts.health_check import check_jinja_available
 from sd_dynamic_prompts.helpers import (
     generate_prompts,
     get_magicmodels_path,
@@ -34,6 +35,8 @@ VERSION = __version__
 
 logger = get_logger(__name__)
 logger.info(f"Starting Dynamic Prompts v{VERSION}")
+
+is_jinja_available = check_jinja_available()
 
 check_correct_dynamicprompts_installed()
 base_dir = Path(scripts.basedir())
@@ -260,7 +263,7 @@ class Script(scripts.Script):
                 with gr.Accordion("Need help?", open=False):
                     gr.HTML(html)
 
-                with gr.Group():
+                with gr.Group(visible=is_jinja_available):
                     with gr.Accordion("Jinja2 templates", open=False):
                         enable_jinja_templates = gr.Checkbox(
                             label="Enable Jinja2 templates",

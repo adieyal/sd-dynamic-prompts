@@ -12,7 +12,10 @@ from dynamicprompts.generators import (
 from dynamicprompts.parser.parse import default_parser_config
 
 from sd_dynamic_prompts.frozenprompt_generator import FrozenPromptGenerator
+from sd_dynamic_prompts.health_check import check_jinja_available
 from sd_dynamic_prompts.utils import get_logger
+
+is_jinja_available = check_jinja_available()
 
 logger = get_logger(__name__)
 
@@ -88,8 +91,11 @@ class GeneratorBuilder:
         return self
 
     def set_is_jinja_template(self, is_jinja_template=True, limit_prompts=False):
-        self._is_jinja_template = is_jinja_template
-        self._limit_jinja_prompts = limit_prompts
+        if is_jinja_available:
+            self._is_jinja_template = is_jinja_template
+            self._limit_jinja_prompts = limit_prompts
+        else:
+            self._is_jinja_template = False
 
         return self
 
