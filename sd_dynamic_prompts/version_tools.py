@@ -10,8 +10,27 @@ import sys
 from functools import lru_cache
 from pathlib import Path
 
-import tomli
-from packaging.requirements import Requirement
+try:
+    import tomllib as tomli  # Python 3.11+
+except ImportError:
+    try:
+        import tomli  # may have been installed already
+    except ImportError:
+        try:
+            # pip has had this since version 21.2
+            from pip._vendor import tomli
+        except ImportError:
+            raise ImportError(
+                "A TOML library is required to install sd-dynamic-prompts, "
+                "but could not be imported. "
+                "Please install tomli (pip install tomli) and try again.",
+            ) from None
+
+try:
+    from packaging.requirements import Requirement
+except ImportError:
+    # pip has had this since 2018
+    from pip._vendor.packaging.requirements import Requirement
 
 logger = logging.getLogger(__name__)
 
