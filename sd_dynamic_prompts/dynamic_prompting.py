@@ -107,15 +107,14 @@ class Script(scripts.Script):
         update_command = get_update_command()
 
         html_path = base_dir / "helptext.html"
-        html = html_path.open().read()
-        html = Template(html).substitute(
+        html = Template(html_path.read_text("utf-8")).substitute(
             WILDCARD_DIR=self._wildcard_manager.path,
             VERSION=VERSION,
             LIB_VERSION=dynamicprompts.__version__,
         )
 
         jinja_html_path = base_dir / "jinja_help.html"
-        jinja_help = jinja_html_path.open().read()
+        jinja_help = jinja_html_path.read_text("utf-8")
 
         with gr.Group(elem_id=make_element_id("dynamic-prompting")):
             with gr.Accordion("Dynamic Prompts", open=False):
