@@ -1,3 +1,4 @@
+- 2.11.10 Resource leaks fixed
 - 2.11.9 Minor change to logger formatting
 - 2.11.8 Fixed unlink seed from prompt
 - 2.11.7 Improving dependency management by checking for the correct dependency version.
