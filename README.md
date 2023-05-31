@@ -126,7 +126,7 @@ python -m pip install -U dynamicprompts[attentiongrabber,magicprompt]
 
 6. If you get an error message saying "No values found for wildcard some/wildcard", ensure that the file wildcard.txt is in extensions/sd-dynamic-prompts/wildcards/some/. The full path is required, as relative paths are not currently supported.
 
-7. If the issue persists, search for solutions in the [issues section](https://github.com/adieyal/sd-dynamic-prompts/issues?q=is%3Aissue) on Github and the [discussion forum](https://github.com/adieyal/sd-dynamic-prompts/discussions). If you cannot find a solution, create a new issue and give it a descriptive name, such as "Wildcard values are being ignored in prompt templates". Provide the necessary context, including the versions of the Dynamic Prompts extension and library, and mention the operating system or colab being used. If there is an error in the terminal, copy and paste the entire text or take a screenshot.
+7. If the issue persists, search for solutions in the [issues section](https://github.com/adieyal/sd-dynamic-prompts/issues?q=is%3Aissue) on GitHub and the [discussion forum](https://github.com/adieyal/sd-dynamic-prompts/discussions). If you cannot find a solution, create a new issue and give it a descriptive name, such as "Wildcard values are being ignored in prompt templates". Provide the necessary context, including the versions of the Dynamic Prompts extension and library, and mention the operating system or colab being used. If there is an error in the terminal, copy and paste the entire text or take a screenshot.
 
 8. Finally, it is essential to test and apply any fixes we release. Your feedback is valuable, as an issue that works in our environment may not work in yours.
 
