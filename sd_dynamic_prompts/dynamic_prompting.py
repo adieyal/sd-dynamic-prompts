@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import math
+from functools import lru_cache
 from pathlib import Path
 from string import Template
 
@@ -15,7 +16,6 @@ from modules import devices
 from modules.processing import fix_seed
 from modules.shared import opts
 
-from install import check_correct_dynamicprompts_installed, get_update_command
 from sd_dynamic_prompts import __version__, callbacks
 from sd_dynamic_prompts.element_ids import make_element_id
 from sd_dynamic_prompts.generator_builder import GeneratorBuilder
@@ -35,7 +35,6 @@ VERSION = __version__
 logger = get_logger(__name__)
 logger.info(f"Starting Dynamic Prompts v{VERSION}")
 
-check_correct_dynamicprompts_installed()
 base_dir = Path(scripts.basedir())
 magicprompt_models_path = get_magicmodels_path(base_dir)
 
@@ -71,6 +70,19 @@ if device.type == "cuda" and not device.index:
 loaded_count = 0
 
 
+@lru_cache(maxsize=1)
+def _get_install_error_message() -> str | None:
+    try:
+        from sd_dynamic_prompts.version_tools import get_dynamicprompts_install_result
+
+        get_dynamicprompts_install_result().raise_if_incorrect()
+    except RuntimeError as rte:
+        return str(rte)
+    except Exception:
+        logger.exception("Failed to get dynamicprompts install result")
+    return None
+
+
 class Script(scripts.Script):
     def __init__(self):
         global loaded_count
@@ -103,8 +115,8 @@ class Script(scripts.Script):
         return scripts.AlwaysVisible
 
     def ui(self, is_img2img):
-        correct_lib_version = check_correct_dynamicprompts_installed()
-        update_command = get_update_command()
+        install_message = _get_install_error_message()
+        correct_lib_version = bool(not install_message)
 
         html_path = base_dir / "helptext.html"
         html = Template(html_path.read_text("utf-8")).substitute(
@@ -117,7 +129,10 @@ class Script(scripts.Script):
         jinja_help = jinja_html_path.read_text("utf-8")
 
         with gr.Group(elem_id=make_element_id("dynamic-prompting")):
-            with gr.Accordion("Dynamic Prompts", open=False):
+            title = "Dynamic Prompts"
+            if not correct_lib_version:
+                title += " [incorrect installation]"
+            with gr.Accordion(title, open=False):
                 is_enabled = gr.Checkbox(
                     label="Dynamic Prompts enabled",
                     value=correct_lib_version,
@@ -127,7 +142,8 @@ class Script(scripts.Script):
 
                 if not correct_lib_version:
                     gr.HTML(
-                        f"""<span class="warning sddp-warning">Dynamic Prompts is not installed correctly</span>. Please reinstall the dynamic prompts library by running the following command: <span class="sddp-info">{update_command}</span>""",
+                        f"""<span class="warning sddp-warning">Dynamic Prompts is not installed correctly</span>.
+                        {install_message}""",
                     )
 
                 with gr.Group(visible=correct_lib_version):
