@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import logging
 import math
 from functools import lru_cache
 from pathlib import Path
@@ -28,12 +29,16 @@ from sd_dynamic_prompts.helpers import (
 )
 from sd_dynamic_prompts.pnginfo_saver import PngInfoSaver
 from sd_dynamic_prompts.prompt_writer import PromptWriter
-from sd_dynamic_prompts.utils import get_logger
 
 VERSION = __version__
 
-logger = get_logger(__name__)
-logger.info(f"Starting Dynamic Prompts v{VERSION}")
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+is_debug = getattr(opts, "is_debug", False)
+
+if is_debug:
+    logger.setLevel(logging.DEBUG)
 
 base_dir = Path(scripts.basedir())
 magicprompt_models_path = get_magicmodels_path(base_dir)

@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import logging
+
 from dynamicprompts.generators import (
     BatchedCombinatorialPromptGenerator,
     CombinatorialPromptGenerator,
@@ -12,9 +14,8 @@ from dynamicprompts.generators import (
 from dynamicprompts.parser.parse import default_parser_config
 
 from sd_dynamic_prompts.frozenprompt_generator import FrozenPromptGenerator
-from sd_dynamic_prompts.utils import get_logger
 
-logger = get_logger(__name__)
+logger = logging.getLogger(__name__)
 
 
 class GeneratorBuilder:
@@ -90,7 +91,6 @@ class GeneratorBuilder:
     def set_is_jinja_template(self, is_jinja_template=True, limit_prompts=False):
         self._is_jinja_template = is_jinja_template
         self._limit_jinja_prompts = limit_prompts
-
         return self
 
     def set_is_combinatorial(self, is_combinatorial=True, combinatorial_batches=1):

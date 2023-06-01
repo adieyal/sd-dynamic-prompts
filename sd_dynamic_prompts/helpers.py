@@ -1,12 +1,11 @@
 from __future__ import annotations
 
+import logging
 from pathlib import Path
 
 from dynamicprompts.generators.promptgenerator import PromptGenerator
 
-from sd_dynamic_prompts.utils import get_logger
-
-logger = get_logger(__name__)
+logger = logging.getLogger(__name__)
 
 
 def get_seeds(
