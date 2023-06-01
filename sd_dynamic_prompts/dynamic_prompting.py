@@ -503,3 +503,7 @@ class Script(scripts.Script):
 
         p.prompt_for_display = original_prompt
         p.prompt = original_prompt
+
+        if getattr(p, "enable_hr", False):  # Hires fix?
+            p.all_hr_prompts = all_prompts
+            p.all_hr_negative_prompts = all_negative_prompts
