@@ -1,3 +1,4 @@
+- 2.12.4  Honouring --skip-install command line argument for faster load times. Also reverts change to extension-specific logging configuration - see [53e69fe](https://github.com/adieyal/sd-dynamic-prompts/commit/53e69feda77954b86b4b0bae5623bd85009826b3)
 - 2.12.3  Minor change that does removes the "Promt matrix..." log when there is a single prompt
 - 2.12.2  Workaround webui bug when extensions with nested tabs are present - see [#481](https://github.com/adieyal/sd-dynamic-prompts/pull/481)
 - 2.12.1  Hires fix - see [#474](https://github.com/adieyal/sd-dynamic-prompts/issues/474).
