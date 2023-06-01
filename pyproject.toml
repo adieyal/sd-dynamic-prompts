@@ -10,6 +10,9 @@ pythonpath = [
     ".",
 ]
 addopts = "--ignore=collections"
+markers = [
+	"slow"
+]
 
 [tool.ruff]
 target-version = "py310"
