@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import logging
 from pathlib import Path
 from typing import Any
 
@@ -11,10 +12,9 @@ from modules.script_callbacks import ImageSaveParams
 from sd_dynamic_prompts.pnginfo_saver import PngInfoSaver, PromptTemplates
 from sd_dynamic_prompts.prompt_writer import PromptWriter
 from sd_dynamic_prompts.settings import on_ui_settings
-from sd_dynamic_prompts.utils import get_logger
 from sd_dynamic_prompts.wildcards_tab import initialize as initialize_wildcards_tab
 
-logger = get_logger(__name__)
+logger = logging.getLogger(__name__)
 
 
 def register_pnginfo_saver(pnginfo_saver: PngInfoSaver) -> None:
