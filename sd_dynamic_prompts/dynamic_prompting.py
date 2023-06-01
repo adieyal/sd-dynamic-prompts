@@ -482,9 +482,10 @@ class Script(scripts.Script):
                 combinatorial_batches,
             )
 
-        logger.info(
-            f"Prompt matrix will create {updated_count} images in a total of {p.n_iter} batches.",
-        )
+        if updated_count > 1:
+            logger.info(
+                f"Prompt matrix will create {updated_count} images in a total of {p.n_iter} batches.",
+            )
 
         self._prompt_writer.set_data(
             positive_template=original_prompt,
