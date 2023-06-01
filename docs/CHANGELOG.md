@@ -1,3 +1,4 @@
+- 2.12.1  Hires fix - see [#474](https://github.com/adieyal/sd-dynamic-prompts/issues/474).
 - 2.12.0  Updated installation process to be more robust and ensure that the correct dependencies are available. See [#449](https://github.com/adieyal/sd-dynamic-prompts/pull/449)
 - 2.11.10 Resource leaks fixed
 - 2.11.9 Minor change to logger formatting
