@@ -269,16 +269,18 @@ class SDDP_UI {
 const SDDP = new SDDP_UI();
 window.SDDP = SDDP;
 
-onUiUpdate(() => {
+(
+  window.onAfterUiUpdate || // sd-webui 1.3.0+
+  window.onUiUpdate
+)(() => {
   SDDP.configureHelpTexts();
-});
-
-onUiLoaded(() => {
-  // TODO: would be nicer to use `onUiTabChange`, but it may be broken
-  const mutationObserver = new MutationObserver(() => {
-    if (get_uiCurrentTabContent()?.id === "tab_sddp-wildcard-manager") {
-      SDDP.onWildcardManagerTabActivate();
-    }
-  });
-  mutationObserver.observe(gradioApp(), { childList: true, subtree: true });
+  // Work around a bug in get_uiCurrentTabContent() and nested tabs
+  // (can be replaced with get_uiCurrentTabContent() if
+  // https://github.com/AUTOMATIC1111/stable-diffusion-webui/pull/10863 is merged)
+  const currentVisibleTopLevelTab = gradioApp().querySelector(
+    '#tabs > .tabitem[id^=tab_]:not([style*="display: none"])',
+  );
+  if (currentVisibleTopLevelTab?.id === "tab_sddp-wildcard-manager") {
+    SDDP.onWildcardManagerTabActivate();
+  }
 });
