@@ -1,3 +1,4 @@
+- 2.12.2  Workaround webui bug when extensions with nested tabs are present - see [#481](https://github.com/adieyal/sd-dynamic-prompts/pull/481)
 - 2.12.1  Hires fix - see [#474](https://github.com/adieyal/sd-dynamic-prompts/issues/474).
 - 2.12.0  Updated installation process to be more robust and ensure that the correct dependencies are available. See [#449](https://github.com/adieyal/sd-dynamic-prompts/pull/449)
 - 2.11.10 Resource leaks fixed
