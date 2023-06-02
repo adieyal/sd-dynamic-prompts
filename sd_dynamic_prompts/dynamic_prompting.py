@@ -415,10 +415,9 @@ class Script(scripts.Script):
 
         fix_seed(p)
 
+        # must be before p.prompt/p.hr_prompt are updated
         original_prompt, original_negative_prompt = get_prompts(p)
-        hr_prompt_overwrite, hr_negative_overwrite = check_hr_overwrite(
-            p
-        ) # must be before p.prompt,negative,hr_prompt are updated
+        hr_prompt_overwrite, hr_negative_overwrite = check_hr_overwrite(p)
         original_seed = p.seed
         num_images = p.n_iter * p.batch_size
 
