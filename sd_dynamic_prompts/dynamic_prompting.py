@@ -392,7 +392,11 @@ class Script(scripts.Script):
             p.negative_prompt,
         )
         hr_fix_enabled = getattr(p, "enable_hr", False)
-        if hr_fix_enabled:
+
+        # all_hr_prompts (and the other hr prompt related stuff)
+        # is only available in AUTOMATIC1111 1.3.0+, but might not be in forks.
+        # Assume that if all_hr_prompts is available, the other hr prompt related stuff is too.
+        if hr_fix_enabled and hasattr(p, "all_hr_prompts"):
             original_hr_prompt = _get_effective_prompt(p.all_hr_prompts, p.hr_prompt)
             original_negative_hr_prompt = _get_effective_prompt(
                 p.all_hr_negative_prompts,
