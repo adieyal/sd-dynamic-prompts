@@ -75,19 +75,15 @@ def get_hr_prompts(p) -> Tuple[str, str]:
 
 
 def check_hr_overwrite(p) -> Tuple[bool, bool]:
+    '''The return values indicate if all_hr_prompts or all_hr_negative_prompts respectively should be
+    overwritten'''
     if not getattr(p, "enable_hr", False):
         return False, False
 
     prompt, negative_prompt = get_prompts(p)
     hr_prompt, hr_negative = get_hr_prompts(p)
 
-    hr_prompt_overwrite = False
-    hr_negative_overwrite = False
-    if prompt == hr_prompt:
-        hr_prompt_overwrite = True
-    if negative_prompt == hr_negative:
-        hr_negative_overwrite = True
-    return hr_prompt_overwrite, hr_negative_overwrite
+    return (prompt == hr_prompt), (negative_prompt == hr_negative)
 
 
 device = devices.device
