@@ -67,6 +67,29 @@ def get_prompts(p):
     return original_prompt, original_negative_prompt
 
 
+def get_hr_prompts(p) -> tuple[str, str]:
+    hr_prompt = p.all_hr_prompts[0] if len(p.all_hr_prompts) > 0 else p.hr_prompt
+    hr_negative = (
+        p.all_hr_negative_prompts[0]
+        if len(p.all_hr_negative_prompts) > 0
+        else p.hr_negative_prompt
+    )
+
+    return hr_prompt, hr_negative
+
+
+def check_hr_overwrite(p) -> tuple[bool, bool]:
+    """The return values indicate if all_hr_prompts or all_hr_negative_prompts respectively should be
+    overwritten"""
+    if not getattr(p, "enable_hr", False):
+        return False, False
+
+    prompt, negative_prompt = get_prompts(p)
+    hr_prompt, hr_negative = get_hr_prompts(p)
+
+    return (prompt == hr_prompt), (negative_prompt == hr_negative)
+
+
 device = devices.device
 # There might be a bug in auto1111 where the correct device is not inferred in some scenarios
 if device.type == "cuda" and not device.index:
@@ -392,7 +415,9 @@ class Script(scripts.Script):
 
         fix_seed(p)
 
+        # must be before p.prompt/p.hr_prompt are updated
         original_prompt, original_negative_prompt = get_prompts(p)
+        hr_prompt_overwrite, hr_negative_overwrite = check_hr_overwrite(p)
         original_seed = p.seed
         num_images = p.n_iter * p.batch_size
 
@@ -511,5 +536,12 @@ class Script(scripts.Script):
         p.prompt = original_prompt
 
         if getattr(p, "enable_hr", False):  # Hires fix?
-            p.all_hr_prompts = all_prompts
-            p.all_hr_negative_prompts = all_negative_prompts
+            hr_prompt, hr_negative = get_hr_prompts(p)
+            if hr_prompt_overwrite:
+                p.all_hr_prompts = all_prompts
+            elif len(p.all_hr_prompts) != len(all_prompts):
+                p.all_hr_prompts = len(all_prompts) * [hr_prompt]
+            if hr_negative_overwrite:
+                p.all_hr_negative_prompts = all_negative_prompts
+            elif len(p.all_hr_negative_prompts) != len(all_negative_prompts):
+                p.all_hr_negative_prompts = len(all_negative_prompts) * [hr_negative]
