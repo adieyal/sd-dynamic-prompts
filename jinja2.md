@@ -51,7 +51,7 @@ This will produce one prompt for each colour in the wildcard.txt file.
 
 ```jinja2
 {% for colour in ["red", "blue", "green"] %}
-    {% if colour == "red"}
+    {% if colour == "red" %}
         {% prompt %}I love {{ colour }} roses{% endprompt %}
     {% else %}
         {% prompt %}I hate {{ colour }} roses{% endprompt %}
