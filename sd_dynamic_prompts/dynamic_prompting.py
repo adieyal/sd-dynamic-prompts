@@ -27,6 +27,12 @@ from sd_dynamic_prompts.helpers import (
     load_magicprompt_models,
     should_freeze_prompt,
 )
+from sd_dynamic_prompts.wildcards_tab import (
+    get_wildcard_hierarchy_for_json,
+    search_elements_in_json,
+    handle_load_wildcard,
+    loadJson
+)
 from sd_dynamic_prompts.pnginfo_saver import PngInfoSaver
 from sd_dynamic_prompts.prompt_writer import PromptWriter
 
@@ -67,7 +73,6 @@ if device.type == "cuda" and not device.index:
 
 loaded_count = 0
 
-
 @lru_cache(maxsize=1)
 def _get_install_error_message() -> str | None:
     try:
@@ -80,6 +85,37 @@ def _get_install_error_message() -> str | None:
         logger.exception("Failed to get dynamicprompts install result")
     return None
 
+def search_wildcard_callback(search_query):
+    matching_wildcards = []
+    if len(search_query) != 0:
+        wildcard_hierarchy = get_wildcard_hierarchy_for_json()
+        matching_wildcards = search_elements_in_json(wildcard_hierarchy, search_query, True)
+
+    matching_wildcards = list(set(matching_wildcards))
+    values = None
+    update = gr.update(visible=False)
+    clickable = False
+    amount = len(matching_wildcards)
+    label = f"Results [{amount}]"
+    if len(matching_wildcards) == 0:
+        matching_wildcards = ["Nothing Found!"]
+        label = "Results"
+    elif len(matching_wildcards) == 1:
+        values, update = load_wildcard_t2i_callback(matching_wildcards[0])
+    else:
+        clickable = True
+    
+    return gr.Dropdown.update(choices=matching_wildcards, label=label, value=matching_wildcards[0], interactive=clickable), values, update
+
+def load_wildcard_t2i_callback(wildcard):
+    values = loadJson(handle_load_wildcard({"name": wildcard}))
+    
+    if len(values["contents"]) > 0:
+        visible = True
+    else:
+        visible = False
+
+    return values["contents"], gr.update(visible=visible)
 
 class Script(scripts.Script):
     def __init__(self):
@@ -130,6 +166,38 @@ class Script(scripts.Script):
             title = "Dynamic Prompts"
             if not correct_lib_version:
                 title += " [incorrect installation]"
+            with gr.Accordion("Wildcard Search", open=False):
+                with gr.Group():
+                    search_input = gr.Textbox(
+                        "",
+                        elem_id=make_element_id("wildcard-file-search-txt2img"),
+                        interactive=True,
+                        label="Search for a Wildcard",
+                    )
+                    search_results = gr.Dropdown(
+                        "",
+                        elem_id=make_element_id("wildcard-search-results"),
+                        interactive=True,
+                        label="Results",
+                    )
+                    result_block = gr.Textbox(
+                        "",
+                        elem_id=make_element_id("wildcard-search-results_block"),
+                        interactive=True,
+                        visible=False,
+                        label="Selected Wildcard Contents",
+                    )
+                    search_results.select(
+                    load_wildcard_t2i_callback,
+                    inputs=[search_results],
+                    outputs=[result_block, result_block]  
+                    )
+                    search_input.change(
+            		search_wildcard_callback,
+            		inputs=[search_input],
+                    outputs=[search_results, result_block, result_block]
+        		    )
+            
             with gr.Accordion(title, open=False):
                 is_enabled = gr.Checkbox(
                     label="Dynamic Prompts enabled",

@@ -5,6 +5,7 @@ import logging
 import random
 import shutil
 import traceback
+import re
 from pathlib import Path
 
 import gradio as gr
@@ -19,6 +20,7 @@ from sd_dynamic_prompts.element_ids import make_element_id
 
 COPY_COLLECTION_ACTION = "copy collection"
 LOAD_FILE_ACTION = "load file"
+SEARCH_FILE_ACTION = "search file"
 LOAD_TREE_ACTION = "load tree"
 MESSAGE_PROCESSING_ACTION = "message processing"
 
@@ -85,6 +87,12 @@ def on_ui_tabs():
             with gr.Row():
                 with gr.Column():
                     gr.HTML(header_html)
+                    search_input = gr.Textbox(
+                        "",
+                        elem_id=make_element_id("wildcard-file-search-wlt"),
+                        interactive=True,
+                        label="Search for a Wildcard",
+                    )
                     gr.HTML("", elem_id=make_element_id("wildcard-tree"))
                     collection_dropdown = gr.Dropdown(
                         choices=sorted(get_collection_dirs()),
@@ -162,6 +170,13 @@ def on_ui_tabs():
         delete_tree_button.click(
             delete_tree_callback,
             _js="SDDP.onDeleteTreeClick",
+            inputs=[client_to_server_message_textbox],
+            outputs=[server_to_client_message_textbox],
+        )
+        
+        search_input.change(
+            search_wildcard_callback,
+            _js="SDDP.onSearchKeyUp",
             inputs=[client_to_server_message_textbox],
             outputs=[server_to_client_message_textbox],
         )
@@ -247,6 +262,64 @@ def handle_message(event_str: str) -> str:
             message=f"Error processing message: {e}",
         )
 
+
+def search_wildcard_callback(message_str):
+    message = json.loads(message_str)
+    search_query = message["query"]
+    
+   
+    # Perform the wildcard search based on the search query
+    wildcard_hierarchy = get_wildcard_hierarchy_for_json()
+  
+    
+    matching_wildcards = search_elements_in_json(wildcard_hierarchy, search_query, False)
+    
+ 
+    matching_wildcards = list(set(matching_wildcards))
+   
+
+    # Create the payload
+    payload = create_payload(
+        action="search",
+        success=True,
+        search_results=matching_wildcards,
+        search_query=search_query,
+    )
+    
+    return payload
+
+def search_elements_in_json(json_array, search_query, t2m):
+    escaped = re.escape(search_query)
+    
+    matched_elements = []
+    stack = [(json_array, [])]
+    visited = set()
+    while stack:
+        current_element, parents = stack.pop(0)
+        if id(current_element) in visited:
+            continue
+        if isinstance(current_element, list):
+            for child in current_element:
+                stack.append((child, parents))
+                
+        visited.add(id(current_element))
+        if "name" in current_element and (re.search(escaped, current_element["name"], re.IGNORECASE) or re.search(escaped, current_element["wrappedName"], re.IGNORECASE)):
+            if t2m:
+                matched_elements.append(current_element["wrappedName"])
+            else:
+                matched_elements.extend([parent["name"] for parent in parents])
+                matched_elements.append(current_element["name"])
+        
+        if isinstance(current_element, dict) and "children" in current_element and (len(current_element["children"])>0):
+            child_elements = current_element["children"]
+            stack.extend([(child, parents + [current_element]) for child in child_elements])
+            if t2m:
+                continue
+    
+    return matched_elements
+
+def loadJson(str):
+    return json.loads(str)
 
 def handle_load_wildcard(event: dict) -> str:
     name = event["name"]
