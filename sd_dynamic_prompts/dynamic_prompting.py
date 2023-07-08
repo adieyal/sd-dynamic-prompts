@@ -464,16 +464,18 @@ class Script(scripts.Script):
             else:
                 negative_generator = generator
 
-            all_seeds = None
-            if num_images and not unlink_seed_from_prompt:
-                p.all_seeds, p.all_subseeds = get_seeds(
+            prompt_seeds = p.all_seeds
+            if num_images:
+                image_seeds, image_subseeds, prompt_seeds = get_seeds(
                     p,
                     num_images,
                     use_fixed_seed,
                     is_combinatorial,
                     combinatorial_batches,
+                    unlink_seed_from_prompt,
                 )
-                all_seeds = p.all_seeds
+                p.all_seeds = image_seeds
+                p.all_subseeds = image_subseeds
 
             all_prompts, all_negative_prompts = generate_prompts(
                 generator,
@@ -481,7 +483,7 @@ class Script(scripts.Script):
                 original_prompt,
                 original_negative_prompt,
                 num_images,
-                all_seeds,
+                prompt_seeds,
             )
 
         except GeneratorException as e:
@@ -493,12 +495,13 @@ class Script(scripts.Script):
         p.n_iter = math.ceil(updated_count / p.batch_size)
 
         if num_images != updated_count:
-            p.all_seeds, p.all_subseeds = get_seeds(
+            p.all_seeds, p.all_subseeds, _ = get_seeds(
                 p,
                 updated_count,
                 use_fixed_seed,
                 is_combinatorial,
                 combinatorial_batches,
+                unlink_seed_from_prompt,
             )
 
         if updated_count > 1:
