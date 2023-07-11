@@ -12,6 +12,7 @@ Here is a list of various tutorials and other resources relevant to Dynamic Prom
 * 📽️ [Dynamic Prompts 動態提示詞 | 快速生成類似風格的插件 | A1111](https://www.youtube.com/watch?v=NNaYA6B8UXc)
 
 ### English
+* 📽️ [Unlock Limitless AI RPG Character Portraits - In Stable Diffusion with Wildcards & Dynamic Prompts!](https://www.youtube.com/watch?v=s-1L6MCVh-E)
 * 📽️ [Discover the Essential A1111 Extensions for Stable Diffusion: Your Must-Have Toolkit!](https://www.youtube.com/watch?v=CWKVhWHVecg)
 * 📽️ [1000 Prompts in 1 Click - Dynamic Prompt Wildcards for Automatic 1111](https://www.youtube.com/watch?v=bQK5diN59NA)
 * 📽️ [How to make dynamic prompts in Automatic1111 sd-dynamic-prompts [automatic1111 tutorial]](https://www.youtube.com/watch?v=aKY-8-kX6ug)
@@ -43,6 +44,9 @@ Here is a list of various tutorials and other resources relevant to Dynamic Prom
 
 
 ## Various tutorials
+* [Stable Diffusion prompt engineering toolkit](https://medium.com/@soapsudtycoon/stable-diffusion-prompt-engineering-toolkit-8f48bc447dc1)
+* [Mastering Stable Diffusion: Unleash the Power of Parameterized Templates](https://medium.com/@soapsudtycoon/mastering-stable-diffusion-unleash-the-power-of-parameterized-templates-a87992f212fa)
+* [A quick tip guide for dynamic prompts](https://civitai.com/articles/173/a-quick-tip-guide-for-dynamic-prompts)
 * [How to use Dynamic Prompts for image diversity [Tutorial]](https://www.reddit.com/r/StableDiffusion/comments/1381nmu/how_to_use_dynamic_prompts_for_image_diversity/)
 * [Having a blast with ControlNet + Dynamic Prompts (Wildcards)](https://www.reddit.com/r/StableDiffusion/comments/115t0pi/having_a_blast_with_controlnet_dynamic_prompts/)
 * [Infinite Random RPG Character Portraits with Dynamic Prompts](https://www.reddit.com/r/StableDiffusion/comments/10xqwjm/i_come_bearing_gifts_infinite_random_rpg/)
@@ -53,8 +57,13 @@ Here is a list of various tutorials and other resources relevant to Dynamic Prom
 * [Testing Dynamic Prompts extension to mix and match elements](https://www.reddit.com/r/StableDiffusion/comments/10gkm1c/testing_dynamic_prompts_extension_to_mix_and/)
 * [How to Turbocharge your prompts using AUTOMATIC1111 WebUI dynamic prompts extension](https://www.reddit.com/r/StableDiffusion/comments/ynztiz/how_to_turbocharge_your_prompts_using/)
 * [Dynamic prompts for Automatic1111 is so incredibly powerful, these are all from the same prompt!](https://www.reddit.com/r/StableDiffusion/comments/zacjhk/dynamic_prompts_for_automatic1111_is_so/)
+* [80's-90's fantasy art character generator w/ dynamic prompt (DS&D)](https://www.reddit.com/r/StableDiffusion/comments/13g1g8p/80s90s_fantasy_art_character_generator_w_dynamic/)
+* [Dynamic nature scenery generator (dynamic prompt + upscaling)](https://www.reddit.com/r/StableDiffusion/comments/1313fn3/dynamic_nature_scenery_generator_dynamic_prompt/)
+* [Endless (60's PINUP FANTASY) Character Generator ](https://civitai.com/articles/816/endless-60s-pinup-fantasy-character-generator-photoreal-dynamic-prompts-how-to)
+* [StableDiffusion - Dynamic Prompts Extension](https://www.artstation.com/blogs/kaddoura/qR0y/stablediffusion-dynamic-prompts-extension)
 
 ## Wildcard packs
+* [[CivitAI] [PromptGeek Fantasy Character Wildcard](https://civitai.com/models/102762?modelVersionId=109978)
 * [[CivitAI] Clothes Wildcards](https://civitai.com/models/73184/clothes-wildcards)
 * [[CivitAI] Camera Views](https://civitai.com/models/24940/wildcards-camera-views)
 * [[CivitAI] CC's wildcards](https://civitai.com/models/63598/ccs-wildcards)
@@ -78,3 +87,7 @@ Here is a list of various tutorials and other resources relevant to Dynamic Prom
 * [Vetchems/sd-danbooru-tags](https://github.com/Vetchems/sd-danbooru-tags)
 * [aoirusann/my-sd-wildcard](https://github.com/aoirusann/my-sd-wildcard)
 * [SkyyySi/sd-dp-wildcards-collection](https://github.com/SkyyySi/sd-dp-wildcards-collection)
+
+
+## Other extensions
+* [sd-webui-sendtonegative](https://github.com/acorderob/sd-webui-sendtonegative)
