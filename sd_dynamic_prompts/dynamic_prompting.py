@@ -375,6 +375,9 @@ class Script(scripts.Script):
         self._prompt_writer.enabled = opts.dp_write_prompts_to_file
         self._limit_jinja_prompts = opts.dp_limit_jinja_prompts
         self._auto_purge_cache = opts.dp_auto_purge_cache
+        self._wildcard_manager.dedup_wildcards = not opts.dp_wildcard_manager_no_dedupe
+        self._wildcard_manager.sort_wildcards = not opts.dp_wildcard_manager_no_sort
+
         magicprompt_batch_size = opts.dp_magicprompt_batch_size
 
         parser_config = ParserConfig(
