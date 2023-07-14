@@ -97,11 +97,19 @@ You can also install it manually by running the following command from within th
 	git clone https://github.com/adieyal/sd-dynamic-prompting/ extensions/dynamic-prompts
 
 ## Configuration
+You can find various settings to change Dynamic Prompt's behaviour in the Settings tab in the Dynamic Prompts section.
+
+### Changing syntax
 In case of a syntax clash with another extension, Dynamic Prompts allows you to change the definition of variant start and variant end. By default these are set to `{` and `}` respectively. , e.g. `{red|green|blue}`. In the settings tab, you can change these two any string, e.g. `<red|green|blue>` or even `::red|green|blue::`.
 
 <img src="images/config_brackets.png">
 
 By default, wildcards start with `__`(double underscore) and end with `__`. You can change this in the settings tab under wildcard wrap.
+
+### Wildcard settings
+Dynamic Prompts automatically de-duplicates and sorts wildcard files before using them. If you would prefer to disable this functionality, you can uncheck the checkboxes in the settings tab.
+
+<img src="images/wildcards_settings.png">
 
 ## Troubleshooting
 If you encounter an issue with Dynamic Prompts, follow these steps to resolve the problem:
