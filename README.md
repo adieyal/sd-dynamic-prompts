@@ -98,7 +98,8 @@ By default, wildcards start with `__`(double underscore) and end with `__`. You 
 ### Wildcard settings
 Dynamic Prompts automatically de-duplicates and sorts wildcard files before using them. If you would prefer to disable this functionality, you can uncheck the checkboxes in the settings tab.
 
-<img src="images/wildcards_settings.png">
+<img src="images/wildcard_settings.png">
+
 
 ## Troubleshooting
 If you encounter an issue with Dynamic Prompts, follow these steps to resolve the problem:
