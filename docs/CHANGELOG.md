@@ -1,3 +1,4 @@
+= 2.14.0 Added configuration option to shuffle wildcards for increased randomness in combinatorial mode.
 = 2.13.0 Added configuration options to prevent the wildcard manager from sorting and deduplicating wildcard files
 - 2.12.6  Bumped dynamicprompts version to 0.27.1. Late loading of jinja2 to work around issues with incompatible versions of Jinja2 being installed. Also improved dependency management
 - 2.12.5  Updates to support hires updates in auto1111. See [#498](https://github.com/adieyal/sd-dynamic-prompts/pull/498). Also manually updates PYTHONPATH in install.py if the extension's package is not found. [#496](https://github.com/adieyal/sd-dynamic-prompts/pull/496)
