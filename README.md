@@ -100,6 +100,8 @@ Dynamic Prompts automatically de-duplicates and sorts wildcard files before usin
 
 <img src="images/wildcard_settings.png">
 
+Checking the "shuffle wildcards" checkbox will randomize the order of the wildcards, ensuring that running the combinatorial model will produce different images on different runs.
+
 
 ## Troubleshooting
 If you encounter an issue with Dynamic Prompts, follow these steps to resolve the problem:
