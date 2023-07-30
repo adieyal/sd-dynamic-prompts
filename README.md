@@ -1,6 +1,8 @@
 # Stable Diffusion Dynamic Prompts extension
 A custom extension for [AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) that implements an expressive template language for random or combinatorial prompt generation along with features to support deep wildcard directory structures.
 
+Looking for ComfyUI nodes? Find them [here](https://github.com/adieyal/comfyui-dynamicprompts).
+
 <p align="center">
     <a href="docs/SYNTAX.md"><img src="images/icon-syntax.png" valign="middle" style="height:60px;margin-right:10px"/></a>
     <a href="docs/tutorial.md"><img src="images/icon-tutorial.png" valign="middle" style="height:60px;margin-right:10px"/></a>
