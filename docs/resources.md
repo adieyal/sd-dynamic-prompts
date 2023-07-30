@@ -63,6 +63,7 @@ Here is a list of various tutorials and other resources relevant to Dynamic Prom
 * [StableDiffusion - Dynamic Prompts Extension](https://www.artstation.com/blogs/kaddoura/qR0y/stablediffusion-dynamic-prompts-extension)
 
 ## Wildcard packs
+* [LulzRose/YetAnotherWildcardCollection](https://github.com/LulzRose/YetAnotherWildcardCollection/)
 * [[CivitAI] [PromptGeek Fantasy Character Wildcard](https://civitai.com/models/102762?modelVersionId=109978)
 * [[CivitAI] Clothes Wildcards](https://civitai.com/models/73184/clothes-wildcards)
 * [[CivitAI] Camera Views](https://civitai.com/models/24940/wildcards-camera-views)
@@ -88,6 +89,6 @@ Here is a list of various tutorials and other resources relevant to Dynamic Prom
 * [aoirusann/my-sd-wildcard](https://github.com/aoirusann/my-sd-wildcard)
 * [SkyyySi/sd-dp-wildcards-collection](https://github.com/SkyyySi/sd-dp-wildcards-collection)
 
-
 ## Other extensions
 * [sd-webui-sendtonegative](https://github.com/acorderob/sd-webui-sendtonegative)
+* [ComfyUI custom nodes](https://github.com/adieyal/comfyui-dynamicprompts)
