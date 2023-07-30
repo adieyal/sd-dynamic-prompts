@@ -12,6 +12,7 @@ Here is a list of various tutorials and other resources relevant to Dynamic Prom
 * 📽️ [Dynamic Prompts 動態提示詞 | 快速生成類似風格的插件 | A1111](https://www.youtube.com/watch?v=NNaYA6B8UXc)
 
 ### English
+* 📽️ [Unlock The Full Power Of Stable Diffusion with Wildcards & Dynamic Prompts!](https://www.youtube.com/watch?v=s-1L6MCVh-E)
 * 📽️ [Unlock Limitless AI RPG Character Portraits - In Stable Diffusion with Wildcards & Dynamic Prompts!](https://www.youtube.com/watch?v=s-1L6MCVh-E)
 * 📽️ [Discover the Essential A1111 Extensions for Stable Diffusion: Your Must-Have Toolkit!](https://www.youtube.com/watch?v=CWKVhWHVecg)
 * 📽️ [1000 Prompts in 1 Click - Dynamic Prompt Wildcards for Automatic 1111](https://www.youtube.com/watch?v=bQK5diN59NA)
