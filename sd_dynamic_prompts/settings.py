@@ -94,6 +94,15 @@ def on_ui_settings():
         ),
     )
 
+    shared.opts.add_option(
+        key="dp_wildcard_manager_shuffle",
+        info=shared.OptionInfo(
+            False,
+            label="Shuffle wildcards before use for more random outputs",
+            section=section,
+        ),
+    )
+
     magic_models = load_magicprompt_models(get_magicmodels_path(base_dir))
     shared.opts.add_option(
         key="dp_magicprompt_default_model",
