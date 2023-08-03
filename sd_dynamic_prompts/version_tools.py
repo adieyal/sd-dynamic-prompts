@@ -48,14 +48,14 @@ class InstallResult:
             return None
         return (
             f"You have {self.requirement.name} version {self.installed or 'not'} installed, "
-            f"but this extension requires {self.specifier_str}. "
+            f"but this extension requires version {self.requirement.specifier}. "
             f"Please run `install.py` from the sd-dynamic-prompts extension directory, "
             f"or `{self.pip_install_command}`."
         )
 
     @property
     def specifier_str(self) -> str:
-        return str(self.requirement.specifier)
+        return str(self.requirement)
 
     @property
     def correct(self) -> bool:
