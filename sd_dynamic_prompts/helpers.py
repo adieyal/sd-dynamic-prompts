@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 import logging
-from pathlib import Path
 from itertools import product
+from pathlib import Path
 
 from dynamicprompts.generators.promptgenerator import PromptGenerator
 
@@ -101,4 +101,4 @@ def generate_prompts(
         seeds=negative_seeds,
     ) or [""]
 
-    return list(zip(*product(all_prompts, all_negative_prompts)))
+    return list(zip(*product(all_prompts, all_negative_prompts), strict=True))
