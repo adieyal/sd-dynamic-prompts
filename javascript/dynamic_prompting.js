@@ -191,7 +191,10 @@ class SDDP_UI {
       this.setupTree(message.tree);
     } else if (action === "load file" && success) {
       this.loadFileIntoEditor(message);
-    } else {
+    } else if ( action === "search" && success) {
+      const {search_query, search_results} = message;
+      this.showLeavesByArray(search_results);
+    } else  {
       console.warn("SDDP: Unknown message", message);
     }
   }
@@ -264,6 +267,39 @@ class SDDP_UI {
       contents,
     });
   }
+  
+  onSearchKeyUp() {
+    const query = gradioApp().querySelector(
+      "#sddp-wildcard-file-search-wlt textarea",
+    ).value;
+    
+    return this.formatPayload({
+      action: "search wildcard",
+      query,
+    });
+  }
+  
+  showLeavesByArray(strings) {
+      strings = strings.map(x => x.toLowerCase())
+      const treeLeaves = document.getElementsByClassName('tree-leaf');
+      
+      for (let leaf of treeLeaves) {
+        let leaftext = leaf.getElementsByClassName('tree-leaf-text')[0];
+	
+        if (!strings.includes(leaftext.innerText.toLowerCase())) {
+          leaf.classList.add('hidden');
+        } else {
+          leaf.classList.remove('hidden');
+          let currentNode = leaf;
+  
+  	   while (currentNode !== null && !currentNode.id.includes('sddp-wildcard-tree')) {
+    	    currentNode = currentNode.parentNode;
+    		 currentNode.classList.remove('hidden');
+  		}
+        }
+      }
+    }
+  
 }
 
 const SDDP = new SDDP_UI();
