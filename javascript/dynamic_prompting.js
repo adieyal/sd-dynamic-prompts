@@ -134,9 +134,12 @@ class SDDP_UI {
   constructor() {
     this.helpTextsConfigured = false;
     this.wildcardsLoaded = false;
+    this.searchKeyConfigured = false;
     this.messageReadTimer = null;
     this.lastMessage = null;
     this.treeView = null;
+    this.treeContent = null;
+    this.treeFilter = null;
   }
 
   configureHelpTexts() {
@@ -188,7 +191,8 @@ class SDDP_UI {
     const message = JSON.parse(messageText);
     const { action, success } = message;
     if (action === "load tree" && success) {
-      this.setupTree(message.tree);
+      this.treeContent = message.tree;
+      this.setupTree();
     } else if (action === "load file" && success) {
       this.loadFileIntoEditor(message);
     } else {
@@ -196,17 +200,23 @@ class SDDP_UI {
     }
   }
 
-  setupTree(content) {
+  setupTree() {
     let { treeView } = this;
+    const { treeContent: content, treeFilter: filter } = this;
+    if (!content) {
+      // Not loaded yet? E.g. user searches before
+      return;
+    }
+    const filteredContent = this.filterTreeContent(content, filter);
     if (!this.treeView) {
       const treeDiv = gradioApp().querySelector("#sddp-wildcard-tree");
       if (treeDiv) {
-        treeView = new SDDPTreeView(content, treeDiv);
+        treeView = new SDDPTreeView(filteredContent, treeDiv);
         treeView.on("select", this.onSelectNode.bind(this), null);
         this.treeView = treeView;
       }
     } else {
-      treeView.data = content;
+      treeView.data = filteredContent;
       treeView.render();
     }
   }
@@ -245,6 +255,15 @@ class SDDP_UI {
     if (!this.messageReadTimer) {
       this.messageReadTimer = setInterval(this.doReadMessage.bind(this), 120);
     }
+    if (!this.searchKeyConfigured) {
+      gradioApp()
+        .querySelector("#sddp-wildcard-search textarea")
+        ?.addEventListener("input", (event) => {
+          this.treeFilter = event.target.value?.trim() || null;
+          this.setupTree();
+        });
+      this.searchKeyConfigured = true;
+    }
   }
 
   onDeleteTreeClick() {
@@ -264,6 +283,24 @@ class SDDP_UI {
       contents,
     });
   }
+
+  filterTreeContent = (content, filter) => {
+    if (!filter?.length) {
+      return content;
+    }
+    filter = filter.toLowerCase();
+
+    const filteredContent = [];
+    function walk(node) {
+      if (node.children?.length) {
+        node.children.forEach(walk);
+      } else if (node.name?.toLowerCase().includes(filter)) {
+        filteredContent.push(node);
+      }
+    }
+    content.forEach(walk);
+    return filteredContent;
+  };
 }
 
 const SDDP = new SDDP_UI();

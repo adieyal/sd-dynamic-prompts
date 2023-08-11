@@ -82,6 +82,11 @@ def on_ui_tabs():
     with gr.Blocks() as wildcards_tab:
         with gr.Row():
             with gr.Column():
+                gr.Textbox(
+                    placeholder="Search in wildcard names...",
+                    elem_id=make_element_id("wildcard-search"),
+                    label="",
+                )
                 gr.HTML("Loading...", elem_id=make_element_id("wildcard-tree"))
                 with gr.Accordion("Help", open=False):
                     gr.HTML(help_html)
