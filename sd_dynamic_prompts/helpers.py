@@ -1,11 +1,20 @@
 from __future__ import annotations
 
 import logging
+import random
 from pathlib import Path
 
 from dynamicprompts.generators.promptgenerator import PromptGenerator
 
 logger = logging.getLogger(__name__)
+
+
+def get_fixed_seed(seed):
+    # Copied from auto1111 modules/processing.py
+    if seed is None or seed == "" or seed == -1:
+        return int(random.randrange(4294967294))
+
+    return seed
 
 
 def get_seeds(
@@ -14,6 +23,7 @@ def get_seeds(
     use_fixed_seed,
     is_combinatorial=False,
     combinatorial_batches=1,
+    unlink_seed_from_prompt=False,
 ):
     if p.subseed_strength != 0:
         seed = int(p.all_seeds[0])
@@ -24,22 +34,27 @@ def get_seeds(
 
     if use_fixed_seed:
         if is_combinatorial:
-            all_seeds = []
-            all_subseeds = [subseed] * num_seeds
+            image_seeds = []
+            image_subseeds = [subseed] * num_seeds
             for i in range(combinatorial_batches):
-                all_seeds.extend([seed + i] * (num_seeds // combinatorial_batches))
+                image_seeds.extend([seed + i] * (num_seeds // combinatorial_batches))
         else:
-            all_seeds = [seed] * num_seeds
-            all_subseeds = [subseed] * num_seeds
+            image_seeds = [seed] * num_seeds
+            image_subseeds = [subseed] * num_seeds
     else:
         if p.subseed_strength == 0:
-            all_seeds = [seed + i for i in range(num_seeds)]
+            image_seeds = [seed + i for i in range(num_seeds)]
         else:
-            all_seeds = [seed] * num_seeds
+            image_seeds = [seed] * num_seeds
 
-        all_subseeds = [subseed + i for i in range(num_seeds)]
+        image_subseeds = [subseed + i for i in range(num_seeds)]
 
-    return all_seeds, all_subseeds
+    if unlink_seed_from_prompt:
+        prompt_seeds = [get_fixed_seed(None) for _ in range(num_seeds)]
+    else:
+        prompt_seeds = image_seeds
+
+    return image_seeds, image_subseeds, prompt_seeds
 
 
 def should_freeze_prompt(p):
