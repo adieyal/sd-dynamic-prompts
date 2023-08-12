@@ -12,6 +12,7 @@ Here is a list of various tutorials and other resources relevant to Dynamic Prom
 * 📽️ 2023-04-01 - [分享三個Stable Diffusion prompt的提示字管理小工具 ，從陽春版到進階版還有最終加強版。Ai繪圖stable diffusion教學。](https://www.youtube.com/watch?v=zHTeZxzJ314)
 
 ### English
+* 📽️ 2023-07-23 - [Newly Released Invoke AI 3.0 Walkthrough](https://www.youtube.com/watch?v=1Iz4F7o6hgQ&t=414s)
 * 📽️ 2023-07-02 - [Unlock The Full Power Of Stable Diffusion with Wildcards & Dynamic Prompts!](https://www.youtube.com/watch?v=s-1L6MCVh-E)
 * 📽️ 2023-06-29 - [Create consistent characters with Stable diffusion!!](https://www.youtube.com/watch?v=iAhqMzgiHVw&t=585s)
 * 📽️ 2023-06-17 - [Discover the Essential A1111 Extensions for Stable Diffusion: Your Must-Have Toolkit!](https://www.youtube.com/watch?v=CWKVhWHVecg)
@@ -32,10 +33,15 @@ Here is a list of various tutorials and other resources relevant to Dynamic Prom
 * 📽️ 2023-05-04 - [【凄すぎ！】ChatGPTとこのStable Diffusionの拡張機能を使えば呪文が自由自在【ワイルドカード】](https://www.youtube.com/watch?v=QoLdCxHyfS8)
 
 ### Korean
+
+* 📽️ 2023-07-23 - [Learn more about wildcards! Random outfit! random place! random hair! (follow as it is)](https://www.youtube.com/watch?v=JyFmZ03pCvI)
 * 📽️ 2023-03-21 - [아무것도 생각 안 하고 그림 뽑는 방법 (stable diffusion Dynamic Prompts extension)](https://www.youtube.com/watch?v=P6Tl5sMUJpk)
 
 ### Polish
 * 📽️ 2023-05-16 - [ChatGPT + StableDiffusion - Magia użycia DYNAMIC PROMPTS [PO POLSKU]](https://www.youtube.com/watch?v=OVO4Vhak1C0)
+
+### Portuguese
+* 📽️ 2023-08-08 - [Automatic 1111 - Stable Diffusion - 013 - Dynamic Prompts & Wild Cards](https://www.youtube.com/watch?v=qf_TebQ-MpY)
 
 ### Russian
 * 📽️ 2023-05-05 - [Wildcards, dynamic prompts, autocompletion - лучшие генераторы подсказок.](https://www.youtube.com/watch?v=dh85QjoMW20)
