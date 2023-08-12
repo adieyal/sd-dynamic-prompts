@@ -70,22 +70,27 @@ def get_wildcard_hierarchy_for_json():
 
 
 def on_ui_tabs():
-    header_html = f"""
-    <p>Manage wildcards for Dynamic Prompts</p>
+    help_html = f"""
     <ol>
-        <li>Create your wildcard library by copying a collection using the dropdown below.</li>
+        <li>Create your wildcard library by copying a collection using the dropdown in the Collection actions.</li>
         <li>Click on the files that appear in the tree to edit them.</li>
-        <li>Use the wildcard in your script by typing the name of the file or copying the text from the Wildcards file text box</li>
-        <li>Optional - add your own wildcards files to the {wildcard_manager.path} folder</li>
+        <li>Use the wildcard in your script by typing the name of the file or copying the text from the Wildcards file text box.</li>
+        <li>You can also add your own wildcard files to the {wildcard_manager.path} folder.</li>
     </ol>
     """
 
     with gr.Blocks() as wildcards_tab:
-        with gr.Group():
-            with gr.Row():
-                with gr.Column():
-                    gr.HTML(header_html)
-                    gr.HTML("", elem_id=make_element_id("wildcard-tree"))
+        with gr.Row():
+            with gr.Column():
+                gr.Textbox(
+                    placeholder="Search in wildcard names...",
+                    elem_id=make_element_id("wildcard-search"),
+                    label="",
+                )
+                gr.HTML("Loading...", elem_id=make_element_id("wildcard-tree"))
+                with gr.Accordion("Help", open=False):
+                    gr.HTML(help_html)
+                with gr.Accordion("Collection actions", open=False):
                     collection_dropdown = gr.Dropdown(
                         choices=sorted(get_collection_dirs()),
                         type="value",
@@ -109,25 +114,25 @@ def on_ui_tabs():
                             "Delete all wildcards",
                             elem_id=make_element_id("wildcard-delete-tree-button"),
                         )
-                with gr.Column():
-                    gr.Textbox(
-                        "",
-                        elem_id=make_element_id("wildcard-file-name"),
-                        interactive=False,
-                        label="Wildcards file",
-                    )
-                    gr.Textbox(
-                        "",
-                        elem_id=make_element_id("wildcard-file-editor"),
-                        lines=10,
-                        interactive=True,
-                        label="File editor",
-                    )
-                    save_button = gr.Button(
-                        "Save wildcards",
-                        full_width=True,
-                        elem_id=make_element_id("wildcard-save-button"),
-                    )
+            with gr.Column():
+                gr.Textbox(
+                    "",
+                    elem_id=make_element_id("wildcard-file-name"),
+                    interactive=False,
+                    label="Wildcards file",
+                )
+                gr.Textbox(
+                    "",
+                    elem_id=make_element_id("wildcard-file-editor"),
+                    lines=10,
+                    interactive=True,
+                    label="File editor",
+                )
+                save_button = gr.Button(
+                    "Save wildcards",
+                    full_width=True,
+                    elem_id=make_element_id("wildcard-save-button"),
+                )
 
         # Hidden scratch textboxes and button for communication with JS bits.
         client_to_server_message_textbox = gr.Textbox(
