@@ -1,3 +1,4 @@
+- 2.16.1 Only using cross product when num_prompts is not provided
 - 2.16.0 Added cross product of positive and negative prompts
 - 2.15.0 Added Wildcard Manager Search
 - 2.14.0 Added configuration option to shuffle wildcards for increased randomness in combinatorial mode.
