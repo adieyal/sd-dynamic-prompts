@@ -1,3 +1,4 @@
+- 2.16.0 Added cross product of positive and negative prompts
 - 2.15.0 Added Wildcard Manager Search
 - 2.14.0 Added configuration option to shuffle wildcards for increased randomness in combinatorial mode.
 - 2.13.0 Added configuration options to prevent the wildcard manager from sorting and deduplicating wildcard files
