@@ -96,8 +96,11 @@ In case of a syntax clash with another extension, Dynamic Prompts allows you to 
 <img src="images/config_brackets.png">
 
 By default, wildcards start with `__`(double underscore) and end with `__`. You can change this in the settings tab under wildcard wrap.
+<br/><br/>
 
 ### Wildcard settings
+<img src="images/config_autopurge.png">
+
 Dynamic Prompts automatically de-duplicates and sorts wildcard files before using them. If you would prefer to disable this functionality, you can uncheck the checkboxes in the settings tab.
 
 <img src="images/wildcard_settings.png">
