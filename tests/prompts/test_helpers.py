@@ -4,7 +4,12 @@ from unittest import mock
 
 import pytest
 
-from sd_dynamic_prompts.helpers import get_seeds, load_magicprompt_models
+from sd_dynamic_prompts.helpers import (
+    generate_prompt_cross_product,
+    generate_prompts,
+    get_seeds,
+    load_magicprompt_models,
+)
 
 
 @pytest.fixture
@@ -104,3 +109,85 @@ model 2
         load_magicprompt_models(tmp_filename)
     finally:
         os.unlink(tmp_filename)
+
+
+def test_cross_product():
+    prompts = []
+    negative_prompts = []
+    expected_output = [], []
+    assert generate_prompt_cross_product(prompts, negative_prompts) == expected_output
+
+    prompts = ["A", "B", "C"]
+    negative_prompts = ["X", "Y"]
+    expected_output = (["A", "A", "B", "B", "C", "C"], ["X", "Y", "X", "Y", "X", "Y"])
+    assert generate_prompt_cross_product(prompts, negative_prompts) == expected_output
+
+
+@pytest.mark.parametrize("num_prompts", [5, None])
+def test_generate_with_num_prompts(num_prompts: int | None):
+    prompt_generator = mock.Mock()
+    negative_prompt_generator = mock.Mock()
+    prompt_generator.generate.return_value = [
+        "Positive Prompt 1",
+        "Positive Prompt 2",
+        "Positive Prompt 3",
+        "Positive Prompt 4",
+        "Positive Prompt 5",
+    ]
+    negative_prompt_generator.generate.return_value = [
+        "Negative Prompt 1",
+        "Negative Prompt 2",
+    ]
+    prompt = "This is a positive prompt."
+    negative_prompt = "This is a negative prompt."
+    seeds = [1, 2, 3, 4, 5]
+
+    positive_prompts, negative_prompts = generate_prompts(
+        prompt_generator,
+        negative_prompt_generator,
+        prompt,
+        negative_prompt,
+        num_prompts,
+        seeds,
+    )
+
+    if num_prompts:
+        assert positive_prompts == [
+            "Positive Prompt 1",
+            "Positive Prompt 2",
+            "Positive Prompt 3",
+            "Positive Prompt 4",
+            "Positive Prompt 5",
+        ]
+        assert negative_prompts == [
+            "Negative Prompt 1",
+            "Negative Prompt 2",
+            "Negative Prompt 1",
+            "Negative Prompt 2",
+            "Negative Prompt 1",
+        ]
+    else:
+        assert positive_prompts == [
+            "Positive Prompt 1",
+            "Positive Prompt 1",
+            "Positive Prompt 2",
+            "Positive Prompt 2",
+            "Positive Prompt 3",
+            "Positive Prompt 3",
+            "Positive Prompt 4",
+            "Positive Prompt 4",
+            "Positive Prompt 5",
+            "Positive Prompt 5",
+        ]
+        assert negative_prompts == [
+            "Negative Prompt 1",
+            "Negative Prompt 2",
+            "Negative Prompt 1",
+            "Negative Prompt 2",
+            "Negative Prompt 1",
+            "Negative Prompt 2",
+            "Negative Prompt 1",
+            "Negative Prompt 2",
+            "Negative Prompt 1",
+            "Negative Prompt 2",
+        ]
