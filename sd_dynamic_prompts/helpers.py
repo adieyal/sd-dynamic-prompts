@@ -101,4 +101,31 @@ def generate_prompts(
         seeds=negative_seeds,
     ) or [""]
 
-    return list(zip(*product(all_prompts, all_negative_prompts), strict=True))
+    if num_prompts is None:
+        return generate_prompt_cross_product(all_prompts, all_negative_prompts)
+    else:
+        return all_prompts, (all_negative_prompts * num_prompts)[0:num_prompts]
+
+
+def generate_prompt_cross_product(
+    prompts: list[str],
+    negative_prompts: list[str],
+) -> tuple(list[str], list[str]):
+    """
+    Create a cross product of all the items in `prompts` and `negative_prompts`.
+    Return the positive prompts and negative prompts in two separate lists
+
+    Parameters:
+    - prompts: List of prompts
+    - negative_prompts: List of negative prompts
+
+    Returns:
+    - Tuple containing list of positive and negative prompts
+    """
+    if len(prompts) == 0 or len(negative_prompts) == 0:
+        return [], []
+
+    positive_prompts, negative_prompts = list(
+        zip(*product(prompts, negative_prompts), strict=True),
+    )
+    return list(positive_prompts), list(negative_prompts)
