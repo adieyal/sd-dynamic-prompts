@@ -268,6 +268,16 @@ If you are using these templates, please let me know if they are useful.
 
 ## Cookbook
 
+### Conditional Rendering
+Render different prompts determined by a variable
+
+```jinja2
+{% with season = choice("winter", "summer") %}
+    {% set dress_color = "blue" if season == "winter" else "red" %}
+    A fashion model wearing a {{ dress_color }} dress
+{% endwith %}
+```
+
 ### [Prompt Editing](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#prompt-editing)
 
 ```jinja2
