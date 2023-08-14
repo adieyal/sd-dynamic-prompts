@@ -1,5 +1,5 @@
 # Jinja2 templates
-Jinja2 templates is an experimental feature that enables you to write prompts with an expressive templating language. This is an advanced feature and is only recommended for users who are comfortable writing scripts.
+The Jinja2 feature enable you to write prompts using an expressive templating language. This is an advanced feature and is only recommended for users who are comfortable writing scripts.
 
 To enable the feature, open the advanced accordion and select __Enable Jinja2 templates__.
 <img src="images/jinja_templates.png">
