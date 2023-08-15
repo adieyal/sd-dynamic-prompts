@@ -1,5 +1,3 @@
-import os
-import tempfile
 from unittest import mock
 
 import pytest
@@ -90,7 +88,7 @@ def test_get_seeds_with_random_seed(processing):
     assert subseeds == list(range(subseed, subseed + num_seeds))
 
 
-def test_load_magicprompt_models():
+def test_load_magicprompt_models(tmp_path):
     s = """# a comment
 model1 # another comment
 # empty lines below
@@ -100,15 +98,9 @@ model 2
 
 
     """
-
-    with tempfile.NamedTemporaryFile(mode="w", delete=False) as tmp_file:
-        tmp_file.write(s)
-        tmp_filename = tmp_file.name
-
-    try:
-        load_magicprompt_models(tmp_filename)
-    finally:
-        os.unlink(tmp_filename)
+    p = tmp_path / "magicprompt_models.txt"
+    p.write_text(s)
+    assert load_magicprompt_models(p) == ["model1", "model 2"]
 
 
 def test_cross_product():

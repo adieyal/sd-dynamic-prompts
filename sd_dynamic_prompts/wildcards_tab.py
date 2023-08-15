@@ -8,7 +8,6 @@ import traceback
 from pathlib import Path
 
 import gradio as gr
-import modules.scripts as scripts
 from dynamicprompts.wildcards import WildcardManager
 from dynamicprompts.wildcards.collection import WildcardTextFile
 from dynamicprompts.wildcards.tree import WildcardTreeNode
@@ -26,13 +25,15 @@ logger = logging.getLogger(__name__)
 
 wildcard_manager: WildcardManager
 
-collections_path = Path(scripts.basedir()) / "collections"
-
 
 def get_collection_dirs() -> dict[str, Path]:
     """
     Get a mapping of name -> subdirectory path for the extension's collections/ directory.
     """
+    from sd_dynamic_prompts.paths import get_extension_base_path
+
+    collections_path = get_extension_base_path() / "collections"
+
     return {
         str(pth.relative_to(collections_path)): pth
         for pth in collections_path.iterdir()

@@ -6,6 +6,8 @@ from pathlib import Path
 
 from dynamicprompts.generators.promptgenerator import PromptGenerator
 
+from sd_dynamic_prompts.paths import get_magicprompt_models_txt_path
+
 logger = logging.getLogger(__name__)
 
 
@@ -48,25 +50,22 @@ def should_freeze_prompt(p):
     return p.subseed_strength > 0
 
 
-def load_magicprompt_models(modelfile: str) -> list[str]:
+def load_magicprompt_models(models_file: Path | None = None) -> list[str]:
+    if not models_file:
+        models_file = get_magicprompt_models_txt_path()
     try:
-        models = []
-        with open(modelfile) as f:
-            for line in f:
-                # ignore comments and empty lines
-                line = line.split("#")[0].strip()
-                if line:
-                    models.append(line)
-        return models
+        # ignore empty lines
+        return [
+            model
+            for model in (
+                line.partition("#")[0].strip()
+                for line in models_file.read_text().splitlines()
+            )
+            if model
+        ]
     except FileNotFoundError:
-        logger.warning(f"Could not find magicprompts config file at {modelfile}")
+        logger.warning(f"Could not find magicprompts config file at {models_file}")
         return []
-
-
-def get_magicmodels_path(base_dir: str) -> str:
-    magicprompt_models_path = Path(base_dir / "config" / "magicprompt_models.txt")
-
-    return magicprompt_models_path
 
 
 def generate_prompts(

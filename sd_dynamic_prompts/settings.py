@@ -1,11 +1,7 @@
-from pathlib import Path
-
 import gradio as gr
-from modules import scripts, shared
+from modules import shared
 
-from sd_dynamic_prompts.helpers import get_magicmodels_path, load_magicprompt_models
-
-base_dir = Path(scripts.basedir())
+from sd_dynamic_prompts.helpers import load_magicprompt_models
 
 
 def on_ui_settings():
@@ -103,7 +99,7 @@ def on_ui_settings():
         ),
     )
 
-    magic_models = load_magicprompt_models(get_magicmodels_path(base_dir))
+    magic_models = load_magicprompt_models()
     shared.opts.add_option(
         key="dp_magicprompt_default_model",
         info=shared.OptionInfo(

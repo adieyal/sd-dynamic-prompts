@@ -3,7 +3,6 @@ from __future__ import annotations
 import logging
 import math
 from functools import lru_cache
-from pathlib import Path
 from string import Template
 
 import dynamicprompts
@@ -22,10 +21,14 @@ from sd_dynamic_prompts.element_ids import make_element_id
 from sd_dynamic_prompts.generator_builder import GeneratorBuilder
 from sd_dynamic_prompts.helpers import (
     generate_prompts,
-    get_magicmodels_path,
     get_seeds,
     load_magicprompt_models,
     should_freeze_prompt,
+)
+from sd_dynamic_prompts.paths import (
+    get_extension_base_path,
+    get_magicprompt_models_txt_path,
+    get_wildcard_dir,
 )
 from sd_dynamic_prompts.pnginfo_saver import PngInfoSaver
 from sd_dynamic_prompts.prompt_writer import PromptWriter
@@ -39,21 +42,6 @@ is_debug = getattr(opts, "is_debug", False)
 
 if is_debug:
     logger.setLevel(logging.DEBUG)
-
-base_dir = Path(scripts.basedir())
-magicprompt_models_path = get_magicmodels_path(base_dir)
-
-
-def get_wildcard_dir() -> Path:
-    wildcard_dir = getattr(opts, "wildcard_dir", None)
-    if wildcard_dir is None:
-        wildcard_dir = base_dir / "wildcards"
-    wildcard_dir = Path(wildcard_dir)
-    try:
-        wildcard_dir.mkdir(parents=True, exist_ok=True)
-    except Exception:
-        logger.exception(f"Failed to create wildcard directory {wildcard_dir}")
-    return wildcard_dir
 
 
 def _get_effective_prompt(prompts: list[str], prompt: str) -> str:
@@ -113,6 +101,7 @@ class Script(scripts.Script):
         return scripts.AlwaysVisible
 
     def ui(self, is_img2img):
+        base_dir = get_extension_base_path()
         install_message = _get_install_error_message()
         correct_lib_version = bool(not install_message)
 
@@ -172,9 +161,7 @@ class Script(scripts.Script):
                 with gr.Accordion("Prompt Magic", open=False):
                     with gr.Group():
                         try:
-                            magicprompt_models = load_magicprompt_models(
-                                magicprompt_models_path,
-                            )
+                            magicprompt_models = load_magicprompt_models()
                             default_magicprompt_model = (
                                 opts.dp_magicprompt_default_model
                                 if hasattr(opts, "dp_magicprompt_default_model")
@@ -183,7 +170,8 @@ class Script(scripts.Script):
                             is_magic_model_available = True
                         except IndexError:
                             logger.warning(
-                                f"The magicprompts config file at {magicprompt_models_path} does not contain any models.",
+                                f"The magic prompts config file {get_magicprompt_models_txt_path()} "
+                                f"does not contain any models.",
                             )
 
                             magicprompt_models = []
