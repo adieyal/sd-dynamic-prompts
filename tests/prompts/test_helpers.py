@@ -142,6 +142,8 @@ def test_generate_with_num_prompts(num_prompts: int | None):
         num_prompts,
         seeds,
     )
+    assert isinstance(positive_prompts, list)
+    assert isinstance(negative_prompts, list)
 
     if num_prompts:
         assert positive_prompts == [
