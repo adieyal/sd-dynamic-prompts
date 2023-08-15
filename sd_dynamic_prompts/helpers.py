@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import logging
-from itertools import product
+from itertools import cycle, islice, product
 from pathlib import Path
 
 from dynamicprompts.generators.promptgenerator import PromptGenerator
@@ -102,14 +102,14 @@ def generate_prompts(
 
     if num_prompts is None:
         return generate_prompt_cross_product(all_prompts, all_negative_prompts)
-    else:
-        return all_prompts, (all_negative_prompts * num_prompts)[0:num_prompts]
+
+    return all_prompts, repeat_iterable_to_length(all_negative_prompts, num_prompts)
 
 
 def generate_prompt_cross_product(
     prompts: list[str],
     negative_prompts: list[str],
-) -> tuple(list[str], list[str]):
+) -> tuple[list[str], list[str]]:
     """
     Create a cross product of all the items in `prompts` and `negative_prompts`.
     Return the positive prompts and negative prompts in two separate lists
@@ -121,10 +121,29 @@ def generate_prompt_cross_product(
     Returns:
     - Tuple containing list of positive and negative prompts
     """
-    if len(prompts) == 0 or len(negative_prompts) == 0:
+    if not (prompts and negative_prompts):
         return [], []
 
-    positive_prompts, negative_prompts = list(
-        zip(*product(prompts, negative_prompts), strict=True),
+    new_positive_prompts, new_negative_prompts = zip(
+        *product(prompts, negative_prompts),
+        strict=True,
     )
-    return list(positive_prompts), list(negative_prompts)
+    return list(new_positive_prompts), list(new_negative_prompts)
+
+
+def repeat_iterable_to_length(iterable, length: int) -> list:
+    """Repeat an iterable to a given length.
+
+    If the iterable is shorter than the desired length, it will be repeated
+    until it is long enough. If it is longer than the desired length, it will
+    be truncated.
+
+    Args:
+        iterable (Iterable): The iterable to repeat.
+        length (int): The desired length of the iterable.
+
+    Returns:
+        list: The repeated iterable.
+
+    """
+    return list(islice(cycle(iterable), length))

@@ -23,6 +23,7 @@ from sd_dynamic_prompts.helpers import (
     generate_prompts,
     get_seeds,
     load_magicprompt_models,
+    repeat_iterable_to_length,
     should_freeze_prompt,
 )
 from sd_dynamic_prompts.paths import (
@@ -67,6 +68,16 @@ def _get_install_error_message() -> str | None:
     except Exception:
         logger.exception("Failed to get dynamicprompts install result")
     return None
+
+
+def _get_hr_fix_prompts(
+    prompts: list[str],
+    original_hr_prompt: str,
+    original_prompt: str,
+) -> list[str]:
+    if original_prompt == original_hr_prompt:
+        return list(prompts)
+    return repeat_iterable_to_length([original_hr_prompt], len(prompts))
 
 
 class Script(scripts.Script):
@@ -517,13 +528,13 @@ class Script(scripts.Script):
         p.prompt = original_prompt
 
         if hr_fix_enabled:
-            p.all_hr_prompts = (
-                all_prompts
-                if original_prompt == original_hr_prompt
-                else len(all_prompts) * [original_hr_prompt]
+            p.all_hr_prompts = _get_hr_fix_prompts(
+                all_prompts,
+                original_hr_prompt,
+                original_prompt,
             )
-            p.all_hr_negative_prompts = (
-                all_negative_prompts
-                if original_negative_prompt == original_negative_hr_prompt
-                else len(all_negative_prompts) * [original_negative_hr_prompt]
+            p.all_hr_negative_prompts = _get_hr_fix_prompts(
+                all_negative_prompts,
+                original_negative_hr_prompt,
+                original_negative_prompt,
             )
