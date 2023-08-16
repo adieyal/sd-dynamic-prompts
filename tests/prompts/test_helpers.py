@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from unittest import mock
 
 import pytest
@@ -8,18 +10,6 @@ from sd_dynamic_prompts.helpers import (
     get_seeds,
     load_magicprompt_models,
 )
-
-
-@pytest.fixture
-def processing():
-    m = mock.Mock()
-    m.seed = 1000
-    m.subseed = 2000
-    m.all_seeds = list(range(3000, 3000 + 10))
-    m.all_subseeds = list(range(4000, 4000 + 10))
-    m.subseed_strength = 0
-
-    return m
 
 
 def test_get_seeds_with_fixed_seed(processing):
