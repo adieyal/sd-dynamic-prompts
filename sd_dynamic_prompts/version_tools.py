@@ -32,7 +32,9 @@ try:
     from packaging.requirements import Requirement
 except ImportError:
     # pip has had this since 2018
-    from pip._vendor.packaging.requirements import Requirement
+    from pip._vendor.packaging.requirements import (  # type: ignore[assignment]
+        Requirement,
+    )
 
 logger = logging.getLogger(__name__)
 
@@ -40,7 +42,7 @@ logger = logging.getLogger(__name__)
 @dataclasses.dataclass
 class InstallResult:
     requirement: Requirement
-    installed: str
+    installed: str | None
 
     @property
     def message(self) -> str | None:
@@ -59,7 +61,9 @@ class InstallResult:
 
     @property
     def correct(self) -> bool:
-        return self.installed and self.requirement.specifier.contains(self.installed)
+        return bool(
+            self.installed and self.requirement.specifier.contains(self.installed),
+        )
 
     @property
     def pip_install_command(self) -> str:
@@ -72,9 +76,10 @@ class InstallResult:
 
 
 @lru_cache(maxsize=1)
-def get_requirements() -> tuple[str]:
+def get_requirements() -> tuple[str, ...]:
     toml_text = (Path(__file__).parent.parent / "pyproject.toml").read_text()
-    return tuple(tomli.loads(toml_text)["project"]["dependencies"])
+    deps = tomli.loads(toml_text)["project"]["dependencies"]
+    return tuple(str(dep) for dep in deps)
 
 
 def get_install_result(req_str: str) -> InstallResult:
