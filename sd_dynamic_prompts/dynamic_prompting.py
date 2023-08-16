@@ -12,7 +12,6 @@ import torch
 from dynamicprompts.generators.promptgenerator import GeneratorException
 from dynamicprompts.parser.parse import ParserConfig
 from dynamicprompts.wildcards import WildcardManager
-from modules import devices
 from modules.processing import fix_seed
 from modules.shared import opts
 
@@ -49,11 +48,6 @@ def _get_effective_prompt(prompts: list[str], prompt: str) -> str:
     return prompts[0] if prompts else prompt
 
 
-device = devices.device
-# There might be a bug in auto1111 where the correct device is not inferred in some scenarios
-if device.type == "cuda" and not device.index:
-    device = torch.device("cuda:0")
-
 loaded_count = 0
 
 
@@ -78,6 +72,16 @@ def _get_hr_fix_prompts(
     if original_prompt == original_hr_prompt:
         return list(prompts)
     return repeat_iterable_to_length([original_hr_prompt], len(prompts))
+
+
+def get_magic_prompt_device() -> torch.device:
+    from modules import devices
+
+    device = devices.device
+    # There might be a bug in auto1111 where the correct device is not inferred in some scenarios
+    if device.type == "cuda" and not device.index:
+        device = torch.device("cuda:0")
+    return device
 
 
 class Script(scripts.Script):
@@ -450,7 +454,7 @@ class Script(scripts.Script):
                     magic_temp_value=magic_temp_value,
                     magic_blocklist_regex=magic_blocklist_regex,
                     batch_size=magicprompt_batch_size,
-                    device=device,
+                    device=get_magic_prompt_device(),
                 )
                 .set_is_dummy(False)
                 .set_unlink_seed_from_prompt(unlink_seed_from_prompt)
