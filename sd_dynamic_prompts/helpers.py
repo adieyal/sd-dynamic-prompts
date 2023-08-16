@@ -17,7 +17,7 @@ def get_seeds(
     use_fixed_seed,
     is_combinatorial=False,
     combinatorial_batches=1,
-):
+) -> tuple[list[int], list[int]]:
     if p.subseed_strength != 0:
         seed = int(p.all_seeds[0])
         subseed = int(p.all_subseeds[0])
@@ -74,7 +74,7 @@ def generate_prompts(
     prompt: str,
     negative_prompt: str | None,
     num_prompts: int,
-    seeds: list[int],
+    seeds: list[int] | None,
 ) -> tuple[list[str], list[str]]:
     """
     Generate positive and negative prompts.

@@ -479,12 +479,12 @@ class Script(scripts.Script):
                 all_seeds = p.all_seeds
 
             all_prompts, all_negative_prompts = generate_prompts(
-                generator,
-                negative_generator,
-                original_prompt,
-                original_negative_prompt,
-                num_images,
-                all_seeds,
+                prompt_generator=generator,
+                negative_prompt_generator=negative_generator,
+                prompt=original_prompt,
+                negative_prompt=original_negative_prompt,
+                num_prompts=num_images,
+                seeds=all_seeds,
             )
 
         except GeneratorException as e:
