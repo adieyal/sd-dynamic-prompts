@@ -1,3 +1,4 @@
+- 2.16.2 Refactor paths and magic prompt models file read
 - 2.16.1 Only using cross product when num_prompts is not provided
 - 2.16.0 Added cross product of positive and negative prompts
 - 2.15.0 Added Wildcard Manager Search
