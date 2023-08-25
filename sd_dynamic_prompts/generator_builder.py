@@ -198,20 +198,17 @@ class GeneratorBuilder:
                 parser_config=self._parser_config,
                 ignore_whitespace=self._ignore_whitespace,
             )
-            prompt_generator = BatchedCombinatorialPromptGenerator(
+            return BatchedCombinatorialPromptGenerator(
                 prompt_generator,
                 batches=self._combinatorial_batches,
             )
-        else:
-            prompt_generator = RandomPromptGenerator(
-                self._wildcard_manager,
-                seed=self._seed,
-                parser_config=self._parser_config,
-                unlink_seed_from_prompt=self._unlink_seed_from_prompt,
-                ignore_whitespace=self._ignore_whitespace,
-            )
-
-        return prompt_generator
+        return RandomPromptGenerator(
+            self._wildcard_manager,
+            seed=self._seed,
+            parser_config=self._parser_config,
+            unlink_seed_from_prompt=self._unlink_seed_from_prompt,
+            ignore_whitespace=self._ignore_whitespace,
+        )
 
     def create_jinja_generator(self, p) -> PromptGenerator:
         original_prompt = p.all_prompts[0] if len(p.all_prompts) > 0 else p.prompt

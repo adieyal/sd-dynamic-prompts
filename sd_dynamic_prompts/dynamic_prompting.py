@@ -12,7 +12,6 @@ import torch
 from dynamicprompts.generators.promptgenerator import GeneratorException
 from dynamicprompts.parser.parse import ParserConfig
 from dynamicprompts.wildcards import WildcardManager
-from modules import devices
 from modules.processing import fix_seed
 from modules.shared import opts
 
@@ -23,6 +22,7 @@ from sd_dynamic_prompts.helpers import (
     generate_prompts,
     get_seeds,
     load_magicprompt_models,
+    repeat_iterable_to_length,
     should_freeze_prompt,
 )
 from sd_dynamic_prompts.paths import (
@@ -48,11 +48,6 @@ def _get_effective_prompt(prompts: list[str], prompt: str) -> str:
     return prompts[0] if prompts else prompt
 
 
-device = devices.device
-# There might be a bug in auto1111 where the correct device is not inferred in some scenarios
-if device.type == "cuda" and not device.index:
-    device = torch.device("cuda:0")
-
 loaded_count = 0
 
 
@@ -67,6 +62,26 @@ def _get_install_error_message() -> str | None:
     except Exception:
         logger.exception("Failed to get dynamicprompts install result")
     return None
+
+
+def _get_hr_fix_prompts(
+    prompts: list[str],
+    original_hr_prompt: str,
+    original_prompt: str,
+) -> list[str]:
+    if original_prompt == original_hr_prompt:
+        return list(prompts)
+    return repeat_iterable_to_length([original_hr_prompt], len(prompts))
+
+
+def get_magic_prompt_device() -> torch.device:
+    from modules import devices
+
+    device = devices.device
+    # There might be a bug in auto1111 where the correct device is not inferred in some scenarios
+    if device.type == "cuda" and not device.index:
+        device = torch.device("cuda:0")
+    return device
 
 
 class Script(scripts.Script):
@@ -334,23 +349,23 @@ class Script(scripts.Script):
     def process(
         self,
         p,
-        is_enabled,
-        is_combinatorial,
-        combinatorial_batches,
-        is_magic_prompt,
-        is_feeling_lucky,
-        is_attention_grabber,
-        min_attention,
-        max_attention,
-        magic_prompt_length,
-        magic_temp_value,
-        use_fixed_seed,
-        unlink_seed_from_prompt,
-        disable_negative_prompt,
-        enable_jinja_templates,
-        no_image_generation,
-        max_generations,
-        magic_model,
+        is_enabled: bool,
+        is_combinatorial: bool,
+        combinatorial_batches: int,
+        is_magic_prompt: bool,
+        is_feeling_lucky: bool,
+        is_attention_grabber: bool,
+        min_attention: float,
+        max_attention: float,
+        magic_prompt_length: int,
+        magic_temp_value: float,
+        use_fixed_seed: bool,
+        unlink_seed_from_prompt: bool,
+        disable_negative_prompt: bool,
+        enable_jinja_templates: bool,
+        no_image_generation: bool,
+        max_generations: int,
+        magic_model: str | None,
         magic_blocklist_regex: str | None,
     ):
         if not is_enabled:
@@ -439,7 +454,7 @@ class Script(scripts.Script):
                     magic_temp_value=magic_temp_value,
                     magic_blocklist_regex=magic_blocklist_regex,
                     batch_size=magicprompt_batch_size,
-                    device=device,
+                    device=get_magic_prompt_device(),
                 )
                 .set_is_dummy(False)
                 .set_unlink_seed_from_prompt(unlink_seed_from_prompt)
@@ -468,12 +483,12 @@ class Script(scripts.Script):
                 all_seeds = p.all_seeds
 
             all_prompts, all_negative_prompts = generate_prompts(
-                generator,
-                negative_generator,
-                original_prompt,
-                original_negative_prompt,
-                num_images,
-                all_seeds,
+                prompt_generator=generator,
+                negative_prompt_generator=negative_generator,
+                prompt=original_prompt,
+                negative_prompt=original_negative_prompt,
+                num_prompts=num_images,
+                seeds=all_seeds,
             )
 
         except GeneratorException as e:
@@ -517,13 +532,13 @@ class Script(scripts.Script):
         p.prompt = original_prompt
 
         if hr_fix_enabled:
-            p.all_hr_prompts = (
-                all_prompts
-                if original_prompt == original_hr_prompt
-                else len(all_prompts) * [original_hr_prompt]
+            p.all_hr_prompts = _get_hr_fix_prompts(
+                all_prompts,
+                original_hr_prompt,
+                original_prompt,
             )
-            p.all_hr_negative_prompts = (
-                all_negative_prompts
-                if original_negative_prompt == original_negative_hr_prompt
-                else len(all_negative_prompts) * [original_negative_hr_prompt]
+            p.all_hr_negative_prompts = _get_hr_fix_prompts(
+                all_negative_prompts,
+                original_negative_hr_prompt,
+                original_negative_prompt,
             )
