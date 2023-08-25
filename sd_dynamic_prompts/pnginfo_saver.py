@@ -42,7 +42,7 @@ class PngInfoSaver:
 
         return parameters
 
-    def strip_template_info(self, parameters: dict[str, Any]) -> str:
+    def strip_template_info(self, parameters: dict[str, Any]) -> dict[str, Any]:
         if "Prompt" in parameters and f"{TEMPLATE_LABEL}:" in parameters["Prompt"]:
             parameters["Prompt"] = (
                 parameters["Prompt"].split(f"{TEMPLATE_LABEL}:")[0].strip()
