@@ -28,6 +28,7 @@ select = [
 ignore = [
     "C901", # Complexity
     "E501", # Line length
+    "B905", # zip(..., strict=True)
 ]
 unfixable = [
     "B007", # Loop control variable not used within the loop body

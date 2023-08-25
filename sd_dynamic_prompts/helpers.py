@@ -124,9 +124,9 @@ def generate_prompt_cross_product(
     if not (prompts and negative_prompts):
         return [], []
 
+    # noqa to remain compatible with python 3.9, see issue #601
     new_positive_prompts, new_negative_prompts = zip(
-        *product(prompts, negative_prompts),
-        strict=True,
+        *product(prompts, negative_prompts),  # noqa: B905
     )
     return list(new_positive_prompts), list(new_negative_prompts)
 
