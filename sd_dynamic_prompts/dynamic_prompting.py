@@ -374,14 +374,6 @@ class Script(scripts.Script):
             logger.debug("Dynamic prompts disabled - exiting")
             return p
 
-        self._pnginfo_saver.enabled = opts.dp_write_raw_template
-        self._prompt_writer.enabled = opts.dp_write_prompts_to_file
-        self._limit_jinja_prompts = opts.dp_limit_jinja_prompts
-        self._auto_purge_cache = opts.dp_auto_purge_cache
-        self._wildcard_manager.dedup_wildcards = not opts.dp_wildcard_manager_no_dedupe
-        self._wildcard_manager.sort_wildcards = not opts.dp_wildcard_manager_no_sort
-        self._wildcard_manager.shuffle_wildcards = opts.dp_wildcard_manager_shuffle
-
         fix_seed(p)
 
         # Save original prompts before we touch `p.prompt`/`p.hr_prompt` etc.
@@ -509,6 +501,14 @@ class Script(scripts.Script):
             magic_model: str | None = "Gustavosta/MagicPrompt-Stable-Diffusion",
             magic_blocklist_regex: str | None = "",
     ):
+        self._pnginfo_saver.enabled = opts.dp_write_raw_template
+        self._prompt_writer.enabled = opts.dp_write_prompts_to_file
+        self._limit_jinja_prompts = opts.dp_limit_jinja_prompts
+        self._auto_purge_cache = opts.dp_auto_purge_cache
+        self._wildcard_manager.dedup_wildcards = not opts.dp_wildcard_manager_no_dedupe
+        self._wildcard_manager.sort_wildcards = not opts.dp_wildcard_manager_no_sort
+        self._wildcard_manager.shuffle_wildcards = opts.dp_wildcard_manager_shuffle
+
         ignore_whitespace = opts.dp_ignore_whitespace
         magicprompt_batch_size = opts.dp_magicprompt_batch_size
         parser_config = ParserConfig(
