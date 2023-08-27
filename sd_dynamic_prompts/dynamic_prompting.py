@@ -8,6 +8,7 @@ from string import Template
 import dynamicprompts
 import gradio as gr
 import torch
+from fastapi import FastAPI, Body
 from dynamicprompts.generators.promptgenerator import GeneratorException
 from dynamicprompts.parser.parse import ParserConfig
 from dynamicprompts.wildcards import WildcardManager
@@ -30,7 +31,8 @@ from sd_dynamic_prompts.pnginfo_saver import PngInfoSaver
 from sd_dynamic_prompts.prompt_writer import PromptWriter
 
 import modules.scripts as scripts
-from modules.processing import fix_seed
+from modules.script_callbacks import on_app_started
+from modules.processing import fix_seed, StableDiffusionProcessing
 from modules.shared import opts
 
 VERSION = __version__
@@ -99,14 +101,6 @@ class Script(scripts.Script):
         self._pnginfo_saver = PngInfoSaver()
         self._prompt_writer = PromptWriter()
         self._wildcard_manager = WildcardManager(get_wildcard_dir())
-
-        self._pnginfo_saver.enabled = opts.dp_write_raw_template
-        self._prompt_writer.enabled = opts.dp_write_prompts_to_file
-        self._limit_jinja_prompts = opts.dp_limit_jinja_prompts
-        self._auto_purge_cache = opts.dp_auto_purge_cache
-        self._wildcard_manager.dedup_wildcards = not opts.dp_wildcard_manager_no_dedupe
-        self._wildcard_manager.sort_wildcards = not opts.dp_wildcard_manager_no_sort
-        self._wildcard_manager.shuffle_wildcards = opts.dp_wildcard_manager_shuffle
 
         if loaded_count % 2 == 0:
             return
@@ -355,30 +349,38 @@ class Script(scripts.Script):
         ]
 
     def process(
-            self,
-            p,
-            is_enabled: bool,
-            is_combinatorial: bool,
-            combinatorial_batches: int,
-            is_magic_prompt: bool,
-            is_feeling_lucky: bool,
-            is_attention_grabber: bool,
-            min_attention: float,
-            max_attention: float,
-            magic_prompt_length: int,
-            magic_temp_value: float,
-            use_fixed_seed: bool,
-            unlink_seed_from_prompt: bool,
-            disable_negative_prompt: bool,
-            enable_jinja_templates: bool,
-            no_image_generation: bool,
-            max_generations: int,
-            magic_model: str | None,
-            magic_blocklist_regex: str | None,
+        self,
+        p,
+        is_enabled: bool,
+        is_combinatorial: bool,
+        combinatorial_batches: int,
+        is_magic_prompt: bool,
+        is_feeling_lucky: bool,
+        is_attention_grabber: bool,
+        min_attention: float,
+        max_attention: float,
+        magic_prompt_length: int,
+        magic_temp_value: float,
+        use_fixed_seed: bool,
+        unlink_seed_from_prompt: bool,
+        disable_negative_prompt: bool,
+        enable_jinja_templates: bool,
+        no_image_generation: bool,
+        max_generations: int,
+        magic_model: str | None,
+        magic_blocklist_regex: str | None,
     ):
         if not is_enabled:
             logger.debug("Dynamic prompts disabled - exiting")
             return p
+
+        self._pnginfo_saver.enabled = opts.dp_write_raw_template
+        self._prompt_writer.enabled = opts.dp_write_prompts_to_file
+        self._limit_jinja_prompts = opts.dp_limit_jinja_prompts
+        self._auto_purge_cache = opts.dp_auto_purge_cache
+        self._wildcard_manager.dedup_wildcards = not opts.dp_wildcard_manager_no_dedupe
+        self._wildcard_manager.sort_wildcards = not opts.dp_wildcard_manager_no_sort
+        self._wildcard_manager.shuffle_wildcards = opts.dp_wildcard_manager_shuffle
 
         fix_seed(p)
 
@@ -484,6 +486,7 @@ class Script(scripts.Script):
 
     def generate_prompts(
             self,
+            *,
             p,
             original_prompt: str,
             original_negative_prompt: str,
@@ -590,3 +593,35 @@ class Script(scripts.Script):
             all_negative_prompts = [str(e)]
 
         return all_prompts, all_negative_prompts
+
+
+def api(_: gr.Blocks, app: FastAPI):
+    @app.post("/dynamicprompts/evaluate")
+    async def evaluate(
+            prompt: str = Body("", title="Prompt"),
+            negative_prompt: str = Body("", title="Negative Prompt"),
+            is_combinatorial: bool = Body(False, title="Is combinatorial"),
+            combinatorial_batches: int = Body(1, title="Combinatorial batches"),
+            batch_size: int = Body(1, title="Batch size"),
+            max_generations: int = Body(0, title="Max generations"),
+            seed: int = Body(1, title="Seed"),
+    ):
+        script = Script()
+
+        all_prompts, all_negative_prompts = script.generate_prompts(
+            p=StableDiffusionProcessing(),
+            original_prompt=prompt,
+            original_negative_prompt=negative_prompt,
+            original_seed=seed,
+            num_images=batch_size,
+            is_combinatorial=is_combinatorial,
+            combinatorial_batches=combinatorial_batches,
+            max_generations=max_generations,
+        )
+        return {
+            "all_prompts": all_prompts,
+            "all_negative_prompts": all_negative_prompts,
+        }
+
+
+on_app_started(api)
