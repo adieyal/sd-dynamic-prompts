@@ -7,19 +7,15 @@ from string import Template
 
 import dynamicprompts
 import gradio as gr
-import modules.scripts as scripts
 import torch
 from dynamicprompts.generators.promptgenerator import GeneratorException
 from dynamicprompts.parser.parse import ParserConfig
 from dynamicprompts.wildcards import WildcardManager
-from modules.processing import fix_seed
-from modules.shared import opts
-
 from sd_dynamic_prompts import __version__, callbacks
 from sd_dynamic_prompts.element_ids import make_element_id
 from sd_dynamic_prompts.generator_builder import GeneratorBuilder
 from sd_dynamic_prompts.helpers import (
-    generate_prompts,
+    generate_prompts as generate_prompts_helper,
     get_seeds,
     load_magicprompt_models,
     repeat_iterable_to_length,
@@ -32,6 +28,10 @@ from sd_dynamic_prompts.paths import (
 )
 from sd_dynamic_prompts.pnginfo_saver import PngInfoSaver
 from sd_dynamic_prompts.prompt_writer import PromptWriter
+
+import modules.scripts as scripts
+from modules.processing import fix_seed
+from modules.shared import opts
 
 VERSION = __version__
 
@@ -65,9 +65,9 @@ def _get_install_error_message() -> str | None:
 
 
 def _get_hr_fix_prompts(
-    prompts: list[str],
-    original_hr_prompt: str,
-    original_prompt: str,
+        prompts: list[str],
+        original_hr_prompt: str,
+        original_prompt: str,
 ) -> list[str]:
     if original_prompt == original_hr_prompt:
         return list(prompts)
@@ -99,6 +99,14 @@ class Script(scripts.Script):
         self._pnginfo_saver = PngInfoSaver()
         self._prompt_writer = PromptWriter()
         self._wildcard_manager = WildcardManager(get_wildcard_dir())
+
+        self._pnginfo_saver.enabled = opts.dp_write_raw_template
+        self._prompt_writer.enabled = opts.dp_write_prompts_to_file
+        self._limit_jinja_prompts = opts.dp_limit_jinja_prompts
+        self._auto_purge_cache = opts.dp_auto_purge_cache
+        self._wildcard_manager.dedup_wildcards = not opts.dp_wildcard_manager_no_dedupe
+        self._wildcard_manager.sort_wildcards = not opts.dp_wildcard_manager_no_sort
+        self._wildcard_manager.shuffle_wildcards = opts.dp_wildcard_manager_shuffle
 
         if loaded_count % 2 == 0:
             return
@@ -347,48 +355,30 @@ class Script(scripts.Script):
         ]
 
     def process(
-        self,
-        p,
-        is_enabled: bool,
-        is_combinatorial: bool,
-        combinatorial_batches: int,
-        is_magic_prompt: bool,
-        is_feeling_lucky: bool,
-        is_attention_grabber: bool,
-        min_attention: float,
-        max_attention: float,
-        magic_prompt_length: int,
-        magic_temp_value: float,
-        use_fixed_seed: bool,
-        unlink_seed_from_prompt: bool,
-        disable_negative_prompt: bool,
-        enable_jinja_templates: bool,
-        no_image_generation: bool,
-        max_generations: int,
-        magic_model: str | None,
-        magic_blocklist_regex: str | None,
+            self,
+            p,
+            is_enabled: bool,
+            is_combinatorial: bool,
+            combinatorial_batches: int,
+            is_magic_prompt: bool,
+            is_feeling_lucky: bool,
+            is_attention_grabber: bool,
+            min_attention: float,
+            max_attention: float,
+            magic_prompt_length: int,
+            magic_temp_value: float,
+            use_fixed_seed: bool,
+            unlink_seed_from_prompt: bool,
+            disable_negative_prompt: bool,
+            enable_jinja_templates: bool,
+            no_image_generation: bool,
+            max_generations: int,
+            magic_model: str | None,
+            magic_blocklist_regex: str | None,
     ):
         if not is_enabled:
             logger.debug("Dynamic prompts disabled - exiting")
             return p
-
-        ignore_whitespace = opts.dp_ignore_whitespace
-
-        self._pnginfo_saver.enabled = opts.dp_write_raw_template
-        self._prompt_writer.enabled = opts.dp_write_prompts_to_file
-        self._limit_jinja_prompts = opts.dp_limit_jinja_prompts
-        self._auto_purge_cache = opts.dp_auto_purge_cache
-        self._wildcard_manager.dedup_wildcards = not opts.dp_wildcard_manager_no_dedupe
-        self._wildcard_manager.sort_wildcards = not opts.dp_wildcard_manager_no_sort
-        self._wildcard_manager.shuffle_wildcards = opts.dp_wildcard_manager_shuffle
-
-        magicprompt_batch_size = opts.dp_magicprompt_batch_size
-
-        parser_config = ParserConfig(
-            variant_start=opts.dp_parser_variant_start,
-            variant_end=opts.dp_parser_variant_end,
-            wildcard_wrap=opts.dp_parser_wildcard_wrap,
-        )
 
         fix_seed(p)
 
@@ -417,15 +407,118 @@ class Script(scripts.Script):
         original_seed = p.seed
         num_images = p.n_iter * p.batch_size
 
+        combinatorial_batches = int(combinatorial_batches)
+        if self._auto_purge_cache:
+            self._wildcard_manager.clear_cache()
+
+        all_prompts, all_negative_prompts = self.generate_prompts(
+            p,
+            original_prompt,
+            original_negative_prompt,
+            original_seed,
+            num_images,
+            is_combinatorial,
+            combinatorial_batches,
+            is_magic_prompt,
+            is_feeling_lucky,
+            is_attention_grabber,
+            min_attention,
+            max_attention,
+            magic_prompt_length,
+            magic_temp_value,
+            use_fixed_seed,
+            unlink_seed_from_prompt,
+            disable_negative_prompt,
+            enable_jinja_templates,
+            max_generations,
+            magic_model,
+            magic_blocklist_regex,
+        )
+
+        updated_count = len(all_prompts)
+        p.n_iter = math.ceil(updated_count / p.batch_size)
+
+        if num_images != updated_count:
+            p.all_seeds, p.all_subseeds = get_seeds(
+                p,
+                updated_count,
+                use_fixed_seed,
+                is_combinatorial,
+                combinatorial_batches,
+            )
+
+        if updated_count > 1:
+            logger.info(
+                f"Prompt matrix will create {updated_count} images in a total of {p.n_iter} batches.",
+            )
+
+        self._prompt_writer.set_data(
+            positive_template=original_prompt,
+            negative_template=original_negative_prompt,
+            positive_prompts=all_prompts,
+            negative_prompts=all_negative_prompts,
+        )
+
+        p.all_prompts = all_prompts
+        p.all_negative_prompts = all_negative_prompts
+        if no_image_generation:
+            logger.debug("No image generation requested - exiting")
+            # Need a minimum of batch size images to avoid errors
+            p.batch_size = 1
+            p.all_prompts = all_prompts[0:1]
+
+        p.prompt_for_display = original_prompt
+        p.prompt = original_prompt
+
+        if hr_fix_enabled:
+            p.all_hr_prompts = _get_hr_fix_prompts(
+                all_prompts,
+                original_hr_prompt,
+                original_prompt,
+            )
+            p.all_hr_negative_prompts = _get_hr_fix_prompts(
+                all_negative_prompts,
+                original_negative_hr_prompt,
+                original_negative_prompt,
+            )
+
+    def generate_prompts(
+            self,
+            p,
+            original_prompt: str,
+            original_negative_prompt: str,
+            original_seed: int,
+            num_images: int = 1,
+            is_combinatorial: bool = False,
+            combinatorial_batches: int = 1,
+            is_magic_prompt: bool = False,
+            is_feeling_lucky: bool = False,
+            is_attention_grabber: bool = False,
+            min_attention: float = 1.1,
+            max_attention: float = 1.5,
+            magic_prompt_length: int = 100,
+            magic_temp_value: float = 0.7,
+            use_fixed_seed: bool = False,
+            unlink_seed_from_prompt: bool = False,
+            disable_negative_prompt: bool = False,
+            enable_jinja_templates: bool = False,
+            max_generations: int = 0,
+            magic_model: str | None = "Gustavosta/MagicPrompt-Stable-Diffusion",
+            magic_blocklist_regex: str | None = "",
+    ):
+        ignore_whitespace = opts.dp_ignore_whitespace
+        magicprompt_batch_size = opts.dp_magicprompt_batch_size
+        parser_config = ParserConfig(
+            variant_start=opts.dp_parser_variant_start,
+            variant_end=opts.dp_parser_variant_end,
+            wildcard_wrap=opts.dp_parser_wildcard_wrap,
+        )
+
         if is_combinatorial:
             if max_generations == 0:
                 num_images = None
             else:
                 num_images = max_generations
-
-        combinatorial_batches = int(combinatorial_batches)
-        if self._auto_purge_cache:
-            self._wildcard_manager.clear_cache()
 
         try:
             logger.debug("Creating generator")
@@ -482,7 +575,7 @@ class Script(scripts.Script):
                 )
                 all_seeds = p.all_seeds
 
-            all_prompts, all_negative_prompts = generate_prompts(
+            all_prompts, all_negative_prompts = generate_prompts_helper(
                 prompt_generator=generator,
                 negative_prompt_generator=negative_generator,
                 prompt=original_prompt,
@@ -496,49 +589,4 @@ class Script(scripts.Script):
             all_prompts = [str(e)]
             all_negative_prompts = [str(e)]
 
-        updated_count = len(all_prompts)
-        p.n_iter = math.ceil(updated_count / p.batch_size)
-
-        if num_images != updated_count:
-            p.all_seeds, p.all_subseeds = get_seeds(
-                p,
-                updated_count,
-                use_fixed_seed,
-                is_combinatorial,
-                combinatorial_batches,
-            )
-
-        if updated_count > 1:
-            logger.info(
-                f"Prompt matrix will create {updated_count} images in a total of {p.n_iter} batches.",
-            )
-
-        self._prompt_writer.set_data(
-            positive_template=original_prompt,
-            negative_template=original_negative_prompt,
-            positive_prompts=all_prompts,
-            negative_prompts=all_negative_prompts,
-        )
-
-        p.all_prompts = all_prompts
-        p.all_negative_prompts = all_negative_prompts
-        if no_image_generation:
-            logger.debug("No image generation requested - exiting")
-            # Need a minimum of batch size images to avoid errors
-            p.batch_size = 1
-            p.all_prompts = all_prompts[0:1]
-
-        p.prompt_for_display = original_prompt
-        p.prompt = original_prompt
-
-        if hr_fix_enabled:
-            p.all_hr_prompts = _get_hr_fix_prompts(
-                all_prompts,
-                original_hr_prompt,
-                original_prompt,
-            )
-            p.all_hr_negative_prompts = _get_hr_fix_prompts(
-                all_negative_prompts,
-                original_negative_hr_prompt,
-                original_negative_prompt,
-            )
+        return all_prompts, all_negative_prompts
