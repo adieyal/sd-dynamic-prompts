@@ -349,26 +349,26 @@ class Script(scripts.Script):
         ]
 
     def process(
-        self,
-        p,
-        is_enabled: bool,
-        is_combinatorial: bool,
-        combinatorial_batches: int,
-        is_magic_prompt: bool,
-        is_feeling_lucky: bool,
-        is_attention_grabber: bool,
-        min_attention: float,
-        max_attention: float,
-        magic_prompt_length: int,
-        magic_temp_value: float,
-        use_fixed_seed: bool,
-        unlink_seed_from_prompt: bool,
-        disable_negative_prompt: bool,
-        enable_jinja_templates: bool,
-        no_image_generation: bool,
-        max_generations: int,
-        magic_model: str | None,
-        magic_blocklist_regex: str | None,
+            self,
+            p,
+            is_enabled: bool,
+            is_combinatorial: bool,
+            combinatorial_batches: int,
+            is_magic_prompt: bool,
+            is_feeling_lucky: bool,
+            is_attention_grabber: bool,
+            min_attention: float,
+            max_attention: float,
+            magic_prompt_length: int,
+            magic_temp_value: float,
+            use_fixed_seed: bool,
+            unlink_seed_from_prompt: bool,
+            disable_negative_prompt: bool,
+            enable_jinja_templates: bool,
+            no_image_generation: bool,
+            max_generations: int,
+            magic_model: str | None,
+            magic_blocklist_regex: str | None,
     ):
         if not is_enabled:
             logger.debug("Dynamic prompts disabled - exiting")
@@ -402,6 +402,111 @@ class Script(scripts.Script):
         num_images = p.n_iter * p.batch_size
 
         combinatorial_batches = int(combinatorial_batches)
+        if self._auto_purge_cache:
+            self._wildcard_manager.clear_cache()
+
+        all_prompts, all_negative_prompts = self.generate_prompts(
+            p,
+            original_prompt,
+            original_negative_prompt,
+            original_seed,
+            num_images,
+            is_combinatorial,
+            combinatorial_batches,
+            is_magic_prompt,
+            is_feeling_lucky,
+            is_attention_grabber,
+            min_attention,
+            max_attention,
+            magic_prompt_length,
+            magic_temp_value,
+            use_fixed_seed,
+            unlink_seed_from_prompt,
+            disable_negative_prompt,
+            enable_jinja_templates,
+            max_generations,
+            magic_model,
+            magic_blocklist_regex,
+        )
+
+        updated_count = len(all_prompts)
+        p.n_iter = math.ceil(updated_count / p.batch_size)
+
+
+def api(_: gr.Blocks, app: FastAPI):
+    @app.post("/dynamicprompts/evaluate")
+    async def evaluate(
+            prompt: str = Body("", title="Prompt"),
+            negative_prompt: str = Body("", title="Negative Prompt"),
+            is_combinatorial: bool = Body(False, title="Is combinatorial"),
+            combinatorial_batches: int = Body(1, title="Combinatorial batches"),
+            batch_size: int = Body(1, title="Batch size"),
+            max_generations: int = Body(0, title="Max generations"),
+            seed: int = Body(1, title="Seed"),
+    ):
+        script = Script()
+
+        all_prompts, all_negative_prompts = script.generate_prompts(
+            p=StableDiffusionProcessing(),
+            original_prompt=prompt,
+            original_negative_prompt=negative_prompt,
+            original_seed=seed,
+            num_images=batch_size,
+            is_combinatorial=is_combinatorial,
+            combinatorial_batches=combinatorial_batches,
+            max_generations=max_generations,
+        )
+
+
+on_app_started(api)
+
+    def generate_prompts(
+            self,
+            *,
+            p,
+            original_prompt: str,
+            original_negative_prompt: str,
+            original_seed: int,
+            num_images: int = 1,
+            is_combinatorial: bool = False,
+            combinatorial_batches: int = 1,
+            is_magic_prompt: bool = False,
+            is_feeling_lucky: bool = False,
+            is_attention_grabber: bool = False,
+            min_attention: float = 1.1,
+            max_attention: float = 1.5,
+            magic_prompt_length: int = 100,
+            magic_temp_value: float = 0.7,
+            use_fixed_seed: bool = False,
+            unlink_seed_from_prompt: bool = False,
+            disable_negative_prompt: bool = False,
+            enable_jinja_templates: bool = False,
+            max_generations: int = 0,
+            magic_model: str | None = "Gustavosta/MagicPrompt-Stable-Diffusion",
+            magic_blocklist_regex: str | None = "",
+    ):
+        self._pnginfo_saver.enabled = opts.dp_write_raw_template
+        self._prompt_writer.enabled = opts.dp_write_prompts_to_file
+        self._limit_jinja_prompts = opts.dp_limit_jinja_prompts
+        self._auto_purge_cache = opts.dp_auto_purge_cache
+        self._wildcard_manager.dedup_wildcards = not opts.dp_wildcard_manager_no_dedupe
+        self._wildcard_manager.sort_wildcards = not opts.dp_wildcard_manager_no_sort
+        self._wildcard_manager.shuffle_wildcards = opts.dp_wildcard_manager_shuffle
+
+        ignore_whitespace = opts.dp_ignore_whitespace
+        magicprompt_batch_size = opts.dp_magicprompt_batch_size
+        parser_config = ParserConfig(
+            variant_start=opts.dp_parser_variant_start,
+            variant_end=opts.dp_parser_variant_end,
+            wildcard_wrap=opts.dp_parser_wildcard_wrap,
+        )
+        return {
+            "all_prompts": all_prompts,
+            "all_negative_prompts": all_negative_prompts,
+        }
+
+        combinatorial_batches = int(combinatorial_batches)
+        self._auto_purge_cache = opts.dp_auto_purge_cache
         if self._auto_purge_cache:
             self._wildcard_manager.clear_cache()
 
@@ -501,10 +606,9 @@ class Script(scripts.Script):
             magic_model: str | None = "Gustavosta/MagicPrompt-Stable-Diffusion",
             magic_blocklist_regex: str | None = "",
     ):
+        self._limit_jinja_prompts = opts.dp_limit_jinja_prompts
         self._pnginfo_saver.enabled = opts.dp_write_raw_template
         self._prompt_writer.enabled = opts.dp_write_prompts_to_file
-        self._limit_jinja_prompts = opts.dp_limit_jinja_prompts
-        self._auto_purge_cache = opts.dp_auto_purge_cache
         self._wildcard_manager.dedup_wildcards = not opts.dp_wildcard_manager_no_dedupe
         self._wildcard_manager.sort_wildcards = not opts.dp_wildcard_manager_no_sort
         self._wildcard_manager.shuffle_wildcards = opts.dp_wildcard_manager_shuffle
