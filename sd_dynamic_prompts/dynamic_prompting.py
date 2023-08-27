@@ -67,9 +67,9 @@ def _get_install_error_message() -> str | None:
 
 
 def _get_hr_fix_prompts(
-        prompts: list[str],
-        original_hr_prompt: str,
-        original_prompt: str,
+    prompts: list[str],
+    original_hr_prompt: str,
+    original_prompt: str,
 ) -> list[str]:
     if original_prompt == original_hr_prompt:
         return list(prompts)
