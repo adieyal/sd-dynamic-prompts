@@ -56,7 +56,7 @@ You can add weights to options to control their relative frequency. To do this, 
 `{0.5::summer|0.1::autumn|0.3::winter|0.1::spring}`
 ```
 
-The weights are relative and do not have to add up to 1. If you omit a weight, it is assumed to be 1.
+The weights are relative and do not have to add up to 1. If you omit a weight, it is assumed to be 1. Weights are also possible in YAML wildcard files, [see below](#weighted-options-in-yaml).
 
 ### Choosing Multiple Values
 
@@ -294,6 +294,17 @@ artists:
 ```
 
 The last two entries are ignore since they don't store arrays.
+
+##### Weighted options in YAML
+A handy feature of YAML files is that they provide an easy way to add weights to wildcards, something which isn't possible using standard text files. Here is an example:
+
+```yaml
+{
+  2::red
+  | 3::blue
+  | 1:: green
+}
+```
 
 
 #### JSON files
