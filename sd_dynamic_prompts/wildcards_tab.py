@@ -100,7 +100,7 @@ def on_ui_tabs():
                     with gr.Row():
                         collection_copy_button = gr.Button(
                             "Copy collection",
-                            full_width=True,
+                            scale=1,
                         )
                         overwrite_checkbox = gr.Checkbox(
                             label="Overwrite existing",
@@ -131,7 +131,7 @@ def on_ui_tabs():
                 )
                 save_button = gr.Button(
                     "Save wildcards",
-                    full_width=True,
+                    scale=1,
                     elem_id=make_element_id("wildcard-save-button"),
                 )
 
