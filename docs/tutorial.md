@@ -105,18 +105,17 @@ That second prompt isn't grammatically correct, it doesn't matter to Stable Diff
 
 What if we had many gems that we would like to use in our rings? You can certainly add them as variants along with rubies and emeralds, but this may become cumbersome with many variants. In this case, we can use a wildcard.
 
-First, we create a file called gems.txt
+First, we create a file called `gems.txt` inside the wildcards folder.  By default this is `extensions/sd-dynamic-prompts/wildcards`.
+
 In it, we add one variant per line, e.g.
 
 ```
-# gems.txt
+# extensions/sd-dynamic-prompts/gems.txt
 diamond
 ruby
 emerald
 ...
 ```
-
-We place this file inside the extension's wildcard folder. This can be found in extensions/sd-dynamic-prompts/wildcards
 
 Now our prompt changes to:
 
