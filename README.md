@@ -73,7 +73,7 @@ You can also use the same wildcard twice
 
 More complete documentation can be found [here](docs/SYNTAX.md).<br/>
 Prefer a tutorial? <a href="docs/tutorial.md">Click here</a><br/>
-Need a wildcard library? We've got you [covered](https://github.com/adieyal/sd-dynamic-prompts#collections).<br/>
+Need a wildcard library? We've got you [covered](#collections).
 
 ## Online resources
 You can find a list of tutorials and wildcard packs [here](docs/resources.md)
@@ -85,7 +85,12 @@ The extension can be installed directly from within the **Extensions** tab withi
 
 You can also install it manually by running the following command from within the webui directory:
 
-	git clone https://github.com/adieyal/sd-dynamic-prompting/ extensions/dynamic-prompts
+```shell
+git clone https://github.com/adieyal/sd-dynamic-prompts/ extensions/sd-dynamic-prompts
+```
+
+You can create [wildcard files](#template-syntax) in `extensions/sd-dynamic-prompts/wildcards` or you can leverage the [pre-installed collections](#collections)
+by using the "Wildcards Manager" tab in the Web UI.
 
 ## Configuration
 You can find various settings to change Dynamic Prompt's behaviour in the Settings tab in the Dynamic Prompts section.
@@ -107,6 +112,17 @@ Dynamic Prompts automatically de-duplicates and sorts wildcard files before usin
 
 Checking the "shuffle wildcards" checkbox will randomize the order of the wildcards, ensuring that running the combinatorial model will produce different images on different runs.
 
+### Save template to metadata
+
+The default behavior is to resolve all the wildcards to a usable prompt, then that prompt is stored in the PNG info or txt file (e.g. `I love Winter better than Summer`).  If you would also
+like to recall the original template with the wildcards you can turn this option on and you'll save:
+
+```
+I love Winter better than Summer
+Template: I love __seasons__ better than __seasons__
+```
+
+> Note: this additional "Template" section is not displayed in the generate page but will be available in PNG Info (or image browser, if you have that extension installed).
 
 ## Troubleshooting
 If you encounter an issue with Dynamic Prompts, follow these steps to resolve the problem:
@@ -146,20 +162,22 @@ Documentation can be found [here](docs/SYNTAX.md)
 In addition to standard wildcard tokens such as `__times__` -> `times.txt`, you can also use globbing to match against multiple files at once.
 For instance:
 
-`__colors*__` will match any of the following:
-- WILDCARD_DIR/colors.txt
-- WILDCARD_DIR/colors1.txt
-- WILDCARD_DIR/nested/folder/colors1.txt
-
-`__light/**/*__` will match:
-- WILDCARD_DIR/nested/folder/light/a.txt
-- WILDCARD_DIR/nested/folder/light/b.txt
-
-but won't match
-- WILDCARD_DIR/nested/folder/dark/a.txt
-- WILDCARD_DIR/a.txt
+> `__colors*__` will match any of the following:
+> - WILDCARD_DIR/colors.txt
+> - WILDCARD_DIR/colors1.txt
+> - WILDCARD_DIR/nested/folder/colors1.txt
+>
+> `__light/**/*__` will match:
+> - WILDCARD_DIR/nested/folder/light/a.txt
+> - WILDCARD_DIR/nested/folder/light/b.txt
+>
+> but won't match
+> - WILDCARD_DIR/nested/folder/dark/a.txt
+> - WILDCARD_DIR/a.txt
 
 You can also used character ranges `[0-9]` and `[a-z]` and single wildcard characters `?`. For more examples see [this article](http://pymotw.com/2/glob/).
+
+`WILDCARD_DIR` defaults to `extensions/sd-dynamic-prompts/wildcards`.
 
 ## Combinatorial Generation
 Instead of generating random prompts from a template, combinatorial generation produced every possible prompt from the given string. For example:
@@ -288,24 +306,23 @@ To enable, open the advanced accordion and select __Enable Jinja2 templates__.
 You can read about them in more detail <a href="jinja2.md">here</a>
 
 ## WILDCARD_DIR
-The extension looks for wildcard files in WILDCARD_DIR. The default location is /path/to/stable-diffusion-webui/extensions/sd-dynamic-prompts/wildcards. It can also be manually defined in the main webui config.json under wildcard_dir. When in doubt, the help text for the extension in the webui lists the full path to WILDCARD_DIR
+The extension looks for wildcard files in WILDCARD_DIR. The default location is `/path/to/stable-diffusion-webui/extensions/sd-dynamic-prompts/wildcards`. It can also be manually defined in the main webui config.json under wildcard_dir. When in doubt, the help text for the extension in the webui lists the full path to WILDCARD_DIR
 
 ## Collections
 The collections directory contains modifier libraries that you can use as is or to bootstrap your own. To get started, either use the Wildcard Manager tab to copy a one or more collections to your wildcards folder, or you can manually copy the files across. Three collections are bundled with the dynamic prompts extension.
 
 - [jumbo](https://github.com/adieyal/sd-dynamic-prompts/tree/main/collections/jumbo)
+  A very large collection of wildcards across many categories including aesthetics, appearance, artists, medium, style, and time. It is a work in progress, but aims to provide good coverage of various modifier categories.
 - [parrotzone](https://github.com/adieyal/sd-dynamic-prompts/tree/main/collections/parrotzone)
+  A far smaller and more manageable collection sourced from https://proximacentaurib.notion.site/e28a4f8d97724f14a784a538b8589e7d?v=42948fd8f45c4d47a0edfc4b78937474.
 - [devilkkw](https://github.com/adieyal/sd-dynamic-prompts/tree/main/collections/devilkkw)
-
-Jumbo is a very large collection of wildcards across many categories including aesthetics, appearance, artists, medium, style, and time. It is a work in progress, but aims to provide good coverage of various modifier categories.
-
-Parrotzone is a far smaller and more manageable collection sourced from https://proximacentaurib.notion.site/e28a4f8d97724f14a784a538b8589e7d?v=42948fd8f45c4d47a0edfc4b78937474.
-
-Devilkkw focuses more on character building, clothes, gestures, food, etc
+  Devilkkw focuses more on character building, clothes, gestures, food, etc.
 
 If you're using a Unix/Linux O/S, you can easily create a symlink to the relevant collection rather than copying it across if you don't plan to alter it. E.g.
 
-	ln -sr collections/parrotzone wildcards/
+```shell
+ln -sr collections/parrotzone wildcards/
+```
 
 You can also download additional extensions by running `python _tools/download_collections.py` from within the extension's root directory, i.e. `extensions/sd-dynamic-prompts/`
 
