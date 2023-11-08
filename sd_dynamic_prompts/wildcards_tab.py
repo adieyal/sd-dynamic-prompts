@@ -264,7 +264,7 @@ def handle_load_wildcard(event: dict) -> str:
     else:
         # Otherwise, return a preview of the values,
         # with a header to indicate that the file can't be edited.
-        values = "\n".join(wf.get_values())
+        values = "\n".join(str(val) for val in wf.get_values())
         contents = f"# File can't be edited\n{values}"
         can_edit = False
 
