@@ -1,3 +1,4 @@
+- 2.17.0 Upgraded to dynamicprompts v0.30.1. Removed support for python 3.7 ([#98](https://github.com/adieyal/dynamicprompts/pull/98)), wildcard files now support weights ([#97](https://github.com/adieyal/dynamicprompts/pull/97)). Also added infrastructure to return additional metadata gatherered during sampling ([#100](https://github.com/adieyal/dynamicprompts/pull/100)).
 - 2.16.3 Refactoring and fixing [#601](https://github.com/adieyal/sd-dynamicprompts/issues/601)
 - 2.16.2 Refactor paths and magic prompt models file read
 - 2.16.1 Only using cross product when num_prompts is not provided
