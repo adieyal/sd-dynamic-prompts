@@ -76,8 +76,9 @@ Here is a list of various tutorials and other resources relevant to Dynamic Prom
 * 2022-11-06 - [How to Turbocharge your prompts using AUTOMATIC1111 WebUI dynamic prompts extension](https://www.reddit.com/r/StableDiffusion/comments/ynztiz/how_to_turbocharge_your_prompts_using/)
 
 ## Wildcard packs
+* [Billions of Wildcards - All in one](https://civitai.com/models/138970/billions-of-wildcards-all-in-one)
 * [LulzRose/YetAnotherWildcardCollection](https://github.com/LulzRose/YetAnotherWildcardCollection/)
-* [[CivitAI] [PromptGeek Fantasy Character Wildcard](https://civitai.com/models/102762?modelVersionId=109978)
+* [[CivitAI] PromptGeek Fantasy Character Wildcard](https://civitai.com/models/102762?modelVersionId=109978)
 * [[CivitAI] Clothes Wildcards](https://civitai.com/models/73184/clothes-wildcards)
 * [[CivitAI] Camera Views](https://civitai.com/models/24940/wildcards-camera-views)
 * [[CivitAI] CC's wildcards](https://civitai.com/models/63598/ccs-wildcards)
