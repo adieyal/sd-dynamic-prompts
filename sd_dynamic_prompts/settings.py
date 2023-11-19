@@ -1,10 +1,17 @@
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
+
 import gradio as gr
 from modules import shared
 
 from sd_dynamic_prompts.helpers import load_magicprompt_models
 
+if TYPE_CHECKING:
+    from sd_dynamic_prompts.dynamicprompting import Script as SDDPScript
 
-def on_ui_settings():
+
+def on_ui_settings(script_protocol: SDDPScript):
     section = "dynamicprompts", "Dynamic Prompts"
     shared.opts.add_option(
         key="dp_ignore_whitespace",

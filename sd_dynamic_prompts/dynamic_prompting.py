@@ -99,15 +99,32 @@ class Script(scripts.Script):
         self._pnginfo_saver = PngInfoSaver()
         self._prompt_writer = PromptWriter()
         self._wildcard_manager = WildcardManager(get_wildcard_dir())
+        self._is_enabled = False
 
         if loaded_count % 2 == 0:
             return
 
-        callbacks.register_pnginfo_saver(self._pnginfo_saver)
-        callbacks.register_prompt_writer(self._prompt_writer)
-        callbacks.register_on_infotext_pasted(self._pnginfo_saver)
-        callbacks.register_settings()
-        callbacks.register_wildcards_tab(self._wildcard_manager)
+        callbacks.register_pnginfo_saver(self)
+        callbacks.register_prompt_writer(self)
+        callbacks.register_on_infotext_pasted(self)
+        callbacks.register_settings(self)
+        callbacks.register_wildcards_tab(self)
+
+    @property
+    def is_enabled(self):
+        return self._is_enabled
+
+    @property
+    def pnginfo_saver(self):
+        return self._pnginfo_saver
+
+    @property
+    def prompt_writer(self):
+        return self._prompt_writer
+
+    @property
+    def wildcard_manager(self):
+        return self._wildcard_manager
 
     def title(self):
         return f"Dynamic Prompts v{VERSION}"
@@ -368,19 +385,26 @@ class Script(scripts.Script):
         magic_model: str | None,
         magic_blocklist_regex: str | None,
     ):
+        self._pnginfo_saver.enabled = opts.dp_write_raw_template
+        self._prompt_writer.enabled = opts.dp_write_prompts_to_file
+
         if not is_enabled:
             logger.debug("Dynamic prompts disabled - exiting")
             return p
 
         ignore_whitespace = opts.dp_ignore_whitespace
 
-        self._pnginfo_saver.enabled = opts.dp_write_raw_template
-        self._prompt_writer.enabled = opts.dp_write_prompts_to_file
         self._limit_jinja_prompts = opts.dp_limit_jinja_prompts
         self._auto_purge_cache = opts.dp_auto_purge_cache
         self._wildcard_manager.dedup_wildcards = not opts.dp_wildcard_manager_no_dedupe
         self._wildcard_manager.sort_wildcards = not opts.dp_wildcard_manager_no_sort
         self._wildcard_manager.shuffle_wildcards = opts.dp_wildcard_manager_shuffle
+
+        if not is_enabled:
+            logger.debug("Dynamic prompts disabled - exiting")
+            return p
+
+        ignore_whitespace = opts.dp_ignore_whitespace
 
         magicprompt_batch_size = opts.dp_magicprompt_batch_size
 
