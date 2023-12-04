@@ -2,11 +2,7 @@ from typing import Any
 
 import pytest
 
-from sd_dynamic_prompts.pnginfo_saver import (
-    PngInfoSaver,
-    PromptTemplates,
-    strip_template_info,
-)
+from sd_dynamic_prompts.pnginfo_saver import strip_template_info
 
 
 @pytest.fixture
@@ -18,32 +14,6 @@ def basic_parameters():
         "Hires resize-1": 0,
         "Hires resize-2": 0,
     }
-
-
-def test_update_pnginfo() -> None:
-    png_info_saver = PngInfoSaver()
-    image_prompts = PromptTemplates("Template", "Negative Template")
-    parameters = "Parameters"
-    updated_parameters = png_info_saver.update_pnginfo(parameters, image_prompts)
-
-    assert (
-        updated_parameters
-        == f"Parameters\nTemplate: {image_prompts.positive_template}\nNegative Template: {image_prompts.negative_template}"
-    )
-
-    image_prompts.positive_template = ""
-    updated_parameters = png_info_saver.update_pnginfo(parameters, image_prompts)
-    assert (
-        updated_parameters
-        == f"Parameters\nNegative Template: {image_prompts.negative_template}"
-    )
-
-    image_prompts.positive_template = "Positive Template"
-    image_prompts.negative_template = ""
-    updated_parameters = png_info_saver.update_pnginfo(parameters, image_prompts)
-    assert (
-        updated_parameters == f"Parameters\nTemplate: {image_prompts.positive_template}"
-    )
 
 
 BASIC_PARAMETERS = "Steps: 35, Sampler: Heun, CFG scale: 9, Seed: 77777, Size: 640x640, Model hash: d8691b4d16"

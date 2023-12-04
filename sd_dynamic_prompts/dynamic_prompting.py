@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import logging
 import math
 from functools import lru_cache
@@ -12,6 +13,7 @@ import torch
 from dynamicprompts.generators.promptgenerator import GeneratorException
 from dynamicprompts.parser.parse import ParserConfig
 from dynamicprompts.wildcards import WildcardManager
+from modules import generation_parameters_copypaste
 from modules.processing import fix_seed
 from modules.shared import opts
 
@@ -84,6 +86,17 @@ def get_magic_prompt_device() -> torch.device:
     return device
 
 
+def requote_prompt(prompt: str) -> str | None:
+    # if prompt is empty, return None
+    # if prompt will not be auto quoted by webui and can effected by stripping, we need to quote it ourselves
+    if prompt:
+        if prompt != prompt.strip() and prompt == generation_parameters_copypaste.quote(
+            prompt,
+        ):
+            prompt = json.dumps(prompt, ensure_ascii=False)
+        return prompt
+
+
 class Script(scripts.Script):
     def __init__(self):
         global loaded_count
@@ -103,7 +116,6 @@ class Script(scripts.Script):
         if loaded_count % 2 == 0:
             return
 
-        callbacks.register_pnginfo_saver(self._pnginfo_saver)
         callbacks.register_prompt_writer(self._prompt_writer)
         callbacks.register_on_infotext_pasted()
         callbacks.register_settings()
@@ -374,7 +386,6 @@ class Script(scripts.Script):
 
         ignore_whitespace = opts.dp_ignore_whitespace
 
-        self._pnginfo_saver.enabled = opts.dp_write_raw_template
         self._prompt_writer.enabled = opts.dp_write_prompts_to_file
         self._limit_jinja_prompts = opts.dp_limit_jinja_prompts
         self._auto_purge_cache = opts.dp_auto_purge_cache
@@ -519,6 +530,12 @@ class Script(scripts.Script):
             positive_prompts=all_prompts,
             negative_prompts=all_negative_prompts,
         )
+
+        if opts.dp_write_raw_template:
+            p.extra_generation_params["Template"] = requote_prompt(original_prompt)
+            p.extra_generation_params["Negative Template"] = requote_prompt(
+                original_negative_prompt,
+            )
 
         p.all_prompts = all_prompts
         p.all_negative_prompts = all_negative_prompts

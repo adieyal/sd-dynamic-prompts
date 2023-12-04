@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import logging
-from dataclasses import dataclass
 from typing import Any
 
 logger = logging.getLogger(__name__)
@@ -31,36 +30,3 @@ def strip_template_info(parameters: dict[str, Any]) -> None:
             parameters["Negative prompt"] = (
                 parameters["Negative prompt"].split(split_by)[0].strip()
             )
-
-
-@dataclass
-class PromptTemplates:
-    positive_template: str
-    negative_template: str
-
-
-class PngInfoSaver:
-    def __init__(self):
-        self._enabled = True
-
-    @property
-    def enabled(self) -> bool:
-        return self._enabled
-
-    @enabled.setter
-    def enabled(self, enabled: bool) -> None:
-        self._enabled = enabled
-
-    def update_pnginfo(self, parameters: str, prompt_templates: PromptTemplates) -> str:
-        if not self._enabled:
-            return parameters
-
-        if prompt_templates.positive_template:
-            parameters += f"\n{TEMPLATE_LABEL}: {prompt_templates.positive_template}"
-
-        if prompt_templates.negative_template:
-            parameters += (
-                f"\n{NEGATIVE_TEMPLATE_LABEL}: {prompt_templates.negative_template}"
-            )
-
-        return parameters
