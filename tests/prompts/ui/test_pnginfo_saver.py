@@ -2,7 +2,11 @@ from typing import Any
 
 import pytest
 
-from sd_dynamic_prompts.pnginfo_saver import PngInfoSaver, PromptTemplates
+from sd_dynamic_prompts.pnginfo_saver import (
+    PngInfoSaver,
+    PromptTemplates,
+    strip_template_info,
+)
 
 
 @pytest.fixture
@@ -72,7 +76,6 @@ def test_remove_template_from_infotext(
     positive_prompt: str,
     negative_prompt: str,
 ) -> None:
-    png_info_saver = PngInfoSaver()
     if not negative_prompt:
         basic_parameters["Prompt"] = build_parameters(positive_prompt, negative_prompt)
         basic_parameters["Negative prompt"] = ""
@@ -83,7 +86,7 @@ def test_remove_template_from_infotext(
             negative_prompt,
         )
 
-    png_info_saver.strip_template_info(basic_parameters)
+    strip_template_info(basic_parameters)
 
     if negative_prompt:
         assert basic_parameters["Prompt"] == positive_prompt
