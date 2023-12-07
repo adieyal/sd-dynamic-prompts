@@ -32,7 +32,6 @@ from sd_dynamic_prompts.paths import (
     get_magicprompt_models_txt_path,
     get_wildcard_dir,
 )
-from sd_dynamic_prompts.pnginfo_saver import PngInfoSaver
 from sd_dynamic_prompts.prompt_writer import PromptWriter
 
 VERSION = __version__
@@ -109,7 +108,6 @@ class Script(scripts.Script):
 
         # When the Reload UI button in the settings tab is pressed, the script is loaded twice again
         # Therefore we only register callbacks every second time the script is loaded
-        self._pnginfo_saver = PngInfoSaver()
         self._prompt_writer = PromptWriter()
         self._wildcard_manager = WildcardManager(get_wildcard_dir())
 
