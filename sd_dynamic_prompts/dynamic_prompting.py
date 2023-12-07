@@ -105,7 +105,7 @@ class Script(scripts.Script):
 
         callbacks.register_pnginfo_saver(self._pnginfo_saver)
         callbacks.register_prompt_writer(self._prompt_writer)
-        callbacks.register_on_infotext_pasted(self._pnginfo_saver)
+        callbacks.register_on_infotext_pasted()
         callbacks.register_settings()
         callbacks.register_wildcards_tab(self._wildcard_manager)
 
