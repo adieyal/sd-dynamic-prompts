@@ -85,15 +85,15 @@ def get_magic_prompt_device() -> torch.device:
     return device
 
 
-def requote_prompt(prompt: str) -> str | None:
-    # if prompt is empty, return None
-    # if prompt will not be auto quoted by webui and can effected by stripping, we need to quote it ourselves
-    if prompt:
-        if prompt != prompt.strip() and prompt == generation_parameters_copypaste.quote(
-            prompt,
-        ):
-            prompt = json.dumps(prompt, ensure_ascii=False)
-        return prompt
+def ensure_quoted_parameter(parameter: str) -> str | None:
+    """
+    if parameter is empty, return None
+    else quote parameter if it will not be automatically quoted by webui
+    """
+    if parameter:
+        if parameter == generation_parameters_copypaste.quote(parameter):
+            parameter = json.dumps(parameter, ensure_ascii=False)
+        return parameter
 
 
 class Script(scripts.Script):
@@ -530,8 +530,10 @@ class Script(scripts.Script):
         )
 
         if opts.dp_write_raw_template:
-            p.extra_generation_params["Template"] = requote_prompt(original_prompt)
-            p.extra_generation_params["Negative Template"] = requote_prompt(
+            p.extra_generation_params["Template"] = ensure_quoted_parameter(
+                original_prompt,
+            )
+            p.extra_generation_params["Negative Template"] = ensure_quoted_parameter(
                 original_negative_prompt,
             )
 
