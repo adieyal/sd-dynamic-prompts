@@ -24,7 +24,7 @@ logger = logging.getLogger(__name__)
 def register_pnginfo_saver(pnginfo_saver: PngInfoSaver) -> None:
     def on_save(image_save_params: ImageSaveParams) -> None:
         try:
-            if image_save_params.p:
+            if image_save_params.p and image_save_params.pnginfo and "parameters" in image_save_params.pnginfo:
                 png_info = image_save_params.pnginfo["parameters"]
                 image_prompts = PromptTemplates(
                     positive_template=image_save_params.p.prompt,
