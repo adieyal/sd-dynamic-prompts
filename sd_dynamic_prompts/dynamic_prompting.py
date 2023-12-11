@@ -517,8 +517,11 @@ class Script(scripts.Script):
         )
 
         if opts.dp_write_raw_template:
-            p.extra_generation_params["Template"] = original_prompt
-            p.extra_generation_params["Negative Template"] = original_negative_prompt
+            params = p.extra_generation_params
+            if original_prompt:
+                params["Template"] = original_prompt
+            if original_negative_prompt:
+                params["Negative Template"] = original_negative_prompt
 
         p.all_prompts = all_prompts
         p.all_negative_prompts = all_negative_prompts
