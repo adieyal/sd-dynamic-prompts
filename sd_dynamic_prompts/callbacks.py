@@ -9,37 +9,12 @@ from modules import script_callbacks
 from modules.generation_parameters_copypaste import parse_generation_parameters
 from modules.script_callbacks import ImageSaveParams
 
-from sd_dynamic_prompts.pnginfo_saver import (
-    PngInfoSaver,
-    PromptTemplates,
-    strip_template_info,
-)
+from sd_dynamic_prompts.pnginfo_saver import strip_template_info
 from sd_dynamic_prompts.prompt_writer import PromptWriter
 from sd_dynamic_prompts.settings import on_ui_settings
 from sd_dynamic_prompts.wildcards_tab import initialize as initialize_wildcards_tab
 
 logger = logging.getLogger(__name__)
-
-
-def register_pnginfo_saver(pnginfo_saver: PngInfoSaver) -> None:
-    def on_save(image_save_params: ImageSaveParams) -> None:
-        try:
-            if image_save_params.p:
-                png_info = image_save_params.pnginfo["parameters"]
-                image_prompts = PromptTemplates(
-                    positive_template=image_save_params.p.prompt,
-                    negative_template=image_save_params.p.negative_prompt,
-                )
-
-                updated_png_info = pnginfo_saver.update_pnginfo(
-                    png_info,
-                    image_prompts,
-                )
-                image_save_params.pnginfo["parameters"] = updated_png_info
-        except Exception:
-            logger.exception("Error save prompt file")
-
-    script_callbacks.on_before_image_saved(on_save)
 
 
 def register_prompt_writer(prompt_writer: PromptWriter) -> None:

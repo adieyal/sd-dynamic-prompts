@@ -30,7 +30,6 @@ from sd_dynamic_prompts.paths import (
     get_magicprompt_models_txt_path,
     get_wildcard_dir,
 )
-from sd_dynamic_prompts.pnginfo_saver import PngInfoSaver
 from sd_dynamic_prompts.prompt_writer import PromptWriter
 
 VERSION = __version__
@@ -96,14 +95,12 @@ class Script(scripts.Script):
 
         # When the Reload UI button in the settings tab is pressed, the script is loaded twice again
         # Therefore we only register callbacks every second time the script is loaded
-        self._pnginfo_saver = PngInfoSaver()
         self._prompt_writer = PromptWriter()
         self._wildcard_manager = WildcardManager(get_wildcard_dir())
 
         if loaded_count % 2 == 0:
             return
 
-        callbacks.register_pnginfo_saver(self._pnginfo_saver)
         callbacks.register_prompt_writer(self._prompt_writer)
         callbacks.register_on_infotext_pasted()
         callbacks.register_settings()
@@ -374,7 +371,6 @@ class Script(scripts.Script):
 
         ignore_whitespace = opts.dp_ignore_whitespace
 
-        self._pnginfo_saver.enabled = opts.dp_write_raw_template
         self._prompt_writer.enabled = opts.dp_write_prompts_to_file
         self._limit_jinja_prompts = opts.dp_limit_jinja_prompts
         self._auto_purge_cache = opts.dp_auto_purge_cache
@@ -519,6 +515,10 @@ class Script(scripts.Script):
             positive_prompts=all_prompts,
             negative_prompts=all_negative_prompts,
         )
+
+        if opts.dp_write_raw_template:
+            p.extra_generation_params["Template"] = original_prompt
+            p.extra_generation_params["Negative Template"] = original_negative_prompt
 
         p.all_prompts = all_prompts
         p.all_negative_prompts = all_negative_prompts
