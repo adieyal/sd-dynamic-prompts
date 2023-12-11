@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import json
 import logging
 import math
 from functools import lru_cache
@@ -13,7 +12,6 @@ import torch
 from dynamicprompts.generators.promptgenerator import GeneratorException
 from dynamicprompts.parser.parse import ParserConfig
 from dynamicprompts.wildcards import WildcardManager
-from modules import generation_parameters_copypaste
 from modules.processing import fix_seed
 from modules.shared import opts
 
@@ -83,17 +81,6 @@ def get_magic_prompt_device() -> torch.device:
     if device.type == "cuda" and not device.index:
         device = torch.device("cuda:0")
     return device
-
-
-def ensure_quoted_parameter(parameter: str) -> str | None:
-    """
-    if parameter is empty, return None
-    else quote parameter if it will not be automatically quoted by webui
-    """
-    if parameter:
-        if parameter == generation_parameters_copypaste.quote(parameter):
-            parameter = json.dumps(parameter, ensure_ascii=False)
-        return parameter
 
 
 class Script(scripts.Script):
@@ -530,12 +517,8 @@ class Script(scripts.Script):
         )
 
         if opts.dp_write_raw_template:
-            p.extra_generation_params["Template"] = ensure_quoted_parameter(
-                original_prompt,
-            )
-            p.extra_generation_params["Negative Template"] = ensure_quoted_parameter(
-                original_negative_prompt,
-            )
+            p.extra_generation_params["Template"] = original_prompt
+            p.extra_generation_params["Negative Template"] = original_negative_prompt
 
         p.all_prompts = all_prompts
         p.all_negative_prompts = all_negative_prompts
