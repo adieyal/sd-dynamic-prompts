@@ -7,13 +7,13 @@
 - 2.15.0 Added Wildcard Manager Search
 - 2.14.0 Added configuration option to shuffle wildcards for increased randomness in combinatorial mode.
 - 2.13.0 Added configuration options to prevent the wildcard manager from sorting and deduplicating wildcard files
-- 2.12.6  Bumped dynamicprompts version to 0.27.1. Late loading of jinja2 to work around issues with incompatible versions of Jinja2 being installed. Also improved dependency management
-- 2.12.5  Updates to support hires updates in auto1111. See [#498](https://github.com/adieyal/sd-dynamic-prompts/pull/498). Also manually updates PYTHONPATH in install.py if the extension's package is not found. [#496](https://github.com/adieyal/sd-dynamic-prompts/pull/496)
-- 2.12.4  Honouring --skip-install command line argument for faster load times. Also reverts change to extension-specific logging configuration - see [53e69fe](https://github.com/adieyal/sd-dynamic-prompts/commit/53e69feda77954b86b4b0bae5623bd85009826b3)
-- 2.12.3  Minor change that does removes the "Promt matrix..." log when there is a single prompt
-- 2.12.2  Workaround webui bug when extensions with nested tabs are present - see [#481](https://github.com/adieyal/sd-dynamic-prompts/pull/481)
-- 2.12.1  Hires fix - see [#474](https://github.com/adieyal/sd-dynamic-prompts/issues/474).
-- 2.12.0  Updated installation process to be more robust and ensure that the correct dependencies are available. See [#449](https://github.com/adieyal/sd-dynamic-prompts/pull/449)
+- 2.12.6 Bumped dynamicprompts version to 0.27.1. Late loading of jinja2 to work around issues with incompatible versions of Jinja2 being installed. Also improved dependency management
+- 2.12.5 Updates to support hires updates in auto1111. See [#498](https://github.com/adieyal/sd-dynamic-prompts/pull/498). Also manually updates PYTHONPATH in install.py if the extension's package is not found. [#496](https://github.com/adieyal/sd-dynamic-prompts/pull/496)
+- 2.12.4 Honouring --skip-install command line argument for faster load times. Also reverts change to extension-specific logging configuration - see [53e69fe](https://github.com/adieyal/sd-dynamic-prompts/commit/53e69feda77954b86b4b0bae5623bd85009826b3)
+- 2.12.3 Minor change that removes the "Prompt matrix..." log when there is a single prompt
+- 2.12.2 Workaround webui bug when extensions with nested tabs are present - see [#481](https://github.com/adieyal/sd-dynamic-prompts/pull/481)
+- 2.12.1 Hires fix - see [#474](https://github.com/adieyal/sd-dynamic-prompts/issues/474).
+- 2.12.0 Updated installation process to be more robust and ensure that the correct dependencies are available. See [#449](https://github.com/adieyal/sd-dynamic-prompts/pull/449)
 - 2.11.10 Resource leaks fixed
 - 2.11.9 Minor change to logger formatting
 - 2.11.8 Fixed unlink seed from prompt
@@ -22,7 +22,7 @@
 - 2.11.5 Added kwargs to FrozenPromptGenerator to fix one of the unexpected keyword argument 'seeds' errors
 - 2.11.4 Fixed type error in install.py for older versions of python
 - 2.11.3 Added check to ensure that the correct version of dynamicprompts is installed. If not it outputs instructions for manual installation.
-- 2.11.2 Added a download collectons script in _tools/ and included the Mossbraker collection - https://github.com/Mossbraker/mj_reference_wildcards/
+- 2.11.2 Added a download collections script in `_tools/` and included the Mossbraker collection - https://github.com/Mossbraker/mj_reference_wildcards/
 - 2.11.1 Fixes [#382](https://github.com/adieyal/sd-dynamic-prompts/issues/382) (Save wildcards" only works once) and added an option to autopurge the cache.
 - 2.11.0 Upgraded dynamicprompts to v0.23.0 which includes speed improvements to the prompt parser.
 - 2.10.5 Combinatorial batches now correctly uses a different seed per batch. Thanks to @dbitterlich. Fixes [#190](https://github.com/adieyal/sd-dynamic-prompts/issues/190). Also upgraded dynamicprompts to v0.22.0 which makes WildcardManager trees easily composable - [#74](https://github.com/adieyal/dynamicprompts/pull/74)
@@ -55,8 +55,8 @@
 - 2.6.1 Fixed send to img2txt parsing mostly fixed. There may be some lingering issues
 - 2.6.0 Upgraded to dynamicprompts v0.6.0 which includes support for symlinks for wildcards and a major revamp of the parsing machinery
 - 2.5.6 Addresses [#227](https://github.com/adieyal/sd-dynamic-prompts/issues/227)
-- 2.5.5 Prompts csv filname is now set to the name of the first image saved.
-- 2.5.4 Bumped dynamicprompts to v0.4.3 - enables zero repititions in sequence commands, e.g. `{0-3$$A|B|C}`
+- 2.5.5 Prompts csv filename is now set to the name of the first image saved.
+- 2.5.4 Bumped dynamicprompts to v0.4.3 - enables zero repetitions in sequence commands, e.g. `{0-3$$A|B|C}`
 - 2.5.3 Re-factored code into a single package
 - 2.5.2 Upgraded to dynamicprompts v0.4.1 which allows for all printables to be used as variant separators, e.g. {2$$|$$A|B|C}. This addresses [#211](https://github.com/adieyal/sd-dynamic-prompts/issues/211). Also fixed [#222](https://github.com/adieyal/sd-dynamic-prompts/pull/222).
 - 2.5.1 Fixed a circular dependency in install.py
@@ -67,7 +67,7 @@
 - 2.4.1 Fixed an annoying bug when copying collections into the wildcard directory. Wildcards were copied directly into the wildcards root directory, instead of the root of their collections. This fix may affect previously saved prompts that expect wildcard files to be in the root.
 - 2.4.0 Upgraded dynamicprompts to v0.3.0 and provided alternative models to Magic Prompt
 - 2.3.8 Fixed a bug introduced in 2.3.8 that breaks random generation
-- 2.3.7 Added a maximum generation slider to combinatorial mode - this replaces the batch_count * batch size calculation used previously.
+- 2.3.7 Added a maximum generation slider to combinatorial mode - this replaces the `batch_count * batch size` calculation used previously.
 - 2.3.6 Using a Dummy Generator for attention grabber if spacy is not available
 - 2.3.5 Fixed extras requirement from dynamicprompts
 - 2.3.4 Changed the don't apply to negative prompts checkbox to apply to prompt magic only.
@@ -150,7 +150,7 @@
 - 0.25.1 Explicitly setting encoding when writing prompts to file. Also ignoring errors
 - 0.25.0 Negative prompts are now dynamic, Big thanks to @lilly1987
 - 0.24.4 Tucked help into separate accordions to prevent too much clutter
-- 0.24.3 Added shuffle to combinatorial generation so that a different subset of prompts is generated every time if the total number of prompts is greater than Batch size * Batch count
+- 0.24.3 Added shuffle to combinatorial generation so that a different subset of prompts is generated every time if the total number of prompts is greater than `batch size * batch count`
 - 0.24.2 Minor bug fix in weighted choice jinja2 extension
 - 0.24.1 Re-wrote combinatorial generation to use a queue instead of recursion
 - 0.24.0 I'm feeling lucky now using the prompt as a search string.
@@ -172,7 +172,7 @@
 - 0.15.0 Improvements to Magic Prompt by @SineSwiper - added a slider to adjust the prompt length and another to tune creativity.
 - 0.14.0 Added the ability to change the combinations joiner from the default "," to anything you like, e.g. {1$$and$$red|blue} gives you red and blue - contributed by @cobryan05
 - 0.13.9 Added implicit lower and upper ranges to combinations - thanks to @galvanized
-- 0.13.8 Allow sampling with replacement for variants, i.e. {2$$X|Y} can return X,X Y,Y X,Y and Y,X. Useful in combination with wildcards. {2$$__artists__} now also chooses two options from the artists.txt file.
+- 0.13.8 Allow sampling with replacement for variants, i.e. `{2$$X|Y}` can return X,X Y,Y X,Y and Y,X. Useful in combination with wildcards. `{2$$__artists__}` now also chooses two options from the artists.txt file.
 - 0.13.7 Python 3.8 compatibility
 - 0.13.6 Moved wildcards into the collections directory and added the parrot zone collection with thanks to @jmpaz
 - 0.13.5 Updated stylesheet from @Yaiol to fix light and dark theme
@@ -186,7 +186,7 @@
 - 0.10.0 Added magic prompts
 - 0.9.2 Added additional artists and refactored code.
 - 0.9.1 Added local Random instance to ensure repeatability without changing the global random number generator
-- 0.9.0 Started a modifer library. Turns out it's much better than the long unsorted lists of artists you find elsewhere.
+- 0.9.0 Started a modifier library. Turns out it's much better than the long unsorted lists of artists you find elsewhere.
 - 0.8.0 Combinatorial generation
 - 0.7.0 Updated wildcard ui by @TheAwesomeGoat.7.0 Updated wildcard ui by @TheAwesomeGoat
 - 0.6.0 Added path globbing for wildcards. Thanks for @evanjs for the idea and original implementation
@@ -196,7 +196,7 @@
 - 0.4.3 Printing prompts at logger level INFO
 - 0.4.2 Ignoring unknown characters in non-utf8 encoding wildcard files
 - 0.4.1 Fixed regular expression for wildcards, it previously didn't allow wildcard files with underscores in them.
-- 0.4 Rows in a wildcard file that contain dynamic syntax will be resolved. This enables recusive resolution. See [this](https://github.com/adieyal/sd-dynamic-prompting/issues/3) feature request for a use case
+- 0.4 Rows in a wildcard file that contain dynamic syntax will be resolved. This enables recursive resolution. See [this](https://github.com/adieyal/sd-dynamic-prompting/issues/3) feature request for a use case
 - 0.3 Added interval implementation for combinations, i.e. you can now use {1-2$$op1|opt2|opt3} which will choose one or two options. Thanks to @galvanized for this.
 - 0.2 Fixed Batch img2img implementation
 - 0.1 Initial implementation

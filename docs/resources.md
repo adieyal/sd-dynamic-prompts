@@ -84,7 +84,7 @@ Here is a list of various tutorials and other resources relevant to Dynamic Prom
 * [[CivitAI] CC's wildcards](https://civitai.com/models/63598/ccs-wildcards)
 * [[CivitAI] Post-apocalyptic Kit](https://civitai.com/models/70264/advanced-wildcards-post-apocalyptic-kit-or-or)
 * [[CivitAI] Men's clothing](https://civitai.com/models/102454/mens-clothing-wildcards)
-* [[CivitAI] Female Guerrila Fighter](https://civitai.com/models/75246/advanced-wildcards-female-guerilla-fighter-or-or)
+* [[CivitAI] Female Guerrilla Fighter](https://civitai.com/models/75246/advanced-wildcards-female-guerilla-fighter-or-or)
 * [[CivitAI] Science Fiction Kit](https://civitai.com/models/70905/advanced-wildcards-science-fiction-kit-or-or)
 * [[CivitAI] Female Artisans Kit](https://civitai.com/models/91214/advanced-wildcards-female-artisans-kit-or-or)
 * [[CivitAI] WWII Female Soldier Kit](https://civitai.com/models/69537/advanced-wildcards-wwii-female-soldier-kit-or-wwii-or)

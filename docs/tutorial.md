@@ -1,10 +1,12 @@
 # Introduction
 
-Constructing good prompts for Stable Diffusion can be difficult, especially if you're trying to learn through trial and error. Dynamic Prompts is an extension for Automatic1111's webui that lets you test dozens or hundreds of prompts at the same time by making tweaks to your base prompt.
+Constructing good prompts for Stable Diffusion can be difficult, especially if you're trying to learn through trial and error.
+Dynamic Prompts is an extension for Automatic1111's webui that lets you test dozens or hundreds of prompts at the same time by making tweaks to your base prompt.
 
 Let's see how this works.
 
 # Installation
+
 You can easily install the extension directly from the Automatic1111 webui's extension tab.
 
 <img src="../images/tutorial/install.png">
@@ -17,8 +19,8 @@ You can see the various options by clicking on it:
 
 <img src="../images/tutorial/ui-open.png"><br>
 
+## Getting Started
 
-# Getting Started
 Suppose you want to create images of a diamond ring; you might start with something like:
 
     A diamond ring on a gold band.
@@ -43,13 +45,14 @@ and
 
 ## Nested variant
 
-Gold comes in various varieties, lets add those as well:
+Gold comes in various varieties, let's add those as well:
 
     A diamond ring set on a {{rose|yellow|white} gold|platinum} band.
 
 <img src="../images/tutorial/prompt3.png">
 
-Notice how we nested a variant for the type of gold, i.e., `{rose|yellow|white}` inside the main variant. So now, when generating an image, one of the following prompts is created:
+Notice how we nested a variant for the type of gold, i.e. `{rose|yellow|white}` inside the main variant.
+So now, when generating an image, one of the following prompts is created:
 
     A diamond ring set on a rose gold band
     A diamond ring set on a yellow gold band
@@ -78,7 +81,6 @@ This template could produce any of these prompts:
     A emerald ring set on a thin platinum band
     etc.
 
-
 That second prompt isn't grammatically correct, it doesn't matter to Stable Diffusion, but if you prefer correct grammar, you can write something like:
 
     {A diamond|A ruby|An emerald} ring set on a {classic|thin|thick}
@@ -87,7 +89,6 @@ That second prompt isn't grammatically correct, it doesn't matter to Stable Diff
         | platinum
     }
     band
-
 
 ### Here are the results for diamond rings:
 
@@ -105,16 +106,14 @@ That second prompt isn't grammatically correct, it doesn't matter to Stable Diff
 
 What if we had many gems that we would like to use in our rings? You can certainly add them as variants along with rubies and emeralds, but this may become cumbersome with many variants. In this case, we can use a wildcard.
 
-First, we create a file called `gems.txt` inside the wildcards folder.  By default this is `extensions/sd-dynamic-prompts/wildcards`.
+First, we create a file called `gems.txt` inside the wildcards folder. By default this is `extensions/sd-dynamic-prompts/wildcards`.
 
 In it, we add one variant per line, e.g.
 
 ```
-# extensions/sd-dynamic-prompts/gems.txt
 diamond
 ruby
 emerald
-...
 ```
 
 Now our prompt changes to:
@@ -130,10 +129,9 @@ Now our prompt changes to:
 
 Neat!
 
-Wildcard files can use all the same syntax that we can use in our prompts. To demonstrate this, let's create a new file called precious_metals.txt. Inside we add:
+Wildcard files can use all the same syntax that we can use in our prompts. To demonstrate this, let's create a new file called `precious_metals.txt`. Inside we add:
 
 ```
-# precious_metals.txt
 {rose|yellow|white} gold
 platinum
 silver
@@ -158,15 +156,21 @@ What if we wanted to generate all of them? In that case, we change to combinator
 <img src="../images/tutorial/combinatorial.png">
 
 ## Wildcard Collection
-A well-designed wildcard collection can be used as building blocks for creating great prompts without having to reinvent the wheel every time. Dynamic Prompts provides an extensive library of wildcards that you can use wholesale or pick and choose files that you're interested in. You can see these collections in the Wildcards Manager tab. Of course, you can create your own wildcard files and place them in the wildcards directory.
+
+A well-designed wildcard collection can be used as building blocks for creating great prompts without having to reinvent the wheel every time.
+
+Dynamic Prompts provides an extensive library of wildcards that you can use wholesale or pick and choose files that you're interested in.
+You can see these collections in the Wildcards Manager tab. Of course, you can create your own wildcard files and place them in the wildcards directory.
 
 <img src="../images/tutorial/wildcard_manager.png">
 
-The most interesting wildcards are those related to art and artists. It's a great way to explore different styles. Wildcards are stored in a directory hierarchy. Click on a subject area to discover more specific wildcard files:
+Wildcards are stored in a directory hierarchy. Click on a subject area to discover more specific wildcard files:
 
 <img src="../images/tutorial/artist_wildcards.png"><br><br>
 
 You can copy any wildcard from here and use it in your prompts, e.g. `__artists/European Art/renaissance/italian_renaissance__`
+
+The most interesting wildcards are those related to art and artists. It's a great way to explore different styles.
 
 If you like to experiment with styles from multiple artists at the same time, try something like:
 
@@ -186,7 +190,6 @@ Dynamic Prompts has syntax to allow you to choose two artists together:
 
     surfer in space, intricate detail, airbrush painting, illustration, by {2$$__artists/illustrations/childrens_books__}
 
-
 Some examples of prompts that are generated:
 
     surfer in space, intricate detail, airbrush painting, illustration, by Todor Dinov,Ray Goossens
@@ -195,12 +198,14 @@ Some examples of prompts that are generated:
 
     surfer in space, intricate detail, airbrush painting, illustration, by Fritz Wegner,Dawu Yu
 
-
 The default separator is a `,` - if you prefer to use `and` then change the prompt like this:
 
     surfer in space, intricate detail, airbrush painting, illustration, by {2$$ and $$__artists/illustrations/childrens_books__}
 
 Note the spaces surrounding the `and`.
+If you don't add them then your combination might look like:
+
+    A mech-warrior in a post-apocalyptic settings by artist1andartist2
 
 You don't need to stop at 2; the combination syntax allows you to choose any number of artists. For four artists, you write it like this:
 
@@ -216,7 +221,10 @@ Here dynamic prompts will choose 2, 3, or 4 artists.
 
 ## Magic Prompts
 
-When you look at prompts that people post online, you will often notice several modifiers related to lighting, resolution, camera type etc. When you're starting out, you might feel overwhelmed by these modifiers. The magic prompt functionality is a fun way to add modifiers to your prompt automatically. You can experiment, but a good way to start is to use a simple prompt, e.g.
+When you look at prompts that people post online, you will often notice several modifiers related to lighting, resolution, camera type etc.
+When you're starting out, you might feel overwhelmed by these modifiers.
+The magic prompt functionality is a fun way to add modifiers to your prompt automatically.
+You can experiment, but a good way to start is to use a simple prompt, e.g.
 
     A mech-warrior in a post-apocalyptic setting.
 
@@ -226,7 +234,8 @@ These images are a little plain. Let's jazz them up with Magic Prompts.
 
 <img src="../images/tutorial/magicprompts.png">
 
-Enable Magic Prompt and click generate. (Note, Magic Prompt uses a neural network to add these based on context. The first time you use it, Dynamic Prompts will need to download it, which may take some time depending on the speed of your Internet connection.)
+Enable Magic Prompt and click generate. (Note, Magic Prompt uses a neural network to add these based on context.
+The first time you use it, Dynamic Prompts will need to download it, which may take some time depending on the speed of your Internet connection.)
 
 Here are some example prompts that I get when using Magic Prompt:
 
@@ -248,7 +257,7 @@ Another way of getting inspiration is through the I'm feeling lucky function. In
 
 Using `mech-warrior` as my prompt, I get the following:
 
-    giant oversized battle robot mech in battle pose is giant baby on a village, wooden fence and tree remains in far background, hero pose, Cinematic focus, Polaroid photo, vintage, neutral colors, soft lights, foggy, natural mysterous intricate detailed grainy photo, by Steve Hanks, by Serov Valentin, by lisa yuskavage, by Andrei Tarkovsky
+    giant oversized battle robot mech in battle pose is giant baby on a village, wooden fence and tree remains in far background, hero pose, Cinematic focus, Polaroid photo, vintage, neutral colors, soft lights, foggy, natural mysterious intricate detailed grainy photo, by Steve Hanks, by Serov Valentin, by lisa yuskavage, by Andrei Tarkovsky
 
     giant oversized battle robot mech as giant baby on a village, Cinematic focus, Polaroid photo, vintage, neutral colors, soft lights, foggy, by Steve Hanks, by Serov Valentin, by lisa yuskavage, by Andrei Tarkovsky
 
@@ -258,13 +267,16 @@ Using `mech-warrior` as my prompt, I get the following:
 
 Two points are worth noting.
 
-Firstly, in contrast to Magic Prompt, I'm feeling lucky prompts don't necessary contain our search string. This is because Lexica performs a semantic search on its prompts database. This means the prompt should be relevant, even if the string doesn't match.
+Firstly, in contrast to Magic Prompt, I'm feeling lucky prompts don't necessary contain our search string.
+This is because Lexica performs a semantic search on its prompts database. This means the prompt should be relevant, even if the string doesn't match.
 
-Secondly, if you were to look for this prompt on the Lexica.art website, you wouldn't find the generated images. This is because you almost certainly used different settings than the person who originally crafted the prompt.
+Secondly, if you were to look for this prompt on the Lexica.art website, you wouldn't find the generated images.
+This is because you almost certainly used different settings than the person who originally crafted the prompt.
 
 ## Attention grabber
 
-Another way of adding a touch of variation to your images to by changing emphasis of various terms in the prompt. Attention grabber randomly assigns emphasis to an existing prompt.
+Another way of adding a touch of variation to your images to by changing emphasis of various terms in the prompt.
+Attention grabber randomly assigns emphasis to an existing prompt.
 
 Starting with a previous I'm feeling lucky prompt:
 
@@ -286,8 +298,17 @@ These changes are far more subtle and can be helpful if you want to explore slig
 
 # Conclusion
 
-This tutorial has covered the basics. There are additional features to try out once you feel comfortable using the tool. You can find a list of syntax examples [here](SYNTAX.md). This extension is constantly evolving, so make sure to update often. Feel free to ask questions [here](https://github.com/adieyal/sd-dynamic-prompts/discussions) and raise issues [here](https://github.com/adieyal/sd-dynamic-prompts/discussions).
+This tutorial has covered the basics. There are additional features to try out once you feel comfortable using the tool.
+You can find a list of syntax examples [here](SYNTAX.md).
+This extension is constantly evolving, so make sure to update often.
+Feel free to ask questions [here](https://github.com/adieyal/sd-dynamic-prompts/discussions)
+and raise issues [here](https://github.com/adieyal/sd-dynamic-prompts/discussions).
 
 # For developers
 
-Dynamic Prompts was initially developed for Automatic1111. It has recently been split into two separate projects. The Auto1111 extension described here, and the core prompts toolkit which you can find at [https://github.com/adieyal/dynamicprompts](https://github.com/adieyal/dynamicprompts). Dynamic Prompts can be incorporated into your application or colab very easily. Here is an example of Dynamic Prompts being used in the [Deforum 0.7 Colab](https://colab.research.google.com/drive/1qtYHUwFl9ocLyzDRL1_MlpQluV32ndoT)
+Dynamic Prompts was initially developed for Automatic1111.
+It has recently been split into two separate projects:
+The Auto1111 extension described here, and the core prompts toolkit which you can find at [https://github.com/adieyal/dynamicprompts](https://github.com/adieyal/dynamicprompts).
+
+Dynamic Prompts can be incorporated into your application or notebook very easily.
+Here is an example of Dynamic Prompts being used in the [Deforum 0.7 Colab](https://colab.research.google.com/drive/1qtYHUwFl9ocLyzDRL1_MlpQluV32ndoT)
