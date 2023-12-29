@@ -308,7 +308,7 @@ A handy feature of YAML files is that they provide an easy way to add weights to
 
 
 #### JSON files
-Similiar to YAML, you can use json files as well:
+Similar to YAML, you can use json files as well:
 
 ```
 {
@@ -522,7 +522,7 @@ green circle
 ...
 ```
 
-If using the combinatorial sampler and explictly setting the second variant to use a random sampler:
+If using the combinatorial sampler and explicitly setting the second variant to use a random sampler:
 ```
 {red|green|blue} {~square|circle}
 ```

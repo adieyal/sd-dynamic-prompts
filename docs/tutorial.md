@@ -19,7 +19,6 @@ You can see the various options by clicking on it:
 
 <img src="../images/tutorial/ui-open.png"><br>
 
-
 ## Getting Started
 
 Suppose you want to create images of a diamond ring; you might start with something like:
@@ -82,7 +81,6 @@ This template could produce any of these prompts:
     A emerald ring set on a thin platinum band
     etc.
 
-
 That second prompt isn't grammatically correct, it doesn't matter to Stable Diffusion, but if you prefer correct grammar, you can write something like:
 
     {A diamond|A ruby|An emerald} ring set on a {classic|thin|thick}
@@ -91,7 +89,6 @@ That second prompt isn't grammatically correct, it doesn't matter to Stable Diff
         | platinum
     }
     band
-
 
 ### Here are the results for diamond rings:
 
@@ -109,7 +106,7 @@ That second prompt isn't grammatically correct, it doesn't matter to Stable Diff
 
 What if we had many gems that we would like to use in our rings? You can certainly add them as variants along with rubies and emeralds, but this may become cumbersome with many variants. In this case, we can use a wildcard.
 
-First, we create a file called `gems.txt` inside the wildcards folder.  By default this is `extensions/sd-dynamic-prompts/wildcards`.
+First, we create a file called `gems.txt` inside the wildcards folder. By default this is `extensions/sd-dynamic-prompts/wildcards`.
 
 In it, we add one variant per line, e.g.
 
@@ -201,7 +198,6 @@ Some examples of prompts that are generated:
 
     surfer in space, intricate detail, airbrush painting, illustration, by Fritz Wegner,Dawu Yu
 
-
 The default separator is a `,` - if you prefer to use `and` then change the prompt like this:
 
     surfer in space, intricate detail, airbrush painting, illustration, by {2$$ and $$__artists/illustrations/childrens_books__}
@@ -261,7 +257,7 @@ Another way of getting inspiration is through the I'm feeling lucky function. In
 
 Using `mech-warrior` as my prompt, I get the following:
 
-    giant oversized battle robot mech in battle pose is giant baby on a village, wooden fence and tree remains in far background, hero pose, Cinematic focus, Polaroid photo, vintage, neutral colors, soft lights, foggy, natural mysterous intricate detailed grainy photo, by Steve Hanks, by Serov Valentin, by lisa yuskavage, by Andrei Tarkovsky
+    giant oversized battle robot mech in battle pose is giant baby on a village, wooden fence and tree remains in far background, hero pose, Cinematic focus, Polaroid photo, vintage, neutral colors, soft lights, foggy, natural mysterious intricate detailed grainy photo, by Steve Hanks, by Serov Valentin, by lisa yuskavage, by Andrei Tarkovsky
 
     giant oversized battle robot mech as giant baby on a village, Cinematic focus, Polaroid photo, vintage, neutral colors, soft lights, foggy, by Steve Hanks, by Serov Valentin, by lisa yuskavage, by Andrei Tarkovsky
 
