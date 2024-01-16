@@ -1,11 +1,7 @@
-import pytest
-
 from sd_dynamic_prompts.attention_generator import SpecialSyntaxAwareAttentionGenerator
 
 
-@pytest.mark.slow
 def test_default_generator():
-    pytest.importorskip("spacy")
     generator = SpecialSyntaxAwareAttentionGenerator()
     for prompt in generator.generate(
         "purple cat singing opera, artistic, painting "
