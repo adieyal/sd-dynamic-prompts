@@ -1,4 +1,5 @@
 def fake_generator(prompts, **_kwargs):
+    assert isinstance(prompts, list)  # be as particular as transformers is
     for prompt in prompts:
         assert "<" not in prompt  # should have been stripped
         yield [{"generated_text": f"magical {prompt}"}]

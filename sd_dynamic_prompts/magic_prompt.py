@@ -17,7 +17,8 @@ class SpecialSyntaxAwareMagicPromptGenerator(MagicPromptGenerator):
         orig_prompts, chunks = zip(
             *(remove_a1111_special_syntax_chunks(p) for p in orig_prompts),
         )
-        magic_prompts = super()._generate_magic_prompts(orig_prompts)
+        # `transformers` is rather particular that the input is a list, not a tuple
+        magic_prompts = super()._generate_magic_prompts(list(orig_prompts))
         # in case we somehow get less magic prompts than we started with,
         # use zip_longest instead of zip.
         return [
