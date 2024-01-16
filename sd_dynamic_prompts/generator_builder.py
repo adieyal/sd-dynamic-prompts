@@ -158,9 +158,11 @@ class GeneratorBuilder:
             generator = self.create_basic_generator()
 
         if self._is_magic_prompt:
-            from dynamicprompts.generators.magicprompt import MagicPromptGenerator
+            from sd_dynamic_prompts.magic_prompt import (
+                SpecialSyntaxAwareMagicPromptGenerator,
+            )
 
-            generator = MagicPromptGenerator(
+            generator = SpecialSyntaxAwareMagicPromptGenerator(
                 generator,
                 model_name=self._magic_model,
                 device=self._device,
