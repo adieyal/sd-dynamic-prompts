@@ -532,7 +532,6 @@ class Script(scripts.Script):
             p.all_prompts = all_prompts[0:1]
 
         p.prompt_for_display = original_prompt
-        p.prompt = original_prompt
 
         if hr_fix_enabled:
             p.all_hr_prompts = _get_hr_fix_prompts(
