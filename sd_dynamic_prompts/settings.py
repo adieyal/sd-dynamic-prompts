@@ -84,7 +84,7 @@ def on_ui_settings():
     shared.opts.add_option(
         key="dp_wildcard_manager_no_sort",
         info=shared.OptionInfo(
-            False,
+            True,
             label="Disable sorting of wildcards before processing.",
             section=section,
         ),
