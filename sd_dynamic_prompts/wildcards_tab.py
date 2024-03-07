@@ -66,10 +66,6 @@ def _format_node_for_json(
     return [*collections, *child_items]
 
 
-def get_wildcard_hierarchy_for_json():
-    return _format_node_for_json(wildcard_manager, wildcard_manager.tree.root)
-
-
 def on_ui_tabs():
     help_html = f"""
     <ol>
@@ -224,10 +220,14 @@ def copy_collection_callback(overwrite_checkbox, collection):
 
 def refresh_wildcards_callback():
     wildcard_manager.clear_cache()
+    root = wildcard_manager.tree.root
+    tree = _format_node_for_json(wildcard_manager, root)
+    collection_count = len(list(root.walk_full_names()))
     return create_payload(
         action=LOAD_TREE_ACTION,
         success=True,
-        tree=get_wildcard_hierarchy_for_json(),
+        tree=tree,
+        collection_count=collection_count,
     )
 
 

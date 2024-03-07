@@ -139,6 +139,7 @@ class SDDP_UI {
     this.lastMessage = null;
     this.treeView = null;
     this.treeContent = null;
+    this.collectionCount = 0;
     this.treeFilter = null;
   }
 
@@ -192,6 +193,7 @@ class SDDP_UI {
     const { action, success } = message;
     if (action === "load tree" && success) {
       this.treeContent = message.tree;
+      this.collectionCount = message.collection_count ?? 0;
       this.setupTree();
     } else if (action === "load file" && success) {
       this.loadFileIntoEditor(message);
@@ -256,12 +258,17 @@ class SDDP_UI {
       this.messageReadTimer = setInterval(this.doReadMessage.bind(this), 120);
     }
     if (!this.searchKeyConfigured) {
-      gradioApp()
-        .querySelector("#sddp-wildcard-search textarea")
-        ?.addEventListener("input", (event) => {
+      const debouncedSearch = this.debounce(
+        (event) => {
           this.treeFilter = event.target.value?.trim() || null;
           this.setupTree();
-        });
+        },
+        () => (this.collectionCount > 5000 ? 500 : 50),
+        this,
+      );
+      gradioApp()
+        .querySelector("#sddp-wildcard-search textarea")
+        ?.addEventListener("input", debouncedSearch);
       this.searchKeyConfigured = true;
     }
   }
@@ -301,6 +308,14 @@ class SDDP_UI {
     content.forEach(walk);
     return filteredContent;
   };
+
+  debounce(handler, timeFunction, context) {
+    let timeout;
+    return (...args) => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => handler.apply(context, args), timeFunction());
+    };
+  }
 }
 
 const SDDP = new SDDP_UI();
