@@ -47,6 +47,10 @@ Similar to the standard wildcard syntax
 
 This will produce one prompt for each colour in the wildcard.txt file.
 
+Alternitively if you just want to randomly pick 1 item from a wildcard:
+```{{wildcard("__colours__")|random()}}```
+
+
 ### [Conditionals](https://jinja.palletsprojects.com/en/3.1.x/templates/#if)
 
 ```jinja2
