@@ -2,7 +2,7 @@ def fake_generator(prompts, **_kwargs):
     assert isinstance(prompts, list)  # be as particular as transformers is
     for prompt in prompts:
         assert "<" not in prompt  # should have been stripped
-        yield [{"generated_text": f"magical {prompt}"}]
+        yield [{"generated_text": f"magical {prompt},,,, wow, so nice"}]
 
 
 def test_magic_prompts(monkeypatch):
@@ -30,3 +30,6 @@ def test_magic_prompts(monkeypatch):
         assert "<hypernet:v18000Steps:1>" in prompt
         # but we should expect to see some magic
         assert prompt.startswith("magical ")
+        # See that multiple commas are coalesced
+        assert ",,,," not in prompt
+        assert ", wow, so nice" in prompt
