@@ -74,17 +74,12 @@ def on_ui_tabs():
         <li>Use the wildcard in your script by typing the name of the file or copying the text from the Wildcards file text box.</li>
         <li>You can also add your own wildcard files to the {wildcard_manager.path} folder.</li>
     </ol>
+    <style>#sddp-wildcard-tree {{ max-height: max(70vh, 900px); overflow-y: auto !important; }}</style>
     """
 
     with gr.Blocks() as wildcards_tab:
         with gr.Row():
             with gr.Column():
-                gr.Textbox(
-                    placeholder="Search in wildcard names...",
-                    elem_id=make_element_id("wildcard-search"),
-                    label="",
-                )
-                gr.HTML("Loading...", elem_id=make_element_id("wildcard-tree"))
                 with gr.Accordion("Help", open=False):
                     gr.HTML(help_html)
                 with gr.Accordion("Collection actions", open=False):
@@ -111,6 +106,12 @@ def on_ui_tabs():
                             "Delete all wildcards",
                             elem_id=make_element_id("wildcard-delete-tree-button"),
                         )
+                gr.Textbox(
+                    placeholder="Search in wildcard names...",
+                    elem_id=make_element_id("wildcard-search"),
+                    label="",
+                )
+                gr.HTML("Loading...", elem_id=make_element_id("wildcard-tree"))
             with gr.Column():
                 gr.Textbox(
                     "",
@@ -127,7 +128,7 @@ def on_ui_tabs():
                 )
                 save_button = gr.Button(
                     "Save wildcards",
-                    scale=1,
+                    # scale=1,
                     elem_id=make_element_id("wildcard-save-button"),
                 )
 
@@ -180,7 +181,6 @@ def on_ui_tabs():
             inputs=[overwrite_checkbox, collection_dropdown],
             outputs=[server_to_client_message_textbox],
         )
-
     return ((wildcards_tab, "Wildcards Manager", "sddp-wildcard-manager"),)
 
 
