@@ -491,6 +491,39 @@ class Script(scripts.Script):
             all_prompts = [str(e)]
             all_negative_prompts = [str(e)]
 
+        if is_combinatorial:
+            # The underlying library has two bugs:
+            # 1. It calculates prompts as (Combinations * Batches * Batches)
+            # 2. It structures the list as [P1,P1, P2,P2,...] instead of [P1,P2, P1,P2,...]
+            # The following logic deconstructs the buggy list to get a clean, unique set of base combinations.
+
+            # Step 1: Correct for the C*B*B length bug to get a list of C*B prompts
+            if combinatorial_batches > 0 and len(all_prompts) > combinatorial_batches:
+                base_prompt_count = len(all_prompts) // combinatorial_batches
+                all_prompts = all_prompts[:base_prompt_count]
+                all_negative_prompts = repeat_iterable_to_length(
+                    all_negative_prompts,
+                    len(all_prompts),
+                )
+
+            # Step 2: Correct for the [P1,P1,P2,P2] structural bug by de-duplicating the list
+            if combinatorial_batches > 1:
+                # This is a trick to get every Nth element, where N is the number of batches.
+                # It reconstructs the unique list of combinations.
+                all_prompts = all_prompts[::combinatorial_batches]
+                all_negative_prompts = repeat_iterable_to_length(
+                    all_negative_prompts,
+                    len(all_prompts),
+                )
+
+            # Step 3: Now we have a clean list of base prompts (C). We apply OUR multipliers.
+            # First, apply the script's own "Combinatorial batches" multiplier
+            all_prompts = all_prompts * combinatorial_batches
+            all_negative_prompts = repeat_iterable_to_length(
+                all_negative_prompts,
+                len(all_prompts)
+            )
+
         updated_count = len(all_prompts)
         p.n_iter = math.ceil(updated_count / p.batch_size)
 
