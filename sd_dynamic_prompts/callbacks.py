@@ -6,7 +6,7 @@ from typing import Any
 
 from dynamicprompts.wildcards import WildcardManager
 from modules import script_callbacks
-from modules.generation_parameters_copypaste import parse_generation_parameters
+from modules.infotext_utils import parse_generation_parameters
 from modules.script_callbacks import ImageSaveParams
 
 from sd_dynamic_prompts.pnginfo_saver import strip_template_info
